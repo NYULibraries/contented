@@ -1,0 +1,24 @@
+title: Pattern Library
+description: A collection of patterns to help you build up a style guide for your site
+
+baseurl: "/library.nyu.edu"
+url: "http://troze.github.io"
+
+source:      .
+destination: ./_site
+plugins:     ./_plugins
+layouts:     ./_layouts
+include:     ['.htaccess']
+exclude:     []
+keep_files:  ['.git']
+gems:        []
+timezone:    America/New_York
+markdown:    kramdown
+permalink:   pretty
+highlighter: pygments
+
+collections:
+- patterns
+
+sass:
+    sass_dir: _sass
