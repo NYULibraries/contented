@@ -2,7 +2,7 @@
 ---
 
 .xx {
-    background-color: #363942;
+    background-color: #fafafa;
     margin: 0;
     padding: 0;
     color: #ffeeee;
@@ -64,7 +64,7 @@
 
 
 .xx-pattern {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     margin: 2.5em 0;
     overflow: hidden;
     border-radius: 1px;
@@ -73,9 +73,10 @@
     }
 
 .xx-pattern-name {
-    background-color: #419DD2;
-    background-image: -webkit-linear-gradient(#419DD2 95.4%, #2779a9 100%);
-    background-image: linear-gradient(#419DD2 95.4%, #2779a9 100%);
+    background-color: #eeeeee;
+    box-shadow: inset 0 0 1px 0px rgba(0,0,0,0.12), inset 0 0 1px 0px rgba(0,0,0,0.12);
+/*    background-image: -webkit-linear-gradient(#419DD2 95.4%, #2779a9 100%);
+    background-image: linear-gradient(#419DD2 95.4%, #2779a9 100%);*/
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 400;
     position: relative;
@@ -87,8 +88,8 @@
     
     &:focus {
         outline: none;
-        background-image: -webkit-linear-gradient(#40BAD2 95.4%, #2794a9 100%);
-        background-image: linear-gradient(#40BAD2 95.4%, #2794a9 100%);
+/*        background-image: -webkit-linear-gradient(#40BAD2 95.4%, #2794a9 100%);
+        background-image: linear-gradient(#40BAD2 95.4%, #2794a9 100%);*/
         }
     
     }
@@ -99,7 +100,7 @@
     }
 
 .xx-pattern-preview {
-    padding: 1.5em 0.8em;
+    /*border-bottom: 1px solid #ccc;*/
     }
 
 .xx-pattern-link {
@@ -126,10 +127,10 @@ a.xx-pattern-link {
 .xx-pattern-usage {
     font-family: Arial, sans-serif;
     font-size: 1em;
-    background-image: -webkit-linear-gradient(#e9e9e8 0%, #dcdcdb 100%);
-    background-image: linear-gradient(#e9e9e8 0%, #dcdcdb 100%);
+/*    background-image: -webkit-linear-gradient(#ffffff 0%, #ffffff 100%);
+    background-image: linear-gradient(#ffffff 0%, #fffffff 100%);*/
     clear: both;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #e2e1dd;
     }
 
 
@@ -140,12 +141,13 @@ a.xx-pattern-link {
     // Syntax Highlighting
     .highlight { 
         display: block;
-        background-color: #fff;
+        background-color: #FAFAFA;
         margin: 0;
         padding: 1em;
         color: #333;
         font-size: 0.85em;
-        border-bottom: 1px solid #ccc;
+        box-shadow: inset 0 0 1px 0px rgba(0,0,0,0.12), inset 0 0 1px 0px rgba(0,0,0,0.12);
+        border-bottom: 1px solid #fff;
         line-height: 1.2;
 
         .c /* Comment */ {
@@ -412,7 +414,7 @@ a.xx-pattern-link {
     margin-bottom: 1em;
     background-color: #fff;
     height: 13em;
-    border-radius: 3px;
+    border-radius: 2px;
     position: relative;
     overflow: hidden;
     }

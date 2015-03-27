@@ -1,11 +1,11 @@
 body {
-  font-family: "Lucida Grande", "Helvetica", "Arial";
-  font-size: 15px;
+  font-family: "Helvetica", "Helvetica", "Arial";
+  font-size: 16px;
   margin: 0;
   padding: 0; }
   @media print {
     body {
-      font-size: 15px; } }
+      font-size: 16px; } }
 
 article,
 aside,
@@ -39,8 +39,8 @@ ul,
 ol,
 dl {
   line-height: 27px;
-  line-height: 1.8rem;
-  margin: 15px 0;
+  line-height: 1.6875rem;
+  margin: 16px 0;
   margin: 1rem 0; }
 
 @media print {
@@ -49,7 +49,7 @@ dl {
   ol,
   dl {
     line-height: 20px;
-    line-height: 1.33333rem; } }
+    line-height: 1.25rem; } }
 strong {
   font-weight: bold; }
 
@@ -58,27 +58,27 @@ code,
   font-family: "Monaco", "Courier", monospace;
   background-color: #f5f2f0;
   padding: 2px 4px;
-  padding: 0.13333rem 0.26667rem;
-  border-radius: 3px; }
+  padding: 0.125rem 0.25rem;
+  border-radius: 2.66667px; }
 
 mark {
   background: #EEEE8F;
   background: #eeee8f;
   padding: 0 0.1em;
-  border-radius: 3px; }
+  border-radius: 2.66667px; }
 
 kbd {
   font-family: "Monaco", "Courier", monospace;
   background: #363942;
   background: rgba(54, 57, 66, 0.25);
   padding: 8px 8px 6px;
-  padding: 0.53333rem 0.53333rem 0.4rem;
-  border-radius: 3px; }
+  padding: 0.5rem 0.5rem 0.375rem;
+  border-radius: 2.66667px; }
 
 pre {
   white-space: pre-wrap;
   max-width: 100%;
-  border-radius: 3px; }
+  border-radius: 2.66667px; }
 
 pre code {
   background-color: transparent;
@@ -87,14 +87,14 @@ pre code {
 blockquote {
   font-family: "Georgia", Times, sans-serif;
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 1px 15px;
-  padding: 0.06667rem 1rem; }
+  padding: 1px 16px;
+  padding: 0.0625rem 1rem; }
 
 figure {
   margin: 0; }
 
 figcaption {
-  font-size: 12.5px; }
+  font-size: 13.33333px; }
 
 .hidden {
   border: 0;
@@ -115,18 +115,18 @@ input,
 select {
   border-width: 1px;
   border-style: solid;
-  font-family: "Lucida Grande", "Helvetica", "Arial";
-  border-radius: 3px;
+  font-family: "Helvetica", "Helvetica", "Arial";
+  border-radius: 2.66667px;
   border-color: #363942;
   border-color: rgba(54, 57, 66, 0.5);
   font-size: 14px;
-  font-size: 0.93333rem;
+  font-size: 0.875rem;
   padding: 7px 5px;
-  padding: 0.46667rem 0.33333rem;
+  padding: 0.4375rem 0.3125rem;
   margin: 5px;
-  margin: 0.33333rem;
+  margin: 0.3125rem;
   line-height: 16px;
-  line-height: 1.06667rem; }
+  line-height: 1rem; }
   @media print {
     textarea,
     input,
@@ -135,10 +135,10 @@ select {
 
 label {
   line-height: 18px;
-  line-height: 1.2rem;
+  line-height: 1.125rem;
   display: block;
   margin: 5px;
-  margin: 0.33333rem;
+  margin: 0.3125rem;
   color: #363942;
   color: rgba(54, 57, 66, 0.85);
   vertical-align: middle;
@@ -182,7 +182,7 @@ input[type="file"] {
   width: 94%;
   padding: 1em 2%;
   line-height: 1;
-  border-radius: 5px; }
+  border-radius: 3.2px; }
 
 .list-form {
   padding-left: 0; }
@@ -199,7 +199,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lucida Grande", "Helvetica", "Arial";
+  font-family: "Helvetica", "Helvetica", "Arial";
   font-weight: 700;
   font-style: normal;
   font-weight: normal;
@@ -208,47 +208,47 @@ h6 {
 h1,
 .h1 {
   font-size: 45px;
-  font-size: 3rem; }
+  font-size: 2.8125rem; }
 
 h2,
 .h2 {
   font-size: 40px;
-  font-size: 2.66667rem; }
+  font-size: 2.5rem; }
 
 h3,
 .h3 {
   font-size: 30px;
-  font-size: 2rem; }
+  font-size: 1.875rem; }
 
 h4,
 .h4 {
   font-size: 24px;
-  font-size: 1.6rem; }
+  font-size: 1.5rem; }
 
 h5,
 .h5 {
   font-size: 20px;
-  font-size: 1.33333rem; }
+  font-size: 1.25rem; }
 
 h6,
 .h6 {
   font-size: 18px;
-  font-size: 1.2rem; }
+  font-size: 1.125rem; }
 
 a:link,
 a:visited,
 a:hover,
 a:focus,
 a:active {
-  color: #419DD2;
+  color: #57068C;
   text-decoration: none; }
 
 a:hover,
 a:focus,
 a:active {
   border-bottom: 1px solid;
-  border-color: #419DD2;
-  border-color: rgba(65, 157, 210, 0.7); }
+  border-color: #57068C;
+  border-color: rgba(87, 6, 140, 0.7); }
 
 a img {
   border: none; }
@@ -266,21 +266,21 @@ a.button,
 a.button-disabled {
   background-image: none;
   border: none;
-  border-radius: 3px;
+  border-radius: 2.66667px;
   color: #FFF;
   display: inline-block;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
-  background: #419DD2;
-  background: #419dd2;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
+  background: #57068C;
+  background: #57068c;
   font-size: 14px;
-  font-size: 0.93333rem;
+  font-size: 0.875rem;
   padding: 8px 18px;
-  padding: 0.53333rem 1.2rem;
+  padding: 0.5rem 1.125rem;
   margin: 5px;
-  margin: 0.33333rem;
+  margin: 0.3125rem;
   line-height: 16px;
-  line-height: 1.06667rem;
-  font-family: "Lucida Grande", "Helvetica", "Arial"; }
+  line-height: 1rem;
+  font-family: "Helvetica", "Helvetica", "Arial"; }
   button:hover, button:focus, button:active,
   input[type=button]:hover,
   input[type=button]:focus,
@@ -301,8 +301,8 @@ a.button-disabled {
   a.button-disabled:focus,
   a.button-disabled:active {
     cursor: pointer;
-    background: #40BAD2;
-    background: #40bad2; }
+    background: #7608BF;
+    background: #7608bf; }
 
 button[disabled],
 input[type=button][disabled],
@@ -325,26 +325,26 @@ a.button-s,
 input[type=button].button-s,
 input[type=submit].button-s {
   font-size: 12px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   padding: 6px 16px;
-  padding: 0.4rem 1.06667rem;
+  padding: 0.375rem 1rem;
   margin: 5px;
-  margin: 0.33333rem;
+  margin: 0.3125rem;
   line-height: 14px;
-  line-height: 0.93333rem; }
+  line-height: 0.875rem; }
 
 .button-l,
 a.button-l,
 input[type=button].button-l,
 input[type=submit].button-l {
   font-size: 18px;
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   padding: 12px 28px;
-  padding: 0.8rem 1.86667rem;
+  padding: 0.75rem 1.75rem;
   margin: 5px;
-  margin: 0.33333rem;
+  margin: 0.3125rem;
   line-height: 20px;
-  line-height: 1.33333rem; }
+  line-height: 1.25rem; }
 
 ol,
 ul {
@@ -370,36 +370,36 @@ img {
   max-width: 100%; }
 
 audio {
-  margin: 15px 0;
+  margin: 16px 0;
   margin: 1rem 0; }
 
 video {
-  margin: 15px 0;
+  margin: 16px 0;
   margin: 1rem 0; }
 
 table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   margin-bottom: 2rem; }
 
 caption {
   caption-side: bottom;
   color: #999;
   font-size: 12px;
-  font-size: 0.8rem;
-  line-height: 15px;
+  font-size: 0.75rem;
+  line-height: 16px;
   line-height: 1rem;
   text-align: left;
-  margin: 15px 0;
+  margin: 16px 0;
   margin: 1rem 0; }
 
 td, th {
   text-align: left;
   border-bottom: 1px solid #ccc;
   padding: 6px 32px 6px 0;
-  padding: 0.4rem 2.13333rem 0.4rem 0;
+  padding: 0.375rem 2rem 0.375rem 0;
   vertical-align: top; }
 
 th {
@@ -430,7 +430,7 @@ tfoot tr:last-child th {
 
 .alert {
   background-color: #EEEE8F;
-  border-radius: 3px;
+  border-radius: 2.66667px;
   padding: 0 13px;
   padding: 0 0.83333rem; }
 
@@ -452,7 +452,7 @@ tfoot tr:last-child th {
     border: none;
     padding: 0;
     font-size: 12px;
-    font-size: 0.8rem; }
+    font-size: 0.75rem; }
   .availability .availability-year {
     border: none; }
   .availability .availability-month {
@@ -486,8 +486,8 @@ nav ul {
 .nav-page li {
   color: #999;
   margin-bottom: 10px;
-  margin-bottom: 0.66667rem;
-  border-radius: 3px;
+  margin-bottom: 0.625rem;
+  border-radius: 2.66667px;
   display: inline-block; }
   .nav-page li a,
   .nav-page li .is-empty,
@@ -496,18 +496,18 @@ nav ul {
     display: block;
     text-align: center;
     padding: 5px 10px 4px;
-    padding: 0.33333rem 0.66667rem 0.26667rem;
-    border-radius: 3px;
+    padding: 0.3125rem 0.625rem 0.25rem;
+    border-radius: 2.66667px;
     border-radius: 3px;
     font-size: 1.1em; }
   .nav-page li a {
-    background-color: #419DD2;
+    background-color: #57068C;
     color: #fff; }
     .nav-page li a:hover {
       border-bottom: none;
-      background-color: #40BAD2; }
+      background-color: #7608BF; }
   .nav-page li .is-active {
-    background-color: #40BAD2;
+    background-color: #7608BF;
     color: #fff; }
     .nav-page li .is-active:hover {
       cursor: default; }
@@ -518,7 +518,7 @@ nav ul {
 
 .alert {
   background-color: #EEEE8F;
-  border-radius: 3px;
+  border-radius: 2.66667px;
   padding: 0 13px;
   padding: 0 0.83333rem; }
 

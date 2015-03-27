@@ -10,7 +10,7 @@ a.button-disabled {
     border-radius: $measure-xxs;
     color: #FFF;
     display: inline-block;
-    text-shadow: -1px -1px 0 rgba(0,0,0,0.2);
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.1);
     @include background-color($color-link, 1);
     @include rem(font-size, 14px);
     @include rem(padding, 8px 18px);
