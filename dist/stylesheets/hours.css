@@ -1,0 +1,35 @@
+/* line 1, ../sass/hours.sass */
+#parent { height: 100%; width: 100%; text-align: center; }
+
+/* line 6, ../sass/hours.sass */
+#libcard { height: 100%; width: 100%; display: inline-block; vertical-align: middle; text-align: left; background: #f0f0f0; border-radius: 3px 3px 4px 4px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; border-top: 1px solid white; -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); }
+
+/* line 22, ../sass/hours.sass */
+.map-canvas { float: left; width: 200px; height: 200px; }
+
+/* line 27, ../sass/hours.sass */
+#libname { margin-left: 10px; margin-top: 10px; font-weight: bold; color: #010101, 49, 49; }
+
+/* line 33, ../sass/hours.sass */
+#libaddr { margin-left: 250px; margin-top: 10px; }
+
+/* line 37, ../sass/hours.sass */
+#libphone { margin-left: 250px; /*margin-left:530px; margin-top:-50px; */ }
+
+/* line 42, ../sass/hours.sass */
+#libemail { margin-left: 250px; /*margin-left:530px; margin-top:30px; */ }
+
+/* line 47, ../sass/hours.sass */
+.pushUpText { margin-left: 23px; margin-top: -25px; }
+
+/* line 51, ../sass/hours.sass */
+#Open_timing { margin-top: 110px; margin-left: 30px; }
+
+/* line 55, ../sass/hours.sass */
+#open_button { margin-top: -25px; margin-left: 500px; font-weight: bold; }
+
+/* line 60, ../sass/hours.sass */
+#open_button_img { margin-top: -35px; margin-left: 145px; }
+
+/* line 64, ../sass/hours.sass */
+#table_hours { height: 100%; width: 100%; border: 1px; padding: 0px; font-size: 80%; display: none; }

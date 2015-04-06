@@ -1,0 +1,61 @@
+/* line 1, ../sass/style.sass */
+body { font-family: Gotham, Arial, sans-serif; font-size: 15px; line-height: 1.5; size: 100%; }
+
+/* line 7, ../sass/style.sass */
+img, video, object { max-width: 100%; }
+
+/* line 10, ../sass/style.sass */
+article, header, nav, section { display: block; }
+
+/* Layout ================================ */
+/* line 16, ../sass/style.sass */
+.wrap { margin: 60px auto; max-width: 1200px; overflow: hidden; width: 90%; }
+
+/* line 22, ../sass/style.sass */
+.primary-header { float: right; width: 20%; }
+
+/* line 26, ../sass/style.sass */
+.content { float: left; width: 75%; }
+
+@media only screen and (max-width: 1085px) { /* line 31, ../sass/style.sass */
+  body { font-size: 16px; }
+  /* line 33, ../sass/style.sass */
+  .wrap { margin: 15px auto; }
+  /* line 35, ../sass/style.sass */
+  .primary-header, .content { float: none; width: auto; } }
+/* Text ================================ */
+/* line 42, ../sass/style.sass */
+a { color: #0091e5; text-decoration: none; }
+
+/* Header */
+/* line 48, ../sass/style.sass */
+.primary-header { font-size: 0.85em; }
+
+/* line 51, ../sass/style.sass */
+.site-title { font-size: 1.2em; }
+
+/* line 54, ../sass/style.sass */
+.page-menu { margin: 0 0 30px; padding: 0; }
+/* line 57, ../sass/style.sass */
+.page-menu li { border-top: 1px dotted #d4d7d9; margin: 0.5em 0 0; padding: 0.5em 0 0; list-style: none; }
+
+/* line 63, ../sass/style.sass */
+.is-current-page { color: #999999; pointer-events: none; }
+
+/* Content */
+/* line 69, ../sass/style.sass */
+.content-title { font-size: 2.4em; line-height: 1.3; margin: 0 0 0.5em; }
+
+/* line 74, ../sass/style.sass */
+.post-preview { border-top: 1px dotted #d4d7d9; margin: 1em 0 0; padding: 1em 0 0; }
+
+/* line 79, ../sass/style.sass */
+.subpage-menu a { display: inline-block; margin-right: 15px; }
+
+/* line 83, ../sass/style.sass */
+.banner { position: fixed; width: 100%; top: 0px; height: 60px; z-index: 10; background: #57068c; }
+
+/* line 91, ../sass/style.sass */
+.bannerImg { height: 45px; width: 300px; padding-top: 10px; padding-left: 10px; /* padding-bottom: {img height} */ }
+
+/* I got 99 problems, but this last line ain't one */
