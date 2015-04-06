@@ -1,7 +1,7 @@
 Gemfile.lock
-assets/images/*
+assets/images/
 assets/.sass-cache/
-dist/images/*
+dist/images/
 dist/javascripts/**
 dist/stylesheets/**
 
