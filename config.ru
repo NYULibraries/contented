@@ -2,4 +2,4 @@
 # See https://github.com/siteleaf/siteleaf-gem for documentation.
 require 'rubygems'
 require 'siteleaf'
-run Siteleaf::Server.new(:site_id => '55087c495dde22789c000692')
+run Siteleaf::Server.new(:site_id => '5522b4265dde22cab20018e7')
