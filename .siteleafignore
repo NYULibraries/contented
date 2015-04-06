@@ -2,4 +2,4 @@ Gemfile
 Gemfile.lock
 Guardfile
 README.md
-
+*.md

@@ -1,25 +1,49 @@
-# Ruby quote
-## recipes ##
-#require "recipes/nginx" # to only require a specific recipe
-# grab all recipes in the folder
-Dir[File.dirname(__FILE__) + '/../recipes/*.rb'].each {|file| require file }
-## main config ##
-#set :application, "remoteworld"
+namespace :siteleaf do
 
-## source control ##
-#set :repository, "/home/amay/helloworld/.git"
-#set :deploy_to, "/home/amay/remoteworld/"
-#set :scm, :git
-# Or: 'accurev', 'bzr', 'cvs', 'darcs', 'git', 'mercurial', 'perforce', 'subversion' or 'none'
+  set :api_key, ENV['DEPLOY_KEY']
+  set :api_secret, ENV['DEPLOY_SECRET']
+  set :site_id, ENV['DEPLOY_SITE_ID']
 
-## misc ##
-#set :user, "amay" # set this to whatever the remoteworld's user is
-#set :use_sudo, true # set use sudo to false for security reasons
-#default_run_options[:pty] = true # It solves 'pty ttl errors'. Not important.
-#set :deploy_via, :remote_cache # it compares deployed files with remote files to only implement changed files. Saves bandwidth.
+  namespace :compile do
+    desc "Compile Javascript and Sass from assets Folder to dist folder"
+    task :all, :roles => :app do
+      run_locally ("bundle install")
+      run_locally ("git submodule init")
+      run_locally ("git submodule update")
+      run_locally ("bundle exec ruby config/compile.rb")
+    end
+  end
 
-## roles ##
-#role :web, "your primary web-server here" #nginx, Apache, etc.
-role :app, "localhost" # This may be the same as your web server.
-#role :db, "your primary db-server here", :primary => true # This is where rails migrations will run
-#role :db, "your slave db-server here"
+  desc "call all tests sequentially"
+  task :deploy, :roles => :app do
+    compile.all
+    siteleaf.auth
+    siteleaf.setup
+    siteleaf.push_theme
+  end
+
+  desc "Siteleaf Authorization & emptying out siteleaf theme"
+  task :auth, :roles => :app do
+    run_locally ("echo \"require 'siteleaf'\" | tee -a auth.rb")
+    run_locally ("echo \"Siteleaf.api_key    = 'efb629faf35a68ec48ac8b4acf1d4ad7'\" | tee -a auth.rb")
+    run_locally ("echo \"Siteleaf.api_secret = '7c604efc88c676ca9c23b2be5675698b'\" | tee -a auth.rb")
+    run_locally ("echo \"theme = theme = Siteleaf::Theme.find_by_site_id('5522b4265dde22cab20018e7')\" | tee -a auth.rb")
+    run_locally ("echo \"assets = theme.assets\" | tee -a auth.rb")
+    run_locally ("echo \"assets.each do |asset|\" | tee -a auth.rb")
+    run_locally ("echo \"asset.delete\" | tee -a auth.rb")
+    run_locally ("echo \"end\" | tee -a auth.rb")
+    run_locally ("bundle exec ruby auth.rb")
+    run_locally ("rm auth.rb")
+  end
+
+  desc "Setup Siteleaf"
+  task :setup, :roles => :app do
+    run_locally ("siteleaf config empty")
+  end
+
+  desc "Push Theme on to Siteleaf"
+  task :push_theme, :roles => :app do
+    run_locally ("siteleaf push theme")
+  end
+
+end

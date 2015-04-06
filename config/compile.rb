@@ -3,12 +3,10 @@ require 'compass'
 # Need to require bootstrap before sprockets loads
 # since that's how the bootstrap gem determines if we're
 # asset pipelining
-require 'bootstrap-sass'
 require 'nyulibraries-assets'
 require 'fileutils'
-require 'rails'
-require 'jquery-rails'
 require 'microservice_precompiler'
+
 # Get the various paths
 nyulibraries_assets_base =  "#{Compass::Frameworks['nyulibraries-assets'].stylesheets_directory}/.."
 nyulibraries_assets_javascripts_path = "#{nyulibraries_assets_base}/javascripts"
