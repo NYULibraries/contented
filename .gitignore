@@ -1,4 +1,8 @@
-Gemfile
 Gemfile.lock
-Guardfile
+assets/images/
+assets/.sass-cache
+dist/images
+dist/javascripts/*
+dist/stylesheets/*
+
 
