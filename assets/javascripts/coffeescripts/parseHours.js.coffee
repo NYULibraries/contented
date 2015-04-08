@@ -85,7 +85,7 @@ map_init = (name,lat,lng) ->
 print = ->
   for i in [0..root.lib.length - 1] by 1
     if root.lib[i].category == 'library'
-      document.getElementById(root.lib[i].name).children[0].innerHTML += root.lib[i].name
+      document.getElementById(root.lib[i].name).children[0].innerHTML += root.lib[i].name      
       map_init(root.lib[i].name,root.lib[i].latitude, root.lib[i].longitude)
       document.getElementById(root.lib[i].name).children[2].innerHTML += root.lib[i].contact.address1+"<BR>"+root.lib[i].contact.address2
       document.getElementById(root.lib[i].name).children[3].children[1].innerHTML += root.lib[i].contact.phone;
@@ -106,11 +106,13 @@ print = ->
         #for k in [0..6] by 1
           #document.getElementById("print").innerHTML += "<BR>"+root.lib[i].week[j].days[k].date + " " + root.lib[i].week[j].days[k].day + " " + root.lib[i].week[j].days[k].status + " " + root.lib[i].week[j].days[k].from + " " + root.lib[i].week[j].days[k].to
 
-init = ->
-  $.getJSON '//api3.libcal.com/api_hours_grid.php?iid=1287&format=json&weeks='+no_of_weeks+'&callback=?', (data) ->
-    HoursLibcal.parseJson(data)
+getHours = ->
+  $.getJSON '//api3.libcal.com/api_hours_grid.php?iid=1287&format=json&weeks='+no_of_weeks+'&callback=?', (data) ->    
+    HoursLibcal.parseJson(data)    
     print()
     return
   return
 
-init()
+if document.URL.indexOf("/hours") > 0
+  getHours()
+

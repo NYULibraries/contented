@@ -1,18 +1,15 @@
 {% if url == "/hours" %}
-<div id="jsScripts"></div>
-<script src="/dist/javascripts/parseHours.js"></script>
 <script>
 function tableButtonClicks(id) {
   if (id.parentNode.parentNode.parentNode.parentNode.childNodes[15].style.display == 'none'){
     id.parentNode.parentNode.parentNode.parentNode.childNodes[15].style.display = 'block';
-    id.src = "/dist/images/images/ic_expand_less_48px.svg";
+    id.src = "/images/ic_expand_less_48px.svg";
   }else{
     id.parentNode.parentNode.parentNode.parentNode.childNodes[15].style.display = 'none';
-    id.src = "/dist/images/images/ic_expand_more_48px.svg";
+    id.src = "/images/ic_expand_more_48px.svg";
   }
 }
 </script>
-<link rel="stylesheet" type="text/css" href="/dist/stylesheets/hours.css" />
 {% endif %}
 <div class="wrap">
   <header class="primary-header">
