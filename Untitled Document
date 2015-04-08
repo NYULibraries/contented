@@ -1,8 +1,0 @@
-Gemfile
-Gemfile.lock
-README.md
-assets/*
-config/*
-.gitignore
-.gitmodules
-Capfile

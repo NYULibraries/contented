@@ -248,11 +248,11 @@
 .icons-nyu-content-type-website_plus { background-position: 0 -542px; }
 
 /* line 5, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/nyulibraries-assets-3ddc28d87e1a/lib/assets/stylesheets/nyulibraries/_sprites.scss */
-[class^="icon-"], [class*=" icon-"] { background-image: url('/images/glyphicons-halflings.png?1428508756') !important; }
+[class^="icon-"], [class*=" icon-"] { background-image: url('/images/glyphicons-halflings.png?1428509097') !important; }
 
 /* White icons with optional class, or on hover/focus/active states of certain elements */
 /* line 26, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/nyulibraries-assets-3ddc28d87e1a/lib/assets/stylesheets/nyulibraries/_sprites.scss */
-.icon-white, .nav-pills > .active > a > [class^="icon-"], .nav-pills > .active > a > [class*=" icon-"], .nav-list > .active > a > [class^="icon-"], .nav-list > .active > a > [class*=" icon-"], .navbar-inverse .nav > .active > a > [class^="icon-"], .navbar-inverse .nav > .active > a > [class*=" icon-"], .dropdown-menu > li > a:hover > [class^="icon-"], .dropdown-menu > li > a:focus > [class^="icon-"], .dropdown-menu > li > a:hover > [class*=" icon-"], .dropdown-menu > li > a:focus > [class*=" icon-"], .dropdown-menu > .active > a > [class^="icon-"], .dropdown-menu > .active > a > [class*=" icon-"], .dropdown-submenu:hover > a > [class^="icon-"], .dropdown-submenu:focus > a > [class^="icon-"], .dropdown-submenu:hover > a > [class*=" icon-"], .dropdown-submenu:focus > a > [class*=" icon-"] { background-image: url('/images/glyphicons-halflings-white.png?1428508756') !important; }
+.icon-white, .nav-pills > .active > a > [class^="icon-"], .nav-pills > .active > a > [class*=" icon-"], .nav-list > .active > a > [class^="icon-"], .nav-list > .active > a > [class*=" icon-"], .navbar-inverse .nav > .active > a > [class^="icon-"], .navbar-inverse .nav > .active > a > [class*=" icon-"], .dropdown-menu > li > a:hover > [class^="icon-"], .dropdown-menu > li > a:focus > [class^="icon-"], .dropdown-menu > li > a:hover > [class*=" icon-"], .dropdown-menu > li > a:focus > [class*=" icon-"], .dropdown-menu > .active > a > [class^="icon-"], .dropdown-menu > .active > a > [class*=" icon-"], .dropdown-submenu:hover > a > [class^="icon-"], .dropdown-submenu:focus > a > [class^="icon-"], .dropdown-submenu:hover > a > [class*=" icon-"], .dropdown-submenu:focus > a > [class*=" icon-"] { background-image: url('/images/glyphicons-halflings-white.png?1428509097') !important; }
 
 /*!
  * Bootstrap v2.3.2
@@ -1168,11 +1168,11 @@ table td[class*="span"], table th[class*="span"], .row-fluid table td[class*="sp
 .table-hover tbody tr.info:hover > td { background-color: #c4e3f3; }
 
 /* line 18, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_sprites.scss */
-[class^="icon-"], [class*=" icon-"] { display: inline-block; width: 14px; height: 14px; *margin-right: .3em; line-height: 14px; vertical-align: text-top; background-image: url(url('/images/glyphicons-halflings.png?1428508756')); background-position: 14px 14px; background-repeat: no-repeat; margin-top: 1px; }
+[class^="icon-"], [class*=" icon-"] { display: inline-block; width: 14px; height: 14px; *margin-right: .3em; line-height: 14px; vertical-align: text-top; background-image: url(url('/images/glyphicons-halflings.png?1428509097')); background-position: 14px 14px; background-repeat: no-repeat; margin-top: 1px; }
 
 /* White icons with optional class, or on hover/focus/active states of certain elements */
 /* line 48, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_sprites.scss */
-.icon-white, .nav-pills > .active > a > [class^="icon-"], .nav-pills > .active > a > [class*=" icon-"], .nav-list > .active > a > [class^="icon-"], .nav-list > .active > a > [class*=" icon-"], .navbar-inverse .nav > .active > a > [class^="icon-"], .navbar-inverse .nav > .active > a > [class*=" icon-"], .dropdown-menu > li > a:hover > [class^="icon-"], .dropdown-menu > li > a:focus > [class^="icon-"], .dropdown-menu > li > a:hover > [class*=" icon-"], .dropdown-menu > li > a:focus > [class*=" icon-"], .dropdown-menu > .active > a > [class^="icon-"], .dropdown-menu > .active > a > [class*=" icon-"], .dropdown-submenu:hover > a > [class^="icon-"], .dropdown-submenu:focus > a > [class^="icon-"], .dropdown-submenu:hover > a > [class*=" icon-"], .dropdown-submenu:focus > a > [class*=" icon-"] { background-image: url(url('/images/glyphicons-halflings-white.png?1428508756')); }
+.icon-white, .nav-pills > .active > a > [class^="icon-"], .nav-pills > .active > a > [class*=" icon-"], .nav-list > .active > a > [class^="icon-"], .nav-list > .active > a > [class*=" icon-"], .navbar-inverse .nav > .active > a > [class^="icon-"], .navbar-inverse .nav > .active > a > [class*=" icon-"], .dropdown-menu > li > a:hover > [class^="icon-"], .dropdown-menu > li > a:focus > [class^="icon-"], .dropdown-menu > li > a:hover > [class*=" icon-"], .dropdown-menu > li > a:focus > [class*=" icon-"], .dropdown-menu > .active > a > [class^="icon-"], .dropdown-menu > .active > a > [class*=" icon-"], .dropdown-submenu:hover > a > [class^="icon-"], .dropdown-submenu:focus > a > [class^="icon-"], .dropdown-submenu:hover > a > [class*=" icon-"], .dropdown-submenu:focus > a > [class*=" icon-"] { background-image: url(url('/images/glyphicons-halflings-white.png?1428509097')); }
 
 /* line 52, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/bootstrap-sass-2.3.2.2/vendor/assets/stylesheets/bootstrap/_sprites.scss */
 .icon-glass { background-position: 0      0; }
@@ -3469,7 +3469,7 @@ a { -webkit-transition: color 0.3s ease-in-out, background-image 0.3s ease-in-ou
 .icons-nyu-content-type-unknown { width: 30px; height: 39px; }
 
 /* line 1, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/nyulibraries-assets-3ddc28d87e1a/lib/assets/stylesheets/nyulibraries/_header.scss */
-header { background-image: url('/images/nyulibraries/nyu/header.png?1428508756'); background-position: 21px 21px; background-repeat: no-repeat; background-color: #57068c; height: 69px; }
+header { background-image: url('/images/nyulibraries/nyu/header.png?1428509097'); background-position: 21px 21px; background-repeat: no-repeat; background-color: #57068c; height: 69px; }
 /* line 10, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/nyulibraries-assets-3ddc28d87e1a/lib/assets/stylesheets/nyulibraries/_header.scss */
 header a { float: left; height: 69px; width: 209px; }
 /* line 16, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/nyulibraries-assets-3ddc28d87e1a/lib/assets/stylesheets/nyulibraries/_header.scss */
@@ -3520,7 +3520,7 @@ ul.nyu-login li { display: inline; }
 /* line 1, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/nyulibraries-assets-3ddc28d87e1a/lib/assets/stylesheets/nyulibraries/_search.scss */
 .search { background-color: #e8e8e8; background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e8e8e8), color-stop(100%, #dcdcdc)); background-image: -webkit-linear-gradient(#e8e8e8, #dcdcdc); background-image: -moz-linear-gradient(#e8e8e8, #dcdcdc); background-image: -o-linear-gradient(#e8e8e8, #dcdcdc); background-image: linear-gradient(#e8e8e8, #dcdcdc); -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; padding: 20px; }
 /* line 10, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/nyulibraries-assets-3ddc28d87e1a/lib/assets/stylesheets/nyulibraries/_search.scss */
-.search input[type="text"] { padding-left: 24px; padding-top: 5px; padding-bottom: 5px; background-image: url('/images/magnifier.png?1428508756'); background-repeat: no-repeat; background-position: 6px 50%; }
+.search input[type="text"] { padding-left: 24px; padding-top: 5px; padding-bottom: 5px; background-image: url('/images/magnifier.png?1428509097'); background-repeat: no-repeat; background-position: 6px 50%; }
 /* line 22, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/nyulibraries-assets-3ddc28d87e1a/lib/assets/stylesheets/nyulibraries/_search.scss */
 .search .search-section { border-top: 1px solid #cfcfcf; }
 /* line 27, ../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/bundler/gems/nyulibraries-assets-3ddc28d87e1a/lib/assets/stylesheets/nyulibraries/_search.scss */

@@ -6,4 +6,4 @@ config/*
 .gitignore
 .gitmodules
 Capfile
-
+*.md
