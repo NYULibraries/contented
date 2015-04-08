@@ -40,9 +40,13 @@ class ContactInfo
     [@phone, @email, @tmz, @address1, @address2] = contacts.split ';'.trim()
 
 class Library
-  constructor: (name,category,lat,lng,contact,week) ->
+  constructor: (name,category,url,lat,lng,contact,week) ->
     @name =  name
     @category =  category
+    if url.length == 0
+      @url ="#top"
+    else
+      @url = url
     @latitude = lat
     @longitude = lng
     @contact = new ContactInfo(contact)
@@ -72,41 +76,59 @@ class Library
 class HoursLibcal
   @parseJson : (data)->
     for i in [0..data.locations.length-1] by 1
-      root.lib[i] = new Library(data.locations[i].name, data.locations[i].category, data.locations[i].lat, data.locations[i].long , data.locations[i].contact, data.locations[i].weeks)
-
-
+      root.lib[i] = new Library(data.locations[i].name, data.locations[i].category, data.locations[i].url ,data.locations[i].lat, data.locations[i].long , data.locations[i].contact, data.locations[i].weeks)
 
 map_init = (name,lat,lng) ->
   mapOptions =
     center: new google.maps.LatLng(lat, lng),
     zoom: 18
-  new google.maps.Map(document.getElementById(name).children[1], mapOptions);
+  new google.maps.Map(document.getElementById(name).children[1], mapOptions)
 
 print = ->
+  d = (new Date()).getDay()  
+  tmp = 0  
   for i in [0..root.lib.length - 1] by 1
-    if root.lib[i].category == 'library'
-      document.getElementById(root.lib[i].name).children[0].innerHTML += root.lib[i].name      
+    if root.lib[i].category == 'library'      
+      if tmp != 0
+        alert "in"+table+"tmp="+tmp                
+        document.getElementById(root.lib[tmp-1].name).children[6].innerHTML += "<table class=\"hrsTable\">"+table+"</table>" 
+        table = ""
+        tmp = 0
+      document.getElementById(root.lib[i].name).children[0].innerHTML += "<a href='"+root.lib[i].url+"'>"+root.lib[i].name+"</a>"            
       map_init(root.lib[i].name,root.lib[i].latitude, root.lib[i].longitude)
       document.getElementById(root.lib[i].name).children[2].innerHTML += root.lib[i].contact.address1+"<BR>"+root.lib[i].contact.address2
-      document.getElementById(root.lib[i].name).children[3].children[1].innerHTML += root.lib[i].contact.phone;
-      document.getElementById(root.lib[i].name).children[4].children[1].innerHTML += root.lib[i].contact.email;
-      #document.getElementById(name).children[5].children[0].innerHTML += "<b><font color=\""+colorOpen+"\">"+openOrNot+"</font></b>&nbsp&nbsp&nbsp&nbsp<b><font color=\""+colorOpen+"\">"+currOpenTime+"</font></b>" ;
+      document.getElementById(root.lib[i].name).children[3].children[1].innerHTML += root.lib[i].contact.phone
+      document.getElementById(root.lib[i].name).children[4].children[1].innerHTML += root.lib[i].contact.email     
       document.getElementById(root.lib[i].name).children[5].children[1].children[0].innerHTML += "OPEN HOURS ("+root.lib[i].contact.tmz+")"
       if root.lib[i].isCurrentlyOpen()
         if root.lib[i].week[0].days[(new Date()).getDay()].status == "24hours"
-          document.getElementById(root.lib[i].name).children[5].children[0].innerHTML += "<b><font color=\"green\">OPEN&nbsp&nbsp&nbsp&nbsp24 HOURS</font></b>" ;
+          document.getElementById(root.lib[i].name).children[5].children[0].innerHTML += "<b><font color=\"green\">OPEN&nbsp&nbsp&nbsp&nbsp24 HOURS</font></b>"
         else
-          document.getElementById(root.lib[i].name).children[5].children[0].innerHTML += "<b><font color=\"green\">TODAYS HOURS&nbsp&nbsp&nbsp&nbsp"+root.lib[i].week[0].days[(new Date()).getDay()].from.getHours()+":"+root.lib[i].week[0].days[(new Date()).getDay()].from.getMinutes()+" to "+root.lib[i].week[0].days[(new Date()).getDay()].to.getHours()+":"+root.lib[i].week[0].days[(new Date()).getDay()].to.getMinutes()+"</font></b>" ;
+          document.getElementById(root.lib[i].name).children[5].children[0].innerHTML += "<b><font color=\"green\">TODAYS HOURS&nbsp&nbsp&nbsp&nbsp"+root.lib[i].week[0].days[d].from.getHours()+":"+root.lib[i].week[0].days[d].from.getMinutes()+" to "+root.lib[i].week[0].days[d].to.getHours()+":"+root.lib[i].week[0].days[d].to.getMinutes()+"</font></b>"
       else
-        document.getElementById(root.lib[i].name).children[5].children[0].innerHTML += "<b><font color=\"red\">CLOSED&nbsp&nbsp&nbsp&nbsp</font></b>" ;
+        document.getElementById(root.lib[i].name).children[5].children[0].innerHTML += "<b><font color=\"red\">CLOSED&nbsp&nbsp&nbsp&nbsp</font></b>"      
+    else
+      if tmp == 0
+        tmp = i
+        table += "<tr><td>&nbsp&nbsp&nbsp&nbsp</td>"      
+        for j in [0..6] by 1
+          table += "<td><b>"+root.lib[i].week[0].days[j].day+"  "+(root.lib[i].week[0].days[j].date.getMonth()+1)+"/"+root.lib[i].week[0].days[j].date.getDate()+"</b></td>"        
+        table += "</tr>"
+      table += "<tr><td>"+"<a href='"+root.lib[i].url+"'>"+root.lib[i].name+"</a>"+"</td>"      
+      for j in [0..6] by 1        
+        if root.lib[i].week[0].days[j].status == "24hours"          
+          table += "<td>24 Hours</td>" 
+        if root.lib[i].week[0].days[j].status == "not-set"          
+          table += "<td>not-set</td>"         
+        if root.lib[i].week[0].days[j].status == "open"          
+          table += "<td>"+root.lib[i].week[0].days[j].from.getHours()+":"+root.lib[i].week[0].days[j].from.getMinutes()+" to "+root.lib[i].week[0].days[j].to.getHours()+":"+root.lib[i].week[0].days[j].to.getMinutes()+"</td>"          
+      table += "</tr>"
+  if tmp != 0
+        alert "out"+table+"tmp="+tmp                
+        document.getElementById(root.lib[tmp-1].name).children[6].innerHTML += "<table class=\"hrsTable\">"+table+"</table>"       
+        
 
-      #document.getElementById("print").innerHTML += "<BR>" + root.lib[i].isCurrentlyOpen()
-
-      #for j in [0..no_of_weeks - 1] by 1
-        #for k in [0..6] by 1
-          #document.getElementById("print").innerHTML += "<BR>"+root.lib[i].week[j].days[k].date + " " + root.lib[i].week[j].days[k].day + " " + root.lib[i].week[j].days[k].status + " " + root.lib[i].week[j].days[k].from + " " + root.lib[i].week[j].days[k].to
-
-getHours = ->
+getHours_print = ->
   $.getJSON '//api3.libcal.com/api_hours_grid.php?iid=1287&format=json&weeks='+no_of_weeks+'&callback=?', (data) ->    
     HoursLibcal.parseJson(data)    
     print()
@@ -114,5 +136,5 @@ getHours = ->
   return
 
 if document.URL.indexOf("/hours") > 0
-  getHours()
+  getHours_print()
 

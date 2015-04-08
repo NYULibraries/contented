@@ -20,6 +20,7 @@ namespace :siteleaf do
     siteleaf.auth_cleanup
     siteleaf.setup
     siteleaf.push_theme
+    siteleaf.clean_up
   end
 
   desc "Siteleaf Authorization & all the previous theme files on siteleaf are deleted so as to push in new ones"
@@ -45,5 +46,12 @@ namespace :siteleaf do
   task :push_theme, :roles => :app do
     run_locally ("siteleaf push theme")
   end
-  
+
+  desc "Clean up so pushing to github is easier"
+  task :clean_up, :roles => :app do
+    run_locally ("rm -rf javascripts")
+    run_locally ("rm -rf stylesheets")
+    run_locally ("rm config.ru")
+  end
+
 end
