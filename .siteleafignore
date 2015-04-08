@@ -1,5 +1,9 @@
 Gemfile
 Gemfile.lock
-Guardfile
 README.md
-
+assets/*
+config/*
+.gitignore
+.gitmodules
+Capfile
+*.md
