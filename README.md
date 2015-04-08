@@ -11,4 +11,4 @@ second change the name of your website on siteleaf config <name> command
 
 run it using
 
-	cap testing:RunAll
+	cap siteleaf:deploy
