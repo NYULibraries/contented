@@ -69,4 +69,4 @@ class Setup_nyulibraries_assets
 	end
 end
 
-compile  = Setup_nyulibraries_assets.new()
+Setup_nyulibraries_assets.new()
