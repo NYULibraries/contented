@@ -89,8 +89,7 @@ print = ->
   tmp = 0  
   for i in [0..root.lib.length - 1] by 1
     if root.lib[i].category == 'library'      
-      if tmp != 0
-        alert "in"+table+"tmp="+tmp                
+      if tmp != 0                       
         document.getElementById(root.lib[tmp-1].name).children[6].innerHTML += "<table class=\"hrsTable\">"+table+"</table>" 
         table = ""
         tmp = 0
@@ -123,10 +122,38 @@ print = ->
         if root.lib[i].week[0].days[j].status == "open"          
           table += "<td>"+root.lib[i].week[0].days[j].from.getHours()+":"+root.lib[i].week[0].days[j].from.getMinutes()+" to "+root.lib[i].week[0].days[j].to.getHours()+":"+root.lib[i].week[0].days[j].to.getMinutes()+"</td>"          
       table += "</tr>"
-  if tmp != 0
-        alert "out"+table+"tmp="+tmp                
-        document.getElementById(root.lib[tmp-1].name).children[6].innerHTML += "<table class=\"hrsTable\">"+table+"</table>"       
-        
+  if tmp != 0                        
+        document.getElementById(root.lib[tmp-1].name).children[6].innerHTML += "<table class=\"hrsTable\">"+table+"</table>" 
+
+$ ->
+  $("#open_button_img").click ->    
+    if $(this).data('name') == 'show'
+      $(this).data('name', 'hide')
+      $(this).attr('src', '/images/ic_expand_more_48px.svg')
+      alert "hide"
+    else
+      $(this).data('name', 'show')
+      $(this).attr('src', '/images/ic_expand_less_48px.svg')
+      alert "show"
+
+
+
+
+
+       # +"$(\"#tableLib"+i+"\").css(\"display\", \"none\");"
+       # +"$(this).data('name', 'hide');"
+       # +"$(this).attr('src', '/images/ic_expand_more_48px.svg');"
+      #  +"} else {"
+      #  +"$(\"#tableLib"+i+"\").css(\"display\", \"block\");"
+      #  +"$(this).data('name', 'show');"
+       # +"$(this).attr('src', '/images/ic_expand_less_48px.svg');"
+#if (id.parentNode.parentNode.parentNode.parentNode.childNodes[15].style.display == 'none'){
+   # id.parentNode.parentNode.parentNode.parentNode.childNodes[15].style.display = 'block';
+   # id.src = "/images/ic_expand_less_48px.svg";
+  #}else{
+   # id.parentNode.parentNode.parentNode.parentNode.childNodes[15].style.display = 'none';
+  #  id.src = "/images/ic_expand_more_48px.svg";
+  #}
 
 getHours_print = ->
   $.getJSON '//api3.libcal.com/api_hours_grid.php?iid=1287&format=json&weeks='+no_of_weeks+'&callback=?', (data) ->    

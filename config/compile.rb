@@ -6,6 +6,7 @@ require 'compass'
 require 'nyulibraries-assets'
 require 'fileutils'
 require 'microservice_precompiler'
+require 'liquid'
 # Get the various paths
 class Setup_nyulibraries_assets
 	def initialize
@@ -13,6 +14,7 @@ class Setup_nyulibraries_assets
 		init_bootstrap_compass
 		setup_dirs
 		compile_Microservice_Precompiler
+		compile_liquid
 		setup_siteleaf_structure
 		cleanup
 	end
@@ -42,6 +44,14 @@ class Setup_nyulibraries_assets
 		precompiler.project_root = "./assets"
 		precompiler.sprockets_build [:javascripts] # Compile Javascript
 		precompiler.compass_build # compile CSS
+	end
+	def compile_liquid
+		records = Dir.glob("_includes/**/*")
+		records.each do |liquid_file|
+  			next if File.directory? liquid_file
+  			file = File.read("#{liquid_file}")
+  			template = Liquid::Template.parse(file).render 		
+		end
 	end
 	def setup_siteleaf_structure
 		# Copy images to dist
