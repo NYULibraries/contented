@@ -36,6 +36,9 @@
           {% if url == "/hours" %}
             {% include 'includes/hours_templating'%}
           {% endif %}
+          {% if url == "/staff" %}
+            {% include 'includes/staff_templating'%}
+          {% endif %}
         </article>
       {% endfor %}
     {% endif %}

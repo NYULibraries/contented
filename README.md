@@ -1,15 +1,30 @@
-# Siteleaf-NYUAssets-Microservice-precompiler_Capistrano
+# NYU Division of Libraries Web Presence
 
-Automates Siteleaf by adding NYU assets after converting them using Microservice-precompiler
+_[A work in progress]_
 
-# Running
+Home for the assets and templates for the NYU Division of Libraries [Siteleaf](http://www.siteleaf.com/) website to replace [http://library.nyu.edu](http://library.nyu.edu).
 
-First authenticate yourself on siteleaf
+## Siteleaf
 
-	siteleaf auth
+The website uses Siteleaf as its CMS, where access can be controlled, content can be written in Markdown or plain text, and the static pages generated can be hosted in the cloud. Publishing these pages to GitHub allows us to use our established practice of coding in the open and using continuous integration and rapid deployment.
 
-second change the name of your website on siteleaf config <name> command
+## Templates
 
-run it using
+We are in the process of developing the [Liquid templates](https://github.com/Shopify/liquid) necessary for translating our style guide into an active design.
 
-	cap siteleaf:deploy
+### Resources
+
+- http://www.siteleaf.com/help/themes/
+- https://gist.github.com/sskylar
+
+## Assets
+
+Before pushing our style and javascript assets up to our Siteleaf theme we can automate the process of precompiling since we use [a custom Compass plugin](https://github.com/NYULibraries/nyulibraries-assets) to manage our global assets.
+
+### Resources
+
+- Style Guide: http://nyulibraries.github.io/library.nyu.edu/
+
+## Wiki
+
+[Read our wiki](https://github.com/NYULibraries/library.nyu.edu/wiki), for more information on this project.
