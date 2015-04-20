@@ -5,7 +5,7 @@ class Empty_Siteleaf
 	def initialize (key,secret,id)
 		Siteleaf.api_key    = key
 		Siteleaf.api_secret = secret
-		theme = theme = Siteleaf::Theme.find_by_site_id(id)
+		theme = Siteleaf::Theme.find_by_site_id(id)
 		assets = theme.assets
 		assets.each do |asset|
 			asset.delete

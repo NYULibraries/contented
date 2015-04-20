@@ -12,11 +12,12 @@ namespace :siteleaf do
 
   desc "call all tests sequentially"
   task :deploy, :roles => :app do
-    #compile.all
+    compile.all
     siteleaf.auth_cleanup
-    #siteleaf.setup
-    #siteleaf.push_theme
-    #siteleaf.clean_up
+    siteleaf.setup
+    siteleaf.push_theme
+    siteleaf.staff
+    siteleaf.clean_up
   end
 
   desc "Siteleaf Authorization & all the previous theme files on siteleaf are deleted so as to push in new ones"
@@ -32,6 +33,11 @@ namespace :siteleaf do
   desc "Push Theme on to Siteleaf"
   task :push_theme, :roles => :app do
     run_locally ("siteleaf push theme")
+  end
+
+  desc "Push Theme on to Siteleaf"
+  task :staff, :roles => :app do
+    run_locally ("bundle exec ruby config/staff.rb") 
   end
 
   desc "Clean up so pushing to github is easier"

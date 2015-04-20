@@ -58,7 +58,7 @@ class Setup_nyulibraries_assets
 		#FileUtils.cp_r "./assets/images/.", "./images"    # NOTE: Uncomment this to get all images to.
 		# Copy stylesheets to dist/stylesheets
 		FileUtils.cp_r "./assets/stylesheets", "./"
-	end
+	end	
 	def cleanup
 		# Clean up and  remove the stylesheets directory from assets
 		FileUtils.rm_rf "./assets/stylesheets"
