@@ -22,7 +22,7 @@ namespace :siteleaf do
 
   desc "Siteleaf Authorization & all the previous theme files on siteleaf are deleted so as to push in new ones"
   task :auth_cleanup, :roles => :app do
-    run_locally ("bundle exec ruby config/empty_siteleaf.rb") 
+    run_locally ("bundle exec ruby lib/loaders/empty_theme.rb") 
   end
 
   desc "Setup Siteleaf , the config.ru file is created and this is essential for pushing to siteleaf"
@@ -37,7 +37,7 @@ namespace :siteleaf do
 
   desc "Push Theme on to Siteleaf"
   task :staff, :roles => :app do
-    run_locally ("bundle exec ruby config/staff.rb") 
+    run_locally ("bundle exec ruby lib/loaders/staff.rb") 
   end
 
   desc "Clean up so pushing to github is easier"
