@@ -17,7 +17,7 @@ class Staff < Base
     spreadsheet_to_json(spreadsheet)['feed']['entry'].each do |person|      
       create_post({
         parent_id: page_id,
-        title: person['gsx$firstname']['$t'],
+        title: person['gsx$worker']['$t'],
         meta: metafield_mapping(person)
       })      
     end
@@ -33,13 +33,13 @@ class Staff < Base
  
   def staff_attrs
     {
-      'firstname' => 'gsx$firstname',
-      'lastname' => 'gsx$lastname',
+      'firstname' => 'gsx$Legal Name - Last Name',
+      'lastname' => 'gsx$Legal Name - First Name',
       'email' => 'gsx$email',
       'phone' => 'gsx$workphones',
       'department' => 'gsx$department',
       'department2' => 'gsx$departmentii',
-      'jobtitle' => 'gsx$jobtitle',
+      'job' => 'gsx$job',
       'workspace' => 'gsx$workspace',
       'location' => 'gsx$location',
       'libguides_url' => 'gsx$libguidesurl',

@@ -33,12 +33,12 @@ class Base
 	end
 
 	def theme
-		Siteleaf::Theme.find_by_site_id(ENV['SITELFEAF_ID'])
+		Siteleaf::Theme.find_by_site_id(ENV['SITELEAF_ID'])
 	end
 
-	def spreadsheet_to_json(spreadsheet)    
-    JSON.parse(open(spreadsheet).read)
-  end
+	def spreadsheet_to_json(spreadsheet)
+		JSON.parse(open(spreadsheet).read)
+	end
 
 end
 
