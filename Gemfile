@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.4.0'
 
 # Use microservice precompiler to build coffee and scss from diffrent sources
-gem 'microservice_precompiler', github: 'barnabyalter/microservice_precompiler'
+gem 'microservice_precompiler', '~> 1.0'
 
 # Why do we need rails?
 gem 'rails'
