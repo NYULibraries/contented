@@ -18,6 +18,12 @@
       </nav>
     {% endif %}
     {{body}}
+    {% if url == "/department" %}
+      <div id="printall"></div>
+    {% endif %}
+    {% if url contains "/department" %}
+      <div id="print"></div>
+    {% endif %}
     {% if type == "post" %}
       {% comment %} Show tagsets if this is a post {% endcomment %}
       {% for tagset in taxonomy %}
@@ -38,7 +44,7 @@
           {% endif %}
           {% if url == "/staff" %}
             {% include 'includes/staff_templating'%}
-          {% endif %}
+          {% endif %}          
         </article>
       {% endfor %}
     {% endif %}
