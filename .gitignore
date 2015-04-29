@@ -1,4 +1,11 @@
-Gemfile.lock
 assets/images/
 assets/.sass-cache/
+
+stylesheets
+javascripts
+.sass-cache/
+
 secret_study.yml
+
+wiki/
+*.wiki

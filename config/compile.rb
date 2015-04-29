@@ -21,7 +21,7 @@ class Setup_nyulibraries_assets
 	def init_nyulibraries_assets_compass
 		@nyulibraries_assets_base =  "#{Compass::Frameworks['nyulibraries-assets'].stylesheets_directory}/.."
 		@nyulibraries_assets_javascripts_path = "#{@nyulibraries_assets_base}/javascripts"
-		@nyulibraries_assets_images_path = "#{@nyulibraries_assets_base}/images"		
+		@nyulibraries_assets_images_path = "#{@nyulibraries_assets_base}/images"
 	end
 	def init_bootstrap_compass
 		@bootstrap_assets_base = "#{Compass::Frameworks['bootstrap'].stylesheets_directory}/.."
@@ -50,7 +50,7 @@ class Setup_nyulibraries_assets
 		records.each do |liquid_file|
   			next if File.directory? liquid_file
   			file = File.read("#{liquid_file}")
-  			template = Liquid::Template.parse(file).render 		
+  			template = Liquid::Template.parse(file).render
 		end
 	end
 	def setup_siteleaf_structure
