@@ -16,21 +16,21 @@ namespace :siteleaf do
 
   desc "call all tests sequentially"
   task :deploy, :roles => :app do
-    compile.all
-    siteleaf.empty_theme
-    siteleaf.setup
-    siteleaf.push_theme
+    #compile.all
+    #siteleaf.empty_theme
+    #siteleaf.setup
+    #siteleaf.push_theme
     siteleaf.staff
     siteleaf.hours
     siteleaf.clean_up
   end
 
-  desc "Siteleaf Authorization & all the previous theme files on siteleaf are deleted so as to push in new ones"
+  desc "Previous theme files on siteleaf are deleted so as to push in new ones"
   task :empty_theme, :roles => :app do
     Nyulibraries::Site_leaf::Loaders::Empty_Theme.new
   end
 
-  desc "Setup Siteleaf , the config.ru file is created and this is essential for pushing to siteleaf"
+  desc "Siteleaf config.ru file is created and this is essential for pushing to siteleaf"
   task :setup, :roles => :app do
     run_locally ("siteleaf config empty")
   end

@@ -1,11 +1,11 @@
 root = exports ? window
-root.staff = []
+root.classes = []
 class Parse_Classes
   @parseJson : (data)->
-    for e in data.events
-      root.staff.push new Classes(e.title,e.start,e.end,e.description,e.location.name,e.campus.name,e.presenter,e.seats,e.seats_taken)
+    for el in data.events
+      root.classes.push new Classes(el.title,el.start,el.end,el.description,el.location.name,el.campus.name,el.presenter,el.seats,el.seats_taken)
 
-class Time
+class Class_Time
   constructor: (date) ->
     @time = @parseDate(date)
 
@@ -19,8 +19,8 @@ class Time
 class Classes
   constructor: (name,start,end,description,location,campus,teacher,seats,seats_taken) ->
     @name = name
-    @start = new Time(start)
-    @end = new Time(end)
+    @start = new Class_Time(start)
+    @end = new Class_Time(end)
     @description = description
     @location = location
     @campus = campus
@@ -29,12 +29,12 @@ class Classes
     @seats_taken = seats_taken
 
 
-Print = ->
-  for e in root.staff
+Print_Classes = ->
+  for e in root.classes
     if document.URL.indexOf("/department/"+e.campus.toLowerCase()) > 0
-      x = "print"
+      x = "class"
     else
-      x = "printall"
+      x = "classAll"
     document.getElementById(x).innerHTML += "<BR><b>CLASS:</b>"
     document.getElementById(x).innerHTML += "<BR>name: "+e.name
     document.getElementById(x).innerHTML += "<BR>start date: "+e.start.time.getMonth()+"/"+e.start.time.getDate()
@@ -51,7 +51,7 @@ Print = ->
 getClasses_print = ->
   $.getJSON 'https://api2.libcal.com/1.0/events?iid=1287&cal_id=144&key=6c79e5927411143f2ddb85e3b2e1ea46&callback=?', (data) ->
     Parse_Classes.parseJson(data)
-    Print()
+    Print_Classes()
     return
   return
 

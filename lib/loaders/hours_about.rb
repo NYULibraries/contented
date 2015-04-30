@@ -8,7 +8,7 @@ module Nyulibraries
 
         def initialize(page_id, libcal_hours)
           if page_id.empty? || libcal_hours.empty?
-            raise ArgumentError.new("Page ID and libcal hours url are required params")
+            raise ArgumentError.new('Page ID and libcal hours url are required params')
           end
           @page_id = page_id
           @libcal_hours =  (Hashie::Mash.new(JSON.parse((open(libcal_hours).read)))).locations

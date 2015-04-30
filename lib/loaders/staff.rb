@@ -10,7 +10,7 @@ module Nyulibraries
 
         def initialize(page_id, spreadsheet)
           if page_id.empty? || spreadsheet.empty?
-            raise ArgumentError.new("Page ID and spreadsheet are required params")
+            raise ArgumentError.new('Page ID and spreadsheet are required params')
           end
           @page_id = page_id
           @spreadsheet = Google_Sheet.new(spreadsheet).to_json()

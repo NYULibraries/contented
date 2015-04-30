@@ -2,6 +2,10 @@
 
 _[A work in progress]_
 
+[![Build Status](https://travis-ci.org/NYULibraries/library.nyu.edu.svg)](https://travis-ci.org/NYULibraries/library.nyu.edu)
+[![Dependency Status](https://gemnasium.com/NYULibraries/library.nyu.edu.svg)](https://gemnasium.com/NYULibraries/library.nyu.edu)
+[![Code Climate](https://codeclimate.com/github/NYULibraries/library.nyu.edu/badges/gpa.svg)](https://codeclimate.com/github/NYULibraries/library.nyu.edu)
+
 Home for the assets and templates for the NYU Division of Libraries [Siteleaf](http://www.siteleaf.com/) website to replace [http://library.nyu.edu](http://library.nyu.edu).
 
 ## Siteleaf

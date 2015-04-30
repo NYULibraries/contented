@@ -84,7 +84,7 @@ map_init = (name,lat,lng) ->
     zoom: 18
   new google.maps.Map(document.getElementById(name).children[1], mapOptions)
 
-print = ->
+print_hours = ->
   d = (new Date()).getDay()
   tmp = 0
   for i in [0..root.lib.length - 1] by 1
@@ -140,7 +140,7 @@ open_button_img = ->
 getHours_print = ->
   $.getJSON '//api3.libcal.com/api_hours_grid.php?iid=1287&format=json&weeks='+no_of_weeks+'&callback=?', (data) ->
     HoursLibcal.parseJson(data)
-    print()
+    print_hours()
     open_button_img()
     return
   return
