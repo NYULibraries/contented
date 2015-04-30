@@ -16,10 +16,10 @@ namespace :siteleaf do
 
   desc "call all tests sequentially"
   task :deploy, :roles => :app do
-    #compile.all
-    #siteleaf.empty_theme
-    #siteleaf.setup
-    #siteleaf.push_theme
+    compile.all
+    siteleaf.empty_theme
+    siteleaf.setup
+    siteleaf.push_theme
     siteleaf.staff
     siteleaf.hours
     siteleaf.clean_up
