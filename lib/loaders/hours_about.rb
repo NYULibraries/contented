@@ -1,58 +1,67 @@
 require File.expand_path('../base.rb', __FILE__)
 
 module Nyulibraries
-  module Site_leaf
+  module SiteLeaf
     module Loaders
-      class Hours_About < Base
-        attr_accessor :page_id, :libcal_hours
+      # Loads Hours Posts
+      class HoursAbout < Base
+        attr_accessor :page_id, :lib
 
-        def initialize(page_id, libcal_hours)
-          if page_id.empty? || libcal_hours.empty?
-            raise ArgumentError.new('Page ID and libcal hours url are required params')
+        def initialize(page_id, lib)
+          if page_id.empty? || lib.empty?
+            fail ArgumentError, 'Page ID and libcal url are required params'
           end
           @page_id = page_id
-          @libcal_hours =  (Hashie::Mash.new(JSON.parse((open(libcal_hours).read)))).locations
+          @lib = Hashie::Mash.new(JSON.parse((open(lib).read))).locations
         end
 
-        def find_hours_posts(posts,name)
-          #the meta index is 0 because that is where the name of the library is.
-          posts.each {|post| return post if name.casecmp(post.title) == 0}
-          return nil
+        def get_hour_post(posts, name)
+          posts.each { |post| return post if name.casecmp(post.title) == 0 }
         end
 
-        def crud_posts
+        def find_hour_post(posts, name)
+          posts.each { |post| return false if name.casecmp(post.title) == 0 }
+        end
 
-          posts = get_all_posts(page_id)
+        def match_name(lib, name)
+          lib.category == 'library' && lib.name.casecmp(name) == 0
+        end
 
-          #delete posts in siteleaf that are not in Hours Libcal
+        def find_lib_hours(title)
+          lib.each { |lib| return false if match_name(lib, title) }
+        end
 
+        def delete_rm_lib(posts)
+          # delete posts in siteleaf that are not in Hours Libcal
           posts.each do |post|
-            lirary_present=false
-            libcal_hours.each{|lib| lirary_present=true if lib.category == 'library' && lib.name.casecmp(post.title) == 0}
-            if !lirary_present
-              post.delete
-            end
+            next unless find_lib_hours(post.title)
+            post.delete
           end
+        end
 
-          #Create posts in siteleaf from Hours Libcal
-
-          libcal_hours.each do |lib|
-            if lib.category == 'library' && find_hours_posts(posts,lib.name).nil?
-              create_post({
-                :parent_id => page_id,
-                :title     => lib.name
-              })
-            end
+        def create_lib(posts)
+          # Create posts in siteleaf from Hours Libcal
+          lib.each do |lib|
+            next unless lib.category == 'library'
+            next unless find_hour_post(posts, lib.name)
+            create_post(parent_id: page_id, title: lib.name)
           end
+        end
 
-          #Re-order Posts this is done by changing the date field in posts and it can thus be displayed in sorted manner
-          #This Approach is followed because Libcal Hours can re-order libraries and json recieved is the proper order
-
-          days = 0
-          libcal_hours.each do |lib|
-            next if lib.category != 'library'
-            update_post_date(find_hours_posts(posts,lib.name),DateTime.now+(days=days+1))
+        def reorder_lib(posts)
+          # Re-order Posts by changing the date in posts in sorted manner
+          # Libcal Hours can re-order libraries from json in the proper order
+          days = DateTime.now
+          lib.each do |library|
+            next unless library.category == 'library'
+            update_post_date(get_hour_post(posts, library.name), (days += 1))
           end
+        end
+
+        def update_posts
+          delete_rm_lib(get_all_posts(page_id))
+          create_lib(get_all_posts(page_id))
+          reorder_lib(get_all_posts(page_id))
         end
       end
     end

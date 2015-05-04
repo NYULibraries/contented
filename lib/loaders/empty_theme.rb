@@ -1,11 +1,12 @@
 require File.expand_path('../base.rb', __FILE__)
 
 module Nyulibraries
-  module Site_leaf
+  module SiteLeaf
     module Loaders
-      class Empty_Theme < Base
+      # Empties Out the Entire Theme of siteleaf
+      class EmptyTheme < Base
         def initialize
-          theme.assets.each { |asset| asset.delete }
+          theme.assets.each(&:delete)
         end
       end
     end

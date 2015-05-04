@@ -1,8 +1,9 @@
 module Nyulibraries
-  module Site_leaf
+  module SiteLeaf
     module Loaders
+      # Staffer returns metafields based on attrs
       class Staffer
-        #This array needs to be the exact column as it is in the spreadsheet.
+        # This array needs to be the exact column as is in spreadsheet.
         def attrs
           {
             'First Name'            => 'firstname',
@@ -22,8 +23,8 @@ module Nyulibraries
 
         def get_staff(person)
           metafields = []
-          attrs.each do |key , value|
-            metafields << { 'key' => key, 'value' => person.send(''+value).t }
+          attrs.each do |key, val|
+            metafields << { 'key' => key, 'value' => person.send('' + val).t }
           end
           metafields
         end

@@ -7,24 +7,25 @@ require 'figs'
 Figs.load
 
 module Nyulibraries
-  module Site_leaf
+  module SiteLeaf
     module Loaders
+      # Contains All Siteleaf related functions
       class Base
-
         def initialize
           Siteleaf.api_key    = ENV['SITELEAF_KEY']
           Siteleaf.api_secret = ENV['SITELEAF_SECRET']
         end
 
         def create_posts_from_spreadsheet
-          raise NotImplementedError, "#{child} must implement this method"
+          fail NotImplementedError, '#{child} must implement this method'
         end
 
         def create_page(title)
-          Siteleaf::Page.create({
-            :site_id  => ENV['SITELEAF_ID'],
-            :title    => title
-          })
+          Siteleaf::Page.create
+          {
+            site_id:  ENV['SITELEAF_ID'],
+            title:    title
+          }
         end
 
         def get_page(page_id)
@@ -35,12 +36,12 @@ module Nyulibraries
           get_page(page_id).posts
         end
 
-        def update_post_meta(post,meta)
+        def update_post_meta(post, meta)
           post.meta = meta
           post.save
         end
 
-        def update_post_date(post,date)
+        def update_post_date(post, date)
           post.published_at = date
           post.save
         end
@@ -56,4 +57,3 @@ module Nyulibraries
     end
   end
 end
-
