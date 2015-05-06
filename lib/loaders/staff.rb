@@ -14,7 +14,7 @@ module Nyulibraries
             fail ArgumentError, 'Page ID and spreadsheet are required params'
           end
           @page_id = page_id
-          @spreadsheet = GoogleSheet.new(spreadsheet).to_json
+          @spreadsheet = GoogleSheet.new(spreadsheet).json_data
         end
 
         def match_email(post, email)
