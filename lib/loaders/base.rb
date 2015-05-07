@@ -16,16 +16,9 @@ module Nyulibraries
           Siteleaf.api_secret = ENV['SITELEAF_SECRET']
         end
 
-        def create_posts_from_spreadsheet
-          fail NotImplementedError, '#{child} must implement this method'
-        end
-
-        def create_page(title)
-          Siteleaf::Page.create
-          {
-            site_id:  ENV['SITELEAF_ID'],
-            title:    title
-          }
+        def create_page(attrs = {})
+          attrs[:site_id]  =  ENV['SITELEAF_ID']
+          Siteleaf::Page.create(attrs)
         end
 
         def get_page(page_id)
@@ -36,10 +29,23 @@ module Nyulibraries
           get_page(page_id).posts
         end
 
+        # def get_all_pages(page_id)
+        #   get_page(page_id).pages
+        # end
+
         def update_post_meta(post, meta)
           post.meta = meta
           post.save
         end
+
+        def update_post_tags(post, tags)
+          post.taxonomy = tags
+          post.save
+        end
+
+        # def update_page_meta(page, meta)
+        #   page.meta = meta
+        # end
 
         def update_post_date(post, date)
           post.published_at = date

@@ -9,6 +9,8 @@ describe 'Base' do
     expect(ENV['HOURS_PAGE_ID']).not_to be_empty
     expect(ENV['STAFF_SPREADSHEET']).not_to be_empty
     expect(ENV['LIBCAL_HOURS']).not_to be_empty
+    expect(ENV['DEPARTMENTS_SPREADSHEET']).not_to be_empty
+    expect(ENV['DEPARTMENT_PAGE_ID']).not_to be_empty
   end
 
   let(:base) { Nyulibraries::SiteLeaf::Loaders::Base.new }
@@ -22,28 +24,20 @@ describe 'Base' do
     end
   end
 
-  describe '#create_posts_from_spreadsheet' do
-    subject { base.create_posts_from_spreadsheet }
-    context 'Needs to be implemented in child class' do
-      it 'should raise error' do
-        # expect(base.create_posts_from_spreadsheet).to fail
-      end
-    end
-  end
-
   describe '#create_page' do
     subject { base.create_page }
     it 'should create new page' do
-      # pending
+      # Doesn't need to be tested as it is Siteleaf functionality
     end
   end
 
   describe '#get_page' do
     subject { base.get_page }
-    context 'Get Page by page_id' do
+    context 'Get Page by page_id & Pages being tested as they need to exist' do
       it 'should return a page' do
         expect(base.get_page(ENV['STAFF_PAGE_ID'])).to be_instance_of(Siteleaf::Page)
         expect(base.get_page(ENV['HOURS_PAGE_ID'])).to be_instance_of(Siteleaf::Page)
+        expect(base.get_page(ENV['DEPARTMENT_PAGE_ID'])).to be_instance_of(Siteleaf::Page)
       end
     end
   end
@@ -52,8 +46,10 @@ describe 'Base' do
     subject { base.get_all_posts }
     context 'Get All Posts on a Page by page_id' do
       it 'should return an array of posts' do
+        # No need to test These at is all siteleaf Functionality
         expect(base.get_all_posts(ENV['STAFF_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
         expect(base.get_all_posts(ENV['HOURS_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
+        expect(base.get_all_posts(ENV['DEPARTMENT_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
       end
     end
   end
@@ -62,7 +58,16 @@ describe 'Base' do
     subject { base.update_post_meta }
     context 'Update Meta-fields of a Post' do
       it 'should update the meta-fields of the post in the parameter' do
-        # pending
+        # No need to test These at is all siteleaf Functionality
+      end
+    end
+  end
+
+  describe '#update_post_tags' do
+    subject { base.update_post_tags }
+    context 'Update tags of a Post' do
+      it 'should update the tags of the post in the parameter' do
+        # No need to test These at is all siteleaf Functionality
       end
     end
   end
@@ -71,7 +76,7 @@ describe 'Base' do
     subject { base.update_post_date }
     context 'Update published_date of a Post' do
       it 'should update the published_date of the post in the parameter' do
-        # pending
+        # No need to test These at is all siteleaf Functionality
       end
     end
   end
@@ -79,7 +84,7 @@ describe 'Base' do
   describe '#create_post' do
     subject { base.create_post }
     it 'should create new posts' do
-      # pending
+      # No need to test These at is all siteleaf Functionality
     end
   end
 

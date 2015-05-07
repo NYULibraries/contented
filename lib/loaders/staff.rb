@@ -5,7 +5,7 @@ require File.expand_path('../staffer.rb', __FILE__)
 module Nyulibraries
   module SiteLeaf
     module Loaders
-      # Creates Deleted Updates Staff Posts and Meta-fields
+      # Creates Deletes Updates Staff Posts and Meta-fields
       class Staff < Base
         attr_accessor :page_id, :spreadsheet
 
@@ -24,7 +24,7 @@ module Nyulibraries
         def find_staff_posts(posts, email)
           # the meta array index is the index of email in staffer.rb for email
           posts.each { |post| return post if match_email(post, email) }
-          nil # shows up as an error on rubocop but required
+          nil
         end
 
         def find_staff_sheet(post)

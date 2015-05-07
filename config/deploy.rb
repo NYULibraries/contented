@@ -1,6 +1,7 @@
 require File.expand_path('../../lib/loaders/empty_theme.rb', __FILE__)
 require File.expand_path('../../lib/loaders/staff.rb', __FILE__)
 require File.expand_path('../../lib/loaders/hours_about.rb', __FILE__)
+require File.expand_path('../../lib/loaders/departments.rb', __FILE__)
 namespace :siteleaf do
   namespace :compile do
     desc 'Compile Javascript and Sass from assets Folder to dist folder'
@@ -13,13 +14,14 @@ namespace :siteleaf do
   end
 
   desc 'call all tests sequentially'
-  task :deploy, roles: :app do
+  task :deploy do
     compile.all
     siteleaf.empty_theme
     siteleaf.setup
     siteleaf.push_theme
     siteleaf.staff
     siteleaf.hours
+    siteleaf.departments
     siteleaf.clean_up
   end
 
@@ -29,27 +31,32 @@ namespace :siteleaf do
   end
 
   desc 'config.ru file is created and this is essential for pushing to siteleaf'
-  task :setup, roles: :app do
+  task :setup do
     run_locally 'siteleaf config empty'
   end
 
   desc 'Push Theme on to Siteleaf'
-  task :push_theme, roles: :app do
+  task :push_theme do
     run_locally 'siteleaf push theme'
   end
 
   desc 'Creates Posts for each individual Staff member on directory page'
-  task :staff, roles: :app do
+  task :staff do
     Nyulibraries::SiteLeaf::Loaders::Staff.new(ENV['STAFF_PAGE_ID'], ENV['STAFF_SPREADSHEET']).update_posts
   end
 
   desc 'Creates Posts for each library on hours page'
-  task :hours, roles: :app do
+  task :hours do
     Nyulibraries::SiteLeaf::Loaders::HoursAbout.new(ENV['HOURS_PAGE_ID'], ENV['LIBCAL_HOURS']).update_posts
   end
 
+  desc 'Creates Pages for each Departments'
+  task :departments do
+    Nyulibraries::SiteLeaf::Loaders::Departments.new(ENV['DEPARTMENT_PAGE_ID'],ENV['DEPARTMENTS_SPREADSHEET']).update_pages
+  end
+
   desc 'Clean up so pushing to github is easier'
-  task :clean_up, roles: :app do
+  task :clean_up do
     run_locally 'rm -rf javascripts'
     run_locally 'rm -rf stylesheets'
     run_locally 'rm config.ru'
