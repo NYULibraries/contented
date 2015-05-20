@@ -2,6 +2,12 @@ language: ruby
 rvm:
   - 2.0.0
   - 2.1.6
+<<<<<<< HEAD
 script:
   - bundle exec rubocop
   - bundle exec rake
+=======
+# script:
+  # - bundle exec rubocop
+  # - bundle exec rake
+>>>>>>> feature/restruct

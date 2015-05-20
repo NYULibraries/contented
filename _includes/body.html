@@ -1,6 +1,10 @@
 <div class="wrap">
   <div class="primary-header-right">
+<<<<<<< HEAD
     <h1 class="site-title"><a href="/">{{site.title}}</a></h1>    
+=======
+    <h1 class="site-title"><a href="/">{{site.title}}</a></h1>
+>>>>>>> feature/restruct
     <ul class="page-menu">
     {% for page in site.pages %}
       <li><a href="{{page.url}}"{% if page.url == url %} class="is-current-page"{% endif %}>{{page.title}}</a></li>
@@ -18,8 +22,25 @@
       </nav>
     {% endif %}
     {{body}}
+<<<<<<< HEAD
     {% if type == "post" %}
       {% comment %} Show tagsets if this is a post {% endcomment %}
+=======
+    {% if url == "/departments" %}
+      <div id="classall"></div>
+    {% endif %}
+    {% if url contains "/departments" %}
+      <div id="class"></div>
+    {% endif %}
+    {% if url contains "/libanswers" %}
+      <div id="libanswers"></div>
+    {% endif %}
+    {% if type == "post" %}
+      {% if url contains "/departments" %}
+        {% include 'includes/dept_templating'%}
+      {% endif %}
+      <!--{% comment %} Show tagsets if this is a post {% endcomment %}
+>>>>>>> feature/restruct
       {% for tagset in taxonomy %}
         <strong>{{tagset.key}} ({{tagset | size}} tags)</strong>
         <ul>
@@ -28,7 +49,11 @@
             <li><a href="{{tag.url}}">{{tag.value}}</a></li>
           {% endfor %}
         </ul>
+<<<<<<< HEAD
       {% endfor %}
+=======
+      {% endfor %}-->
+>>>>>>> feature/restruct
     {% else %}
       {% comment %} Loop through any posts and show an excerpt {% endcomment %}
       {% for post in posts reversed%}
@@ -36,6 +61,15 @@
           {% if url == "/hours" %}
             {% include 'includes/hours_templating'%}
           {% endif %}
+<<<<<<< HEAD
+=======
+          {% if url == "/staff" %}
+            {% include 'includes/staff_templating'%}
+          {% endif %}
+          {% if url == "/departments" %}
+            <h3><a href="{{post.url}}">{{post.meta['Department Name']}}</a></h3>
+          {% endif %}
+>>>>>>> feature/restruct
         </article>
       {% endfor %}
     {% endif %}
