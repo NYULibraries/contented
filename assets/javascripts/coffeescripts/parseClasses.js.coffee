@@ -49,7 +49,7 @@ Print_Classes = ->
     document.getElementById(x).innerHTML += "<BR>seats taken: "+e.seats_taken
 
 getClasses_print = ->
-  $.getJSON 'https://api2.libcal.com/1.0/events?iid=1287&cal_id=144&key=6c79e5927411143f2ddb85e3b2e1ea46&callback=?', (data) ->
+  $.getJSON 'https://api2.libcal.com/1.0/events?iid=1564&cal_id=144&key=6c79e5927411143f2ddb85e3b2e1ea46&callback=?', (data) ->
     Parse_Classes.parseJson(data)
     Print_Classes()
     return
