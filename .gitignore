@@ -1,9 +1,9 @@
-assets/images/
-assets/.sass-cache/
+assets/images
+assets/.sass-cache
 
 stylesheets
 javascripts
-.sass-cache/
+.sass-cache
 
 secret_study.yml
 
