@@ -1,9 +1,9 @@
 root = exports ? window
-root.classes = []
+root.libclasses = []
 class Parse_Classes
   @parseJson : (data)->
     for el in data.events
-      root.classes.push new Classes(el.title,el.start,el.end,el.description,el.location.name,el.campus.name,el.presenter,el.seats,el.seats_taken)
+      root.libclasses.push new Classes(el.title,el.owner.name,el.start,el.end,el.description,el.location.name,el.campus.name,el.presenter,el.seats,el.seats_taken)
 
 class Class_Time
   constructor: (date) ->
@@ -17,8 +17,9 @@ class Class_Time
     new Date(year, month, today, hour, min, 0, 0);
 
 class Classes
-  constructor: (name,start,end,description,location,campus,teacher,seats,seats_taken) ->
+  constructor: (name,owner,start,end,description,location,campus,teacher,seats,seats_taken) ->
     @name = name
+    @department = owner.replace(' ','-')
     @start = new Class_Time(start)
     @end = new Class_Time(end)
     @description = description
@@ -30,8 +31,8 @@ class Classes
 
 
 Print_Classes = ->
-  for e in root.classes
-    if document.URL.indexOf("/department/"+e.campus.toLowerCase()) > 0
+  for e in root.libclasses
+    if document.URL.indexOf("/departments/"+e.department.toLowerCase()) > 0
       x = "class"
     else
       x = "classAll"
@@ -49,11 +50,11 @@ Print_Classes = ->
     document.getElementById(x).innerHTML += "<BR>seats taken: "+e.seats_taken
 
 getClasses_print = ->
-  $.getJSON 'https://api2.libcal.com/1.0/events?iid=1564&cal_id=144&key=6c79e5927411143f2ddb85e3b2e1ea46&callback=?', (data) ->
+  $.getJSON 'https://api2.libcal.com/1.0/events?iid=1287&cal_id=1564&key=6c79e5927411143f2ddb85e3b2e1ea46&callback=?', (data) ->
     Parse_Classes.parseJson(data)
     Print_Classes()
     return
   return
 
-if document.URL.indexOf("/department") > 0
+if document.URL.indexOf("/departments") > 0
   getClasses_print()

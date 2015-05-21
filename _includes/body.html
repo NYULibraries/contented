@@ -18,29 +18,14 @@
       </nav>
     {% endif %}
     {{body}}
-    {% if url == "/departments" %}
-      <div id="classall"></div>
-    {% endif %}
-    {% if url contains "/departments" %}
-      <div id="class"></div>
-    {% endif %}
     {% if url contains "/libanswers" %}
       <div id="libanswers"></div>
     {% endif %}
     {% if type == "post" %}
       {% if url contains "/departments" %}
         {% include 'includes/dept_templating'%}
+        <div id="class"></div>
       {% endif %}
-      <!--{% comment %} Show tagsets if this is a post {% endcomment %}
-      {% for tagset in taxonomy %}
-        <strong>{{tagset.key}} ({{tagset | size}} tags)</strong>
-        <ul>
-          <div id="{{title}}"></div>
-          {% for tag in tagset %}
-            <li><a href="{{tag.url}}">{{tag.value}}</a></li>
-          {% endfor %}
-        </ul>
-      {% endfor %}-->
     {% else %}
       {% comment %} Loop through any posts and show an excerpt {% endcomment %}
       {% for post in posts reversed%}
@@ -56,6 +41,9 @@
           {% endif %}
         </article>
       {% endfor %}
+      {% if url == "/departments" %}
+        <div id="classAll"></div>
+      {% endif %}
     {% endif %}
     {% if parent %}
       <p><a href="{{parent.url}}">&larr; Back to {{parent.title}}</a></p>
