@@ -1,9 +1,0 @@
-assets/images
-assets/.sass-cache
-stylesheets
-javascripts
-.sass-cache
-ecret_study.yml
-
-wiki/
-*.wiki
