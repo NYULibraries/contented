@@ -1,1 +1,1 @@
-../jquery-rails/vendor/assets/javascripts/jquery_ujs.js
+../../vendor/jquery-rails/vendor/assets/javascripts/jquery_ujs.js
