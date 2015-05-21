@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-[submodule "assets/jquery-rails"]
-	path = assets/jquery-rails
-	url = https://github.com/rails/jquery-rails
-[submodule "assets/nyu-libraries-javascripts"]
-	path = assets/nyu-libraries-javascripts
-=======
 [submodule "vendor/jquery-rails"]
 	path = vendor/jquery-rails
 	url = https://github.com/rails/jquery-rails
 [submodule "vendor/nyu-libraries-javascripts"]
 	path = vendor/nyu-libraries-javascripts
->>>>>>> feature/restruct
 	url = https://github.com/NYULibraries/nyu-libraries-javascripts
