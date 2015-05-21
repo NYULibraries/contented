@@ -32,8 +32,6 @@ Before pushing our style and javascript assets up to our Siteleaf theme we can a
 ## Wiki
 
 [Read our wiki](https://github.com/NYULibraries/library.nyu.edu/wiki), for more information on this project.
-<<<<<<< HEAD
-
 
 Automates Siteleaf by adding NYU assets after converting them using Microservice-precompiler
 
@@ -48,5 +46,3 @@ second change the name of your website on siteleaf config <name> command
 run it using
 
 	cap siteleaf:deploy
-=======
->>>>>>> feature/restruct
