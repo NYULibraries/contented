@@ -4,17 +4,8 @@ source 'http://rubygems.org'
 gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.4.0'
 
 # Use microservice precompiler to build coffee and scss from diffrent sources
-<<<<<<< HEAD
-gem 'microservice_precompiler', '~> 1.0'
-
-# Why do we need rails?
-gem 'rails'
-gem 'jquery-rails'
-gem 'jquery-ui-rails'
-=======
 # gem 'microservice_precompiler', '~> 1.0' # to be used when complete
 gem 'microservice_precompiler', github: 'barnabyalter/microservice_precompiler'
->>>>>>> feature/restruct
 
 # Use formaggio for (NYU) flavored figs
 gem 'formaggio', github: 'NYULibraries/formaggio'
@@ -30,9 +21,6 @@ gem 'liquid'
 
 # Rubocop to standardize ruby usage
 gem 'rubocop', require: false
-<<<<<<< HEAD
-=======
 
 # Hashie to convert all the JSON datastructures to objects
 gem 'hashie'
->>>>>>> feature/restruct
