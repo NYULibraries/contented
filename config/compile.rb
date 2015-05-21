@@ -45,10 +45,10 @@ class SetupNyulibrariesAssets
 
   def compile_coffee_scss
     precompiler = MicroservicePrecompiler::Builder.new
-    precompiler.build_path = './'
     precompiler.send(:sprockets_env).append_path @bootstrap_js
     precompiler.send(:sprockets_env).append_path @nyulibraries_assets_js
     precompiler.project_root = './assets'
+    precompiler.build_path = './'
     precompiler.sprockets_build [:javascripts] # Compile Javascript
     precompiler.compass_build # compile CSS
   end
