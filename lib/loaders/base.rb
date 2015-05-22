@@ -9,6 +9,8 @@ Figs.load
 module Nyulibraries
   module SiteLeaf
     module Loaders
+      # Loaders keep siteleaf post and page in sync with the data
+      # Loaders create empty posts and pages with the correct name for mapping
       # Contains All Siteleaf related functions
       class Base
         def initialize
