@@ -32,20 +32,19 @@ class Classes
 
 Print_Classes = ->
   for e in root.libclasses
-    if document.URL.toLowerCase.equals("/departments/"+e.department.toLowerCase()) > 0
-      alert 'in'
-      document.getElementById(x).innerHTML += "<BR><b>CLASS:</b>"
-      document.getElementById(x).innerHTML += "<BR>name: "+e.name
-      document.getElementById(x).innerHTML += "<BR>start date: "+e.start.time.getMonth()+"/"+e.start.time.getDate()
-      document.getElementById(x).innerHTML += "<BR>start time: "+e.start.time.getHours()+":"+e.start.time.getMinutes()
-      document.getElementById(x).innerHTML += "<BR>end date: "+e.end.time.getMonth()+"/"+e.end.time.getDate()
-      document.getElementById(x).innerHTML += "<BR>end time: "+e.end.time.getHours()+":"+e.end.time.getMinutes()
-      document.getElementById(x).innerHTML += "<BR>description: "+e.description
-      document.getElementById(x).innerHTML += "<BR>location: "+e.location
-      document.getElementById(x).innerHTML += "<BR>campus: "+e.campus
-      document.getElementById(x).innerHTML += "<BR>teacher: "+e.teacher
-      document.getElementById(x).innerHTML += "<BR>seats: "+e.seats
-      document.getElementById(x).innerHTML += "<BR>seats taken: "+e.seats_taken
+    if document.URL.indexOf("/departments/"+e.department.toLowerCase()) > 0
+      document.getElementById("class").innerHTML += "<BR><b>CLASS:</b>"
+      document.getElementById("class").innerHTML += "<BR>name: "+e.name
+      document.getElementById("class").innerHTML += "<BR>start date: "+e.start.time.getMonth()+"/"+e.start.time.getDate()
+      document.getElementById("class").innerHTML += "<BR>start time: "+e.start.time.getHours()+":"+e.start.time.getMinutes()
+      document.getElementById("class").innerHTML += "<BR>end date: "+e.end.time.getMonth()+"/"+e.end.time.getDate()
+      document.getElementById("class").innerHTML += "<BR>end time: "+e.end.time.getHours()+":"+e.end.time.getMinutes()
+      document.getElementById("class").innerHTML += "<BR>description: "+e.description
+      document.getElementById("class").innerHTML += "<BR>location: "+e.location
+      document.getElementById("class").innerHTML += "<BR>campus: "+e.campus
+      document.getElementById("class").innerHTML += "<BR>teacher: "+e.teacher
+      document.getElementById("class").innerHTML += "<BR>seats: "+e.seats
+      document.getElementById("class").innerHTML += "<BR>seats taken: "+e.seats_taken
 
 getClasses_print = ->
   $.getJSON 'https://api2.libcal.com/1.0/events?iid=1287&cal_id=1564&key=6c79e5927411143f2ddb85e3b2e1ea46&callback=?', (data) ->
