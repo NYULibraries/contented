@@ -19,9 +19,9 @@ namespace :siteleaf do
     siteleaf.empty_theme
     siteleaf.setup
     siteleaf.push_theme
-    siteleaf.staff
-    siteleaf.hours
-    siteleaf.departments
+    #siteleaf.staff
+    #siteleaf.hours
+    #siteleaf.departments
     siteleaf.clean_up
   end
 

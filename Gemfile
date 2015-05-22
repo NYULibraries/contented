@@ -24,3 +24,6 @@ gem 'rubocop', require: false
 
 # Hashie to convert all the JSON datastructures to objects
 gem 'hashie'
+
+# Rspec for testing
+gem 'rspec'
