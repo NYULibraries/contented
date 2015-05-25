@@ -7,3 +7,8 @@ config/*
 .gitmodules
 Capfile
 *.md
+spec/*
+secret_study.yml
+vendor/*
+lib/*
+Figsfile
