@@ -12,7 +12,7 @@ Department Directory<BR>
 </div>
 </div>
 
- <dl class="dept-window-body gray">
+ <dl class="dept-window-body">
     <dt>What We Do</dt>
     <dd>
       {{meta['What We Do?']}}
@@ -23,20 +23,17 @@ Department Directory<BR>
 <dl class="dept-window-body blog">
     <dt>Updates and Events</dt>
     <dd>
-      <div class="dept-left-blog"><div class="dept-Twitter">
-<script>
-  $( document ).ready(function() {
-  getTweets_print({{meta['Twitter ID']}}, 'dept-Twitter', 10);
-  });
-</script>
-
-      Twitter   : {{meta['Twitter']}}</div></div>
-      <div class="dept-right-blog"><iframe src="https://api3.libcal.com/embed_mini_calendar.php?mode=month&iid=1287&cal_id=1564&l=5&tar=0&h=450&c=&z=8901" style="border-width:0" width="180" height="450" frameborder="0" scrolling="no"></iframe></div>
+      <div class="dept-left-blog">
+        <div id="dept-Twitter">
+          <input type="hidden" id="twitter_id" value="{{meta['Twitter ID']}}">
+        </div>
+      </div>
+      <div class="dept-right-blog"><iframe src="https://api3.libcal.com/embed_mini_calendar.php?mode=month&iid=1287&cal_id=1564&l=5&tar=0&h=450&c=&z=8901" style="border-width:0" width="400" height="900" frameborder="0" scrolling="no"></iframe></div>
     </dd>
   </dl>
 
-<div class="Who-we-are">
-Who We are
+ <dl class="dept-window-body">
+<dt>Who We are</dt>
 {% for member in site.pages['staff'].posts%}
   {% if member.meta['Department'] == meta['Department Name'] %}
     <div class="checkbox-staff">
@@ -50,18 +47,19 @@ Who We are
   {% endif %}
 {% endfor %}
 
-</div>
+</dl>
+
+ <dl class="dept-window-body">
+<dt>Updates and Events</dt>
+  From Our Blog
+  <input type="hidden" id="rss_feed" value="{{meta['Blog']}}">
+   <div id="rss"></div>
+</dl>
 
 
-<div class="dept-Updates-Events">
-  Updates and Events
-  <div class="Event-Blog">From Our Blog<div class="dept-Blog">Blog : {{meta['Blog']}}</div></div>
+
   <div class="Upcoming-Events">Upcoming Events<iframe src="https://api3.libcal.com/embed_calendar.php?iid=1287&cal_id=1564&w=800&h=600&dv=month&st=0&we=null&hl=prev%2Cnext%20today&hc=title&hr=basicWeek%20agendaDay%2CagendaWeek%2Cmonth&hd=dddd%2C%20MMM%20D%2C%20YYYY&hw=MMMM%20D&hm=MMMM%20YYYY&cd=dddd%20M/D&cw=ddd%20M/D&cm=ddd&ta=h%28%3Amm%29a&td=h%28%3Amm%29a&tm=h%28%3Amm%29a&fh=08%3A00%3A00&mi=00%3A00%3A00&ma=24%3A00%3A00&ts=00%3A30%3A00&eo=1&el=null&hf=1&sp=0&c1=%23000000&c2=%23000000&c3=%23F3F3F3&c4=%23D0D0D0&c5=%23000000&cam=&cat=8901&tar=0&set=0" style="border: 0" width="800" height="600" frameborder="0" scrolling="auto"></iframe>
-
-
-
   </div>
-</div>
-<div class="dept-Others We Work With">Whom We Work With<BR>{{meta['Others We Work With']}}</div>
+<div class="dept-Others We Work With"><dt>Whom We Work With</dt><BR>{{meta['Others We Work With']}}</div>
 
 

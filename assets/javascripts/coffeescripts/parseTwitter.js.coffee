@@ -13,7 +13,7 @@ TweetFetcher = (id) ->
 TweetFetcher::fetch = (twit) ->
   @twit = twit
   s = document.createElement('script')
-  s.src = 'https://cdn.syndication.twimg.com/widgets/timelines/'+@id+'?callback='+@inst+'.call'
+  s.src = '//cdn.syndication.twimg.com/widgets/timelines/'+@id+'?callback='+@inst+'.call'
   document.getElementsByTagName('head')[0].appendChild s
 
 TweetFetcher::call = (res) ->
@@ -31,6 +31,10 @@ getTweets_print = (id,div_id,limit)->
     for tweet in tweets
       i++
       document.getElementById(div_id).innerHTML += '<BR>'+tweet.msg+'<BR>'+tweet.name+' @'+tweet.handle+' &#149 '+tweet.time+'<BR>'
-      if i > 10
+      if i > limit
         break
   )
+
+if document.URL.indexOf('/departments/') > 0
+  $ ->
+    getTweets_print ''+document.getElementById('twitter_id').value, 'dept-Twitter', 10

@@ -19,8 +19,8 @@ module Nyulibraries
             'Additional Staff'        => 'additionalstaff',
             'Others We Work With'     => 'othersweworkwith',
             'Twitter'                 => 'twitter',
-            'Twitter ID'              => 'TwitterID',
-            'LibCal Classes ID'       => 'LibCalClassesID',
+            'Twitter ID'              => 'twitterid',
+            'LibCal Classes ID'       => 'libcalclassesid',
             'Blog'                    => 'blog',
             'Additional Social Media' => 'additionalsocialmedia'
           }
