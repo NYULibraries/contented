@@ -1,6 +1,6 @@
 module Nyulibraries
   module SiteLeaf
-    module Loaders
+    module Attributes
       # Staffer returns metafields based on attrs
       class Staffer
         # This array needs to be the exact column as is in spreadsheet.

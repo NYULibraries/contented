@@ -21,7 +21,7 @@ namespace :siteleaf do
     siteleaf.push_theme
     #siteleaf.staff
     #siteleaf.hours
-    #siteleaf.departments
+    siteleaf.departments
     siteleaf.clean_up
   end
 

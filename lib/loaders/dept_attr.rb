@@ -1,9 +1,9 @@
 require File.expand_path('../base.rb', __FILE__)
 module Nyulibraries
   module SiteLeaf
-    module Loaders
+    module Attributes
       # Staffer returns metafields based on attrs
-      class DeptAttr < Base
+      class DeptAttr
         # This array needs to be the exact column as is in spreadsheet.
         def attrs
           {
@@ -19,6 +19,8 @@ module Nyulibraries
             'Additional Staff'        => 'additionalstaff',
             'Others We Work With'     => 'othersweworkwith',
             'Twitter'                 => 'twitter',
+            'Twitter ID'              => 'TwitterID',
+            'LibCal Classes ID'       => 'LibCalClassesID',
             'Blog'                    => 'blog',
             'Additional Social Media' => 'additionalsocialmedia'
           }

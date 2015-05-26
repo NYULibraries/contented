@@ -45,12 +45,12 @@ module Nyulibraries
               create_post(
                 parent_id:  page_id,
                 title:      dept.departmentname.t,
-                meta:       DeptAttr.new.get_dept_meta(dept),
-                taxonomy:   DeptAttr.new.get_dept_tags(dept)
+                meta:       Attributes::DeptAttr.new.get_dept_meta(dept),
+                taxonomy:   Attributes::DeptAttr.new.get_dept_tags(dept)
               )
             else
-              update_post_meta(post, DeptAttr.new.get_dept_meta(dept))
-              update_post_tags(post, DeptAttr.new.get_dept_tags(dept))
+              update_post_meta(post, Attributes::DeptAttr.new.get_dept_meta(dept))
+              update_post_tags(post, Attributes::DeptAttr.new.get_dept_tags(dept))
             end
           end
         end
