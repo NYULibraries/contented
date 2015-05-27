@@ -19,9 +19,9 @@ namespace :siteleaf do
     siteleaf.empty_theme
     siteleaf.setup
     siteleaf.push_theme
-    #siteleaf.staff
-    #siteleaf.hours
-    #siteleaf.departments
+    # siteleaf.staff
+    # siteleaf.hours
+    # siteleaf.departments
     siteleaf.clean_up
   end
 
@@ -32,7 +32,9 @@ namespace :siteleaf do
 
   desc 'config.ru file is created and this is essential for pushing to siteleaf'
   task :setup do
-    run_locally 'siteleaf config empty'
+    run_locally 'echo "require \'rubygems\'" | tee -a config.ru'
+    run_locally 'echo "require \'siteleaf\'" | tee -a config.ru'
+    run_locally 'echo "run Siteleaf::Server.new(:site_id => \''+ENV['SITELEAF_ID']+'\')" | tee -a config.ru'
   end
 
   desc 'Push Theme on to Siteleaf'

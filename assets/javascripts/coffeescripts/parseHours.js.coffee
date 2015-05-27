@@ -130,11 +130,11 @@ open_button_img = ->
     $('[id="open_button_img"]').click ->
       if $(this).data('name') == 'show'
         $(this).data('name', 'hide')
-        $(this).attr('src', '/images/ic_expand_more_48px.svg')
+        $(this).attr('src', '//googledrive.com/host/0B08E8TWm8DJJYVNmU0Mta0V4S1U/ic_expand_more_48px.svg')
         $(this).parent().parent().parent().children('#table_hours').css("display", "none")
       else
         $(this).data('name', 'show')
-        $(this).attr('src', '/images/ic_expand_less_48px.svg')
+        $(this).attr('src', '//googledrive.com/host/0B08E8TWm8DJJYVNmU0Mta0V4S1U//ic_expand_less_48px.svg')
         $(this).parent().parent().parent().children('#table_hours').css("display", "block")
 
 getHours_print = ->

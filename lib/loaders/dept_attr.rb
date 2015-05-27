@@ -7,7 +7,7 @@ module Nyulibraries
         # This array needs to be the exact column as is in spreadsheet.
         def attrs
           {
-            'Department Name'          => 'departmentname',
+            'Department Name'         => 'departmentname',
             'Room'                    => 'room',
             'Floor'                   => 'floor',
             'Space'                   => 'space',
@@ -17,7 +17,6 @@ module Nyulibraries
             'What We Do?'             => 'whatwedo',
             'Department Head'         => 'departmenthead',
             'Additional Staff'        => 'additionalstaff',
-            'Others We Work With'     => 'othersweworkwith',
             'Twitter'                 => 'twitter',
             'Twitter ID'              => 'twitterid',
             'LibCal Classes ID'       => 'libcalclassesid',
