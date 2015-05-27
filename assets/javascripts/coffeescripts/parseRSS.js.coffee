@@ -6,7 +6,7 @@ rssfeedsetup = (feedurl,feedlimit) ->
 displayfeed = (result) ->
   if !result.error
     for e in result.feed.entries
-      document.getElementById('rss').innerHTML += e.title
+      document.getElementById('rss').innerHTML += e.title + '<BR>'
 
 if document.URL.indexOf('/departments/') > 0
   $ ->
