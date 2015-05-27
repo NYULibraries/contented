@@ -8,3 +8,5 @@ secret_study.yml
 
 wiki/
 *.wiki
+
+.DS_Store

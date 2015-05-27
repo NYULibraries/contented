@@ -5,4 +5,5 @@ rvm:
 script:
    - rspec sec
    - bundle exec rubocop
-   - bundle exec rake
+   # No Rake tasks yet
+   # - bundle exec rake

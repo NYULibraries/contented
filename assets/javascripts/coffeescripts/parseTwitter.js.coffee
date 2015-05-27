@@ -31,10 +31,10 @@ getTweets_print = (id,div_id,limit)->
     for tweet in tweets
       i++
       document.getElementById(div_id).innerHTML += '<BR>'+tweet.msg+'<BR>'+tweet.name+' @'+tweet.handle+' &#149 '+tweet.time+'<BR>'
-      if i > limit
+      if i >= limit
         break
   )
 
 if document.URL.indexOf('/departments/') > 0
   $ ->
-    getTweets_print ''+document.getElementById('twitter_id').value, 'dept-Twitter', 10
+    getTweets_print ''+document.getElementById('twitter_id').value, 'dept-Twitter', 5
