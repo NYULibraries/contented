@@ -43,6 +43,19 @@ First authenticate yourself on siteleaf
 
 second change the name of your website on siteleaf config <name> command
 
-run it using
+## Run all
 
-	cap siteleaf:deploy
+	cap siteleaf:deploy        # Runs all tasks to setup the webbsite
+
+## Capistrano tasks
+
+
+  cap compile:all           # Compilation and coversion of the code (css to sass conversion , coffee to js conversion and liquid compilation )
+
+  cap siteleaf:empty_theme  # Empty out siteleaf theme completely
+
+  cap siteleaf:setup        # sets up the config.ru which contains site id required for siteleaf commands it is equivalent to siteleaf config.
+
+  cap siteleaf:push_theme   # pushes the entire theme i.e. application.js , application.css and liquid html files to siteleaf.
+
+  cap siteleaf:clean_up     # cleans up the working directory of all the js and css files pushed to siteleaf.
