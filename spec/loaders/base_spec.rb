@@ -1,7 +1,6 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
 describe 'Base' do
-
   let(:base) { Nyulibraries::SiteLeaf::Loaders::Base.new }
 
   describe '#new' do
@@ -24,9 +23,9 @@ describe 'Base' do
     subject { base.get_page }
     context 'Get Page by page_id & Pages being tested as they need to exist' do
       it 'should return a page' do
-        #expect(base.get_page(ENV['STAFF_PAGE_ID'])).to be_instance_of(Siteleaf::Page)
-        #expect(base.get_page(ENV['HOURS_PAGE_ID'])).to be_instance_of(Siteleaf::Page)
-        #expect(base.get_page(ENV['DEPARTMENT_PAGE_ID'])).to be_instance_of(Siteleaf::Page)
+        # expect(base.get_page(ENV['STAFF_PAGE_ID'])).to be_instance_of(Siteleaf::Page)
+        # expect(base.get_page(ENV['HOURS_PAGE_ID'])).to be_instance_of(Siteleaf::Page)
+        # expect(base.get_page(ENV['DEPARTMENT_PAGE_ID'])).to be_instance_of(Siteleaf::Page)
       end
     end
   end
@@ -36,9 +35,9 @@ describe 'Base' do
     context 'Get All Posts on a Page by page_id' do
       it 'should return an array of posts' do
         # No need to test These at is all siteleaf Functionality
-        #expect(base.get_all_posts(ENV['STAFF_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
-        #expect(base.get_all_posts(ENV['HOURS_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
-        #expect(base.get_all_posts(ENV['DEPARTMENT_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
+        # expect(base.get_all_posts(ENV['STAFF_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
+        # expect(base.get_all_posts(ENV['HOURS_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
+        # expect(base.get_all_posts(ENV['DEPARTMENT_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
       end
     end
   end

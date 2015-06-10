@@ -32,7 +32,7 @@ module Nyulibraries
         end
 
         def get_all_pages(page_id)
-           get_page(page_id).pages
+          get_page(page_id).pages
         end
 
         def update_post_meta(post, meta)
@@ -44,10 +44,6 @@ module Nyulibraries
           post.taxonomy = tags
           post.save
         end
-
-        # def update_page_meta(page, meta)
-        #   page.meta = meta
-        # end
 
         def update_post_date(post, date)
           post.published_at = date

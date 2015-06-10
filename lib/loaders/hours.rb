@@ -51,7 +51,7 @@ module Nyulibraries
         def reorder_lib(posts)
           # Re-order Posts by changing the date in posts in sorted manner
           # Libcal Hours can re-order libraries from json in the proper order
-          # Note : This will change to using a rank system by using a tag or a metafield.
+          # This will change to using a rank system.
           days = DateTime.now
           lib.each do |library|
             next unless library.category == 'library'
