@@ -53,7 +53,7 @@ namespace :siteleaf do
 
   desc 'Creates Pages for each Departments'
   task :departments do
-    Nyulibraries::SiteLeaf::Loaders::Department_Page_Post.new(ENV['DEPARTMENT_PAGE_ID'],ENV['DEPARTMENTS_SPREADSHEET']).create_pages
+    Nyulibraries::SiteLeaf::Loaders::DepartmentPage_Post.new(ENV['DEPARTMENT_PAGE_ID'],ENV['DEPARTMENTS_SPREADSHEET']).create_pages
     # Nyulibraries::SiteLeaf::Loaders::Department.new(ENV['DEPARTMENT_PAGE_ID'],ENV['DEPARTMENTS_SPREADSHEET']).update_pages
   end
 
