@@ -12,7 +12,7 @@ Metrics/AbcSize:
 # Offense count: 18
 # Configuration parameters: AllowURI, URISchemes.
 Metrics/LineLength:
-  Max: 192
+  Max: 200
 
 # Offense count: 1
 Style/ClassAndModuleCamelCase:
