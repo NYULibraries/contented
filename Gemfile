@@ -27,3 +27,9 @@ gem 'hashie'
 
 # Rspec for testing
 gem 'rspec'
+
+# VCR for holding the cassettes for offline testing
+gem 'vcr'
+
+# Webmock to hook the VCR cassettes for offline testing
+gem 'webmock'

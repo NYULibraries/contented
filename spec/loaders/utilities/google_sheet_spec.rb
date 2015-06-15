@@ -8,13 +8,13 @@ describe 'GoogleSheet' do
     subject { google_sheet }
     context 'when all arguments are passed' do
       it 'should not raise error' do
-        # expect { google_sheet }.not_to raise_error
+        expect { google_sheet }.not_to raise_error
       end
     end
     context 'when argument is missing' do
       let(:uri) { '' }
       it 'should raise error' do
-        # expect { google_sheet }.to raise_error
+        expect { google_sheet }.to raise_error(ArgumentError)
       end
     end
   end

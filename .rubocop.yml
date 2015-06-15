@@ -28,3 +28,8 @@ Style/SpaceAfterComma:
 # Configuration parameters: EnforcedStyle, SupportedStyles.
 Style/StringLiterals:
   Enabled: false
+
+# Offense count: 1
+Lint/UselessAssignment:
+  Enabled: false
+
