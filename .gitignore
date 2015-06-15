@@ -10,3 +10,5 @@ wiki/
 *.wiki
 
 .DS_Store
+
+Gemfile.lock
