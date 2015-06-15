@@ -1,7 +1,7 @@
 require File.expand_path('../../../spec_helper.rb', __FILE__)
 
 describe 'GoogleSheet' do
-  let(:uri) { ENV['STAFF_SPREADSHEET'] }
+  let(:uri) { 'Pass Something' }
   let(:google_sheet) { Nyulibraries::SiteLeaf::Loaders::Utilities::GoogleSheet.new(uri) }
 
   describe '.new' do
@@ -23,9 +23,7 @@ describe 'GoogleSheet' do
     subject { google_sheet.to_json }
     context 'should return an json object' do
       it 'should return json object without any $t or gsx$ var' do
-        # expect(google_sheet.to_json).to match_response_schema(uri)
-        # expect(google_sheet.to_json).not_to include('$t')
-        # expect(google_sheet.to_json).not_to include('gsx$')
+        # pending
       end
     end
   end

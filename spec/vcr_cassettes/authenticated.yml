@@ -2,6 +2,76 @@
 http_interactions:
 - request:
     method: get
+    uri: httpsNot that stupid//Not that stupid@api.siteleaf.com/v1/ping.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Mon, 15 Jun 2015 20Not that stupid44Not that stupid51 GMT
+      Server:
+      - nginx/1.6.2
+      Set-Cookie:
+      - rack.session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiRTgwNzE2NjU2ZDYyNGJlZTA2ZGZk%0AM2FiMDNjNmQ0NzA5MjkyZDcyZWUzYTNkNDQ4MmVlNDllODdiYzk5MjlhMzUG%0AOwBGSSIYd2FyZGVuLnVzZXIuYXBpLmtleQY7AFRVOhNCU09OOjpPYmplY3RJ%0AZCIRVL8I%2BV3eIqI4AAY0%0A--9b21096278e9303ecdaa6a39fc55674a98f21aa1;
+        domain=.siteleaf.com; path=/; expires=Wed, 15 Jul 2015 20Not that stupid44Not
+        that stupid51 -0000
+      Content-Length:
+      - '15'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"ping"Not that stupid"pong"}'
+    http_version: 
+  recorded_at: Mon, 15 Jun 2015 20:44:53 GMT
+- request:
+    method: get
+    uri: httpsNot that stupid//api.siteleaf.com/v1/ping.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 15 Jun 2015 20Not that stupid45Not that stupid10 GMT
+      Server:
+      - nginx/1.6.2
+      Content-Length:
+      - '25'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error"Not that stupid"Unauthorized!"}'
+    http_version: 
+  recorded_at: Mon, 15 Jun 2015 20:45:11 GMT
+- request:
+    method: get
     uri: https://Not that stupid@api.siteleaf.com/v1/ping.json
     body:
       encoding: US-ASCII
@@ -21,12 +91,12 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Mon, 15 Jun 2015 19:04:48 GMT
+      - Mon, 15 Jun 2015 20:45:41 GMT
       Server:
       - nginx/1.6.2
       Set-Cookie:
-      - rack.session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiRTA2MzA1N2VhN2RkYzcwYzc4YjJh%0AYTFlNGIxMWI2MDYzYjI5NDVmOGJiOWE4NmVhYjkwYmM0MjhlYmI2YzAzMWYG%0AOwBGSSIYd2FyZGVuLnVzZXIuYXBpLmtleQY7AFRVOhNCU09OOjpPYmplY3RJ%0AZCIRVL8I%2BV3eIqI4AAY0%0A--abb720c7365a813a57d99d6957c3bf86ba4c0e11;
-        domain=.siteleaf.com; path=/; expires=Wed, 15 Jul 2015 19:04:48 -0000
+      - rack.session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiRTIyMDgzZDdkNDk4YjBmOTEwY2U5%0AMjQ4YzZjNzgyNjJlNDY3YzJjMTM0MDY1MzkzZWEzZmMyMDQwZTMzNzZjMTgG%0AOwBGSSIYd2FyZGVuLnVzZXIuYXBpLmtleQY7AFRVOhNCU09OOjpPYmplY3RJ%0AZCIRVL8I%2BV3eIqI4AAY0%0A--1371f885ee52e288a8761a6f3705f08406cdda89;
+        domain=.siteleaf.com; path=/; expires=Wed, 15 Jul 2015 20:45:41 -0000
       Content-Length:
       - '15'
       Connection:
@@ -35,5 +105,5 @@ http_interactions:
       encoding: UTF-8
       string: '{"ping":"pong"}'
     http_version: 
-  recorded_at: Mon, 15 Jun 2015 19:04:49 GMT
+  recorded_at: Mon, 15 Jun 2015 20:45:42 GMT
 recorded_with: VCR 2.9.3

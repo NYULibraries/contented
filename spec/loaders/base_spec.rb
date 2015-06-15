@@ -33,7 +33,7 @@ describe 'Base' do
     subject { base.get_all_posts }
     context 'Get All Posts on a Page by page_id' do
       it 'should return an array of posts' do
-        #expect(base.get_all_posts(ENV['DEPARTMENT_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
+        # expect(base.get_all_posts(ENV['DEPARTMENT_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
         # pending
       end
     end
@@ -52,7 +52,7 @@ describe 'Base' do
     subject { base.update_post_meta }
     context 'Update Meta-fields of a Post' do
       it 'should update the meta-fields of the post in the parameter' do
-        expect(base.update_post_meta(Siteleaf::Post.new , {})).to be_instance_of(Siteleaf::Post)
+        expect(base.update_post_meta(Siteleaf::Post.new, {})).to be_instance_of(Siteleaf::Post)
         # No need to test the functionality just output
       end
     end
@@ -62,7 +62,7 @@ describe 'Base' do
     subject { base.update_post_tags }
     context 'Update tags of a Post' do
       it 'should update the tags of the post in the parameter' do
-        expect(base.update_post_tags(Siteleaf::Post.new , {})).to be_instance_of(Siteleaf::Post)
+        expect(base.update_post_tags(Siteleaf::Post.new, {})).to be_instance_of(Siteleaf::Post)
         # No need to test the functionality just output
       end
     end
@@ -72,7 +72,7 @@ describe 'Base' do
     subject { base.update_post_date }
     context 'Update published_date of a Post' do
       it 'should update the published_date of the post in the parameter' do
-        expect(base.update_post_date(Siteleaf::Post.new , {})).to be_instance_of(Siteleaf::Post)
+        expect(base.update_post_date(Siteleaf::Post.new, {})).to be_instance_of(Siteleaf::Post)
         # No need to test the functionality just output
       end
     end
