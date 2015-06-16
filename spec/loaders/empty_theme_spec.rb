@@ -7,7 +7,7 @@ describe 'Empty_Theme' do
     subject { empty_theme }
     context 'Empty theme files in siteleaf for a clean push' do
       it 'Empties Siteleaf Theme Files' do
-        # Doesn't need to be tested as it is Siteleaf functionality
+        # Doesn't need to be tested as it deleting all theme files on siteleaf
       end
     end
   end

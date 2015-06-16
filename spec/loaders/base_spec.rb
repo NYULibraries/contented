@@ -15,7 +15,7 @@ describe 'Base' do
     end
   end
 
-  describe '#create_page', vcr: { cassette_name: 'create_page' } do
+  describe '#create_page' do
     subject { base.create_page }
     it 'should create new page' do
       expect(base.create_page({})).to be_instance_of(Siteleaf::Page)
@@ -55,7 +55,6 @@ describe 'Base' do
     context 'Update Meta-fields of a Post' do
       it 'should update the meta-fields of the post in the parameter' do
         expect(base.update_post_meta(Siteleaf::Post.new, {})).to be_instance_of(Siteleaf::Post)
-        # No need to test the functionality just output
       end
     end
   end
@@ -65,7 +64,6 @@ describe 'Base' do
     context 'Update tags of a Post' do
       it 'should update the tags of the post in the parameter' do
         expect(base.update_post_tags(Siteleaf::Post.new, {})).to be_instance_of(Siteleaf::Post)
-        # No need to test the functionality just output
       end
     end
   end
@@ -75,7 +73,6 @@ describe 'Base' do
     context 'Update published_date of a Post' do
       it 'should update the published_date of the post in the parameter' do
         expect(base.update_post_date(Siteleaf::Post.new, {})).to be_instance_of(Siteleaf::Post)
-        # No need to test the functionality just output
       end
     end
   end
@@ -84,8 +81,6 @@ describe 'Base' do
     subject { base.create_post }
     it 'should create new posts' do
       expect(base.create_post({})).to be_instance_of(Siteleaf::Post)
-
-      # No need to test the functionality just output
     end
   end
 
