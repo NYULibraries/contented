@@ -1,0 +1,153 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://Not that stupid@api.siteleaf.com/v1/sites/Not that stupid/pages
+    body:
+      encoding: UTF-8
+      string: site_id=Not that stupid
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 16 Jun 2015 17:49:31 GMT
+      Server:
+      - nginx/1.6.2
+      Set-Cookie:
+      - rack.session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiRThmZDNmZDAzMjIyOWUyMDhiNDU1%0ANzViZjFlMzA0N2EwNjAxOWMzODJkYzFhOTc2Y2JiY2ZkYzlhNzllZDczYWMG%0AOwBGSSIYd2FyZGVuLnVzZXIuYXBpLmtleQY7AFRVOhNCU09OOjpPYmplY3RJ%0AZCIRVL8I%2BV3eIqI4AAY0%0A--78e3643020c27d18f4c0ee0eaee88617bf030ac3;
+        domain=.siteleaf.com; path=/; expires=Thu, 16 Jul 2015 17:49:31 -0000
+      Content-Length:
+      - '74'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"validation_error","message":"missing parameter: title"}}'
+    http_version: 
+  recorded_at: Tue, 16 Jun 2015 17:49:35 GMT
+- request:
+    method: post
+    uri: https://Not that stupid@api.siteleaf.com/v1/sites/Not that stupid/pages
+    body:
+      encoding: UTF-8
+      string: site_id=Not that stupid
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 16 Jun 2015 17:49:45 GMT
+      Server:
+      - nginx/1.6.2
+      Set-Cookie:
+      - rack.session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiRTRjYWZiM2JkOGFiNzJjM2UzYjc2%0AYzJmYjk4NmIwNDFkMDFkNTVhZTkyNTlmNDdkM2FiMDEyODc5MWNjZGQ0NWEG%0AOwBGSSIYd2FyZGVuLnVzZXIuYXBpLmtleQY7AFRVOhNCU09OOjpPYmplY3RJ%0AZCIRVL8I%2BV3eIqI4AAY0%0A--830d3b8ed9aa11f740723f0aa2d97347ed2b5466;
+        domain=.siteleaf.com; path=/; expires=Thu, 16 Jul 2015 17:49:45 -0000
+      Content-Length:
+      - '74'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"validation_error","message":"missing parameter: title"}}'
+    http_version: 
+  recorded_at: Tue, 16 Jun 2015 17:49:49 GMT
+- request:
+    method: post
+    uri: https://Not that stupid@api.siteleaf.com/v1/sites/Not that stupid/pages
+    body:
+      encoding: UTF-8
+      string: site_id=Not that stupid
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 16 Jun 2015 17:50:26 GMT
+      Server:
+      - nginx/1.6.2
+      Set-Cookie:
+      - rack.session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiRTUxY2YxNTc2NmNmZTVhY2IxNTFk%0AMjZlYzQyOWY3NGM5NmNhYTQzMTQ5YTBkZWUzZDQ0NWZlMWMxMGRmY2EzMTUG%0AOwBGSSIYd2FyZGVuLnVzZXIuYXBpLmtleQY7AFRVOhNCU09OOjpPYmplY3RJ%0AZCIRVL8I%2BV3eIqI4AAY0%0A--c7687e3bcb518792f842794fbac2b14246b7ee25;
+        domain=.siteleaf.com; path=/; expires=Thu, 16 Jul 2015 17:50:26 -0000
+      Content-Length:
+      - '74'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"validation_error","message":"missing parameter: title"}}'
+    http_version: 
+  recorded_at: Tue, 16 Jun 2015 17:50:30 GMT
+- request:
+    method: post
+    uri: https://Not that stupid@api.siteleaf.com/v1/sites/Not that stupid/pages
+    body:
+      encoding: UTF-8
+      string: site_id=Not that stupid
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 16 Jun 2015 17:50:40 GMT
+      Server:
+      - nginx/1.6.2
+      Set-Cookie:
+      - rack.session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiRTg4OWYzMWUxMjk4ZTJhNmMzOGJl%0AYTVjZDEwZWU4YzAzN2QwYTE4Yzg5MGE2OGM4NmIxYzAxYmYzOTlhNGJkYzMG%0AOwBGSSIYd2FyZGVuLnVzZXIuYXBpLmtleQY7AFRVOhNCU09OOjpPYmplY3RJ%0AZCIRVL8I%2BV3eIqI4AAY0%0A--b9602d157f1a746bf5c9632dfb82701368dfb03f;
+        domain=.siteleaf.com; path=/; expires=Thu, 16 Jul 2015 17:50:40 -0000
+      Content-Length:
+      - '74'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"validation_error","message":"missing parameter: title"}}'
+    http_version: 
+  recorded_at: Tue, 16 Jun 2015 17:50:45 GMT
+- request:
+    method: post
+    uri: https://Not that stupid@api.siteleaf.com/v1/sites/Not that stupid/pages
+    body:
+      encoding: UTF-8
+      string: site_id=Not that stupid
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 16 Jun 2015 17:54:03 GMT
+      Server:
+      - nginx/1.6.2
+      Set-Cookie:
+      - rack.session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiRTAxYTVmMmRmNDVlN2M3MDFlNTVm%0ANDlhMmUzNTk3OWRhNmRhMjAxZmQ1MzBjZTI4ZTk5Zjg2MTIyNjNiYzg4NjAG%0AOwBGSSIYd2FyZGVuLnVzZXIuYXBpLmtleQY7AFRVOhNCU09OOjpPYmplY3RJ%0AZCIRVL8I%2BV3eIqI4AAY0%0A--eec4e5dd8f2f68ed40ab4511383c4a0a6094177b;
+        domain=.siteleaf.com; path=/; expires=Thu, 16 Jul 2015 17:54:03 -0000
+      Content-Length:
+      - '74'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"error":{"code":"validation_error","message":"missing parameter: title"}}'
+    http_version: 
+  recorded_at: Tue, 16 Jun 2015 17:54:07 GMT
+recorded_with: VCR 2.9.3

@@ -12,3 +12,5 @@ wiki/
 .DS_Store
 
 Gemfile.lock
+
+vcr_errors

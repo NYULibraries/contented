@@ -7,43 +7,45 @@ describe 'Base' do
     subject { base }
     context 'Authenticate Siteleaf' do
       it 'should authenticate and login' do
+        # checks if key and secret are correct when online
+        # This test will pass as long as those envirionment variables are defined and have a value (any value)
         response = open("https://api.siteleaf.com/v1/ping.json", http_basic_authentication: [ENV['SITELEAF_KEY'], ENV['SITELEAF_SECRET']]).string
         expect(response).to eq('{"ping":"pong"}')
       end
     end
   end
 
-  describe '#create_page' do
+  describe '#create_page', vcr: { cassette_name: 'create_page' } do
     subject { base.create_page }
     it 'should create new page' do
       expect(base.create_page({})).to be_instance_of(Siteleaf::Page)
     end
   end
 
-  describe '#get_page' do
+  describe '#get_page', vcr: { cassette_name: 'get_page' } do
     subject { base.get_page }
     context 'Get Page by page_id & Pages being tested as they need to exist' do
       it 'should return a page' do
-        expect(base.get_page('pass something otherwise sitelef throws an error')).to be_instance_of(Siteleaf::Page)
+        expect(base.get_page('pass something otherwise siteleaf throws an error')).to be_instance_of(Siteleaf::Page)
       end
     end
   end
 
-  describe '#get_all_posts' do
+  describe '#get_all_posts', vcr: { cassette_name: 'get_all_posts' } do
     subject { base.get_all_posts }
     context 'Get All Posts on a Page by page_id' do
       it 'should return an array of posts' do
-        # expect(base.get_all_posts(ENV['DEPARTMENT_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
-        # pending
+        expect(base.get_all_posts('pass something otherwise siteleaf throws an error')[0]).to be_instance_of(Siteleaf::Post)
       end
     end
   end
 
-  describe '#get_all_pages' do
+  describe '#get_all_pages', vcr: { cassette_name: 'get_all_pages' } do
     subject { base.get_all_pages }
     context 'Get All sub-pages on a Page by page_id' do
       it 'should return an array of pages' do
-        # pending
+        # Cannot test this until and unless siteleaf gem is fixed even the other gem but ahrrr will not fix it cause it returns a json
+        # expect(base.get_all_pages(ENV['DEPARTMENT_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
       end
     end
   end

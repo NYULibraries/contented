@@ -33,3 +33,5 @@ gem 'vcr'
 
 # Webmock to hook the VCR cassettes for offline testing
 gem 'webmock'
+
+gem 'pry'
