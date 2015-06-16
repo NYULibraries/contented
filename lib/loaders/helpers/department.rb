@@ -7,6 +7,7 @@ module Nyulibraries
         attr_accessor :data, :parent_id
 
         def initialize(data)
+          fail ArgumentError, 'data is a required param' if data.empty?
           @data = data
         end
 

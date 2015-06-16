@@ -1,6 +1,7 @@
 require File.expand_path('../../lib/loaders/base.rb', __FILE__)
 require File.expand_path('../../lib/loaders/empty_theme.rb', __FILE__)
 require File.expand_path('../../lib/loaders/utilities/google_sheet.rb', __FILE__)
+require File.expand_path('../../lib/loaders/helpers/department.rb', __FILE__)
 require 'vcr'
 require 'webmock/rspec'
 
@@ -11,5 +12,5 @@ VCR.configure do |config|
   config.filter_sensitive_data('Not that stupid') { "#{ENV['SITELEAF_KEY']}:#{ENV['SITELEAF_SECRET']}" }
   config.filter_sensitive_data('Not that stupid') { "#{ENV['SITELEAF_ID']}" }
   config.configure_rspec_metadata!
-  config.debug_logger = File.open('vcr_errors', 'w')
+  # config.debug_logger = File.open('vcr_errors', 'w')
 end
