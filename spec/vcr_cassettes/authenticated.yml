@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://Not that stupid@api.siteleaf.com/v1/ping.json
+    uri: https://123:123@api.siteleaf.com/v1/ping.json
     body:
       encoding: US-ASCII
       string: ''
@@ -36,4 +36,3 @@ http_interactions:
       string: '{"ping":"pong"}'
     http_version:
   recorded_at: Tue, 16 Jun 2015 17:54:07 GMT
-recorded_with: VCR 2.9.3

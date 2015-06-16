@@ -6,10 +6,10 @@ describe 'Base' do
   describe '#new', vcr: { cassette_name: 'authenticated' } do
     subject { base }
     context 'Authenticate Siteleaf' do
+      let(:key) { '123' }
+      let(:secret) { '123' }
       it 'should authenticate and login' do
-        # checks if key and secret are correct when online
-        # This test will pass as long as those envirionment variables are defined and have a value (any value)
-        response = open("https://api.siteleaf.com/v1/ping.json", http_basic_authentication: [ENV['SITELEAF_KEY'], ENV['SITELEAF_SECRET']]).string
+        response = open("https://api.siteleaf.com/v1/ping.json", http_basic_authentication: [key, secret]).string
         expect(response).to eq('{"ping":"pong"}')
       end
     end
