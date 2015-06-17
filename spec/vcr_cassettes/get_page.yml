@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://Not that stupid@api.siteleaf.com/v1/pages/
+    uri: https://KEY:SECRET@api.siteleaf.com/v1/pages/
     body:
       encoding: US-ASCII
       string: ''
@@ -15,19 +15,19 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Tue, 16 Jun 2015 18:16:02 GMT
+      - Wed, 17 Jun 2015 15:20:59 GMT
       Server:
       - nginx/1.6.2
       Set-Cookie:
-      - rack.session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiRTg3NDFjYmJjNDU1ZTllNjBiNzZl%0AODgxNmJlY2UzY2ZjNmViNDdjN2VkNzhjYzdjNGI1NGMzNWI3OTg5ZWZhZGYG%0AOwBGSSIYd2FyZGVuLnVzZXIuYXBpLmtleQY7AFRVOhNCU09OOjpPYmplY3RJ%0AZCIRVL8I%2BV3eIqI4AAY0%0A--70ea7c25d0f18bfa20db76b4b4497d9183bfda28;
-        domain=.siteleaf.com; path=/; expires=Thu, 16 Jul 2015 18:16:02 -0000
+      - rack.session=BAh7B0kiD3Nlc3Npb25faWQGOgZFVEkiRTRmZGM0MjI4NTE2YThlZWRmNTc5%0AOTRiMzlhMDEyYThmODAwZTgxY2M4OGRjMDYwZWI0NWEzMjllOTYwOGY1YzcG%0AOwBGSSIYd2FyZGVuLnVzZXIuYXBpLmtleQY7AFRVOhNCU09OOjpPYmplY3RJ%0AZCIRVL8I%2BV3eIqI4AAY0%0A--2601804628550100088d6edde1c20b6a14a8bd0b;
+        domain=.siteleaf.com; path=/; expires=Fri, 17 Jul 2015 15:20:59 -0000
       Content-Length:
       - '368'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"id":"","title":"","slug":"","url":"","body":"","visibility":"","created_at":"","updated_at":"","published_at":"","user_id":"","site_id":"Not that stupid","parent_id":null,"meta":[]}'
+      string: '{"id":"","title":"","slug":"","url":"","body":"","visibility":"","created_at":"","updated_at":"","published_at":"","user_id":"","site_id":"","parent_id":null,"meta":[]}'
     http_version:
-  recorded_at: Tue, 16 Jun 2015 18:16:06 GMT
+  recorded_at: Wed, 17 Jun 2015 15:21:08 GMT
 recorded_with: VCR 2.9.3

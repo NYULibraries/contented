@@ -3,7 +3,7 @@ require File.expand_path('../../spec_helper.rb', __FILE__)
 describe 'Base' do
   let(:base) { Nyulibraries::SiteLeaf::Loaders::Base.new }
 
-  describe '#new', vcr: { cassette_name: 'authenticated' } do
+  describe '#new', vcr: { cassette_name: 'authenticated', record: :none } do
     subject { base }
     context 'Authenticate Siteleaf' do
       let(:key) { '123' }
@@ -22,20 +22,20 @@ describe 'Base' do
     end
   end
 
-  describe '#get_page', vcr: { cassette_name: 'get_page' } do
+  describe '#get_page', vcr: { cassette_name: 'get_page', record: :none } do
     subject { base.get_page }
     context 'Get Page by page_id & Pages being tested as they need to exist' do
       it 'should return a page' do
-        expect(base.get_page('pass something otherwise siteleaf throws an error')).to be_instance_of(Siteleaf::Page)
+        expect(base.get_page('Pass something so that sitleaf gem doesnt throw an error')).to be_instance_of(Siteleaf::Page)
       end
     end
   end
 
-  describe '#get_all_posts', vcr: { cassette_name: 'get_all_posts' } do
+  describe '#get_all_posts', vcr: { cassette_name: 'get_all_posts', record: :none } do
     subject { base.get_all_posts }
     context 'Get All Posts on a Page by page_id' do
       it 'should return an array of posts' do
-        expect(base.get_all_posts('pass something otherwise siteleaf throws an error')[0]).to be_instance_of(Siteleaf::Post)
+        expect(base.get_all_posts('Pass something so that sitleaf gem doesnt throw an error')[0]).to be_instance_of(Siteleaf::Post)
       end
     end
   end

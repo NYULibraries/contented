@@ -20,7 +20,7 @@ namespace :siteleaf do
     siteleaf.push_theme
     # siteleaf.staff
     # siteleaf.hours
-    siteleaf.departments
+    # siteleaf.departments
     siteleaf.clean_up
   end
 
@@ -51,10 +51,10 @@ namespace :siteleaf do
   # Nyulibraries::SiteLeaf::Loaders::Hours.new(ENV['HOURS_PAGE_ID'], ENV['LIBCAL_HOURS']).update_posts
   # end
 
-  desc 'Creates Pages for each Departments'
-  task :departments do
-    Nyulibraries::SiteLeaf::Loaders::DepartmentPage_Post.new(ENV['DEPARTMENT_PAGE_ID'],ENV['DEPARTMENTS_SPREADSHEET']).create_pages
-  end
+  # desc 'Creates Pages for each Departments'
+  # task :departments do
+  #   Nyulibraries::SiteLeaf::Loaders::DepartmentPage_Post.new(ENV['DEPARTMENT_PAGE_ID'],ENV['DEPARTMENTS_SPREADSHEET']).create_pages
+  # end
 
   desc 'Clean up so pushing to github is easier'
   task :clean_up do
