@@ -6,7 +6,7 @@ module Nyulibraries
   module SiteLeaf
     module Loaders
       # Creates Deletes Updates Department Pages and Meta-fields
-      class Department_Page_Post < Base
+      class DepartmentPagePost < Base
         attr_accessor :page_id, :department
 
         def initialize(page_id, spreadsheet)

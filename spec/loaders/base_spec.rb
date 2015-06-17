@@ -9,8 +9,8 @@ describe 'Base' do
       let(:key) { '123' }
       let(:secret) { '123' }
       it 'should authenticate and login' do
-        response = open("https://api.siteleaf.com/v1/ping.json", http_basic_authentication: [key, secret]).string
-        expect(response).to eq('{"ping":"pong"}')
+        res = open('https://api.siteleaf.com/v1/ping.json', http_basic_authentication: [key, secret]).string
+        expect(res).to eq('{"ping":"pong"}')
       end
     end
   end
@@ -26,7 +26,8 @@ describe 'Base' do
     subject { base.get_page }
     context 'Get Page by page_id & Pages being tested as they need to exist' do
       it 'should return a page' do
-        expect(base.get_page('Pass something so that sitleaf gem doesnt throw an error')).to be_instance_of(Siteleaf::Page)
+        # Pass something so that siteleaf gem doesnt throw an error
+        expect(base.get_page('Some Page ID')).to be_instance_of(Siteleaf::Page)
       end
     end
   end
@@ -35,7 +36,8 @@ describe 'Base' do
     subject { base.get_all_posts }
     context 'Get All Posts on a Page by page_id' do
       it 'should return an array of posts' do
-        expect(base.get_all_posts('Pass something so that sitleaf gem doesnt throw an error')[0]).to be_instance_of(Siteleaf::Post)
+        # Pass something so that siteleaf gem doesnt throw an error
+        expect(base.get_all_posts('Some Page ID')[0]).to be_instance_of(Siteleaf::Post)
       end
     end
   end
@@ -44,7 +46,8 @@ describe 'Base' do
     subject { base.get_all_pages }
     context 'Get All sub-pages on a Page by page_id' do
       it 'should return an array of pages' do
-        # Cannot test this until and unless siteleaf gem is fixed even the other gem but ahrrr will not fix it cause it returns a json
+        # Can't' test  until siteleaf gem is fixed
+        # even the other gem but ahrrr will not fix it cause it returns a json
         # expect(base.get_all_pages(ENV['DEPARTMENT_PAGE_ID'])[0]).to be_instance_of(Siteleaf::Post)
       end
     end
