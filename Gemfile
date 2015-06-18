@@ -34,4 +34,8 @@ gem 'vcr'
 # Webmock to hook the VCR cassettes for offline testing
 gem 'webmock'
 
+# For debugging errors can be removed later
 gem 'pry'
+
+# For rake task that mainly takes care of testing
+gem 'rake'

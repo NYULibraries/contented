@@ -3,8 +3,7 @@ rvm:
   - 2.0.0
   - 2.1.6
 script:
-  # Rspec deosn't work at this moment
-  - bundle exec rspec spec
+  # - bundle exec rubocop
+  - bundle exec rake
+  - bundle exec rspec
   - bundle exec rubocop
-  # No Rake tasks yet
-  # - bundle exec rake

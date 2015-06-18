@@ -57,6 +57,27 @@ module Nyulibraries
         def theme
           Siteleaf::Theme.find_by_site_id(ENV['SITELEAF_ID'])
         end
+
+        def make_page(parent_id, title, body, meta)
+          # Creates a page with all these attributes
+          create_page(
+            parent_id:  parent_id,
+            title:      title,
+            body:       body,
+            meta:       meta
+          )
+        end
+
+        def make_post(parent_id, title, body, meta, tags)
+          # Creates a post with all these attributes
+          create_post(
+            parent_id:  parent_id,
+            title:      title,
+            body:       body,
+            meta:       meta,
+            taxonomy:   tags
+          )
+        end
       end
     end
   end
