@@ -1,5 +1,5 @@
 require File.expand_path('../../base.rb', __FILE__)
-require File.expand_path('../IA_yaml_loader.rb', __FILE__)
+require File.expand_path('../ia_yaml_loader.rb', __FILE__)
 require File.expand_path('../core_helpers.rb', __FILE__)
 module Nyulibraries
   module SiteLeaf
