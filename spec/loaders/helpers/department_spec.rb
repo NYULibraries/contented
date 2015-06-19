@@ -2,7 +2,7 @@ require File.expand_path('../../../spec_helper.rb', __FILE__)
 
 describe 'department' do
   let(:data) { 'Pass Something' }
-  let(:department) { Nyulibraries::SiteLeaf::Helpers::Department.new(data) }
+  let(:department) { Nyulibraries::SiteLeaf::Loaders::Helpers::Department.new(data) }
 
   # Entire testing depends upon the structure of @data variable so will hold off until it is done
 
@@ -23,13 +23,12 @@ describe 'department' do
 end
 
 describe 'departments' do
-  let(:departments) { Nyulibraries::SiteLeaf::Helpers::Departments }
+  let(:departments) { Nyulibraries::SiteLeaf::Loaders::Helpers::Departments }
 
   describe '#self.load' do
     subject { departments.load }
     context 'loops over the spreadsheet and enumerates each row into a department object'  do
       it 'should return an array of all departments' do
-        # expect(departments.load('pass Anything')[0]).to be_instance_of(Nyulibraries::SiteLeaf::Helpers::Department)
         # pending
       end
     end
