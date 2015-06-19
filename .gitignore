@@ -1,0 +1,16 @@
+assets/images/
+assets/.sass-cache/
+
+stylesheets/
+.sass-cache/
+
+secret_study.yml
+
+wiki/
+*.wiki
+
+.DS_Store
+
+Gemfile.lock
+
+vcr_errors

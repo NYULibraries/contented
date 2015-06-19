@@ -1,0 +1,14 @@
+Gemfile
+Gemfile.lock
+README.md
+assets/*
+config/*
+.gitignore
+.gitmodules
+Capfile
+*.md
+spec/*
+secret_study.yml
+vendor/*
+lib/*
+Figsfile
