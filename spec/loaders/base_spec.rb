@@ -95,4 +95,25 @@ describe 'Base' do
       end
     end
   end
+
+  describe '#make_page' do
+    subject { base.make_page }
+    context 'creates a sub-page for a department in siteleaf'  do
+      it 'should return page' do
+        # pass something to avoid errors
+        expect(base.make_page('random', 'random', 'random', 'random')).to be_instance_of(Siteleaf::Page)
+      end
+    end
+  end
+
+  describe '#make_post' do
+    subject { base.make_post }
+    context 'creates posts using the parameters provided'  do
+      it 'should return post' do
+        # pass something to avoid errors
+        expect(base.make_post('random', 'random', 'random', 'random', 'random')).to be_instance_of(Siteleaf::Post)
+        # pending
+      end
+    end
+  end
 end

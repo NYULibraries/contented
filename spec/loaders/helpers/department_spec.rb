@@ -20,43 +20,6 @@ describe 'department' do
       end
     end
   end
-
-  describe '#create_department' do
-    subject { department.create_department }
-    context 'creates a department in siteleaf as a whole'  do
-      it 'should create an entire subpage and the corresponding posts' do
-        # pending
-      end
-    end
-  end
-
-  describe '#make_page' do
-    subject { department.make_page }
-    context 'creates a sub-page for a department in siteleaf'  do
-      it 'should return page' do
-        # expect(department.make_page('Pass Something')).to be_instance_of(Siteleaf::Page)
-        # pending
-      end
-    end
-  end
-
-  describe '#make_post' do
-    subject { department.make_post }
-    context 'creates posts in sub-page for a department in siteleaf'  do
-      it 'should return posts' do
-        # pending
-      end
-    end
-  end
-
-  describe '#title' do
-    subject { department.title }
-    context 'extracts title from data element'  do
-      it 'should return title' do
-        # pending
-      end
-    end
-  end
 end
 
 describe 'departments' do

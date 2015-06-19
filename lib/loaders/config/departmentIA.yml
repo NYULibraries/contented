@@ -1,48 +1,48 @@
-Parent:             department-directory    # Exactly the part URL of the landing page eg. people-departments or locations-hours
-Page:               Department Name         # Exact name of the column in the spreadsheet
-  Body:
-  Meta:                                     # To be left Blank
-    - key1:
-    - key2:
-  Post:                                     # To be left Blank
-    - post1:        What We Do              # Title of post
-      Body:         What We Do              # Exact name of the column in the spreadsheet
-      Meta:                                 # To be left Blank
-        - key1:
-        - key2:
-      Tags:                                 # To be left Blank
-        - tag1:
-        - tag2:
-    - post2:        Contact Information
-      Body:
-      Meta:                                 # To be left Blank
-        - key1:     Location                # Exact name of the column in the spreadsheet
-        - key2:     Room                    # Exact name of the column in the spreadsheet
-        - key3:     Floor                   # Exact name of the column in the spreadsheet
-        - key4:     Telephone               # Exact name of the column in the spreadsheet
-        - key5:     Email                   # Exact name of the column in the spreadsheet
-        - key6:     Using Forms             # Exact name of the column in the spreadsheet
-      Tags:                                 # To be left Blank
-        - tag1:
-        - tag2:
-    - post3:        Who We Are              # Exact name of the column in the spreadsheet
-      Body:
-      Meta:                                 # To be left Blank
-        - key1:     Department Head 1       # Exact name of the column in the spreadsheet
-        - key2:     Department Head 2       # Exact name of the column in the spreadsheet
-        - key3:     Additional Staff        # Exact name of the column in the spreadsheet
-      Tags:                                 # To be left Blank
-        - tag1:
-        - tag2:
-    - post4:        Updates and Events       # Exact name of the column in the spreadsheet
-      Body:
-      Meta:                                  # To be left Blank
-        - key1:     Twitter                  # Exact name of the column in the spreadsheet
-        - key2:     Twitter ID               # Exact name of the column in the spreadsheet
-        - key3:     Blog                     # Exact name of the column in the spreadsheet
-        - key4:     Additional Social Media  # Exact name of the column in the spreadsheet
-        - key5:     LibCal Classes ID        # Exact name of the column in the spreadsheet
-        - key6:     Blog                     # Exact name of the column in the spreadsheet
-      Tags:                                  # To be left Blank
-        - tag1:
-        - tag2:
+Page:
+  title:           Department Name
+  body:
+  meta:
+    - key:
+    - key:
+  Posts:
+    - Post:         What We Do
+      body:
+      meta:
+        - key:
+        - key:
+      tags:
+        - tag:
+        - tag:
+    - Post:        Contact Information
+      body:
+      meta:
+        - key:     Location
+        - key:     Room
+        - key:     Floor
+        - key:     Telephone
+        - key:     Email
+        - key:     Using Forms
+      tags:
+        - tag:
+        - tag:
+    - Post:        Who We Are
+      body:
+      meta:
+        - key:     Department Head 1
+        - key:     Department Head 2
+        - key:     Additional Staff
+      tags:
+        - tag:
+        - tag:
+    - Post:        Updates and Events
+      body:
+      meta:
+        - key:     Twitter
+        - key:     Twitter ID
+        - key:     Blog
+        - key:     Additional Social Media
+        - key:     LibCal Classes ID
+        - key:     Blog
+      tags:
+        - tag:
+        - tag:

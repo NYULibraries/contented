@@ -1,43 +1,38 @@
 require File.expand_path('../../base.rb', __FILE__)
+require File.expand_path('../IA_yaml_loader.rb', __FILE__)
+require File.expand_path('../core_helpers.rb', __FILE__)
 module Nyulibraries
   module SiteLeaf
     module Helpers
       # Creates Deletes Updates Department Pages and Meta-fields
       class Department
-        attr_accessor :data, :parent_id
+        attr_accessor :data
 
         def initialize(data)
           fail ArgumentError, 'data is a required param' if data.empty?
           @data = data
         end
 
-        def create_department
-          Loaders::Base.new.make_page(parent_id).id
+        def hierarchial_architecture
+          IAYamlLoader.new('lib/loaders/config/departmentIA.yml')
         end
 
-        # def make_page(page_id)
-        #   # Creates page for a department
-        #   Loaders::Base.new.create_page(
-        #     parent_id:  page_id,
-        #     title:      title
-        #   )
-        # end
+        def helpers
+          CoreHelpers.new(data)
+        end
 
-        # def make_post(subpage_id, post_title, body)
-        #   # Creates posts under the new department subpage in Siteleaf
-        #   Loaders::Base.new.create_post(
-        #     parent_id:  subpage_id,
-        #     title:      post_title,
-        #     body:       body
-        #   )
-        # end
+        def create_department(parent_id)
+          ia = hierarchial_architecture
+          helper = helpers
+          page_id = helper.create_subpage(parent_id, ia.page)
+          helper.create_posts(page_id, ia.posts)
+        end
 
-        def title
-          # get title form the data which is the departmentname
-          data.departmentname.t
+        def delete_department(parent_id)
+          ia = hierarchial_architecture
+          helpers.delete_subpage(parent_id, data.send('' + ia.page.title).t)
         end
       end
-
       # Creates Departments object array
       class Departments
         extend Enumerable
@@ -52,3 +47,5 @@ module Nyulibraries
     end
   end
 end
+
+# Nyulibraries::SiteLeaf::Helpers::Department.new('123').create_department('234')

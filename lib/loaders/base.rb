@@ -4,6 +4,7 @@ require 'open-uri'
 require 'hashie'
 require 'date'
 require 'figs'
+require 'yaml'
 Figs.load
 
 module Nyulibraries
