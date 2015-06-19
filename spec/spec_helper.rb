@@ -1,7 +1,0 @@
-require File.expand_path('../../lib/loaders/base.rb', __FILE__)
-require File.expand_path('../../lib/loaders/staff.rb', __FILE__)
-require File.expand_path('../../lib/loaders/empty_theme.rb', __FILE__)
-require File.expand_path('../../lib/loaders/staffer.rb', __FILE__)
-require File.expand_path('../../lib/loaders/google_sheet.rb', __FILE__)
-require File.expand_path('../../lib/loaders/departments.rb', __FILE__)
-require File.expand_path('../../lib/loaders/dept_attr.rb', __FILE__)
