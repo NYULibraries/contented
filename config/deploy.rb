@@ -14,14 +14,14 @@ namespace :siteleaf do
 
   desc 'call all tests sequentially'
   task :deploy do
-    compile.all
-    siteleaf.empty_theme
-    siteleaf.setup
-    siteleaf.push_theme
+    # compile.all
+    # siteleaf.empty_theme
+    # siteleaf.setup
+    # siteleaf.push_theme
     # siteleaf.staff
     # siteleaf.hours
     # siteleaf.departments
-    siteleaf.clean_up
+    # siteleaf.clean_up
   end
 
   desc 'Previous theme files on siteleaf are deleted so as to push in new ones'
@@ -53,7 +53,7 @@ namespace :siteleaf do
 
   # desc 'Creates Pages for each Departments'
   # task :departments do
-  #   Nyulibraries::SiteLeaf::Loaders::DepartmentPage_Post.new(ENV['DEPARTMENT_PAGE_ID'],ENV['DEPARTMENTS_SPREADSHEET']).create_pages
+  #   Nyulibraries::SiteLeaf::Loaders::DepartmentPage_Post.new(ENV['DEPARTMENT_PAGE_ID'],ENV['DEPARTMENTS_SPREADSHEET']).create_or_update_pages
   # end
 
   desc 'Clean up so pushing to github is easier'

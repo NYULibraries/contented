@@ -17,9 +17,16 @@ module Nyulibraries
           @department = Helpers::Departments.load(Utilities::GoogleSheet.new(spreadsheet).json_data)
         end
 
-        def create_pages
+        def create_or_update_pages
           department.each do |dept|
-            dept.create_department(page_id)
+            dept.create_or_update_department(page_id)
+          end
+        end
+
+        def delete_pages
+          department.each do |dept|
+            # puts dept
+            dept.delete_department(page_id)
           end
         end
       end

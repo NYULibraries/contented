@@ -15,8 +15,8 @@ module Nyulibraries
       # Contains All Siteleaf related functions
       class Base
         def initialize
-          Siteleaf.api_key    = ENV['SITELEAF_KEY']
-          Siteleaf.api_secret = ENV['SITELEAF_SECRET']
+          Siteleaf.api_key    = ENV['API_KEY']
+          Siteleaf.api_secret = ENV['API_SECRET']
         end
 
         def create_page(attrs = {})
@@ -78,6 +78,23 @@ module Nyulibraries
             meta:       meta,
             taxonomy:   tags
           )
+        end
+
+        def update_page(page, title, body, meta)
+          # Updates a page with all these attributes
+          page.title = title
+          page.body = body
+          page.meta = meta
+          page.save
+        end
+
+        def update_post(post, title, body, meta, tags)
+          # Updates a page with all these attributes
+          post.title = title
+          post.body = body
+          post.meta = meta
+          post.taxonomy = tags
+          post.save
         end
       end
     end

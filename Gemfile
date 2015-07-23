@@ -14,7 +14,7 @@ gem 'formaggio', github: 'NYULibraries/formaggio'
 gem 'railsless-deploy'
 
 # Use the siteleaf gem
-gem 'siteleaf', github: 'ahhrrr/siteleaf-gem', branch: 'subpages_fix'
+gem 'siteleaf', github: 'NYULibraries/siteleaf-gem'
 
 # Build templates in Liquid for siteleaf
 gem 'liquid'
@@ -39,3 +39,7 @@ gem 'pry'
 
 # For rake task that mainly takes care of testing
 gem 'rake'
+
+# Rubycritic is a static analysis gem that uses flay, Reek and Flog to
+# give out smells, churn, complexity and duplication.
+gem 'rubycritic', require: false

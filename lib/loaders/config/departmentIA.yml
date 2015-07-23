@@ -2,39 +2,34 @@ Page:
   title:           Department Name
   body:
   meta:
-    - key:
-    - key:
   Posts:
-    - Post:         What We Do
-      body:
+    - Post:
+      title:       What We Do
+      body:        What We Do
       meta:
-        - key:
-        - key:
       tags:
-        - tag:
-        - tag:
-    - Post:        Contact Information
+    - Post:
+      title:       Contact Information
       body:
       meta:
         - key:     Location
         - key:     Room
+        - key:     Space
         - key:     Floor
         - key:     Telephone
         - key:     Email
         - key:     Using Forms
       tags:
-        - tag:
-        - tag:
-    - Post:        Who We Are
+    - Post:
+      title:       Who We Are
       body:
       meta:
         - key:     Department Head 1
         - key:     Department Head 2
         - key:     Additional Staff
       tags:
-        - tag:
-        - tag:
-    - Post:        Updates and Events
+    - Post:
+      title:       Updates and Events
       body:
       meta:
         - key:     Twitter
@@ -42,7 +37,5 @@ Page:
         - key:     Blog
         - key:     Additional Social Media
         - key:     LibCal Classes ID
-        - key:     Blog
       tags:
-        - tag:
-        - tag:
+        # - key:

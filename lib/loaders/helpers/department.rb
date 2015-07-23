@@ -22,16 +22,18 @@ module Nyulibraries
             CoreHelpers.new(data)
           end
 
-          def create_department(parent_id)
+          def create_or_update_department(parent_id)
             ia = hierarchial_architecture
             helper = helpers
+            page_exists = helper.find_subpage(parent_id, helper.get_data_elements(ia.page.title))
+            return helper.update_subpage_posts(ia, page_exists) if page_exists
             page_id = helper.create_subpage(parent_id, ia.page)
             helper.create_posts(page_id, ia.posts)
           end
 
           def delete_department(parent_id)
             ia = hierarchial_architecture
-            helpers.delete_subpage(parent_id, data.send('' + ia.page.title).t)
+            helpers.delete_subpage(parent_id, ia.page.title)
           end
         end
         # Creates Departments object array
@@ -39,9 +41,7 @@ module Nyulibraries
           extend Enumerable
           def self.load(google_spreadsheet)
             department = []
-            google_spreadsheet.each do |line|
-              department << Department.new(line)
-            end
+            google_spreadsheet.each { |line| department << Department.new(line) }
             department
           end
         end
