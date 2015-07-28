@@ -41,7 +41,7 @@ Automates Siteleaf by adding NYU assets after converting them using Microservice
 
 First authenticate yourself on siteleaf
 
-  siteleaf auth
+    siteleaf auth
 
 second change the name of your website on siteleaf config <name> command
 
@@ -61,6 +61,14 @@ second change the name of your website on siteleaf config <name> command
     cap siteleaf:push_theme   # pushes the entire theme i.e. application.js , application.css and liquid html files to siteleaf.
 
     cap siteleaf:clean_up     # cleans up the working directory of all the js and css files pushed to siteleaf.
+
+## How to feed data into library.nyu.edu-data
+
+Create a file called `secret_study.yml` in the root folder of this project.
+
+Inside that file add this line ```GOOGLE_SHEET_KEY : '<Sheet_key>'```
+
+Replace ```<Sheet_key>``` with the google sheet key that is found in the URL.
 
 ## Capistrano Tasks for library.nyu.edu-data
 
