@@ -8,13 +8,13 @@ Figs.load
 class Convert
   def initialize
     FileUtils.rm_rf 'data'
-    FileUtils.mkdir_p 'data'
+    FileUtils.mkdir 'data'
     FileUtils.cp 'bin/config/README.md', 'data'
-    FileUtils.mkdir_p 'data/_departments'
-    FileUtils.mkdir_p 'data/_locations'
-    FileUtils.mkdir_p 'data/_people'
-    FileUtils.mkdir_p 'data/_services'
-    FileUtils.mkdir_p 'data/_spaces'
+    FileUtils.mkdir 'data/_departments'
+    FileUtils.mkdir 'data/_locations'
+    FileUtils.mkdir 'data/_people'
+    FileUtils.mkdir 'data/_services'
+    FileUtils.mkdir 'data/_spaces'
   end
 
   def uri(sheet_num)
@@ -69,13 +69,13 @@ class Convert
     key + ': >' + break_address_2_lines(data.send(convert_to_column_names(key)).t) + "\n"
   end
 
-  def block_title
+  def block_title(data, key)
     key + ' ' + data.title.t + "\n\n\"" + data.send(convert_to_column_names(key)).t + "\"\n"
   end
 
   def block(data, key)
     return key + "\n\n\"" + data.send(convert_to_column_names(key)).t + "\"\n" if key.eql? 'What We Do'
-    block_title
+    block_title(data, key)
   end
 
   def parse_yaml(data, key, val)

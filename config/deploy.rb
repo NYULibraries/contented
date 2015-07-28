@@ -68,11 +68,12 @@ end
 namespace :nyu_data do
   desc 'converts all the content from spreasheet to Markdown'
   task :all do
-    Convert.new.departments
-    Convert.new.locations
-    Convert.new.people
-    Convert.new.services
-    Convert.new.spaces
+    convert = Convert.new
+    convert.departments
+    convert.locations
+    convert.people
+    convert.services
+    convert.spaces
   end
 
   desc 'convert departments content from spreasheet to Markdown'
