@@ -61,3 +61,18 @@ second change the name of your website on siteleaf config <name> command
     cap siteleaf:push_theme   # pushes the entire theme i.e. application.js , application.css and liquid html files to siteleaf.
 
     cap siteleaf:clean_up     # cleans up the working directory of all the js and css files pushed to siteleaf.
+
+## Capistrano Tasks for library.nyu.edu-data
+
+    cap nyu_data:all          # converts all the content from spreasheet to Markdown
+
+    cap nyu_data:departments  # converts departments content from spreasheet to Markdown
+
+    cap nyu_data:locations    # converts locations content from spreasheet to Markdown
+
+    cap nyu_data:people       # converts people content from spreasheet to Markdown
+
+    cap nyu_data:services     # converts services content from spreasheet to Markdown
+
+    cap nyu_data:spaces       # converts spaces content from spreasheet to Markdown
+
