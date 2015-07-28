@@ -27,15 +27,22 @@ class Convert
     Hashie::Mash.new(JSON.parse(open(uri(sheet_num)).read.gsub('"gsx$', '"').gsub('"$t"', '"t"'))).feed.entry
   end
 
+  def strip_spaces_in_between(string, char)
+    string.gsub(/\s+#{char}/, "#{char}").gsub(/#{char}\s+/, "#{char}")
+  end
+
   def listify(element)
     return '' if element.empty?
     # Replace ; with new line and - for list in Yaml
+    element = strip_spaces_in_between(element, ';')
     "\n  - \"" + element.gsub(';', "\"\n  - \"") + "\""
   end
 
   def listify_assets(asset)
     return '' if asset.empty?
-    "\n  -  " + asset.gsub(';', "\"\n  - ").gsub('path:', "path: \"").gsub('name:', "\"\n     name: \"") + "\""
+    asset = strip_spaces_in_between(asset, ';')
+    asset = strip_spaces_in_between(asset, '>')
+    "\n  - path: \"" + asset.gsub(';', "\"\n  - path: \"").gsub('>', "\"\n    name: \"") + "\""
   end
 
   def break_address_2_lines(address)
@@ -130,3 +137,5 @@ class Convert
     create_md(5, 'space', 'spaces')
   end
 end
+
+Convert.new.locations
