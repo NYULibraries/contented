@@ -6,6 +6,17 @@ Figs.load
 
 # Grabs data from spreadsheet and converts it into a Markdown files
 class Convert
+  def initialize
+    FileUtils.rm_rf 'data'
+    FileUtils.mkdir_p 'data'
+    FileUtils.cp 'bin/config/README.md', 'data'
+    FileUtils.mkdir_p 'data/_departments'
+    FileUtils.mkdir_p 'data/_locations'
+    FileUtils.mkdir_p 'data/_people'
+    FileUtils.mkdir_p 'data/_services'
+    FileUtils.mkdir_p 'data/_spaces'
+  end
+
   def uri(sheet_num)
     "http://spreadsheets.google.com/feeds/list/#{ENV['GOOGLE_SHEET_KEY']}/#{sheet_num}/public/values?alt=json"
   end
@@ -24,7 +35,7 @@ class Convert
 
   def listify_assets(asset)
     return '' if asset.empty?
-    "\n  -  " + asset.gsub(';',"\"\n  - ").gsub('path:', "path: \"").gsub('name:', "\"\n     name: \"") + "\""
+    "\n  -  " + asset.gsub(';', "\"\n  - ").gsub('path:', "path: \"").gsub('name:', "\"\n     name: \"") + "\""
   end
 
   def break_address_2_lines(address)
@@ -70,7 +81,7 @@ class Convert
       yaml_load(worksheet_name).each_pair do |key, val|
         content += parse_md(data, key, val)
       end
-      File.write('data/_' + dir_name + '/' + slugify(data.title.t) + '.markdown' , content)
+      File.write('data/_' + dir_name + '/' + slugify(data.title.t) + '.markdown', content)
     end
   end
 
@@ -99,10 +110,3 @@ class Convert
     create_md(5, 'space', 'spaces')
   end
 end
-
-
-Convert.new.departments
-Convert.new.locations
-Convert.new.people
-Convert.new.services
-Convert.new.spaces

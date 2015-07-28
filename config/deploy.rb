@@ -1,6 +1,7 @@
 require File.expand_path('../../lib/loaders/empty_theme.rb', __FILE__)
 require File.expand_path('../../lib/loaders/hours.rb', __FILE__)
 require File.expand_path('../../lib/loaders/department_page_post.rb', __FILE__)
+require File.expand_path('../../bin/Convert.rb', __FILE__)
 namespace :siteleaf do
   namespace :compile do
     desc 'Compile Javascript and Sass from assets Folder to dist folder'
@@ -61,5 +62,41 @@ namespace :siteleaf do
     run_locally 'rm -rf javascripts'
     run_locally 'rm -rf stylesheets'
     run_locally 'rm config.ru'
+  end
+end
+
+namespace :nyu_data do
+  desc 'converts all the content from spreasheet to Markdown'
+  task :all do
+    Convert.new.departments
+    Convert.new.locations
+    Convert.new.people
+    Convert.new.services
+    Convert.new.spaces
+  end
+
+  desc 'convert departments content from spreasheet to Markdown'
+  task :departments do
+    Convert.new.departments
+  end
+
+  desc 'convert locations content from spreasheet to Markdown'
+  task :locations do
+    Convert.new.locations
+  end
+
+  desc 'convert people content from spreasheet to Markdown'
+  task :people do
+    Convert.new.people
+  end
+
+  desc 'convert services content from spreasheet to Markdown'
+  task :services do
+    Convert.new.services
+  end
+
+  desc 'convert spaces content from spreasheet to Markdown'
+  task :spaces do
+    Convert.new.spaces
   end
 end
