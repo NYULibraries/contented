@@ -56,13 +56,33 @@ class Convert
     name.gsub('_', '').gsub(' ', '').downcase
   end
 
+  def asset(data, key)
+    key + ':' + listify_assets(data.send(convert_to_column_names(key)).t) + "\n"
+  end
+
+  def list(data, key, val)
+    return key + ':' + listify(data.send(convert_to_column_names(key)).t) + "\n" if val.eql? 'list'
+    asset(data, key)
+  end
+
+  def multi_line(data, key)
+    key + ': >' + break_address_2_lines(data.send(convert_to_column_names(key)).t) + "\n"
+  end
+
+  def block_title
+    key + ' ' + data.title.t + "\n\n\"" + data.send(convert_to_column_names(key)).t + "\"\n"
+  end
+
+  def block(data, key)
+    return key + "\n\n\"" + data.send(convert_to_column_names(key)).t + "\"\n" if key.eql? 'What We Do'
+    block_title
+  end
+
   def parse_yaml(data, key, val)
     return key + ': "' + data.send(convert_to_column_names(key)).t + "\"\n" if val.eql? 'single'
-    return key + ':' + listify(data.send(convert_to_column_names(key)).t) + "\n" if val.eql? 'list'
-    return key + ':' + listify_assets(data.send(convert_to_column_names(key)).t) + "\n" if val.eql? 'assets'
-    return key + ': >' + break_address_2_lines(data.send(convert_to_column_names(key)).t) + "\n" if val.eql? 'multi-line'
-    return key + ' ' + data.title.t + "\n\n\"" + data.send(convert_to_column_names(key)).t + "\"\n" if val.eql? 'block'
-    return key + "\n" + data.send(convert_to_column_names(key)).t + "\"\n" if key.eql? 'What We Do'
+    return list(data, key, val) if val.eql?('list') || val.eql?('assets')
+    return multi_line(data, key) if val.eql? 'multi-line'
+    return block(data, key) if val.eql?('block')
   end
 
   def parse_md(data, key, val)
