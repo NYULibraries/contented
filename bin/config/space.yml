@@ -1,7 +1,7 @@
 file_start      : "---\n\n"
 title           : "single"
 new_line1       : "\n"
-location        : "block"
+location        : "single"
 new_line2       : "\n"
 address         : "single"
 email           : "single"
