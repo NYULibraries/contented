@@ -7,14 +7,8 @@ Figs.load
 # Grabs data from spreadsheet and converts it into a Markdown files
 class Convert
   def initialize
-    FileUtils.rm_rf 'data'
-    FileUtils.mkdir 'data'
+    FileUtils.mkdir 'data' unless File.directory? 'data'
     FileUtils.cp 'bin/config/README.md', 'data'
-    FileUtils.mkdir 'data/_departments'
-    FileUtils.mkdir 'data/_locations'
-    FileUtils.mkdir 'data/_people'
-    FileUtils.mkdir 'data/_services'
-    FileUtils.mkdir 'data/_spaces'
   end
 
   def uri(sheet_num)
@@ -113,29 +107,37 @@ class Convert
   end
 
   def departments
+    FileUtils.mkdir 'data/_departments' unless File.directory? 'data/_departments'
+    FileUtils.cp 'bin/config/_example_departments.markdown', 'data/_departments/_example.markdown'
     # Worksheet 1 contains departments
     create_md(1, 'department', 'departments')
   end
 
   def locations
+    FileUtils.mkdir 'data/_locations' unless File.directory? 'data/_locations'
+    FileUtils.cp 'bin/config/_example_locations.markdown', 'data/_locations/_example.markdown'
     # Worksheet 2 contains locations
     create_md(2, 'location', 'locations')
   end
 
   def people
+    FileUtils.mkdir 'data/_people' unless File.directory? 'data/_people'
+    FileUtils.cp 'bin/config/_example_people.markdown', 'data/_people/_example.markdown'
     # Worksheet 3 contains people
     create_md(3, 'people', 'people')
   end
 
   def services
+    FileUtils.mkdir 'data/_services' unless File.directory? 'data/_services'
+    FileUtils.cp 'bin/config/_example_services.markdown', 'data/_services/_example.markdown'
     # Worksheet 4 contains services
     create_md(4, 'service', 'services')
   end
 
   def spaces
+    FileUtils.mkdir 'data/_spaces' unless File.directory? 'data/_spaces'
+    FileUtils.cp 'bin/config/_example_spaces.markdown', 'data/_spaces/_example.markdown'
     # Worksheet 5 contains spaces
     create_md(5, 'space', 'spaces')
   end
 end
-
-Convert.new.locations
