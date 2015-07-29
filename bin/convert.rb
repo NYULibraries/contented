@@ -16,8 +16,7 @@ class Convert
   end
 
   def sheet(sheet_num)
-    # Making objects of json file generated from spreadsheet
-    # Remove gsx$ and $t from column and cell names so varable names dont have $
+    # Making objects of json file generated from spreadsheet and Remove gsx$ and $t from column and cell names
     Hashie::Mash.new(JSON.parse(open(uri(sheet_num)).read.gsub('"gsx$', '"').gsub('"$t"', '"t"'))).feed.entry
   end
 
@@ -27,8 +26,7 @@ class Convert
 
   def listify(element)
     return '' if element.empty?
-    # Replace ; with new line and - for list in Yaml
-    element = strip_spaces_in_between(element, ';')
+    element = strip_spaces_in_between(element, ';') # Replace ; with new line and - for list in Yaml
     "\n  - \"" + element.gsub(';', "\"\n  - \"") + "\""
   end
 
@@ -87,21 +85,14 @@ class Convert
   end
 
   def parse_md(data, key, val)
-    content = ''
-    if key.include?('new_line') || key.include?('file_')
-      content += val
-    else
-      content += parse_yaml(data, key, val)
-    end
-    content
+    return val if key.include?('new_line') || key.include?('file_')
+    parse_yaml(data, key, val)
   end
 
   def create_md(worksheet_num, worksheet_name, dir_name)
     sheet(worksheet_num).each  do |data|
       content = ''
-      yaml_load(worksheet_name).each_pair do |key, val|
-        content += parse_md(data, key, val)
-      end
+      yaml_load(worksheet_name).each_pair { |key, val| content += parse_md(data, key, val) }
       File.write('data/_' + dir_name + '/' + slugify(data.title.t) + '.markdown', content)
     end
   end
@@ -109,35 +100,30 @@ class Convert
   def departments
     FileUtils.mkdir 'data/_departments' unless File.directory? 'data/_departments'
     FileUtils.cp 'bin/config/_example_departments.markdown', 'data/_departments/_example.markdown'
-    # Worksheet 1 contains departments
-    create_md(1, 'department', 'departments')
+    create_md(1, 'department', 'departments') # Worksheet 1 contains departments
   end
 
   def locations
     FileUtils.mkdir 'data/_locations' unless File.directory? 'data/_locations'
     FileUtils.cp 'bin/config/_example_locations.markdown', 'data/_locations/_example.markdown'
-    # Worksheet 2 contains locations
-    create_md(2, 'location', 'locations')
+    create_md(2, 'location', 'locations') # Worksheet 2 contains locations
   end
 
   def people
     FileUtils.mkdir 'data/_people' unless File.directory? 'data/_people'
     FileUtils.cp 'bin/config/_example_people.markdown', 'data/_people/_example.markdown'
-    # Worksheet 3 contains people
-    create_md(3, 'people', 'people')
+    create_md(3, 'people', 'people') # Worksheet 3 contains people
   end
 
   def services
     FileUtils.mkdir 'data/_services' unless File.directory? 'data/_services'
     FileUtils.cp 'bin/config/_example_services.markdown', 'data/_services/_example.markdown'
-    # Worksheet 4 contains services
-    create_md(4, 'service', 'services')
+    create_md(4, 'service', 'services') # Worksheet 4 contains services
   end
 
   def spaces
     FileUtils.mkdir 'data/_spaces' unless File.directory? 'data/_spaces'
     FileUtils.cp 'bin/config/_example_spaces.markdown', 'data/_spaces/_example.markdown'
-    # Worksheet 5 contains spaces
-    create_md(5, 'space', 'spaces')
+    create_md(5, 'space', 'spaces') # Worksheet 5 contains spaces
   end
 end
