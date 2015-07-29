@@ -1,0 +1,6 @@
+wiki/
+*.wiki
+
+.DS_Store
+
+.markdown

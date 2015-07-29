@@ -9,6 +9,7 @@ class Convert
   def initialize
     FileUtils.mkdir 'data' unless File.directory? 'data'
     FileUtils.cp 'bin/config/README.md', 'data'
+    FileUtils.cp 'bin/config/.gitignore', 'data'
   end
 
   def uri(sheet_num)
@@ -89,41 +90,39 @@ class Convert
     parse_yaml(data, key, val)
   end
 
+  def create_yaml(worksheet_name, data)
+    content = ''
+    yaml_load(worksheet_name).each_pair { |key, val| content += parse_md(data, key, val) }
+    content
+  end
+
   def create_md(worksheet_num, worksheet_name, dir_name)
-    sheet(worksheet_num).each  do |data|
-      content = ''
-      yaml_load(worksheet_name).each_pair { |key, val| content += parse_md(data, key, val) }
-      File.write('data/_' + dir_name + '/' + slugify(data.title.t) + '.markdown', content)
-    end
+    create_file_structure(dir_name)
+    sheet(worksheet_num).each  { |data| File.write('data/_' + dir_name + '/' + slugify(data.title.t) + '.markdown', create_yaml(worksheet_name, data)) }
+  end
+
+  def create_file_structure(name)
+    FileUtils.mkdir "data/_#{name}" unless File.directory? "data/_#{name}"
+    FileUtils.cp "bin/config/_example_#{name}.markdown", "data/_#{name}/_example.markdown"
   end
 
   def departments
-    FileUtils.mkdir 'data/_departments' unless File.directory? 'data/_departments'
-    FileUtils.cp 'bin/config/_example_departments.markdown', 'data/_departments/_example.markdown'
     create_md(1, 'department', 'departments') # Worksheet 1 contains departments
   end
 
   def locations
-    FileUtils.mkdir 'data/_locations' unless File.directory? 'data/_locations'
-    FileUtils.cp 'bin/config/_example_locations.markdown', 'data/_locations/_example.markdown'
     create_md(2, 'location', 'locations') # Worksheet 2 contains locations
   end
 
   def people
-    FileUtils.mkdir 'data/_people' unless File.directory? 'data/_people'
-    FileUtils.cp 'bin/config/_example_people.markdown', 'data/_people/_example.markdown'
     create_md(3, 'people', 'people') # Worksheet 3 contains people
   end
 
   def services
-    FileUtils.mkdir 'data/_services' unless File.directory? 'data/_services'
-    FileUtils.cp 'bin/config/_example_services.markdown', 'data/_services/_example.markdown'
     create_md(4, 'service', 'services') # Worksheet 4 contains services
   end
 
   def spaces
-    FileUtils.mkdir 'data/_spaces' unless File.directory? 'data/_spaces'
-    FileUtils.cp 'bin/config/_example_spaces.markdown', 'data/_spaces/_example.markdown'
     create_md(5, 'space', 'spaces') # Worksheet 5 contains spaces
   end
 end
