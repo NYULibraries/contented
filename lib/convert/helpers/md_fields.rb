@@ -9,8 +9,13 @@ class MDFields
     key + ':' + FieldFormat.listify_assets(data.send(convert_to_column_names(key)).t) + "\n"
   end
 
+  def self.list_or_instance(data, key, val)
+    return key + ':' + FieldFormat.listify(data.send(convert_to_column_names(key)).t) if val.eql? 'list'
+    key + ':' + FieldFormat.instancify(data.send(convert_to_column_names(key)).t)
+  end
+
   def self.list(data, key, val)
-    return key + ':' + FieldFormat.listify(data.send(convert_to_column_names(key)).t) + "\n" if val.eql? 'list'
+    return list_or_instance(data, key, val) + "\n" if val.eql?('list') || val.eql?('instance')
     asset(data, key)
   end
 
@@ -19,7 +24,7 @@ class MDFields
   end
 
   def self.block_title(data, key, put_title)
-    title = data.title.t if put_title
+    title = put_title ? data.title.t : ''
     key + ' ' + title + "\n\n\"" + data.send(convert_to_column_names(key)).t + "\"\n"
   end
 

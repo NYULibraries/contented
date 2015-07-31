@@ -9,11 +9,17 @@ class YamlMaker
     Hashie::Mash.new(YAML.load_file('config/conversions/' + structure + '.yml'))
   end
 
+  def self.blocks_of_data(data, key, val)
+    return MDFields.multi_line(data, key) if val.eql? 'multi-line'
+    return MDFields.block(data, key) if val.eql? 'block'
+  end
+
   def self.parse_yaml(data, key, val)
     return key + ': "' + data.send(MDFields.convert_to_column_names(key)).t + "\"\n" if val.eql? 'single'
-    return MDFields.list(data, key, val) if val.eql?('list') || val.eql?('assets')
-    return MDFields.multi_line(data, key) if val.eql? 'multi-line'
-    return MDFields.block(data, key) if val.eql?('block')
+    return MDFields.list(data, key, val) if val.eql?('list') || val.eql?('assets') || val.eql?('instance')
+    blocks_of_data(data, key, val)
+    # return MDFields.multi_line(data, key) if val.eql? 'multi-line'
+    # return MDFields.block(data, key) if val.eql? 'block'
   end
 
   def self.parse_md(data, key, val)

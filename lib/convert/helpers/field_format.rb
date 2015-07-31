@@ -10,6 +10,12 @@ class FieldFormat
     "\n  - \"" + element.gsub(';', "\"\n  - \"") + "\""
   end
 
+  def self.instancify(element)
+    return '' if element.empty?
+    element = strip_spaces_in_between(element, ';') # Replace ; with new line and - for list in Yaml
+    "\n  " + element.gsub(';', "\"\n  ")
+  end
+
   def self.listify_assets(asset)
     return '' if asset.empty?
     asset = strip_spaces_in_between(asset, ';')
