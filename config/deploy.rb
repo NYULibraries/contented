@@ -1,7 +1,7 @@
 require File.expand_path('../../lib/loaders/empty_theme.rb', __FILE__)
 require File.expand_path('../../lib/loaders/hours.rb', __FILE__)
 require File.expand_path('../../lib/loaders/department_page_post.rb', __FILE__)
-require File.expand_path('../../bin/Convert.rb', __FILE__)
+require File.expand_path('../../lib/convert/convert.rb', __FILE__)
 namespace :siteleaf do
   namespace :compile do
     desc 'Compile Javascript and Sass from assets Folder to dist folder'
