@@ -18,12 +18,14 @@ class MDFields
     key + ': >' + FieldFormat.break_address_2_lines(data.send(convert_to_column_names(key)).t) + "\n"
   end
 
-  def self.block_title(data, key)
-    key + ' ' + data.title.t + "\n\n\"" + data.send(convert_to_column_names(key)).t + "\"\n"
+  def self.block_title(data, key, put_title)
+    title = data.title.t if put_title
+    key + ' ' + title + "\n\n\"" + data.send(convert_to_column_names(key)).t + "\"\n"
   end
 
   def self.block(data, key)
     return key + "\n\n\"" + data.send(convert_to_column_names(key)).t + "\"\n" if key.eql? 'What We Do'
-    block_title(data, key)
+    return  block_title(data, key, true) if key.eql? 'About'
+    block_title(data, key, false)
   end
 end
