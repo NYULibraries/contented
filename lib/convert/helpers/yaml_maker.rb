@@ -6,7 +6,7 @@ class YamlMaker
   end
 
   def self.yaml_load(structure)
-    Hashie::Mash.new(YAML.load_file('bin/config/' + structure + '.yml'))
+    Hashie::Mash.new(YAML.load_file('config/conversions/' + structure + '.yml'))
   end
 
   def self.parse_yaml(data, key, val)
@@ -34,6 +34,6 @@ class YamlMaker
 
   def self.create_file_structure(name)
     FileUtils.mkdir "data/_#{name}" unless File.directory? "data/_#{name}"
-    FileUtils.cp "bin/config/_example_#{name}.markdown", "data/_#{name}/_example.markdown"
+    FileUtils.cp "config/conversions/_example_#{name}.markdown", "data/_#{name}/_example.markdown"
   end
 end
