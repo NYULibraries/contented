@@ -1,5 +1,6 @@
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
+require './lib/convert/convert.rb'
 
 desc 'Checking Bundler setup'
 begin
@@ -13,7 +14,7 @@ end
 
 desc 'Run Rspec'
 begin
-  RSpec::Core::RakeTask.new(:spec)
+  RSpec::Core::RakeTask.new :spec
   task default: :spec
 rescue LoadError
   puts 'No Rspec available'
@@ -21,8 +22,42 @@ end
 
 desc 'Run RuboCop'
 begin
-  RuboCop::RakeTask.new(:rubocop)
+  RuboCop::RakeTask.new :rubocop
   task default: :rubocop
 rescue LoadError
   puts 'No Rubocop available'
+end
+
+desc 'Converts all worksheets to Markdown and places them in their respective directory'
+task :nyu_data do
+  Convert.new.departments
+  Convert.new.locations
+  Convert.new.people
+  Convert.new.services
+  Convert.new.spaces
+end
+
+desc 'Converts departments worksheet to Markdown and places them in their respective directory'
+task :departments do
+  Convert.new.departments
+end
+
+desc 'Converts locations worksheet to Markdown and places them in their respective directory'
+task :locations do
+  Convert.new.locations
+end
+
+desc 'Converts people worksheet to Markdown and places them in their respective directory'
+task :people do
+  Convert.new.people
+end
+
+desc 'Converts services worksheet to Markdown and places them in their respective directory'
+task :services do
+  Convert.new.services
+end
+
+desc 'Converts spaces worksheet to Markdown and places them in their respective directory'
+task :spaces do
+  Convert.new.spaces
 end
