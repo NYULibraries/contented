@@ -26,11 +26,3 @@ begin
 rescue LoadError
   puts 'No Rubocop available'
 end
-
-desc 'Run convert script to fill up Library.nyu.edu-data'
-begin
-  RuboCop::RakeTask.new(:rubocop)
-  task default: :rubocop
-rescue LoadError
-  puts 'No Rubocop available'
-end
