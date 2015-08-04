@@ -4,7 +4,7 @@ title: Access, Delivery & Resource Sharing Services
 subtitle: ADRSS
 
 location: Elmer Holmes Bobst Library
-space: 1st Floor East
+space: 1st Floor
 
 email: patron.question@library.nyu.edu
 phone: (212) 998-2530
@@ -23,7 +23,7 @@ links:
   Example: http://example.org
   Get Help: http://answers.nyu.edu/search.php?question=data+services
 
-net_id:ab123
+net_id: ab123
 
 classes:
   Take a Class: http://example.org
@@ -34,6 +34,7 @@ image: https://placeimg.com/540/540/tech
 buttons: Request an Appointment: http://example.org
 
 keywords:
+      
 ---
 
 # What We Do

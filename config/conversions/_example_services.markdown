@@ -5,10 +5,11 @@ title: Sample Service
 location: Elmer Holmes Bobst Library
 space: Room 511
 departments:
-  - Linguistics
+  - Digital Studio
 
+type: Guide 
 topics:
-  - Borrow and Request
+  - Research Help
 
 access:
   - Public
@@ -20,13 +21,12 @@ email: data.services@nyu.edu
 phone: (212) 555-7890
 
 twitter: nyusampleservice
-facebook: nyusampleservice
 blog:
   title: "Latest News" #optional
   rss: https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
   link: http://example.org
 
-libcal_id: 1564
+libcal_id: 989
 libanswers_id: 1808
 
 links:
@@ -34,6 +34,12 @@ links:
   Get Help: http://answers.nyu.edu/search.php?question=sample+service
 
 image: https://placeimg.com/540/540/any
+
+buttons: Request an Appointment: http://example.org
+
+keywords: 
+  - audio
+  - equipment
       
 ---
 

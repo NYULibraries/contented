@@ -3,6 +3,8 @@
 title: Scott Collard
 job_title: Librarian for Education and Linguistics
 
+net_id: ab123
+
 location: Elmer Holmes Bobst Library
 space: Room 511
 departments:
@@ -13,16 +15,15 @@ expertise:
   - Education
   - Linguistics
 
-email: scott.collard@nyu.edu
-phone: (212) 555-7890
+email: ab123@nyu.edu
+phone: (212) 555-7890 x2122
 
 twitter: scottcollard
-facebook: scottcollard
 
 image: https://placeimg.com/540/540/people
 
 buttons:
-  Request an appointment: http://example.org
+  Request an Appointment: http://example.org
 
 guides:
   title: "Research Guides" #optional
@@ -33,6 +34,8 @@ publications:
   title: "Publications" #optional
   rss: http://www.refworks.com/refshare/?site=010331135918800000/RWWS2A1108168/099821207281963000&rss
   link: http://example.org
+  
+keywords: 
       
 ---
 

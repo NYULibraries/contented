@@ -3,7 +3,7 @@
 title: Elmer Holmes Bobst Library
 subtitle: 
 
-type: NYU Library # can be Affiliated Library, etc
+type: Library # can be Collection, etc
 
 address: >
   70 Washington Square South
@@ -22,7 +22,7 @@ blog:
   rss: https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
   link: http://example.org
 
-libcal_id: 1564
+libcal_id: 978
 libanswers_id: 1808
 
 links:
@@ -30,6 +30,8 @@ links:
   Get Help: http://answers.nyu.edu/search.php?question=bobst
   
 image: https://placeimg.com/540/540/arch
+
+keywords: NYU # can be "Consortium and Affiliate"
       
 ---
 

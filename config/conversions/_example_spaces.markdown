@@ -1,25 +1,36 @@
 ---
 
 title: Room 511
+subtitle:
 
 location: Elmer Holmes Bobst Library
 
-address: "5th Floor, #511" # inherits full address from location
+address: Research Commons, 5th Floor South, Room 511 # inherits full address from location
 email: room511@nyu.edu
 phone: (212) 555-7890
 
+type: Study Room
 amenities:
-  - Reservable
+  - wifi
+  - power outlets
+  - desk
+  - chair
+  - whiteboard 
+access: 
   - Graduate
 
-libcal_id: 1564
+libcal_id: 1534
 libanswers_id: 1808
 
 links:
-  Example: http://example.org
+  Access Guide for this Room: http://example.org
   Get Help: http://answers.nyu.edu/search.php?question=room+511
   
 image: https://placeimg.com/540/540/arch
+
+keywords: 
+  - individual
+  - graduate
       
 ---
 
