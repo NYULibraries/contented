@@ -6,17 +6,17 @@ class MDFields
   end
 
   def self.asset(data, key)
-    key + ':' + FieldFormat.listify_assets(data.send(convert_to_column_names(key)).t) + "\n"
+    FieldFormat.listify_assets(data.send(convert_to_column_names(key)).t) + "\n"
   end
 
   def self.list_or_instance(data, key, val)
-    return key + ':' + FieldFormat.listify(data.send(convert_to_column_names(key)).t) if val.eql? 'list'
-    key + ':' + FieldFormat.instancify(data.send(convert_to_column_names(key)).t)
+    return FieldFormat.listify(data.send(convert_to_column_names(key)).t) if val.eql? 'list'
+    FieldFormat.instancify(data.send(convert_to_column_names(key)).t)
   end
 
   def self.list(data, key, val)
-    return list_or_instance(data, key, val) + "\n" if val.eql?('list') || val.eql?('instance')
-    asset(data, key)
+    return key + ':' + list_or_instance(data, key, val) + "\n" if val.eql?('list') || val.eql?('instance')
+    key + ':' + asset(data, key)
   end
 
   def self.multi_line(data, key)

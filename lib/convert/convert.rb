@@ -12,22 +12,22 @@ class Convert
   end
 
   def departments
-    YamlMaker.create_md(1, 'department', 'departments') # Worksheet 1 contains departments
+    YamlMaker.create_md(2, 'department', 'departments') # Worksheet 1 contains departments
   end
 
   def locations
-    YamlMaker.create_md(2, 'location', 'locations') # Worksheet 2 contains locations
+    YamlMaker.create_md(4, 'location', 'locations') # Worksheet 2 contains locations
   end
 
   def people
-    YamlMaker.create_md(3, 'people', 'people') # Worksheet 3 contains people
+    YamlMaker.create_md(6, 'people', 'people') # Worksheet 3 contains people
   end
 
   def services
-    YamlMaker.create_md(4, 'service', 'services') # Worksheet 4 contains services
+    YamlMaker.create_md(8, 'service', 'services') # Worksheet 4 contains services
   end
 
   def spaces
-    YamlMaker.create_md(5, 'space', 'spaces') # Worksheet 5 contains spaces
+    YamlMaker.create_md(10, 'space', 'spaces') # Worksheet 5 contains spaces
   end
 end

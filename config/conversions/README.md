@@ -68,22 +68,38 @@ The following relationships can exist:
   - `location` (which building this service is available in)
   - `space` (which room this service is located, if applies)
 
+## Link lists
+
+Links can be defined using the following name/url format on `links`, `buttons`, and `classes`:
+
+```YAML
+links:
+  Example: "http://example.org"
+  Get Help: "http://answers.nyu.edu/search.php?question=sample+service"
+```
+
+## Feeds
+
+RSS feeds can be defined using the following format for `blog`, `guides`, and `publications`:
+
+```YAML
+blog:
+  title: "Latest News" #optional
+  rss: "https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss"
+  link: "http://example.org" #optional
+```
+
+When provided, `link` is used to show a "See more" button.
+
 ## Assets
 
-All items can contain image `assets` (remote or relative):
+All items can contain an `image` (remote or relative):
 
-```
----
-assets:
-  - path: https://placeimg.com/540/540/any
-    name: Remote Asset
-  - path: /uploads/photo.jpg
-    name: Relative Asset
-    key: value # optional metadata is supported
----
+```YAML
+image: "https://placeimg.com/540/540/any"
 ```
 
-Any relative assets should be saved in this repo.
+Any relative images should be saved in this repo.
 
 Recommended size: 270 px x 2 DPR (retina) = **540 px square**
 
@@ -104,3 +120,6 @@ Recommended size: 270 px x 2 DPR (retina) = **540 px square**
 - Filename should be full `title` slugified (e.g. "Room #511" = "room-511.markdown")
   - sample code: https://gist.github.com/sskylar/71acc499965d283e4785
   - for long Location names, make sure to use `title` (exclude `subtitle`)
+- First header in body should genarally be an `<h1>` (single `#`)
+- Always use `"straight"` quotes in YAML, never `“curly”` quotes
+- Arrays must always have a space after the `-` character (e.g. `- item`)
