@@ -70,17 +70,17 @@ Inside that file add this line ```GOOGLE_SHEET_KEY : '<Sheet_key>'```
 
 Replace ```<Sheet_key>``` with the google sheet key that is found in the URL.
 
-## Capistrano Tasks for library.nyu.edu-data
+## Rake Tasks for library.nyu.edu-data
 
-    cap nyu_data:all          # converts all the content from spreasheet to Markdown
+    bundle exec rake nyu_data     # converts all the content from spreasheet to Markdown
 
-    cap nyu_data:departments  # converts departments content from spreasheet to Markdown
+    bundle exec rake departments  # converts departments content from spreasheet to Markdown
 
-    cap nyu_data:locations    # converts locations content from spreasheet to Markdown
+    bundle exec rake locations    # converts locations content from spreasheet to Markdown
 
-    cap nyu_data:people       # converts people content from spreasheet to Markdown
+    bundle exec rake people       # converts people content from spreasheet to Markdown
 
-    cap nyu_data:services     # converts services content from spreasheet to Markdown
+    bundle exec rake services     # converts services content from spreasheet to Markdown
 
-    cap nyu_data:spaces       # converts spaces content from spreasheet to Markdown
+    bundle exec rake spaces       # converts spaces content from spreasheet to Markdown
 
