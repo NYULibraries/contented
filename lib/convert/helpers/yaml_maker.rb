@@ -14,9 +14,13 @@ class YamlMaker
     return MDFields.block(data, key) if val.eql? 'block'
   end
 
-  def self.parse_yaml(data, key, val)
-    return key + ': ' + data.send(MDFields.convert_to_column_names(key)).t + "\n" if val.eql? 'value'
+  def self.singles(data, key, val)
     return key + ': "' + data.send(MDFields.convert_to_column_names(key)).t + "\"\n" if val.eql? 'single'
+    data.send(MDFields.convert_to_column_names(key)).t.include?('true') ? key + ': true' + "\n" : key + ': false' + "\n"
+  end
+
+  def self.parse_yaml(data, key, val)
+    return singles(data, key, val) if val.eql?('single') || val.eql?('boolean')
     return MDFields.list(data, key, val) if val.eql?('list') || val.eql?('assets') || val.eql?('instance')
     blocks_of_data(data, key, val)
   end

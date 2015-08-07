@@ -20,16 +20,16 @@ class MDFields
   end
 
   def self.multi_line(data, key)
-    key + ': >' + FieldFormat.break_address_2_lines(data.send(convert_to_column_names(key)).t) + "\n"
+    key + ': |' + FieldFormat.break_address_2_lines(data.send(convert_to_column_names(key)).t) + "\n"
   end
 
   def self.block_title(data, key, put_title)
     title = put_title ? data.title.t : ''
-    key + ' ' + title + "\n\n\"" + data.send(convert_to_column_names(key)).t + "\"\n"
+    key + ' ' + title + "\n\n" + data.send(convert_to_column_names(key)).t + "\n"
   end
 
   def self.block(data, key)
-    return key + "\n\n\"" + data.send(convert_to_column_names(key)).t + "\"\n" if key.eql? 'What We Do'
+    return key + "\n\n" + data.send(convert_to_column_names(key)).t + "\n" if key.eql? 'What We Do'
     return  block_title(data, key, true) if key.eql? 'About'
     block_title(data, key, false)
   end

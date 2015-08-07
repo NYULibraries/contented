@@ -25,6 +25,6 @@ class FieldFormat
 
   def self.break_address_2_lines(address)
     return '' if address.empty?
-    "\n  \"" + address.sub(',', "\n  ") + "\""
+    "\n  " + address.sub(',', "\n  ")
   end
 end
