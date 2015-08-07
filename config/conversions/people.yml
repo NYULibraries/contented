@@ -1,6 +1,7 @@
 file_start      : "---\n\n"
 title           : "single"
 job_title       : "single"
+subtitle        : "single"
 new_line1       : "\n"
 location        : "single"
 space           : "single"

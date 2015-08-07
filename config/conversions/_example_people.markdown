@@ -2,6 +2,7 @@
 
 title: Scott Collard
 job_title: Librarian for Education and Linguistics
+subtitle: PHD Blah and Co.
 
 net_id: ab123
 
@@ -34,9 +35,9 @@ publications:
   title: "Publications" #optional
   rss: http://www.refworks.com/refshare/?site=010331135918800000/RWWS2A1108168/099821207281963000&rss
   link: http://example.org
-  
-keywords: 
-      
+
+keywords:
+
 ---
 
 # About Scott

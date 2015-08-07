@@ -1,10 +1,11 @@
 ---
 
 title: Elmer Holmes Bobst Library
-subtitle: 
+subtitle:
 
 type: Library # can be Collection, etc
 
+location: # optional parent location
 address: >
   70 Washington Square South
   New York, NY 10012
@@ -23,16 +24,18 @@ blog:
   link: http://example.org
 
 libcal_id: 978
+libcal_truncated: true
+libcal_link: "http://example.org"
 libanswers_id: 1808
 
 links:
   Example: http://example.org
   Get Help: http://answers.nyu.edu/search.php?question=bobst
-  
+
 image: https://placeimg.com/540/540/arch
 
 keywords: NYU # can be "Consortium and Affiliate"
-      
+
 ---
 
 # About Bobst Library

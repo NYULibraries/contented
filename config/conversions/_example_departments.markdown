@@ -31,7 +31,8 @@ classes:
   
 image: https://placeimg.com/540/540/tech
 
-buttons: Request an Appointment: http://example.org
+buttons: 
+  Request an Appointment: http://example.org
 
 keywords:
       

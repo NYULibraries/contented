@@ -35,7 +35,8 @@ links:
 
 image: https://placeimg.com/540/540/any
 
-buttons: Request an Appointment: http://example.org
+buttons: 
+  Request an Appointment: http://example.org
 
 keywords: 
   - audio
