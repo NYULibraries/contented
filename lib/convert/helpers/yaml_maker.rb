@@ -15,6 +15,7 @@ class YamlMaker
   end
 
   def self.parse_yaml(data, key, val)
+    return key + ': ' + data.send(MDFields.convert_to_column_names(key)).t + "\n" if val.eql? 'value'
     return key + ': "' + data.send(MDFields.convert_to_column_names(key)).t + "\"\n" if val.eql? 'single'
     return MDFields.list(data, key, val) if val.eql?('list') || val.eql?('assets') || val.eql?('instance')
     blocks_of_data(data, key, val)
