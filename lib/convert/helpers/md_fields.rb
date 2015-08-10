@@ -25,7 +25,7 @@ class MDFields
 
   def self.block_title(data, key, put_title)
     title = put_title ? data.title.t : ''
-    key + ' ' + title + "\n\n" + data.send(convert_to_column_names(key)).t + "\n"
+    key + ' ' + title + "\n\n" + data.send(convert_to_column_names(key)).t.strip + "\n"
   end
 
   def self.block(data, key)

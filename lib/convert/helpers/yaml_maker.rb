@@ -14,8 +14,13 @@ class YamlMaker
     return MDFields.block(data, key) if val.eql? 'block'
   end
 
+  def self.singles_empty_or_not(data, key)
+    return key + ': ' + "\n" if data.send(MDFields.convert_to_column_names(key)).t.empty?
+    key + ': "' + data.send(MDFields.convert_to_column_names(key)).t.strip + "\"\n"
+  end
+
   def self.singles(data, key, val)
-    return key + ': "' + data.send(MDFields.convert_to_column_names(key)).t + "\"\n" if val.eql? 'single'
+    return singles_empty_or_not(data, key) if val.eql? 'single'
     data.send(MDFields.convert_to_column_names(key)).t.include?('true') ? key + ': true' + "\n" : key + ': false' + "\n"
   end
 
