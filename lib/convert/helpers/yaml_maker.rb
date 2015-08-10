@@ -43,7 +43,7 @@ class YamlMaker
 
   def self.create_md(worksheet_num, worksheet_name, dir_name)
     create_file_structure(dir_name)
-    GoogleSheet.sheet(worksheet_num).each  { |data| File.write('data/_' + dir_name + '/' + slugify(data.title.t) + '.markdown', create_yaml(worksheet_name, data)) }
+    GoogleSheet.sheet(worksheet_num).each { |data| File.write('data/_' + dir_name + '/' + slugify(data.title.t) + '.markdown', create_yaml(worksheet_name, data)) }
   end
 
   def self.create_file_structure(name)

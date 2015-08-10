@@ -15,12 +15,12 @@ module Nyulibraries
       # Contains All Siteleaf related functions
       class Base
         def initialize
-          Siteleaf.api_key    = ENV['API_KEY']
+          Siteleaf.api_key = ENV['API_KEY']
           Siteleaf.api_secret = ENV['API_SECRET']
         end
 
         def create_page(attrs = {})
-          attrs[:site_id]  =  ENV['SITELEAF_ID']
+          attrs[:site_id] = ENV['SITELEAF_ID']
           Siteleaf::Page.create(attrs)
         end
 

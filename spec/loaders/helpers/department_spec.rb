@@ -27,7 +27,7 @@ describe 'departments' do
 
   describe '#self.load' do
     subject { departments.load }
-    context 'loops over the spreadsheet and enumerates each row into a department object'  do
+    context 'loops over the spreadsheet and enumerates each row into a department object' do
       it 'should return an array of all departments' do
         # pending
       end

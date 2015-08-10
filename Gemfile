@@ -5,7 +5,7 @@ gem 'nyulibraries-assets', github: 'NYULibraries/nyulibraries-assets', tag: 'v4.
 
 # Use microservice precompiler to build coffee and scss from diffrent sources
 # gem 'microservice_precompiler', '~> 1.0' to be used when complete
-gem 'microservice_precompiler',  github: 'barnabyalter/microservice_precompiler'
+gem 'microservice_precompiler', github: 'barnabyalter/microservice_precompiler'
 
 # Use formaggio for (NYU) flavored figs
 gem 'formaggio', github: 'NYULibraries/formaggio'

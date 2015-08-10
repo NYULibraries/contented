@@ -22,7 +22,7 @@ module Nyulibraries
           end
 
           def convert_name_sheet_column(name)
-            name.gsub(' ', '').downcase
+            name.delete(' ').downcase
           end
 
           def fetch_meta_or_tagset(element, m_or_t)

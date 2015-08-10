@@ -2,7 +2,7 @@ require_relative 'field_format'
 # Formats the Markdown field types
 class MDFields
   def self.convert_to_column_names(name)
-    name.gsub('_', '').gsub(' ', '').downcase
+    name.downcase.delete('_').delete(' ')
   end
 
   def self.asset(data, key)
@@ -30,7 +30,7 @@ class MDFields
 
   def self.block(data, key)
     return key + "\n\n" + data.send(convert_to_column_names(key)).t + "\n" if key.eql? 'What We Do'
-    return  block_title(data, key, true) if key.eql? 'About'
+    return block_title(data, key, true) if key.eql? 'About'
     block_title(data, key, false)
   end
 end
