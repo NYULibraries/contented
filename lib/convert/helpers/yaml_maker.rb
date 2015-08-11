@@ -6,12 +6,13 @@ class YamlMaker
   end
 
   def self.yaml_load(structure)
+    fail ArgumentError, 'parameter needs to be .yml file that exists in config/conversions/' unless File.exist? 'config/conversions/' + structure + '.yml'
     Hashie::Mash.new(YAML.load_file('config/conversions/' + structure + '.yml'))
   end
 
   def self.blocks_of_data(data, key, val)
     return MDFields.multi_line(data, key) if val.eql? 'multi-line'
-    return MDFields.block(data, key) if val.eql? 'block'
+    MDFields.block(data, key)
   end
 
   def self.singles_empty_or_not(data, key)

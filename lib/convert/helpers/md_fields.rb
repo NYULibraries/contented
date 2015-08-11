@@ -30,7 +30,7 @@ class MDFields
 
   def self.block(data, key)
     return key + "\n\n" + data.send(convert_to_column_names(key)).t + "\n" if key.eql? 'What We Do'
-    return block_title(data, key, true) if key.eql? 'About'
+    return block_title(data, key, true) if key.casecmp('About') == 0
     block_title(data, key, false)
   end
 end

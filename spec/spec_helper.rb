@@ -2,6 +2,9 @@ require File.expand_path('../../lib/loaders/base.rb', __FILE__)
 require File.expand_path('../../lib/loaders/empty_theme.rb', __FILE__)
 require File.expand_path('../../lib/loaders/utilities/google_sheet.rb', __FILE__)
 require File.expand_path('../../lib/loaders/helpers/department.rb', __FILE__)
+require File.expand_path('../../lib/convert/convert.rb', __FILE__)
+require File.expand_path('../../lib/convert/convert.rb', __FILE__)
+Dir['../../lib/helpers/*.rb'].each { |file| require file }
 require 'vcr'
 require 'webmock/rspec'
 
