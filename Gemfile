@@ -43,3 +43,7 @@ gem 'rake'
 # Rubycritic is a static analysis gem that uses flay, Reek and Flog to
 # give out smells, churn, complexity and duplication.
 gem 'rubycritic', require: false
+
+# To test coverage for rspecs
+gem 'simplecov', require: false
+

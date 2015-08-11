@@ -7,6 +7,8 @@ require File.expand_path('../../lib/convert/convert.rb', __FILE__)
 Dir['../../lib/helpers/*.rb'].each { |file| require file }
 require 'vcr'
 require 'webmock/rspec'
+require 'simplecov'
+SimpleCov.start
 
 VCR.configure do |config|
   config.default_cassette_options = { record: :new_episodes, match_requests_on: [:path] }
