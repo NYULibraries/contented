@@ -46,4 +46,3 @@ gem 'rubycritic', require: false
 
 # To test coverage for rspecs
 gem 'simplecov', require: false
-
