@@ -1,5 +1,0 @@
-{% assign item = include.item %}{{ item.image }}{% if item.image contains "placeimg" %}?{{ item.title | slugify }}{% endif %}{% comment %}
-
-Note: This appends a querystring to placeimg.com images so they appear unique, can be removed once we have real images.
-
-{% endcomment %}
