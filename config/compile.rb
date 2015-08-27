@@ -1,3 +1,5 @@
+# This code is redundant till the point when we add some coffeescript or stylesheets of our own.
+
 # Require compass first so the extensions see it
 require 'compass'
 # Need to require bootstrap before sprockets loads
