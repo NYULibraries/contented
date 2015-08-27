@@ -17,7 +17,7 @@ gem 'railsless-deploy'
 gem 'jekyll', '3.0.0.pre.beta8'
 
 # Beta version of new siteleaf-gem v2
-gem 'siteleaf', :git => 'git://github.com/siteleaf/siteleaf-gem.git', :branch => '2.0.0.pre'
+gem 'siteleaf', git: 'git://github.com/siteleaf/siteleaf-gem.git', branch: '2.0.0.pre'
 
 # Build templates in Liquid for siteleaf
 gem 'liquid'
