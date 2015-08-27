@@ -7,8 +7,8 @@ wiki/
 
 Gemfile.lock
 
-vcr_errors
 tmp/
+
 # folder to store markdown content of library.nyu.eu-data
 data/
 
