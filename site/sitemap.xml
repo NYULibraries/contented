@@ -1,0 +1,29 @@
+---
+layout: 
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% capture site_url %}{% if site.url %}{{ site.url | append: site.baseurl }}{% else %}{{ site.github.url }}{% endif %}{% endcapture %}
+  {% for page in site.html_pages %}{% unless page.sitemap == false %}
+  <url>
+    <loc>{{ page.url | replace:'/index.html','/' | prepend: site_url }}</loc>
+    {% if page.last_modified_at %}
+    <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    <priority>1.0</priority>
+  </url>
+  {% endunless %}{% endfor %}
+  {% for collection in site.collections %}{% unless collection.output == false %}
+  {% if collection.docs %}{% assign docs = collection.docs %}{% else %}{% assign docs = collection.last.docs %}{% endif %}
+  {% for doc in docs %}{% unless doc.sitemap == false %}
+  <url>
+    <loc>{{ doc.url | replace:'/index.html','/' | prepend: site_url }}</loc>
+    {% if doc.last_modified_at %}
+    <lastmod>{{ doc.last_modified_at | date_to_xmlschema }}</lastmod>
+    {% endif %}
+    <priority>0.8</priority>
+  </url>
+  {% endunless %}{% endfor %}
+  {% endunless %}{% endfor %}
+</urlset>

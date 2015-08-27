@@ -1,0 +1,4 @@
+{% assign feed = include.feed %}
+<h2 class="heading heading--block">{% if feed.title %}{{ feed.title }}{% elsif include.default_title %}{{ include.default_title }}{% else %}Latest News{% endif %}</h2>
+<ul class="list" data-rss="{{ feed.rss }}" data-limit="{{ include.limit | default:3 }}"></ul>
+{% if feed.link %}<a href="{{ feed.link }}" class="more"{% if feed.link contains "http" %} target="_blank"{% endif %}>See more</a>{% endif %}

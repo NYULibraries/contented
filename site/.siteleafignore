@@ -1,0 +1,9 @@
+Gruntfile.js
+node_modules/*
+assets/js/src/*
+package.json
+*.sublime-project
+*.zip
+wiki
+README.md
+.DS_STORE

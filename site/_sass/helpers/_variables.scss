@@ -1,0 +1,105 @@
+// ****************************************************************
+// * MISC
+// ****************************************************************
+$radius: 3px; // rounded corners
+$th_height: 66px;
+
+// ****************************************************************
+// * GRID
+// ****************************************************************
+$grid_columns: 16;
+$grid_w_container: 1170px;
+$gutter: 30px;
+$gutter_block: $gutter * 1.5;
+$grid_w_column: ($grid_w_container - (($grid_columns - 1) * $gutter)) / $grid_columns;
+
+// ****************************************************************
+// * BREAKPOINTS
+// ****************************************************************
+$bp_collapsed_nav: 930px;
+$bp_stacked_sidebar: 1030px;
+
+// Headings
+$bp_medium_page_heading: $bp_stacked_sidebar;
+$bp_small_page_heading: 700px;
+$bp_mobile_page_heading: 585px;
+
+// Body content
+$bp_mobile_body: $bp_mobile_page_heading;
+$bp_stacked_tables: 640px;
+$bp_stacked_block_50: 730px;
+$bp_stacked_block_33: 730px;
+$bp_downsized_block_25: 730px;
+$bp_stacked_block_25: 500px;
+
+// Forms
+$bp_downsized_forms: 730px;
+$bp_mobile_forms: $bp_mobile_page_heading;
+
+// ****************************************************************
+// * COLORS
+// ****************************************************************
+
+// * Generic colors:
+// ********************************
+$red: #c50f3c;
+$purple: #57068c;
+$purple_light: lighten($purple, 7%);
+$purple_dark: darken($purple, 7%);
+
+// * Backgrounds:
+// ********************************
+$background_black: #22272d;
+$background_light_gray: #f5f7fa;
+$background_field_gray: #fafbfc;
+
+// * Borders:
+// ********************************
+$border_solid_gray: #e7ebef;
+$border_dotted_gray: #bbbdbf;
+$border_footer: #65686c;
+
+// * Text or icons:
+// ********************************
+$text_black: #22272d;         // default
+$text_dark_gray: #4a4f55;
+$text_light_gray: #686f75;
+$text_footer_gray: #acb6c2;   // default text for display over $background_black
+$text_footer_white: #d8dee5;  // emphasis text for display over $background_black
+$text_footer_dark_gray: #7f858c;
+$text_lavendar: #e0d5e8;      // faded white on purple
+
+$text_blue: #027bc2;          // links
+$text_light_blue: lighten($text_blue, 13%);
+$text_green: #799a05;         // icons
+
+// ****************************************************************
+// * FONT FAMILIES, WEIGHTS, SIZES
+// ****************************************************************
+
+// * Families:
+// ********************************
+$family_icon: 'SS NYULibraries';
+// 18px+ | Book, Medium, Bold, Black:
+$family_gotham: 'Gotham A', 'Gotham B', Helvetica, Arial, sans-serif;
+// 18px+ | Book, Medium, Bold:
+$family_gotham_narrow: 'Gotham Narrow A', 'Gotham Narrow B', Helvetica, Arial, sans-serif;
+// 9-18px | Light (+ italic), Book (+ italic), Medium (+ italic), Bold:
+$family_gotham_ssm: 'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+
+// * Weights:
+// ********************************
+$weight_light:  300;
+$weight_normal: 400;
+$weight_medium: 500;
+$weight_bold:   700;
+$weight_black:  800;
+
+// * Sizes:
+// ********************************
+$font_size_base: 14px;
+$font_size_large: 18px;       // eg. {{ page.body }}
+$font_size_medium: 16px;      // eg. Subheading, Header Nav.
+$font_size_small: 12px;       // eg. "Posted on {{ post.date }}"
+
+$font_size_base_33: $font_size_base - 1;

@@ -1,5 +1,4 @@
 require 'open-uri'
-# require 'hashie'
 require 'json'
 require 'figs'
 Figs.load

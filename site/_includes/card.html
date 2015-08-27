@@ -1,0 +1,39 @@
+{% assign item = include.item %}
+{% if include.kind %}{% assign kind = include.kind %}{% elsif item.image %}{% assign kind = 'with-thumb' %}{% endif %}
+<div class="item{% if kind %} item--{{ kind }}{% endif %}{% if include.item_class %} {{ include.item_class }}{% endif %}">
+
+  {% if item.image %}
+    <a href="{{ item.url }}" title="View more info on {{ item.title | escape }}" tabindex="-1"{% if item.url contains "http" %} target="_blank"{% endif %}>
+      <span class="item__image" style="background-image: url('{% include image.html item=item %}')">{{ item.title | escape }}</span>
+    </a>
+  {% endif %}
+
+  <h2 class="item__title">
+    <a href="{{ item.url }}"  title="View more info on {{ item.title | escape }}"{% if item.url contains "http" %} target="_blank"{% endif %}>{{ item.title }}</a>
+  </h2>
+
+  {% if item.address %}
+    <p><a class="item__google" title="View on a map" href="http://maps.google.com/?q={{ item.address | escape }}" target="_blank">{{ item.address | newline_to_br }}</a></p>
+  {% elsif item.job_title %}
+    <p>{{ item.job_title }}</p>
+  {% elsif item.subtitle %}
+    <p>{{ item.subtitle }}</p>
+  {% endif %}
+
+  {% if item.email or item.phone or item.hours or item.location %}
+    <p class="item__meta">
+      {% if item.libcal_id %}
+        <a href="{{ item.url }}#hours" class="ss-clock meta">View hours</a>
+      {% endif %}
+      {% if item.email %}
+        <a href="mailto:{{ item.email | escape }}" class="ss-mail meta" title="Email {{ item.title | escape }}">{{ item.email }}</a>
+      {% endif %}
+      {% if item.phone %}
+        <span class="ss-phone meta" title="Phone number">{{ item.phone }}</span>
+      {% endif %}
+      {% if item.location and page.collection != 'people' and page.collection != 'services' %}
+        <a href="/locations/{{ item.location | slugify }}" class="ss-home meta">{{ item.location }}</a>
+      {% endif %}
+    </p>
+  {% endif %}
+</div>

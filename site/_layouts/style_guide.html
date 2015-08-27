@@ -1,0 +1,31 @@
+---
+layout: article
+subtitle: Style Guide
+links:
+  Jump to Code Example: "#code"
+  Back to Style Guide: "/style-guide"
+---
+
+<link rel="stylesheet" type="text/css" href="/assets/css/style-guide.css" />
+
+<div class="style-guide-content--{{ page.title | slugify }}">
+  {% unless page.hide_heading %}
+    <h1>Preview</h1>
+  {% endunless %}
+
+  {% if page.markdown %}
+  {{ content | markdownify }}
+  {% else %}
+  {{ content }}
+  {% endif %}
+
+  {% unless page.hide_code %}
+    <hr />
+
+    <h1 id="code">Code Example</h1>
+
+    <textarea rows="15" style="font-family:monospace">{{ content | escape }}</textarea>
+  {% endunless %}
+
+  <a href="/style-guide" class="less">Back to Style Guide</a>
+</div>

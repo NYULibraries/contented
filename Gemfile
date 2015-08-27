@@ -13,8 +13,11 @@ gem 'formaggio', github: 'NYULibraries/formaggio'
 # Deploy without rails
 gem 'railsless-deploy'
 
-# Use the siteleaf gem
-gem 'siteleaf', github: 'NYULibraries/siteleaf-gem'
+# To run the site locally
+gem 'jekyll', '3.0.0.pre.beta8'
+
+# Beta version of new siteleaf-gem v2
+gem 'siteleaf', :git => 'git://github.com/siteleaf/siteleaf-gem.git', :branch => '2.0.0.pre'
 
 # Build templates in Liquid for siteleaf
 gem 'liquid'
