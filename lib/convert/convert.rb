@@ -7,8 +7,6 @@ require_relative 'helpers/yaml_maker'
 class Convert
   def initialize
     FileUtils.mkdir 'data' unless File.directory? 'data'
-    FileUtils.cp 'config/conversions/README.md', 'data'
-    FileUtils.cp 'config/conversions/.gitignore', 'data'
   end
 
   def departments
