@@ -42,21 +42,6 @@ namespace :siteleaf do
     run_locally 'siteleaf push theme'
   end
 
-  # desc 'Creates Posts for each individual Staff member on directory page'
-  # task :staff do
-  # Nyulibraries::SiteLeaf::Loaders::Staff.new(ENV['STAFF_PAGE_ID'], ENV['STAFF_SPREADSHEET']).update_posts
-  # end
-
-  # desc 'Creates Posts for each library on hours page'
-  # task :hours do
-  # Nyulibraries::SiteLeaf::Loaders::Hours.new(ENV['HOURS_PAGE_ID'], ENV['LIBCAL_HOURS']).update_posts
-  # end
-
-  # desc 'Creates Pages for each Departments'
-  # task :departments do
-  #   Nyulibraries::SiteLeaf::Loaders::DepartmentPage_Post.new(ENV['DEPARTMENT_PAGE_ID'],ENV['DEPARTMENTS_SPREADSHEET']).create_or_update_pages
-  # end
-
   desc 'Clean up so pushing to github is easier'
   task :clean_up do
     run_locally 'rm -rf javascripts'
