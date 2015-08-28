@@ -8,9 +8,17 @@ Figs.load
 class GoogleSheet
   def self.sheet(sheet_num)
     # Making objects of json file generated from spreadsheet and Remove gsx$ and $t from column and cell names
-    return Hashie::Mash.new(JSON.parse(open(uri(sheet_num)).read.gsub('"gsx$', '"').gsub('"$t"', '"t"'))).feed.entry unless sheet_num == 6
+    return mash_json(open(uri(sheet_num)).read.gsub('"gsx$', '"').gsub('"$t"', '"t"')).feed.entry unless sheet_num == 6
     # People data needs to be combined with peoplesync data
-    Hashie::Mash.new(ParsePeople.new(uri(sheet_num)).complete_people_data)
+    people_data
+  end
+
+  def people_data
+    mash_json(('{"entry":' + ParsePeople.new(uri(sheet_num)).complete_people_data.to_json + '}')).entry
+  end
+
+  def mash_json(json_data)
+    Hashie::Mash.new(JSON.parse(json_data))
   end
 
   def self.uri(sheet_num)
