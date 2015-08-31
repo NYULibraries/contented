@@ -13,3 +13,5 @@ tmp/
 data/
 
 coverage/
+
+site/.siteleaf.yml
