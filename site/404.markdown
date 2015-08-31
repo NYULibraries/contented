@@ -1,0 +1,16 @@
+---
+permalink: /404.html
+title: 404
+sitemap: false
+---
+
+# We couldn't find this page
+
+Try searching for <a href="#stq=" class="magic-search">this</a> instead?
+
+## Suggested links
+
+- [Locations & Hours](/locations)
+- [Staff Directory](/people)
+- [Find a Space](/spaces)
+- [Search Catalog](/)

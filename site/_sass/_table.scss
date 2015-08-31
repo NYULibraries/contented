@@ -1,0 +1,152 @@
+@import 'tablesaw.stackonly';
+
+// We target both classes and HTML elements in case the table isn't a <table>
+
+.table, table{
+  border-radius: 3px;
+  width: 100%;
+
+  &.is-loading{
+    position: relative;
+
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url('/assets/images/loader.svg') no-repeat center ($gutter * 2) rgba(#fff, 0.8);
+    }
+  }
+}
+
+@include min-width($bp_stacked_tables + 1){
+  .table--collection{
+    margin-top: negative($th_height);
+  }
+}
+
+.table__row--head, thead tr,
+.table__row:nth-child(2n), tr:nth-child(2n){
+  background: $background_light_gray;
+}
+
+.table__row, tbody tr{
+  font-size: $font_size_base - 1;
+}
+
+.block--body tbody tr{
+  font-size: $font_size_base;
+}
+
+.block--body table{
+  margin-bottom: $gutter;
+}
+
+.table__row--head, thead tr{
+  @include antialias;
+  font-size: 16px;
+}
+
+.table__cell, td, th{
+  padding: $gutter ($gutter / 2);
+  text-align: left;
+  line-height: 1.5;
+  max-width: cols_perc(3);
+  border-right: 1px solid $border_solid_gray;
+
+  img{
+    vertical-align: middle;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  &:first-child{
+    padding-left: $gutter;
+    max-width: cols_perc(6);
+    border-left: 1px solid $border_solid_gray;
+  }
+
+  &:last-child{
+    padding-right: $gutter;
+  }
+}
+
+.table__row:last-child td, tr:last-child td{
+  border-bottom: 1px solid $border_solid_gray;
+}
+
+.table__row--head .table__cell, th{
+  border-top: 1px solid $border_solid_gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.table__cell--sortable {
+  cursor: pointer;
+
+  &:hover{
+    color: $text_blue;
+  }
+
+  &[data-sort]:after {
+    @extend .ss-icon;
+    margin-left: 8px;
+    content: '⬇';
+    color: $text_green;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+  }
+
+  &[data-sort="desc"]:after {
+    content: '⬆';
+  }
+}
+
+@include max-width($bp_stacked_tables){
+  .table__row:first-child .table__cell:first-child{
+    border-top: 1px solid $border_solid_gray;
+  }
+
+  .table__cell{
+    max-width: none;
+    border-left: 1px solid $border_solid_gray;
+    padding: 5px 15px;
+    font-size: $font_size_small;
+
+    &:first-child{
+      max-width: none;
+      padding-left: 15px;
+      padding-top: $gutter;
+
+      .tablesaw-cell-label{
+        display: none;
+      }
+
+      .tablesaw-cell-content{
+        max-width: none;
+      }
+    }
+
+    &:last-child{
+      padding-bottom: $gutter;
+    }
+  }
+
+  .tablesaw-cell-label{
+    font-size: 11px;
+    font-weight: $weight_normal;
+    color: $text_light_gray;
+  }
+
+  .tablesaw-stack td .tablesaw-cell-label, .tablesaw-cell-content{
+    width: auto;
+    max-width: none;
+    vertical-align: middle;
+  }
+}

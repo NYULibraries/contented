@@ -1,0 +1,128 @@
+---
+---
+@import 'helpers/toolset';
+
+// Weights
+.style-guide-content--typography table:first-of-type tbody{
+  td:first-child{
+    font-size: 20px;
+  }
+
+  tr:first-child td:first-child{
+    font-weight: $weight_light;
+  }
+
+  tr:nth-child(3) td:first-child{
+    font-weight: $weight_medium;
+  }
+
+  tr:nth-child(4) td:first-child{
+    font-weight: $weight_bold;
+  }
+
+  tr:nth-child(5) td:first-child{
+    font-weight: $weight_black;
+  }
+}
+
+.style-guide__colors{
+  p{
+    margin-bottom: $gutter;
+  }
+}
+
+input.color-val{
+  box-shadow: none;
+  border: 0 none;
+  display: block;
+  color: #fff;
+  font-size: $font_size_small;
+  padding: 5px 10px;
+  margin: 0;
+  border-radius: $radius;
+  margin-right: 10px;
+  text-align: center;
+  max-width: 100px;
+  line-height: 1;
+}
+
+.text_black .color-val{
+  background: $text_black;
+}
+
+.text_dark_gray .color-val{
+  background: $text_dark_gray;
+}
+
+.text_light_gray .color-val{
+  background: $text_light_gray;
+}
+
+.text_blue .color-val{
+  background: $text_blue;
+}
+
+.text_light_blue .color-val{
+  background: $text_light_blue;
+}
+
+.text_green .color-val{
+  background: $text_green;
+}
+
+.text_lavendar .color-val{
+  background: $text_lavendar;
+  color: #000;
+}
+
+.purple .color-val{
+  background: $purple;
+}
+
+.purple_dark .color-val{
+  background: $purple_dark;
+}
+
+.purple_light .color-val{
+  background: $purple_light;
+}
+
+.border_solid_gray .color-val{
+  background: $border_solid_gray;
+  color: #000;
+}
+
+.border_dotted_gray .color-val{
+  background: $border_dotted_gray;
+}
+
+.border_footer .color-val{
+  background: $border_footer;
+}
+
+.red .color-val{
+  background: $red;
+}
+
+.background_black .color-val{
+  background: $background_black;
+}
+
+.background_light_gray .color-val{
+  background: $background_light_gray;
+  color: #000;
+}
+
+.background_field_gray .color-val{
+  background: $background_field_gray;
+  color: #000;
+}
+
+.text_footer_white .color-val{
+  background: $text_footer_white;
+  color: #000;
+}
+
+.text_footer_dark_gray .color-val{
+  background: $text_footer_dark_gray;
+}

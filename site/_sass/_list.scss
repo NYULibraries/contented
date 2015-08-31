@@ -1,0 +1,63 @@
+.list{
+  margin: 0;
+  padding: 0;
+
+  li{
+    border-bottom: 1px dotted $border_dotted_gray;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  &:last-child li:last-child{
+    border-bottom: 0 none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.block--body .list{
+  font-size: $font_size_base;
+}
+
+ul.list{
+  list-style: none;
+}
+
+// ****************************************************************
+// * FAQ Widget list
+// ****************************************************************
+.block .s-la-widget .list-unstyled{
+  @extend .list;
+}
+
+.block .s-la-widget{
+  font-family: $family_gotham_ssm;
+  font-size: $font_size_base;
+  color: $text_black;
+  border: 0 none;
+  padding: 0;
+
+  a{
+    @extend a;
+  }
+
+  .s-la-faq-listing-meta{
+    display: none;
+  }
+
+  .s-la-faq-listing-q{
+    font-size: inherit;
+  }
+}
+
+
+@include min-width($bp_stacked_block_33 + 1){
+  .block--33 .s-la-widget,
+  .block--33 .list{
+    font-size: $font_size_base_33;
+  }
+}

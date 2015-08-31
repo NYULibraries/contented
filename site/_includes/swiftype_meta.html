@@ -1,0 +1,38 @@
+{% capture meta %}
+
+<meta class="swiftype" name="url" data-type="enum" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
+
+<meta class="swiftype" name="collection" data-type="enum" content="{% if page.layout == "article" and page.collection %}{{ page.collection }}{% else %}pages{% endif %}" />
+
+<meta class="swiftype" name="card_html" data-type="text" content="{% capture card_html %}{% include card.html item=page %}{% endcapture %}{{ card_html | escape }}" />
+
+{% assign string_fields = "title,email,phone,twitter,facebook" | split:"," %}
+{% for field in string_fields %}
+{% if page[field] %}
+<meta class="swiftype" name="{{ field }}" data-type="string" content="{{ page[field] | escape }}" />
+{% endif %}
+{% endfor %}
+
+{% assign text_fields = "address" | split:"," %}
+{% for field in text_fields %}
+{% for value in page[field] %}
+<meta class="swiftype" name="{{ field }}" data-type="text" content="{{ value | strip_newlines | escape }}" />
+{% endfor %}
+{% endfor %}
+
+{% assign enum_fields = "departments,location,space,status,expertise,topics,type,access,amenities,keywords,country" | split:"," %}
+{% for field in enum_fields %}
+{% for value in page[field] %}
+<meta class="swiftype" name="{{ field }}" data-type="enum" content="{{ value | escape }}" />
+{% endfor %}
+{% endfor %}
+
+{% if page.image %}
+<meta class="swiftype" name="image" data-type="enum" content="{% include image.html item=item %}" />
+{% endif %}
+
+{% if page.coordinates %}
+<meta class="swiftype" name="coordinates" data-type="location" content="{{ page.coordinates | escape }}" />
+{% endif %}
+
+{% endcapture %}{{ meta | strip_newlines }}

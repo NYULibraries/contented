@@ -1,0 +1,24 @@
+---
+title: Style Guide
+layout: article
+subtitle: library.nyu.edu
+
+links:
+  GitHub: https://github.com/NYULibraries/library.nyu.edu
+  Siteleaf Admin: http://manage.siteleaf.com
+  Siteleaf Help: http://siteleaf.com/help
+  Liquid for Designers: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
+  Jekyll Docs: http://jekyllrb.com/docs/home/
+---
+
+<h1>Welcome to the Style Guide</h1>
+
+<h2>Contents</h2>
+
+<ol>
+{% for page in site.pages %}
+{% if page.layout == "style_guide" %}
+  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% endif %}
+{% endfor %}
+</ol>

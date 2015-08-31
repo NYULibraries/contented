@@ -1,0 +1,17 @@
+{% capture items %}{% for item in site[include.collection] %}{% for value in item[include.field] %}{% if value == page.title %}
+  <article class="block block--nested">
+    {% include card.html item=item %}
+  </article>
+{% endif %}{% endfor %}{% endfor %}{% endcapture %}
+
+{% if items.size > 0 %}
+  <div class="block block--glance is-bordered">
+    <h2 class="heading heading--block">{% if include.title %}{{ include.title }}{% else %}{{ include.collection | capitalize }}{% endif %}</h2>
+
+    <div class="block-container block-container--glance">
+      {{ items }}
+    </div>
+
+    <a href="/{{ include.collection }}?q={{ page.title | escape }}" class="more">See more</a>
+  </div>
+{% endif %}

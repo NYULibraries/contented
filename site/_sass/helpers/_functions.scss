@@ -1,0 +1,21 @@
+@import 'variables';
+
+@function perc($inner, $container: $grid_w_container) {
+  @return percentage($inner/$container);
+}
+
+@function cols($count){
+  @return (($grid_w_column * $count) + ($gutter * ($count - 1)));
+}
+
+@function cols_perc($columns, $total: $grid_columns){
+  @return percentage($columns/$total);
+}
+
+@function negativeHalf($size){
+  @return (($size / 2) * -1);
+}
+
+@function negative($size){
+  @return ($size * -1);
+}

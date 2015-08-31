@@ -1,0 +1,79 @@
+// An item is typically a list item that links to that item's permalink.
+// For example: A list of study spaces is made up of multiple items.
+// An item could also be a compontent of a table row. For example:
+// A person's photo, name and job title is an item component within a
+// person's table row within the "People" table.
+$item_thumb_width: 70px;
+
+.gm-style .item{ // Map pint info box
+  font-family: $family_gotham_ssm;
+  max-width: cols(5);
+}
+
+.item, .gm-style{
+  line-height: 1.5;
+
+  p{
+    margin: 0;
+  }
+}
+
+.block--body .item{
+  font-size: $font_size_base;
+}
+
+.item__title, .block--body .item__title{
+  font-size: $font_size_base;
+  font-weight: $weight_normal;
+  font-family: $family_gotham_ssm;
+  margin: 0;
+
+  a{
+    text-decoration: none;
+  }
+}
+
+.item__image{
+  border-radius: $radius;
+  background: center center no-repeat $background_light_gray;
+  background-size: cover;
+  text-indent: -9999px;
+}
+
+.item__google{
+  color: $text_black;
+  text-decoration: none;
+
+  &:hover{
+    color: $text_light_blue;
+  }
+}
+
+.item__meta{
+  color: $text_light_gray;
+}
+
+// Small image to the left
+.item--with-thumb{
+  position: relative;
+  padding-left: $item_thumb_width + 10px;
+  min-height: $item_thumb_width;
+
+  .item__image{
+    width: $item_thumb_width;
+    height: $item_thumb_width;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+// Full-width image
+.item--with-image{
+  .item__image{
+    margin-bottom: 10px;
+    vertical-align: bottom;
+    padding-top: 60%;
+    display: block;
+  }
+}
