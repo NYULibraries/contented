@@ -1,7 +1,7 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
 describe 'FieldFormat' do
-  let(:format) { FieldFormat }
+  let(:format) { Conversion::Helpers::FieldFormat }
   let(:element) { '' }
 
   describe '#strip_spaces_in_between' do

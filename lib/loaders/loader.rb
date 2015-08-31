@@ -18,6 +18,4 @@ class Loader
     Conversion::Convert.new.services
     Conversion::Convert.new.spaces
   end
-
-
 end

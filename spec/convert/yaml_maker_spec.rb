@@ -1,7 +1,7 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
 describe 'YamlMaker' do
-  let(:yaml_maker) { YamlMaker }
+  let(:yaml_maker) { Conversion::Helpers::YamlMaker }
   let(:data) { Hashie::Mash.new(libid: { t: 'Library; NYU' }) }
   let(:key) { 'lib_id' }
 

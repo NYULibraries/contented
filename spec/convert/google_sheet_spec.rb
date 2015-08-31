@@ -1,7 +1,7 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
 describe 'GoogleSheet' do
-  let(:google_sheet) { GoogleSheet }
+  let(:google_sheet) { Conversion::Helpers::GoogleSheet }
 
   describe '#sheet' do
     subject { google_sheet.sheet('') }

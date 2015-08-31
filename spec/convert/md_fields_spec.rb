@@ -1,7 +1,7 @@
 require File.expand_path('../../spec_helper.rb', __FILE__)
 
 describe 'MDFields' do
-  let(:md_fields) { MDFields }
+  let(:md_fields) { Conversion::Helpers::MDFields }
   let(:data) { Hashie::Mash.new(libid: { t: 'Library; NYU' }) }
   let(:key) { 'lib_id' }
 
