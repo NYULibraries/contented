@@ -30,34 +30,34 @@ end
 
 desc 'Converts all worksheets to Markdown and places them in their respective directory'
 task :nyu_data do
-  Convert.new.departments
-  Convert.new.locations
-  Convert.new.people
-  Convert.new.services
-  Convert.new.spaces
+  Conversion::Convert.new.departments
+  Conversion::Convert.new.locations
+  Conversion::Convert.new.people
+  Conversion::Convert.new.services
+  Conversion::Convert.new.spaces
 end
 
 desc 'Converts departments worksheet to Markdown and places them in their respective directory'
 task :departments do
-  Convert.new.departments
+  Conversion::Convert.new.departments
 end
 
 desc 'Converts locations worksheet to Markdown and places them in their respective directory'
 task :locations do
-  Convert.new.locations
+  Conversion::Convert.new.locations
 end
 
 desc 'Converts people worksheet to Markdown and places them in their respective directory'
 task :people do
-  Convert.new.people
+  Conversion::Convert.new.people
 end
 
 desc 'Converts services worksheet to Markdown and places them in their respective directory'
 task :services do
-  Convert.new.services
+  Conversion::Convert.new.services
 end
 
 desc 'Converts spaces worksheet to Markdown and places them in their respective directory'
 task :spaces do
-  Convert.new.spaces
+  Conversion::Convert.new.spaces
 end

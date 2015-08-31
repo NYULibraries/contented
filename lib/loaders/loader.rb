@@ -1,6 +1,6 @@
-# Loads the siteleaf items
 require 'figs'
 Figs.load
+# Loads the siteleaf items
 class Loader
   def initialize
     siteleaf_yml = File.open('site/.siteleaf.yml', 'w')
@@ -10,4 +10,3 @@ class Loader
     siteleaf_yml.write("site_id: #{ENV['site_id']}\n")
   end
 end
-Loader.new
