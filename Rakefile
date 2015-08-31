@@ -1,6 +1,7 @@
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
 require './lib/convert/convert.rb'
+require './lib/loaders/loader.rb'
 
 desc 'Checking Bundler setup'
 begin
@@ -29,40 +30,12 @@ rescue LoadError
 end
 
 desc 'Converts all worksheets to Markdown and places them in their respective directory'
-task :nyu_data do
-  Conversion::Convert.new.departments
-  Conversion::Convert.new.locations
-  Conversion::Convert.new.people
-  Conversion::Convert.new.services
-  Conversion::Convert.new.spaces
-end
-
-desc 'Converts departments worksheet to Markdown and places them in their respective directory'
-task :departments do
-  Conversion::Convert.new.departments
-end
-
-desc 'Converts locations worksheet to Markdown and places them in their respective directory'
-task :locations do
-  Conversion::Convert.new.locations
-end
-
-desc 'Converts people worksheet to Markdown and places them in their respective directory'
-task :people do
-  Conversion::Convert.new.people
-end
-
-desc 'Converts services worksheet to Markdown and places them in their respective directory'
-task :services do
-  Conversion::Convert.new.services
-end
-
-desc 'Converts spaces worksheet to Markdown and places them in their respective directory'
-task :spaces do
-  Conversion::Convert.new.spaces
+task :convert_to_markdowns do
+  Loader.new.convert_all_data_to_markdowns
 end
 
 desc 'Siteleaf Push theme files alongwith collections'
-task :siteleaf_push do
-  sh 'cd site && siteleaf push'
+task :siteleaf_push_all do
+  # Note rake does not support Pipeling hence the other rake task had to be called like this and not by invoking
+  system 'bundle exec rake convert_to_markdowns && cd site && siteleaf push'
 end

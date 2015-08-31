@@ -11,10 +11,10 @@ class Loader
     siteleaf_yml.write("site_id: #{ENV['site_id']}\n")
   end
 
-  def convert_data_to_markdowns
+  def convert_all_data_to_markdowns
     Conversion::Convert.new.departments
     Conversion::Convert.new.locations
-    Conversion::Convert.new.people
+    # Conversion::Convert.new.people
     Conversion::Convert.new.services
     Conversion::Convert.new.spaces
   end
