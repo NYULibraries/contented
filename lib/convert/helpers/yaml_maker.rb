@@ -47,12 +47,12 @@ module Conversion
 
       def self.create_md(worksheet_num, worksheet_name, dir_name)
         create_file_structure(dir_name)
-        GoogleSheet.sheet(worksheet_num).each { |data| File.write('data/_' + dir_name + '/' + slugify(data.title.t) + '.markdown', create_yaml(worksheet_name, data)) }
+        GoogleSheet.sheet(worksheet_num).each { |data| File.write('site/_' + dir_name + '/' + slugify(data.title.t) + '.markdown', create_yaml(worksheet_name, data)) }
       end
 
       def self.create_file_structure(name)
-        FileUtils.mkdir "data/_#{name}" unless File.directory? "data/_#{name}"
-        FileUtils.cp "config/conversions/_example_#{name}.markdown", "data/_#{name}/_example.markdown"
+        FileUtils.mkdir "site/_#{name}" unless File.directory? "site/_#{name}"
+        FileUtils.cp "config/conversions/_example_#{name}.markdown", "site/_#{name}/_example.markdown"
       end
     end
   end

@@ -15,3 +15,8 @@ data/
 coverage/
 
 site/.siteleaf.yml
+site/_departments
+site/_locations
+site/_people
+site/_services
+site/_spaces

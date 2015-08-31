@@ -61,3 +61,8 @@ desc 'Converts spaces worksheet to Markdown and places them in their respective 
 task :spaces do
   Conversion::Convert.new.spaces
 end
+
+desc 'Siteleaf Push theme files alongwith collections'
+task :siteleaf_push do
+  sh 'cd site && siteleaf push'
+end
