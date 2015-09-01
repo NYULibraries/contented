@@ -56,13 +56,13 @@ In the above mentioned `secret_study.yml` create 3 different Environment Variabl
 
 ## Rake Tasks for library.nyu.edu-data
 
-    rake convert_to_markdowns  # Converts all worksheets to Markdown and places...
+    rake convert_to_markdowns  # Converts all worksheets to Markdown and places them in their respective directory
 
     rake rubocop               # Run RuboCop
 
     rake rubocop:auto_correct  # Auto-correct RuboCop offenses
 
-    rake siteleaf_push_all     # Push all theme files alongwith mardown collect...
+    rake siteleaf_push_all     # Push all theme files alongwith mardown collections to Siteleaf
 
     rake siteleaf_push_people  # Pushes only people markdown directory to siteleaf
 
