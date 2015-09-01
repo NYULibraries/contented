@@ -50,9 +50,9 @@ Replace ```<Sheet_key>``` with the google sheet key that is found in the URL.
 
 In the above mentioned `secret_study.yml` create 3 different Environment Variables namely :
 
-    1. ```api_key```        : Key can be found on siteleaf site in Account
-    2. ```api_secret```     : Secret can be found on siteleaf site in Account
-    3. ```site_id```        : Site ID can be found in the URL of a particular site.
+1. ```api_key```        : Key can be found on siteleaf site in Account
+2. ```api_secret```     : Secret can be found on siteleaf site in Account
+3. ```site_id```        : Site ID can be found in the URL of a particular site.
 
 ## Rake Tasks for library.nyu.edu-data
 
