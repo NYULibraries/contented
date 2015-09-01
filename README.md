@@ -37,32 +37,8 @@ Before pushing our style and javascript assets up to our Siteleaf theme we can a
 
 Automates Siteleaf by adding NYU assets after converting them using Microservice-precompiler
 
-# Running
 
-First authenticate yourself on siteleaf
-
-    siteleaf auth
-
-second change the name of your website on siteleaf config <name> command
-
-## Run all
-
-  cap siteleaf:deploy        # Runs all tasks to setup the webbsite
-
-## Capistrano tasks
-
-
-    cap compile:all           # Compilation and coversion of the code (css to sass conversion , coffee to js conversion and liquid compilation )
-
-    cap siteleaf:empty_theme  # Empty out siteleaf theme completely
-
-    cap siteleaf:setup        # sets up the config.ru which contains site id required for siteleaf commands it is equivalent to siteleaf config.
-
-    cap siteleaf:push_theme   # pushes the entire theme i.e. application.js , application.css and liquid html files to siteleaf.
-
-    cap siteleaf:clean_up     # cleans up the working directory of all the js and css files pushed to siteleaf.
-
-## How to feed data into library.nyu.edu-data
+## How to feed data into library.nyu.edu
 
 Create a file called `secret_study.yml` in the root folder of this project.
 
@@ -70,17 +46,25 @@ Inside that file add this line ```GOOGLE_SHEET_KEY : '<Sheet_key>'```
 
 Replace ```<Sheet_key>``` with the google sheet key that is found in the URL.
 
+## Siteleaf Authentication
+
+In the above mentioned `secret_study.yml` create 3 different Environment Variables namely :
+
+    1. ```api_key```        : Key can be found on siteleaf site in Account
+    2. ```api_secret```     : Secret can be found on siteleaf site in Account
+    3. ```site_id```        : Site ID can be found in the URL of a particular site.
+
 ## Rake Tasks for library.nyu.edu-data
 
-    bundle exec rake nyu_data     # converts all the content from spreasheet to Markdown
+    rake convert_to_markdowns  # Converts all worksheets to Markdown and places...
 
-    bundle exec rake departments  # converts departments content from spreasheet to Markdown
+    rake rubocop               # Run RuboCop
 
-    bundle exec rake locations    # converts locations content from spreasheet to Markdown
+    rake rubocop:auto_correct  # Auto-correct RuboCop offenses
 
-    bundle exec rake people       # converts people content from spreasheet to Markdown
+    rake siteleaf_push_all     # Push all theme files alongwith mardown collect...
 
-    bundle exec rake services     # converts services content from spreasheet to Markdown
+    rake siteleaf_push_people  # Pushes only people markdown directory to siteleaf
 
-    bundle exec rake spaces       # converts spaces content from spreasheet to Markdown
+    rake spec                  # Run Rspec
 
