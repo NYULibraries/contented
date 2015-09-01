@@ -1,7 +1,8 @@
 ---
-permalink: /404.html
-title: 404
 sitemap: false
+title: '404'
+date: '2015-08-14 20:28:22 +0000'
+permalink: "/404.html"
 ---
 
 # We couldn't find this page
