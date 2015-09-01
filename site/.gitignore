@@ -1,9 +1,0 @@
-_site
-.sass-cache
-.jekyll-metadata
-node_modules/
-config.ru
-nyu.sublime-workspace
-wiki/
-.siteleaf.yml
-.ruby-version
