@@ -14,9 +14,6 @@ gem 'figs'
 # Capistrano for automated tasks for siteleaf push and pull
 gem 'capistrano'
 
-# # Deploy without rails
-# gem 'railsless-deploy'
-
 # To run the site locally
 gem 'jekyll', '3.0.0.pre.beta8'
 

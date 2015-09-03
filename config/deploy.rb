@@ -30,21 +30,29 @@ namespace :siteleaf do
     FileUtils.rm_rf 'tmp_site/_people/'
     FileUtils.cp_r 'site/_people', 'tmp_site/_people'
     system 'cd tmp_site && bundle exec siteleaf push'
-    # FileUtils.rm_rf 'tmp_site'
+    FileUtils.rm_rf 'tmp_site'
   end
 
   desc 'Cleans up the site directory'
   task :clean_up do
+    FileUtils.rm_rf 'tmp_site'
+    FileUtils.rm_rf 'site/.siteleaf.yml'
+    FileUtils.rm_rf 'site/_departments'
+    FileUtils.rm_rf 'site/_locations'
+    FileUtils.rm_rf 'site/_people'
+    FileUtils.rm_rf 'site/_services'
+    FileUtils.rm_rf 'site/_spaces'
   end
-  # namespace :deploy do
-  #   desc 'Compile Javascript and Sass from assets Folder to dist folder'
-  #   task :all do
-  #     system 'bundle install'
-  #     system 'git submodule init'
-  #     system 'git submodule update'
-  #     # run_locally 'bundle exec ruby config/compile.rb'
-  #   end
-  # end
+end
+
+namespace :deploy do
+  desc 'Compile Javascript and Sass from assets Folder to dist folder'
+  task :all do
+    system 'bundle install'
+    system 'git submodule init'
+    system 'git submodule update'
+    # run_locally 'bundle exec ruby config/compile.rb'
+  end
 end
 
 namespace :convert do

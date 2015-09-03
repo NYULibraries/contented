@@ -1,3 +1,7 @@
+############### NOTE ######################
+# Need this File even if it is empty.
+############### NOTE ######################
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
