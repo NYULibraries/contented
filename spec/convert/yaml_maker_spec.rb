@@ -2,7 +2,7 @@ require File.expand_path('../../spec_helper.rb', __FILE__)
 
 describe 'YamlMaker' do
   let(:yaml_maker) { Conversion::Helpers::YamlMaker }
-  let(:data) { Hashie::Mash.new(libid: { t: 'Library; NYU' }) }
+  let(:data) { Hashie::Mash.new(libid: { tx: 'Library; NYU' }) }
   let(:key) { 'lib_id' }
 
   describe '#slugify' do
@@ -38,7 +38,7 @@ describe 'YamlMaker' do
   describe '#singles_empty_or_not' do
     subject { yaml_maker.singles_empty_or_not(data, key) }
     context 'Returns nothing i.e. no empty quotes either' do
-      let(:data) { Hashie::Mash.new(libid: { t: '' }) }
+      let(:data) { Hashie::Mash.new(libid: { tx: '' }) }
       it { should eql "lib_id: \n" }
     end
     context 'Returns the stringified form of the text in the spreadsheet cell' do
@@ -54,12 +54,12 @@ describe 'YamlMaker' do
       it { should eql "lib_id: \"Library; NYU\"\n" }
     end
     context 'Returns false in non-stringified form if the spreadsheet cell is blank' do
-      let(:data) { Hashie::Mash.new(libid: { t: '' }) }
+      let(:data) { Hashie::Mash.new(libid: { tx: '' }) }
       let(:val) { 'boolean' }
       it { should eql "lib_id: false\n" }
     end
     context 'Returns a boolean in non-stringified form from the spreadsheet cell' do
-      let(:data) { Hashie::Mash.new(libid: { t: 'true' }) }
+      let(:data) { Hashie::Mash.new(libid: { tx: 'true' }) }
       let(:val) { 'boolean' }
       it { should eql "lib_id: true\n" }
     end
@@ -72,12 +72,12 @@ describe 'YamlMaker' do
       it { should eql "lib_id: \"Library; NYU\"\n" }
     end
     context 'Returns a false boolean value if spreadsheet cell is blank' do
-      let(:data) { Hashie::Mash.new(libid: { t: '' }) }
+      let(:data) { Hashie::Mash.new(libid: { tx: '' }) }
       let(:val) { 'boolean' }
       it { should eql "lib_id: false\n" }
     end
     context 'Returns a boolean value from spreadsheet cell' do
-      let(:data) { Hashie::Mash.new(libid: { t: 'true' }) }
+      let(:data) { Hashie::Mash.new(libid: { tx: 'true' }) }
       let(:val) { 'boolean' }
       it { should eql "lib_id: true\n" }
     end

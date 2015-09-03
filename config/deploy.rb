@@ -35,7 +35,6 @@ namespace :siteleaf do
 
   desc 'Cleans up the site directory'
   task :clean_up do
-
   end
   # namespace :deploy do
   #   desc 'Compile Javascript and Sass from assets Folder to dist folder'
@@ -46,8 +45,6 @@ namespace :siteleaf do
   #     # run_locally 'bundle exec ruby config/compile.rb'
   #   end
   # end
-
-
 end
 
 namespace :convert do

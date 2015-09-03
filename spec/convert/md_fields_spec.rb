@@ -2,7 +2,7 @@ require File.expand_path('../../spec_helper.rb', __FILE__)
 
 describe 'MDFields' do
   let(:md_fields) { Conversion::Helpers::MDFields }
-  let(:data) { Hashie::Mash.new(libid: { t: 'Library; NYU' }) }
+  let(:data) { Hashie::Mash.new(libid: { tx: 'Library; NYU' }) }
   let(:key) { 'lib_id' }
 
   describe '#convert_to_column_names' do
@@ -16,7 +16,7 @@ describe 'MDFields' do
   describe '#asset' do
     subject { md_fields.asset(data, key) }
     context 'Returns the MD format for assets with path and name' do
-      let(:data) { Hashie::Mash.new(libid: { t: 'ID>123' }) }
+      let(:data) { Hashie::Mash.new(libid: { tx: 'ID>123' }) }
       it { should eql "\n  - path: \"ID\"\n    name: \"123\"\n" }
     end
   end
@@ -52,7 +52,7 @@ describe 'MDFields' do
   describe '#multi_line' do
     subject { md_fields.multi_line(data, key) }
     context 'Returns a multi-line elements with : | at the start and a line break at first comma' do
-      let(:data) { Hashie::Mash.new(libid: { t: 'Library, NYU' }) }
+      let(:data) { Hashie::Mash.new(libid: { tx: 'Library, NYU' }) }
       let(:key) { 'lib_id' }
       it { should eql "lib_id: |\n  Library\n  NYU\n" }
     end
@@ -61,12 +61,12 @@ describe 'MDFields' do
   describe '#block_title' do
     subject { md_fields.block_title(data, key, val) }
     context 'Returns the raw data from the spreadsheet cell preceded by the Key' do
-      let(:data) { Hashie::Mash.new(libid: { t: 'Library, NYU' }) }
+      let(:data) { Hashie::Mash.new(libid: { tx: 'Library, NYU' }) }
       let(:val) { false }
       it { should eql "lib_id \n\nLibrary, NYU\n" }
     end
     context 'Returns the raw data from the spreadsheet cell preceded by the Key + title' do
-      let(:data) { Hashie::Mash.new(libid: { t: 'Library, NYU' }, title: { t: 'NYU' }) }
+      let(:data) { Hashie::Mash.new(libid: { tx: 'Library, NYU' }, title: { tx: 'NYU' }) }
       let(:val) { true }
       it { should eql "lib_id NYU\n\nLibrary, NYU\n" }
     end
@@ -75,12 +75,12 @@ describe 'MDFields' do
   describe '#block' do
     subject { md_fields.block(data, key) }
     context 'Returns the raw data from the spreadsheet cell preceded by What We do' do
-      let(:data) { Hashie::Mash.new(whatwedo: { t: 'Library, NYU' }) }
+      let(:data) { Hashie::Mash.new(whatwedo: { tx: 'Library, NYU' }) }
       let(:key) { 'whatwedo' }
       it { should eql "whatwedo \n\nLibrary, NYU\n" }
     end
     context 'Returns the raw data from the spreadsheet cell preceded by the Key' do
-      let(:data) { Hashie::Mash.new(service: { t: 'Library, NYU' }, title: { t: 'NYU' }) }
+      let(:data) { Hashie::Mash.new(service: { tx: 'Library, NYU' }, title: { tx: 'NYU' }) }
       let(:key) { 'service' }
       it { should eql "service \n\nLibrary, NYU\n" }
     end
