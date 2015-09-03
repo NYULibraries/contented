@@ -9,12 +9,12 @@ module Conversion
       end
 
       def self.asset(data, key)
-        FieldFormat.listify_assets(data.send(convert_to_column_names(key)).t) + "\n"
+        FieldFormat.listify_assets(data.send(convert_to_column_names(key)).tx) + "\n"
       end
 
       def self.list_or_instance(data, key, val)
-        return FieldFormat.listify(data.send(convert_to_column_names(key)).t) if val.eql? 'list'
-        FieldFormat.instancify(data.send(convert_to_column_names(key)).t)
+        return FieldFormat.listify(data.send(convert_to_column_names(key)).tx) if val.eql? 'list'
+        FieldFormat.instancify(data.send(convert_to_column_names(key)).tx)
       end
 
       def self.list(data, key, val)
@@ -23,16 +23,16 @@ module Conversion
       end
 
       def self.multi_line(data, key)
-        key + ': |' + FieldFormat.break_address_2_lines(data.send(convert_to_column_names(key)).t) + "\n"
+        key + ': |' + FieldFormat.break_address_2_lines(data.send(convert_to_column_names(key)).tx) + "\n"
       end
 
       def self.block_title(data, key, put_title)
-        title = put_title ? data.title.t : ''
-        key + ' ' + title + "\n\n" + data.send(convert_to_column_names(key)).t.strip + "\n"
+        title = put_title ? data.title.tx : ''
+        key + ' ' + title + "\n\n" + data.send(convert_to_column_names(key)).tx.strip + "\n"
       end
 
       def self.block(data, key)
-        return key + "\n\n" + data.send(convert_to_column_names(key)).t + "\n" if key.eql? 'What We Do'
+        return key + "\n\n" + data.send(convert_to_column_names(key)).tx + "\n" if key.eql? 'What We Do'
         return block_title(data, key, true) if key.casecmp('About') == 0
         block_title(data, key, false)
       end

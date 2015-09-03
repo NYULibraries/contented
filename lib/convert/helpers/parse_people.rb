@@ -13,7 +13,7 @@ module Conversion
 
       def initialize(sheet_url)
         @people ||= JSON.parse(people_json)['Report_Entry']
-        @people_sheet ||= JSON.parse(open(sheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"t"'))['feed']['entry']
+        @people_sheet ||= JSON.parse(open(sheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry']
       end
 
       def people_json_call
@@ -82,7 +82,7 @@ module Conversion
         person['title']['t'] = person_found['First_Name'] + ' ' + person_found['Last_Name']
         person = personnel_info(person_found, person)
         person = location_info(person_found, person)
-        person_found.each_pair { |k, v| person['' + k.delete('_').downcase] = JSON.parse("{ \"t\" : \"#{v}\"}") }
+        person_found.each_pair { |k, v| person['' + k.delete('_').downcase] = JSON.parse("{ \"tx\" : \"#{v}\"}") }
         person
       end
 
@@ -91,7 +91,7 @@ module Conversion
         redefine_json
         people_complete = []
         people_sheet.each do |person|
-          person_found_in_json = find_person_json(person['netid']['t'])
+          person_found_in_json = find_person_json(person['netid']['tx'])
           people_complete.push correct_json_format(person_found_in_json, person) if person_found_in_json
         end
         people_complete

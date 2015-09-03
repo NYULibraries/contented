@@ -19,13 +19,13 @@ module Conversion
       end
 
       def self.singles_empty_or_not(data, key)
-        return key + ': ' + "\n" if data.send(MDFields.convert_to_column_names(key)).t.empty?
-        key + ': "' + data.send(MDFields.convert_to_column_names(key)).t.strip + "\"\n"
+        return key + ': ' + "\n" if data.send(MDFields.convert_to_column_names(key)).tx.empty?
+        key + ': "' + data.send(MDFields.convert_to_column_names(key)).tx.strip + "\"\n"
       end
 
       def self.singles(data, key, val)
         return singles_empty_or_not(data, key) if val.eql? 'single'
-        data.send(MDFields.convert_to_column_names(key)).t.include?('true') ? key + ': true' + "\n" : key + ': false' + "\n"
+        data.send(MDFields.convert_to_column_names(key)).tx.include?('true') ? key + ': true' + "\n" : key + ': false' + "\n"
       end
 
       def self.parse_yaml(data, key, val)
@@ -45,9 +45,9 @@ module Conversion
         content
       end
 
-      def self.create_md(worksheet_num, worksheet_name, dir_name)
-        create_file_structure(dir_name)
-        GoogleSheet.sheet(worksheet_num).each { |data| File.write('site/_' + dir_name + '/' + slugify(data.title.t) + '.markdown', create_yaml(worksheet_name, data)) }
+      def self.create_md(worksheet_num, worksheet_name)
+        create_file_structure(worksheet_name)
+        GoogleSheet.sheet(worksheet_num).each { |data| File.write('site/_' + worksheet_name + '/' + slugify(data.title.tx) + '.markdown', create_yaml(worksheet_name, data)) }
       end
 
       def self.create_file_structure(name)

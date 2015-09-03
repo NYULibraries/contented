@@ -1,7 +1,5 @@
 require 'rspec/core/rake_task'
 require 'rubocop/rake_task'
-require './lib/convert/convert.rb'
-require './lib/loaders/loader.rb'
 
 desc 'Checking Bundler setup'
 begin
@@ -29,10 +27,9 @@ rescue LoadError
   puts 'No Rubocop available'
 end
 
-desc 'Converts all worksheets to Markdown and places them in their respective directory'
-task :convert_to_markdowns do
-  Loaders::Loader.new.convert_all_data_to_markdowns
-end
+# desc 'Converts all worksheets to Markdown and places them in their respective directory'
+# task :convert_to_markdowns do
+# end
 
 desc 'Push all theme files alongwith mardown collections to Siteleaf'
 task :siteleaf_push_all do

@@ -7,27 +7,11 @@ module Conversion
   # Grabs data from spreadsheet and converts it into a Markdown files
   class Convert
     def initialize
-      FileUtils.mkdir 'data' unless File.directory? 'data'
+      FileUtils.mkdir 'site' unless File.directory? 'site'
     end
 
-    def departments
-      Helpers::YamlMaker.create_md(2, 'department', 'departments') # Worksheet 1 contains departments
-    end
-
-    def locations
-      Helpers::YamlMaker.create_md(4, 'location', 'locations') # Worksheet 2 contains locations
-    end
-
-    def people
-      Helpers::YamlMaker.create_md(6, 'people', 'people') # Worksheet 3 contains people
-    end
-
-    def services
-      Helpers::YamlMaker.create_md(8, 'service', 'services') # Worksheet 4 contains services
-    end
-
-    def spaces
-      Helpers::YamlMaker.create_md(10, 'space', 'spaces') # Worksheet 5 contains spaces
+    def make_the_markdown(sheet_num, md_of)
+      Helpers::YamlMaker.create_md(sheet_num, md_of) # Worksheet 1 contains departments
     end
   end
 end

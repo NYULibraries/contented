@@ -1,24 +1,24 @@
 # This code is redundant till the point when we add some coffeescript or stylesheets of our own.
 
 # Require compass first so the extensions see it
-require 'compass'
+# require 'compass'
 # Need to require bootstrap before sprockets loads
 # since that's how the bootstrap gem determines if we're
 # asset pipelining
-require 'nyulibraries-assets'
+# require 'nyulibraries-assets'
 require 'fileutils'
-require 'microservice_precompiler'
+# require 'microservice_precompiler'
 require 'liquid'
 # Get the various paths
 class SetupNyulibrariesAssets
   def initialize
-    init_nyulibraries_assets_compass
-    init_bootstrap_compass
-    setup_dirs
-    compile_coffee_scss
+    # init_nyulibraries_assets_compass
+    # init_bootstrap_compass
+    # setup_dirs
+    # compile_coffee_scss
     compile_liquid
-    setup_siteleaf_structure
-    cleanup
+    # setup_siteleaf_structure
+    # cleanup
   end
 
   def assets_root
@@ -56,9 +56,11 @@ class SetupNyulibrariesAssets
   end
 
   def compile_liquid
-    records = Dir.glob('_includes/**/*')
+    accepted_formats = ['.html', '.htm', '.liquid']
+    records = Dir.glob('site/**/*')
     records.each do |liquid_file|
-      next if File.directory? liquid_file
+      next if File.directory?(liquid_file) && !accepted_formats.include?(File.extname("#{liquid_file}"))
+      # puts File.extname("#{liquid_file}")
       file = File.read("#{liquid_file}")
       Liquid::Template.parse(file).render
     end
