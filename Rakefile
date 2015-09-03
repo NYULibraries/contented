@@ -26,23 +26,3 @@ begin
 rescue LoadError
   puts 'No Rubocop available'
 end
-
-# desc 'Converts all worksheets to Markdown and places them in their respective directory'
-# task :convert_to_markdowns do
-# end
-
-desc 'Push all theme files alongwith mardown collections to Siteleaf'
-task :siteleaf_push_all do
-  # Note rake does not support Pipeling hence the other rake task had to be called like this and not by invoking
-  system 'bundle exec rake convert_to_markdowns && cd site && siteleaf push'
-end
-
-desc 'Pushes only people markdown directory to siteleaf'
-task :siteleaf_push_people do
-  system 'rm -rf tmp_site && mkdir tmp_site'
-  system 'ruby -r "./lib/loaders/people_loader.rb" -e "Loaders::PeopleLoader.new"'
-  system 'cd tmp_site && siteleaf pull'
-  system 'ruby -r "./lib/loaders/people_loader.rb" -e "Loaders::PeopleLoader.new.convert_people_to_markdown_and_replace_old"'
-  system 'cd tmp_site && siteleaf push'
-  system 'rm -rf tmp_site'
-end

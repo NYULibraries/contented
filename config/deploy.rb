@@ -12,7 +12,7 @@ namespace :siteleaf do
     end
   end
 
-  desc 'Push all theme files alongwith mardown collections to Siteleaf after converting them from worksheet to markdown'
+  desc 'Push all theme files alongwith Markdown collections to Siteleaf after converting them from worksheet to markdown'
   task :push_all do
     invoke 'siteleaf:auth'
     invoke 'convert:sheet_to_md:all'
@@ -46,11 +46,15 @@ namespace :siteleaf do
 end
 
 namespace :deploy do
-  desc 'Compile Javascript and Sass from assets Folder to dist folder'
-  task :all do
+  desc 'Initialize Deploy for library.nyu.edu'
+  task :init do
     system 'bundle install'
     system 'git submodule init'
     system 'git submodule update'
+  end
+
+  desc 'Compile Javascript and Sass from assets Folder to dist folder'
+  task :compile_js_sass do
     # run_locally 'bundle exec ruby config/compile.rb'
   end
 end

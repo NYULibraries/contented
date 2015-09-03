@@ -54,17 +54,39 @@ In the above mentioned `secret_study.yml` create 3 different Environment Variabl
 2. ```api_secret```     : Secret can be found on siteleaf site in Account
 3. ```site_id```        : Site ID can be found in the URL of a particular site.
 
-## Rake Tasks for library.nyu.edu-data
 
-    rake convert_to_markdowns  # Converts all worksheets to Markdown and places them in their respective directory
+## Capistrano Tasks
+
+    cap convert:sheet_to_md:all          # Converts all worksheets to Markdown and places them in their respective directory
+
+    cap convert:sheet_to_md:departments  # Converts departments worksheet to Markdown and places them in their respective directory
+
+    cap convert:sheet_to_md:locations    # Converts locations worksheet to Markdown and places them in their respective directory
+
+    cap convert:sheet_to_md:people       # Converts people worksheet to Markdown and places them in their respective directory
+
+    cap convert:sheet_to_md:services     # Converts services worksheet to Markdown and places them in their respective directory
+
+    cap convert:sheet_to_md:spaces       # Converts spaces worksheet to Markdown and places them in their respective directory
+
+    cap deploy:compile_js_sass           # Compile Javascript and Sass from assets Folder to dist folder
+
+    cap deploy:init                      # Initialize Deploy for library.nyu.edu
+
+    cap siteleaf:auth                    # Authenticate Siteleaf using ENV Variables in .siteleaf.yml files
+
+    cap siteleaf:clean_up                # Cleans up the site directory
+
+    cap siteleaf:push_all                # Push all theme files alongwith Markdown collections to Siteleaf after converting them from worksheet to markdown
+
+    cap siteleaf:push_only_people        # Push only people markdown files
+
+
+## Rake Tasks for library.nyu.edu-data
 
     rake rubocop               # Run RuboCop
 
     rake rubocop:auto_correct  # Auto-correct RuboCop offenses
-
-    rake siteleaf_push_all     # Push all theme files alongwith mardown collections to Siteleaf
-
-    rake siteleaf_push_people  # Pushes only people markdown directory to siteleaf
 
     rake spec                  # Run Rspec
 
