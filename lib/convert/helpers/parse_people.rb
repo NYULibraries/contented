@@ -64,22 +64,23 @@ module Conversion
       end
 
       def personnel_info(person_found, person)
-        person['phone']['t'] = modify_phone(person_found['Work_Phone'])
-        person['email']['t'] = person_found['Email_Address']
-        person['address']['t'] = person_found['Primary_Work_Space_Address']
+        person['phone']['tx'] = modify_phone(person_found['Work_Phone'])
+        person['email']['tx'] = person_found['Email_Address']
+        person['address']['tx'] = person_found['Primary_Work_Space_Address']
+        person['jobtitle']['tx'] = person_found['Business_Title']
         person
       end
 
       def location_info(person_found, person)
-        person['departments']['t'] = modify_departments(person_found['Supervisory_Org_Name'])
-        person['location']['t'] = location(person_found['Position_Work_Space'])
-        person['space']['t'] = space(person_found['Position_Work_Space'])
+        person['departments']['tx'] = modify_departments(person_found['Supervisory_Org_Name'])
+        person['location']['tx'] = location(person_found['Position_Work_Space'])
+        person['space']['tx'] = space(person_found['Position_Work_Space'])
         person
       end
 
       # Edit all key names and fields to match the Google Sheet Formats
       def correct_json_format(person_found, person)
-        person['title']['t'] = person_found['First_Name'] + ' ' + person_found['Last_Name']
+        person['title']['tx'] = person_found['First_Name'] + ';' + person_found['Last_Name']
         person = personnel_info(person_found, person)
         person = location_info(person_found, person)
         person_found.each_pair { |k, v| person['' + k.delete('_').downcase] = JSON.parse("{ \"tx\" : \"#{v}\"}") }

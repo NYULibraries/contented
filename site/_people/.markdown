@@ -1,6 +1,6 @@
 ---
 
-title: "kmd11"
+title: 
 business_title: "Public Services & Instruction Librarian"
 subtitle: 
 
@@ -33,6 +33,6 @@ keywords:
 
 ---
 
-# About kmd11
+# About 
 
 This is test data about Kate

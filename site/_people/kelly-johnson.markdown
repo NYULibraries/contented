@@ -1,13 +1,18 @@
 ---
 
-title: "kj30"
-business_title: "Assistant Curator: Life Sciences Librarian"
+title:
+  - "Kelly"
+  - "Johnson"
+net_id: "kj30"
 subtitle: 
+job_title: "Assistant Curator: Life Sciences Librarian"
 
-location: 
-space: 
+location: "Bobst Library"
+space: "5FL"
 departments:
+  - "Sciences Reference Librarians"
 
+status: 
 expertise:
   - "Biological Sciences"
   - "Environmental Sciences"
@@ -16,18 +21,16 @@ expertise:
   - "Nutrition and Food Science"
   - "Global Public Health"
 
-email: 
-phone: 
-
+email: "kj30@nyu.edu"
+phone: "(212) 992--7304"
 twitter: 
 
 image: 
-
 buttons:
 
 guides:
   title: Research Guides
-libguide_id: 51798
+  libguide_id: 51798
 
 publications:
 
@@ -36,6 +39,6 @@ keywords:
 
 ---
 
-# About kj30
+# About Kelly;Johnson
 
 This is test data about Kelly.
