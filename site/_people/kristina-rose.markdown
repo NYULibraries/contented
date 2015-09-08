@@ -32,6 +32,6 @@ keywords:
 
 ---
 
-# About Kristina;Rose
+# About Kristina Rose
 
 This is test data about Kristina

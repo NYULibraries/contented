@@ -30,6 +30,6 @@ keywords:
 
 ---
 
-# About Camelia;Anghel
+# About Camelia Anghel
 
 This is test data about Camelia

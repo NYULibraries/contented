@@ -30,6 +30,6 @@ keywords:
 
 ---
 
-# About Sally;Cummings
+# About Sally Cummings
 
 This is test data about Sally

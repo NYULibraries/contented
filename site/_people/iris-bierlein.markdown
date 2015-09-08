@@ -30,6 +30,6 @@ keywords:
 
 ---
 
-# About Iris;Bierlein
+# About Iris Bierlein
 
 This is test data about Iris

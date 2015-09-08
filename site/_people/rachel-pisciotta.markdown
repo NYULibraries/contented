@@ -30,6 +30,6 @@ keywords:
 
 ---
 
-# About Rachel;Pisciotta
+# About Rachel Pisciotta
 
 This is test data about Rachel

@@ -30,6 +30,6 @@ keywords:
 
 ---
 
-# About Rachel;Searcy
+# About Rachel Searcy
 
 This is test data about Rachel.

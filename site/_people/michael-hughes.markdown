@@ -34,6 +34,6 @@ keywords:
 
 ---
 
-# About Michael;Hughes
+# About Michael Hughes
 
 This is test data about Michael

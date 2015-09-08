@@ -27,7 +27,7 @@ module Conversion
       end
 
       def self.block_title(data, key, put_title)
-        title = put_title ? data.title.tx : ''
+        title = put_title ? data.title.tx.tr(';', ' ') : ''
         key + ' ' + title + "\n\n" + data.send(convert_to_column_names(key)).tx.strip + "\n"
       end
 

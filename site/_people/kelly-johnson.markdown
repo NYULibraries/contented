@@ -39,6 +39,6 @@ keywords:
 
 ---
 
-# About Kelly;Johnson
+# About Kelly Johnson
 
 This is test data about Kelly.

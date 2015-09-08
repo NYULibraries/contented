@@ -35,6 +35,6 @@ keywords:
 
 ---
 
-# About Scott;Collard
+# About Scott Collard
 
 This is test data about Scott.

@@ -30,6 +30,6 @@ keywords:
 
 ---
 
-# About Tal;Rozen
+# About Tal Rozen
 
 This is test data about Tal

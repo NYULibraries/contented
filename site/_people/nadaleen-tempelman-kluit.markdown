@@ -32,6 +32,6 @@ keywords:
 
 ---
 
-# About Nadaleen;Tempelman-Kluit
+# About Nadaleen Tempelman-Kluit
 
 This is test data about Nadaleen

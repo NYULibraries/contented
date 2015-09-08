@@ -36,6 +36,6 @@ keywords:
 
 ---
 
-# About Katie;Donovan
+# About Katie Donovan
 
 This is test data about Kate

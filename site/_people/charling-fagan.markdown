@@ -30,6 +30,6 @@ keywords:
 
 ---
 
-# About Charling;Fagan
+# About Charling Fagan
 
 This is test data about Charling.
