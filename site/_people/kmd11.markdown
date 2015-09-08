@@ -1,0 +1,38 @@
+---
+
+title: "kmd11"
+business_title: "Public Services & Instruction Librarian"
+subtitle: 
+
+location: 
+space: 
+departments:
+
+expertise:
+  - "History"
+  - "Labor and the Left"
+  - "New York City"
+  - "Special Collections"
+
+email: 
+phone: 
+
+twitter: 
+
+image: 
+
+buttons:
+
+guides:
+  title: Research Guides
+libguide_id: 24856
+
+publications:
+
+keywords:
+
+---
+
+# About kmd11
+
+This is test data about Kate

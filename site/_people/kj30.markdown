@@ -1,0 +1,41 @@
+---
+
+title: "kj30"
+business_title: "Assistant Curator: Life Sciences Librarian"
+subtitle: 
+
+location: 
+space: 
+departments:
+
+expertise:
+  - "Biological Sciences"
+  - "Environmental Sciences"
+  - "Earth Sciences"
+  - "Neural Sciences"
+  - "Nutrition and Food Science"
+  - "Global Public Health"
+
+email: 
+phone: 
+
+twitter: 
+
+image: 
+
+buttons:
+
+guides:
+  title: Research Guides
+libguide_id: 51798
+
+publications:
+
+keywords:
+  - "Subject Librarian"
+
+---
+
+# About kj30
+
+This is test data about Kelly.

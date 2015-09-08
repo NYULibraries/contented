@@ -83,7 +83,7 @@ namespace :convert do
 
     desc 'Converts people worksheet to Markdown and places them in their respective directory'
     task :people do
-      # Conversion::Convert.new.make_the_markdown(6, 'people')
+      Conversion::Convert.new.make_the_markdown(6, 'people')
     end
 
     desc 'Converts services worksheet to Markdown and places them in their respective directory'
