@@ -52,7 +52,7 @@ module Conversion
 
       def self.create_file_structure(name)
         FileUtils.mkdir "site/_#{name}" unless File.directory? "site/_#{name}"
-        FileUtils.cp "config/conversions/_example_#{name}.markdown", "site/_#{name}/_example.markdown"
+        # FileUtils.cp "config/conversions/_example_#{name}.markdown", "site/_#{name}/_example.markdown"
       end
     end
   end

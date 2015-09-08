@@ -17,6 +17,7 @@ namespace :siteleaf do
     invoke 'siteleaf:auth'
     invoke 'convert:sheet_to_md:all'
     system 'cd site && bundle exec siteleaf push'
+    invoke 'siteleaf:clean_up'
   end
 
   desc 'Push only people markdown files'
@@ -30,7 +31,7 @@ namespace :siteleaf do
     FileUtils.rm_rf 'tmp_site/_people/'
     FileUtils.cp_r 'site/_people', 'tmp_site/_people'
     system 'cd tmp_site && bundle exec siteleaf push'
-    FileUtils.rm_rf 'tmp_site'
+    invoke 'siteleaf:clean_up'
   end
 
   desc 'Cleans up the site directory'
