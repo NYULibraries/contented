@@ -20,6 +20,7 @@ site/.siteleaf.yml
 # site/_people
 # site/_services
 # site/_spaces
+.markdown
 
 # Temporary directory for any sort of siteleaf pushes
 tmp_site/
