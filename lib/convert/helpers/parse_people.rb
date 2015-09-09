@@ -59,7 +59,7 @@ module Conversion
       end
 
       def space(location_space)
-        return '' if location_space.count('>') < 2
+        return '' if location_space && location_space.count('>') < 2
         location_space ? location_space.slice(location_space.rindex('>')..-1).delete('>').strip : ''
       end
 

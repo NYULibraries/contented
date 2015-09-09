@@ -1,0 +1,35 @@
+---
+
+title:
+  - "Heidi"
+  - "Frank"
+net_id: "hf36"
+subtitle: 
+job_title: "Electronic Resources & Special Formats Cataloger"
+
+location: "20 Cooper Square"
+space: "317"
+departments:
+  - "Knowledge Access Design & Development"
+
+status: 
+expertise:
+
+email: "hf36@nyu.edu"
+phone: "(212) 998-2499"
+twitter: 
+
+image: 
+buttons:
+
+guides:
+
+publications:
+
+keywords:
+
+---
+
+# About Heidi Frank
+
+

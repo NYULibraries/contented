@@ -1,0 +1,35 @@
+---
+
+title:
+  - "Abu-Jihad"
+  - "Muhammad"
+net_id: "ajm18"
+subtitle: 
+job_title: "Access, Delivery And Resource Sharing Services Assistant"
+
+location: "Bobst Library"
+space: "ALVL"
+departments:
+  - "Reserves"
+
+status: 
+expertise:
+
+email: "ajm18@nyu.edu"
+phone: "(212) 998-2475"
+twitter: 
+
+image: 
+buttons:
+
+guides:
+
+publications:
+
+keywords:
+
+---
+
+# About Abu-Jihad Muhammad
+
+

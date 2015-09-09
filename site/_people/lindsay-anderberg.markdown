@@ -1,0 +1,35 @@
+---
+
+title:
+  - "Lindsay"
+  - "Anderberg"
+net_id: "la715"
+subtitle: 
+job_title: "Archivist & User Services Librarian"
+
+location: "Bobst Library"
+space: "11FL"
+departments:
+  - "Bern Dibner Library"
+
+status: 
+expertise:
+
+email: "la715@nyu.edu"
+phone: "(646) 997-3943"
+twitter: 
+
+image: 
+buttons:
+
+guides:
+
+publications:
+
+keywords:
+
+---
+
+# About Lindsay Anderberg
+
+

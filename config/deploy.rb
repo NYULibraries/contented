@@ -15,7 +15,7 @@ namespace :siteleaf do
   desc 'Push all theme files alongwith Markdown collections to Siteleaf after converting them from worksheet to markdown'
   task :push_all do
     invoke 'siteleaf:auth'
-    invoke 'convert:sheet_to_md:all'
+    # invoke 'convert:sheet_to_md:all'
     system 'cd site && bundle exec siteleaf push'
     invoke 'siteleaf:clean_up'
   end
