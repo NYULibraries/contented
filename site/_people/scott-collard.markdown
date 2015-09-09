@@ -3,7 +3,6 @@
 title:
   - "Scott"
   - "Collard"
-net_id: "sac11"
 subtitle: 
 job_title: "Coordinator, Social Sciences Collections"
 

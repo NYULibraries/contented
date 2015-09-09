@@ -3,7 +3,6 @@
 title:
   - "Susan"
   - "Han"
-net_id: "sh149"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

@@ -3,7 +3,6 @@
 title:
   - "Megan"
   - "Harinski"
-net_id: "mh3482"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

@@ -3,7 +3,6 @@
 title:
   - "Robert"
   - "Eberwein"
-net_id: "rce1"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

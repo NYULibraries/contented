@@ -3,7 +3,6 @@
 title:
   - "Amy"
   - "Valladares"
-net_id: "ald236"
 subtitle: 
 job_title: "Manager, Avery Fisher Center"
 

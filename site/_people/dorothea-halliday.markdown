@@ -3,7 +3,6 @@
 title:
   - "Dorothea"
   - "Halliday"
-net_id: "dsh5"
 subtitle: 
 job_title: "Managing Editor"
 

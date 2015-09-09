@@ -3,7 +3,6 @@
 title:
   - "Zachary"
   - "Coble"
-net_id: "zc14"
 subtitle: 
 job_title: "Digital Scholarship Specialist"
 

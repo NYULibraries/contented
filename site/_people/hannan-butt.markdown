@@ -3,7 +3,6 @@
 title:
   - "Hannan"
   - "Butt"
-net_id: "hab278"
 subtitle: 
 job_title: "Web Developer"
 

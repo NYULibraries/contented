@@ -3,7 +3,6 @@
 title:
   - "Michelle"
   - "McCarthy"
-net_id: "mim6"
 subtitle: 
 job_title: "Adjunct Assistant Curator: Reference Librarian"
 

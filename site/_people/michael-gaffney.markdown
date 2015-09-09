@@ -3,7 +3,6 @@
 title:
   - "Michael"
   - "Gaffney"
-net_id: "msg1"
 subtitle: 
 job_title: "Collections And Reference Associate"
 

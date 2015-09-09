@@ -3,7 +3,6 @@
 title:
   - "Carol"
   - "Hutchins"
-net_id: "ch3"
 subtitle: 
 job_title: "Head, Courant Institute Of Mathematical Sciences Library"
 

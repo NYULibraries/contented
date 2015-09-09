@@ -3,7 +3,6 @@
 title:
   - "Alan"
   - "Krissoff"
-net_id: "abk222"
 subtitle: 
 job_title: "Adjunct Assistant Curator: Life Sciences Librarian"
 

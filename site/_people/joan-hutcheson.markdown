@@ -3,7 +3,6 @@
 title:
   - "Joan"
   - "Hutcheson"
-net_id: "jh172"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

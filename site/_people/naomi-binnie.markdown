@@ -3,7 +3,6 @@
 title:
   - "Naomi"
   - "Binnie"
-net_id: "nb84"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

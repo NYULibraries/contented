@@ -3,7 +3,6 @@
 title:
   - "Ty"
   - "Crawley"
-net_id: "tc1693"
 subtitle: 
 job_title: "Computer Support Technician"
 

@@ -3,7 +3,6 @@
 title:
   - "James"
   - "Eccles"
-net_id: "jee1"
 subtitle: 
 job_title: "Cable Systems Coordinator"
 

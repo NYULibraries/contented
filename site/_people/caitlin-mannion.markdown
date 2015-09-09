@@ -3,7 +3,6 @@
 title:
   - "Caitlin"
   - "Mannion"
-net_id: "cmm766"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

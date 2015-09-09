@@ -3,7 +3,6 @@
 title:
   - "David"
   - "Perry"
-net_id: "dp68"
 subtitle: 
 job_title: "Programmer – Analyst"
 

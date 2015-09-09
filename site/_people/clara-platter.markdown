@@ -3,7 +3,6 @@
 title:
   - "Clara"
   - "Platter"
-net_id: "cp97"
 subtitle: 
 job_title: "Acquisitions Editor"
 

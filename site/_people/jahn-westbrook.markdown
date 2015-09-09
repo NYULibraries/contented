@@ -3,7 +3,6 @@
 title:
   - "Jahn"
   - "Westbrook"
-net_id: "jw13"
 subtitle: 
 job_title: "Technical And Operations Manager"
 

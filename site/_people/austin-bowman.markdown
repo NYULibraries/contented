@@ -3,7 +3,6 @@
 title:
   - "Austin"
   - "Bowman"
-net_id: "ab13"
 subtitle: 
 job_title: "Processing Assistant"
 

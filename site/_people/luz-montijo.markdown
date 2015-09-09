@@ -3,7 +3,6 @@
 title:
   - "Luz"
   - "Montijo"
-net_id: "lm35"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

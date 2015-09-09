@@ -3,7 +3,6 @@
 title:
   - "Isaiah"
   - "Samson"
-net_id: "is444"
 subtitle: 
 job_title: "Media Operation Assistant"
 

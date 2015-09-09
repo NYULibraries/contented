@@ -3,7 +3,6 @@
 title:
   - "Claire"
   - "LeMasters"
-net_id: "cl3449"
 subtitle: 
 job_title: "Reference Associate"
 

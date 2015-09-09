@@ -3,7 +3,6 @@
 title:
   - "Lindsay"
   - "Anderberg"
-net_id: "la715"
 subtitle: 
 job_title: "Archivist & User Services Librarian"
 

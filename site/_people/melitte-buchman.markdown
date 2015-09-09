@@ -3,7 +3,6 @@
 title:
   - "Melitte"
   - "Buchman"
-net_id: "mb165"
 subtitle: 
 job_title: "Digital Content Manager"
 

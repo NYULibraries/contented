@@ -3,7 +3,6 @@
 title:
   - "Emily"
   - "Walz"
-net_id: "ew69"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

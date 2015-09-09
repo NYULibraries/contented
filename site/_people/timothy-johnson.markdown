@@ -3,7 +3,6 @@
 title:
   - "Timothy"
   - "Johnson"
-net_id: "tj29"
 subtitle: 
 job_title: "Associate Curator"
 

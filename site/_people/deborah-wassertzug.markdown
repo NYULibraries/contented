@@ -3,7 +3,6 @@
 title:
   - "Deborah"
   - "Wassertzug"
-net_id: "dw94"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

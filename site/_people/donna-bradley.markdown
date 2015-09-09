@@ -3,7 +3,6 @@
 title:
   - "Donna"
   - "Bradley"
-net_id: "dmb4"
 subtitle: 
 job_title: "Preservation Assistant"
 

@@ -3,7 +3,6 @@
 title:
   - "Paula"
   - "Feid"
-net_id: "paf1"
 subtitle: 
 job_title: "Head, Instructional, Undergraduate And Global Services"
 

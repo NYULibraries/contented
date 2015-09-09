@@ -3,7 +3,6 @@
 title:
   - "Laura"
   - "McCann"
-net_id: "lm103"
 subtitle: 
 job_title: "Assistant Curator: Conservation Librarian"
 

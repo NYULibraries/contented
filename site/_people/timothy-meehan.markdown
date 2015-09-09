@@ -3,7 +3,6 @@
 title:
   - "Timothy"
   - "Meehan"
-net_id: "tm100"
 subtitle: 
 job_title: "New Media And TV Technician"
 

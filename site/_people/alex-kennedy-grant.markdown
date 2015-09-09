@@ -3,7 +3,6 @@
 title:
   - "Alex"
   - "Kennedy-Grant"
-net_id: "akg1"
 subtitle: 
 job_title: "Courant Library Supervisor"
 

@@ -3,7 +3,6 @@
 title:
   - "John"
   - "Rossetti"
-net_id: "jjr222"
 subtitle: 
 job_title: "M53 - Marketing/Advertising/Public Relations/Media/Video/Audio, Fine and Performing Arts Manager"
 

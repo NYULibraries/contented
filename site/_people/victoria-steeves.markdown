@@ -3,7 +3,6 @@
 title:
   - "Victoria"
   - "Steeves"
-net_id: "vs77"
 subtitle: 
 job_title: "Librarian for Research Data Management and Reproducibility"
 

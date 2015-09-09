@@ -3,7 +3,6 @@
 title:
   - "Venecia"
   - "Clark"
-net_id: "vc674"
 subtitle: 
 job_title: "Administrative Assistant"
 

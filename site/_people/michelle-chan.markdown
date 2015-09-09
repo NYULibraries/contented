@@ -3,7 +3,6 @@
 title:
   - "Michelle"
   - "Chan"
-net_id: "mfc8"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

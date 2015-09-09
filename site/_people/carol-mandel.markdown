@@ -3,7 +3,6 @@
 title:
   - "Carol"
   - "Mandel"
-net_id: "cm77"
 subtitle: 
 job_title: "Curator"
 

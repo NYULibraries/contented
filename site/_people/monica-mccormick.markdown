@@ -3,7 +3,6 @@
 title:
   - "Monica"
   - "McCormick"
-net_id: "mjm33"
 subtitle: 
 job_title: "Program Officer For Digital Scholarly Publishing"
 

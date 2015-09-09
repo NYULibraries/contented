@@ -3,7 +3,6 @@
 title:
   - "Jose"
   - "Gonzalez"
-net_id: "jg3597"
 subtitle: 
 job_title: "Media Services Technician"
 

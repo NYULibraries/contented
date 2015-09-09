@@ -3,7 +3,6 @@
 title:
   - "Frederick"
   - "Folmer"
-net_id: "fmf224"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

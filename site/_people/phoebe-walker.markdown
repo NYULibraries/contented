@@ -3,7 +3,6 @@
 title:
   - "Phoebe"
   - "Walker"
-net_id: "prw226"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

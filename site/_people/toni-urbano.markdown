@@ -3,7 +3,6 @@
 title:
   - "Toni"
   - "Urbano"
-net_id: "ttu1"
 subtitle: 
 job_title: "Assistant Director, NYU-TV and Television Center"
 

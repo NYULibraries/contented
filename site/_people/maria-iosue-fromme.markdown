@@ -3,7 +3,6 @@
 title:
   - "Maria"
   - "Iosue-Fromme"
-net_id: "mgi1"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

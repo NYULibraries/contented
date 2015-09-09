@@ -3,7 +3,6 @@
 title:
   - "Jennifer"
   - "Hammer"
-net_id: "jh11"
 subtitle: 
 job_title: "Senior Editor"
 

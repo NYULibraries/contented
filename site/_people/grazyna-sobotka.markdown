@@ -3,7 +3,6 @@
 title:
   - "Grazyna"
   - "Sobotka"
-net_id: "gs94"
 subtitle: 
 job_title: "Processing Assistant"
 

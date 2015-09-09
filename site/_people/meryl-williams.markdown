@@ -3,7 +3,6 @@
 title:
   - "Meryl"
   - "Williams"
-net_id: "maw469"
 subtitle: 
 job_title: "Media Operations Assistant"
 

@@ -3,7 +3,6 @@
 title:
   - "Daniel"
   - "Lega"
-net_id: "djl2"
 subtitle: 
 job_title: "Lead Library Privileges Assistant"
 

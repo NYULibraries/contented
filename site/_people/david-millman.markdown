@@ -3,7 +3,6 @@
 title:
   - "David"
   - "Millman"
-net_id: "dm140"
 subtitle: 
 job_title: "Assistant Dean for Digital Library Technology Services"
 

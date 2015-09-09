@@ -3,7 +3,6 @@
 title:
   - "Amanda"
   - "Bielskas"
-net_id: "asb12"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

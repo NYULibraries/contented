@@ -3,7 +3,6 @@
 title:
   - "Katie"
   - "Ehrlich"
-net_id: "kme229"
 subtitle: 
 job_title: "Processing Archivist II"
 

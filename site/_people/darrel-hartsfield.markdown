@@ -3,7 +3,6 @@
 title:
   - "Darrel"
   - "Hartsfield"
-net_id: "dph2"
 subtitle: 
 job_title: "Manager, Campus Media"
 

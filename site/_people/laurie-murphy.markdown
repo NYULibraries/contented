@@ -3,7 +3,6 @@
 title:
   - "Laurie"
   - "Murphy"
-net_id: "lm1518"
 subtitle: 
 job_title: "Adjunct Assstant Curator"
 

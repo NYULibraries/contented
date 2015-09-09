@@ -3,7 +3,6 @@
 title:
   - "Andrew"
   - "Battista"
-net_id: "ab6137"
 subtitle: 
 job_title: "Librarian for Geospatial Information Systems Services"
 

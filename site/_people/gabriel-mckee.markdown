@@ -3,7 +3,6 @@
 title:
   - "Gabriel"
   - "McKee"
-net_id: "gm95"
 subtitle: 
 job_title: "Assistant Research Scholar"
 

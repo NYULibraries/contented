@@ -3,7 +3,6 @@
 title:
   - "Xiwu"
   - "Lin"
-net_id: "xl8"
 subtitle: 
 job_title: "Processing Assistant"
 

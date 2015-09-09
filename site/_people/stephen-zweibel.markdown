@@ -3,7 +3,6 @@
 title:
   - "Stephen"
   - "Zweibel"
-net_id: "sz43"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

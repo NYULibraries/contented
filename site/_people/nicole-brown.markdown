@@ -3,7 +3,6 @@
 title:
   - "Nicole"
   - "Brown"
-net_id: "neb1"
 subtitle: 
 job_title: "Multidisciplinary Instruction Librarian"
 

@@ -3,7 +3,6 @@
 title:
   - "Ree"
   - "Dedonato"
-net_id: "rd1037"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

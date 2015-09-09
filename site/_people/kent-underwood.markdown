@@ -3,7 +3,6 @@
 title:
   - "Kent"
   - "Underwood"
-net_id: "kdu1"
 subtitle: 
 job_title: "Head, Avery Fisher Center for Music & Media"
 

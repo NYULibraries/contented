@@ -3,7 +3,6 @@
 title:
   - "Peter"
   - "Engelman"
-net_id: "pe3"
 subtitle: 
 job_title: "Research Scholar"
 

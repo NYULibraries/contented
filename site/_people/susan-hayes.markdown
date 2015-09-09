@@ -3,7 +3,6 @@
 title:
   - "Susan"
   - "Hayes"
-net_id: "smh2"
 subtitle: 
 job_title: "Head, Metadata Production And Management"
 

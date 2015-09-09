@@ -3,7 +3,6 @@
 title:
   - "Irene"
   - "Gordon"
-net_id: "ig9"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

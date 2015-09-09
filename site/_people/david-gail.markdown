@@ -3,7 +3,6 @@
 title:
   - "David"
   - "Gail"
-net_id: "dhg3"
 subtitle: 
 job_title: "Supervisor, Operations"
 

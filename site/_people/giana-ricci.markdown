@@ -3,7 +3,6 @@
 title:
   - "Giana"
   - "Ricci"
-net_id: "gr985"
 subtitle: 
 job_title: "Graduate Employee Adjunct"
 

@@ -3,7 +3,6 @@
 title:
   - "Jessica"
   - "McGivney"
-net_id: "jam357"
 subtitle: 
 job_title: "Assistant Curator: Resource Sharing & Delivery Services Librarian"
 

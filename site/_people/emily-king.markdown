@@ -3,7 +3,6 @@
 title:
   - "Emily"
   - "King"
-net_id: "ebk261"
 subtitle: 
 job_title: "Assistant Research Scholar"
 

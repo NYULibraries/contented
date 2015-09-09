@@ -3,7 +3,6 @@
 title:
   - "Wenchao"
   - "Jia"
-net_id: "wpj1"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

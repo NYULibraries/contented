@@ -3,7 +3,6 @@
 title:
   - "Robin"
   - "Preiss"
-net_id: "rep292"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

@@ -3,7 +3,6 @@
 title:
   - "Jessica"
   - "Mayers"
-net_id: "jmt2"
 subtitle: 
 job_title: "Data Entry Clerk"
 

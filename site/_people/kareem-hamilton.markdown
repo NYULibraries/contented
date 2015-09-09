@@ -3,7 +3,6 @@
 title:
   - "Kareem"
   - "Hamilton"
-net_id: "krh1"
 subtitle: 
 job_title: "Media Operations Assistant"
 

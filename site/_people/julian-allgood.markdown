@@ -3,7 +3,6 @@
 title:
   - "Julian"
   - "Allgood"
-net_id: "jea4"
 subtitle: 
 job_title: "Associate Curator: Serials Cataloger and Authority Control Librarian"
 

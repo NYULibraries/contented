@@ -3,7 +3,6 @@
 title:
   - "Eleanor"
   - "Yadin"
-net_id: "ey3"
 subtitle: 
 job_title: "Adjunct Librarian"
 

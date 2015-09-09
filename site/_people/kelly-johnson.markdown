@@ -3,7 +3,6 @@
 title:
   - "Kelly"
   - "Johnson"
-net_id: "kj30"
 subtitle: 
 job_title: "Assistant Curator: Life Sciences Librarian"
 

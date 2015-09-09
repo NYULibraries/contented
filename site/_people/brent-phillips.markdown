@@ -3,7 +3,6 @@
 title:
   - "Brent"
   - "Phillips"
-net_id: "bwp2"
 subtitle: 
 job_title: "Media Specialist And Processing Archivist, Fales Library"
 

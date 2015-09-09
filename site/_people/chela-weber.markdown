@@ -3,7 +3,6 @@
 title:
   - "Chela"
   - "Weber"
-net_id: "csw7"
 subtitle: 
 job_title: "Head, Archival Collections Managment"
 

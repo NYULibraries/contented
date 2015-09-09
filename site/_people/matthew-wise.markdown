@@ -3,7 +3,6 @@
 title:
   - "Matthew"
   - "Wise"
-net_id: "mw4"
 subtitle: 
 job_title: "Cataloging Policy, Documentation, And Training Coordinator"
 

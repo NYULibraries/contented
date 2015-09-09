@@ -3,7 +3,6 @@
 title:
   - "Donald"
   - "Mennerich"
-net_id: "dm3053"
 subtitle: 
 job_title: "Digital Archivist"
 

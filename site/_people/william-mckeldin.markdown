@@ -3,7 +3,6 @@
 title:
   - "William"
   - "McKeldin"
-net_id: "wem1"
 subtitle: 
 job_title: "Preservation Media Technician"
 

@@ -3,7 +3,6 @@
 title:
   - "Charles"
   - "Hames"
-net_id: "ch75"
 subtitle: 
 job_title: "Production And Design Manager"
 

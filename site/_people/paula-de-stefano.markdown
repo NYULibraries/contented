@@ -3,7 +3,6 @@
 title:
   - "Paula"
   - "De Stefano"
-net_id: "pd3"
 subtitle: 
 job_title: "Head of Preservation"
 

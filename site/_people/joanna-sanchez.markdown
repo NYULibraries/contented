@@ -3,7 +3,6 @@
 title:
   - "Joanna"
   - "Sanchez"
-net_id: "js5076"
 subtitle: 
 job_title: "Human Resources Assistant"
 

@@ -3,7 +3,6 @@
 title:
   - "Freddy"
   - "Oliva"
-net_id: "fao1"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

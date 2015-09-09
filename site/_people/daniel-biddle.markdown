@@ -3,7 +3,6 @@
 title:
   - "Daniel"
   - "Biddle"
-net_id: "dcb3"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

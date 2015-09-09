@@ -3,7 +3,6 @@
 title:
   - "Heidi"
   - "Frank"
-net_id: "hf36"
 subtitle: 
 job_title: "Electronic Resources & Special Formats Cataloger"
 

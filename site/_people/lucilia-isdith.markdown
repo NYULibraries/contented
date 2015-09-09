@@ -3,7 +3,6 @@
 title:
   - "Lucilia"
   - "Isdith"
-net_id: "li335"
 subtitle: 
 job_title: "Circulation Services Manager"
 

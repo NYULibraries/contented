@@ -3,7 +3,6 @@
 title:
   - "Mark"
   - "Monakey"
-net_id: "mm4733"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

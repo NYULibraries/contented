@@ -3,7 +3,6 @@
 title:
   - "Elizabeth"
   - "Verrelli"
-net_id: "ew52"
 subtitle: 
 job_title: "Administrative Coordinator"
 

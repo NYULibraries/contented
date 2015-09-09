@@ -3,7 +3,6 @@
 title:
   - "Michael"
   - "Stasiak"
-net_id: "ms4732"
 subtitle: 
 job_title: "Digital Imaging Specialist"
 

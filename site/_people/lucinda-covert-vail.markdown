@@ -3,7 +3,6 @@
 title:
   - "Lucinda"
   - "Covert-Vail"
-net_id: "lrc2"
 subtitle: 
 job_title: "Associate Dean- Public Services"
 

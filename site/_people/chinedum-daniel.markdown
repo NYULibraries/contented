@@ -3,7 +3,6 @@
 title:
   - "Chinedum"
   - "Daniel"
-net_id: "cd97"
 subtitle: 
 job_title: "Computer Support Technician"
 

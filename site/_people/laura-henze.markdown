@@ -3,7 +3,6 @@
 title:
   - "Laura"
   - "Henze"
-net_id: "lh435"
 subtitle: 
 job_title: "Programmer – Analyst - Interface Designer"
 

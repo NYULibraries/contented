@@ -3,7 +3,6 @@
 title:
   - "Kevin"
   - "Palmer"
-net_id: "kap209"
 subtitle: 
 job_title: "Supervisor, Operations"
 

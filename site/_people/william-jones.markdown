@@ -3,7 +3,6 @@
 title:
   - "William"
   - "Jones"
-net_id: "wwj1"
 subtitle: 
 job_title: "Associate Curator/ Intergrated Library System Librarian"
 

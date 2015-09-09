@@ -3,7 +3,6 @@
 title:
   - "Constance"
   - "Grady"
-net_id: "cg113"
 subtitle: 
 job_title: "Editorial Assistant"
 

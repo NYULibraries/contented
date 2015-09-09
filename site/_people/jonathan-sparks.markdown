@@ -3,7 +3,6 @@
 title:
   - "Jonathan"
   - "Sparks"
-net_id: "js4474"
 subtitle: 
 job_title: "Processing Assistant"
 

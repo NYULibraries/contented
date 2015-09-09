@@ -3,7 +3,6 @@
 title:
   - "Corey"
   - "Harper"
-net_id: "cah10"
 subtitle: 
 job_title: "Metadata Services Librarian"
 

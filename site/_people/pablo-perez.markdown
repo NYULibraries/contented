@@ -3,7 +3,6 @@
 title:
   - "Pablo"
   - "Perez"
-net_id: "pp21"
 subtitle: 
 job_title: "Stacks Supervisor"
 

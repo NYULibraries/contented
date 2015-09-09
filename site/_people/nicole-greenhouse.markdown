@@ -3,7 +3,6 @@
 title:
   - "Nicole"
   - "Greenhouse"
-net_id: "nmg266"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

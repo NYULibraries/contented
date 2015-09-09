@@ -3,7 +3,6 @@
 title:
   - "Arlester"
   - "Newkirk"
-net_id: "ln15"
 subtitle: 
 job_title: "Media Operations Assistant"
 

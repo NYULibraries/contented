@@ -3,7 +3,6 @@
 title:
   - "Esha"
   - "Datta"
-net_id: "ed64"
 subtitle: 
 job_title: "Programmer Analyst"
 

@@ -3,7 +3,6 @@
 title:
   - "Michael"
   - "Stoller"
-net_id: "ms187"
 subtitle: 
 job_title: "Associate Dean For Collections And Research Services"
 

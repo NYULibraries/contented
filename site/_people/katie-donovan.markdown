@@ -3,7 +3,6 @@
 title:
   - "Katie"
   - "Donovan"
-net_id: "kmd11"
 subtitle: 
 job_title: "Public Services & Instruction Librarian"
 

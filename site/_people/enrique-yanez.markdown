@@ -3,7 +3,6 @@
 title:
   - "Enrique"
   - "Yanez"
-net_id: "eey200"
 subtitle: 
 job_title: "Assistant Dean for Human Resources"
 

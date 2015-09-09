@@ -3,7 +3,6 @@
 title:
   - "Cylia"
   - "Cyrille"
-net_id: "ccc4"
 subtitle: 
 job_title: "Documents and Reference Assistant"
 

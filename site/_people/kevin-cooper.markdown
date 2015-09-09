@@ -3,7 +3,6 @@
 title:
   - "Kevin"
   - "Cooper"
-net_id: "kpc234"
 subtitle: 
 job_title: "Order Fulfillment and Special Sales Specialist"
 

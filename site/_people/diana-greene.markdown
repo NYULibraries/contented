@@ -3,7 +3,6 @@
 title:
   - "Diana"
   - "Greene"
-net_id: "dg3"
 subtitle: 
 job_title: "Associate Curator / Slavic Studies Librarian"
 

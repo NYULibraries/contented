@@ -3,7 +3,6 @@
 title:
   - "Rasan"
   - "Rasch"
-net_id: "rr102"
 subtitle: 
 job_title: "Programmer – Analyst - Publication Systems"
 

@@ -3,7 +3,6 @@
 title:
   - "Felicia"
   - "McCoy"
-net_id: "fm55"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

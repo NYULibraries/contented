@@ -3,7 +3,6 @@
 title:
   - "Ikenna"
   - "Anyanwu"
-net_id: "ioa1"
 subtitle: 
 job_title: "Special Events Coordinator"
 

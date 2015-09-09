@@ -3,7 +3,6 @@
 title:
   - "Michelle"
   - "Zdunczyk"
-net_id: "mz1544"
 subtitle: 
 job_title: "Human Resources Assistant"
 

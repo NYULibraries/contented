@@ -3,7 +3,6 @@
 title:
   - "Reed"
   - "Shadgett"
-net_id: "rs3329"
 subtitle: 
 job_title: "Knowledge Access Technology Specialist"
 

@@ -3,7 +3,6 @@
 title:
   - "Anthony"
   - "Shaw"
-net_id: "as6303"
 subtitle: 
 job_title: "Campus Cable Technician"
 

@@ -3,7 +3,6 @@
 title:
   - "Allan"
   - "Frank"
-net_id: "ajf1"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

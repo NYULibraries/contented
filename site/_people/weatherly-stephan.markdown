@@ -3,7 +3,6 @@
 title:
   - "Weatherly"
   - "Stephan"
-net_id: "was227"
 subtitle: 
 job_title: "Librarian for Archival Arrangement & Description"
 

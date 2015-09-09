@@ -3,7 +3,6 @@
 title:
   - "Charling"
   - "Fagan"
-net_id: "cf83"
 subtitle: 
 job_title: "Assistant Librarian of Practice: Director of Shanghai Library"
 

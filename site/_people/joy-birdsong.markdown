@@ -3,7 +3,6 @@
 title:
   - "Joy"
   - "Birdsong"
-net_id: "jb5421"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

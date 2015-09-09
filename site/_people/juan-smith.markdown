@@ -3,7 +3,6 @@
 title:
   - "Juan"
   - "Smith"
-net_id: "jgs4"
 subtitle: 
 job_title: "Processing Assistant"
 

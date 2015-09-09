@@ -3,7 +3,6 @@
 title:
   - "Woo"
   - "Kang"
-net_id: "wck228"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

@@ -3,7 +3,6 @@
 title:
   - "Bei"
   - "Bei"
-net_id: "bb116"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

@@ -3,7 +3,6 @@
 title:
   - "Erin"
   - "Noto"
-net_id: "en43"
 subtitle: 
 job_title: "Collections Assistant"
 

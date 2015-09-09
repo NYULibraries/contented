@@ -3,7 +3,6 @@
 title:
   - "Rachel"
   - "Searcy"
-net_id: "ras26"
 subtitle: 
 job_title: "Accessioning Archivist"
 

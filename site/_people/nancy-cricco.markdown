@@ -3,7 +3,6 @@
 title:
   - "Nancy"
   - "Cricco"
-net_id: "nc3"
 subtitle: 
 job_title: "University Archivist"
 

@@ -3,7 +3,6 @@
 title:
   - "Jane"
   - "Excell"
-net_id: "jbe248"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

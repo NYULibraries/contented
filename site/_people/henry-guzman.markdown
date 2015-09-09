@@ -3,7 +3,6 @@
 title:
   - "Henry"
   - "Guzman"
-net_id: "hg51"
 subtitle: 
 job_title: "Computer Support Technician"
 

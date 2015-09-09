@@ -3,7 +3,6 @@
 title:
   - "Marissa"
   - "Hiller"
-net_id: "mch17"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

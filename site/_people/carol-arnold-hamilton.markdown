@@ -3,7 +3,6 @@
 title:
   - "Carol"
   - "Arnold-Hamilton"
-net_id: "cmh2"
 subtitle: 
 job_title: "Documents and Reference Assistant"
 

@@ -3,7 +3,6 @@
 title:
   - "Benjamin"
   - "Beckett"
-net_id: "bb108"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

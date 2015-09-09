@@ -3,7 +3,6 @@
 title:
   - "Leon"
   - "Black"
-net_id: "lb74"
 subtitle: 
 job_title: "Media Operations Assistant"
 

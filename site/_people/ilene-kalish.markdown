@@ -3,7 +3,6 @@
 title:
   - "Ilene"
   - "Kalish"
-net_id: "ik29"
 subtitle: 
 job_title: "Executive Editor, Social Sciences"
 

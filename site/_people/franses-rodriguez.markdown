@@ -3,7 +3,6 @@
 title:
   - "Franses"
   - "Rodriguez"
-net_id: "far4"
 subtitle: 
 job_title: "Reserves Supervisor"
 

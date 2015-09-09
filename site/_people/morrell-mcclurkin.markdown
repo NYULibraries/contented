@@ -3,7 +3,6 @@
 title:
   - "Morrell"
   - "McClurkin"
-net_id: "mm6440"
 subtitle: 
 job_title: "Access Services Supervisor, Reserves"
 

@@ -3,7 +3,6 @@
 title:
   - "Minerva"
   - "Serrano-Brunner"
-net_id: "msb11"
 subtitle: 
 job_title: "Media Services Technician"
 

@@ -3,7 +3,6 @@
 title:
   - "Justin"
   - "Taylor"
-net_id: "jet200"
 subtitle: 
 job_title: "Media Services Dispatcher"
 

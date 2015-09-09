@@ -3,7 +3,6 @@
 title:
   - "Lowell"
   - "Accola"
-net_id: "lra3"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

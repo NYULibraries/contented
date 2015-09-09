@@ -3,7 +3,6 @@
 title:
   - "Martha"
   - "Askandar"
-net_id: "mma374"
 subtitle: 
 job_title: "Senior Human Resources Assistant"
 

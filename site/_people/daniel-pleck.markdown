@@ -3,7 +3,6 @@
 title:
   - "Daniel"
   - "Pleck"
-net_id: "dhp230"
 subtitle: 
 job_title: "Media Operations Assistant"
 

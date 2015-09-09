@@ -3,7 +3,6 @@
 title:
   - "Ryan"
   - "Di Francesco"
-net_id: "rdf6"
 subtitle: 
 job_title: "Systems Manager"
 

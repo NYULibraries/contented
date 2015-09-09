@@ -3,7 +3,6 @@
 title:
   - "Lakisha"
   - "Woodford"
-net_id: "lw35"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

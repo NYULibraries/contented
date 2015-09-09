@@ -3,7 +3,6 @@
 title:
   - "Margaret"
   - "Long"
-net_id: "mml475"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

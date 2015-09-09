@@ -3,7 +3,6 @@
 title:
   - "Wilfredo"
   - "Bruno"
-net_id: "wb16"
 subtitle: 
 job_title: "Assistant Producer, TV Production Center"
 

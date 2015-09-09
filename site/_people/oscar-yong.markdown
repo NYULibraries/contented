@@ -3,7 +3,6 @@
 title:
   - "Oscar"
   - "Yong"
-net_id: "oay2001"
 subtitle: 
 job_title: "Supervisor, Client Services - BLCC"
 

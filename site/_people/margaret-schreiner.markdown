@@ -3,7 +3,6 @@
 title:
   - "Margaret"
   - "Schreiner"
-net_id: "ms5855"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

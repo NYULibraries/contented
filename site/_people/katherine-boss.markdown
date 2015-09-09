@@ -3,7 +3,6 @@
 title:
   - "Katherine"
   - "Boss"
-net_id: "keb5"
 subtitle: 
 job_title: "Librarian for Journalism, Media, Culture & Communication"
 

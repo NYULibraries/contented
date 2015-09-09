@@ -3,7 +3,6 @@
 title:
   - "Reward"
   - "Akpiri"
-net_id: "ra97"
 subtitle: 
 job_title: "Media Services Technician"
 

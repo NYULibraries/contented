@@ -3,7 +3,6 @@
 title:
   - "Joseph"
   - "Pawletko"
-net_id: "jgp222"
 subtitle: 
 job_title: "Senior Programmer - Analyst"
 

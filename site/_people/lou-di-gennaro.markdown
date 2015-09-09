@@ -3,7 +3,6 @@
 title:
   - "Lou"
   - "Di Gennaro"
-net_id: "ldg1"
 subtitle: 
 job_title: "Conservator, Special Collections"
 

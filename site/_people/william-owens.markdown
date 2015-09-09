@@ -3,7 +3,6 @@
 title:
   - "William"
   - "Owens"
-net_id: "wo10"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

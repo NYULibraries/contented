@@ -3,7 +3,6 @@
 title:
   - "Flannon"
   - "Jackson"
-net_id: "fj5"
 subtitle: 
 job_title: "DevOps Engineer"
 

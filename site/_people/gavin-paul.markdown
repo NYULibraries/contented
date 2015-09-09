@@ -3,7 +3,6 @@
 title:
   - "Gavin"
   - "Paul"
-net_id: "gp788"
 subtitle: 
 job_title: "Assistant Curator"
 

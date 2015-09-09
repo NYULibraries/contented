@@ -3,7 +3,6 @@
 title:
   - "Sean"
   - "Kerrigan"
-net_id: "sk123"
 subtitle: 
 job_title: "Systems Administrator"
 

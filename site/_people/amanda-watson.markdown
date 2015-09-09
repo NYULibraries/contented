@@ -3,7 +3,6 @@
 title:
   - "Amanda"
   - "Watson"
-net_id: "aw94"
 subtitle: 
 job_title: "Asst Cur; Librarian For English & Comparative Literature"
 

@@ -3,7 +3,6 @@
 title:
   - "Adwoa"
   - "Adusei"
-net_id: "asa290"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

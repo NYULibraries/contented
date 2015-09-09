@@ -3,7 +3,6 @@
 title:
   - "April"
   - "Hathcock"
-net_id: "ah160"
 subtitle: 
 job_title: "Assistant Librarian of Practice: Scholarly Communications Librarian"
 

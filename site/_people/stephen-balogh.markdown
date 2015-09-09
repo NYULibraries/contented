@@ -3,7 +3,6 @@
 title:
   - "Stephen"
   - "Balogh"
-net_id: "sgb334"
 subtitle: 
 job_title: "Reference Associate"
 

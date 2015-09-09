@@ -3,7 +3,6 @@
 title:
   - "Marian"
   - "Weston"
-net_id: "mw51"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

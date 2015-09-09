@@ -3,7 +3,6 @@
 title:
   - "Shirin"
   - "Khaki"
-net_id: "sk1788"
 subtitle: 
 job_title: "Serials Receiving Assistant"
 

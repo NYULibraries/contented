@@ -3,7 +3,6 @@
 title:
   - "Cristy"
   - "Fisher"
-net_id: "crf220"
 subtitle: 
 job_title: "Collections Assistant"
 

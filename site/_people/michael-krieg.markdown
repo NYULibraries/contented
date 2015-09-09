@@ -3,7 +3,6 @@
 title:
   - "Michael"
   - "Krieg"
-net_id: "mwk2"
 subtitle: 
 job_title: "Processing Assistant"
 

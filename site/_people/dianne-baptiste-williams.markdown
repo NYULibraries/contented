@@ -3,7 +3,6 @@
 title:
   - "Dianne"
   - "Baptiste-Williams"
-net_id: "db64"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

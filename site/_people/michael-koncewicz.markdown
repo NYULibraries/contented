@@ -3,7 +3,6 @@
 title:
   - "Michael"
   - "Koncewicz"
-net_id: "mk5288"
 subtitle: 
 job_title: "Administrative Coordinator"
 

@@ -3,7 +3,6 @@
 title:
   - "Ekaterina"
   - "Pechekhonova"
-net_id: "ep54"
 subtitle: 
 job_title: "Programmer – Analyst"
 

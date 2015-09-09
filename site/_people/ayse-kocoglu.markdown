@@ -3,7 +3,6 @@
 title:
   - "Ayse"
   - "Kocoglu"
-net_id: "ak136"
 subtitle: 
 job_title: "Supervisor, Serials And Electronic Resources"
 

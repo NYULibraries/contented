@@ -3,7 +3,6 @@
 title:
   - "Alexia"
   - "Traganas"
-net_id: "at93"
 subtitle: 
 job_title: "Administrative Aide II"
 

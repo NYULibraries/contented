@@ -3,7 +3,6 @@
 title:
   - "Gina"
   - "Levitan"
-net_id: "gpl224"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

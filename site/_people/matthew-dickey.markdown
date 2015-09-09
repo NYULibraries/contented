@@ -3,7 +3,6 @@
 title:
   - "Matthew"
   - "Dickey"
-net_id: "md118"
 subtitle: 
 job_title: "Media Operations Assistant"
 

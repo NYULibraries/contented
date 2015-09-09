@@ -3,7 +3,6 @@
 title:
   - "Lisa"
   - "Darms"
-net_id: "ld819"
 subtitle: 
 job_title: "Senior Archivist, Fales Library"
 

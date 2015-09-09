@@ -3,7 +3,6 @@
 title:
   - "Mary"
   - "Jarrad"
-net_id: "mbj1"
 subtitle: 
 job_title: "Marketing And Sales Director"
 

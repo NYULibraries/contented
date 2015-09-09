@@ -3,7 +3,6 @@
 title:
   - "Liudmilla"
   - "Hirsch"
-net_id: "lh7"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

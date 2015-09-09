@@ -3,7 +3,6 @@
 title:
   - "Daniel"
   - "Levinson"
-net_id: "dl125"
 subtitle: 
 job_title: "Media Operations Assistant"
 

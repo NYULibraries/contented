@@ -3,7 +3,6 @@
 title:
   - "Meredith"
   - "Levin"
-net_id: "mjl361"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

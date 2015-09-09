@@ -3,7 +3,6 @@
 title:
   - "Guy"
   - "Burak"
-net_id: "gb894"
 subtitle: 
 job_title: "Librarian for Middle Eastern & Islamic Studies"
 

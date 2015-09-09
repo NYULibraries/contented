@@ -3,7 +3,6 @@
 title:
   - "Tyrone"
   - "Grant"
-net_id: "trg2"
 subtitle: 
 job_title: "Media Operations Assistant"
 

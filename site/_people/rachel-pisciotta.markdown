@@ -3,7 +3,6 @@
 title:
   - "Rachel"
   - "Pisciotta"
-net_id: "rp107"
 subtitle: 
 job_title: "Supervisor, Integrated Library System/adrss"
 

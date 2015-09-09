@@ -3,7 +3,6 @@
 title:
   - "Maria"
   - "Schirmer"
-net_id: "mes607"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

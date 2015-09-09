@@ -3,7 +3,6 @@
 title:
   - "Victoria"
   - "Peterson"
-net_id: "vrp239"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

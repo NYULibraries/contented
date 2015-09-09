@@ -3,7 +3,6 @@
 title:
   - "Dylan"
   - "Glatthorn"
-net_id: "djg297"
 subtitle: 
 job_title: "Music and Video Assistant"
 

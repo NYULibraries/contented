@@ -3,7 +3,6 @@
 title:
   - "Amy"
   - "Lucker"
-net_id: "ael3"
 subtitle: 
 job_title: "Associate Curator: Head of IFA"
 

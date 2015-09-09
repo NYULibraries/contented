@@ -3,7 +3,6 @@
 title:
   - "Robert"
   - "Jamison"
-net_id: "rj9"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

@@ -3,7 +3,6 @@
 title:
   - "Junli"
   - "Diao"
-net_id: "jd172"
 subtitle: 
 job_title: "Assistant Research Scholar: Chinese Language Librarian"
 

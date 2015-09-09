@@ -3,7 +3,6 @@
 title:
   - "Beth"
   - "Katzoff"
-net_id: "bk60"
 subtitle: 
 job_title: "Adjunct Reference Librarian"
 

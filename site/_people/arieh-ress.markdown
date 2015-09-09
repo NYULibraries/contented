@@ -3,7 +3,6 @@
 title:
   - "Arieh"
   - "Ress"
-net_id: "ar196"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

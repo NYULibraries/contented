@@ -3,7 +3,6 @@
 title:
   - "Alicia"
   - "Nadkarni"
-net_id: "an64"
 subtitle: 
 job_title: "Assistant Editor"
 

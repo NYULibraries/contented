@@ -3,7 +3,6 @@
 title:
   - "Karla"
   - "Williams"
-net_id: "kw4"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

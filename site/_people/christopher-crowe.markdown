@@ -3,7 +3,6 @@
 title:
   - "Christopher"
   - "Crowe"
-net_id: "ctc1"
 subtitle: 
 job_title: "Financial Assistant Ii, Circulation"
 

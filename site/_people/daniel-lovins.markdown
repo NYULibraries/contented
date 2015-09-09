@@ -3,7 +3,6 @@
 title:
   - "Daniel"
   - "Lovins"
-net_id: "dl116"
 subtitle: 
 job_title: "Head, Access Design And Development"
 

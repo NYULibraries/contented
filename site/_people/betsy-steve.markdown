@@ -3,7 +3,6 @@
 title:
   - "Betsy"
   - "Steve"
-net_id: "bs96"
 subtitle: 
 job_title: "Senior Publicist"
 

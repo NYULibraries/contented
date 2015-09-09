@@ -3,7 +3,6 @@
 title:
   - "Sonia"
   - "Horan"
-net_id: "ssh4"
 subtitle: 
 job_title: "Media Operations Assistant"
 

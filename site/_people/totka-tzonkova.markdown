@@ -3,7 +3,6 @@
 title:
   - "Totka"
   - "Tzonkova"
-net_id: "tlt1"
 subtitle: 
 job_title: "Budget Manager"
 

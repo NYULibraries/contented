@@ -3,7 +3,6 @@
 title:
   - "Emily"
   - "Chapin"
-net_id: "ec120"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

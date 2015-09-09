@@ -3,7 +3,6 @@
 title:
   - "Randolph"
   - "Havens"
-net_id: "rjh221"
 subtitle: 
 job_title: "Media Operations Assistant"
 

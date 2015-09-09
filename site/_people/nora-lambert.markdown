@@ -3,7 +3,6 @@
 title:
   - "Nora"
   - "Lambert"
-net_id: "ncl218"
 subtitle: 
 job_title: "Tv/new Media Content Specialist"
 

@@ -3,7 +3,6 @@
 title:
   - "Susan"
   - "Hamilton"
-net_id: "sh101"
 subtitle: 
 job_title: "Accounts Payable Clerk"
 

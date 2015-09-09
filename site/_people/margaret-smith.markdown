@@ -3,7 +3,6 @@
 title:
   - "Margaret"
   - "Smith"
-net_id: "ms4108"
 subtitle: 
 job_title: "Assist Curator: Physical Sciences Librarian"
 

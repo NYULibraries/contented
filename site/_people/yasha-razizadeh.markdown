@@ -3,7 +3,6 @@
 title:
   - "Yasha"
   - "Razizadeh"
-net_id: "yvr2"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

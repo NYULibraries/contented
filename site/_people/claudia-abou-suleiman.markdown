@@ -3,7 +3,6 @@
 title:
   - "Claudia"
   - "Abou-Suleiman"
-net_id: "cas18"
 subtitle: 
 job_title: "Business Analyst"
 

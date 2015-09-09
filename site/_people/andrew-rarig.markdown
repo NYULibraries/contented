@@ -3,7 +3,6 @@
 title:
   - "Andrew"
   - "Rarig"
-net_id: "ar198"
 subtitle: 
 job_title: "Graphics Designer"
 

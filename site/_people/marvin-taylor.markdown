@@ -3,7 +3,6 @@
 title:
   - "Marvin"
   - "Taylor"
-net_id: "mjt1"
 subtitle: 
 job_title: "Head Spec Coll & Fales Lib"
 

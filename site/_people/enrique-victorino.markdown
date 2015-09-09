@@ -3,7 +3,6 @@
 title:
   - "Enrique"
   - "Victorino"
-net_id: "ev2"
 subtitle: 
 job_title: "Processing Assistant"
 

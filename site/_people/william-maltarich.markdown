@@ -3,7 +3,6 @@
 title:
   - "William"
   - "Maltarich"
-net_id: "bm73"
 subtitle: 
 job_title: "Assist Curator: Electronic Resources Librarian"
 

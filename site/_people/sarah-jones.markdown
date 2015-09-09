@@ -3,7 +3,6 @@
 title:
   - "Sarah"
   - "Jones"
-net_id: "scj248"
 subtitle: 
 job_title: "Reference Associate"
 

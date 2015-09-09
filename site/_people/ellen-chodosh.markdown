@@ -3,7 +3,6 @@
 title:
   - "Ellen"
   - "Chodosh"
-net_id: "eic3"
 subtitle: 
 job_title: "Director, NYU Press"
 

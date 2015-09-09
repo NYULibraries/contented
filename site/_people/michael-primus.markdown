@@ -3,7 +3,6 @@
 title:
   - "Michael"
   - "Primus"
-net_id: "mp15"
 subtitle: 
 job_title: "Processing Assistant"
 

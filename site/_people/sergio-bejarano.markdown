@@ -3,7 +3,6 @@
 title:
   - "Sergio"
   - "Bejarano"
-net_id: "sb3306"
 subtitle: 
 job_title: "IT Support Specialist"
 

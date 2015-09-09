@@ -3,7 +3,6 @@
 title:
   - "Judith"
   - "Zupnick"
-net_id: "jez219"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

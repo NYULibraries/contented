@@ -3,7 +3,6 @@
 title:
   - "Beatrice"
   - "Richardson"
-net_id: "br56"
 subtitle: 
 job_title: "Client Services Manager"
 

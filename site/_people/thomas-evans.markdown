@@ -3,7 +3,6 @@
 title:
   - "Thomas"
   - "Evans"
-net_id: "twe2"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

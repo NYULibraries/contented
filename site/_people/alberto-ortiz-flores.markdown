@@ -3,7 +3,6 @@
 title:
   - "Alberto"
   - "Ortiz Flores"
-net_id: "aof1"
 subtitle: 
 job_title: "Programmer – Analyst - Interface Designer"
 

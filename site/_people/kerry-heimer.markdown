@@ -3,7 +3,6 @@
 title:
   - "Kerry"
   - "Heimer"
-net_id: "kbh284"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

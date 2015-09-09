@@ -3,7 +3,6 @@
 title:
   - "Arthur"
   - "Tannenbaum"
-net_id: "act1"
 subtitle: 
 job_title: "Assoc Cur/Ref Lib Social Science"
 

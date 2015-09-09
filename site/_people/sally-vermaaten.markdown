@@ -3,7 +3,6 @@
 title:
   - "Sally"
   - "Vermaaten"
-net_id: "sv55"
 subtitle: 
 job_title: "Project Manager"
 

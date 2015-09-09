@@ -3,7 +3,6 @@
 title:
   - "Brenda Ann"
   - "Midavaine"
-net_id: "bm113"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

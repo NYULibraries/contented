@@ -3,7 +3,6 @@
 title:
   - "Francis"
   - "Kukulya"
-net_id: "fk9"
 subtitle: 
 job_title: "Chief Engineer, Campus Cable and Television Center"
 

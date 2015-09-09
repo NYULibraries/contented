@@ -3,7 +3,6 @@
 title:
   - "Carlene"
   - "Stober"
-net_id: "cs92"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

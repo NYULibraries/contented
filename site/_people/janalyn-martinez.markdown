@@ -3,7 +3,6 @@
 title:
   - "Janalyn"
   - "Martinez"
-net_id: "jmm890"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

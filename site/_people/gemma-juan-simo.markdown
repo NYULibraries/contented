@@ -3,7 +3,6 @@
 title:
   - "Gemma"
   - "Juan-Simo"
-net_id: "gjs301"
 subtitle: 
 job_title: "Assistant Editor"
 

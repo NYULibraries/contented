@@ -3,7 +3,6 @@
 title:
   - "Stacey"
   - "Kronenfeld"
-net_id: "sek1"
 subtitle: 
 job_title: "Database Assistant"
 

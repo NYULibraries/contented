@@ -3,7 +3,6 @@
 title:
   - "Yu"
   - "Zhang"
-net_id: "yz534"
 subtitle: 
 job_title: "User Services Librarian"
 

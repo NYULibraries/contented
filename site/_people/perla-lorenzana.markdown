@@ -3,7 +3,6 @@
 title:
   - "Perla"
   - "Lorenzana"
-net_id: "pvl1"
 subtitle: 
 job_title: "Office Assistant"
 

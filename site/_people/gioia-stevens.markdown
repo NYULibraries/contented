@@ -3,7 +3,6 @@
 title:
   - "Gioia"
   - "Stevens"
-net_id: "gms228"
 subtitle: 
 job_title: "Project & Production Cataloger, Special Collections"
 

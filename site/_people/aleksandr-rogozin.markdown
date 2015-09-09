@@ -3,7 +3,6 @@
 title:
   - "Aleksandr"
   - "Rogozin"
-net_id: "ar1917"
 subtitle: 
 job_title: "IT Services Administrator"
 

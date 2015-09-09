@@ -3,7 +3,6 @@
 title:
   - "Catherine"
   - "Maluski"
-net_id: "malusc01"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

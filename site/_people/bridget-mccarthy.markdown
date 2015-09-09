@@ -3,7 +3,6 @@
 title:
   - "Bridget"
   - "McCarthy"
-net_id: "bam13"
 subtitle: 
 job_title: "Collections Assistant"
 

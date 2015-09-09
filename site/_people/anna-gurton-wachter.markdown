@@ -3,7 +3,6 @@
 title:
   - "Anna"
   - "Gurton-Wachter"
-net_id: "agw275"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

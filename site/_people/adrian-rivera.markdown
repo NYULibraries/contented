@@ -3,7 +3,6 @@
 title:
   - "Adrian"
   - "Rivera"
-net_id: "aer8"
 subtitle: 
 job_title: "Media Operations Assistant"
 

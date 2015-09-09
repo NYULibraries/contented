@@ -3,7 +3,6 @@
 title:
   - "Ryan"
   - "McComas"
-net_id: "rrm11"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

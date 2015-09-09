@@ -3,7 +3,6 @@
 title:
   - "Michael"
   - "Hughes"
-net_id: "mph3"
 subtitle: 
 job_title: "Assistant Curator"
 

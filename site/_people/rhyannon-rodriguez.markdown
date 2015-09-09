@@ -3,7 +3,6 @@
 title:
   - "Rhyannon"
   - "Rodriguez"
-net_id: "rjr327"
 subtitle: 
 job_title: "Assistant Research Scholar"
 

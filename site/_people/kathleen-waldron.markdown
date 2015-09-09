@@ -3,7 +3,6 @@
 title:
   - "Kathleen"
   - "Waldron"
-net_id: "kw22"
 subtitle: 
 job_title: "Processing Assistant"
 

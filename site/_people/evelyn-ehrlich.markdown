@@ -3,7 +3,6 @@
 title:
   - "Evelyn"
   - "Ehrlich"
-net_id: "ee2"
 subtitle: 
 job_title: "Head, Humanities & Social Sciences Reference Center"
 

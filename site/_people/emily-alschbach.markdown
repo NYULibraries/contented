@@ -3,7 +3,6 @@
 title:
   - "Emily"
   - "Alschbach"
-net_id: "eaa8"
 subtitle: 
 job_title: "Librarian for NYU SPS Graduate Programs"
 

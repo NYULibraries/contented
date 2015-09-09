@@ -3,7 +3,6 @@
 title:
   - "Patricia"
   - "Warrington"
-net_id: "paw2"
 subtitle: 
 job_title: "Reserve/ Current Periodicals/ Microforms Supervisor"
 

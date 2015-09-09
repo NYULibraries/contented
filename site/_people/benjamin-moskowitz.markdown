@@ -3,7 +3,6 @@
 title:
   - "Benjamin"
   - "Moskowitz"
-net_id: "bm1004"
 subtitle: 
 job_title: "Preservation Media Labs Supervisor"
 

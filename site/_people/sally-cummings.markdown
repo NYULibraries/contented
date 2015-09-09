@@ -3,7 +3,6 @@
 title:
   - "Sally"
   - "Cummings"
-net_id: "sc130"
 subtitle: 
 job_title: "Development Communications Manager"
 

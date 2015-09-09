@@ -3,7 +3,6 @@
 title:
   - "Adam"
   - "Bohannon"
-net_id: "ab4525"
 subtitle: 
 job_title: "Design And Production Specialist"
 

@@ -3,7 +3,6 @@
 title:
   - "Walter"
   - "Martin"
-net_id: "wm46"
 subtitle: 
 job_title: "Campus Cable Technician"
 

@@ -3,7 +3,6 @@
 title:
   - "Nina"
   - "Servizzi"
-net_id: "ns61"
 subtitle: 
 job_title: "Head, Resource Management"
 

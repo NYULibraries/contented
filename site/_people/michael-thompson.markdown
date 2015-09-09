@@ -3,7 +3,6 @@
 title:
   - "Michael"
   - "Thompson"
-net_id: "mt35"
 subtitle: 
 job_title: "Media Services Dispatcher"
 

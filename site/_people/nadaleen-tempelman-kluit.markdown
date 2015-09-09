@@ -3,7 +3,6 @@
 title:
   - "Nadaleen"
   - "Tempelman-Kluit"
-net_id: "ntk2"
 subtitle: 
 job_title: "Associate Curator: Head, User Experience"
 

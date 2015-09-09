@@ -3,7 +3,6 @@
 title:
   - "Susan"
   - "Jacobs"
-net_id: "skj1"
 subtitle: 
 job_title: "Associate Curator:Reference Librarian, Sciences"
 

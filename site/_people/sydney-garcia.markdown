@@ -3,7 +3,6 @@
 title:
   - "Sydney"
   - "Garcia"
-net_id: "smg484"
 subtitle: 
 job_title: "Marketing Assistant"
 

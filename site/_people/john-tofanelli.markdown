@@ -3,7 +3,6 @@
 title:
   - "John"
   - "Tofanelli"
-net_id: "jt94"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

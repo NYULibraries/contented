@@ -3,7 +3,6 @@
 title:
   - "Jose"
   - "Arteaga"
-net_id: "ja25"
 subtitle: 
 job_title: "Administrative Aide"
 

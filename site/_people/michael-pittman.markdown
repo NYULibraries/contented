@@ -3,7 +3,6 @@
 title:
   - "Michael"
   - "Pittman"
-net_id: "mp138"
 subtitle: 
 job_title: "Senior Development Associate"
 

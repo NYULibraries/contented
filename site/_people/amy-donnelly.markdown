@@ -3,7 +3,6 @@
 title:
   - "Amy"
   - "Donnelly"
-net_id: "acd305"
 subtitle: 
 job_title: "Supervisor, Delivery And Resource Sharing Services"
 

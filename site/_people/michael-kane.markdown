@@ -3,7 +3,6 @@
 title:
   - "Michael"
   - "Kane"
-net_id: "mlk2"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

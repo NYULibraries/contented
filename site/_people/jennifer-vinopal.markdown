@@ -3,7 +3,6 @@
 title:
   - "Jennifer"
   - "Vinopal"
-net_id: "jv3"
 subtitle: 
 job_title: "Coordinator, Studio For Digita"
 

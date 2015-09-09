@@ -3,7 +3,6 @@
 title:
   - "Katharine"
   - "Garofalo"
-net_id: "kg78"
 subtitle: 
 job_title: "Accounts Receivable Specialist"
 

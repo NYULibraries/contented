@@ -3,7 +3,6 @@
 title:
   - "Drew"
   - "Wright"
-net_id: "dnw226"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

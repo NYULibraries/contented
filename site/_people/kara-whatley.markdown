@@ -3,7 +3,6 @@
 title:
   - "Kara"
   - "Whatley"
-net_id: "kw43"
 subtitle: 
 job_title: "Head, Science and Engineering"
 

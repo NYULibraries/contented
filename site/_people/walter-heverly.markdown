@@ -3,7 +3,6 @@
 title:
   - "Walter"
   - "Heverly"
-net_id: "wgh1"
 subtitle: 
 job_title: "Assoc Curator/Classics,Phil. and Hellenic Studies Librarian"
 

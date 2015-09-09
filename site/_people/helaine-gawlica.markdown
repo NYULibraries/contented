@@ -3,7 +3,6 @@
 title:
   - "Helaine"
   - "Gawlica"
-net_id: "hag240"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

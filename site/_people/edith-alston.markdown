@@ -3,7 +3,6 @@
 title:
   - "Edith"
   - "Alston"
-net_id: "eea4"
 subtitle: 
 job_title: "Editing and Production Specialist"
 

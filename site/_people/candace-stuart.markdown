@@ -3,7 +3,6 @@
 title:
   - "Candace"
   - "Stuart"
-net_id: "cs177"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

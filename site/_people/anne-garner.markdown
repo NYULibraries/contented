@@ -3,7 +3,6 @@
 title:
   - "Anne"
   - "Garner"
-net_id: "garnea02"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

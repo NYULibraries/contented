@@ -3,7 +3,6 @@
 title:
   - "Bridget"
   - "O'Donnell"
-net_id: "bfo2"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

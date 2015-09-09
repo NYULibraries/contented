@@ -3,7 +3,6 @@
 title:
   - "Eimmy"
   - "Solis"
-net_id: "eks279"
 subtitle: 
 job_title: "Assistant Curator: Librarian for Business and Economics"
 

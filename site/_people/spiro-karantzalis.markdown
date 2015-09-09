@@ -3,7 +3,6 @@
 title:
   - "Spiro"
   - "Karantzalis"
-net_id: "sk157"
 subtitle: 
 job_title: "New Media And Television Technician"
 

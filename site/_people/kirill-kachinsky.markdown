@@ -3,7 +3,6 @@
 title:
   - "Kirill"
   - "Kachinsky"
-net_id: "kk1498"
 subtitle: 
 job_title: "Information Technology Specialist"
 

@@ -3,7 +3,6 @@
 title:
   - "Jonathan"
   - "Cain"
-net_id: "joc222"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

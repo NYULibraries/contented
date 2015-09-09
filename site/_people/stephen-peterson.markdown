@@ -3,7 +3,6 @@
 title:
   - "Stephen"
   - "Peterson"
-net_id: "sp174"
 subtitle: 
 job_title: "Supervisor, Client Services - Help Desk"
 

@@ -3,7 +3,6 @@
 title:
   - "Tal"
   - "Rozen"
-net_id: "tr893"
 subtitle: 
 job_title: "User Experience Specialist"
 

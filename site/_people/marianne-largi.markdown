@@ -3,7 +3,6 @@
 title:
   - "Marianne"
   - "Largi"
-net_id: "mel8"
 subtitle: 
 job_title: "Senior Accounts Payable Assistant"
 

@@ -3,7 +3,6 @@
 title:
   - "Pamela"
   - "Bloom"
-net_id: "pb34"
 subtitle: 
 job_title: "Coordinator of Reference Services"
 

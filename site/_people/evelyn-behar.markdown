@@ -3,7 +3,6 @@
 title:
   - "Evelyn"
   - "Behar"
-net_id: "behare01"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

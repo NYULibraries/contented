@@ -3,7 +3,6 @@
 title:
   - "Adham"
   - "Alok"
-net_id: "aa173"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

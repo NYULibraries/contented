@@ -3,7 +3,6 @@
 title:
   - "Chantal"
   - "Sulkow"
-net_id: "cf289"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

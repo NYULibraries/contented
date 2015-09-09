@@ -3,7 +3,6 @@
 title:
   - "Camelia"
   - "Anghel"
-net_id: "ca71"
 subtitle: 
 job_title: "Metadata Systems Specialist"
 

@@ -3,7 +3,6 @@
 title:
   - "Sunny"
   - "Park"
-net_id: "sp148"
 subtitle: 
 job_title: "Accounts Payable Assistant"
 

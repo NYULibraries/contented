@@ -3,7 +3,6 @@
 title:
   - "Wesley"
   - "Wambold"
-net_id: "wlw208"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

@@ -3,7 +3,6 @@
 title:
   - "Carol"
   - "Kassel"
-net_id: "cm1090"
 subtitle: 
 job_title: "Senior Manager, Digital Library Infrastructure"
 

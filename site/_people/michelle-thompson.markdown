@@ -3,7 +3,6 @@
 title:
   - "Michelle"
   - "Thompson"
-net_id: "mt136"
 subtitle: 
 job_title: "Geographic Information Systems Specialist"
 

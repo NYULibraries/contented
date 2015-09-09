@@ -3,7 +3,6 @@
 title:
   - "Marion"
   - "Holland"
-net_id: "mh4077"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

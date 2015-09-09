@@ -3,7 +3,6 @@
 title:
   - "Kimberly"
   - "Hannah"
-net_id: "kah369"
 subtitle: 
 job_title: "Collections Assistant"
 

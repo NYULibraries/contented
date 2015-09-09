@@ -3,7 +3,6 @@
 title:
   - "Ronald"
   - "Milland"
-net_id: "rm113"
 subtitle: 
 job_title: "Gifts-In-Kind Program Assistant"
 

@@ -3,7 +3,6 @@
 title:
   - "Dean"
   - "Markov"
-net_id: "dm105"
 subtitle: 
 job_title: "Media Operations Assistant"
 

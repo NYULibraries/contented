@@ -3,7 +3,6 @@
 title:
   - "Valerie"
   - "White"
-net_id: "vew1"
 subtitle: 
 job_title: "Bibliographic Assistant"
 

@@ -3,7 +3,6 @@
 title:
   - "Ian"
   - "Beilin"
-net_id: "ib38"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

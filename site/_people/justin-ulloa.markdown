@@ -3,7 +3,6 @@
 title:
   - "Justin"
   - "Ulloa"
-net_id: "jau201"
 subtitle: 
 job_title: "New Media And Television Technician"
 

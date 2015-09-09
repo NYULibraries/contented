@@ -3,7 +3,6 @@
 title:
   - "Jill"
   - "Conte"
-net_id: "jac437"
 subtitle: 
 job_title: "Librarian for Sociology & Psychology"
 

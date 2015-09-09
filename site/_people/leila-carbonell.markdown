@@ -3,7 +3,6 @@
 title:
   - "Leila"
   - "Carbonell"
-net_id: "lmc271"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

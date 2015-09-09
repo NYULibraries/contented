@@ -3,7 +3,6 @@
 title:
   - "Alexsandra"
   - "Mitchell"
-net_id: "amm876"
 subtitle: 
 job_title: "Adjunct Assistant Curator: Reference Librarian"
 

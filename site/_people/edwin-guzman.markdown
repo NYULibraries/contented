@@ -3,7 +3,6 @@
 title:
   - "Edwin"
   - "Guzman"
-net_id: "eg41"
 subtitle: 
 job_title: "Media Services Technician"
 

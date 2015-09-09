@@ -3,7 +3,6 @@
 title:
   - "Samuel"
   - "McGrath"
-net_id: "scm6"
 subtitle: 
 job_title: "Senior Development Associate"
 

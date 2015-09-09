@@ -3,7 +3,6 @@
 title:
   - "Aleksandr"
   - "Gelfand"
-net_id: "ag3566"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

@@ -3,7 +3,6 @@
 title:
   - "Sarah"
   - "Moazeni"
-net_id: "slm567"
 subtitle: 
 job_title: "Reference Associate, Tamiment Library"
 

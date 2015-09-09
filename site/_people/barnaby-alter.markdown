@@ -3,7 +3,6 @@
 title:
   - "Barnaby"
   - "Alter"
-net_id: "ba36"
 subtitle: 
 job_title: "Senior Web Developer"
 

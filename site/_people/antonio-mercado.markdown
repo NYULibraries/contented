@@ -3,7 +3,6 @@
 title:
   - "Antonio"
   - "Mercado"
-net_id: "am4897"
 subtitle: 
 job_title: "Media Services Technician"
 

@@ -3,7 +3,6 @@
 title:
   - "Colin"
   - "Torre"
-net_id: "cjt346"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

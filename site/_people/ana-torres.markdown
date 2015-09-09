@@ -3,7 +3,6 @@
 title:
   - "Ana"
   - "Torres"
-net_id: "at1387"
 subtitle: 
 job_title: "Assistant Curator"
 

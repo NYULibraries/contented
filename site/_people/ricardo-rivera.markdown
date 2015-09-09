@@ -3,7 +3,6 @@
 title:
   - "Ricardo"
   - "Rivera"
-net_id: "rr63"
 subtitle: 
 job_title: "Supervisor, Technical Operations"
 

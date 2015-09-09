@@ -3,7 +3,6 @@
 title:
   - "Laura"
   - "Bisberg"
-net_id: "ls3888"
 subtitle: 
 job_title: "Business Manager"
 

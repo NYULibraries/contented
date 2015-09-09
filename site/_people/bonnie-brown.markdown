@@ -3,7 +3,6 @@
 title:
   - "Bonnie"
   - "Brown"
-net_id: "blb213"
 subtitle: 
 job_title: "Senior Video Acquisitions and Reference Assistant"
 

@@ -3,7 +3,6 @@
 title:
   - "Jason"
   - "Alicea"
-net_id: "ja1458"
 subtitle: 
 job_title: "Media Services Technician I"
 

@@ -3,7 +3,6 @@
 title:
   - "Andrew"
   - "Lee"
-net_id: "ahl1"
 subtitle: 
 job_title: "Associate Curator/Librarian for History and Politics"
 

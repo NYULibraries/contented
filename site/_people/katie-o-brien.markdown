@@ -3,7 +3,6 @@
 title:
   - "Katie"
   - "O'Brien"
-net_id: "ko662"
 subtitle: 
 job_title: "HR Manager"
 

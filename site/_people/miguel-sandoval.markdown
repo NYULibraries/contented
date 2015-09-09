@@ -3,7 +3,6 @@
 title:
   - "Miguel"
   - "Sandoval"
-net_id: "mas793"
 subtitle: 
 job_title: "Information Technology Specialist"
 

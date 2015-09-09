@@ -3,7 +3,6 @@
 title:
   - "Andrew"
   - "Gregory"
-net_id: "aag4"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

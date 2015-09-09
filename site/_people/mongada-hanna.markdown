@@ -3,7 +3,6 @@
 title:
   - "Mongada"
   - "Hanna"
-net_id: "mfh1"
 subtitle: 
 job_title: "Processing Assistant"
 

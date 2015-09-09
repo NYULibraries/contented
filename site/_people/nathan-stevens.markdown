@@ -3,7 +3,6 @@
 title:
   - "Nathan"
   - "Stevens"
-net_id: "ns96"
 subtitle: 
 job_title: "Programmer/ Analyst"
 

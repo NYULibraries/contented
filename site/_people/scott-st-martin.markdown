@@ -3,7 +3,6 @@
 title:
   - "Scott"
   - "St Martin"
-net_id: "ssm9"
 subtitle: 
 job_title: "Reference Services Supervisor"
 

@@ -3,7 +3,6 @@
 title:
   - "Esther"
   - "Katz"
-net_id: "ek6"
 subtitle: 
 job_title: "Assistant Research Scientist"
 

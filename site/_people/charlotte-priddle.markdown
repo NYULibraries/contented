@@ -3,7 +3,6 @@
 title:
   - "Charlotte"
   - "Priddle"
-net_id: "cp1118"
 subtitle: 
 job_title: "Assistant Curator/Librarian For Printed Books"
 

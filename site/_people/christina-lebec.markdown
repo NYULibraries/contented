@@ -3,7 +3,6 @@
 title:
   - "Christina"
   - "Lebec"
-net_id: "cml466"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

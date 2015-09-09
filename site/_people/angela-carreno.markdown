@@ -3,7 +3,6 @@
 title:
   - "Angela"
   - "Carreno"
-net_id: "amc1"
 subtitle: 
 job_title: "Head of Collection Development"
 

@@ -3,7 +3,6 @@
 title:
   - "Eric"
   - "Stedfeld"
-net_id: "els4"
 subtitle: 
 job_title: "Project Manager/ Systems Analyst"
 

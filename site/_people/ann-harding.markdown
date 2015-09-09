@@ -3,7 +3,6 @@
 title:
   - "Ann"
   - "Harding"
-net_id: "ajh7"
 subtitle: 
 job_title: "Executive Assistant"
 

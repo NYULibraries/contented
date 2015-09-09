@@ -3,7 +3,6 @@
 title:
   - "Janet"
   - "Bunde"
-net_id: "jmb583"
 subtitle: 
 job_title: "Processing Archivist II"
 

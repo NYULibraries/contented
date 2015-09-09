@@ -3,7 +3,6 @@
 title:
   - "Daniel"
   - "Perkins"
-net_id: "dp58"
 subtitle: 
 job_title: "Global Services Librarian"
 

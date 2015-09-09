@@ -3,7 +3,6 @@
 title:
   - "Jeremy"
   - "Umali"
-net_id: "ju6"
 subtitle: 
 job_title: "Senior Systems Administrator"
 

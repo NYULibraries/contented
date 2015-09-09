@@ -3,7 +3,6 @@
 title:
   - "Joseph"
   - "Fouse"
-net_id: "jf134"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

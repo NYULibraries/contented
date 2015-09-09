@@ -3,7 +3,6 @@
 title:
   - "Yuri"
   - "Medvinsky"
-net_id: "ym26"
 subtitle: 
 job_title: "Systems Administrator"
 

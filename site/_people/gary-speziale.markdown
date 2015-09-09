@@ -3,7 +3,6 @@
 title:
   - "Gary"
   - "Speziale"
-net_id: "gjs3"
 subtitle: 
 job_title: "Special Projects Assistant"
 

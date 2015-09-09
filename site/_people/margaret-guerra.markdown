@@ -3,7 +3,6 @@
 title:
   - "Margaret"
   - "Guerra"
-net_id: "mg3539"
 subtitle: 
 job_title: "Assistant To The Director/subsidiary Rights Administrator"
 

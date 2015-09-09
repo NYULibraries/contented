@@ -3,7 +3,6 @@
 title:
   - "David"
   - "Ratzan"
-net_id: "dr128"
 subtitle: 
 job_title: "Assistant Curator: Head, ISAW Library"
 

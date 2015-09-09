@@ -3,7 +3,6 @@
 title:
   - "Hadeer"
   - "Elsbai"
-net_id: "he14"
 subtitle: 
 job_title: "Reference Associate"
 

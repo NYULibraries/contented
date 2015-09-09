@@ -3,7 +3,6 @@
 title:
   - "Sallie"
   - "Willcox"
-net_id: "willcs01"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

@@ -3,7 +3,6 @@
 title:
   - "Alysa"
   - "Hornick"
-net_id: "arh222"
 subtitle: 
 job_title: "Offsite Preparations Supervisor"
 

@@ -3,7 +3,6 @@
 title:
   - "Nicholas"
   - "Wolf"
-net_id: "nmw2"
 subtitle: 
 job_title: "Research Data Management Librarian"
 

@@ -3,7 +3,6 @@
 title:
   - "Eric"
   - "Zinner"
-net_id: "ecz1"
 subtitle: 
 job_title: "Associate Director, and Editor-In-Chief"
 

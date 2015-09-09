@@ -3,7 +3,6 @@
 title:
   - "Caelyn"
   - "Cobb"
-net_id: "ctc273"
 subtitle: 
 job_title: "Assistant Editor"
 

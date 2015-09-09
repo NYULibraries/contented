@@ -3,7 +3,6 @@
 title:
   - "Nora"
   - "Deleonard"
-net_id: "naw231"
 subtitle: 
 job_title: "HR Administrator"
 

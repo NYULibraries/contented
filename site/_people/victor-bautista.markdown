@@ -3,7 +3,6 @@
 title:
   - "Victor"
   - "Bautista"
-net_id: "vb808"
 subtitle: 
 job_title: "Assistant Research Scholar: HIDVL Video Editor"
 

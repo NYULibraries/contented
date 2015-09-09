@@ -3,7 +3,6 @@
 title:
   - "Alicia"
   - "Estes"
-net_id: "ae2"
 subtitle: 
 job_title: "Head Business And Documents Ce"
 

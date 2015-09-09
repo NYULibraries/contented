@@ -3,7 +3,6 @@
 title:
   - "Jianfen"
   - "Claman"
-net_id: "gc28"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

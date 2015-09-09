@@ -3,7 +3,6 @@
 title:
   - "Marybeth"
   - "McCartin"
-net_id: "mm10"
 subtitle: 
 job_title: "Associate Curator/ Instructional Services"
 

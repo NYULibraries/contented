@@ -3,7 +3,6 @@
 title:
   - "Thomas"
   - "McNulty"
-net_id: "tpm2"
 subtitle: 
 job_title: "Associate Curator/ Reference Librarian"
 

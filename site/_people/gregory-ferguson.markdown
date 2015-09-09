@@ -3,7 +3,6 @@
 title:
   - "Gregory"
   - "Ferguson"
-net_id: "gf41"
 subtitle: 
 job_title: "Karms Supervisor, Monographic Ordering And Receiving"
 

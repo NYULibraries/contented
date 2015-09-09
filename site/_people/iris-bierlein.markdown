@@ -3,7 +3,6 @@
 title:
   - "Iris"
   - "Bierlein"
-net_id: "ib43"
 subtitle: 
 job_title: "User Experience Specialist"
 

@@ -3,7 +3,6 @@
 title:
   - "Alexandra"
   - "Ducett"
-net_id: "amd25"
 subtitle: 
 job_title: "Reference Associate"
 

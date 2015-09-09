@@ -3,7 +3,6 @@
 title:
   - "Heather"
   - "Rolen"
-net_id: "hr47"
 subtitle: 
 job_title: "Senior Technical Manager for Emerging Technologies - LITS"
 

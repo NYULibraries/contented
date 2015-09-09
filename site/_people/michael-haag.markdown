@@ -3,7 +3,6 @@
 title:
   - "Michael"
   - "Haag"
-net_id: "mh92"
 subtitle: 
 job_title: "Discovery Systems Technology Specialist"
 

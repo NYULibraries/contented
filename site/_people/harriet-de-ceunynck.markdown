@@ -3,7 +3,6 @@
 title:
   - "Harriet"
   - "De Ceunynck"
-net_id: "hd631"
 subtitle: 
 job_title: "Adjunct Assistant Curator"
 

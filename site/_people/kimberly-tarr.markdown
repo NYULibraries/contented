@@ -3,7 +3,6 @@
 title:
   - "Kimberly"
   - "Tarr"
-net_id: "kst237"
 subtitle: 
 job_title: "Moving Image Preservation Specialist"
 

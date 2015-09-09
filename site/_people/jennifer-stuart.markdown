@@ -3,7 +3,6 @@
 title:
   - "Jennifer"
   - "Stuart"
-net_id: "js8195"
 subtitle: 
 job_title: "Video Production Administrator"
 

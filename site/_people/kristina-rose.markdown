@@ -3,7 +3,6 @@
 title:
   - "Kristina"
   - "Rose"
-net_id: "kr37"
 subtitle: 
 job_title: "Head, Access, Delivery & Resource Sharing"
 

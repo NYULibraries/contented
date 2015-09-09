@@ -3,7 +3,6 @@
 title:
   - "Cathy"
   - "Moran Hajo"
-net_id: "cm18"
 subtitle: 
 job_title: "Associate Editor/Assistant Director of the Margaret Sanger Papers"
 

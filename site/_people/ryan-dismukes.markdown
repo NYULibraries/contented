@@ -3,7 +3,6 @@
 title:
   - "Ryan"
   - "Dismukes"
-net_id: "rtd239"
 subtitle: 
 job_title: "Manager, Operations"
 

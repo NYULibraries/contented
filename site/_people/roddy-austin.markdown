@@ -3,7 +3,6 @@
 title:
   - "Roddy"
   - "Austin"
-net_id: "ra67"
 subtitle: 
 job_title: "Associate Dean for Library IT and University Media Services"
 

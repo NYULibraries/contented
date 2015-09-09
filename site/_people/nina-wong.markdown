@@ -3,7 +3,6 @@
 title:
   - "Nina"
   - "Wong"
-net_id: "nw35"
 subtitle: 
 job_title: "Assistant Dean for Budget and Planning"
 

@@ -3,7 +3,6 @@
 title:
   - "Robert"
   - "Drzewicki"
-net_id: "rd101"
 subtitle: 
 job_title: "Adjunct"
 

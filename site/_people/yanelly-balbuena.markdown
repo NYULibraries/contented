@@ -3,7 +3,6 @@
 title:
   - "Yanelly"
   - "Balbuena"
-net_id: "yb15"
 subtitle: 
 job_title: "Music and Video Assistant"
 

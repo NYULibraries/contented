@@ -3,7 +3,6 @@
 title:
   - "Kimberly"
   - "Walker-Long"
-net_id: "kw5"
 subtitle: 
 job_title: "Access, Delivery And Resource Sharing Services Assistant"
 

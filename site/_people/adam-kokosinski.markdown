@@ -3,7 +3,6 @@
 title:
   - "Adam"
   - "Kokosinski"
-net_id: "ak16"
 subtitle: 
 job_title: "Senior Processing Assistant"
 

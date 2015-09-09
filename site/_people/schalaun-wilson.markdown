@@ -3,7 +3,6 @@
 title:
   - "Schalaun"
   - "Wilson"
-net_id: "sdw201"
 subtitle: 
 job_title: "Administrative Aide"
 
