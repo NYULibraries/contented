@@ -14,13 +14,16 @@ tmp/
 coverage/
 
 # Mardowns that don't need to be put into GH
-site/.siteleaf.yml
-# site/_departments
-# site/_locations
-# site/_people
-# site/_services
-# site/_spaces
+.siteleaf.yml
 .markdown
+
+# jekyll instances
+_site
+site/_site/
+.jekyll-metadata
+.sass-cache
+node_modules
+
 
 # Temporary directory for any sort of siteleaf pushes
 tmp_site/

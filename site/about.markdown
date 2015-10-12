@@ -3,9 +3,9 @@ simple_header: true
 links:
   Example: http://example.org
   Careers: "#todo"
-title: About
-date: '2015-08-14 20:28:22 +0000'
 permalink: "/about/"
+date: '2015-08-14 20:28:00 +0000'
+title: About
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sapien nulla, facilisis nec ex id, pharetra vestibulum erat. Aliquam vehicula ipsum sed velit vulputate lacinia. Proin sollicitudin dapibus nunc non tempus. Vivamus augue dui, aliquam eget lobortis non, hendrerit eu sapien. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sem turpis, varius porta dignissim non, aliquam et lectus. In gravida ullamcorper diam in rutrum.
