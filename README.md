@@ -1,12 +1,10 @@
 # NYU Division of Libraries Web Presence
 
-_[A work in progress]_
-
 [![NYU](https://github.com/NYULibraries/nyulibraries-assets/blob/master/lib/assets/images/nyu.png)](https://dev.library.nyu.edu)
 [![Build Status](https://travis-ci.org/NYULibraries/library.nyu.edu.svg)](https://travis-ci.org/NYULibraries/library.nyu.edu)
 [![Dependency Status](https://gemnasium.com/NYULibraries/library.nyu.edu.svg)](https://gemnasium.com/NYULibraries/library.nyu.edu)
 [![Code Climate](https://codeclimate.com/github/NYULibraries/library.nyu.edu/badges/gpa.svg)](https://codeclimate.com/github/NYULibraries/library.nyu.edu)
-[![Issues](http://img.shields.io/github/issues/NYULibraries/library.nyu.edu.svg?style=flat-square)](http://github.com/NYULibraries/library.nyu.edu/issues)
+[![Coverage Status](https://coveralls.io/repos/NYULibraries/library.nyu.edu/badge.svg?branch=development&service=github)](https://coveralls.io/github/NYULibraries/library.nyu.edu?branch=development)
 
 Home for the assets and templates for the NYU Division of Libraries [Siteleaf](http://www.siteleaf.com/) website to replace [http://library.nyu.edu](http://library.nyu.edu).
 
