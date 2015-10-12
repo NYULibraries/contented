@@ -6,3 +6,8 @@ package.json
 *.zip
 wiki/*
 */_example.markdown
+README.md
+
+.jekyll-metadata
+.sass-cache
+_site/*
