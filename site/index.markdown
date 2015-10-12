@@ -1,5 +1,4 @@
 ---
-layout: home
 regenerate: true
 links_title: Quick Links
 links:
@@ -14,8 +13,8 @@ secondary_links:
 spaces_title: Study Spaces
 blog:
   title: Latest News
-  rss: https://en.wikipedia.org/w/index.php?title=Special:NewPages&feed=rss
-  link: http://example.org
+  rss: https://wp.nyu.edu/librariesandblogs/feed/
+  link: http://wp.nyu.edu/librariesandblogs/
 spaces:
   title: Study Spaces
   items:
@@ -55,8 +54,9 @@ collections:
     location: NYU Dhabi Library
     url: https://specialcollections.library.nyu.edu/search/catalog?f%5Brepository_sim%5D%5B%5D=rism
   link: https://specialcollections.library.nyu.edu
-date: '2015-08-14 20:28:00 +0000'
 permalink: "/index.html"
+date: '2015-08-14 20:28:00 +0000'
+layout: home
 title: Index
 ---
 
