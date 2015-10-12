@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Heather"
-  - "Rolen"
-subtitle: 
-job_title: "Senior Technical Manager for Emerging Technologies - LITS"
-
-location: 
-space: 
+subtitle: ''
+job_title: Senior Technical Manager for Emerging Technologies - LITS
+location: ''
+space: ''
 departments:
-  - "IT Services & Media Services"
-
-status: 
-expertise:
-
-email: "hr47@nyu.edu"
+- IT Services & Media Services
+status: ''
+expertise: 
+email: hr47@nyu.edu
 phone: "(212) 992--9989"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Heather Rolen
 ---
 
 # About Heather Rolen
-
-

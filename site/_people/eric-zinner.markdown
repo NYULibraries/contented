@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Eric"
-  - "Zinner"
-subtitle: 
-job_title: "Associate Director, and Editor-In-Chief"
-
-location: "838 Broadway"
-space: "3FL"
+subtitle: ''
+job_title: Associate Director, and Editor-In-Chief
+location: 838 Broadway
+space: 3FL
 departments:
-  - "NYU Press"
-
-status: 
-expertise:
-
-email: "ecz1@nyu.edu"
+- NYU Press
+status: ''
+expertise: 
+email: ecz1@nyu.edu
 phone: "(212) 998-2544"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Eric Zinner
 ---
 
 # About Eric Zinner
-
-

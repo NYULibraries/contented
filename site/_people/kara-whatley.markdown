@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Kara"
-  - "Whatley"
-subtitle: 
-job_title: "Head, Science and Engineering"
-
-location: 
-space: 
+subtitle: ''
+job_title: 'Associate Curator: Head, Science & Engineering'
+location: Bobst Library
+space: '516'
 departments:
-  - "Collections & Research Services"
-
-status: 
-expertise:
-
-email: "kw43@nyu.edu"
+- Public Services
+status: Associate Curator
+expertise: 
+email: kw43@nyu.edu
 phone: "(646) 997--3164"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Kara Whatley
 ---
 
 # About Kara Whatley
-
-

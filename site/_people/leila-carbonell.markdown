@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Leila"
-  - "Carbonell"
-subtitle: 
-job_title: "Senior Processing Assistant"
-
-location: "20 Cooper Square"
-space: "3"
+subtitle: ''
+job_title: Senior Processing Assistant
+location: 20 Cooper Square
+space: '3'
 departments:
-  - "Global Processing"
-
-status: 
-expertise:
-
-email: "lmc271@nyu.edu"
+- Global Processing
+status: ''
+expertise: 
+email: lmc271@nyu.edu
 phone: "(212) 998-2457"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Leila Carbonell
 ---
 
 # About Leila Carbonell
-
-

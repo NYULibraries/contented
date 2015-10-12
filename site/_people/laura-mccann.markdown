@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Laura"
-  - "McCann"
-subtitle: 
-job_title: "Assistant Curator: Conservation Librarian"
-
-location: "Bobst Library"
-space: "LL2"
+subtitle: ''
+job_title: 'Assistant Curator: Conservation Librarian'
+location: Bobst Library
+space: LL2
 departments:
-  - "Preservation"
-
-status: 
-expertise:
-
-email: "lm103@nyu.edu"
+- Preservation
+status: Assistant Curator
+expertise: 
+email: lm103@nyu.edu
 phone: "(212) 998-2562"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Laura McCann
 ---
 
 # About Laura McCann
-
-

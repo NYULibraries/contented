@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Kathleen"
-  - "Waldron"
-subtitle: 
-job_title: "Processing Assistant"
-
-location: "20 Cooper Square"
-space: "305E"
+subtitle: ''
+job_title: Processing Assistant
+location: 20 Cooper Square
+space: 305E
 departments:
-  - "Metadata Production & Management"
-
-status: 
-expertise:
-
-email: "kw22@nyu.edu"
+- Metadata Production & Management
+status: ''
+expertise: 
+email: kw22@nyu.edu
 phone: "(212) 998-2476"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Kathleen Waldron
 ---
 
 # About Kathleen Waldron
-
-

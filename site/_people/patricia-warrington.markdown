@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Patricia"
-  - "Warrington"
-subtitle: 
-job_title: "Reserve/ Current Periodicals/ Microforms Supervisor"
-
-location: "Bobst Library"
-space: "ALVL"
+subtitle: ''
+job_title: Reserve/ Current Periodicals/ Microforms Supervisor
+location: Bobst Library
+space: ALVL
 departments:
-  - "Access, Delivery & Resource Sharing Services"
-
-status: 
-expertise:
-
-email: "paw2@nyu.edu"
+- Access, Delivery & Resource Sharing Services
+status: ''
+expertise: 
+email: paw2@nyu.edu
 phone: "(212) 998-2615"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Patricia Warrington
 ---
 
 # About Patricia Warrington
-
-

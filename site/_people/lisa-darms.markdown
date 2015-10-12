@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Lisa"
-  - "Darms"
-subtitle: 
-job_title: "Senior Archivist, Fales Library"
-
-location: "Bobst Library"
-space: "FL.3"
+subtitle: ''
+job_title: Senior Archivist, Fales Library
+location: Bobst Library
+space: FL.3
 departments:
-  - "Fales Library"
-
-status: 
-expertise:
-
-email: "ld819@nyu.edu"
+- Fales Library
+status: ''
+expertise: 
+email: ld819@nyu.edu
 phone: "(212) 998-2644"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Lisa Darms
 ---
 
 # About Lisa Darms
-
-

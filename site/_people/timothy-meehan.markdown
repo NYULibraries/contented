@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Timothy"
-  - "Meehan"
-subtitle: 
-job_title: "New Media And TV Technician"
-
-location: "Joseph And Violet Pless Hall"
-space: "FL."
+subtitle: ''
+job_title: New Media And TV Technician
+location: Joseph And Violet Pless Hall
+space: FL.
 departments:
-  - "NYU-TV"
-
-status: 
-expertise:
-
-email: "tm100@nyu.edu"
+- NYU-TV
+status: ''
+expertise: 
+email: tm100@nyu.edu
 phone: "(212) 998-2673"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Timothy Meehan
 ---
 
 # About Timothy Meehan
-
-

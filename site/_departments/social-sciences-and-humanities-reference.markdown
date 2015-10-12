@@ -1,34 +1,22 @@
 ---
-
-title: "Social Sciences and Humanities Reference"
 subtitle: "(SocHum)"
-
-location: "Elmer Holmes Bobst Library"
+location: Elmer Holmes Bobst Library
 space: 
-
-email: "lib-sochumref@lists.nyu.edu"
+email: lib-sochumref@lists.nyu.edu
 phone: "(212) 998-2500"
-
 twitter: 
 facebook: 
-blog:
-
+blog: 
 libcal_id: 
 libanswers_id: 
-
-links:
-
+links: 
 net_id: 
-
-classes:
-
+classes: 
 image: 
-
 buttons:
   Request an Appointment: http://www.example.org
-
-keywords:
-
+keywords: 
+title: Social Sciences and Humanities Reference
 ---
 
 # What We Do

@@ -1,34 +1,29 @@
 ---
-
-title:
-  - "Andrew"
-  - "Lee"
-subtitle: 
-job_title: "Associate Curator/Librarian for History and Politics"
-
-location: "Bobst Library"
-space: "MZ04E"
+subtitle: ''
+job_title: Associate Curator/Librarian for History and Politics
+location: Bobst Library
+space: MZ04E
 departments:
-  - "SocHum Reference Librarians"
-
-status: 
+- SocHum Reference Librarians
+status: Associate Curator
 expertise:
-
-email: "ahl1@nyu.edu"
+- European Studies
+- History
+- Iberian Studies
+- Irish Studies
+- Labor and the Left
+- Politics
+email: ahl1@nyu.edu
 phone: "(212) 998-2633"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 51720
+publications: 
 keywords:
-
+- Subject Librarian
+title: Andrew Lee
 ---
 
 # About Andrew Lee
-
-

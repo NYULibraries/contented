@@ -1,34 +1,25 @@
 ---
-
-title:
-  - "Pamela"
-  - "Bloom"
-subtitle: 
-job_title: "Coordinator of Reference Services"
-
-location: "Bobst Library"
-space: "1FL"
+subtitle: ''
+job_title: Performing Arts Librarian
+location: Bobst Library
+space: 1FL
 departments:
-  - "SocHum Reference Librarians"
-
-status: 
+- SocHum Reference Librarians
+status: ''
 expertise:
-
-email: "pb34@nyu.edu"
+- Interactive Telecommunications Program (ITP)'
+- Performing Arts
+email: pb34@nyu.edu
 phone: "(212) 998-2618"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 2280
+publications: 
 keywords:
-
+- Subject Librarian
+title: Pamela Bloom
 ---
 
 # About Pamela Bloom
-
-

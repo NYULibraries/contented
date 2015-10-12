@@ -1,34 +1,26 @@
 ---
-
-title:
-  - "Angela"
-  - "Carreno"
-subtitle: 
-job_title: "Head of Collection Development"
-
-location: "Bobst Library"
-space: "MZ"
+subtitle: ''
+job_title: Librarian for Latin American & Caribbean Studies
+location: Bobst Library
+space: MZ
 departments:
-  - "Collections & Research Services"
-
-status: 
+- Collections & Research Services
+status: ''
 expertise:
-
-email: "amc1@nyu.edu"
+- Ethnic Studies
+- "'Latin American & Caribbean Studies'"
+- "'Spanish & Portuguese'"
+email: amc1@nyu.edu
 phone: "(212) 998-2606"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 51725
+publications: 
 keywords:
-
+- Subject Librarian
+title: Angela Carreno
 ---
 
 # About Angela Carreno
-
-

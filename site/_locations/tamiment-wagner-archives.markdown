@@ -1,39 +1,27 @@
 ---
-
-title: "Tamiment & Wagner Archives"
 subtitle: 
-
-type: "Library"
-
+type: Library
 address: |
   70 Washington Square South
-  New York,NY 10012
-city: "New York"
-country: "United States"
+  New York, NY 10012
+city: New York
+country: United States
 coordinates: 
-
 email: 
 phone: "(212) 998-2630"
-
 twitter: 
 facebook: 
-blog:
-
-libcal_id: "1536"
+blog: 
+libcal_id: '1536'
 libcal_truncated: false
 libcal_link: 
 libanswers_id: 
-
-links:
-
+links: 
 image: 
-
 keywords:
-  - "Library"
-  - "NYU"
-
+- Library
+- NYU
+title: Tamiment & Wagner Archives
 ---
 
 # About Tamiment & Wagner Archives
-
-

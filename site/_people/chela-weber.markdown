@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Chela"
-  - "Weber"
-subtitle: 
-job_title: "Head, Archival Collections Managment"
-
-location: "20 Cooper Square"
-space: "FL.3"
+subtitle: ''
+job_title: 'Assistant Curator: Head, Archival Collections Management'
+location: ''
+space: ''
 departments:
-  - "Archival Collections Management"
-
-status: 
-expertise:
-
-email: "csw7@nyu.edu"
+- Knowledge Access & Resource Management Services
+status: Assistant Curator
+expertise: 
+email: csw7@nyu.edu
 phone: "(212) 998-2631"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Chela Weber
 ---
 
 # About Chela Weber
-
-

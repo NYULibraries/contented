@@ -1,34 +1,23 @@
 ---
-
-title:
-  - "Kristina"
-  - "Rose"
-subtitle: 
-job_title: "Head, Access, Delivery & Resource Sharing"
-
-location: "Bobst Library"
-space: "1"
+subtitle: ''
+job_title: 'Assistant Curator: Head, Access, Delivery & Resource Sharing'
+location: Bobst Library
+space: '1'
 departments:
-  - "Public Services"
-
-status: 
-expertise:
-
-email: "kr37@nyu.edu"
+- Public Services
+status: Assistant Curator
+expertise: 
+email: kr37@nyu.edu
 phone: "(212) 998-2532"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
   title: Research Guides
   libguide_id: 51772
-
-publications:
-
-keywords:
-
+publications: 
+keywords: 
+title: Kristina Rose
 ---
 
 # About Kristina Rose

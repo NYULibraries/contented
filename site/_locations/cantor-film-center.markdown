@@ -1,39 +1,27 @@
 ---
-
-title: "Cantor Film Center"
 subtitle: 
-
-type: "Office"
-
+type: Office
 address: |
   34 East 8th Street
-  New York,NY 10003
-city: "New York"
-country: "United States"
+  New York, NY 10003
+city: New York
+country: United States
 coordinates: 
-
 email: 
 phone: 
-
 twitter: 
 facebook: 
-blog:
-
+blog: 
 libcal_id: 
 libcal_truncated: false
 libcal_link: 
 libanswers_id: 
-
-links:
-
+links: 
 image: 
-
 keywords:
-  - "Library"
-  - "NYU"
-
+- Library
+- NYU
+title: Cantor Film Center
 ---
 
 # About Cantor Film Center
-
-

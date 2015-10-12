@@ -1,34 +1,24 @@
 ---
-
-title:
-  - "Diana"
-  - "Greene"
-subtitle: 
-job_title: "Associate Curator / Slavic Studies Librarian"
-
-location: "Bobst Library"
-space: "MZ"
+subtitle: ''
+job_title: Associate Curator / Slavic Studies Librarian
+location: Bobst Library
+space: MZ
 departments:
-  - "SocHum Reference Librarians"
-
-status: 
+- SocHum Reference Librarians
+status: Associate Curator
 expertise:
-
-email: "dg3@nyu.edu"
+- Slavic Studies
+email: dg3@nyu.edu
 phone: "(212) 998-2504"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 51728
+publications: 
 keywords:
-
+- Subject Librarian
+title: Diana Greene
 ---
 
 # About Diana Greene
-
-

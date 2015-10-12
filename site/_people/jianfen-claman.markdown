@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Jianfen"
-  - "Claman"
-subtitle: 
-job_title: "Senior Processing Assistant"
-
-location: "20 Cooper Square"
-space: "325H"
+subtitle: ''
+job_title: Senior Processing Assistant
+location: 20 Cooper Square
+space: 325H
 departments:
-  - "Serials"
-
-status: 
-expertise:
-
-email: "gc28@nyu.edu"
+- Serials
+status: ''
+expertise: 
+email: gc28@nyu.edu
 phone: "(212) 998-2484"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Jianfen Claman
 ---
 
 # About Jianfen Claman
-
-

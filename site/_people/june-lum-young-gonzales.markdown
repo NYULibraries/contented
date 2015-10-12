@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "June"
-  - "Lum Young Gonzales"
-subtitle: 
-job_title: "Administrative Aide II"
-
-location: "Silver Center"
-space: "LL7A"
+subtitle: ''
+job_title: Administrative Aide II
+location: Silver Center
+space: LL7A
 departments:
-  - "Classroom Media"
-
-status: 
-expertise:
-
-email: "jl18@nyu.edu"
+- Classroom Media
+status: ''
+expertise: 
+email: jl18@nyu.edu
 phone: "(212) 998-2688"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: June Lum Young Gonzales
 ---
 
 # About June Lum Young Gonzales
-
-

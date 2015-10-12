@@ -1,34 +1,26 @@
 ---
-
-title:
-  - "Amy"
-  - "Lucker"
-subtitle: 
-job_title: "Associate Curator: Head of IFA"
-
-location: "Institute of Fine Arts"
-space: "1"
+subtitle: ''
+job_title: 'Associate Curator: Head of IFA'
+location: Institute of Fine Arts
+space: '1'
 departments:
-  - "Collections & Research Services"
-
-status: 
+- Collections & Research Services
+status: Associate Curator
 expertise:
-
-email: "ael3@nyu.edu"
+- Archaelogy (IFA)'
+- "'Conservation of Works of Art (IFA)'"
+- "'Fine Arts (IFA)'"
+email: ael3@nyu.edu
 phone: "(212) 992-5908"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 51733
+publications: 
 keywords:
-
+- 'Subject Librarian '
+title: Amy Lucker
 ---
 
 # About Amy Lucker
-
-

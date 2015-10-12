@@ -1,39 +1,27 @@
 ---
-
-title: "New School Archives & Special Collections"
 subtitle: 
-
-type: "Library"
-
+type: Library
 address: |
   66 Fifth Avenue
-  Lobby Level,New York,NY 10011
-city: "New York"
-country: "United States"
+  Lobby Level, New York, NY 10011
+city: New York
+country: United States
 coordinates: 
-
 email: 
 phone: "(212) 229-5942"
-
 twitter: 
 facebook: 
-blog:
-
+blog: 
 libcal_id: 
 libcal_truncated: false
 libcal_link: 
 libanswers_id: 
-
-links:
-
+links: 
 image: 
-
 keywords:
-  - "Library"
-  - "Partner Institution"
-
+- Library
+- Partner Institution
+title: New School Archives & Special Collections
 ---
 
 # About New School Archives & Special Collections
-
-

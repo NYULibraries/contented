@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Michael"
-  - "Pittman"
-subtitle: 
-job_title: "Senior Development Associate"
-
-location: "Bobst Library"
-space: "1116"
+subtitle: ''
+job_title: Senior Development Associate
+location: Bobst Library
+space: '1116'
 departments:
-  - "Development at Bobst"
-
-status: 
-expertise:
-
-email: "mp138@nyu.edu"
+- Development at Bobst
+status: ''
+expertise: 
+email: mp138@nyu.edu
 phone: "(212) 998-2446"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Michael Pittman
 ---
 
 # About Michael Pittman
-
-

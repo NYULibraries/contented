@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Dorothea"
-  - "Halliday"
-subtitle: 
-job_title: "Managing Editor"
-
-location: "838 Broadway"
-space: "3"
+subtitle: ''
+job_title: Managing Editor
+location: 838 Broadway
+space: '3'
 departments:
-  - "Production & Design"
-
-status: 
-expertise:
-
-email: "dsh5@nyu.edu"
+- Production & Design
+status: ''
+expertise: 
+email: dsh5@nyu.edu
 phone: "(212) 998-2575"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Dorothea Halliday
 ---
 
 # About Dorothea Halliday
-
-

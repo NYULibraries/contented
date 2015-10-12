@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Rhyannon"
-  - "Rodriguez"
-subtitle: 
-job_title: "Assistant Research Scholar"
-
-location: "Bobst Library"
-space: "3FL"
+subtitle: ''
+job_title: Assistant Research Scholar
+location: Bobst Library
+space: 10FL
 departments:
-  - "Fales Library"
-
-status: 
-expertise:
-
-email: "rjr327@nyu.edu"
+- Archival Collections Management
+status: ''
+expertise: 
+email: rjr327@nyu.edu
 phone: "(212) 998-2596"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Rhyannon Rodriguez
 ---
 
 # About Rhyannon Rodriguez
-
-

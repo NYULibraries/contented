@@ -1,34 +1,25 @@
 ---
-
-title:
-  - "Alicia"
-  - "Estes"
-subtitle: 
-job_title: "Head Business And Documents Ce"
-
-location: "Bobst Library"
-space: "515"
+job_title: Head, Business & Government Information Services
+location: Bobst Library
+space: 5th Floor, Room 515
 departments:
-  - "Public Services"
-
-status: 
+- Public Services
 expertise:
-
-email: "ae2@nyu.edu"
+- Business
+- School of Professional Studies Graduate Programs
+- 'Government Documents: United States & International'
+- Hospitality
+- Real Estate (REI)
+- Sports Management
+- Tourism
+email: ae2@nyu.edu
 phone: "(212) 998-2605"
-twitter: 
-
-image: 
-buttons:
-
 guides:
-
-publications:
-
+  libguide_id: 51729
 keywords:
-
+- Subject Librarian
+date: 2015-10-06 17:51:00 Z
+title: Alicia Estes
 ---
 
 # About Alicia Estes
-
-

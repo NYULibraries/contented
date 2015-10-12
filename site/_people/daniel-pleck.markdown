@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Daniel"
-  - "Pleck"
-subtitle: 
-job_title: "Media Operations Assistant"
-
-location: "Silver Center"
-space: "LL7A"
+subtitle: ''
+job_title: Media Operations Assistant
+location: Silver Center
+space: LL7A
 departments:
-  - "Classroom Media"
-
-status: 
-expertise:
-
-email: "dhp230@nyu.edu"
+- Classroom Media
+status: ''
+expertise: 
+email: dhp230@nyu.edu
 phone: "(212) 992-9006"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Daniel Pleck
 ---
 
 # About Daniel Pleck
-
-

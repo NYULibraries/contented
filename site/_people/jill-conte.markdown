@@ -1,34 +1,26 @@
 ---
-
-title:
-  - "Jill"
-  - "Conte"
-subtitle: 
-job_title: "Librarian for Sociology & Psychology"
-
-location: "Bobst Library"
-space: "MZ"
+subtitle: ''
+job_title: Librarian for Sociology & Psychology
+location: Bobst Library
+space: MZ
 departments:
-  - "SocHum Reference Librarians"
-
-status: 
+- SocHum Reference Librarians
+status: ''
 expertise:
-
-email: "jac437@nyu.edu"
+- Gender & Sexuality Studies'
+- Psychology
+- Sociology
+email: jac437@nyu.edu
 phone: "(212) 998-2622"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 51730
+publications: 
 keywords:
-
+- Subject Librarian
+title: Jill Conte
 ---
 
 # About Jill Conte
-
-

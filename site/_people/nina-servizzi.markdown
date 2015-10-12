@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Nina"
-  - "Servizzi"
-subtitle: 
-job_title: "Head, Resource Management"
-
-location: "20 Cooper Square"
-space: "3"
+subtitle: ''
+job_title: Library Associate; Head, Resource Mgt
+location: 20 Cooper Square
+space: '3'
 departments:
-  - "Monographs"
-
-status: 
-expertise:
-
-email: "ns61@nyu.edu"
+- Knowledge Access & Resource Management Services
+status: ''
+expertise: 
+email: ns61@nyu.edu
 phone: "(212) 998-2647"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Nina Servizzi
 ---
 
 # About Nina Servizzi
-
-

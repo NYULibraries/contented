@@ -1,34 +1,24 @@
 ---
-
-title:
-  - "Nicole"
-  - "Brown"
-subtitle: 
-job_title: "Multidisciplinary Instruction Librarian"
-
-location: "Bobst Library"
-space: "MZ"
+subtitle: ''
+job_title: Multidisciplinary Instruction Librarian
+location: Bobst Library
+space: MZ
 departments:
-  - "Undergraduate, Instructional & Global Services"
-
-status: 
+- Undergraduate, Instructional & Global Services
+status: ''
 expertise:
-
-email: "neb1@nyu.edu"
+- Library Science
+email: neb1@nyu.edu
 phone: "(212) 998-2480"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 2278
+publications: 
 keywords:
-
+- Subject Librarian
+title: Nicole Brown
 ---
 
 # About Nicole Brown
-
-

@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Rasan"
-  - "Rasch"
-subtitle: 
-job_title: "Programmer – Analyst - Publication Systems"
-
-location: "Bobst Library"
-space: "FL.2"
+subtitle: ''
+job_title: Programmer – Analyst - Publication Systems
+location: Bobst Library
+space: FL.2
 departments:
-  - "Digital Library Publication and Access"
-
-status: 
-expertise:
-
-email: "rr102@nyu.edu"
+- Digital Library Publication and Access
+status: ''
+expertise: 
+email: rr102@nyu.edu
 phone: "(212) 992-9247"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Rasan Rasch
 ---
 
 # About Rasan Rasch
-
-

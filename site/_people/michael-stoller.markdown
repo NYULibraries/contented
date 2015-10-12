@@ -1,34 +1,24 @@
 ---
-
-title:
-  - "Michael"
-  - "Stoller"
-subtitle: 
-job_title: "Associate Dean For Collections And Research Services"
-
-location: "Bobst Library"
-space: "MEZZ"
+subtitle: ''
+job_title: Assoc Curator, Director of Colle
+location: Bobst Library
+space: MEZZ
 departments:
-  - "Office of the Dean"
-
-status: 
+- Office of the Dean
+status: Associate Curator
 expertise:
-
-email: "ms187@nyu.edu"
+- Medieval & Renaissance Studies'
+email: ms187@nyu.edu
 phone: "(212) 998-2566"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 51740
+publications: 
 keywords:
-
+- Subject Librarian
+title: Michael Stoller
 ---
 
 # About Michael Stoller
-
-

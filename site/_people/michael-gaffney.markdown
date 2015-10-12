@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Michael"
-  - "Gaffney"
-subtitle: 
-job_title: "Collections And Reference Associate"
-
-location: "Bobst Library"
-space: "2FLR"
+subtitle: ''
+job_title: Collections And Reference Associate
+location: Bobst Library
+space: 2FLR
 departments:
-  - "Avery Fisher Center"
-
-status: 
-expertise:
-
-email: "msg1@nyu.edu"
+- Avery Fisher Center
+status: ''
+expertise: 
+email: msg1@nyu.edu
 phone: "(212) 998-2579"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Michael Gaffney
 ---
 
 # About Michael Gaffney
-
-

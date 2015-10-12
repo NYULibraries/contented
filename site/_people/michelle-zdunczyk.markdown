@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Michelle"
-  - "Zdunczyk"
-subtitle: 
-job_title: "Human Resources Assistant"
-
-location: "Bobst Library"
-space: "11"
+subtitle: ''
+job_title: Human Resources Assistant
+location: Bobst Library
+space: '11'
 departments:
-  - "Human Resources"
-
-status: 
-expertise:
-
-email: "michelle.zdunczyk@nyu.edu"
+- Human Resources
+status: ''
+expertise: 
+email: michelle.zdunczyk@nyu.edu
 phone: "(212) 998-2441"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Michelle Zdunczyk
 ---
 
 # About Michelle Zdunczyk
-
-

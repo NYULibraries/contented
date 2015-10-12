@@ -1,34 +1,23 @@
 ---
-
-title:
-  - "Nadaleen"
-  - "Tempelman-Kluit"
-subtitle: 
-job_title: "Associate Curator: Head, User Experience"
-
-location: "Bobst Library"
-space: "4FL"
+subtitle: ''
+job_title: 'Associate Curator: Head, User Experience'
+location: Bobst Library
+space: 4FL
 departments:
-  - "Public Services"
-
-status: 
-expertise:
-
-email: "ntk2@nyu.edu"
+- Public Services
+status: Associate Curator
+expertise: 
+email: ntk2@nyu.edu
 phone: "(212) 998-2469"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
   title: Research Guides
   libguide_id: 2276
-
-publications:
-
-keywords:
-
+publications: 
+keywords: 
+title: Nadaleen Tempelman-Kluit
 ---
 
 # About Nadaleen Tempelman-Kluit

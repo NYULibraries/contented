@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Ryan"
-  - "Di Francesco"
-subtitle: 
-job_title: "Systems Manager"
-
-location: "Bobst Library"
-space: "MEZZ"
+subtitle: ''
+job_title: Systems Manager
+location: Bobst Library
+space: MEZZ
 departments:
-  - "IT Services & Media Services"
-
-status: 
-expertise:
-
-email: "rdf6@nyu.edu"
+- IT Services & Media Services
+status: ''
+expertise: 
+email: rdf6@nyu.edu
 phone: "(212) 998-2493"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Ryan Di Francesco
 ---
 
 # About Ryan Di Francesco
-
-

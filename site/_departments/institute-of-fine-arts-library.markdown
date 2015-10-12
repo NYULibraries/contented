@@ -1,35 +1,21 @@
 ---
-
-title: "Institute of Fine Arts Library"
 subtitle: "(IFA)"
-
-location: "The Stephen Chan Library of Fine Arts"
+location: The Stephen Chan Library of Fine Arts
 space: 
-
-email: "ifa@nyu.edu"
+email: ifa@nyu.edu
 phone: "(212) 222-2222"
-
 twitter: 
 facebook: 
-blog:
-
+blog: 
 libcal_id: 
 libanswers_id: 
-
-links:
-
+links: 
 net_id: 
-
-classes:
-
+classes: 
 image: 
-
-buttons:
-
-keywords:
-
+buttons: 
+keywords: 
+title: Institute of Fine Arts Library
 ---
 
 # What We Do
-
-

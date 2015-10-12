@@ -1,34 +1,26 @@
 ---
-
-title:
-  - "Susan"
-  - "Jacobs"
-subtitle: 
-job_title: "Associate Curator:Reference Librarian, Sciences"
-
-location: "Bobst Library"
-space: "512"
+subtitle: ''
+job_title: Associate Curator:Reference Librarian, Sciences
+location: Bobst Library
+space: '512'
 departments:
-  - "Sciences Reference Librarians"
-
-status: 
+- Sciences Reference Librarians
+status: Associate Curator
 expertise:
-
-email: "skj1@nyu.edu"
+- Health Sciences
+- "'Medicine (Bobst)'"
+- Nursing
+email: skj1@nyu.edu
 phone: "(212) 998-2432"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 2111
+publications: 
 keywords:
-
+- Subject Librarian
+title: Susan Jacobs
 ---
 
 # About Susan Jacobs
-
-

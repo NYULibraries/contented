@@ -1,39 +1,27 @@
 ---
-
-title: "New York School of Interior Design Library"
 subtitle: 
-
-type: "Library"
-
+type: Library
 address: |
   170 E. 70th Street
-  New York,N.Y. 10021
-city: "New York"
-country: "United States"
+  New York, N.Y. 10021
+city: New York
+country: United States
 coordinates: 
-
 email: 
 phone: "(212) 472-1500 x214"
-
 twitter: 
 facebook: 
-blog:
-
+blog: 
 libcal_id: 
 libcal_truncated: false
 libcal_link: 
 libanswers_id: 
-
-links:
-
+links: 
 image: 
-
 keywords:
-  - "Library"
-  - "Partner Institution"
-
+- Library
+- Partner Institution
+title: New York School of Interior Design Library
 ---
 
 # About New York School of Interior Design Library
-
-

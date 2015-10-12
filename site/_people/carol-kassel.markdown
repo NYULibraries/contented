@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Carol"
-  - "Kassel"
-subtitle: 
-job_title: "Senior Manager, Digital Library Infrastructure"
-
-location: "Bobst Library"
-space: "2"
+subtitle: ''
+job_title: Senior Manager, Digital Library Infrastructure
+location: Bobst Library
+space: '2'
 departments:
-  - "Digital Library Technology Services"
-
-status: 
-expertise:
-
-email: "cm1090@nyu.edu"
+- Digital Library Technology Services
+status: ''
+expertise: 
+email: cm1090@nyu.edu
 phone: "(212) 992-9246"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Carol Kassel
 ---
 
 # About Carol Kassel
-
-

@@ -1,39 +1,27 @@
 ---
-
-title: "New-York Historical Society"
 subtitle: 
-
-type: "Library"
-
+type: Library
 address: |
   170 Central Park W.
-  New York,NY 10024
-city: "New York"
-country: "United States"
+  New York, NY 10024
+city: New York
+country: United States
 coordinates: 
-
 email: 
 phone: "(212) 873-3400"
-
 twitter: 
 facebook: 
-blog:
-
+blog: 
 libcal_id: 
 libcal_truncated: false
 libcal_link: 
 libanswers_id: 
-
-links:
-
+links: 
 image: 
-
 keywords:
-  - "Library"
-  - "Partner Institution"
-
+- Library
+- Partner Institution
+title: New-York Historical Society
 ---
 
 # About New-York Historical Society
-
-

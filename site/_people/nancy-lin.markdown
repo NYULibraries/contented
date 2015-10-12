@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Nancy"
-  - "Lin"
-subtitle: 
-job_title: "Metadata Technology Specialist"
-
-location: "20 Cooper Square"
-space: "3FL"
+subtitle: ''
+job_title: Metadata Technology Specialist
+location: 20 Cooper Square
+space: 3FL
 departments:
-  - "Knowledge Access Design & Development"
-
-status: 
-expertise:
-
-email: "nl215@nyu.edu"
+- Knowledge Access Design & Development
+status: ''
+expertise: 
+email: nl215@nyu.edu
 phone: "(212) 992-6256"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Nancy Lin
 ---
 
 # About Nancy Lin
-
-

@@ -1,33 +1,21 @@
 ---
-
-title: "Instructional, Undergraduate & Global Services"
 subtitle: 
-
-location: "Elmer Holmes Bobst Library"
-space: "Mezzanine East"
-
+location: Elmer Holmes Bobst Library
+space: Mezzanine East
 email: 
 phone: 
-
 twitter: 
 facebook: 
-blog:
-
+blog: 
 libcal_id: 
 libanswers_id: 
-
-links:
-
+links: 
 net_id: 
-
-classes:
-
+classes: 
 image: 
-
-buttons:
-
-keywords:
-
+buttons: 
+keywords: 
+title: Instructional, Undergraduate & Global Services
 ---
 
 # What We Do

@@ -1,39 +1,27 @@
 ---
-
-title: "Cooper Union Library"
 subtitle: 
-
-type: "Library"
-
+type: Library
 address: |
   7 East 7th Street
-  New York,NY 10003
-city: "New York"
-country: "United States"
+  New York, NY 10003
+city: New York
+country: United States
 coordinates: 
-
 email: 
 phone: "(212) 353-4186"
-
 twitter: 
 facebook: 
-blog:
-
+blog: 
 libcal_id: 
 libcal_truncated: false
 libcal_link: 
 libanswers_id: 
-
-links:
-
+links: 
 image: 
-
 keywords:
-  - "Library"
-  - "Partner Institution"
-
+- Library
+- Partner Institution
+title: Cooper Union Library
 ---
 
 # About Cooper Union Library
-
-

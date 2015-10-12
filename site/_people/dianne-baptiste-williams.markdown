@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Dianne"
-  - "Baptiste-Williams"
-subtitle: 
-job_title: "Access, Delivery And Resource Sharing Services Assistant"
-
-location: "Bobst Library"
-space: "1F"
+subtitle: ''
+job_title: Access, Delivery And Resource Sharing Services Assistant
+location: Bobst Library
+space: 1F
 departments:
-  - "Stacks"
-
-status: 
-expertise:
-
-email: "db64@nyu.edu"
+- Stacks
+status: ''
+expertise: 
+email: db64@nyu.edu
 phone: "(212) 998-2655"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Dianne Baptiste-Williams
 ---
 
 # About Dianne Baptiste-Williams
-
-

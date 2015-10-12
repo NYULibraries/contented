@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Flannon"
-  - "Jackson"
-subtitle: 
-job_title: "DevOps Engineer"
-
-location: "Bobst Library"
-space: "2FL"
+subtitle: ''
+job_title: DevOps Engineer
+location: Bobst Library
+space: 2FL
 departments:
-  - "Digital Library Publication and Access"
-
-status: 
-expertise:
-
-email: "fj5@nyu.edu"
+- Digital Library Publication and Access
+status: ''
+expertise: 
+email: fj5@nyu.edu
 phone: "(212) 992--6265"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Flannon Jackson
 ---
 
 # About Flannon Jackson
-
-

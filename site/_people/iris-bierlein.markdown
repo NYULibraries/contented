@@ -1,32 +1,21 @@
 ---
-
-title:
-  - "Iris"
-  - "Bierlein"
-subtitle: 
-job_title: "User Experience Specialist"
-
-location: "Bobst Library"
-space: "4FL"
+subtitle: ''
+job_title: User Experience Specialist
+location: Bobst Library
+space: 4FL
 departments:
-  - "User Experience"
-
-status: 
-expertise:
-
-email: "ib43@nyu.edu"
-phone: 
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+- User Experience
+status: ''
+expertise: 
+email: ib43@nyu.edu
+phone: ''
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Iris Bierlein
 ---
 
 # About Iris Bierlein

@@ -1,36 +1,24 @@
 ---
-
-title: "Digital Library Technology Services"
 subtitle: "(DLTS)"
-
-location: "Elmer Holmes Bobst Library"
-space: "2nd Floor East, Digital Library Technology Services"
-
-email: "dlts@nyu.edu"
+location: Elmer Holmes Bobst Library
+space: 2nd Floor East, Digital Library Technology Services
+email: dlts@nyu.edu
 phone: 
-
 twitter: 
 facebook: 
 blog:
   link: http://blog.dlib.nyu.edu/
-
 libcal_id: 
 libanswers_id: 
-
-links:
-
+links: 
 net_id: 
-
-classes:
-
+classes: 
 image: 
-
-buttons:
-
-keywords:
-
+buttons: 
+keywords: 
+title: Digital Library Technology Services
 ---
 
 # What We Do
 
-An internal services group, we collaborate with other departments in the support of faculty and scholars, to digitize, archive and publish important content and resources. 
+An internal services group, we collaborate with other departments in the support of faculty and scholars, to digitize, archive and publish important content and resources.

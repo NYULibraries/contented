@@ -1,39 +1,18 @@
 ---
-
-title: "Fales Library and Special Collections"
-subtitle: 
-
-type: "Library"
-
-address: |
-  70 Washington Square South
-  New York,NY 10012
-city: "New York"
-country: "United States"
-coordinates: 
-
-email: "fales.library@nyu.edu"
+type: Library
+city: New York
+country: United States
+email: fales.library@nyu.edu
 phone: "(212) 998-2596"
-
-twitter: "@FalesLibrary"
-facebook: 
-blog:
-
-libcal_id: "1535"
+twitter: FalesLibrary
+libcal_id: 1535
 libcal_truncated: false
-libcal_link: 
-libanswers_id: 
-
-links:
-
-image: 
-
 keywords:
-  - "Library"
-  - "NYU"
-
+- Library
+- NYU
+location: Elmer Holmes Bobst Library
+date: '2015-09-14 18:53:00 +0000'
+title: Fales Library and Special Collections
 ---
 
 # About Fales Library and Special Collections
-
-

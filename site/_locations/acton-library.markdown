@@ -1,39 +1,27 @@
 ---
-
-title: "Acton Library"
 subtitle: 
-
-type: "Library"
-
+type: Library
 address: |
   Via Bolognese
-  120,50139 Firenze ITALIA
-city: "Florence"
-country: "Italy"
+  120, 50139 Firenze ITALIA
+city: Florence
+country: Italy
 coordinates: 
-
-email: "florence.collection@nyu.edu."
+email: florence.collection@nyu.edu.
 phone: "(39) 055 5007 218"
-
 twitter: 
 facebook: 
-blog:
-
+blog: 
 libcal_id: 
 libcal_truncated: false
 libcal_link: 
 libanswers_id: 
-
-links:
-
+links: 
 image: 
-
 keywords:
-  - "Library"
-  - "NYU"
-
+- Library
+- NYU
+title: Acton Library
 ---
 
-# About Acton Library 
-
-
+# About Acton Library

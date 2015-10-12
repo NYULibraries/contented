@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Claudia"
-  - "Abou-Suleiman"
-subtitle: 
-job_title: "Business Analyst"
-
-location: "Bobst Library"
-space: "FL"
+subtitle: ''
+job_title: Business Analyst
+location: Bobst Library
+space: FL
 departments:
-  - "Digital Library Publication and Access"
-
-status: 
-expertise:
-
-email: "cas18@nyu.edu"
+- Digital Library Publication and Access
+status: ''
+expertise: 
+email: cas18@nyu.edu
 phone: "(212) 998-1212"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Claudia Abou-Suleiman
 ---
 
 # About Claudia Abou-Suleiman
-
-

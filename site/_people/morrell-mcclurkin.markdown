@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Morrell"
-  - "McClurkin"
-subtitle: 
-job_title: "Access Services Supervisor, Reserves"
-
-location: 
-space: 
+subtitle: ''
+job_title: Access Services Supervisor, Reserves
+location: ''
+space: ''
 departments:
-  - "Bern Dibner Library"
-
-status: 
-expertise:
-
-email: "mm6440@nyu.edu"
+- Bern Dibner Library
+status: ''
+expertise: 
+email: mm6440@nyu.edu
 phone: "(646) 997--3253"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Morrell McClurkin
 ---
 
 # About Morrell McClurkin
-
-

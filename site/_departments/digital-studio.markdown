@@ -1,34 +1,22 @@
 ---
-
-title: "Digital Studio"
 subtitle: 
-
-location: "Elmer Holmes Bobst Library"
-space: "5th Floor, Digital Studio"
-
-email: "digital.studio@nyu.edu"
+location: Elmer Holmes Bobst Library
+space: 5th Floor, Digital Studio
+email: digital.studio@nyu.edu
 phone: "(212) 992-9233"
-
-twitter: "nyu_ds"
-facebook: "https://www.facebook.com/NYUDS"
-blog:
-
-libcal_id: "1534"
-libanswers_id: "14591"
-
-links:
-
+twitter: nyu_ds
+facebook: https://www.facebook.com/NYUDS
+blog: 
+libcal_id: '1534'
+libanswers_id: '14591'
+links: 
 net_id: 
-
-classes:
-
+classes: 
 image: 
-
 buttons:
   Request an Appointment: http://www.example.org
-
-keywords:
-
+keywords: 
+title: Digital Studio
 ---
 
 # What We Do

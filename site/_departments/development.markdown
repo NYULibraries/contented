@@ -1,33 +1,21 @@
 ---
-
-title: "Development"
 subtitle: 
-
-location: "Elmer Holmes Bobst Library"
-space: "11th Floor"
-
+location: Elmer Holmes Bobst Library
+space: 11th Floor
 email: 
 phone: "(212) 992-9980"
-
 twitter: 
 facebook: 
-blog:
-
+blog: 
 libcal_id: 
 libanswers_id: 
-
-links:
-
+links: 
 net_id: 
-
-classes:
-
+classes: 
 image: 
-
-buttons:
-
-keywords:
-
+buttons: 
+keywords: 
+title: Development
 ---
 
 # What We Do

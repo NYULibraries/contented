@@ -1,37 +1,26 @@
 ---
-
-title:
-  - "Scott"
-  - "Collard"
-subtitle: 
-job_title: "Coordinator, Social Sciences Collections"
-
-location: "Bobst Library"
-space: "511"
+subtitle: ''
+job_title: Assoc. Curator, Social Sciences Collections Coordinator
+location: Bobst Library
+space: '511'
 departments:
-  - "Public Services"
-
-status: 
+- Public Services
+status: Associate Curator
 expertise:
-  - "Education"
-  - "Linguistics"
-
-email: "sac11@nyu.edu"
+- Education
+- Linguistics
+email: sac11@nyu.edu
 phone: "(212) 998-2500"
-twitter: "scottcollard"
-
-image: 
-buttons:
-
+twitter: scottcollard
+image: ''
+buttons: 
 guides:
   title: Research Guides
   libguide_id: 2277
-
-publications:
-
+publications: 
 keywords:
-  - "Subject Librarian"
-
+- Subject Librarian
+title: Scott Collard
 ---
 
 # About Scott Collard

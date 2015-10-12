@@ -1,41 +1,26 @@
 ---
-
-title: "Scanning"
-
-location: "Elmer Holmes Bobst Library"
-space: "Research Commons, 5th Floor South, Digital Studio"
+location: Elmer Holmes Bobst Library
+space: Research Commons, 5th Floor South, Digital Studio
 departments:
-  - "Digital Studio"
-
-type: 
+- Digital Studio
 topics:
-  - "Media Production"
-
+- Media Production
 access:
-  - "NYU Faculty"
-  - "NYU Students"
-  - "NYU Staff"
-
-email: "digital.studio@nyu.edu"
+- NYU Faculty
+- NYU Students
+- NYU Staff
+email: digital.studio@nyu.edu
 phone: "(212) 992-9233"
-
-twitter: 
-blog:
-
-libcal_id: "1534"
-libanswers_id: 
-
+libcal_id: 1534
 links:
   Access Information: http://library.nyu.edu/about/access.html
-
-image: "http://lgimages.s3.amazonaws.com/data/imagemanager/78523/ericmedium.jpg"
-
+image: http://lgimages.s3.amazonaws.com/data/imagemanager/78523/ericmedium.jpg
 buttons:
   Request an Appointment: https://docs.google.com/a/nyu.edu/forms/d/1mDIKrDz01aa4BtgqigGVt0HnpvGqnlH22k2z2vX5ngw/viewform
-
 keywords:
-  - "scanning"
-
+- scanning
+date: '2015-09-14 18:53:00 +0000'
+title: Scanning
 ---
 
 # Services 

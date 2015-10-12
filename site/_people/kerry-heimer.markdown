@@ -1,34 +1,20 @@
 ---
-
-title:
-  - "Kerry"
-  - "Heimer"
-subtitle: 
-job_title: "Adjunct Assistant Curator"
-
-location: "Bobst Library"
-space: "10FL"
-departments:
-  - "University Archives"
-
-status: 
-expertise:
-
-email: "kbh284@nyu.edu"
+subtitle: ''
+job_title: 
+location: ''
+space: ''
+departments: 
+status: Adjunct Assistant Curator
+expertise: 
+email: kbh284@nyu.edu
 phone: "(212) 998-1212"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Kerry Heimer
 ---
 
 # About Kerry Heimer
-
-

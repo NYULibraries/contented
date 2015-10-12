@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Katharine"
-  - "Garofalo"
-subtitle: 
-job_title: "Accounts Receivable Specialist"
-
-location: "838 Broadway"
-space: "3FL"
+subtitle: ''
+job_title: Accounts Receivable Specialist
+location: 838 Broadway
+space: 3FL
 departments:
-  - "NYU Press Budget"
-
-status: 
-expertise:
-
-email: "kg78@nyu.edu"
+- NYU Press Budget
+status: ''
+expertise: 
+email: kg78@nyu.edu
 phone: "(212) 992--9987"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Katharine Garofalo
 ---
 
 # About Katharine Garofalo
-
-

@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Bei"
-  - "Bei"
-subtitle: 
-job_title: "Senior Processing Assistant"
-
-location: "20 Cooper Square"
-space: "3FL"
+subtitle: ''
+job_title: Senior Processing Assistant
+location: 20 Cooper Square
+space: 3FL
 departments:
-  - "Global Processing"
-
-status: 
-expertise:
-
-email: "bb116@nyu.edu"
+- Global Processing
+status: ''
+expertise: 
+email: bb116@nyu.edu
 phone: "(212) 9982506 x8-2506"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Bei Bei
 ---
 
 # About Bei Bei
-
-

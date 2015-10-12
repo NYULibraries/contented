@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Gabriel"
-  - "McKee"
-subtitle: 
-job_title: "Assistant Research Scholar"
-
-location: 
-space: 
+subtitle: ''
+job_title: Assistant Research Scholar
+location: ''
+space: ''
 departments:
-  - "ISAW Library"
-
-status: 
-expertise:
-
-email: "gm95@nyu.edu"
-phone: 
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+- ISAW Library
+status: ''
+expertise: 
+email: gm95@nyu.edu
+phone: ''
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Gabriel McKee
 ---
 
 # About Gabriel McKee
-
-

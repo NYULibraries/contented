@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Laurie"
-  - "Murphy"
-subtitle: 
-job_title: "Adjunct Assstant Curator"
-
-location: "Bobst Library"
-space: "1240"
+subtitle: ''
+job_title: Reference Associate
+location: Bobst Library
+space: '1240'
 departments:
-  - "SocHum Reference Adjuncts"
-
-status: 
-expertise:
-
-email: "lm1518@nyu.edu"
+- SocHum Reference Services
+status: ''
+expertise: 
+email: lm1518@nyu.edu
 phone: "(212) 998-2603"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Laurie Murphy
 ---
 
 # About Laurie Murphy
-
-

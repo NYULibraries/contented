@@ -1,34 +1,24 @@
 ---
-
-title:
-  - "Eimmy"
-  - "Solis"
-subtitle: 
-job_title: "Assistant Curator: Librarian for Business and Economics"
-
-location: "Bobst Library"
-space: "5"
+subtitle: ''
+job_title: 'Assistant Curator: Librarian for Business and Economics'
+location: Bobst Library
+space: '5'
 departments:
-  - "Business & Government Information Services"
-
-status: 
+- Business & Government Information Services
+status: Assistant Curator
 expertise:
-
-email: "eks279@nyu.edu"
+- Economics
+email: eks279@nyu.edu
 phone: "(212) 998-2694"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 51751
+publications: 
 keywords:
-
+- Subject Librarian
+title: Eimmy Solis
 ---
 
 # About Eimmy Solis
-
-

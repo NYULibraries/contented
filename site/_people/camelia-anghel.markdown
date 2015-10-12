@@ -1,32 +1,21 @@
 ---
-
-title:
-  - "Camelia"
-  - "Anghel"
-subtitle: 
-job_title: "Metadata Systems Specialist"
-
-location: "20 Cooper Square"
-space: "3FL"
+subtitle: ''
+job_title: Metadata Systems Specialist
+location: 20 Cooper Square
+space: 3FL
 departments:
-  - "Knowledge Access Design & Development"
-
-status: 
-expertise:
-
-email: "ca71@nyu.edu"
+- Knowledge Access Design & Development
+status: ''
+expertise: 
+email: ca71@nyu.edu
 phone: "(212) 998-2462"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Camelia Anghel
 ---
 
 # About Camelia Anghel

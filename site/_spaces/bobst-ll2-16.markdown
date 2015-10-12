@@ -1,33 +1,24 @@
 ---
-
-title: "Bobst LL2-16"
 subtitle: 
-
-location: "Elmer Holmes Bobst Library"
-
-address: "Lower Level 2 South, Room 16"
+location: Elmer Holmes Bobst Library
+address: Lower Level 2 South, Room 16
 email: 
 phone: 
-
 type: 
 amenities:
-  - "desk"
-  - "chair"
-  - "power outlet"
-  - "wifi"
-access:
-
-libcal_id: "1529"
+- desk
+- chair
+- power outlet
+- wifi
+access: 
+libcal_id: '1529'
 libanswers_id: 
-
-links:
-
+links: 
 image: 
-
 keywords:
-  - "quiet"
-  - "reservable"
-
+- quiet
+- reservable
+title: Bobst LL2-16
 ---
 
 # About Bobst LL2-16

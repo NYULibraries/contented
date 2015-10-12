@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Cathy"
-  - "Moran Hajo"
 subtitle: 
-job_title: "Associate Editor/Assistant Director of the Margaret Sanger Papers"
-
+job_title: Associate Editor/Assistant Director of the Margaret Sanger Papers
 location: 
 space: 
 departments:
-  - "Margaret Sanger Papers"
-
+- Margaret Sanger Papers
 status: 
-expertise:
-
-email: "cm18@nyu.edu"
+expertise: 
+email: cm18@nyu.edu
 phone: "(212) 998-8666"
 twitter: 
-
 image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Cathy Moran Hajo
 ---
 
 # About Cathy Moran Hajo
-
-

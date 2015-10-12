@@ -1,34 +1,25 @@
 ---
-
-title:
-  - "Jennifer"
-  - "Vinopal"
-subtitle: 
-job_title: "Coordinator, Studio For Digita"
-
-location: "Bobst Library"
-space: "505"
+subtitle: ''
+job_title: Librarian for Digital Scholarship Initiatives
+location: Bobst Library
+space: '505'
 departments:
-  - "Collections & Research Services"
-
-status: 
+- Digital Library Technology Services
+status: ''
 expertise:
-
-email: "jv3@nyu.edu"
+- French
+- Italian
+email: jv3@nyu.edu
 phone: "(212) 998-2522"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 50337
+publications: 
 keywords:
-
+- Subject Librarian
+title: Jennifer Vinopal
 ---
 
 # About Jennifer Vinopal
-
-

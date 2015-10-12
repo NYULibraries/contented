@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Susan"
-  - "Hamilton"
-subtitle: 
-job_title: "Accounts Payable Clerk"
-
-location: "838 Broadway"
-space: "3"
+subtitle: ''
+job_title: Accounts Payable Clerk
+location: 838 Broadway
+space: '3'
 departments:
-  - "NYU Press Budget"
-
-status: 
-expertise:
-
-email: "sh101@nyu.edu"
+- NYU Press Budget
+status: ''
+expertise: 
+email: sh101@nyu.edu
 phone: "(212) 998-2524"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Susan Hamilton
 ---
 
 # About Susan Hamilton
-
-

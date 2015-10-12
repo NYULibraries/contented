@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Constance"
-  - "Grady"
-subtitle: 
-job_title: "Editorial Assistant"
-
-location: "838 Broadway"
-space: "3FL"
+subtitle: ''
+job_title: Editorial Assistant
+location: 838 Broadway
+space: 3FL
 departments:
-  - "Editorial"
-
-status: 
-expertise:
-
-email: "cg113@nyu.edu"
+- Editorial
+status: ''
+expertise: 
+email: cg113@nyu.edu
 phone: "(212) 998-4252"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Constance Grady
 ---
 
 # About Constance Grady
-
-

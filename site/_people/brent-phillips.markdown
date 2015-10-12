@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Brent"
-  - "Phillips"
-subtitle: 
-job_title: "Media Specialist And Processing Archivist, Fales Library"
-
-location: "Bobst Library"
-space: "FL.3"
+subtitle: ''
+job_title: Media Specialist And Processing Archivist, Fales Library
+location: Bobst Library
+space: FL.3
 departments:
-  - "Fales Library"
-
-status: 
-expertise:
-
-email: "bwp2@nyu.edu"
+- Fales Library
+status: ''
+expertise: 
+email: bwp2@nyu.edu
 phone: "(212) 998-2593"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Brent Phillips
 ---
 
 # About Brent Phillips
-
-

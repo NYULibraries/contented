@@ -1,34 +1,25 @@
 ---
-
-title:
-  - "Amanda"
-  - "Watson"
-subtitle: 
-job_title: "Asst Cur; Librarian For English & Comparative Literature"
-
-location: "Bobst Library"
-space: "MZ003"
+subtitle: ''
+job_title: Asst Cur; Librarian For English & Comparative Literature
+location: Bobst Library
+space: MZ003
 departments:
-  - "SocHum Reference Librarians"
-
-status: 
+- SocHum Reference Librarians
+status: Assistant Curator
 expertise:
-
-email: "aw94@nyu.edu"
+- Comparative Literature
+- English
+email: aw94@nyu.edu
 phone: "(212) 998-2517"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 51762
+publications: 
 keywords:
-
+- Subject Librarian
+title: Amanda Watson
 ---
 
 # About Amanda Watson
-
-

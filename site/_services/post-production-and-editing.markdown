@@ -1,44 +1,32 @@
 ---
-
-title: "Post Production and Editing"
-
-location: "Elmer Holmes Bobst Library"
-space: "Research Commons, 5th Floor South, Digital Studio"
+location: Elmer Holmes Bobst Library
+space: Research Commons, 5th Floor South, Digital Studio
 departments:
-  - "Digital Studio"
-
+- Digital Studio
 type: 
 topics:
-  - "Media Production"
-
+- Media Production
 access:
-  - "NYU Faculty"
-  - "NYU Students"
-  - "NYU Staff"
-
-email: "digital.studio@nyu.edu"
+- NYU Faculty
+- NYU Students
+- NYU Staff
+email: digital.studio@nyu.edu
 phone: "(212) 992-9233"
-
-twitter: "nyu_ds"
-blog:
-
-libcal_id: "1534"
+twitter: nyu_ds
+blog: 
+libcal_id: '1534'
 libanswers_id: 
-
 links:
   Access Information: http://library.nyu.edu/about/access.html
-
-image: "https://placeimg.com/540/540/any"
-
+image: https://placeimg.com/540/540/any
 buttons:
   Request an Appointment: https://docs.google.com/a/nyu.edu/forms/d/1mDIKrDz01aa4BtgqigGVt0HnpvGqnlH22k2z2vX5ngw/viewform
-
 keywords:
-  - "Post Production"
-  - "Audio"
-  - "Video"
-  - "Software"
-
+- Post Production
+- Audio
+- Video
+- Software
+title: Post Production and Editing
 ---
 
 # Services 

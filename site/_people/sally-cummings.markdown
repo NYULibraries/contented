@@ -1,32 +1,21 @@
 ---
-
-title:
-  - "Sally"
-  - "Cummings"
-subtitle: 
-job_title: "Development Communications Manager"
-
-location: "Bobst Library"
-space: "1117A"
+subtitle: ''
+job_title: Development Communications Manager
+location: Bobst Library
+space: 1117A
 departments:
-  - "Development at Bobst"
-
-status: 
-expertise:
-
-email: "sc130@nyu.edu"
+- Development at Bobst
+status: ''
+expertise: 
+email: sc130@nyu.edu
 phone: "(212) 992-9980"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Sally Cummings
 ---
 
 # About Sally Cummings

@@ -1,32 +1,21 @@
 ---
-
-title:
-  - "Tal"
-  - "Rozen"
-subtitle: 
-job_title: "User Experience Specialist"
-
-location: "Bobst Library"
-space: "MZ"
+subtitle: ''
+job_title: User Experience Specialist
+location: Bobst Library
+space: MZ
 departments:
-  - "User Experience"
-
-status: 
-expertise:
-
-email: "tr893@nyu.edu"
-phone: 
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+- User Experience
+status: ''
+expertise: 
+email: tr893@nyu.edu
+phone: ''
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Tal Rozen
 ---
 
 # About Tal Rozen

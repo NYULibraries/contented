@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Mohamed"
-  - "Nyei"
-subtitle: 
-job_title: "Access, Delivery And Resource Sharing Services Assistant"
-
-location: "Bobst Library"
-space: "ALVL"
+subtitle: ''
+job_title: Access, Delivery And Resource Sharing Services Assistant
+location: Bobst Library
+space: ALVL
 departments:
-  - "Reserves"
-
-status: 
-expertise:
-
-email: "mbn1@nyu.edu"
+- Reserves
+status: ''
+expertise: 
+email: mbn1@nyu.edu
 phone: "(212) 998-2475"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Mohamed Nyei
 ---
 
 # About Mohamed Nyei
-
-

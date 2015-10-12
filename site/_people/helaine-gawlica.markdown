@@ -1,34 +1,20 @@
 ---
-
-title:
-  - "Helaine"
-  - "Gawlica"
-subtitle: 
-job_title: "Adjunct Assistant Curator"
-
-location: "Bobst Library"
-space: "MZ"
-departments:
-  - "Collections & Research Services Adjuncts"
-
-status: 
-expertise:
-
-email: "hag240@nyu.edu"
+subtitle: ''
+job_title: 
+location: ''
+space: ''
+departments: 
+status: Adjunct Assistant Curator
+expertise: 
+email: hag240@nyu.edu
 phone: "(212) 998-1631"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Helaine Gawlica
 ---
 
 # About Helaine Gawlica
-
-

@@ -1,32 +1,21 @@
 ---
-
-title:
-  - "Rachel"
-  - "Searcy"
-subtitle: 
-job_title: "Accessioning Archivist"
-
-location: 
-space: 
+subtitle: ''
+job_title: Accessioning Archivist
+location: ''
+space: ''
 departments:
-  - "Archival Collections Management"
-
-status: 
-expertise:
-
-email: "ras26@nyu.edu"
+- Archival Collections Management
+status: ''
+expertise: 
+email: ras26@nyu.edu
 phone: "(212) 998-3478"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Rachel Searcy
 ---
 
 # About Rachel Searcy

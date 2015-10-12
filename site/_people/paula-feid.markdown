@@ -1,34 +1,24 @@
 ---
-
-title:
-  - "Paula"
-  - "Feid"
-subtitle: 
-job_title: "Head, Instructional, Undergraduate And Global Services"
-
-location: "Bobst Library"
-space: "MZ"
+subtitle: ''
+job_title: Undergraduate Librarian
+location: Bobst Library
+space: MZ
 departments:
-  - "Public Services"
-
-status: 
+- Public Services
+status: ''
 expertise:
-
-email: "paf1@nyu.edu"
+- Undergraduate Services
+email: paf1@nyu.edu
 phone: "(212) 998-2509"
-twitter: 
-
-image: 
-buttons:
-
+twitter: ''
+image: ''
+buttons: 
 guides:
-
-publications:
-
+  libguide_id: 50334
+publications: 
 keywords:
-
+- Subject Librarian
+title: Paula Feid
 ---
 
 # About Paula Feid
-
-

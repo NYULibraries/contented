@@ -1,35 +1,23 @@
 ---
-
-title: "The Tamiment Library & Robert F. Wagner Labor Archives"
 subtitle: 
-
-location: "Elmer Holmes Bobst Library"
-space: "10th Floor, Tamiment Library & Robert F. Wagner Labor Archives"
-
-email: "tamiment.wagner@library.nyu.edu"
+location: Elmer Holmes Bobst Library
+space: 10th Floor, Tamiment Library & Robert F. Wagner Labor Archives
+email: tamiment.wagner@library.nyu.edu
 phone: "(212) 998-2630"
-
 twitter: 
 facebook: 
 blog:
   link: http://blogs.nyu.edu/library/sp.collections/
-
-libcal_id: "1536"
-libanswers_id: "14687"
-
-links:
-
+libcal_id: '1536'
+libanswers_id: '14687'
+links: 
 net_id: 
-
-classes:
-
+classes: 
 image: 
-
 buttons:
   Request an Appointment: http://www.example.org
-
-keywords:
-
+keywords: 
+title: The Tamiment Library & Robert F. Wagner Labor Archives
 ---
 
 # What We Do

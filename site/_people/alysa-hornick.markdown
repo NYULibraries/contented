@@ -1,34 +1,21 @@
 ---
-
-title:
-  - "Alysa"
-  - "Hornick"
-subtitle: 
-job_title: "Offsite Preparations Supervisor"
-
-location: "Bobst Library"
-space: "FL.7"
+subtitle: ''
+job_title: Offsite Preparations Supervisor
+location: Bobst Library
+space: FL.7
 departments:
-  - "Access, Delivery & Resource Sharing Services"
-
-status: 
-expertise:
-
-email: "arh222@nyu.edu"
+- Access, Delivery & Resource Sharing Services
+status: ''
+expertise: 
+email: arh222@nyu.edu
 phone: "(212) 998-2470"
-twitter: 
-
-image: 
-buttons:
-
-guides:
-
-publications:
-
-keywords:
-
+twitter: ''
+image: ''
+buttons: 
+guides: 
+publications: 
+keywords: 
+title: Alysa Hornick
 ---
 
 # About Alysa Hornick
-
-

@@ -1,39 +1,27 @@
 ---
-
-title: "Scherman Music Library"
 subtitle: 
-
-type: "Library"
-
+type: Library
 address: |
   150 West 85th Street
-  New York,NY 10024
-city: "New York"
-country: "United States"
+  New York, NY 10024
+city: New York
+country: United States
 coordinates: 
-
 email: 
 phone: "(212) 580-0210 x232"
-
 twitter: 
 facebook: 
-blog:
-
+blog: 
 libcal_id: 
 libcal_truncated: false
 libcal_link: 
 libanswers_id: 
-
-links:
-
+links: 
 image: 
-
 keywords:
-  - "Library"
-  - "Partner Institution"
-
+- Library
+- Partner Institution
+title: Scherman Music Library
 ---
 
 # About Scherman Music Library
-
-
