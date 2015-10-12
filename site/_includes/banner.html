@@ -3,7 +3,9 @@
     <div class="banner__inner">
       <h1 class="heading heading--page">
         {% if page.image and include.simple != true %}
-          <img class="banner__image" src="{% include image.html item=page %}" alt="{{ page.title | escape }}" />
+          {% unless page.url contains '/people/' %}
+            <img class="banner__image" src="{% include image.html item=page %}" alt="{{ page.title | escape }}" />
+          {% endunless %}
         {% endif %}
 
         {{ page.title }}
