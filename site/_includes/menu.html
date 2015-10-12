@@ -8,12 +8,14 @@
       <a href="{{ link }}" class="menu__link menu__link--{{ title | slugify }}{% if include.name == 'ask_librarian_menu' and title == 'Chat with us' %} js-toggle-chat{% endif %}"{% if link contains "http" %} target="_blank"{% endif %}>
         {{ title }}
       </a>
-
       {% if include.scope == "site" and name == "secondary_menu" and title == "My Account" and site.account_menu %}
         {% include menu.html name="account_menu" scope="site" %}
       {% elsif include.scope == "site" and name == "secondary_menu" and title == "Ask a Librarian" and site.ask_librarian_menu %}
         {% include menu.html name="ask_librarian_menu" scope="site" %}
       {% endif %}
     </li>
+    {% if title == 'Services' %}
+      <li class="menu__li menu__li--search"><button style="position:relative;top:10px;padding:0;width:200px;" class="button bobcat-search-toggle js-toggle-catalog ss-plus right">Search Library resources</button></li>
+    {% endif %}
   {% endfor %}
 </ul>

@@ -37,6 +37,7 @@ function initializeMap() {
   var geocoder = new google.maps.Geocoder();
 
   {% for item in site.locations %}
+
   {% capture item_content %}
     {% include card.html item=location %}
     <p><a href="{{ item.url }}" class="more">View details</a></p>
