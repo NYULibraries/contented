@@ -48,8 +48,11 @@ gem 'rake'
 # give out smells, churn, complexity and duplication.
 gem 'rubycritic', require: false
 
-# To test coverage for rspecs
-gem 'simplecov', require: false
+# # To test coverage for rspecs
+# gem 'simplecov', require: false
+
+# To test coverage for rspecs using Coveralls
+gem 'coveralls', require: false
 
 # To Get the People Sync data
 gem 'rest-client'
