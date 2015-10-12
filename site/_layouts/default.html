@@ -8,7 +8,7 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <meta name="generator" content="Siteleaf, http://siteleaf.com" />
   {% include swiftype_meta.html %}
-  <title>{% if page.url != '/' %}{{page.title}} | {% endif %}{{site.title}}</title>
+  <title>{% if page.url != '/' and page.url != '/index.html' %}{{page.title}} | {% endif %}{{site.title}}</title>
   <link rel="canonical" href="{{ page.url | prepend: site.baseurl | prepend: site.url }}" />
 
   {% if site.feed_url %}
@@ -29,7 +29,14 @@
     <script src="/assets/js/dist/html5shiv.min.js"></script>
   <![endif]-->
 </head>
-<body class="{% if page.url == '/' %}page--home showing-catalog-search{% endif %}">
+<body class="{% if page.url == '/' or page.url == '/index.html' %}page--home showing-catalog-search{% endif %}">
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-59RTPM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','{{ site.google_tag_manager_key }}');</script>
   <div class="skip-nav" data-swiftype-index="false">
     <a href="#main">Skip to main content</a>
   </div>
@@ -47,7 +54,6 @@
           <button class="header__nav__toggle js-toggle-nav ss-menu">Menu</button>
           <button class="header__nav__close js-toggle-nav ss-icon" title="Close menu">&#x2421;</button>
 
-          <button class="button bobcat-search-toggle js-toggle-catalog ss-plus right">Search our resources</button>
         </div>
       </div>
 

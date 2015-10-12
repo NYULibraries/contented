@@ -37,9 +37,10 @@
 // ****************************************************************
 .bobcat-search-toggle{
   float: right;
-  padding: 0;
+  background: none;
+  // padding: none;
   font-size: $font_size_base;
-  color: $text_lavendar;
+  color: $purple;
   line-height: 30px;
 
   @include max-width($bp_collapsed_nav){
@@ -55,14 +56,14 @@
     top: -1px;
   }
 
-  &:hover, &:focus{
-    background: none;
-    color: #fff;
-  }
+  // &:hover, &:focus{
+  //   background: none;
+  //   color: #fff;
+  // }
 
-  &:active{
-    background: none;
-  }
+  // &:active{
+  //   background: none;
+  // }
 }
 
 .showing-catalog-search .bobcat-search-toggle{
