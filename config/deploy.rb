@@ -15,9 +15,7 @@ namespace :siteleaf do
   desc 'Push all theme files alongwith Markdown collections to Siteleaf after converting them from worksheet to markdown'
   task :push_all do
     invoke 'siteleaf:auth'
-    # invoke 'convert:sheet_to_md:all'
-    system 'cd site && bundle exec siteleaf push'
-    invoke 'siteleaf:clean_up'
+    system 'cd site && bundle exec yes n | siteleaf push'
   end
 
   desc 'Push only people markdown files'
@@ -30,19 +28,13 @@ namespace :siteleaf do
     system 'cd tmp_site && bundle exec siteleaf pull'
     FileUtils.rm_rf 'tmp_site/_people/'
     FileUtils.cp_r 'site/_people', 'tmp_site/_people'
-    system 'cd tmp_site && bundle exec siteleaf push'
+    system 'cd tmp_site && bundle exec yes n | siteleaf push'
     invoke 'siteleaf:clean_up'
   end
 
   desc 'Cleans up the site directory'
   task :clean_up do
     FileUtils.rm_rf 'tmp_site'
-    FileUtils.rm_rf 'site/.siteleaf.yml'
-    FileUtils.rm_rf 'site/_departments'
-    FileUtils.rm_rf 'site/_locations'
-    FileUtils.rm_rf 'site/_people'
-    FileUtils.rm_rf 'site/_services'
-    FileUtils.rm_rf 'site/_spaces'
   end
 end
 
