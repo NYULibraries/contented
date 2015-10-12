@@ -19,7 +19,7 @@ if (!Element.prototype.matches) {
 
 function $$(expr, con) {
 	return expr instanceof Node || expr instanceof Window? [expr] :
-	       [].slice.call(typeof expr == "string"? (con || document).querySelectorAll(expr) : expr || []);
+	       [].slice.call(typeof expr === "string"? (con || document).querySelectorAll(expr) : expr || []);
 }
 
 var _ = self.Stretchy = {
@@ -47,25 +47,25 @@ var _ = self.Stretchy = {
 
 		var type = element.nodeName.toLowerCase();
 
-		if (type == "textarea") {
+		if (type === "textarea") {
 			element.style.height = "0";
 
-			if (cs.boxSizing == "border-box") {
+			if (cs.boxSizing === "border-box") {
 				offset = element.offsetHeight;
 			}
-			else if (cs.boxSizing == "content-box") {
+			else if (cs.boxSizing === "content-box") {
 				offset = -element.clientHeight;
 			}
 
 			element.style.height = element.scrollHeight + offset + "px";
 		}
-		else if(type == "input") {
+		else if(type === "input") {
 			element.style.width = "0";
 
-			if (cs.boxSizing == "border-box") {
+			if (cs.boxSizing === "border-box") {
 				offset = element.offsetWidth;
 			}
-			else if (cs.boxSizing == "padding-box") {
+			else if (cs.boxSizing === "padding-box") {
 				offset = element.clientWidth;
 			}
 
@@ -77,7 +77,7 @@ var _ = self.Stretchy = {
 
 			element.style.width = width + "px";
 		}
-                else if (type == "select") {
+    else if (type == "select") {
 			// Need to use dummy element to measure :(
 			var option = document.createElement("_");
 			option.textContent = element.options[element.selectedIndex].textContent;
@@ -173,7 +173,7 @@ if (self.MutationObserver) {
 	(new MutationObserver(function(mutations) {
 		if (_.active) {
 			mutations.forEach(function(mutation) {
-				if (mutation.type == "childList") {
+				if (mutation.type === "childList") {
 					Stretchy.resizeAll(mutation.addedNodes);
 				}
 			});

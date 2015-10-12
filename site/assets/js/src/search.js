@@ -23,7 +23,7 @@ $(function() {
 
   var slugify = function(str) {
     return str.replace(/[^a-zA-Z0-9]+/ig, '-').replace(/^\-|\-$/ig, '').toLowerCase();
-  }
+  };
 
   var getValues = function() {
     return form.find(':input').filter(function() {
@@ -43,9 +43,9 @@ $(function() {
     params['sort_direction'] = { 'page': params['sort_direction'] }
 
     var collection = table.attr('data-collection');
-    var filters = (collection) ? { 'collection': collection } : {}
+    var filters = (collection) ? { 'collection': collection } : {};
     form.find('select').each(function() {
-      if ($(this).val()) filters[$(this).attr('name')] = $(this).val();
+      if ($(this).val()){ filters[$(this).attr('name')] = $(this).val(); }
     });
     params['filters'] = { 'page': filters }
 
@@ -80,7 +80,7 @@ $(function() {
     });
 
     renderPagination(data.info);
-  }
+  };
 
   var renderRow = function(item, colspan) {
     var tr = $('<tr class="table__row">');
@@ -90,11 +90,11 @@ $(function() {
       tr.append(td);
     });
     return tr;
-  }
+  };
 
   var renderCol = function(item, key) {
     value = item[key];
-    if (!value) return "";
+    if (!value) { return ""; }
     if (key == 'title' && item.card_html) {
       return item.card_html;
     } else if (key == 'departments') {
@@ -105,14 +105,14 @@ $(function() {
     } else if ('service,space,location'.indexOf(key) > -1) {
       return $('<a href="/'+key+'s/'+slugify(value)+'"></a>').text(value);
     } else {
-      if (typeof(value) == "string") value = [value];
+      if (typeof(value) == "string") { value = [value]; }
       return value.join(', ');
     }
-  }
+  };
 
   var renderMessage = function(message) {
     return '<tr class="table__row empty"><td class="table__cell" colspan="'+theaders.length+'">'+message+'</td></tr>';
-  }
+  };
 
   var renderPagination = function(resultInfo) {
     var maxPagesType, maxPages = -1;
@@ -144,7 +144,7 @@ $(function() {
       }
 
     }
-  }
+  };
 
   var updateSort = function() {
     var sortField = form.find('input[name=sort_field]').val();
@@ -152,15 +152,15 @@ $(function() {
 
     theaders.removeAttr('data-sort');
     theaders.filter('[data-field='+sortField+']').attr('data-sort', sortDirection);
-  }
+  };
 
   var updateForm = function() {
     before = form.serialize();
     form.trigger('reset').deserialize(location.search.substr(1));
     after = form.serialize();
-    if (before != after) search();
+    if (before != after) { search(); }
     Stretchy.resizeAll();
-  }
+  };
 
   form.on('submit', function(e) {
     e.preventDefault();

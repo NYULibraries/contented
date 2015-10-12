@@ -7,7 +7,7 @@
 /*! NOTE: If you're already including a window.matchMedia polyfill via Modernizr or otherwise, you don't need this part */
 (function(w) {
   "use strict";
-  w.matchMedia = w.matchMedia || function(doc, undefined) {
+  w.matchMedia = w.matchMedia || (function(doc, undefined) {
     var bool, docElem = doc.documentElement, refNode = docElem.firstElementChild || docElem.firstChild, fakeBody = doc.createElement("body"), div = doc.createElement("div");
     div.id = "mq-test-1";
     div.style.cssText = "position:absolute;top:-100em";
@@ -23,7 +23,7 @@
         media: q
       };
     };
-  }(w.document);
+  })(w.document);
 })(this);
 
 (function(w) {
@@ -31,7 +31,7 @@
   var respond = {};
   w.respond = respond;
   respond.update = function() {};
-  var requestQueue = [], xmlHttp = function() {
+  var requestQueue = [], xmlHttp = (function() {
     var xmlhttpmethod = false;
     try {
       xmlhttpmethod = new w.XMLHttpRequest();
@@ -41,7 +41,7 @@
     return function() {
       return xmlhttpmethod;
     };
-  }(), ajax = function(url, callback) {
+  })(), ajax = function(url, callback) {
     var req = xmlHttp();
     if (!req) {
       return;
