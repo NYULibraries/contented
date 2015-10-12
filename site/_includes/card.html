@@ -3,13 +3,23 @@
 <div class="item{% if kind %} item--{{ kind }}{% endif %}{% if include.item_class %} {{ include.item_class }}{% endif %}">
 
   {% if item.image %}
-    <a href="{{ item.url }}" title="View more info on {{ item.title | escape }}" tabindex="-1"{% if item.url contains "http" %} target="_blank"{% endif %}>
-      <span class="item__image" style="background-image: url('{% include image.html item=item %}')">{{ item.title | escape }}</span>
-    </a>
+    {% unless page.url contains '/people/' %}
+      <a href="{{ item.url }}" title="View more info on {{ item.title | escape }}" tabindex="-1"{% if item.url contains "http" %} target="_blank"{% endif %}>
+        <span class="item__image" style="background-image: url('{% include image.html item=item %}')">{{ item.title | escape }}</span>
+      </a>
+    {% endunless %}
   {% endif %}
 
   <h2 class="item__title">
-    <a href="{{ item.url }}"  title="View more info on {{ item.title | escape }}"{% if item.url contains "http" %} target="_blank"{% endif %}>{{ item.title }}</a>
+    {% if page.url == '/people/'%}
+      {% if item.subtitle or item.expertise or item.twitter or item.guides or item.publications %}
+        <a href="{{ item.url }}"  title="View more info on {{ item.title | escape }}"{% if item.url contains "http" %} target="_blank"{% endif %}>{{ item.title }}</a>
+      {% else %}
+        {{ item.title }}
+      {% endif %}
+    {% else %}
+      <a href="{{ item.url }}"  title="View more info on {{ item.title | escape }}"{% if item.url contains "http" %} target="_blank"{% endif %}>{{ item.title }}</a>
+    {% endif %}
   </h2>
 
   {% if item.address %}
@@ -26,7 +36,7 @@
         <a href="{{ item.url }}#hours" class="ss-clock meta">View hours</a>
       {% endif %}
       {% if item.email %}
-        <a href="mailto:{{ item.email | escape }}" class="ss-mail meta" title="Email {{ item.title | escape }}">{{ item.email }}</a>
+        <a href="mailto:{{ item.email | escape }}" class="ss-mail meta" title="Email {{ item.title | escape }}"></a>
       {% endif %}
       {% if item.phone %}
         <span class="ss-phone meta" title="Phone number">{{ item.phone }}</span>
