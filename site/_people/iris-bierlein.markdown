@@ -1,23 +1,19 @@
 ---
-subtitle: ''
 job_title: User Experience Specialist
 location: Bobst Library
-space: 4FL
+space: 9th Floor East, Room 964
 departments:
 - User Experience
-status: ''
-expertise: 
+expertise:
+- Usability
+- User Testing
 email: ib43@nyu.edu
-phone: ''
-twitter: ''
-image: ''
-buttons: 
-guides: 
-publications: 
-keywords: 
+guides:
+  title: Research Guidehttp://www.nyu.edu
+publications:
+  Publications: http://www.nyu.edu
 title: Iris Bierlein
+date: 2015-10-06 17:53:00 Z
 ---
 
 # About Iris Bierlein
-
-This is test data about Iris
