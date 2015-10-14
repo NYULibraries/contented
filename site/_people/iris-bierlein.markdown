@@ -12,8 +12,8 @@ guides:
   title: Research Guidehttp://www.nyu.edu
 publications:
   Publications: http://www.nyu.edu
-title: Iris Bierlein
 date: 2015-10-06 17:53:00 Z
+title: Iris Bierlein
 ---
 
 # About Iris Bierlein

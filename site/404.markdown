@@ -11,7 +11,7 @@ Try searching for <a href="#stq=" class="magic-search">this</a> instead?
 
 ## Suggested links
 
-- [Report a Broken Link](/services/forms/report-a-broken-link/)
+- [Report a Broken Link](/services/forms/report-a-broken-link)
 - [Ask a Librarian](/services/forms/ask.html)
 - [Locations & Hours](/locations)
 - [Staff Directory](/people)

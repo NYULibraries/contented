@@ -1,5 +1,4 @@
 ---
-title: Ask a Librarian
 departments:
 - Public Services
 type: Help article
@@ -15,9 +14,10 @@ keywords:
 - Video
 - Software
 date: 2015-10-12 19:22:00 Z
+title: Ask a Librarian
 ---
 
-# We can provide support in a number of ways
+# We can help
 
 * Facilitate efficient use of electronic databases and services. 
 * Find information on a topic
@@ -41,3 +41,5 @@ date: 2015-10-12 19:22:00 Z
     </ul>
   </div>
 </div>
+
+<script src="//api2.libanswers.com/1.0/widgets/1808"></script>

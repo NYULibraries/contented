@@ -1,6 +1,5 @@
 ---
-job_title:
-  Associate Curator: Head, User Experience
+job_title: Associate Curator- Head, User Experience
 location: Bobst Library
 space: 4FL
 departments:
@@ -12,8 +11,8 @@ phone: "(212) 998-2469"
 guides:
   title: Research Guides
   libguide_id: 2276
-title: Nadaleen Tempelman-Kluit
 date: 2015-10-06 18:26:00 Z
+title: Nadaleen Tempelman-Kluit
 ---
 
 # About Nadaleen Tempelman-Kluit
