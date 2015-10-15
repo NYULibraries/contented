@@ -12,10 +12,7 @@ layout: default
     <thead>
       <tr class="table__row table__row--head">
         {% for field in page.fields %}
-          {% if field.last == 'Subject' and page.url contains '/people/' %}
-            {% continue %}
-          {% endif %}
-          {% if field.last == 'Location' and page.url contains '/services/' %}
+          {% if page.hide_columns contains field.last %}
             {% continue %}
           {% endif %}
           <th class="table__cell table__cell--sortable table__cell--{{ field.first }}" data-field="{{ field.first }}"{% if field.first == "title" %} data-sort="asc"{% endif %}>{{ field.last }}</th>
@@ -27,14 +24,11 @@ layout: default
       {% for item in items limit:site.page_size %}
         <tr class="table__row">
         {% for field in page.fields %}
+          {% if page.hide_columns contains field.last %}
+            {% continue %}
+          {% endif %}
           {% assign key = field.first %}
           {% assign value = item[key] %}
-          {% if key == 'expertise' and page.url contains '/people/' %}
-            {% continue %}
-          {% endif %}
-          {% if key == 'location' and page.url contains '/services/' %}
-            {% continue %}
-          {% endif %}
           <td class="table__cell">
             {% if key == 'title' %}
               {% include card.html item=item %}
