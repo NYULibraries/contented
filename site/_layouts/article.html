@@ -54,43 +54,43 @@ layout: default
 
   {% if page.blog.rss or page.guides.rss or page.publications.rss or page.libanswers_id or page.classes or page.amenities %}
     <div class="flex-blocks is-bordered">
-      {% assign page.amenities = page.amenities | remove: ' ' %}
-      {% if page.amenities and page.amenities != '' %}
+      {% assign page_amenities = page.amenities | remove: ' ' %}
+      {% if page.amenities and page_amenities != '' %}
         <div class="block">
           {% include list.html title="Amenities" items=page.amenities %}
         </div>
       {% endif %}
 
-      {% assign page.blog.rss = page.blog.rss | remove: ' ' %}
-      {% if page.blog.rss and page.blog.rss != '' %}
+      {% assign page_blog_rss = page.blog.rss | remove: ' ' %}
+      {% if page.blog.rss and page_blog_rss != '' %}
         <div class="block">
           {% include feed.html feed=page.blog %}
         </div>
       {% endif %}
 
-      {% assign page.guides.rss = page.guides.rss | remove: ' ' %}
-      {% if page.guides.rss and page.guides.rss != '' %}
+      {% assign page_guides_rss = page.guides.rss | remove: ' ' %}
+      {% if page.guides.rss and page_guides_rss != '' %}
         <div class="block">
           {% include feed.html default_title="Research Guides" feed=page.guides %}
         </div>
       {% endif %}
 
-      {% assign page.publications.rss = page.publications.rss | remove: ' ' %}
-      {% if page.publications.rss and page.publications.rss != '' %}
+      {% assign page_publications_rss = page.publications.rss | remove: ' ' %}
+      {% if page.publications.rss and page_publications_rss != '' %}
         <div class="block">
           {% include feed.html default_title="Publications" feed=page.publications limit=5 %}
         </div>
       {% endif %}
 
-      {% assign page.libanswers_id = page.libanswers_id | remove: ' ' %}
-      {% if page.libanswers_id and page.libanswers_id != '' %}
+      {% assign page_libanswers_id = page.libanswers_id | remove: ' ' %}
+      {% if page.libanswers_id and page_libanswers_id != '' %}
         <div class="block">
           {% include faq.html title=page.faq_title id=page.libanswers_id %}
         </div>
       {% endif %}
 
-      {% assign page.classes = page.classes | remove: ' ' %}
-      {% if page.classes and page.classes != '' %}
+      {% assign page_classes = page.classes | remove: ' ' %}
+      {% if page.classes and page_classes != '' %}
         <div class="block">
           {% include links.html title="Classes" name="classes" %}
         </div>
