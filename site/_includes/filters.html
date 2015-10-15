@@ -12,11 +12,7 @@
     {% for field in page.fields %}
     {% if forloop.index > 1 %}
     <select name="{{ field.first }}">
-      {% if page.url contains '/locations/' %}
-        <option value="">Type</option>
-      {% else %}
-        <option value="">{{ field.last }}</option>
-      {% endif %}
+      <option value="">{{ field.last }}</option>
       <option value="" disabled>—</option>
       {% assign options = "" %}
       {% for item in items %}{% for value in item[field.first] %}
