@@ -1,3 +1,4 @@
+require_relative 'rectify_peoplesync'
 require 'json'
 require 'hashie'
 require 'open-uri'
@@ -13,7 +14,7 @@ module Conversion
 
       def initialize(sheet_url)
         @people ||= JSON.parse(people_json)['Report_Entry']
-        @people_sheet ||= JSON.parse(open(sheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry']
+        @people_sheet ||= RectifyPeopleSync.new.remove_people_to_exclude(JSON.parse(open(sheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry'])
       end
 
       def people_json_call
