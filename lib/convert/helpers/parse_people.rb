@@ -17,7 +17,7 @@ module Conversion
       end
 
       def people_exclude
-        @people_exclude ||= YAML.load_file('config/people_exclude.yml')['people_exclude'] if File.exist? 'aconfig/people_exclude.yml'
+        @people_exclude ||= YAML.load_file('config/people_exclude.yml')['people_exclude'] if File.exist? 'config/people_exclude.yml'
       end
 
       def exclude_people(people_sheet)
