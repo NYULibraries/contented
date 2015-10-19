@@ -13,7 +13,15 @@ module Conversion
 
       def initialize(sheet_url)
         @people ||= JSON.parse(people_json)['Report_Entry']
-        @people_sheet ||= JSON.parse(open(sheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry']
+        @people_sheet ||= exclude_people(JSON.parse(open(sheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry'])
+      end
+
+      def people_exclude
+        @people_exclude ||= YAML.load_file('config/people_exclude.yml')['people_exclude'] if File.exist? 'aconfig/people_exclude.yml'
+      end
+
+      def exclude_people(people_sheet)
+        people_exclude ? people_sheet.delete_if { |p_exclude| people_exclude.include? p_exclude['netid']['tx'] } : people_sheet
       end
 
       def people_json_call
