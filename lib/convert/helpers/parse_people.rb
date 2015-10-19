@@ -14,8 +14,14 @@ module Conversion
 
       def initialize(sheet_url)
         @people ||= JSON.parse(people_json)['Report_Entry']
-        @people_sheet ||= RectifyPeopleSync.new.remove_people_to_exclude(JSON.parse(open(sheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry'])
+        @people_sheet ||= remove_people_to_exclude(JSON.parse(open(sheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry'])
         @location_map ||= YAML.load_file('config/location_map.yml')
+      end
+
+      def remove_people_to_exclude(people)
+        fail Error, 'config/people_exclude.yml file deos not exist' unless File.exist? 'config/people_exclude.yml'
+        people_exclude = YAML.load_file('config/people_exclude.yml')['people_exclude']
+        people.delete_if { |p| people_exclude.include? p['netid']['tx'] }
       end
 
       def people_json_call
