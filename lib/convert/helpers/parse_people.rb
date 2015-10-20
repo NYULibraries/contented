@@ -13,13 +13,16 @@ module Conversion
 
       def initialize(sheet_url)
         @people ||= JSON.parse(people_json)['Report_Entry']
+        #  people to be excluded are removed from the raw worksheet data itself.
         @people_sheet ||= exclude_people(JSON.parse(open(sheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry'])
       end
 
+      # Fetches people_exclude.yml which is the list of net_id's of people to omit from the site
       def people_exclude
         @people_exclude ||= YAML.load_file('config/people_exclude.yml')['people_exclude'] if File.exist? 'config/people_exclude.yml'
       end
 
+      # Removes the people to be excluded from the people_sheet JSON
       def exclude_people(people_sheet)
         people_exclude ? people_sheet.delete_if { |p_exclude| people_exclude.include? p_exclude['netid']['tx'] } : people_sheet
       end
