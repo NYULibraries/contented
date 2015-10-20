@@ -9,6 +9,8 @@ module Conversion
   module Helpers
     # Combines the People data from the spreasheet and JSON
     class ParsePeople
+      # people data is peoplesunc data
+      # People_sheet is data from people spreadsheet
       attr_accessor :people, :people_sheet
 
       def initialize(sheet_url)
@@ -16,12 +18,15 @@ module Conversion
         @people_sheet ||= JSON.parse(open(sheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry']
       end
 
+      # JSON call using RestClient to grab the Peoplesync data using their REST services as a simple uri call using Basic auth doesn't work
       def people_json_call
         RestClient::Request.new(method: :get, url: "#{ENV['PEOPLE_JSON_URL']}", user: "#{ENV['PEOPLE_JSON_USER']}", password: "#{ENV['PEOPLE_JSON_PASS']}",
                                 headers: { accept: :json, content_type: :json }, timeout: 200
                                ).execute
       end
 
+      # Peoplesync data can be troublesome thus try getting it 3 if timeout else is discarded
+      # The code exits so the markdowns are not touched if peoplesync data cannot be retrieved
       def people_json
         tries ||= 3
         response = people_json_call
@@ -45,28 +50,38 @@ module Conversion
         people.find { |person| person['NetID'] == net_id }
       end
 
+      # Phone number is modified to add +1 and add - after 6 numbers but if the phone number is nil then blank string is returned to avoid nil values in meta
       def modify_phone(phone)
         phone ? phone.gsub('+1 ', '').insert(-5, '-') : ''
       end
 
+      # Department name are parsed from peoplesync data and if the department is nil then blank string is returned to avoid nil values in meta
       def modify_departments(department)
         department += '('
         department ? department.slice(0..(department.index('(') - 1)).strip : ''
       end
 
+      # Fetches the location_map.yml file
+      # Some of the locations in peoplesync data are incorrect hence they need to corrected
+      # @location_map is a hashmap of the form location_map[peoplesync_incorrect_location] = correct_location
       def location_map
         @location_map ||= YAML.load_file('config/location_map.yml') if File.exist? 'config/location_map.yml'
       end
 
+
+      # This method returns location from location_space or blank string if nil to avoid nil values in meta
       def parse_location(location_space)
         location_space ? location_space.slice(location_space.index('>')..location_space.rindex('>')).delete('>').strip : ''
       end
 
+      # PeopleSync data returns location and space in it's address attribute. Method gets location
+      # returns mapped locatino if location needs to be replaced using the location_map hash or the original location from peoplesync
       def map_to_location(location_space)
         location = parse_location(location_space)
         location_map[location] ? location_map[location] : location
       end
 
+      # PeopleSync data returns location and space in it's address attribute. Method gets space
       def space(location_space)
         return '' if location_space && location_space.count('>') < 2
         location_space ? location_space.slice(location_space.rindex('>')..-1).delete('>').strip : ''
