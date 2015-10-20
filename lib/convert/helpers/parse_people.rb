@@ -66,8 +66,8 @@ module Conversion
       # @location_map is a hashmap of the form location_map[peoplesync_incorrect_location] = correct_location
       def location_map
         @location_map ||= YAML.load_file('config/location_map.yml') if File.exist? 'config/location_map.yml'
+        location_map ? location_map : {}
       end
-
 
       # This method returns location from location_space or blank string if nil to avoid nil values in meta
       def parse_location(location_space)
