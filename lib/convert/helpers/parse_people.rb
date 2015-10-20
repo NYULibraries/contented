@@ -54,8 +54,17 @@ module Conversion
         department ? department.slice(0..(department.index('(') - 1)).strip : ''
       end
 
-      def location(location_space)
+      def location_map
+        @location_map ||= YAML.load_file('config/location_map.yml') if File.exist? 'config/location_map.yml'
+      end
+
+      def parse_location(location_space)
         location_space ? location_space.slice(location_space.index('>')..location_space.rindex('>')).delete('>').strip : ''
+      end
+
+      def map_to_location(location_space)
+        location = parse_location(location_space)
+        location_map[location] ? location_map[location] : location
       end
 
       def space(location_space)
@@ -73,7 +82,7 @@ module Conversion
 
       def location_info(person_found, person)
         person['departments']['tx'] = modify_departments(person_found['Supervisory_Org_Name'])
-        person['location']['tx'] = location(person_found['Position_Work_Space'])
+        person['location']['tx'] = map_to_location(person_found['Position_Work_Space'])
         person['space']['tx'] = space(person_found['Position_Work_Space'])
         person
       end
