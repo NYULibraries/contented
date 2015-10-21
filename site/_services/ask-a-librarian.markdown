@@ -42,4 +42,4 @@ title: Ask a Librarian
   </div>
 </div>
 
-<script src="//api2.libanswers.com/1.0/widgets/1808"></script>
+<div id="s-la-widget-3038"></div>

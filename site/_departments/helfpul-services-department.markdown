@@ -1,7 +1,7 @@
 ---
 subtitle: HSD
 location: Elmer Holmes Bobst Library
-space: 14th Floor East, Room 1400, Helpful Commons
+space: Helpful Commons, 14th Floor East, Room 1400
 email: lib-helpful-group@nyu.edu
 phone: "(212) 222-2222"
 twitter: nyuhelpful
@@ -11,7 +11,8 @@ blog:
   rss: https://wp.nyu.edu/feed/
 libcal_id: 1530
 links:
-  link: 
+  Relevant link: http://www.nyu.edu
+  Relevant link 2: http://library.nyu.edu
 classes:
   Library Classes: http://nyu.libcal.com/calendar/classes
 buttons:
@@ -19,7 +20,7 @@ buttons:
 keywords: help
 net_id: ib43
 libanswers_id: 14591
-date: '2015-09-15 15:52:00 +0000'
+date: 2015-10-13 17:41:00 Z
 title: Helpful Services Department
 ---
 

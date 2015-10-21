@@ -1,4 +1,5 @@
 ---
+date: 2015-10-06 17:50:23 Z
 subtitle: NYU Florence
 type: Library
 address: "Via Bolognese\r\n120, 50139 Firenze ITALIA\r\n"
@@ -21,7 +22,6 @@ keywords:
 - Appointment Required
 links: 'Action Photograph Collection: ''http://www.nyu.edu/global/lapietra/pdfs/photoarchive.english.pdf'''
 title: Acton Library
-date: 2015-10-06 17:50:23 Z
 ---
 
 # About Acton Library

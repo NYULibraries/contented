@@ -11,3 +11,10 @@ README.md
 .jekyll-metadata
 .sass-cache
 _site/*
+
+_departments/*
+_forms/*
+_locations/*
+_people/*
+_services/*
+_spaces/*

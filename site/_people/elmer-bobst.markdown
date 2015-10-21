@@ -1,4 +1,5 @@
 ---
+date: 2015-10-06 17:52:00 Z
 job_title: Library Namesake
 net_id: eb0
 location: Elmer Holmes Bobst Library
@@ -15,7 +16,6 @@ buttons:
 keywords:
 - greeter
 - statue
-date: 2015-10-06 17:52:00 Z
 guides:
   title: Research Guides
   link: http://guides.nyu.edu/

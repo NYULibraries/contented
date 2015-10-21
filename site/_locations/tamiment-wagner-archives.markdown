@@ -1,4 +1,5 @@
 ---
+date: 2015-10-06 17:50:47 Z
 subtitle: 
 type: Library
 location: Elmer Holmes Bobst Library
@@ -21,7 +22,6 @@ keywords:
 - Library
 - NYU
 title: Tamiment & Wagner Archives
-date: 2015-10-06 17:50:47 Z
 ---
 
 # About Tamiment & Wagner Archives

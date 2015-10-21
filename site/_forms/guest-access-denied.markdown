@@ -1,5 +1,6 @@
 ---
-date: 2015-10-13 18:14:54 UTC
+date: 2015-10-16 19:21:01 Z
+permalink: "/services/guest-wireless-access-denied/"
 title: Guest Wireless Access Denied
 ---
 

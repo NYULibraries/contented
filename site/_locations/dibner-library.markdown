@@ -1,4 +1,5 @@
 ---
+date: 2015-10-06 17:50:30 Z
 subtitle: The NYU Tandon School of Engineering
 type: Library
 address: "5 Metrotech Center\r\nBrooklyn, NY 11201-9818\r\n"
@@ -21,7 +22,6 @@ keywords:
 - NYU
 location: Metro Center
 title: Dibner Library
-date: 2015-10-06 17:50:30 Z
 ---
 
 # About Dibner Library

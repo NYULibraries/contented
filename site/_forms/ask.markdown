@@ -4,11 +4,7 @@ permalink: "/services/forms/ask"
 title: Ask a Librarian
 ---
 
-<div class="wrap content has-sidebar">
-  <div class="block block--body" data-swiftype-index="true">
-    <link rel="stylesheet" type="text/css" href="/assets/css/style-guide.css" />
-    <div class="style-guide-content--questionpoint-forms">
-      <form action="http://www.questionpoint.org/crs/servlet/org.oclc.ask.AskPatronQuestion" method="post" name="entryform1" onsubmit="return checkIt(this)">
+<form action="http://www.questionpoint.org/crs/servlet/org.oclc.ask.AskPatronQuestion" method="post" name="entryform1" onsubmit="return checkIt(this)">
         <div class="required">Required Field<span>*</span></div>
         <fieldset>
           <input type="hidden" name="language" value="1" />
@@ -94,6 +90,3 @@ title: Ask a Librarian
           <button class="button" value="Submit" onclick="submitForm(document.entryform1)" />Submit
         </fieldset>
         </form>
-    </div>
-  </div>
-</div>

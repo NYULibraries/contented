@@ -1,4 +1,5 @@
 ---
+date: 2015-10-06 17:50:51 Z
 subtitle: 
 type: Library
 address: "70 Washington Square South\r\nNew York, NY 10012\r\n"
@@ -21,7 +22,6 @@ keywords:
 - NYU
 location: Elmer Holmes Bobst Library
 title: University Archives
-date: 2015-10-06 17:50:51 Z
 ---
 
 # About University Archives

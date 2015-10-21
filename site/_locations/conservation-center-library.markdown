@@ -1,4 +1,5 @@
 ---
+date: 2015-10-06 17:50:27 Z
 subtitle: 'Institute of Fine Arts '
 type: Library
 address: "14 E. 78th Street\r\nNew York, NY 10075\r\n"
@@ -21,7 +22,6 @@ keywords:
 - NYU
 location: James B. Duke House - Institute of Fine Arts
 title: Conservation Center Library
-date: 2015-10-06 17:50:27 Z
 ---
 
 # About Conservation Center Library

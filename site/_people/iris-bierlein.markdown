@@ -1,4 +1,5 @@
 ---
+date: 2015-10-06 17:53:00 Z
 job_title: User Experience Specialist
 location: Bobst Library
 space: 9th Floor East, Room 964
@@ -12,7 +13,6 @@ guides:
   title: Research Guidehttp://www.nyu.edu
 publications:
   Publications: http://www.nyu.edu
-date: 2015-10-06 17:53:00 Z
 title: Iris Bierlein
 ---
 

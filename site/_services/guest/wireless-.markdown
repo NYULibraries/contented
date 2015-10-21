@@ -1,7 +1,7 @@
 ---
-date: 2015-10-13 16:29:00 Z
-title: "/services/forms/guest-wireless-register"
+date: 2015-10-13 16:29:00 UTC
 published: false
+title: "/services/forms/guest-wireless-register"
 ---
 
 com.omniupdate.div label="breadcrumb" group="Everyone" button="730"  com.omniupdate.editor csspath="/css/public/public.css" cssmenu="/css/public/public.txt" width="900" div="#OUPreview"
