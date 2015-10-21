@@ -7,20 +7,19 @@ Figs.load
 
 module Conversion
   module Helpers
-    # Combines the People data from the spreasheet and JSON
+    # Combines the People data from spreasheet and JSON
     class ParsePeople
-      attr_accessor :people, :spreadsheet_people
+      attr_accessor :peoplesync, :spreadsheet_people, :location_map
       PEOPLE_EXCLUDE_FILE = 'config/people_exclude.yml'
       LOCATION_MAP_FILE = 'config/location_map.yml'
 
       def initialize(spreadsheet_url)
         fail ArgumentError, 'spreadsheet_url must not be nil' unless spreadsheet_url
-        @people ||= JSON.parse(people_json)['Report_Entry']
-        @spreadshet_url = spreadsheet_url
+        @spreadsheet_people ||= people_sheet_after_exclusion(spreadsheet_url)
       end
 
-      def spreadsheet_people
-         @spreadsheet_people ||= people_sheet_after_exclusion(spreadsheet_url)
+      def peoplesync
+        @peoplesync ||= JSON.parse(people_json)['Report_Entry']
       end
 
       # People to be excluded are removed from the raw worksheet data itself.
@@ -38,7 +37,8 @@ module Conversion
         people_exclude ? spreadsheet_people.delete_if { |p_exclude| people_exclude.include? p_exclude['netid']['tx'] } : spreadsheet_people
       end
 
-      # JSON call using RestClient to grab the Peoplesync data using their REST services as a simple uri call using Basic auth doesn't work
+      # JSON call using RestClient to grab the Peoplesync data using their REST services
+      # A simple uri call using Basic auth doesn't work
       def people_json_call
         RestClient::Request.new(method: :get, url: "#{ENV['PEOPLE_JSON_URL']}", user: "#{ENV['PEOPLE_JSON_USER']}", password: "#{ENV['PEOPLE_JSON_PASS']}",
                                 headers: { accept: :json, content_type: :json }, timeout: 200
@@ -57,36 +57,36 @@ module Conversion
         response
       end
 
-      # Edit the All_Positions_Jobs internal json Hash to become a part of the actual hash to covert the 2-layers into 1-layer.
+      # to Convert the 2-layers Peoplesync Hash into 1-layer.
       def redefine_json
-        people.each do |person|
+        peoplesync.each do |person|
           person['All_Positions_Jobs'].each { |job_positions| job_positions.each_pair { |k, v| person['' + k] = v } }
           person.delete('All_Positions_Jobs')
         end
       end
 
-      # Find a person in Json data using their Net Id's
+      # Find a person in PeopleSync Json data using their Net Id's
       def find_person_json(net_id)
-        people.find { |person| person['NetID'] == net_id }
+        peoplesync.find { |person| person['NetID'] == net_id }
       end
 
-      # Phone number is modified to remove +1 and add - after 6 digits but if the phone number is nil then blank string is returned to avoid nil values in meta
+      # Phone number is modified to remove +1 and add - after 6 digits but
+      # if the phone number is nil then blank string is returned to avoid nil values in meta
       def modify_phone(phone)
         phone ? phone.gsub('+1 ', '').insert(-5, '-') : ''
       end
 
-      # Department name are parsed from peoplesync data and if the department is nil then blank string is returned to avoid nil values in meta
+      # Department name are parsed from peoplesync data
+      # if the department is nil then blank string is returned to avoid nil values in meta
       def modify_departments(department)
         department += '('
         department ? department.slice(0..(department.index('(') - 1)).strip : ''
       end
 
-      # Fetches the location_map.yml file
-      # Some of the locations in peoplesync data are incorrect hence they need to corrected
-      # @location_map is a hashmap of the form location_map[peoplesync_incorrect_location] = correct_location
+      # Fetches the location_map.yml file if it exists otherwise it returns empty {} to avoid nil
       def location_map
-        @location_map ||= YAML.load_file(LOCATION_MAP_FILE) if File.exist? LOCATION_MAP_FILE
-        location_map ? location_map : {}
+        map_locations = YAML.load_file(LOCATION_MAP_FILE) if File.exist? LOCATION_MAP_FILE
+        @location_map =  map_locations ? map_locations : {}
       end
 
       # This method returns location from location_space or blank string if nil to avoid nil values in meta
@@ -94,8 +94,7 @@ module Conversion
         location_space ? location_space.slice(location_space.index('>')..location_space.rindex('>')).delete('>').strip : ''
       end
 
-      # PeopleSync data returns location and space in it's address attribute. Method gets location
-      # returns mapped locatino if location needs to be replaced using the location_map hash or the original location from peoplesync
+      # Some of the locations in peoplesync data are incorrect hence they need to corrected
       def map_to_location(location_space)
         location = parse_location(location_space)
         location_map[location] ? location_map[location] : location
