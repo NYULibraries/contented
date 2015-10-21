@@ -9,22 +9,28 @@ module Conversion
   module Helpers
     # Combines the People data from the spreasheet and JSON
     class ParsePeople
-      attr_accessor :people, :people_sheet
+      attr_accessor :people, :spreadsheet_people
+      PEOPLE_EXCLUDE_FILE = 'config/people_exclude.yml'
 
-      def initialize(sheet_url)
+      def initialize(spreadsheet_url)
+        fail ArgumentError, 'spreadsheet_url must not be nil' unless spreadsheet_url
         @people ||= JSON.parse(people_json)['Report_Entry']
-        #  people to be excluded are removed from the raw worksheet data itself.
-        @people_sheet ||= exclude_people(JSON.parse(open(sheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry'])
+        @spreadsheet_people ||= people_sheet_after_exclusion(spreadsheet_url)
+      end
+
+      # People to be excluded are removed from the raw worksheet data itself.
+      def people_sheet_after_exclusion(spreadsheet_url)
+        exclude_people(JSON.parse(open(spreadsheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry'])
       end
 
       # Fetches people_exclude.yml which is the list of net_id's of people to omit from the site
       def people_exclude
-        @people_exclude ||= YAML.load_file('config/people_exclude.yml')['people_exclude'] if File.exist? 'config/people_exclude.yml'
+        @people_exclude ||= YAML.load_file(PEOPLE_EXCLUDE_FILE)['people_exclude'] if File.exist? PEOPLE_EXCLUDE_FILE
       end
 
-      # Removes the people to be excluded from the people_sheet JSON
-      def exclude_people(people_sheet)
-        people_exclude ? people_sheet.delete_if { |p_exclude| people_exclude.include? p_exclude['netid']['tx'] } : people_sheet
+      # Removes the people to be excluded from the spreadsheet_people JSON
+      def exclude_people(spreadsheet_people)
+        people_exclude ? spreadsheet_people.delete_if { |p_exclude| people_exclude.include? p_exclude['netid']['tx'] } : spreadsheet_people
       end
 
       def people_json_call
@@ -102,7 +108,7 @@ module Conversion
       def complete_people_data
         redefine_json
         people_complete = []
-        people_sheet.each do |person|
+        spreadsheet_people.each do |person|
           person_found_in_json = find_person_json(person['netid']['tx'])
           people_complete.push correct_json_format(person_found_in_json, person) if person_found_in_json
         end
