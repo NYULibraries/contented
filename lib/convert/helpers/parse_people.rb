@@ -12,6 +12,13 @@ module Conversion
       attr_accessor :peoplesync, :spreadsheet_people, :location_map
       PEOPLE_EXCLUDE_FILE = 'config/people_exclude.yml'
       LOCATION_MAP_FILE = 'config/location_map.yml'
+      PHONE = { name: 'phone', peoplesync: 'Work_Phone' }
+      EMAIL = { name: 'email', peoplesync: 'Email_Address' }
+      ADDRESS = { name: 'address', peoplesync: 'Primary_Work_Space_Address' }
+      JOB_TITLE = { name: 'jobtitle', peoplesync: 'Business_Title' }
+      DEPARTMENT = { name: 'departments', peoplesync: 'Supervisory_Org_Name' }
+      LOCATION = { name: 'location', peoplesync: 'Position_Work_Space' }
+      SPACE = { name: 'space', peoplesync: 'Position_Work_Space' }
 
       def initialize(spreadsheet_url)
         fail ArgumentError, 'spreadsheet_url must not be nil' unless spreadsheet_url
@@ -107,17 +114,13 @@ module Conversion
       end
 
       def personnel_info(person_found, person)
-        person['phone']['tx'] = modify_phone(person_found['Work_Phone'])
-        person['email']['tx'] = person_found['Email_Address']
-        person['address']['tx'] = person_found['Primary_Work_Space_Address']
-        person['jobtitle']['tx'] = person_found['Business_Title']
-        person
-      end
-
-      def location_info(person_found, person)
-        person['departments']['tx'] = modify_departments(person_found['Supervisory_Org_Name'])
-        person['location']['tx'] = map_to_location(person_found['Position_Work_Space'])
-        person['space']['tx'] = space(person_found['Position_Work_Space'])
+        person[PHONE[:name]]['tx'] = modify_phone(person_found[PHONE[:peoplesync]])
+        person[EMAIL[:name]]['tx'] = person_found[EMAIL[:peoplesync]]
+        person[ADDRESS[:name]]['tx'] = person_found[ADDRESS[:peoplesync]]
+        person[JOB_TITLE[:name]]['tx'] = person_found[JOB_TITLE[:peoplesync]]
+        person[DEPARTMENT[:name]]['tx'] = modify_departments(person_found[DEPARTMENT[:peoplesync]])
+        person[LOCATION[:name]]['tx'] = map_to_location(person_found[LOCATION[:peoplesync]])
+        person[SPACE[:name]]['tx'] = space(person_found[SPACE[:peoplesync]])
         person
       end
 
@@ -125,7 +128,6 @@ module Conversion
       def correct_json_format(person_found, person)
         person['title']['tx'] = person_found['First_Name'] + ';' + person_found['Last_Name']
         person = personnel_info(person_found, person)
-        person = location_info(person_found, person)
         person_found.each_pair { |k, v| person['' + k.delete('_').downcase] = JSON.parse("{ \"tx\" : \"#{v}\"}") }
         person
       end
