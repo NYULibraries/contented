@@ -12,6 +12,7 @@ module Conversion
       # people data is peoplesunc data
       # People_sheet is data from people spreadsheet
       attr_accessor :people, :people_sheet
+      LOCATION_MAP_FILE = 'config/location_map.yml'
 
       def initialize(sheet_url)
         @people ||= JSON.parse(people_json)['Report_Entry']
@@ -50,7 +51,7 @@ module Conversion
         people.find { |person| person['NetID'] == net_id }
       end
 
-      # Phone number is modified to add +1 and add - after 6 numbers but if the phone number is nil then blank string is returned to avoid nil values in meta
+      # Phone number is modified to remove +1 and add - after 6 digits but if the phone number is nil then blank string is returned to avoid nil values in meta
       def modify_phone(phone)
         phone ? phone.gsub('+1 ', '').insert(-5, '-') : ''
       end
@@ -65,7 +66,7 @@ module Conversion
       # Some of the locations in peoplesync data are incorrect hence they need to corrected
       # @location_map is a hashmap of the form location_map[peoplesync_incorrect_location] = correct_location
       def location_map
-        @location_map ||= YAML.load_file('config/location_map.yml') if File.exist? 'config/location_map.yml'
+        @location_map ||= YAML.load_file(LOCATION_MAP_FILE) if File.exist? LOCATION_MAP_FILE
         location_map ? location_map : {}
       end
 
