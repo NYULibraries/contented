@@ -15,7 +15,11 @@ module Conversion
       def initialize(spreadsheet_url)
         fail ArgumentError, 'spreadsheet_url must not be nil' unless spreadsheet_url
         @people ||= JSON.parse(people_json)['Report_Entry']
-        @spreadsheet_people ||= people_sheet_after_exclusion(spreadsheet_url)
+        @spreadshet_url = spreadsheet_url
+      end
+
+      def spreadsheet_people
+         @spreadsheet_people ||= people_sheet_after_exclusion(spreadsheet_url)
       end
 
       # People to be excluded are removed from the raw worksheet data itself.
