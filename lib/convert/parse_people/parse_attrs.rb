@@ -27,7 +27,7 @@ module Conversion
       # Department name are parsed from peoplesync data
       # if the department is nil then blank string is returned to avoid nil values in meta
       def self.modify_departments(department)
-        department += '('
+        department += '(' if department
         department ? department.slice(0..(department.index('(') - 1)).strip : ''
       end
 
@@ -60,9 +60,8 @@ module Conversion
         person
       end
 
-      def self.address_info(person_found, person)
-        person[ADDRESS[:name]]['tx'] = person_found[ADDRESS[:peoplesync]]
-        person
+      def self.address_info(person_found)
+        person_found[ADDRESS[:peoplesync]] ? person_found[ADDRESS[:peoplesync]] : ''
       end
 
       def self.location_info(person, job_position)
@@ -79,9 +78,9 @@ module Conversion
 
       def self.personnel_info(person_found, person)
         person = contact_info(person_found, person)
+        person[ADDRESS[:name]]['tx'] = address_info(person_found)
         valid_job_pos = valid_job_position(person_found['All_Positions_Jobs'])
-        person = job_info(person, valid_job_pos) if valid_job_pos
-        person
+        valid_job_pos ? job_info(person, valid_job_pos) : person
       end
 
       # Edit all key names and fields to match the Google Sheet Formats

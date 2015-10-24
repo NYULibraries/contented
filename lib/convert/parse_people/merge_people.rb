@@ -1,6 +1,4 @@
 require 'json'
-require 'hashie'
-require 'open-uri'
 require 'rest-client'
 require_relative 'parse_attrs'
 require 'figs'
@@ -10,21 +8,17 @@ module Conversion
   module ParsePeople
     # Combines the People data from spreasheet and JSON
     class MergePeople
-      attr_accessor :peoplesync, :spreadsheet_people
+      attr_accessor :spreadsheet_people, :raw_people_sheet
       PEOPLE_EXCLUDE_FILE = 'config/people_exclude.yml'
 
-      def initialize(spreadsheet_url)
-        fail ArgumentError, 'spreadsheet_url must not be nil' unless spreadsheet_url
-        @spreadsheet_people ||= people_sheet_after_exclusion(spreadsheet_url)
+      def initialize(people_sheet)
+        fail ArgumentError, 'people_sheet must not be nil' unless people_sheet
+        @raw_people_sheet = people_sheet
+        @spreadsheet_people = exclude_people(people_sheet)
       end
 
       def peoplesync
         @peoplesync ||= JSON.parse(people_json)['Report_Entry']
-      end
-
-      # People to be excluded are removed from the raw worksheet data itself.
-      def people_sheet_after_exclusion(spreadsheet_url)
-        exclude_people(JSON.parse(open(spreadsheet_url).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry'])
       end
 
       # Fetches people_exclude.yml which is the list of net_id's of people to omit from the site

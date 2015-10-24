@@ -1,4 +1,4 @@
-require File.expand_path('../../spec_helper.rb', __FILE__)
+require File.expand_path('../../../spec_helper.rb', __FILE__)
 
 describe 'MDFields' do
   let(:md_fields) { Conversion::Helpers::MDFields }
