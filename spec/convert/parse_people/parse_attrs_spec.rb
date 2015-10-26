@@ -1,6 +1,6 @@
 require File.expand_path('../../../spec_helper.rb', __FILE__)
 
-describe 'FieldFormat' do
+describe 'ParseAttrs' do
   let(:parse_attrs) { Conversion::ParsePeople::ParseAttrs }
   let(:element) { nil }
   let(:peoplesync) do
