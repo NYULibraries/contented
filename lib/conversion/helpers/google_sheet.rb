@@ -13,15 +13,15 @@ module Conversion
         # Had to change to 'tx' for capistrano purposes. Capistrano throwing error for single letter obejcts
         return mash_json(open(uri(sheet_num)).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"')).feed.entry unless sheet_num == 6
         # People data needs to be combined with peoplesync data
-        people_data(people_spreadsheet_json)
+        people_data
       end
 
-      def people_spreadsheet_json
+      def self.people_spreadsheet_json
         JSON.parse(open(uri(6)).read.gsub('"gsx$', '"').gsub('"$t"', '"tx"'))['feed']['entry']
       end
 
-      def self.people_data(sheet_num)
-        mash_json(('{"entry":' + Collections::People.new(uri(sheet_num)).to_json + '}')).entry
+      def self.people_data
+        mash_json('{"entry":' +  Collections::People.new(people_spreadsheet_json).to_json.to_json + '}').entry
       end
 
       def self.mash_json(json_data)
