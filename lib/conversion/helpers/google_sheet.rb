@@ -1,7 +1,7 @@
 require 'open-uri'
 require 'json'
 require 'figs'
-require_relative '../Collections/people'
+# require_relative '../Collections/people'
 Figs.load
 
 module Conversion
@@ -21,7 +21,7 @@ module Conversion
       end
 
       def self.people_data
-        mash_json('{"entry":' +  Collections::People.new(people_spreadsheet_json).to_json.to_json + '}').entry
+        # mash_json('{"entry":' +  Collections::People.new(people_spreadsheet_json).to_json.to_json + '}').entry
       end
 
       def self.mash_json(json_data)
