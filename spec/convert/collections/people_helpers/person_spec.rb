@@ -43,7 +43,7 @@ describe 'Person' do
     primary_work_space_address work_phone
     email_address all_positions_jobs].each do |attribute|
       it "should have #{attribute}" do
-        person.send( attribute.to_sym ).should be_valid
+        person.send( attribute.to_sym ).should_not be_nil
       end
     end
   end
