@@ -14,7 +14,7 @@ module Conversion
         end
 
         def netid
-          @netid ||= @json_data[PEOPLESYNC_ATTR[:netid]]
+          @employee_id ||= @json_data[PEOPLESYNC_ATTR[:netid]]
         end
 
         def employee_id
@@ -22,27 +22,27 @@ module Conversion
         end
 
         def last_name
-          @netid ||= @json_data[PEOPLESYNC_ATTR[:last_name]]
+          @last_name ||= @json_data[PEOPLESYNC_ATTR[:last_name]]
         end
 
         def first_name
-          @netid ||= @json_data[PEOPLESYNC_ATTR[:first_name]]
+          @first_name ||= @json_data[PEOPLESYNC_ATTR[:first_name]]
         end
 
         def primary_work_space_address
-          @netid ||= @json_data[PEOPLESYNC_ATTR[:address]]
+          @primary_work_space_address ||= @json_data[PEOPLESYNC_ATTR[:address]]
         end
 
         def work_phone
-          @netid ||= @json_data[PEOPLESYNC_ATTR[:phone]]
+          @work_phone ||= @json_data[PEOPLESYNC_ATTR[:phone]]
         end
 
         def email_address
-          @phone ||= @json_data[PEOPLESYNC_ATTR[:email]]
+          @email_address ||= @json_data[PEOPLESYNC_ATTR[:email]]
         end
 
         def all_positions_jobs
-          @email ||= @json_data[PEOPLESYNC_ATTR[:all_positions_jobs]]
+          @all_positions_jobs ||= @json_data[PEOPLESYNC_ATTR[:all_positions_jobs]]
         end
       end
     end
