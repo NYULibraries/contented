@@ -1,4 +1,4 @@
-require File.expand_path('../../spec_helper.rb', __FILE__)
+require File.expand_path('../../../spec_helper.rb', __FILE__)
 
 describe 'FieldFormat' do
   let(:format) { Conversion::Helpers::FieldFormat }
