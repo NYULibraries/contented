@@ -11,14 +11,15 @@ module Conversion
         def initialize(json_data)
           fail ArgumentError, 'None of the parameters can be nil' if json_data.nil?
           @json_data = json_data
+          call_all_setter_functions
         end
 
         def netid
-          @employee_id ||= @json_data[PEOPLESYNC_ATTR[:netid]]
+          @netid ||= @json_data[PEOPLESYNC_ATTR[:netid]]
         end
 
         def employee_id
-          @netid ||= @json_data[PEOPLESYNC_ATTR[:employee_id]]
+          @employee_id ||= @json_data[PEOPLESYNC_ATTR[:employee_id]]
         end
 
         def last_name
@@ -43,6 +44,12 @@ module Conversion
 
         def all_positions_jobs
           @all_positions_jobs ||= @json_data[PEOPLESYNC_ATTR[:all_positions_jobs]]
+        end
+
+        private
+
+        def call_all_setter_functions
+          ['netid', 'employee_id', 'last_name', 'first_name', 'primary_work_space_address', 'work_phone', 'email_address', 'all_positions_jobs'].each { |func| send(func) }
         end
       end
     end
