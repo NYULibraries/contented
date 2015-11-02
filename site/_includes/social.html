@@ -1,6 +1,7 @@
 {% if include.scope == "site" %}{% assign scope = site %}{% else %}{% assign scope = page %}{% endif %}
 <ul class="social-links">
-  {% if scope['twitter'] %}
+  {% assign scope_twitter = scope['twitter'] | remove: ' ' %}
+  {% if scope['twitter'] and scope_twitter != '' %}
     <li>
     {% if scope['twitter'] contains 'http' %}
       <a href="{{ scope['twitter'] }}" class="ss-twitter" target="_blank">Twitter</a>
@@ -9,10 +10,11 @@
     {% endif %}
     </li>
   {% endif %}
-  {% if scope['facebook'] %}
+  {% assign scope_facebook = scope['facebook'] | remove: ' ' %}
+  {% if scope['facebook'] and scope_facebook != '' %}
     <li>
     {% if scope['facebook'] contains 'http' %}
-      <a href="{{ scope['facebook'] }}" class="ss-twitter" target="_blank">Facebook</a>
+      <a href="{{ scope['facebook'] }}" class="ss-facebook" target="_blank">Facebook</a>
     {% else %}
       <a href="https://www.facebook.com/{{ scope['facebook'] }}" class="ss-facebook" target="_blank">{{ scope['facebook'] }}</a>
     {% endif %}

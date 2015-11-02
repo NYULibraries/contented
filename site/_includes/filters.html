@@ -9,20 +9,18 @@
   <div>
     <label>Find by:</label>
 
-    {% for field in page.fields %}
-    {% if forloop.index > 1 %}
-    <select name="{{ field.first }}">
-      <option value="">{{ field.last }}</option>
+    {% for filter in page.filters %}
+    <select name="{{ filter.first }}">
+      <option value="">{{ filter.last }}</option>
       <option value="" disabled>—</option>
       {% assign options = "" %}
-      {% for item in items %}{% for value in item[field.first] %}
+      {% for item in items %}{% for value in item[filter.first] %}
       {% unless options contains value %}
       {% capture options %}{{ options }}<option value="{{ value }}">{{ value }}</option>{% endcapture %}
       {% endunless %}
       {% endfor %}{% endfor %}
       {{ options | split:"</option>" | sort | join:"</option>" }}
     </select>
-    {% endif %}
     {% endfor %}
     <input type="text" class="is-hidden" name="sort_field" value="{{ page.fields.first.first }}" data-default="{{ page.fields.first.first }}" />
     <input type="text" class="is-hidden" name="sort_direction" value="asc" data-default="asc" />
