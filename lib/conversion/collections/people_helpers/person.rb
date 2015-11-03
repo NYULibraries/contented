@@ -8,16 +8,9 @@ module Conversion
         attr_accessor :netid, :employee_id, :last_name, :first_name, :primary_work_space_address, :work_phone, :email_address, :all_positions_jobs
 
         def initialize(json_data)
-          fail ArgumentError, 'None of the parameters can be nil' if json_data.nil?
-          JSON.parse(json_data)['Report_Entry'][0].each_pair { |k,v| instance_variable_set("@#{k.downcase}", v) if respond_to?(k.downcase) } if valid_json? json_data
-        end
-
-        def valid_json?(json_data)
-            JSON.parse(json_data)
-            return true
+            JSON.parse(json_data)['Report_Entry'][0].each_pair { |k,v| instance_variable_set("@#{k.downcase}", v) if respond_to?(k.downcase) }
           rescue Exception => e
-            # puts 'Incorrect JSON FORMAT'
-            return false
+            # do nothing
         end
       end
     end
