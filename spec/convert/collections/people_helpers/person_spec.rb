@@ -8,12 +8,16 @@ end
 
 describe 'Person' do
   let(:json_data) { "{}" }
-  let(:person) { Conversion::Collections::PeopleHelpers::Person.new(json_data) }
+  subject(:person) { Conversion::Collections::PeopleHelpers::Person.new(json_data) }
   context "when no JSON formatted data is provided" do
     attributes.each do |attribute|
       it "should not have #{attribute}" do
         person.send( attribute.to_sym ).should be_nil
       end
+    end
+
+    it "should be able to convert to markdown" do
+      expect(person).to respond_to :to_markdown
     end
   end
   context "when proper JSON formatted data is provided" do
@@ -47,6 +51,10 @@ describe 'Person' do
 
     it "should have the #{attributes.size} instance variables" do
       person.instance_variables.size.should eql attributes.size
+    end
+
+    it "should be able to convert to markdown" do
+      expect(person).to respond_to :to_markdown
     end
   end
 end
