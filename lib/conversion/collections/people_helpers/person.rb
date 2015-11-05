@@ -10,6 +10,9 @@ module Conversion
         def initialize(json_data)
           JSON.parse(json_data).each_pair { |var, val| send("#{var.downcase}=", val) if respond_to?(var.downcase) }
         end
+
+        def to_markdown
+        end
       end
     end
   end
