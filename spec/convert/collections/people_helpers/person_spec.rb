@@ -12,7 +12,7 @@ describe 'Person' do
   context "when no JSON formatted data is provided" do
     attributes.each do |attribute|
       it "should not have #{attribute}" do
-        person.send( attribute.to_sym ).should be_nil
+        expect(person.send( attribute.to_sym )).to be_nil
       end
     end
 
@@ -45,12 +45,12 @@ describe 'Person' do
     }
     attributes.each do |attribute|
       it "should have #{attribute}" do
-        person.send( attribute.to_sym ).should_not be_nil
+        expect(person.send( attribute.to_sym )).not_to be_nil
       end
     end
 
     it "should have the #{attributes.size} instance variables" do
-      person.instance_variables.size.should eql attributes.size
+      expect(person.instance_variables.size).to eql(attributes.size)
     end
 
     it "should be able to convert to markdown" do
