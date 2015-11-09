@@ -21,6 +21,10 @@ describe 'GooglSpreadsheetPerson' do
     it "should be able to convert to markdown" do
       expect(google_spreadsheet_person).to respond_to :to_markdown
     end
+
+    it "should be a person" do
+      expect(google_spreadsheet_person).to be_a_kind_of(Conversion::Collections::PeopleHelpers::Person)
+    end
   end
   context "when proper JSON formatted data is provided" do
     let(:json_data) {
@@ -119,6 +123,10 @@ describe 'GooglSpreadsheetPerson' do
 
     it "should be able to convert to markdown" do
       expect(google_spreadsheet_person).to respond_to :to_markdown
+    end
+
+    it "should be a person" do
+      expect(google_spreadsheet_person).to be_a_kind_of(Conversion::Collections::PeopleHelpers::Person)
     end
   end
 end
