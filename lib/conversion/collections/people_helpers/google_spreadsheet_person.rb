@@ -10,10 +10,7 @@ module Conversion
         attr_accessor :about, :address, :buttons, :departments, :email, :expertise, :guides, :image, :jobtitle, :keywords, :location, :netid, :phone, :space, :status, :subtitle, :title, :twitter
 
         def initialize(json_data)
-          JSON.parse(json_data).each_pair do |var, val|
-            useful_key_value = useful_spreadsheet_hash({var => val })
-            send("#{useful_key_value.keys[0]}=", useful_key_value.values[0]) if useful_key_value.keys[0] && respond_to?(useful_key_value.keys[0])
-          end
+          useful_spreadsheet_hash(JSON.parse(json_data)).each_pair { |var, val| send("#{var}=", val) if respond_to?(var) }
         end
 
         def to_markdown
