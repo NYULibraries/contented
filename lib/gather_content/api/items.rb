@@ -8,12 +8,15 @@ module GatherContent
         @project_id = project_id
       end
 
-      def get_items
-        @get_items ||= get.body
+      def each(items = [])
+        get_items["data"].each do |item|
+          items << GatherContent::Api::Item.new(item)
+        end
+        items
       end
 
-      def each
-        get_items
+      def get_items
+        @get_items ||= JSON.parse(get.body)
       end
 
     private
