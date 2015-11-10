@@ -8,8 +8,7 @@ module GatherContent
       @items = GatherContent::Api::Items.new(project_id)
     end
 
-    def each
-      departments = []
+    def each(departments = Array.new)
       items.each do |item|
         departments << GatherContent::Department.new(item)
       end

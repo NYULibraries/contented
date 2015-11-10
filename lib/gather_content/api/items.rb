@@ -8,7 +8,7 @@ module GatherContent
         @project_id = project_id
       end
 
-      def each(items = [])
+      def each(items = Array.new)
         get_items["data"].each do |item|
           items << GatherContent::Api::Item.new(item)
         end
