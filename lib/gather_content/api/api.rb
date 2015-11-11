@@ -1,6 +1,7 @@
 module GatherContent
   module Api
-    require_relative 'base'
-    require_relative 'items'
+    Dir[File.dirname(__FILE__) + '/*.rb'].each do |file|
+      require_relative file
+    end
   end
 end
