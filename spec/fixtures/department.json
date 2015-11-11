@@ -369,7 +369,7 @@
         }, {
           "name": "op1442860201837",
           "label": "5th Floor",
-          "selected": false
+          "selected": true
         }, {
           "name": "op1442860203849",
           "label": "6th Floor",
@@ -439,7 +439,7 @@
         }, {
           "name": "op1442864205104",
           "label": "South",
-          "selected": false
+          "selected": true
         }, {
           "name": "op1442864205105",
           "label": "East ",
@@ -454,7 +454,7 @@
         "name": "el1442864990850",
         "required": false,
         "label": "Room Number as appears on door plate (if applicable)",
-        "value": "",
+        "value": "Room 511",
         "microcopy": "",
         "limit_type": "words",
         "limit": 0,
@@ -464,7 +464,7 @@
         "name": "el1445275798116",
         "required": false,
         "label": "Area Name - ex. Research Commons",
-        "value": "<p>\n    \u200b\n<\/p>",
+        "value": "<p>\n    Research Commons\u200b\n<\/p>",
         "microcopy": "",
         "limit_type": "words",
         "limit": 0,
@@ -479,7 +479,7 @@
         "name": "el1440693551720",
         "required": false,
         "label": "Department Email\u00a0",
-        "value": "",
+        "value": "lib-webservices@nyu.edu",
         "microcopy": "If your department has an email group please provide that address above.  \n\nIf your department does not have a group email and would be interested this link will give you information and instructions on how to obtain one:  https:\/\/nyu.service-now.com\/servicelink\/kb_search.do?id=041203711453241 .",
         "limit_type": "words",
         "limit": 0,
@@ -489,7 +489,7 @@
         "name": "el1440695007124",
         "required": false,
         "label": "Phone Number",
-        "value": "",
+        "value": "(212) 000-0000",
         "microcopy": "If your department has a phone number please list it above.  If your department does not have designated phone number please provide the general number for your library.\n\nPhone numbers should be in this format:\n(area code) ###-####  \n\ne.g. (212) 222-2222",
         "limit_type": "words",
         "limit": 0,
@@ -772,7 +772,7 @@
         "name": "el1440698075004",
         "required": false,
         "label": "LibCal ID Number",
-        "value": "",
+        "value": "1234",
         "microcopy": "If your department has service hours, your LibCal hours ID will be shown above.  No action is required. ",
         "limit_type": "words",
         "limit": 0,
@@ -808,7 +808,7 @@
         "name": "el1440698239060",
         "required": false,
         "label": "Form URL or Email address used for appointment requests",
-        "value": "<p>\n    <br>\n<\/p>",
+        "value": "<p>\n    http://www.example.org\n<\/p>",
         "microcopy": "If your department uses a form to schedule appointments please provide the url or email contact info.",
         "limit_type": "words",
         "limit": 0,
@@ -859,7 +859,7 @@
         "name": "el1440697232178",
         "required": false,
         "label": "Facebook",
-        "value": "",
+        "value": "libtechnyu",
         "microcopy": "Please provide your department's Facbook user name",
         "limit_type": "words",
         "limit": 0,
@@ -884,7 +884,7 @@
         "name": "el1440697237834",
         "required": false,
         "label": "Blog",
-        "value": "<p>\n    title: 'libtechnyu Blog'\n<\/p>\n<p>\n    link: 'http:\/\/web1.library.nyu.edu\/libtechnyu\/\n<\/p>\n<p>\n    rss: 'http:\/\/web1.library.nyu.edu\/libtechnyu\/atom.xml'\n<\/p>",
+        "value": "<p>\n    title: 'libtechnyu Blog'\n<\/p>\n<p>\n    link: 'http:\/\/web1.library.nyu.edu\/libtechnyu\/'\n<\/p>\n<p>\n    rss: 'http:\/\/web1.library.nyu.edu\/libtechnyu\/atom.xml'\n<\/p>",
         "microcopy": "The new website offers better visibility for departmental blogs.  If your department has a blog that you would like to include please provide the following:\n\ntitle: \"Blog Name\"\nlink: url\n\nTo use an RSS type in your blog url then \/feed\/ (backslash feed backslash)  example: http:\/\/blog.com\/feed\/\n",
         "limit_type": "words",
         "limit": 0,
