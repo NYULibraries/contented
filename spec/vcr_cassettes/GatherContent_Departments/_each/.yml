@@ -1,0 +1,140 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-id:api-key@api.gathercontent.com/items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept:
+      - application/vnd.gathercontent.v0.5+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 500
+      message: Internal Server Error
+    headers:
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Wed, 18 Nov 2015 21:43:35 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.26-1+deb.sury.org~precise+1
+      Cache-Control:
+      - private, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - laravel_session=eyJpdiI6IjdvaGZcL3ZSWU1aRElvb0NVb1drS0xXVnNybjZhSmErem1RNW1cL1BJZ1prbz0iLCJ2YWx1ZSI6IlUwb0NjOFh2RnpidXlIXC9nR1lweUVJS2xkellLNXAreG9jTVJYYW9uZGpnVWMrXC9WZ3c4YytJYXphWHFjTDRrb2pueXgxSGlobTJZZjJndHhPditKWHc9PSIsIm1hYyI6IjEyNTViMGNiZGQyMjcxMzYwZDgxNjgzYTFkZjczMGFhZWVlMGU2MTQ2ZGZiYzViYmJjNWM2ZDVjY2I0MmJiNjkifQ%3D%3D;
+        expires=Wed, 18-Nov-2015 23:43:35 GMT; Max-Age=7200; path=/; httponly
+    body:
+      encoding: UTF-8
+      string: '{"message":"Missing project_id"}'
+    http_version: 
+  recorded_at: Wed, 18 Nov 2015 21:43:39 GMT
+- request:
+    method: get
+    uri: https://api-id:api-key@api.gathercontent.com/items?project_id=57459
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept:
+      - application/vnd.gathercontent.v0.5+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Wed, 18 Nov 2015 22:15:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - PHP/5.5.26-1+deb.sury.org~precise+1
+      Cache-Control:
+      - private, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - laravel_session=eyJpdiI6ImYwd0JtVjZ4R3NybkxhUmE0ZzQzaGRRelRcL3NlQVF5NEtleW5yQXYxb0ZnPSIsInZhbHVlIjoiTnVjeWF6dTJCdWY5WFFZYlRDcmlrbVwvZUdHaWNmZ0ZFRUh2VEhISTZkZzBxMkJLNkdubXJpR1ROWm4wMm8zeTB5WHdxcEVGUmE0V21CVWdMcVQ1NW9RPT0iLCJtYWMiOiI0MjE3MGQ5Y2RiOTYyMzFiODBmOGEyYjg4NzFlYTliNTc5YWZlZjQ3OTcyZTVmOGQzNTZjMDAwNDhjYmRjMzA0In0%3D;
+        expires=Thu, 19-Nov-2015 00:15:49 GMT; Max-Age=7200; path=/; httponly
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":2185983,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"0","name":"Access
+        Delivery & Resource Sharing Services","config":null,"notes":"","type":"item","overdue":false,"created_at":{"date":"2015-10-19
+        18:09:15.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-11
+        17:42:54.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}},{"id":2266307,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"1","name":"Archival
+        Collections Managment","config":null,"notes":"","type":"item","overdue":false,"created_at":{"date":"2015-11-11
+        17:35:16.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-11
+        17:42:54.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}},{"id":2266308,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"2","name":"Business
+        & Government Information Services","config":null,"notes":"","type":"item","overdue":false,"created_at":{"date":"2015-11-11
+        17:35:51.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-11
+        17:42:54.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}},{"id":2266278,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"3","name":"Knowledge
+        Access Design & Development","config":null,"notes":"","type":"item","overdue":false,"created_at":{"date":"2015-11-11
+        17:29:02.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-11
+        17:42:54.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}},{"id":2186086,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"4","name":"Library
+        Information Technology Services","config":null,"notes":"","type":"item","overdue":false,"created_at":{"date":"2015-10-19
+        18:42:18.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-11
+        17:42:54.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}},{"id":2185982,"project_id":57459,"parent_id":0,"template_id":null,"custom_state_id":241859,"position":"5","name":"Public
+        Services","config":null,"notes":"","type":"item","overdue":false,"created_at":{"date":"2015-10-19
+        18:07:51.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-11
+        17:42:54.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}},{"id":1983583,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241861,"position":"6","name":"User
+        Experience","config":null,"notes":"","type":"item","overdue":false,"created_at":{"date":"2015-08-27
+        22:12:33.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-11
+        18:03:59.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241861","is_default":false,"position":"3","color":"#5eb95e","name":"Final
+        edits","description":"DMs should give a final review to content and make changes
+        if needed in order to give it final approval.","can_edit":true}},"due_dates":{"data":[]}},{"id":2050174,"project_id":57459,"parent_id":1983583,"template_id":251307,"custom_state_id":241859,"position":"7","name":"UX
+        Services","config":null,"notes":"","type":"item","overdue":false,"created_at":{"date":"2015-09-21
+        16:26:13.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-11
+        17:42:54.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}},{"id":2027930,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241861,"position":"8","name":"Web
+        Services","config":null,"notes":"","type":"item","overdue":true,"created_at":{"date":"2015-09-15
+        16:47:39.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-11
+        20:43:34.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241861","is_default":false,"position":"3","color":"#5eb95e","name":"Final
+        edits","description":"DMs should give a final review to content and make changes
+        if needed in order to give it final approval.","can_edit":true}},"due_dates":{"data":[{"status_id":241859,"overdue":true,"due_date":{"date":"2015-10-05
+        22:00:00.000000","timezone_type":3,"timezone":"UTC"}},{"status_id":241860,"overdue":true,"due_date":{"date":"2015-10-08
+        22:00:00.000000","timezone_type":3,"timezone":"UTC"}},{"status_id":241861,"overdue":true,"due_date":{"date":"2015-10-12
+        22:00:00.000000","timezone_type":3,"timezone":"UTC"}}]}},{"id":1988949,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"9","name":"Test
+        Department","config":null,"notes":"","type":"item","overdue":false,"created_at":{"date":"2015-08-31
+        15:49:43.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-11
+        17:42:54.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}},{"id":2054045,"project_id":57459,"parent_id":1988949,"template_id":251307,"custom_state_id":241859,"position":"10","name":"Test
+        Service","config":null,"notes":"","type":"item","overdue":false,"created_at":{"date":"2015-09-22
+        17:31:47.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-11
+        17:42:54.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}},{"id":2054057,"project_id":57459,"parent_id":1988949,"template_id":null,"custom_state_id":241859,"position":"11","name":"TestDept
+        2","config":null,"notes":"","type":"entry_parent","overdue":false,"created_at":{"date":"2015-09-22
+        17:34:02.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-11
+        17:44:00.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}]}'
+    http_version: 
+  recorded_at: Wed, 18 Nov 2015 22:15:53 GMT
+recorded_with: VCR 2.9.3

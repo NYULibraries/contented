@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe GatherContent::Department do
-  let(:project_id) { '57459' }
-  let(:json_string) { File.read(File.join(File.dirname(__FILE__), '../fixtures/department.json')) }
-  let(:department) { GatherContent::Department.new(json_string) }
+describe GatherContent::Department, vcr: true do
+  # let(:json_string) { File.read(File.join(File.dirname(__FILE__), '../fixtures/department.json')) }
+  let(:item_id) { '2027930' }
+  let(:department) { GatherContent::Department.new(item_id) }
   describe '#title' do
     subject { department.title }
     it { is_expected.to eql 'Web Services' }
