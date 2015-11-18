@@ -1,14 +1,15 @@
 module GatherContent
   module Decorators
     class DepartmentDecorator
-      attr_accessor :json_string
+      attr_accessor :department
 
       SECTION_MAP = { about: "About Your Dept", contact_info: "Contact Info",
                       related_departments: "Related Dept/Units", people: "People",
                       links: "Links/Guides/Class", social_media: "Social Media", services: "Services" }
 
-      def initialize(json_string)
-        @json_string = json_string
+      # Department as a Hash
+      def initialize(department)
+        @department = department
       end
 
       def title
@@ -153,11 +154,7 @@ module GatherContent
       end
 
       def data
-        @data ||= parsed_json["data"]
-      end
-
-      def parsed_json
-        @parsed_json ||= JSON.parse(json_string)
+        @data ||= department["data"]
       end
 
     end

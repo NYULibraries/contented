@@ -1,10 +1,11 @@
 module GatherContent
   module Api
     class Item < Base
-      attr_accessor :id
+      attr_accessor :item_id
 
-      def initialize(id)
-        @id = id
+      def initialize(item_id)
+        raise ArgumentError, "Item_id is required!" if item_id.nil?
+        @item_id = item_id
       end
 
       def get_item
@@ -14,7 +15,7 @@ module GatherContent
     private
 
       def path
-        @path ||= "/items/#{id}"
+        @path ||= "/items/#{item_id}"
       end
 
       def params; end

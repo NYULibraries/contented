@@ -1,18 +1,16 @@
 module GatherContent
-  class Departments
-    include Enumerable
-    attr_accessor :project_id
+  class Departments < Api::Items
 
-    def initialize(project_id='57459')
-      @project_id = project_id
+    def initialize(project_id)
+      super(project_id)
       @items = GatherContent::Api::Items.new(project_id)
     end
 
-    def each(departments = Array.new)
-      items.each do |item|
-        departments << GatherContent::Department.new(item)
+    def to_a(departments = [])
+      items.to_a.each do |item|
+        departments << GatherContent::Department.new(item.item_id)
       end
-      departments
+      return departments
     end
 
   end

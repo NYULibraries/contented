@@ -4,7 +4,6 @@ module GatherContent
       API_KEY = 'e11feb3e-b97c-4d55-a638-5759dd0b15ce'
       USERNAME = 'ba36@nyu.edu'
       API_HOST = 'https://api.gathercontent.com'
-      attr_accessor :path
 
       def initialize
         raise RuntimeError, "Cannot initialize this interface!"
@@ -13,7 +12,7 @@ module GatherContent
       def get
         connection.get do |request|
           request.url path
-          request.params = params
+          request.params = params unless params.nil?
           request.headers['Accept'] = "application/vnd.gathercontent.v0.5+json"
         end
       end
@@ -21,6 +20,10 @@ module GatherContent
     protected
 
       def params
+        raise RuntimeError, "Expected this to be implemented in a subclass!"
+      end
+
+      def path
         raise RuntimeError, "Expected this to be implemented in a subclass!"
       end
 

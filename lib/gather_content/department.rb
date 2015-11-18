@@ -1,13 +1,12 @@
 module GatherContent
-  class Department
-    attr_accessor :json_string
+  class Department < Api::Item
     ATTRIBUTES = [:title, :location, :space, :email, :phone, :twitter, :facebook, :blog,
                   :subtitle, :classes, :keywords, :links, :libcal_id, :libanswers_id, :buttons, :body]
     attr_reader *ATTRIBUTES
 
-    def initialize(json_string)
-      @json_string = json_string
-      @department_decorator = GatherContent::Decorators::DepartmentDecorator.new(json_string)
+    def initialize(item_id)
+      super(item_id)
+      @department_decorator = GatherContent::Decorators::DepartmentDecorator.new(self.get_item)
     end
 
     extend Forwardable
