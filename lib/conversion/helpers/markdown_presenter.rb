@@ -89,18 +89,9 @@ private
   end
 
   def about_block
-    "# About #{person.about}"
+    "# About \n#{person.about}"
   end
 end
-
-# class Person
-#   def initialize
-#   end
-
-#   def method_missing(m, *args, &block)
-#     m
-#   end
-# end
 
 PEOPLESYNC = {
          NetID: "xx123",
