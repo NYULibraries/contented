@@ -4,7 +4,7 @@ def google_spreadsheet_attributes
   %w[about address buttons departments
   email expertise guides image jobtitle
   keywords location netid phone space
-  status subtitle title twitter]
+  status subtitle title twitter publications]
 end
 
 
