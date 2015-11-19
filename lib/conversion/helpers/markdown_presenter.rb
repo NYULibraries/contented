@@ -72,9 +72,9 @@ private
     "guides: '#{person.guides}'"
   end
 
-  # def publications
-  #   "publications: '#{person.publications}'"
-  # end
+  def publications
+    "publications: '#{person.publications}'"
+  end
 
   def keywords
     "keywords: '#{person.keywords}'"
