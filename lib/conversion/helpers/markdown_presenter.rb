@@ -89,6 +89,6 @@ private
   end
 
   def about_block
-    "# About \n#{person.about}"
+    "# About #{person.title} \n#{person.about}"
   end
 end
