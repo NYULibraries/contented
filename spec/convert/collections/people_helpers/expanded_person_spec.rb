@@ -145,7 +145,10 @@ describe 'ExpandedPerson' do
     end
 
     it "should have the #{expanded_person_attributes.size} instance variables" do
-      expect(expanded_person.instance_variables.size).to eql(expanded_person_attributes.size)
+      # @GoogleSpreadsheetPerson is the def_delegator so it's instance varibales are also counted
+      # @GoogleSpreadsheetPerson is also an instance_variable of expanded_person hence 1 needs to be negated from total
+      # netid comes twice hence another 1 needs to be negated
+      expect(expanded_person.instance_variables.size + expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').instance_variables.size - 2).to eql(expanded_person_attributes.size)
     end
 
     it "should be able to convert to markdown" do
