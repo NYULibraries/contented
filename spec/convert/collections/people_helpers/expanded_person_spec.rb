@@ -7,7 +7,7 @@ def expanded_person_attributes
   about address buttons departments
   email expertise guides image jobtitle
   keywords location phone space
-  status subtitle title twitter]
+  status subtitle title twitter publications]
 end
 
 
