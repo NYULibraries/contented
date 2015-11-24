@@ -31,9 +31,14 @@ module Conversion
           end
         end
 
-        def parse_location_space
+        def parse_location
           if @location.nil? && @correct_job_position['Position_Work_Space'] && @correct_job_position['Position_Work_Space'].count('>') == 2
             @location = @correct_job_position['Position_Work_Space'].split('>')[1].strip
+          end
+        end
+
+        def parse_space
+          if @space.nil? && @correct_job_position['Position_Work_Space'] && @correct_job_position['Position_Work_Space'].count('>') == 2
             @space = @correct_job_position['Position_Work_Space'].split('>')[2].strip
           end
         end
