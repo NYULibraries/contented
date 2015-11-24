@@ -8,8 +8,6 @@ module Conversion
 
         def initialize(json_data='{}', json_data_expand='{}')
           super(json_data, json_data_expand)
-          parse_email
-          puts @email
         end
 
         def parse_email
@@ -30,6 +28,12 @@ module Conversion
 
         def correct_job_position
           all_positions_jobs.each { |job| @correct_job_position ||= job if job['Is_Primary_Job'] }
+        end
+
+        def parse_job_title
+          if @jobtitle.nil? && @correct_job_position['Business_Title']
+            @jobtitle = @correct_job_position['Business_Title']
+          end
         end
 
         def parse_departments
