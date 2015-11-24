@@ -27,7 +27,7 @@ module Conversion
         end
 
         def correct_job_position
-          all_positions_jobs.each { |job| @correct_job_position ||= job if job['Is_Primary_Job'] }
+          @correct_job_position ||= all_positions_jobs.select { |job| job['Is_Primary_Job'] == '1' }
         end
 
         def parse_job_title
