@@ -8,6 +8,14 @@ module Conversion
 
         def initialize(json_data='{}', json_data_expand='{}')
           super(json_data, json_data_expand)
+          parse_email
+          puts @email
+        end
+
+        def parse_email
+          unless @email
+            @email ||= email_address
+          end
         end
 
         def parse_phone
