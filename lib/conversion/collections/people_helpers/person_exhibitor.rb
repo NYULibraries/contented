@@ -10,9 +10,16 @@ module Conversion
           super(json_data, json_data_expand)
         end
 
+        def render_all_functions
+          # (self.methods - Object.private_methods - Module.methods).each do |method_sym|
+          #   render = "#{render}#{self.send(method_sym)}\n"
+          # end
+          puts self.methods
+        end
+
         def parse_email
           # PeopleSync data has Email fro every staff member so no check for that.
-          @email ||= email_address unless @email
+          @email = email_address unless @email
         end
 
         def parse_phone
