@@ -8,6 +8,9 @@ module Conversion
 
         def initialize(json_data='{}', json_data_expand='{}')
           super(json_data, json_data_expand)
+          correct_job_position
+          parse_departments
+          parse_location
         end
 
         def parse_phone
@@ -18,6 +21,24 @@ module Conversion
           end
           @phone = @phone[1..-1] if @phone.size == 11
           @phone = '(' + @phone[0..2] + ') ' + @phone[3..5] + '-' + @phone[6..-1]
+        end
+
+        def correct_job_position
+          all_positions_jobs.each { |job| @correct_job_position ||= job if job['Is_Primary_Job'] }
+        end
+
+        def parse_departments
+          if @departments.nil? && @correct_job_position['Supervisory_Org_Name']
+            @departments = @correct_job_position['Supervisory_Org_Name'] + '('
+            @departments = @departments.slice(0..(@departments.index('(') - 1)).strip
+          end
+        end
+
+        def parse_location
+          if @location.nil? && @correct_job_position['Position_Work_Space']
+            @location = @correct_job_position['Position_Work_Space'].split('>')[1].strip
+          end
+          puts @location
         end
       end
     end
@@ -129,4 +150,4 @@ PEOPLE_SHEET = {
       }.to_json
 
 
-Conversion::Collections::PeopleHelpers::Person_Exhibitor.new('{}',PEOPLE_SHEET)
+Conversion::Collections::PeopleHelpers::Person_Exhibitor.new(PEOPLESYNC,'{}')
