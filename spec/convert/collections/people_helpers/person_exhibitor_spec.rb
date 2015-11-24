@@ -20,7 +20,7 @@ describe 'PersonExhibitor' do
     end
 
     person_exhibitor_attributes.each do |attribute|
-      it "should not have #{attribute}" do
+      it "should have #{attribute}" do
          expect(person_exhibitor).to respond_to attribute
       end
     end
