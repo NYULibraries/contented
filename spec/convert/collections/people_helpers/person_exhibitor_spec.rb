@@ -161,6 +161,16 @@ describe 'PersonExhibitor' do
       end
     end
 
+    it "should have proper phone format" do
+      person_exhibitor.parse_phone
+      expect(person_exhibitor.instance_variable_get('@phone')).to match /^[(]\d{3}[)][ ]\d{3}[-]\d{4}$/
+    end
+
+    it "should have proper phone format" do
+      person_exhibitor.parse_phone
+      expect(person_exhibitor.instance_variable_get('@phone')).to match /^[(]\d{3}[)][ ]\d{3}[-]\d{4}$/
+    end
+
     it 'should be a person' do
       expect(person_exhibitor).to be_a_kind_of(Conversion::Collections::PeopleHelpers::ExpandedPerson)
     end
