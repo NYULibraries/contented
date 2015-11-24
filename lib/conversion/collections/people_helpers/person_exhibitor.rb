@@ -8,9 +8,6 @@ module Conversion
 
         def initialize(json_data='{}', json_data_expand='{}')
           super(json_data, json_data_expand)
-          correct_job_position
-          parse_departments
-          parse_location
         end
 
         def parse_phone
@@ -34,11 +31,11 @@ module Conversion
           end
         end
 
-        def parse_location
-          if @location.nil? && @correct_job_position['Position_Work_Space']
+        def parse_location_space
+          if @location.nil? && @correct_job_position['Position_Work_Space'] && @correct_job_position['Position_Work_Space'].count('>') == 2
             @location = @correct_job_position['Position_Work_Space'].split('>')[1].strip
+            @space = @correct_job_position['Position_Work_Space'].split('>')[2].strip
           end
-          puts @location
         end
       end
     end
@@ -60,7 +57,7 @@ PEOPLESYNC = {
                Job_Family_Group: "NYU - Something",
                Supervisory_Org_Name: "Some Group",
                Business_Title: "Super Fancy Title",
-               Position_Work_Space: "Earth > America > New York > New York",
+               Position_Work_Space: "Earth > America > New York",
                Division_Name: "Division of Tests"
             }
          ]
