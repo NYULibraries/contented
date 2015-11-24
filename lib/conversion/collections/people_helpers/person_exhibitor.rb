@@ -11,19 +11,14 @@ module Conversion
         end
 
         def parse_email
-          unless @email
-            @email ||= email_address
-          end
+          # PeopleSync data has Email fro every staff member so no check for that.
+          @email ||= email_address unless @email
         end
 
         def parse_phone
-          if phone
-            @phone = phone.scan(/\d/).join('')
-          else
-            @phone = work_phone.scan(/\d/).join('')
+          if @phone.nil? && work_phone
+            @phone = work_phone.gsub('+1 ', '').insert(-5, '-')
           end
-          @phone = @phone[1..-1] if @phone.size == 11
-          @phone = '(' + @phone[0..2] + ') ' + @phone[3..5] + '-' + @phone[6..-1]
         end
 
         def correct_job_position
