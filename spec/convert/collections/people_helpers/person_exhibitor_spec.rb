@@ -10,6 +10,8 @@ def person_exhibitor_attributes
   status subtitle title twitter publications]
 end
 
+PHONE_REGEX = /^[(]\d{3}[)][ ]\d{3}[-]\d{4}$/
+
 describe 'PersonExhibitor' do
   subject(:person_exhibitor) { Conversion::Collections::PeopleHelpers::PersonExhibitor.new }
   context 'when no JSON formatted data is provided' do
@@ -162,7 +164,7 @@ describe 'PersonExhibitor' do
     end
 
     it "should have proper phone format" do
-      expect(person_exhibitor.phone).to match /^[(]\d{3}[)][ ]\d{3}[-]\d{4}$/
+      expect(person_exhibitor.phone).to match PHONE_REGEX
     end
 
     it 'should be a person' do
