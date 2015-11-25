@@ -39,6 +39,10 @@ module Conversion
           @location_map ||= map_locations_file
         end
 
+        def map_to_location(location)
+          location_map[location] ? location_map[location] : location
+        end
+
         def correct_job_position
           if all_positions_jobs
             # used detect instead of select because select returns an array of hashes if multiple 1's found
@@ -68,6 +72,7 @@ module Conversion
           @location ||= super
           if @location.nil? && correct_job_position && correct_job_position['Position_Work_Space'] && correct_job_position['Position_Work_Space'].count('>') == 2
             @location ||= correct_job_position['Position_Work_Space'].split('>')[1].strip
+            @location = map_to_location(@location)
           end
           @location
         end
