@@ -162,8 +162,7 @@ describe 'PersonExhibitor' do
     end
 
     it "should have proper phone format" do
-      person_exhibitor.parse_phone
-      expect(person_exhibitor.instance_variable_get('@phone')).to match /^[(]\d{3}[)][ ]\d{3}[-]\d{4}$/
+      expect(person_exhibitor.phone).to match /^[(]\d{3}[)][ ]\d{3}[-]\d{4}$/
     end
 
     it 'should be a person' do
@@ -188,7 +187,7 @@ describe 'PersonExhibitor' do
                Job_Family_Group: "NYU - Something",
                Supervisory_Org_Name: "Some Group",
                Business_Title: "Super Fancy Title",
-               Position_Work_Space: "Earth > America > New York > New York",
+               Position_Work_Space: "Earth > America > New York",
                Division_Name: "Division of Tests"
             }
          ]
