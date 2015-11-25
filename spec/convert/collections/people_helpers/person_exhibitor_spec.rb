@@ -1,13 +1,20 @@
 require File.expand_path('../../../../spec_helper.rb', __FILE__)
 
-def person_exhibitor_attributes
-  %w[netid employee_id last_name first_name
+def json_data_attributes
+  %w[employee_id last_name first_name
   primary_work_space_address work_phone
-  email_address all_positions_jobs
-  about address buttons departments
+  email_address all_positions_jobs]
+end
+
+def json_data_expand_attributes
+  %w[netid about address buttons departments
   email expertise guides image jobtitle
   keywords location phone space
   status subtitle title twitter publications]
+end
+
+def person_exhibitor_attributes
+  json_data_attributes.concat json_data_expand_attributes
 end
 
 # PHONE format : (555) 555-5555
@@ -147,6 +154,12 @@ describe 'PersonExhibitor' do
     let(:json_data) { '{}'}
     subject(:person_exhibitor) { Conversion::Collections::PeopleHelpers::PersonExhibitor.new(json_data, json_data_expand) }
 
+    json_data_expand_attributes.each do |attribute|
+      it "should have #{attribute}" do
+        expect(person_exhibitor.send( attribute.to_sym )).not_to be_nil
+      end
+    end
+
     person_exhibitor_attributes.each do |attribute|
       it "should have #{attribute}" do
         expect(person_exhibitor).to respond_to attribute
@@ -158,9 +171,15 @@ describe 'PersonExhibitor' do
     end
   end
 
-  context 'when only json_data_expand is provided i.e. spreadsheet data' do
+  context 'when only json_data is provided i.e. peoplesync data' do
     let(:json_data_expand) { '{}' }
     subject(:person_exhibitor) { Conversion::Collections::PeopleHelpers::PersonExhibitor.new(json_data, json_data_expand) }
+
+    json_data_attributes.each do |attribute|
+      it "should have #{attribute}" do
+        expect(person_exhibitor.send( attribute.to_sym )).not_to be_nil
+      end
+    end
 
     person_exhibitor_attributes.each do |attribute|
       it "should have #{attribute}" do
