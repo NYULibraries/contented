@@ -21,6 +21,12 @@ module Conversion
           @exclude_net_id ||= YAML.load_file(PEOPLE_EXCLUDE_FILE)['people_exclude'] if net_id_exclude_file_exists?
         end
 
+        def title
+          @title ||= super
+          @title = nil if exclude_net_id.include? @netid
+          @title
+        end
+
         def email
           # PeopleSync data has Email fro every staff member so no check for that.
           @email ||= super
