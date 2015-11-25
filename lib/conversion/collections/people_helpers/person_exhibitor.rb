@@ -12,12 +12,12 @@ module Conversion
 
         def email
           # PeopleSync data has Email fro every staff member so no check for that.
-          @email = email_address unless @email
+          @email ||= email_address unless @email
         end
 
         def phone
           if @phone.nil? && work_phone
-            @phone = work_phone.gsub('+1 ', '').insert(-5, '-')
+            @phone ||= work_phone.gsub('+1 ', '').insert(-5, '-')
           end
         end
 
@@ -30,27 +30,27 @@ module Conversion
 
         def jobtitle
           if @jobtitle.nil? && correct_job_position && correct_job_position['Business_Title']
-            @jobtitle = correct_job_position['Business_Title']
+            @jobtitle ||= correct_job_position['Business_Title']
           end
         end
 
         def departments
           # puts correct_job_position.is_a? Array
           if @departments.nil? && correct_job_position && correct_job_position['Supervisory_Org_Name']
-            @departments = correct_job_position['Supervisory_Org_Name'] + '('
+            @departments ||= correct_job_position['Supervisory_Org_Name'] + '('
             @departments = @departments.slice(0..(@departments.index('(') - 1)).strip
           end
         end
 
         def location
           if @location.nil? && correct_job_position && correct_job_position['Position_Work_Space'] && correct_job_position['Position_Work_Space'].count('>') == 2
-            @location = correct_job_position['Position_Work_Space'].split('>')[1].strip
+            @location ||= correct_job_position['Position_Work_Space'].split('>')[1].strip
           end
         end
 
         def space
           if @space.nil? && correct_job_position && correct_job_position['Position_Work_Space'] && correct_job_position['Position_Work_Space'].count('>') == 2
-            @space = correct_job_position['Position_Work_Space'].split('>')[2].strip
+            @space ||= correct_job_position['Position_Work_Space'].split('>')[2].strip
           end
         end
       end
