@@ -1,4 +1,4 @@
-require_relative '../collections/people_helpers/expanded_person'
+require_relative '../collections/people_helpers/person_exhibitor'
 
 class MarkdownPresenter
   attr_reader :person
