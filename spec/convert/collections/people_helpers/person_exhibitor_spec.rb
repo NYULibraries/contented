@@ -10,7 +10,10 @@ def person_exhibitor_attributes
   status subtitle title twitter publications]
 end
 
+# PHONE format : (555) 555-5555
 PHONE_REGEX = /^[(]\d{3}[)][ ]\d{3}[-]\d{4}$/
+# departemnts format should be anything before any opening parenthesis '('
+DEPARTMENTS_REGEX = /^[^()]+$/
 
 describe 'PersonExhibitor' do
   subject(:person_exhibitor) { Conversion::Collections::PeopleHelpers::PersonExhibitor.new }
@@ -165,6 +168,10 @@ describe 'PersonExhibitor' do
 
     it "should have proper phone format" do
       expect(person_exhibitor.phone).to match PHONE_REGEX
+    end
+
+    it "should have proper department format" do
+      expect(person_exhibitor.departments).to match DEPARTMENTS_REGEX
     end
 
     it 'should be a person' do
