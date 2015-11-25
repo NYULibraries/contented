@@ -14,6 +14,8 @@ end
 PHONE_REGEX = /^[(]\d{3}[)][ ]\d{3}[-]\d{4}$/
 # departemnts format should be anything before any opening parenthesis '('
 DEPARTMENTS_REGEX = /^[^()]+$/
+# Location and space almost have the same regex should not have greater than '>'
+LOCATION_SPACE_REGEX = /^[^>]+$/
 
 describe 'PersonExhibitor' do
   subject(:person_exhibitor) { Conversion::Collections::PeopleHelpers::PersonExhibitor.new }
@@ -151,7 +153,7 @@ describe 'PersonExhibitor' do
                Job_Family_Group: "NYU - Something",
                Supervisory_Org_Name: "Some Group",
                Business_Title: "Super Fancy Title",
-               Position_Work_Space: "Earth > America > New York > New York",
+               Position_Work_Space: "Earth > America > New York",
                Division_Name: "Division of Tests"
             }
          ]
@@ -172,6 +174,14 @@ describe 'PersonExhibitor' do
 
     it "should have proper department format" do
       expect(person_exhibitor.departments).to match DEPARTMENTS_REGEX
+    end
+
+    it "should have proper location format" do
+      expect(person_exhibitor.location).to match LOCATION_SPACE_REGEX
+    end
+
+    it "should have proper space format" do
+      expect(person_exhibitor.space).to match LOCATION_SPACE_REGEX
     end
 
     it 'should be a person' do
