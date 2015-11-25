@@ -1,13 +1,24 @@
 require_relative 'expanded_person'
+require 'yaml'
 
 module Conversion
   module Collections
     module PeopleHelpers
       # Parses the person data into the required format.
       class PersonExhibitor < ExpandedPerson
+        PEOPLE_EXCLUDE_FILE = 'config/people_exclude.yml'
 
         def initialize(json_data='{}', json_data_expand='{}')
           super(json_data, json_data_expand)
+        end
+
+        def net_id_exclude_file_exists?
+          File.exist? PEOPLE_EXCLUDE_FILE
+        end
+
+        # Fetches people_exclude.yml which is the list of net_id's of people to omit from the site
+        def exclude_net_id
+          @exclude_net_id ||= YAML.load_file(PEOPLE_EXCLUDE_FILE)['people_exclude'] if net_id_exclude_file_exists?
         end
 
         def email
