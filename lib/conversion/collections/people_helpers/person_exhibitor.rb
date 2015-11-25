@@ -17,8 +17,12 @@ module Conversion
         end
 
         # Fetches people_exclude.yml which is the list of net_id's of people to omit from the site
+        def people_exclude
+          net_id_exclude_file_exists? ? YAML.load_file(PEOPLE_EXCLUDE_FILE)['people_exclude'] : []
+        end
+
         def exclude_net_id
-          @exclude_net_id ||= net_id_exclude_file_exists? ? YAML.load_file(PEOPLE_EXCLUDE_FILE)['people_exclude'] : []
+          @exclude_net_id ||= people_exclude
         end
 
         def title
