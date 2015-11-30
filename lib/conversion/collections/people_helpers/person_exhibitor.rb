@@ -1,4 +1,5 @@
 require_relative 'expanded_person'
+require_relative 'markdown_field_helpers'
 
 module Conversion
   module Collections
@@ -42,7 +43,6 @@ module Conversion
 
         def departments
           @departments ||= super
-          # puts correct_job_position.is_a? Array
           if @departments.nil? && correct_job_position && correct_job_position['Supervisory_Org_Name']
             @departments ||= correct_job_position['Supervisory_Org_Name'] + '('
             @departments = @departments.slice(0..(@departments.index('(') - 1)).strip
