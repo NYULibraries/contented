@@ -43,6 +43,7 @@ module Conversion
 
         def departments
           @departments ||= super
+          @departments = Markdown_Field_Helpers.new.listify(@departments) if @departments
           if @departments.nil? && correct_job_position && correct_job_position['Supervisory_Org_Name']
             @departments ||= correct_job_position['Supervisory_Org_Name'] + '('
             @departments = @departments.slice(0..(@departments.index('(') - 1)).strip
