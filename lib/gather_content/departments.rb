@@ -1,17 +1,10 @@
 module GatherContent
   class Departments < Api::Items
 
-    def initialize(project_id)
-      super(project_id)
-      @items = GatherContent::Api::Items.new(project_id)
+    def item_class
+      @item_class ||= Kernel.const_get("GatherContent::Department")
     end
-
-    def to_a(departments = [])
-      items.to_a.each do |item|
-        departments << GatherContent::Department.new(item.item_id)
-      end
-      return departments
-    end
+    protected :item_class
 
   end
 end
