@@ -68,7 +68,7 @@ module Conversion
 
         def expertise
           @expertise ||= super
-          Markdown_Field_Helpers.new.listify(@expertise) if @expertise
+          @expertise = Markdown_Field_Helpers.new.listify(@expertise) if @expertise
           @expertise
         end
       end
