@@ -45,7 +45,7 @@ private
   end
 
   def expertise
-    "expertise: '#{person.expertise}'"
+    "expertise: #{person.expertise}'"
   end
 
   def email
