@@ -71,6 +71,12 @@ module Conversion
           @expertise = Markdown_Field_Helpers.new.listify(@expertise) if @expertise
           @expertise
         end
+
+        def keywords
+          @keywords ||= super
+          @keywords = Markdown_Field_Helpers.new.listify(@keywords) if @keywords
+          @keywords
+        end
       end
     end
   end
