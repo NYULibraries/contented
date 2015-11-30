@@ -83,6 +83,18 @@ module Conversion
           @buttons = Markdown_Field_Helpers.new.instancify(@buttons) if @buttons
           @buttons
         end
+
+        def guides
+          @guides ||= super
+          @guides = Markdown_Field_Helpers.new.instancify(@guides) if @guides
+          @guides
+        end
+
+        def publications
+          @publications ||= super
+          @publications = Markdown_Field_Helpers.new.instancify(@publications) if @publications
+          @publications
+        end
       end
     end
   end
