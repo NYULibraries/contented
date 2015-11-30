@@ -65,6 +65,12 @@ module Conversion
           end
           @space
         end
+
+        def expertise
+          @expertise ||= super
+          Markdown_Field_Helpers.new.listify(@expertise) if @expertise
+          @expertise
+        end
       end
     end
   end
