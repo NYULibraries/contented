@@ -2,20 +2,35 @@ require 'spec_helper'
 
 describe GatherContent::Departments, vcr: true do
   let(:project_id) { '57459' }
-  # let(:json_string) { File.read(File.join(File.dirname(__FILE__), '../fixtures/departments.json')) }
   let(:departments) { GatherContent::Departments.new(project_id) }
   describe '.new' do
     subject { departments }
-    it { is_expected.to be_a GatherContent::Departments }
-    it 'should set the project id' do
-      expect(departments.project_id).to eql '57459'
+    context 'when project ID is passed in' do
+      it { is_expected.to be_a GatherContent::Api::Items }
     end
-    it 'should set items' do
-      expect(departments.items).to be_a GatherContent::Api::Items
+    context 'when project ID is not passed in' do
+      let(:project_id) { nil }
+      it 'should raise an ArgumentError' do
+        expect { subject }.to raise_error ArgumentError
+      end
     end
   end
-  describe '#to_a' do
-    subject { departments.to_a }
-    it { is_expected.to be_a Array }
+  describe '#project_id' do
+    subject { departments.project_id }
+    it { is_expected.to eql project_id }
+  end
+  describe '#each' do
+    subject { departments }
+    it { is_expected.to be_a Enumerable }
+    it 'should contain Item objects' do
+      departments.each do |item|
+        expect(item).to be_a GatherContent::Api::Item
+        expect(item).to be_a GatherContent::Department
+      end
+    end
+  end
+  describe '#item_class' do
+    subject { departments.send(:item_class) }
+    it { is_expected.to eql GatherContent::Department }
   end
 end

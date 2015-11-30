@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe GatherContent::Department, vcr: true do
-  # let(:json_string) { File.read(File.join(File.dirname(__FILE__), '../fixtures/department.json')) }
   let(:item_id) { '2027930' }
   let(:department) { GatherContent::Department.new(item_id) }
   describe '#title' do
@@ -18,15 +17,15 @@ describe GatherContent::Department, vcr: true do
   end
   describe '#space' do
     subject { department.space }
-    it { is_expected.to eql 'Room 511, Research Commons, 5th Floor South' }
+    it { is_expected.to be_empty }
   end
   describe '#email' do
     subject { department.email }
-    it { is_expected.to eql 'lib-webservices@nyu.edu' }
+    it { is_expected.to be_empty }
   end
   describe '#phone' do
     subject { department.phone }
-    it { is_expected.to eql '(212) 000-0000'  }
+    it { is_expected.to be_empty  }
   end
   describe '#twitter' do
     subject { department.twitter }
@@ -34,7 +33,7 @@ describe GatherContent::Department, vcr: true do
   end
   describe '#facebook' do
     subject { department.facebook }
-    it { is_expected.to eql 'libtechnyu'  }
+    it { is_expected.to be_empty  }
   end
   describe '#blog' do
     subject { department.blog }
@@ -42,11 +41,11 @@ describe GatherContent::Department, vcr: true do
   end
   describe '#libcal_id' do
     subject { department.libcal_id }
-    it { is_expected.to eql '1234'  }
+    it { is_expected.to be_empty  }
   end
   describe '#libanswers_id' do
     subject { department.libanswers_id }
-    it { is_expected.to be_nil  }
+    it { is_expected.to be_empty  }
   end
   describe '#links' do
     subject { department.links }
@@ -56,7 +55,7 @@ describe GatherContent::Department, vcr: true do
   end
   describe '#buttons' do
     subject { department.buttons }
-    it { is_expected.to include("Request an Appointment" => "http://www.example.org") }
+    it { is_expected.to be_empty }
   end
   describe '#to_markdown' do
     subject { department.to_markdown }
