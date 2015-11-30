@@ -77,6 +77,12 @@ module Conversion
           @keywords = Markdown_Field_Helpers.new.listify(@keywords) if @keywords
           @keywords
         end
+
+        def buttons
+          @buttons ||= super
+          @buttons = Markdown_Field_Helpers.new.instancify(@buttons) if @buttons
+          @buttons
+        end
       end
     end
   end
