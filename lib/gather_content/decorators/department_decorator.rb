@@ -32,8 +32,13 @@ module GatherContent
         @body ||= find_element_by(section: :about, type: 'text', label: 'What We Do')
       end
 
-      def space
-        @space ||= [room, area_name, "#{floor} #{cardinal_direction}"].join(", ")
+      def space(space_array = [])
+        @space ||= begin
+          space_array << room unless room == ''
+          space_array << area_name unless area_name == ''
+          space_array << "#{floor} #{cardinal_direction}" unless floor == '' && cardinal_direction == ''
+        end
+        (space_array.empty?) ? space_array : @space.join(", ")
       end
 
       def email
@@ -62,6 +67,7 @@ module GatherContent
       end
 
       def libanswers_id
+        ''
       end
 
       def subtitle
@@ -80,7 +86,7 @@ module GatherContent
       def buttons
         @buttons ||= begin
           raw = find_element_by(section: :links, type: 'text', label: 'Form URL or Email address used for appointment requests')
-          { "Request an Appointment" => raw } unless raw.empty? || raw.nil?
+          (raw.empty? || raw.nil?) ? {} : { "Request an Appointment" => raw }
         end
       end
 
@@ -138,6 +144,8 @@ module GatherContent
           # Strip leading and trailing whitespace and wrapping <p> tags
           return format_search_results(search)
         end
+      rescue NoMethodError
+        return ''
       end
 
       # The format is so ugly, so make various arbitrary decisions about it
