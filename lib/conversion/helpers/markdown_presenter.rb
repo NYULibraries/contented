@@ -37,7 +37,7 @@ private
   end
 
   def departments
-    "departments: '#{person.departments}'"
+    "departments: #{person.departments}"
   end
 
   def status
@@ -69,15 +69,15 @@ private
   end
 
   def guides
-    "guides: '#{person.guides}'"
+    "guides: #{person.guides}"
   end
 
   def publications
-    "publications: '#{person.publications}'"
+    "publications: #{person.publications}"
   end
 
   def keywords
-    "keywords: '#{person.keywords}'"
+    "keywords: #{person.keywords}"
   end
 
   def title
