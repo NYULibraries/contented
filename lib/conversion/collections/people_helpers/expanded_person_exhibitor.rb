@@ -10,10 +10,17 @@ module Conversion
 
         def initialize(expanded_person)
           @expanded_person = expanded_person
+          email
         end
 
         def to_markdown
           MarkdownPresenter.new(expanded_person).render
+        end
+
+        private
+
+        def email
+          expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').email = expanded_person.email_address if expanded_person.email.empty?
         end
       end
     end
