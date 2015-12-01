@@ -1,4 +1,5 @@
 require_relative 'expanded_person'
+require_relative 'markdown_field_helpers'
 
 module Conversion
   module Collections
@@ -42,7 +43,7 @@ module Conversion
 
         def departments
           @departments ||= super
-          # puts correct_job_position.is_a? Array
+          @departments = Markdown_Field_Helpers.new.listify(@departments) if @departments
           if @departments.nil? && correct_job_position && correct_job_position['Supervisory_Org_Name']
             @departments ||= correct_job_position['Supervisory_Org_Name'] + '('
             @departments = @departments.slice(0..(@departments.index('(') - 1)).strip
@@ -64,6 +65,36 @@ module Conversion
             @space ||= correct_job_position['Position_Work_Space'].split('>')[2].strip
           end
           @space
+        end
+
+        def expertise
+          @expertise ||= super
+          @expertise = Markdown_Field_Helpers.new.listify(@expertise) if @expertise
+          @expertise
+        end
+
+        def keywords
+          @keywords ||= super
+          @keywords = Markdown_Field_Helpers.new.listify(@keywords) if @keywords
+          @keywords
+        end
+
+        def buttons
+          @buttons ||= super
+          @buttons = Markdown_Field_Helpers.new.instancify(@buttons) if @buttons
+          @buttons
+        end
+
+        def guides
+          @guides ||= super
+          @guides = Markdown_Field_Helpers.new.instancify(@guides) if @guides
+          @guides
+        end
+
+        def publications
+          @publications ||= super
+          @publications = Markdown_Field_Helpers.new.instancify(@publications) if @publications
+          @publications
         end
       end
     end
