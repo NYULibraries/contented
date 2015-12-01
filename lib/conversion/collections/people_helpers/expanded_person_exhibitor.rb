@@ -43,6 +43,7 @@ module Conversion
 
         def departments
           if expanded_person.departments.empty? && correct_job_position && correct_job_position['Supervisory_Org_Name']
+            # Must return anything before the '(' if it exists
             expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').departments ||= correct_job_position['Supervisory_Org_Name'].split('(')[0].strip
           end
         end
