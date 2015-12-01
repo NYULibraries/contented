@@ -37,7 +37,7 @@ describe GatherContent::Department, vcr: true do
   end
   describe '#blog' do
     subject { department.blog }
-    it { is_expected.to include(title: 'libtechnyu Blog', link: 'http://web1.library.nyu.edu/libtechnyu/', rss: 'http://web1.library.nyu.edu/libtechnyu/atom.xml' )  }
+    it { is_expected.to include(title: "'libtechnyu Blog'", link: "'http://web1.library.nyu.edu/libtechnyu/'", rss: "'http://web1.library.nyu.edu/libtechnyu/atom.xml'" )  }
   end
   describe '#libcal_id' do
     subject { department.libcal_id }
