@@ -38,7 +38,7 @@ module GatherContent
           space_array << area_name unless area_name == ''
           space_array << "#{floor} #{cardinal_direction}" unless floor == '' && cardinal_direction == ''
         end
-        (space_array.empty?) ? space_array : @space.join(", ")
+        (space_array.empty?) ? '' : @space.join(", ")
       end
 
       def email
@@ -58,7 +58,7 @@ module GatherContent
       def blog
         @blog ||= begin
           raw = find_element_by(section: :social_media, type: 'text', label: 'Blog')
-          raw.split(/\n/).map {|part| part.split(': ') }.map {|key, value| [key.to_sym, value.gsub(/'/,'')] }.to_h
+          raw.gsub(/&nbsp;/,'').split(/\n/).map {|part| part.split(/: /) }.map {|key, value| [key.to_sym, value] }.to_h
         end
       end
 
@@ -67,16 +67,19 @@ module GatherContent
       end
 
       def libanswers_id
-        ''
+        @libanswers_id ||= ''
       end
 
       def subtitle
+        @subtitle ||= ''
       end
 
       def classes
+        @classes ||= ''
       end
 
       def keywords
+        @keywords ||= ''
       end
 
       def links
@@ -107,7 +110,7 @@ module GatherContent
       def quick_link(label)
         raw = find_element_by(section: :links, type: 'text', label: label)
         title, url = raw.split(': ')
-        { "#{title}" => url.gsub("'",'') }
+        (title && url) ? { "#{title}" => url.gsub("'",'') } : {}
       end
 
       def room
