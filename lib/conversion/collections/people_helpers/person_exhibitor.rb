@@ -1,10 +1,12 @@
 require_relative 'expanded_person'
+require 'yaml'
 
 module Conversion
   module Collections
     module PeopleHelpers
       # Parses the person data into the required format.
       class PersonExhibitor < ExpandedPerson
+        LOCATION_MAP_FILE = 'config/location_map.yml'
 
         def initialize(json_data='{}', json_data_expand='{}')
           super(json_data, json_data_expand)
@@ -23,6 +25,22 @@ module Conversion
             @phone ||= work_phone.gsub('+1 ', '').insert(-5, '-')
           end
           @phone
+        end
+
+        def location_map_file_exists?
+          File.exist? LOCATION_MAP_FILE
+        end
+
+        def map_locations_file
+          location_map_file_exists? ? YAML.load_file(LOCATION_MAP_FILE) : {}
+        end
+
+        def location_map
+          @location_map ||= map_locations_file
+        end
+
+        def map_to_location(location)
+          location_map[location] ? location_map[location] : location
         end
 
         def correct_job_position
@@ -54,6 +72,7 @@ module Conversion
           @location ||= super
           if @location.nil? && correct_job_position && correct_job_position['Position_Work_Space'] && correct_job_position['Position_Work_Space'].count('>') == 2
             @location ||= correct_job_position['Position_Work_Space'].split('>')[1].strip
+            @location = map_to_location(@location)
           end
           @location
         end
