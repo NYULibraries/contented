@@ -1,14 +1,19 @@
 require_relative 'expanded_person'
+require_relative '../../helpers/markdown_presenter'
 
 module Conversion
   module Collections
     module PeopleHelpers
       # Parses the person data into the required format.
-      class PersonExhibitor
+      class ExpandedPersonExhibitor
         attr_accessor :expanded_person
 
         def initialize(expanded_person)
           @expanded_person = expanded_person
+        end
+
+        def to_markdown
+          MarkdownPresenter.new(expanded_person).render
         end
       end
     end

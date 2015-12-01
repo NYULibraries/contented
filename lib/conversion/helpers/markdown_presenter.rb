@@ -1,5 +1,3 @@
-require_relative '../collections/people_helpers/person_exhibitor'
-
 class MarkdownPresenter
   attr_reader :person
   def initialize(person)
