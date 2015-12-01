@@ -7,9 +7,9 @@ module Conversion
       # Parses the person data into the required format.
       class ExpandedPersonExhibitor
         ATTRIBUTES = [:about, :address, :buttons, :departments, :email, :expertise, :guides, :image,
-                      :jobtitle, :keywords, :location, :netid, :phone, :space, :subtitle,
-                      :title, :twitter, :publications, :work_phone, :status,
-                      :email_address, :all_positions_jobs]
+                      :jobtitle, :keywords, :location, :netid, :phone, :space, :status, :subtitle,
+                      :title, :twitter, :publications, :employee_id, :last_name, :first_name,
+                      :primary_work_space_address, :work_phone, :email_address, :all_positions_jobs]
         attr_accessor *ATTRIBUTES
 
         def initialize(expanded_person)
