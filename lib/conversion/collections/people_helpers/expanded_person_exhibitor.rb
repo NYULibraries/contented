@@ -6,8 +6,6 @@ module Conversion
     module PeopleHelpers
       # Parses the person data into the required format.
       class ExpandedPersonExhibitor
-        attr_accessor :expanded_person
-
         def initialize(expanded_person)
           @expanded_person = expanded_person
           email
@@ -18,7 +16,7 @@ module Conversion
         end
 
         def to_markdown
-          MarkdownPresenter.new(expanded_person).render
+          MarkdownPresenter.new(@expanded_person).render
         end
 
         private
@@ -29,39 +27,44 @@ module Conversion
           phone_number.delete('+1 ').insert(-5, '-')
         end
 
+        def department_formatter(department_name)
+          # input = 'Department Name (something)' or 'Department Name'
+          # output = 'Department Name'
+          department_name.split('(')[0].strip
+
         def correct_job_position
-          expanded_person.all_positions_jobs.each do |job|
+          @expanded_person.all_positions_jobs.each do |job|
             @correct_job_position ||= job if job['Is_Primary_Job'] == '1'
           end
           @correct_job_position
         end
 
         def email
-          expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').email = expanded_person.email_address if expanded_person.email.to_s.empty?
+          @expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').email = @expanded_person.email_address if @expanded_person.email.to_s.empty?
         end
 
         def phone
-          expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').phone = phone_formatter(expanded_person.work_phone) if expanded_person.phone.to_s.empty?
+          @expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').phone = phone_formatter(@expanded_person.work_phone) if @expanded_person.phone.to_s.empty?
         end
 
         def departments
-          if expanded_person.departments.to_s.empty? && correct_job_position && correct_job_position['Supervisory_Org_Name']
+          if @expanded_person.departments.to_s.empty? && correct_job_position && correct_job_position['Supervisory_Org_Name']
             # Must return anything before the '(' if it exists
-            expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').departments ||= correct_job_position['Supervisory_Org_Name'].split('(')[0].strip
+            @expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').departments ||= department_formatter(correct_job_position['Supervisory_Org_Name'])
           end
         end
 
         def location_space
           if correct_job_position && correct_job_position['Position_Work_Space']
             city, location, space = correct_job_position['Position_Work_Space'].split('>')
-            expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').location = location if expanded_person.location.to_s.empty?
-            expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').space = space if expanded_person.space.to_s.empty?
+            @expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').location = location if @expanded_person.location.to_s.empty?
+            @expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').space = space if @expanded_person.space.to_s.empty?
           end
         end
 
         def jobtitle
-          if expanded_person.jobtitle.to_s.empty? && correct_job_position && correct_job_position['Business_Title']
-            expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').jobtitle = correct_job_position['Business_Title']
+          if @expanded_person.jobtitle.to_s.empty? && correct_job_position && correct_job_position['Business_Title']
+            @expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').jobtitle = correct_job_position['Business_Title']
           end
         end
       end
