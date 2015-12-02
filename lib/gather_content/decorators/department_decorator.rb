@@ -12,6 +12,10 @@ module GatherContent
         @department = department
       end
 
+      def filename
+        title || "department_#{Date.now.to_s}"
+      end
+
       def title
         @title ||= find_element_by(section: :contact_info, type: 'choice_radio', label: 'Department Name')
       end

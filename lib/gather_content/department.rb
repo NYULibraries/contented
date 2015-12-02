@@ -1,6 +1,6 @@
 module GatherContent
   class Department < Api::Item
-    ATTRIBUTES = [:title, :location, :space, :email, :phone, :twitter, :facebook, :blog,
+    ATTRIBUTES = [:filename, :title, :location, :space, :email, :phone, :twitter, :facebook, :blog,
                   :subtitle, :classes, :keywords, :links, :libcal_id, :libanswers_id, :buttons, :body]
     attr_reader *ATTRIBUTES
 
