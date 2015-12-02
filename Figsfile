@@ -1,0 +1,5 @@
+--- !ruby/object:Figs::Figsfile
+repo: git@github.com:NYULibraries/configula.git
+locations:
+- library-nyu-edu.yml
+method: git

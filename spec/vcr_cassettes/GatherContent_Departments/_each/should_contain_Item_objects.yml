@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:31 GMT
+      - Wed, 02 Dec 2015 17:30:54 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -41,8 +41,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6ImJjOVVKelAzM1FFK2p3SWVqaXJONkgya3UyTjFVOVE3MzFUME85YzJ4T0U9IiwidmFsdWUiOiI4dTlHUk9zZ1RGQ2RNTm8yZWlRa2VoMHdhXC9hYmxSdzIzRUQxc2Y1aFZ5OTh5dlVFeFZOd0pYZWRLRFBcL0RqS29Cdnhma1VrZWpocktZK2RYXC9iazBLZz09IiwibWFjIjoiOTQ5NDE2ODBmMmRmYjQ2YzY4MjdmNjI0MTJjOGVmMjdmOWQ4NjhhMGRmN2FmMTY3MzBjYzA3OWJlMjc1ZTgwYyJ9;
-        expires=Tue, 01-Dec-2015 23:32:31 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6InlScGlNbnN3NTl0N0lQT1ZTRHJaT3NPdjY4MmIxdVozXC9XMjZmZHhVZzVJPSIsInZhbHVlIjoia0phZG5GZ21QclRNcFZmU2VBVG1Ed2FKMTB5cUl0NmJqSXF1SkE2WmJ6SzYwVGw5Z3Ayb3R0VGNtbVB2aTZXRGpMc2pTZnQ5MUV1bm5aNk9rYkUwdFE9PSIsIm1hYyI6IjhjYTllYTBiYTFhZWNmMTIxM2U0NTIwZDRkMTI1NTJlOTgzZDdkMzYxYzJjOWE0NmE3OTU2NDU0ODUwMjg2M2UifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:30:54 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":[{"id":2311530,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"0","name":"Knowledge
@@ -176,7 +176,7 @@ http_interactions:
         18:23:36.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:36.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}]}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:31 GMT
+  recorded_at: Wed, 02 Dec 2015 17:30:54 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311530
@@ -198,7 +198,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:31 GMT
+      - Wed, 02 Dec 2015 17:30:55 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -218,8 +218,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IjYzeXVFMDBaUHFcLzN2bW9GOXR0ZjduN1lkUVZscDJMcWE0YWhKb2hWQnNVPSIsInZhbHVlIjoiQ3NBZXlLbjRFR25zc2ZrekRKaCtMUWJMS1V0WUxpR2o3TTBlTmlHRjF6Z2RsWHVUYWc5QkcraTFZeFhvQUVtcEdGVEQ2UDNOd2twN3E2dnZKOVFobWc9PSIsIm1hYyI6IjNjNDlkZjEyZDA0OGVlOGUzMDM0NDRhNDJjZGE4NDM2ZWRkMzc1ZmY3NGJjNjJhMTVkMTFkMDA2YjZjOGFjMmEifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:31 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IlJFb2JIdHgyN1piek9qSkN2MWJnMVlTRkRYeWFzcXdYSk04VzBuYXlGZ0E9IiwidmFsdWUiOiJFQmt1aWdNanVvQUJRakN6SEdrS3JzZkk0RWl0RlZcLytYeU9vYzVcL0lINUhPQ3AyMnJIQTZrcENGYjlyRzUyTEpKM0dYUHBQVk4zVEFUcGh0OVFBN1VBPT0iLCJtYWMiOiJlM2RjMTVkMjg2OTUyMjU3YTNmOGMxZDVlNzI0ZTdmZjkzMDZlOTRkOTk1Njg2MzMwZjc2OTM4YjA0Njc3MjI3In0%3D;
+        expires=Wed, 02-Dec-2015 19:30:55 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311530,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"0","name":"Knowledge
@@ -538,7 +538,7 @@ http_interactions:
         17:23:13.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         17:58:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:31 GMT
+  recorded_at: Wed, 02 Dec 2015 17:30:55 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2266307
@@ -560,7 +560,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:32 GMT
+      - Wed, 02 Dec 2015 17:30:55 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -580,8 +580,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6InBPdytjNGVOVk5QZmFpM04wSnFqcGJmV0lxRXVUR0UwSXJVc1Y3a1hCQmc9IiwidmFsdWUiOiJVcFRiUjB4amY0RGlxM0J0cFwvdTB6dEFRbTB1czNVTU5vT010YWJ2SDBHXC9salhXcWF4clBMZ2hqMkN4NXhlZEtxR3l5eno3Z21MM2QyWUNUZ0UxbnV3PT0iLCJtYWMiOiIzODdmNTVkODFlMWU3OWM3MzUwMDk3OTU5ZWQ1ZmE1ZGI1ZDM4MDI3NDMyNDQ5YTM2ZjZiNDljNDNhOGNjYWI5In0%3D;
-        expires=Tue, 01-Dec-2015 23:32:32 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6Ik5zdmdRWmdPd0NpMytPb2JWQkdkMzA3b3RuOE9QQkgzZmZFMEI2OURrNHc9IiwidmFsdWUiOiJBdXJEWnEzdURkRm5xWlBYNXdzbmZ3Y0ZkVityMnJrNDZoRFwvRkZ0YVZ5bVVGdkZHWGMzd2U3b1o0UjBVYW9mMk5EZlpUWmhpTmtHK29zcUpob29BN2c9PSIsIm1hYyI6ImZmZDZiNDc5MjJlNzBkODVkNjY1ZDQxYjVhZGRjZmIyMDM3ZGEwNTc4NWI4NzgxYmEwOWRhYzllYzM0ZDdjYmIifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:30:55 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2266307,"project_id":57459,"parent_id":2311530,"template_id":243138,"custom_state_id":241859,"position":"1","name":"Archival
@@ -900,7 +900,7 @@ http_interactions:
         17:35:16.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         17:58:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:32 GMT
+  recorded_at: Wed, 02 Dec 2015 17:30:55 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2266278
@@ -922,7 +922,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:32 GMT
+      - Wed, 02 Dec 2015 17:30:56 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -942,8 +942,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IkxKRkpoT2xENEhtXC9LaFkyK0VcL2JKOGNcL2VaU3hKbjlSNmRwU3hMeXV2Tmc9IiwidmFsdWUiOiI3VlwvQWIwTDN1QzNFaUdOTWk5Zk14cWh1UGlkbFJmU05pZTI3clNaaEp2aVhObEZJV202Y1hmVE45TnhJeFByQUNBaE9KVzQ3UjNxTHJ6ekVqMDhvQkE9PSIsIm1hYyI6IjhjZjI1OWMwZDVkZmJmYzJhM2YwYmUxNjFhNmNiMjg3YzRiYzRkMWVkMDVkZWJhMzRlZjA3ZDJhYjczM2JiOWYifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:32 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6Ik13OEZycGx2RmJIUVFRbHgyWFphaVA1NWFURXhaek1oYU1JMXV3S0JhdkU9IiwidmFsdWUiOiJFc1NzSFp2Z3ZUYUJPQlBveGhQVGxoeFV4M0xDMmJabzRMUWRaM3FGNlRIaXVCXC8rcnQ3dDJNWDNPZXVGTHNKRG5xbTlhaW5zVzRiUUtycFNJSWVZY0E9PSIsIm1hYyI6IjY5MDU3ZDliOGZlMGE1NTc5ZTc5NDI2MDMxMTQ5OWQ2NzQ3NmNhMzI5NjYwZWE2MDliMWMwMGE2NDNmYTAwOTUifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:30:56 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2266278,"project_id":57459,"parent_id":2311530,"template_id":243138,"custom_state_id":241859,"position":"2","name":"Knowledge
@@ -1262,7 +1262,7 @@ http_interactions:
         17:29:02.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         17:58:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:32 GMT
+  recorded_at: Wed, 02 Dec 2015 17:30:56 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311571
@@ -1284,7 +1284,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:33 GMT
+      - Wed, 02 Dec 2015 17:30:56 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1304,8 +1304,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6ImlqT1QzWTZDTHU0bkVVQTlmRm13SzVValVYMThaa1JDeVBKc3FYcjJoY009IiwidmFsdWUiOiJYRityYUFRKzRmejkyOVN2TVlKTWd5T1NsR3NvWHI1SEw3V1wvdDg5ckZ5aTJTSkZ0dFZEOU1mVVpMVWw1ZFRRdDgxR05qdElKRFFHRWZDcUV2bzMyeHc9PSIsIm1hYyI6Ijg5MmY0N2UxOWZkYzM1YTZjYmUzNjdmMzk4MzdhOWIyY2VjYjY2YjE5NzQ2ZjRlZmEwMDMyM2VmYjI4ZDkzYTcifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:33 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IlwvMnBmU2dzbndxdnNySWFUQlQzQ242bDBUdU9RaXNcL1phN2VXcVBXNkd0ST0iLCJ2YWx1ZSI6IkFReW1yK0pwaW1PbHpRUzJDQUlBTFlcLzFXeUdHMTNiQndLaHh4OGk2cVB6NWxCVWs0UjZEV1wvd1pWcmxEMkJ2dnNcL3JVWElhTENZRDdGQmd3NUVKN0dnPT0iLCJtYWMiOiJiNGE0NjU2OGI3N2Q4OTYyNTA3NGViNmI4M2Y3OTIxNjRmMzUwODlmNGQ1M2QyYTI1NWZkNjViY2JhNzZhN2M0In0%3D;
+        expires=Wed, 02-Dec-2015 19:30:56 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311571,"project_id":57459,"parent_id":2311530,"template_id":243138,"custom_state_id":241859,"position":"3","name":"Metadata
@@ -1624,7 +1624,7 @@ http_interactions:
         17:30:18.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         17:58:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:33 GMT
+  recorded_at: Wed, 02 Dec 2015 17:30:56 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311569
@@ -1646,7 +1646,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:33 GMT
+      - Wed, 02 Dec 2015 17:30:57 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -1666,8 +1666,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6ImZ6OXhwR21BdDBSa3RSd3h1Q0orMmI2bHhHWFZQbE50QTNZS0ZyYTJPK0k9IiwidmFsdWUiOiI3eEZiYnA2ODdzaUNQUlVhcVlqYkJ4TERyMXE4VVoxZ2UwTVdhekhLTGZEWVJkMXJ0VXBNZ2pNTGpiVXcrQkRxeVF0UUpMWkpcL1o4dG56UlBTTHpBdWc9PSIsIm1hYyI6ImIwNDcxMjU0MjRjNTFlOGIzOGYwMzRjMTFmNWQ4ZTQ4N2ZkZDdkOTUyN2VlZWNkNGY2ODIxNzUxMWE3MTJlMjIifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:33 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IjQyRFN3cFB4SmRkc2RGbGs3TVZTeUd4Vkk1d0orZ0JSc3E1ckhVdWJwaUU9IiwidmFsdWUiOiJWVTVBbkN5VUlpZmd4RGxcL1lYTnhYOG5RcWNEUGNYRG1PQWxpNnpQWHRndGJLSGVPVVM3OWFaemk2MnhCN1wvZ1dEOXdrZDNQb2RvblpzcnU5dUtabVNBPT0iLCJtYWMiOiIyYmFjNGQ3YzIyMWIxN2UzYjhlYWI5NjFlNDY2ZjlmOTU5NmY2MTExMzc0YzRhNjc0ZjdkOGYzZmEyOTM3ZTU0In0%3D;
+        expires=Wed, 02-Dec-2015 19:30:57 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311569,"project_id":57459,"parent_id":2311530,"template_id":243138,"custom_state_id":241859,"position":"4","name":"Resource
@@ -1986,7 +1986,7 @@ http_interactions:
         17:29:50.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         17:58:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:33 GMT
+  recorded_at: Wed, 02 Dec 2015 17:30:57 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2186086
@@ -2008,7 +2008,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:34 GMT
+      - Wed, 02 Dec 2015 17:30:57 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -2018,7 +2018,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Powered-By:
-      - PHP/5.5.26-1+deb.sury.org~precise+1
+      - PHP/5.5.23-1+deb.sury.org~precise+2
       Cache-Control:
       - private, must-revalidate
       Pragma:
@@ -2028,8 +2028,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6ImZhMXFMbWF5UkVnUTFXME1BXC8xMzRrNzNrQmFCVW5vUmFhTVBRa0hqWUxzPSIsInZhbHVlIjoiU290RHI3emU0Y0Z0RGw2ZDBVbHJQN09kb3lCeldhZVY1V1VoKzRpbkFKb1V3NDVYVFJ6ME5sSFZzQ21mUXhsWUVDWWZKaTl5WTF0TjIrdW5aR2dza3c9PSIsIm1hYyI6IjIyMWM4NDBiYmQ1NDJhMWViYzk4Y2JkZmQ4ZDhiMDZmNWEwYzZiNTkzOWQ3OTUxMTE0YmE4ODk5MDBhMmIzOTUifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:34 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IjBVdkVwcjJBS3ZcL3pNTzRWampPd01xWEUxTHUwOFhKYUNnamE4R3p5eGNzPSIsInZhbHVlIjoicDI3aGVaS0Q1d215N2JFN0RjTnhHMytlMGpaazV4K0dDVzNST2dHa2M5NjJFbjl0Uyt6Tm1zVE1MMkJVU0lBMG5vNkJGcVdOTXdTYk9rNU5PNlRqUWc9PSIsIm1hYyI6IjM1MGQ3NzE3YjA5MzgwYWU0NDdjZjkwMjEzNGU3NGViNWJmZTYyNTA1YmIxNmZhNmU0Zjc1MzUwNTYxZWExYjIifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:30:57 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2186086,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"5","name":"Library
@@ -2346,7 +2346,7 @@ http_interactions:
         18:42:18.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         17:58:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:34 GMT
+  recorded_at: Wed, 02 Dec 2015 17:30:57 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311671
@@ -2368,7 +2368,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:34 GMT
+      - Wed, 02 Dec 2015 17:30:58 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -2378,7 +2378,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Powered-By:
-      - PHP/5.5.23-1+deb.sury.org~precise+2
+      - PHP/5.5.26-1+deb.sury.org~precise+1
       Cache-Control:
       - private, must-revalidate
       Pragma:
@@ -2388,8 +2388,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6Im5QUmQrRUF2ZGRFdGZiKytEVnhNaEQ2ajh1Q3huazRGYTREUEhzUHNsZFU9IiwidmFsdWUiOiJLVzJOZFFDbEtielBBdUhITzJPNzEwYk51eWdcL3BBMXlSNHY2Z2hUSGlmVXk0OGJEWnhtWmRXeWt0alNRM2dkeGFHVXNkM2swU3lGRzQ2U0hOMFwvb2d3PT0iLCJtYWMiOiI2Mzc1Y2M4NTZjOTY3NTI5YmFjZjA3MzEwMGE3YzQ5NWE5ODg4Y2ExNWQwZDgzMWUzZDRkOTg2ZDI3M2Q3Yzc1In0%3D;
-        expires=Tue, 01-Dec-2015 23:32:34 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IndaTkxTYjZyZkR6T0hxUWN5YTNtUFkrN09rV3FOYkJHT3VFXC9uQk1MWVZ3PSIsInZhbHVlIjoiTWZMcjE4V011REJpTnZtV0JEdnUzeWVjbG1WQXBCZU5tSTFWbGw2VHVQUmZHeUdsRHg4cHRmSHhKWFN2OFhTR1doekRSbWlrb2pEUitvbkhtcm5RRVE9PSIsIm1hYyI6ImNlMjcxYzY1MDEzYjRkZGU4NzZlZTZhZTIyNWQ3MzYzMmRhN2U2NmQwMDdlZjI4M2ZlYWU4Mjc4NWRkYTQ4MDgifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:30:58 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311671,"project_id":57459,"parent_id":2186086,"template_id":243138,"custom_state_id":241859,"position":"6","name":"Client
@@ -2708,7 +2708,7 @@ http_interactions:
         17:55:47.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         17:58:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:34 GMT
+  recorded_at: Wed, 02 Dec 2015 17:30:58 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2027930
@@ -2730,7 +2730,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:35 GMT
+      - Wed, 02 Dec 2015 17:30:58 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -2750,8 +2750,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6InBMVDBhSzZ2TVBEMlRFOVZKSlZOTU9KZzcxdFhmanNcLytQMEZsM0hmbm9vPSIsInZhbHVlIjoibXhaRENwNWJYUHprdXZSOHdwTGc4SVZJbFFNeGhzc1JSMElJYWtWMjZnQmVDWlQxbzJzcVVYdFp2RVR3azVadGp6eWd5eTF2c1RVSGdOK0FucUVBMkE9PSIsIm1hYyI6Ijg4ZTE4NDFkMmE0NGVmNmZmMTY0Mzc0ODg5YzM0ZGQ5OGNiYmQxY2U1ZjJlZTFhZDEyMzAxOGUyMDg1NGYwYWIifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:35 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6ImcyMDFnVFpFZlIzMlFDemJiSEFEU1VBWmRGOFh4ZzRlNThpU1JSOWQ5d1U9IiwidmFsdWUiOiJBQWRzckxRSFwvMFwvU3R1UkQ0XC9TSG53b3gxOG1paExSSDJzV3dcL0dsanJvZXplcTZIRW5NUmNEY2wxZ1RpWmNHVFZEczlJVTcybE0wSG11dzNQNXZCd2c9PSIsIm1hYyI6ImJjNmUyMWQxYTY3MmU5Y2I2MjdhM2FlMTlhY2U1NDc1MjgyN2Y3MzU3YTVhY2ZiZDU5ZmM3ZDBiMmRmOTJkMWUifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:30:58 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2027930,"project_id":57459,"parent_id":2186086,"template_id":243138,"custom_state_id":241861,"position":"7","name":"Web
@@ -3077,7 +3077,7 @@ http_interactions:
         22:00:00.000000","timezone_type":3,"timezone":"UTC"}},{"status_id":241861,"overdue":true,"due_date":{"date":"2015-10-12
         22:00:00.000000","timezone_type":3,"timezone":"UTC"}}]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:35 GMT
+  recorded_at: Wed, 02 Dec 2015 17:30:58 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2185982
@@ -3099,7 +3099,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:35 GMT
+      - Wed, 02 Dec 2015 17:30:59 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -3119,8 +3119,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6Im5cL0tURjRjVTRnM3V6NE9SRHFiSktaZ2JHdm1Zdno1V2d4MWdHNkt4ZzU0PSIsInZhbHVlIjoiYUVsakNrVWlpUWFJVXJVNCtHTm5vNXFmWGV2NnFFb1VhaDVMMXUrK3kwYmxLb2JvYXNxMmhFc1FNWmFiWHJXYWoySURwc2d4UVB2M2V0QnlrMTRBTlE9PSIsIm1hYyI6IjQ2ODgwYTU2N2Q2YjkzNjExNjQ0ZWRmNDI3Nzc2YzJjOTA4M2MxODM2ZDg0MTEyMzdkYTc2OTk5ZGE3NzFjOTcifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:35 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6ImtGTlRvY3A2MlVyZGJhdmhhaEEwTkRMdGgxcDIydStITHhOb3BZS0cyMlE9IiwidmFsdWUiOiJ3T1FNYkZXd1wvVHVrS0pwZW1XYTFZRXFXTzRWaENhWHZuTkRlVWtxNmdtWTR5YkMwYU0yZEZYbDI5YlpPVVpBSTdubnFUXC80MUQ3XC9jUEIrcW5vVFJrZz09IiwibWFjIjoiMjM4YTM5ZmM2ODFhNDEyMGVhMDAzNmY2YmE5MzA1NTBiYzk3ZjUwMzdiNjVkYTAyZDM5ZjIxYzRiZTcwYjhiNiJ9;
+        expires=Wed, 02-Dec-2015 19:30:59 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2185982,"project_id":57459,"parent_id":0,"template_id":null,"custom_state_id":241859,"position":"8","name":"Public
@@ -3448,7 +3448,7 @@ http_interactions:
         18:07:51.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         17:58:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:35 GMT
+  recorded_at: Wed, 02 Dec 2015 17:30:59 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2185983
@@ -3470,7 +3470,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:36 GMT
+      - Wed, 02 Dec 2015 17:30:59 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -3490,8 +3490,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6InM2N2VsMGhDTnVRYWNTZFRwRXVoMmdRdTdwazhZTlZDOXJXR05kTmF3cWM9IiwidmFsdWUiOiJGK05rdzJDa1A3aFNCU1h4T3NrNjhibElCWDVvdlNHVUJqdXRVUWEwTEVuKzVZNGhMcHhiRXhzc1l5TWVxZzNiVUE5OTgzVmIyXC9sREI0aGtXMW1Pc2c9PSIsIm1hYyI6ImZlNjQ5NWViYjZjYTZhOTU5Mzc2OTNmZmIwZTU3MzczNzMxOTE2ODc1MWIzNjE1MDc1ODczMjRhYmIxZGYzMzkifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:36 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6ImFTZlhDbjhYR2tUeWNTVTloQ2ViZzZQQ3FvaEJFbGhsVkFhVUhEeFwvQUFJPSIsInZhbHVlIjoiTHBoV2VhSFZlR1pnVytXUDd4bm5DUGs2TklveXBmZldHTThVRER5UWJ0K2c1bkNrejJlUVhMV1lTZXJ1d3JnVVRzcDdmS0EzeUd1dVdXMzVVbDdvN3c9PSIsIm1hYyI6IjkzYjYxZjFkMzUxMmY5OWIyODIyMzgyOGUwZTRlNjZmMjg1OGExYzIxN2JlZjJiY2JhYjA1NWI0NjJiYTNkNTMifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:30:59 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2185983,"project_id":57459,"parent_id":2185982,"template_id":243138,"custom_state_id":241859,"position":"9","name":"Access
@@ -3818,7 +3818,7 @@ http_interactions:
         18:09:15.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         17:58:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:36 GMT
+  recorded_at: Wed, 02 Dec 2015 17:30:59 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311674
@@ -3840,7 +3840,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:36 GMT
+      - Wed, 02 Dec 2015 17:31:00 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -3860,8 +3860,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IkNkNW5ma0xwN05JOVZib3lpRXFnK21NTzV0QzZxM0ltN0l6Q251cUFia3c9IiwidmFsdWUiOiI4V0lFRW1wS2R1cktJUEdsRDhcL3BZTEowdDdXYVBVdGtlcW9wMW5sK3h4bjI2TlMyQ2tLbm1SNDhnTFVIN0hYZVZQMnhTUUxQN0NpXC9GeXZrSXNzN1NnPT0iLCJtYWMiOiJmMmRjNzExZTk5NWZlMTI4YTEzODQxZDk4NTBhZDNmNDY2MjhjZTZjMjY5MzNkYjFlOTZlNGViNmU5YTNjNTZlIn0%3D;
-        expires=Tue, 01-Dec-2015 23:32:36 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IkxFVVRYQWttZWtwSnhXcWoxcFhLUk9BK1hWNkRDdktmTEtRRWE3SmVcL1Y4PSIsInZhbHVlIjoiMHltY05MNmRrREpVRXZNdjhjaEJ6dXk5aDdYZmwwQmEzU0xRbUVXMGVcL3EydVpPK1o5STJ5anVwM0V3VUFYWGVMZjh1Zytra1VmYUtmTlRuVjMwZzlnPT0iLCJtYWMiOiI3NzdhYzcxMGY0OWNlMmUzM2MzMWFiNGY0N2IzYjgwYzUxNDRjODYzZDAxNmNiNjBkNzljZWE1MDRmMDkzYWQzIn0%3D;
+        expires=Wed, 02-Dec-2015 19:31:00 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311674,"project_id":57459,"parent_id":2185982,"template_id":243138,"custom_state_id":241859,"position":"10","name":"Avery
@@ -4180,7 +4180,7 @@ http_interactions:
         17:56:36.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:02:40.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:36 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:00 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2266308
@@ -4202,7 +4202,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:37 GMT
+      - Wed, 02 Dec 2015 17:31:00 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -4222,8 +4222,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IlJVNzBXTW0yNEsyV1ZRTVYzS09cL3ZBUndVelhEXC9oNTlUdzE5S2ppMUVTZz0iLCJ2YWx1ZSI6IitVSGJHNEtFYm9zKzFybGxtSEl4N3RMNkN3WUxEVUZKajl0ektpM1FTVHkyanBRdGNVSGZCSlp2a3V0Uk4wSTJPYjk3TDd1ZVRuMldIZ05YZW45UUxRPT0iLCJtYWMiOiJjODgzNDNkNWJhNmU2Y2Q5OTA5OGY0MmEwZTk4NGFiN2I2YTgxNWQ3MzAxNWEzZmFhNDcwNjBmN2I5MDI0MWMyIn0%3D;
-        expires=Tue, 01-Dec-2015 23:32:37 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6InNEaTN1SldtQU5wWDZTdXdXVVlwVFhuZzJlcUlMKzVvenUxaElvK01tSDQ9IiwidmFsdWUiOiJ0bnhBVUJOckl2MDhUR1BZMDZsdFBQTE4rWWhvRTRXZGdFdjNtU1NxR2lXVFRGdHE3Qmt4N3RUN3VxdXk2aWFMWEZMSUJKV1V2OXFUSHZQWW1XMWhvZz09IiwibWFjIjoiMThjMTBmMDE5ZTExOWI0YzhhNGVlNGEyMGJiNDIyNWZmMzYxM2Y0YjhiYmIzZDM4MTJhZjk5ZjIwYjM0YTlkMiJ9;
+        expires=Wed, 02-Dec-2015 19:31:00 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2266308,"project_id":57459,"parent_id":2185982,"template_id":243138,"custom_state_id":241859,"position":"11","name":"Business
@@ -4540,7 +4540,7 @@ http_interactions:
         17:35:51.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         17:58:02.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:37 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:00 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311683
@@ -4562,7 +4562,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:37 GMT
+      - Wed, 02 Dec 2015 17:31:01 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -4572,7 +4572,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Powered-By:
-      - PHP/5.5.23-1+deb.sury.org~precise+2
+      - PHP/5.5.26-1+deb.sury.org~precise+1
       Cache-Control:
       - private, must-revalidate
       Pragma:
@@ -4582,8 +4582,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IkJERzhYeXJ2UjZrVDVVWGpKMElQK1JHbHQrQU1IK0RcL2F1WklLenFDaUQ0PSIsInZhbHVlIjoiWEZaS0U0ellYb0cweFVMUW9WWFY4cXo0dEM2NE15OFwvZnZJRG9TQnhYMGVBY1wvK2dHRCtuYmNocytISUNkdkh4cDhoV25ldFZKbDRLTXE3eFV0MmV1Zz09IiwibWFjIjoiNzRhOTNhZTI4ZTYzODBkZjZlMDQ0ZmM3MGEzNTA5YjNkNzVhYmU1NjNhNGM3NDEyODk1ZWJlMzhlNTc4ZDQ2OSJ9;
-        expires=Tue, 01-Dec-2015 23:32:37 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6InlLVG9lcHNEeGI2Nk5hUEMxS0FBS05LbHRVcTh5bHNzczNuSFdTN1wvUlZzPSIsInZhbHVlIjoiSHAyK2huSDVDYTRjSDZiRjFic3hOVnU1eFRNcUIySFJCYURTMHZBZ1AyNWs5cnVNT3JESGJlQ01SYXpIbWphT3BBMXlvaDk2am1UWjZaYWZzNVdRdUE9PSIsIm1hYyI6IjlmODVjMmUwNzBjZWFlN2JiODgwYmIzY2FiNjM3ZDk4ZTFiYWJiOGExMTc1Mjk4NjU0N2E2ZGRlZjYwM2Q0NTgifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:31:01 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311683,"project_id":57459,"parent_id":2185982,"template_id":243138,"custom_state_id":241859,"position":"12","name":"Instructional
@@ -4902,7 +4902,7 @@ http_interactions:
         18:00:40.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:02:40.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:37 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:01 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311676
@@ -4924,7 +4924,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:38 GMT
+      - Wed, 02 Dec 2015 17:31:01 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -4944,8 +4944,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6Ik5iZ0dsS2lcL3BFejQ5aTUzVmhIXC9kSnBOKzhRbTVRbFRsY2o2NFduMEl3az0iLCJ2YWx1ZSI6ImhDTUxrcXFOaENKNGxzXC9wSUJldXdjNmdGVVZ2Zk42MTZIREQ3OWpBQ2I4b2NjYllMWUMza3FVZDdxT3Q3Rk45dnVqUmtYOUt0V1VHbTRuNElTb3Q0dz09IiwibWFjIjoiNTI3MzhiNjFiNzQ2Yjc3YTZhNWRmMTE0MTMwNzM0MTQ4MDUyYjIzOTkwYmU1MWMxN2QxY2RiNjdhZTA3MDc3NyJ9;
-        expires=Tue, 01-Dec-2015 23:32:38 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6InpEdFhNYUFHUzVvc1UxS043OHNmblFxYkdEampnbFJUb01XU0lCU0NZTVk9IiwidmFsdWUiOiJibmlNbExsS3NSMXl3WFwvb1VydElhOE1neFRnU3dRMU5DcjMreDRMTXJiN1pHMEVQaXZZOE00a3hZSXZOaUl3UEx3MjZac0JGSW93S25kMVBabjUxQ3c9PSIsIm1hYyI6ImU1OTBhMjY4ZDU0NmVjZjljM2QwMWRhODQ0M2Q0MTdmNDVjOTJlN2NiYzIwMmExMzAwYjFiZTQ5Y2I2NDM0OTcifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:31:01 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311676,"project_id":57459,"parent_id":2185982,"template_id":243138,"custom_state_id":241859,"position":"13","name":"Reference
@@ -5264,7 +5264,7 @@ http_interactions:
         17:56:49.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:02:40.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:38 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:01 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/1983583
@@ -5286,7 +5286,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:38 GMT
+      - Wed, 02 Dec 2015 17:31:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -5296,7 +5296,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Powered-By:
-      - PHP/5.5.23-1+deb.sury.org~precise+2
+      - PHP/5.5.26-1+deb.sury.org~precise+1
       Cache-Control:
       - private, must-revalidate
       Pragma:
@@ -5306,8 +5306,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IjZ1TmdvNzBhVmxpUWhEVGlkcERxT0pGXC9YdzhvTGR1MFFOOE9icHprXC94QT0iLCJ2YWx1ZSI6ImtKUEdabnExeGl5T05ReitjdlRSSENXM0RQamNsUkJNMjhNVjEzKzRRczdTTDZKVDVKNU1TcjlNNUhCd3g5V1wvam11dmhBd1JsOGo1NitqXC84Sm4wK3c9PSIsIm1hYyI6IjY0ODdlYjM1ODE2MDIwNmQ1MTQxODA4N2M1NzdkNjNkYjVmMGEwM2JhMTcwODkxMTcxN2M5NWI1YmJiMTNmNDUifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:38 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IjkweGVFakFSakFzU1ZmaGRyWFd1NUF5WUU4UXVtK1pRYU1IK0llakRTZjQ9IiwidmFsdWUiOiJcL0lrY2NOaEtmV1Ywazh0Tlwvd2tGSFJHaFlZXC9MdGgzMUdaTVcyM2tuTWhIR0UwOUJ2WXU5U1d1R0Rxc1FzMkNKSjdnVmpHZCtmSXdDTHk0aEllWUE0Zz09IiwibWFjIjoiODM3MDJiYzU1OTE5YzUxMjA1YTIyZTAzNzQ2MzMxMmE1YjJmMzNjMWU0MTg3MzU0MGJjNjFiM2ZkMDljZTA5OSJ9;
+        expires=Wed, 02-Dec-2015 19:31:02 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":1983583,"project_id":57459,"parent_id":2185982,"template_id":243138,"custom_state_id":241861,"position":"14","name":"User
@@ -5632,7 +5632,7 @@ http_interactions:
         edits","description":"DMs should give a final review to content and make changes
         if needed in order to give it final approval.","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:38 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:02 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2050174
@@ -5654,7 +5654,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:39 GMT
+      - Wed, 02 Dec 2015 17:31:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -5674,8 +5674,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6Imk0R2NRaXV5QkNka29jWHYySGNcL1B0Mm5ZVnRGYTc4Y0RMaDRXc1pUZGRFPSIsInZhbHVlIjoiMU4yNE5ReXZcL1wvZFhEK3lJNFUwcmNVQmdUV2JFNkMza0ZSYVpGYzdLelRGQnFDcis1QU5seFFKSWNTREhNM3NMcW9lTTJYYTNLUHlQOUl6Tnl3aVhyZz09IiwibWFjIjoiMTcwN2RiZWIwNmRlZWFjNzViOTExYzkyMjAwYWJlNzMwMzk3MjBmOTNkNWQ4ZjMyMWY3NjEyZTljM2U0MzRlYSJ9;
-        expires=Tue, 01-Dec-2015 23:32:39 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IkxySm1wM3l0cUhiSHRSVVFnNXRORkM5RDE1Qzd4Z2VGSU9cL1BJQXh1T2ZVPSIsInZhbHVlIjoiTGNSbyt3TmRmTDJIRThEcElFOHlPOVFId0VrXC9MTU16eVkwOTU1UVQ5XC84cFpRcjcwRTBqbWJ5THBCWU85eSsrSGJsbE93VDYyXC9LQW5Sc2VYTFRBZ0E9PSIsIm1hYyI6IjdiMTY4ZTgyYjIxNGI4MWJhNzc5NDk4MzY0YzlhNjI1YTM4MDYxMzczYTc5YzFhYmRiMzgzMDdkMzAwZTE0YzMifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:31:02 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2050174,"project_id":57459,"parent_id":1983583,"template_id":251307,"custom_state_id":241859,"position":"15","name":"UX
@@ -5864,7 +5864,7 @@ http_interactions:
         16:26:13.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:02:40.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:39 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:02 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/1988949
@@ -5886,7 +5886,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:39 GMT
+      - Wed, 02 Dec 2015 17:31:03 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -5896,7 +5896,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Powered-By:
-      - PHP/5.5.23-1+deb.sury.org~precise+2
+      - PHP/5.5.26-1+deb.sury.org~precise+1
       Cache-Control:
       - private, must-revalidate
       Pragma:
@@ -5906,8 +5906,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IkJ4SFhheExoZnhVMnRWNThpdzFUZmdveTNhRDBrVHRIcXdUd2ZxMFFheEk9IiwidmFsdWUiOiIxVktJZ3pURU9EanNTRkZsOGdEc01vOFZPY1FrdnQ2Q1RCZzRXUWt0N2hibG40bTc4dnptVFBEXC9BcXZTem4rclgxRVQ3b2llQ1BTY01HcGhTMkg3ZlE9PSIsIm1hYyI6IjQwNDUxNTQ3NjdkNGJmZWVhM2E0YTdkOGY5MDBhZmI4Y2VmZTE5M2JlNTgyNmE1YWU4ZGJiNGY5NGM0ZWRkYTMifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:39 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6Im1MSFNTVEpHVHVBakpRbXRhWjZKRVJ2XC8zVlQ0ODlxclBpNHVSK3BQTGVVPSIsInZhbHVlIjoiaUZCR3NmT2lKdXM5ZVlkR0hiR3ZEXC8rN1oxeGg5N2p4TGltMzJRbXMyc0NJRWo4Z24ybnUzSXJVK2pCdHFBTWFPcXE1VFVcL2xXYWpUTXErT3JBXC9ENmc9PSIsIm1hYyI6IjQ2YTg3NzE1Mjk4ZWEwNzkzMGU2ODU0MmMwZGFhMDg2ODJmYmFlODdjMmM5NTY2MTg2NDZjNzUzMmZiZDY4OWQifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:31:03 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":1988949,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"16","name":"Test
@@ -6229,7 +6229,7 @@ http_interactions:
         15:49:43.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:02:40.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:39 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:03 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2054045
@@ -6251,7 +6251,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:40 GMT
+      - Wed, 02 Dec 2015 17:31:03 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -6271,8 +6271,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6InRTbDVid0lVcHZwY1ZqQ2xodlFoVVhVNDdTb2M3UldtcFUrVjhBMlVEQm89IiwidmFsdWUiOiJjWnVhM05FdnVrNlBWMUNadG1ncG80cFJ2TThrOTgxb0VsXC9HSXBCeUcyM2t2b1pIQnVNTHhoY25EQ2l4bWdyaVNGbFVLcHpBZ2tDd3JaWStOTFhJNXc9PSIsIm1hYyI6Ijk5NzFlM2JiMzIwNjEzNjg1ZjM3MjhkNmE2OWFlMTBlMDA3ZDkyMzY1MWM4YjdjODI3MjM3YTRlMzQ1MzA0MGQifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:40 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IjNQYTNwZDJGQitDNzJ4U1BPUjgySjN1MDA1TVhIMUtzWHM0Z1RYZjdweWs9IiwidmFsdWUiOiI5bkNKWGw1RG1YdXFVWHZGTXVNaCtDZWlhY3ZWblF4bWg0bEF6cWIxaXkxemR2VVAxeXFHbjJjTzlmMGlNTElnZ3d2MjUzNk9vOUxGbjd1Y3g2alJ0dz09IiwibWFjIjoiYmYyZGNiNjkyZWQyZGE0ODFjYjI1ZDRlMjVlZWYyN2Y5MGRlM2UxNDRmMjU2OWJkN2ViMjkwOGEzMDQ5NmMwMyJ9;
+        expires=Wed, 02-Dec-2015 19:31:03 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2054045,"project_id":57459,"parent_id":1988949,"template_id":251307,"custom_state_id":241859,"position":"17","name":"Test
@@ -6459,7 +6459,7 @@ http_interactions:
         17:31:47.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:02:40.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:40 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:03 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2054057
@@ -6481,7 +6481,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:40 GMT
+      - Wed, 02 Dec 2015 17:31:04 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -6501,8 +6501,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6Iis2RngwMHUyc0F0OVVjUHZDS2RSTFR6MGl0ZHA1Ukp4cXBoQ2RnTFJCdUU9IiwidmFsdWUiOiJJT1N4eTJoRUYrQmxaeEtSM0taS0s4Z0ppOHVhVUxDZUk0WUVVSnlMamN4ZFVhVjA2cFJtYzlMa3FESlZUeEpMUDhjMCthME9wWkNlMEVYRnd1cGdHZz09IiwibWFjIjoiZmYzZDczZTJjMmU4OTM5MzU4NTJlNmI4YTY4ZjFjNzgwNGIxMjVhNzdiZDJhMDI5MWM0NDM4MjVjYjc5ZWUyZiJ9;
-        expires=Tue, 01-Dec-2015 23:32:40 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6ImxxSmRKZXpVRFZGVTd1OEI2amUxZUlkdWRCQ2FIMU1rVEgxenQ3WDdHS0U9IiwidmFsdWUiOiIwNW84NUdkQXo4OWFQbGF2ZEtRTHR3TVRYYlBZMXJNRkhoZ2pTV2o1Q1ZnaFJlUnlxNkRWZk0rSXlOS0tzVXJlOE1LTjBjdHNGeEZQaUU3Nmo5Q0RmQT09IiwibWFjIjoiYjc2MDU3NGE5ZTE5NDU5ZTEyNTJhYTUzZThlMTBjODRjNGU1MTE3NGIwNDZmMWRiYzVkYWI1NjkxMTY0MzA5ZiJ9;
+        expires=Wed, 02-Dec-2015 19:31:04 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2054057,"project_id":57459,"parent_id":1988949,"template_id":null,"custom_state_id":241859,"position":"18","name":"TestDept
@@ -6819,7 +6819,7 @@ http_interactions:
         17:34:02.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:02:40.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:40 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:04 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311688
@@ -6841,7 +6841,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:41 GMT
+      - Wed, 02 Dec 2015 17:31:04 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -6861,8 +6861,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6InZyd1VWY0RVMno5VjZWMnI2UjNVNVpGa205YXM3aDZXbGJLWmh6OEd1ZUE9IiwidmFsdWUiOiJTcmJKXC82V05RNkhKcGlTS3EzaFpFNXcrNno1bkIzQTFVSis2XC96QTBkVlJWclBWTVl0eHFnajVhZzlpbWxcLzA0ZWc4TzNqNitXanlLRjAxY0xJWmFiQT09IiwibWFjIjoiY2FlYjU0MGQxOWU4M2NjNWFlNDkwNDkxNTg3MmZlYzQ1NDUwZWQ1ZWRiMWQ5NmI2Mzk4MzFhYTdkNzJiM2I2ZCJ9;
-        expires=Tue, 01-Dec-2015 23:32:41 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6InM4eHJoZlVQSEVmUXNHN0lNXC82aFZOYzdsYlFqQThsbzlPcm5TNVVvMEhvPSIsInZhbHVlIjoibTk0KzAxNThraG5PZUxRbFJMQUNKbUR5NGljc2hDQXZYOWc2UU93MHl1aUdVZnFCU1dwWVFJZVwvRlI4ZjBxbmI5ck5RVUFINFZ2aDVcL0pGVWptbURDUT09IiwibWFjIjoiNmYyNzkyOGMzYTE1MTk2NzliMTBjODNhODAwZWMwZmU3ZDE0MzczMDEyMzViZjg5NGFmNzk4ZTNjMDk1NjE0MCJ9;
+        expires=Wed, 02-Dec-2015 19:31:04 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311688,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"19","name":"Digital
@@ -7181,7 +7181,7 @@ http_interactions:
         18:02:54.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:02:54.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:41 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:04 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311690
@@ -7203,7 +7203,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:41 GMT
+      - Wed, 02 Dec 2015 17:31:05 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -7213,7 +7213,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Powered-By:
-      - PHP/5.5.26-1+deb.sury.org~precise+1
+      - PHP/5.5.23-1+deb.sury.org~precise+2
       Cache-Control:
       - private, must-revalidate
       Pragma:
@@ -7223,8 +7223,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6ImdWRWNUNk9wU2hNN2JrQU9cL252TEZxSGdFRVNhU3M0cnZtSjVWRzYycVRJPSIsInZhbHVlIjoiOGcxY0RDell6TmdcL0grcXN2OFhsUkVzSlZNSCsyRktBWjhjZ3R2bUkxaVwvKzlFVm1UWVUrdmh1WENMa1NQZ0VZaEdyT1NzTzBwbWhsY2JXNG5KRGh2Zz09IiwibWFjIjoiMTRhYzg5NmNjMmMyZDM0Nzg1ZTJiYTNjZTdmNTQyMWU2MTNlYTMwMTkwYzI4MzkzOWMxOGVmNDY4NDgxNjYyMSJ9;
-        expires=Tue, 01-Dec-2015 23:32:41 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IjFEenIyWkQxMzhJY0xxaGREZzFhMnFZYktGcDZNT2l5dDFyRTVqd3pWT0E9IiwidmFsdWUiOiJ4ZFdpeU1FS0hWTllTaVkxelNoVVlidXVvOXYxeFJpUmZjYnp4UWJlOGdnREpZKzlwQlRzT3dlaGRvTG5uXC9LclwvYnpqOU1nMkhhbEVFQ2dXcmdJVDhBPT0iLCJtYWMiOiI0NGYyOTZlOWVmY2RjMjY3OGZkZDFmODM0MTVhOTQ3ODIwNjcxMzlmZDE0OWVmN2Y3NmJhMDU0YzUyYjA2OTcwIn0%3D;
+        expires=Wed, 02-Dec-2015 19:31:05 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311690,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"20","name":"University
@@ -7543,7 +7543,7 @@ http_interactions:
         18:06:33.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:06:33.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:41 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:05 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311695
@@ -7565,7 +7565,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:42 GMT
+      - Wed, 02 Dec 2015 17:31:05 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -7585,8 +7585,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6ImVXaWRhYnIxT0JkSWRyaHc4UHBuNGErdk4wd3h0RGk5V1BNYXZRSUZSRnc9IiwidmFsdWUiOiJpaVlZVnlRV3lJUkhBSk5DTEdPM2E0WVRUaUtHNXAzVjFOSkI1cnc4T2lqekI5YXhsVmE4UE1IQ3NoYWtWUGpKVjg0c0t6d2hzcjVZR3hMRzZhZGNcL0E9PSIsIm1hYyI6ImQ2MjVkMGM3NGI2MjU4MmJjMzY5ZmEyMWYzM2I3YjAzM2YxZDUyM2ZkNzBiNzFlZTU4MDZjNzc2ODAzYjIzOGQifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:42 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IlJ5ektib1UrbXgwMHdTZ2pjR3YxSFZXNEE5YURqZDhTY2NnRHV5NUpaXC9RPSIsInZhbHVlIjoiaEo4ZzYrRzZwb2R4N1Y1aCtjTmVMbWZGSWpJM1NENVAyc2lock4yNmU0QVRMaEVUcENoRCtiOGx1Y2lLSTRPaE8zVnY2cm12ZVQ1YU92NWRIXC9kSDNBPT0iLCJtYWMiOiI4ZWY1Y2ExNGRmYWJiMTE1NDEzNWVjNjZjNTY2NDc2ZGMwYjQwOGI1YzU2YjA5MzI0ZmIyYmVlMzhiYzU0NWJkIn0%3D;
+        expires=Wed, 02-Dec-2015 19:31:05 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311695,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"21","name":"Campus
@@ -7905,7 +7905,7 @@ http_interactions:
         18:07:29.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:07:29.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:42 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:05 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311733
@@ -7927,7 +7927,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:42 GMT
+      - Wed, 02 Dec 2015 17:31:06 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -7947,8 +7947,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6Ik1Da0xtTk1RUmVCOU1Wc1JFWjc5eTVubUFHUyt6OFhMQk1cL2dla2N1TjJRPSIsInZhbHVlIjoiMkJ4aXNvRzU1XC9NSWRaSzl1cVJ4aE5DWXdUWEY5NFJHbmx2aW5SSXpralZoMm55N0ZnUGhudXdBS3dJZ3lGUW9uSG82djU5ZEZkYWhHWnZxeU9ta1p3PT0iLCJtYWMiOiI2NzQxZjI3ZGM5Y2IxMzIxNmZkYjJhZGIxMmUzODBkMjQ0Y2VlYjk5MDg5NDE4MzI4NWE1YWZkOTZhNmMwMzlhIn0%3D;
-        expires=Tue, 01-Dec-2015 23:32:42 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IllqQW5KaHc0eHpkR0RNejBvY3JadzdybVA1b2cxMDRrT3U0dVVLRE9pUnc9IiwidmFsdWUiOiI3bFVSaWYzNHcrUldzV1NhdVVlXC82c1V0QjVYbUlKMGJkbVRmcTVydHJZeEthTm1cLzhIenZUYnBNOFFYaVRSQWNvN3cwQ1p2OGdjQ1FNczdvMHA0RTlnPT0iLCJtYWMiOiI0MDljZjIzOGQ3ZTYxNDEzMGY2YzM0YjIyYjU5NjhjOGYyNmQ3ZjU2NzZiZWEzNGZhZGNhM2JkMzNjYjMwMjg0In0%3D;
+        expires=Wed, 02-Dec-2015 19:31:06 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311733,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"22","name":"NYU-TV
@@ -8267,7 +8267,7 @@ http_interactions:
         18:09:33.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:09:33.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:42 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:06 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311815
@@ -8289,7 +8289,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:43 GMT
+      - Wed, 02 Dec 2015 17:31:06 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -8309,8 +8309,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6InNZTEdlN3JxWFdFRzByZWs1MytnaVBSM2w2ejcxZ1NibTNkVEtiNXdnVDg9IiwidmFsdWUiOiJEUUNneVhrUzdIU2dhenBXTkxkY0JENmVzUWlVbXBoTFhiNFdMZERYNjlJOE9wSkVMTUdcL2pRSXNQOTAzVVwvOVBKWGx5RjdaZ25PNThRUGZkWlwvWHloUT09IiwibWFjIjoiNzE1OTE4MWVkYzJkOTU1MjRkY2UyZjQxNTZhY2ZkODNkOGZlNmIzMmRmNDUwOTljMGY4ZmI5ZGRiNzczYzM0ZiJ9;
-        expires=Tue, 01-Dec-2015 23:32:43 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6Im5tdjNwMmhOOWtoTTV6WUcwYWNjXC9TbnU0cmd2VjQ0VkdUdklhY2poZkNnPSIsInZhbHVlIjoiSHE1OTVYRTdWVlBRMm1uUTFub24xbkk0dzlFS2oyOUdvQ3pySk1uT1ZFYkJHNjQ5Yzc2dnljb3ZxaHFyQTgzcVpaczVnOTU3VXYxamU2ZjZMbGR1elE9PSIsIm1hYyI6IjRlMWU1NDQ0YjI3MzJiNTAzYmE4YTIyZGQ4YjYwNzI2N2FmOGYzODgxMjk1NjIxZDI0MzJlY2M2ZDM3ZDI0MDkifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:31:06 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311815,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"23","name":"Campus
@@ -8629,7 +8629,7 @@ http_interactions:
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:43 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:06 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311816
@@ -8651,7 +8651,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:43 GMT
+      - Wed, 02 Dec 2015 17:31:07 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -8661,7 +8661,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Powered-By:
-      - PHP/5.5.26-1+deb.sury.org~precise+1
+      - PHP/5.5.23-1+deb.sury.org~precise+2
       Cache-Control:
       - private, must-revalidate
       Pragma:
@@ -8671,8 +8671,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6InQ4UlpheVd5S3E4Z3hpUmZNVFd3QVdoXC9ESFhiSEM1UUloa0orOHZDNVJNPSIsInZhbHVlIjoiSEtnY3BwSFJteGZrNEI4MWhGNUJUNnY3UjdvcEYyODdQRWQ2amIzem5qcmRDQkNqcDVLSGN5S2tlSERWQVZXdVR0MHB5NW1SZTJNZ1d5NWJ1bExJM1E9PSIsIm1hYyI6ImU2YzViMzUxZDIzYzg1NzQ4N2Q4YTg2OTJlZGQ4ODZiMWM2N2EwNTBhYzNkN2Y2NGI5ZjVjMTMwNmUzZmQ0NTEifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:43 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IlFkcW8rQzdRblwvVXZqN2tlSktUck9FanR5UGlPc1E4ODRjcW1hUlczSFwvUT0iLCJ2YWx1ZSI6IndCTVpyUmVwMnNxUDBBOUFubDVkUDBXRDhxaUVFM1dtOHZ2VTRCWlN3UFBRMW8ySHNCa0pUbEo1YzZ0dmxJdDJ3T0pVSmZvU3B3TVpMWTBlY1ZiZVhBPT0iLCJtYWMiOiJlZDQ2YjQ1NTUxYzE5ZDk2YjMyYjM4MzY1NzAzYzFiZjk3ZGFjOGE2MTIwZDk5ZTRlMDk1MWIzOTRhMmZmNWI4In0%3D;
+        expires=Wed, 02-Dec-2015 19:31:07 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311816,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"24","name":"Cantor
@@ -8991,7 +8991,7 @@ http_interactions:
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:43 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:07 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311817
@@ -9013,7 +9013,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:44 GMT
+      - Wed, 02 Dec 2015 17:31:07 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -9033,8 +9033,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IjZMV0l3RjFDaFFGMUVFN2xPZWR5Q1M2N0ZMdlh5M1RrR2U0NVRwUFVoV2c9IiwidmFsdWUiOiIyRnV5U0Nwc1BEWlZEdzl0SmtDN2hGUjJ1Y1hMRDBTdkNjb0ZvNXJ0WWFxTDVhbWlkdHBCZzlZTGtnd25QWEtKeXBva1BEbjhBOEhsbStFNHlWTVVDUT09IiwibWFjIjoiZmQ3MGMwZTdiN2RmMDI1OWRkZDQ4NTg0NjNkZTM1MWM1MzgxYWE5Yzc4MDRiOWVmMzQyYmY4MGMzM2MzMDQ5OSJ9;
-        expires=Tue, 01-Dec-2015 23:32:44 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6Im82MXh1bVJKbjVIc1pNT3JubUdrdXRnZ2Qxb2x4UStaZUJXaDkzVE9HTjQ9IiwidmFsdWUiOiJcL0lQU01zUmQzb0pYNmFYK0M3UDlXMlFEd2lVMmJKZk52cktLYXBJRVhzbEJieFlTYytPeXBDQVNwQTZOVWhYdHg3N3FGV21PNU92WVV5a2tlN3hSWFE9PSIsIm1hYyI6IjE3MWEwZTQ4ZTk5ZGE5ZTUxM2JjN2FlYzM0NWU1NTgwYmRkNmFmZmM5MDBmMDQzNGMyY2MyMDZjM2Y3YTcyMzYifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:31:07 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311817,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"25","name":"Digital
@@ -9353,7 +9353,7 @@ http_interactions:
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:44 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:07 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311818
@@ -9375,7 +9375,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:44 GMT
+      - Wed, 02 Dec 2015 17:31:08 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -9395,8 +9395,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IjJTZUY5Sk5Hd1ROQmNqMFFRSEg5NzBUTFk1R3ExcW51UVBQWkUzXC9XREJNPSIsInZhbHVlIjoiZlpKeGpPd1VMcTQxQnMwNFp6MnFQaUNRZUNPeEhjY2NRa1hKSjVVXC9wU2hSUDhCazhEQ3FOSzVlNXgwRFJ6Umd2dTlSKyt0WXR6TzhCOHJhV0FYOCtBPT0iLCJtYWMiOiIwNjI4N2Q2ZGMzMDU1MDQ3Yjg0NTdjNTg3MmRlMGZlYzFhOTI4YTc1ZmUwMGM3YmJkMWFmYTEzMTliNGU0YWI1In0%3D;
-        expires=Tue, 01-Dec-2015 23:32:44 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IjEybHNcL0lcL3B6aEFmUlwvRkxpbVUyTTRldnpMZk5BMHNEekg3cnY1NGREQmM9IiwidmFsdWUiOiJUeHJyQUF5QVpJbGF6Smp1c0EzalkrKzg2VU9GZlgrdEhJYXE5T3NDNEY4bit4anJYSGMxQWFmZGtzenBLWWxcL09RZFdHN3hKekhKUlFyV2lBdVwvMnNRPT0iLCJtYWMiOiJlZmFkOTQ0N2VmOTliNmEzNjdhNjM0NmE5MDQ0OTY2NzQ0ZjhkZTQ5NDk1YWRiMDdmMDIzOTQ4MjZjZGVlOGMwIn0%3D;
+        expires=Wed, 02-Dec-2015 19:31:08 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311818,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"26","name":"NYU
@@ -9715,7 +9715,7 @@ http_interactions:
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:44 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:08 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311819
@@ -9737,7 +9737,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:45 GMT
+      - Wed, 02 Dec 2015 17:31:08 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -9757,8 +9757,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6InJMSHJSMU5VdnIwRVlSXC9xNkVEU0FBTWpncUh1aklcL3hhVDlXc1lLcldUYz0iLCJ2YWx1ZSI6IkkyRG9XMVRteHVBajNPXC93KzV2QjJZZkxoV3hFNWdkenVERFd0Q1NncWNpcHFPR1pBMFJwU0JPS3poSkhvQ2R0dzZUbU8wam1zcmV6ZlhQZm84T1U4QT09IiwibWFjIjoiODViYmRlYmUyNjcyN2UyZWFmYTI1MGJhZTRhMDBkZGFiNzdlZTZkMWVmYjk1M2RhMzcyY2M0NWY0OTA4ODdiYyJ9;
-        expires=Tue, 01-Dec-2015 23:32:45 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6InVhK2pUdE1tcW8wZDZVVmx5cktjaEppbzM2MnJqcHRFS2NsQWFcL0o3TyswPSIsInZhbHVlIjoiQnJOanN6c3FMdzR3elFIOW9XUEZhdDRHZGJKWjhhRUMzVnhxS1FqdDIzY2FkQWJJWnhpdWJNZXF4UTVJM2VnWmk4TzFhWXRkUUdVUEVVT1hUdzdaUHc9PSIsIm1hYyI6ImUwZDgxNGE0OWFkZTFmNTg4Y2ZlMDJlYjQwM2Q5OTBlZTkzZTIzMjRlYjNhOWU5ZjA4YzI4ZmExYmZmNjMxZTAifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:31:08 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311819,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"27","name":"Budget
@@ -10077,7 +10077,7 @@ http_interactions:
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:45 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:08 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311820
@@ -10099,7 +10099,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:45 GMT
+      - Wed, 02 Dec 2015 17:31:09 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -10119,8 +10119,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IlRRdzJMSlY5NEM3WkUxa05Ndnk4OU9mTWhncTMrSnhJR0w0R2FiMkM1c1U9IiwidmFsdWUiOiJIblpFTnZIcHVtUjNlXC85Z1NhQVNFdnl3UkYxM0lBSTNoNlNRN3VwcDlOTDY0bmJ2Z2pvVFcyVVFMYmJ6TjNhT0N6T1Y1RkRrZmVDOHRxR3VhUGpRNGc9PSIsIm1hYyI6IjE3ODc1OTBjODNmYzUzOWUzZmJjYzZiNTUwYzhjMjQ5NDlkOWIwMTYzNTUzNGFhYzk1YzhiMDNlMzZlMGY3NjIifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:45 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6Ik5cL0g1akZDNmdZRWtZN05aZElSUWE3dEViWUUwdk1MNENMR3ZYazNmZHZVPSIsInZhbHVlIjoicWVubHIyM29GTlM2V0ZLQTFyNUljMEVpaW95aGpjNUNFRkZHbDJKUHNDbjNIVlZjK2JsOFR5S09UbmlyeDluSVZuSXhXWFF1MUtUdjVxRVdFejVEMXc9PSIsIm1hYyI6IjE2ZTQxOWJkYTcwYzQxZjNmNDIxZTM4YTk2ZGQ0MDVjNTk1YThkNjQzYzNiYTlkYjU3ODA3MGY2NGYxZDRiNWUifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:31:09 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311820,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"28","name":"Human
@@ -10439,7 +10439,7 @@ http_interactions:
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:45 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:09 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311821
@@ -10461,7 +10461,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:46 GMT
+      - Wed, 02 Dec 2015 17:31:09 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -10481,8 +10481,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6Ikh0bG1waTJjaUM5TktrcldPYU1CeEhiRWR1eGhBcDJwaFQ2dlVrYnRHaDA9IiwidmFsdWUiOiJvTTFEcXNjVGl0WXpUbTJGbjRORE41SGhcL01yRUtJR2lITlwvem5EK254N2tpWGxCTTFoV09pTVpTYTR5OTZRUmVQV1BidG85RlVjbTdxQkpGeCtmYUtnPT0iLCJtYWMiOiJiMTExYjM3ZTUwMWYxN2ViNmYyNDljZTUwM2RkYWUwOWM0YjBiZGM2MDE5YjBjNTE0ZGIyYmQ0ZWM2MDdkOGE0In0%3D;
-        expires=Tue, 01-Dec-2015 23:32:46 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6ImxWZjQrYXJocThLU3J0SjV0S2NaTUNjNGZiUk9FZ0JDRHRqK1Rra3NFYmM9IiwidmFsdWUiOiI2TjNvWVhlT1ptK3NReVdIODJqUkVDc0lpM1dcL2RvbmZsazFVYlF2eXZBWldpRVFKN0JZMFZDYzlzTW5WUnBZUCtSVFwvTW1SaDdoN0tZU3ZoZ2QxVHBBPT0iLCJtYWMiOiJmYWZjNzc3YjVkMGVhNWNkZGIwYTBkZDc3OTQyNTNmNzBiZmEzZmI1OWJlOTAxNDc3ZTU2MWNlNjc3NjBlMTliIn0%3D;
+        expires=Wed, 02-Dec-2015 19:31:09 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311821,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"29","name":"Development","config":[{"label":"READ
@@ -10801,7 +10801,7 @@ http_interactions:
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:46 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:09 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311822
@@ -10823,7 +10823,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:46 GMT
+      - Wed, 02 Dec 2015 17:31:10 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -10843,8 +10843,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IkE5NUVjUmZNMGpGUEtGZEt5TnBnNTFLb0VaYWRJeTNDSEMzTFdlMkR6aDA9IiwidmFsdWUiOiJ6b2lDTEFsNU5kY3FXN2s0SUlTRm5XUTJtV2hVNGlncWdPSDZQeFlcL05Na3I5dE9DbWJTZmlYY01PakN3QW5EXC9TNGNrbEVGZ09WUXhlQm9YMUQ5eU53PT0iLCJtYWMiOiJiOTgzN2ExZDM4MzI4ODUzZjEyMjc2NmZlZDI0ZTE2ZTAxNzg5NDQ5NjI0MDc1MzZlMzg2YzA1MDE1YWFiNzQ2In0%3D;
-        expires=Tue, 01-Dec-2015 23:32:46 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IkJsYlwvVXVjSXQyNmowQUFsT0NXMmdGemdPN1EzSTZiR212STdwM1hTRnVZPSIsInZhbHVlIjoiRUNCenpNY25aNHExTWx5MEFCU1R0OHFsMjlhRUwxNDdZaEZJazRLa3dKVXVmVVN3WE1SUk5SRWxNaThETGNNU2RxUHlFXC8wVTFvQVJBZXR5dUhQbWFnPT0iLCJtYWMiOiJlMGI2YTk3OTY1MDE5Nzg4MWFlNjdmODZjNzJhZWU4MTA3NmE4MzhmMTgyZDE2OWNmMmU3OTBjNjUyMTA2MjcwIn0%3D;
+        expires=Wed, 02-Dec-2015 19:31:10 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311822,"project_id":57459,"parent_id":0,"template_id":243138,"custom_state_id":241859,"position":"30","name":"Collections
@@ -11163,7 +11163,7 @@ http_interactions:
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:34.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:46 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:10 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311823
@@ -11185,7 +11185,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:47 GMT
+      - Wed, 02 Dec 2015 17:31:10 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -11205,8 +11205,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6ImQxR3BzdmM3SzE4dHFDK0xKa1RZWG5HaXlMdlZqWlBqekxISVJQbXBuU3c9IiwidmFsdWUiOiJqK3BVcmo2WnJta1pvK0ZhaVlLR2FpdGVUeHJWamppT1Q2NGc0cnhVYzNtQzhYQk1JTE5WQWVKRVwvTGM2WmNSbHJ1YWZxeUE4Wk8zMjBEcEFtbHJNSGc9PSIsIm1hYyI6IjViMTRjNTRhY2NmZGQyMjRlNjZkOTVkNzEzNzkzZmU3ODhiNzk2ZTRjNDBmZmJlNWE2MDE1YWEzM2RmYzEyMDIifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:47 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IjFZcGZKcG1iM2VWMkQrVys0Z3NtSU9SQWJ1T3pKM0xKNE1DSXNlaEw3XC9vPSIsInZhbHVlIjoicEc0STE2MGN3RXJpdE1FTVRMdUhhQ3lHOUZXS2VoTmJBUlF4M1M1TTRGM2JTNUZFVUg1UHlMY2RGZ0JNMFdPRU5RSWp6bzJEZVBsSXRxaDd1V1pYc1E9PSIsIm1hYyI6IjFkZjQ2ZWM2M2MzOTBjMzA4MTg1ZWI2NzA3NzhiNDZlNjIwZDYzM2E3ODBlYTI3N2RiMmE0ZGI3ZDMxMGM4ZGQifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:31:10 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311823,"project_id":57459,"parent_id":2311822,"template_id":243138,"custom_state_id":241859,"position":"31","name":"Humanities
@@ -11525,7 +11525,7 @@ http_interactions:
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:47 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:10 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311824
@@ -11547,7 +11547,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:47 GMT
+      - Wed, 02 Dec 2015 17:31:11 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -11567,8 +11567,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6Im9NUDQ0ZnA2QmZJZ2JCWm4wbzZjWDllejNBR3VhMzdnUTB0QXg3eVZ5RTQ9IiwidmFsdWUiOiJ2NExHNzZRWSswRXBraWUzTlNuZTdYUUxTREFBa1o3OFYyUm5kVDNRZlZrdjZmVTdxUUZYbVVhendQczBcL1V6dFZtTTVwbTJNOVpZWm5ZR2pXenlFU1E9PSIsIm1hYyI6Ijk1M2I4ZjUyMTc1YWYwYmMxNzQ5YjdmYjVmMGM1NDRlYjdmOWFiY2U1NmJiYmQ3MDViODE0ZGIyODVjMDAxYWUifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:47 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IitTb3E4NTFZZFwvOVVlb3N6d2x6dElhMVlRamJOaCtpak5reGV3d3NcLzNXQT0iLCJ2YWx1ZSI6IlhpNFhxK1BUUDlzRzhuNndMdm5LY1VHNVpiNnQ2YjY4ZU03ZzhCY3RGeFdjb1hpaCtVd1RWSTJXK1NBVVhackEwSUdcL0Fadld5WUswSDVNYlJqZ3VZZz09IiwibWFjIjoiYjgzN2FjZTVkMjRiZDE3ZTBmNmMzZTI5NGIxMzRhMjVkMTk0OTFiZTQyOTA3MTJjMzUzNzA2Mjg5MGM1ZTNhMyJ9;
+        expires=Wed, 02-Dec-2015 19:31:11 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311824,"project_id":57459,"parent_id":2311822,"template_id":243138,"custom_state_id":241859,"position":"32","name":"Institute
@@ -11887,7 +11887,7 @@ http_interactions:
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:47 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:11 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311825
@@ -11909,7 +11909,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:48 GMT
+      - Wed, 02 Dec 2015 17:31:11 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -11929,8 +11929,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6InFcLzBMbWJ4N2d4dlFQTXhBZGhqYnFUNWlGYXc4eWZWQ3lmbHlrMFByQ3g4PSIsInZhbHVlIjoiS2RycW1nNFwvVE9adjFUUEdKdjM4Y2xcL2dwWFdvcTVWZ05DOWxWY2F2VjJTMnlJQ3JtOTZBRWZwc1hWcEczY1wvbDRvK25adGlKS29Bd05PWmM5cmhrUlE9PSIsIm1hYyI6IjkyOWQ5YzEwMjFmMmRmYzg1ODQ0OTZhMjRhZTlkNzc1NzFmODkwMWI0YzBkZjY3MmU5ZTAzZjU3ZGQ0N2FlZjYifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:48 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6InF0YXVsK1wvb2hqXC82STQ3Y1NaUXhPTWZ1UXZ0cW9TTHJTMGloMHppSytUZz0iLCJ2YWx1ZSI6IjhJWVFNd0t0dUxkRHFzRmZmYng5Y3dxT0JCTG80M1p1cythNElJb0JObUJFWnV6VCtpcHluZjlHOEMySmhMRTFmK29URm5aZEZcLzdHMzZKMFI1TWpWdz09IiwibWFjIjoiY2ZlYTliYTQ5YmVkMjY0MDBjOTYwZDcwZGJiNGFiNzBmNjc0MDQ0ZWY0MzdiNWMyNmJiNGYyZDhmODlkNTEyOSJ9;
+        expires=Wed, 02-Dec-2015 19:31:11 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311825,"project_id":57459,"parent_id":2311822,"template_id":243138,"custom_state_id":241859,"position":"33","name":"Courant
@@ -12249,7 +12249,7 @@ http_interactions:
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:48 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:11 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311826
@@ -12271,7 +12271,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:48 GMT
+      - Wed, 02 Dec 2015 17:31:12 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -12281,7 +12281,7 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Powered-By:
-      - PHP/5.5.26-1+deb.sury.org~precise+1
+      - PHP/5.5.23-1+deb.sury.org~precise+2
       Cache-Control:
       - private, must-revalidate
       Pragma:
@@ -12291,8 +12291,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6InQ5SmJITVBOXC85QVwvYmptV0dFUUJwSXFvYzFPMGdyeTZkTWN0Z1J1aVAzZz0iLCJ2YWx1ZSI6IkowZUNXM3BwWVFIR3NlVnFYSndwMU9PVkE2ZFBcL0lZbkxCZG9lOEM0ZVFKUVR0S2dmaFREYXVMaUt6U3VKUG9UN3ZJcmpRUFdcL1pTUzNoR25wZnR4TkE9PSIsIm1hYyI6IjE4YTk5ZGE5ZjM0MWNjMjgwZGJhNzAzY2Y1Nzk5ZGRkZDdmYmFiZDllNTI4MGEyNGQxYjA2Yjc3YWRiZmU3NTQifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:48 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6InV3cWdXSEhcLzhzb1VVZ0lVSUl1MU1IXC84bWJSWGtRV012OWZDSGtaNEd3OD0iLCJ2YWx1ZSI6IlRNeXBHRVZmWEdzcnRrazJXNVp3WWxWdW9HOUZveWlLWW10VDNqZlJiWW1DMlFIaHlyXC9teGZscjlWUU5VXC9zTXBSSjE5emFcL1J4M3RmZURvdytYNVlRPT0iLCJtYWMiOiI0NjQyYWUzOWU1MDE1ZDhhYzcyNmM0NWQ5ZTJmYzA1NWE1NjBkMGEzYjkxN2QyZDdkYTdlYzA4NTdmMDRjYTNlIn0%3D;
+        expires=Wed, 02-Dec-2015 19:31:12 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311826,"project_id":57459,"parent_id":2311822,"template_id":243138,"custom_state_id":241859,"position":"34","name":"Digital
@@ -12611,7 +12611,7 @@ http_interactions:
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:48 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:12 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311827
@@ -12633,7 +12633,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:49 GMT
+      - Wed, 02 Dec 2015 17:31:12 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -12653,8 +12653,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6ImpcL0hMTmVGZVBrTFBPUFRZVk1TRWZsUXpXakNwOGZGOUF1NHJlSmJwNmhFPSIsInZhbHVlIjoiWnlTN0ZQWjlPbUtSQ1VaKzNSY20yT3RoaFk2dWVSZm92QkN4WWE3ektvNUpJR2dZeHVUQ0FpdE5xRmRyeG9RWFpMeE1wcDBuM2hWa1pFUTZFbWpYR2c9PSIsIm1hYyI6ImEwY2M4MmI2NmUxOWU3ZTM0ZWZlOThhMjVkNzY0YTJlNTE1NWJmN2Q5OTNkYzJjM2YxZmMxNTEyOTNkNTIyZmMifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:49 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IjNoZ3hNYkpEcHZzRTVibzM2eklPd1daZDd6YlplQjJzd1lCZmVWQytHSUU9IiwidmFsdWUiOiJLRStkM0VzMXVYdlwvM0k1YjQ1bXIycWE5NWhhbWg3OVBLYnhiMzlTYmE1VW1wMGp6QnoycW1TMVBIejd3ZXNKc1MzODI4eWswTEdaOXBXQXRjQXppZ3c9PSIsIm1hYyI6IjlhY2IyYTQwMTE0MjNhODU2YmQ3NGQ4ODlhMmI2ZTAwYmJhMzYxZGNmOTA1MzAxNTM5Mzg0MTdhNzY0ZDBlMGQifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:31:12 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311827,"project_id":57459,"parent_id":2311822,"template_id":243138,"custom_state_id":241859,"position":"35","name":"Preservation","config":[{"label":"READ
@@ -12973,7 +12973,7 @@ http_interactions:
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:49 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:12 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311828
@@ -12995,7 +12995,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:49 GMT
+      - Wed, 02 Dec 2015 17:31:13 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -13015,8 +13015,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6ImJFbENXU3poR0dTeUhwQndMVUZrWncwcEtlV1BcL05iT05PRU1QVzcwalVZPSIsInZhbHVlIjoiTk1YSnhteWordXJOSFdYWE5QcFhIbkRhemp3MW53S0hcLzdUOTZQeW53NG1KWHNwTkVMRkFiVVRmcWdPT2psXC9ubVNjSXJoQ0d5QkxTQ3dqY2UzU0ExUT09IiwibWFjIjoiNjRlMTgzMTZlNDIwZjQzZjVkNGY4NDc5ODI3Y2ZhNDY4MWY1NjY4MzcyMTM4ZGRkZmFiMjA5ZjU0ZDQ0NTUxOCJ9;
-        expires=Tue, 01-Dec-2015 23:32:49 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6Im5HTmQyYnhwTjZxbDd5eFwvZnc0UE1QQnNKa2IxTW9wNHFGR0VEY2VCYWtFPSIsInZhbHVlIjoiM3R0RkJBK3RcL2NwZVZMRmkrT2owakFpRkJLS1VrRTJKekdFUlhoZjlhYzFUXC9zVmdwOVNIc2F5UzdCT1hGTm5Kb21iUmNzZ1UrVjRUWTJzWGcxZVpvQT09IiwibWFjIjoiMWU3Y2YzZWEwYzA5NDdkNDFhOTA3ZWUwMWYzNWE0ZDZmNzViYzg2MzZkNGU0ZDhhMzBlYjUxZTllMDZhZjdmOCJ9;
+        expires=Wed, 02-Dec-2015 19:31:13 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311828,"project_id":57459,"parent_id":2311822,"template_id":243138,"custom_state_id":241859,"position":"36","name":"Fales","config":[{"label":"READ
@@ -13335,7 +13335,7 @@ http_interactions:
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:49 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:13 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311829
@@ -13357,7 +13357,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:50 GMT
+      - Wed, 02 Dec 2015 17:31:13 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -13377,8 +13377,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6InFjbjJwbFwvbFhzand5bE9BOHlMY2RqeHpTNHI1UU9jM3RtelBnTXhsWGpBPSIsInZhbHVlIjoiY3ZqekVMNlRBbEV6a0o1VU9uOFZMVnY1M2x1a0VSMjNNMDhxUHVuRDFuN0ZwaDNHb0FGV1I1SlpuTFlaNXAzXC9CdVdRRktVZlV3b2ZVUnNLbm85eFFRPT0iLCJtYWMiOiJmYzExNWFhZmI5MWU3NzU0ZGMxNzUyZDEwMDc5MzZhYTZjZGNhNzlhZjUzMzhkYmVlNjVkNzU4YWYxMTUxNzhmIn0%3D;
-        expires=Tue, 01-Dec-2015 23:32:50 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6Inl2b1FHdGN4RXlMNW5QQk9PS09aVE42UVNBT0N5OHdCVDY3YWdtVGdzVTg9IiwidmFsdWUiOiJPZWl5MlwvRVFlMkpsZ2tnK1V5UTNKRVU2bm1iWjZWUHd0UUtGQ0JOeWxFVTV6K1wveHVSS1IrZ3c3eXJMZ0lYdFNyUXNpeWJPbFB4eU9aSmhwUkEwc1RRPT0iLCJtYWMiOiIwZGU3MTA5OTUwY2FhNzU1MTlkNjViZDVkNzJkY2ViMTc0MTJmNDgwMWYzNmIxYTBkYTc2YmIxN2FiZDE0ZjYwIn0%3D;
+        expires=Wed, 02-Dec-2015 19:31:13 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311829,"project_id":57459,"parent_id":2311822,"template_id":243138,"custom_state_id":241859,"position":"37","name":"Tamiment","config":[{"label":"READ
@@ -13697,7 +13697,7 @@ http_interactions:
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:50 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:13 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311830
@@ -13719,7 +13719,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:50 GMT
+      - Wed, 02 Dec 2015 17:31:14 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -13739,8 +13739,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6InZIOXVUeWZFanZ5V2pwclR6OWFLbjZQMGw2cmdrWWpDR1J5eTBVcjVsbUk9IiwidmFsdWUiOiJ2bGJRQmVEN0FMeVcyZGp2TytoOVAxbVwvTG9OeGpnUkRUNlB1Z0ZkU0lGajhab094ZnFEQ0ZLbEZEVytWY2Vuc2xLbnhUWkZheU9UcWRjYm5La1YrTnc9PSIsIm1hYyI6IjMyZDhmMmQ0MjEyMTk2ZjZiYjZkYmM2ZGVlYTk1ZWZmZTZiNDVlMDhmNDYyYTc0YzcyMjk2NGE0YjJkMzU0MTIifQ%3D%3D;
-        expires=Tue, 01-Dec-2015 23:32:50 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6InJFZEQzWEJsUVwvVElyem1DY3VncFBMdVwvSnVjNStFSnZsZDJpV1VHWUpHOD0iLCJ2YWx1ZSI6IlkxZWJUbnFjQ2JZbUN4TlE0U1c5TU1jb0ppclF4RjNNSFBTN2xUeTJsYnprUHNNQkp4YytTKzdzTUZhVVQ0aVwvSG1iYkNONGtBVCs3Y3pKbFFUVENZQT09IiwibWFjIjoiZjFhZjQwMDg0MTc0NTUxNGU3MGQ4MWY4MTBhM2ZiYmYyOWQ4NWRkMzNlMTFjOTk0OWU1MGIxMGFhNzJkZmM5MSJ9;
+        expires=Wed, 02-Dec-2015 19:31:14 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311830,"project_id":57459,"parent_id":2311822,"template_id":243138,"custom_state_id":241859,"position":"38","name":"University
@@ -14059,7 +14059,7 @@ http_interactions:
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:35.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:50 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:14 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311831
@@ -14081,7 +14081,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:51 GMT
+      - Wed, 02 Dec 2015 17:31:14 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -14101,8 +14101,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6Imh5c1lYXC9mQVY2cmFHa3JiRW9NdGFhMTJpU1ltdDlrenBFWWk4bkpVa0hJPSIsInZhbHVlIjoiR3hBRWhjeTJXVXRHQVZJRVliYkc5cVVcL3ZCZDNObnpcL294d0FoS1M3bk53cUs2S25yMnE0Q1pXWkpHZ3lPdWd3cGJqSE1TeWpDb3NzNjhKU0JlOXExUT09IiwibWFjIjoiZmE1ZTMwZmYwMzI5MDdkMjE3ZTI5YzhiNzFlMDczNGRiMzE3OTE0YTRkMGU4NTg0NjVkOGNmZTc0ZmMzMWFmNSJ9;
-        expires=Tue, 01-Dec-2015 23:32:51 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6Im5JRmNcL0ZSMTBMRzBDc0diM09nUnIyMmQ1TlBHMUtaQlNQaXZ2eTZXaWlzPSIsInZhbHVlIjoiOTROTTVjWEJHRHlcL2JEbEY4XC9iblhQcXdQQUhJUTlnQnhENzR1d0pGaDJja2U3ZUJGQUhJQ1BlVEltTDAxNmpuK1BEV1lvVVl6NEVcL2V1UEpIc2NXeHc9PSIsIm1hYyI6IjgyODgzOGYzOTE1ZGU2NWZiNGJhMWZiNmY3Y2UzYzg3MmQ5ZWU4NWQxMmQxY2M4YzM2NjNiYzk4ZGZhY2NkNTMifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:31:14 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311831,"project_id":57459,"parent_id":2311822,"template_id":243138,"custom_state_id":241859,"position":"39","name":"Institute
@@ -14421,7 +14421,7 @@ http_interactions:
         18:23:36.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:36.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:51 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:14 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311832
@@ -14443,7 +14443,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:51 GMT
+      - Wed, 02 Dec 2015 17:31:14 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -14463,8 +14463,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6ImRLcW9GRWpIWHErOUpSZ2pha3doMDdDVG9Db0JUaEJaSHlaQWxQSVpZdjA9IiwidmFsdWUiOiJJWUJmS3BOM3pxZUc0UGM0VTVVYWNLVjJpbnVaM0RnMk1GYWlkWDN6aEc5SlY1OG41MGFvNHM3RVErakNVYlFCUlpMdlRDcE1lQ0hUVkMzWk4zVlAwZz09IiwibWFjIjoiYjA4Y2E4NTM3ODk5YzQ0ZmI2MmQ1NGYyNTQ3MzAxMWFhNGJjMDcxN2QyOGYyN2QzMWE5MzlhMzY5ZjljZjk4ZCJ9;
-        expires=Tue, 01-Dec-2015 23:32:51 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6InlWNzEzUmoyNkdrYVZJaFpPeWdXZUg3Z3FaQ0tNZys1YTFOXC9xUElMWlNVPSIsInZhbHVlIjoidFVuQzB5ZnVDY3Fja004OEo5TGMzbE5QR29YUmYzcDNNakRRXC8ybkxncHZucldTUGRLRmRkbFFzdWtnVHdpUVZxSkdYempZTXcwa3FreUtLOU5QU1ZnPT0iLCJtYWMiOiJiOGU2YjE0Y2Y5ZGI4MzhlZjYxNzgzNDIzMzZiOGNmM2JkNDgxNzhhMTc5NzdhMDRmMGYzYmVhYzk4NzU4YjdhIn0%3D;
+        expires=Wed, 02-Dec-2015 19:31:14 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311832,"project_id":57459,"parent_id":2311822,"template_id":243138,"custom_state_id":241859,"position":"40","name":"Data
@@ -14783,7 +14783,7 @@ http_interactions:
         18:23:36.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:36.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:51 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:14 GMT
 - request:
     method: get
     uri: https://api-id:api-key@api.gathercontent.com/items/2311833
@@ -14805,7 +14805,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:52 GMT
+      - Wed, 02 Dec 2015 17:31:15 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -14825,8 +14825,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IlwvU214Q2pQcnZyK3JIOTZDc21VcnZxZWRWZjAxSjQyd0o4N0xVMTRZOUdzPSIsInZhbHVlIjoiaHBXR3l5a3B4RmMrTDIxSHh1SWVTTUV5RVwvZlI3emM0TU9KQ0ZEbXJFVm44bWRRV3orVkNlbGd3N0F3MjhFNUVNMDB0V0ZwMU1zYlFtREh5VXVLR0tBPT0iLCJtYWMiOiJjNzE4N2IxYjZkOWNmZmE0MjhmNDhmMTA3YWJlYjhmZDk5ZmUyOGY1NWQwYWYzODBhMmNjMTBkYTY3NTk3OTAzIn0%3D;
-        expires=Tue, 01-Dec-2015 23:32:52 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6IkxBamJEOGlJbW1ZYVZcL01OUHhnWXQ1c2VCcnVuTVwvN3FTSkNZU0Z2V3VLRT0iLCJ2YWx1ZSI6IlBMd1wveEFnZDBkWkJrR1V0TzhBTTRXc2xZT3pwUVZpb0ZGTzJrNVBPVnRLa0loMFVvYzNlTDA1WER5S1ZhZUFVR0p6K0FneHQ4c0p1MU05R1I4QkNQZz09IiwibWFjIjoiZmJlMThjZDk5ZWRmNDYwZTI5NjUwZWQzY2EzZDI5MzA3OTUyNTdkZWNjNWE2ZjBmMjI5MDAzNTBjZWM1MGFjOCJ9;
+        expires=Wed, 02-Dec-2015 19:31:15 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2311833,"project_id":57459,"parent_id":2311822,"template_id":243138,"custom_state_id":241859,"position":"41","name":"Science
@@ -15145,5 +15145,5 @@ http_interactions:
         18:23:36.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-11-30
         18:23:36.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241859","is_default":true,"position":"1","color":"#C5C5C5","name":"Draft","description":"","can_edit":true}},"due_dates":{"data":[]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:52 GMT
+  recorded_at: Wed, 02 Dec 2015 17:31:15 GMT
 recorded_with: VCR 2.9.3

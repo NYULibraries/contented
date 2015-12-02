@@ -152,7 +152,7 @@ module GatherContent
           return format_search_results(search)
         end
       rescue NoMethodError
-        return ''
+        return nil
       end
 
       # The format is so ugly, so make various arbitrary decisions about it

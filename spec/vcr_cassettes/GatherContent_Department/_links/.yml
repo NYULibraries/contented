@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.2.6
       Date:
-      - Tue, 01 Dec 2015 21:32:29 GMT
+      - Wed, 02 Dec 2015 17:30:53 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -41,8 +41,8 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       Set-Cookie:
-      - laravel_session=eyJpdiI6IjQwYnc4bW5Ia0lXWFY0S1AyMW9yckI3YWZpVGZtMlpzejluTWJCWVhlTjQ9IiwidmFsdWUiOiJDTTkwaTI1bklIeWRoXC9RSXJkQzVLSFUralJSOUNseXJIclE2a3pOYit0cFkxNWdpRzFvN1p6akIrNnFsbmNialVpeG9hSTRZc01XZ2dzSlwvU1pMeldBPT0iLCJtYWMiOiIxYTY2NGZiOTMyZjY0YjIxY2Y4MWE2YTQyMjE3ZGI1YTY5YTc0YmVjY2I3ZTk1MTE4NTFlODk5MjU1NmQ1NGVjIn0%3D;
-        expires=Tue, 01-Dec-2015 23:32:29 GMT; Max-Age=7200; path=/; httponly
+      - laravel_session=eyJpdiI6ImpDamozRllZbDlVa1hNQUFHSXZhNkQyRmNoUThhQkRmV1l1UDZYR21qK2c9IiwidmFsdWUiOiIzZG9nVjRQRzVNc2NFWmFtSWVVV1NWbXdLRldUelRQVmJleURIeERFSVo1UG9XXC9RZFwvcGVDZ0lES2ZoRFJVYlRwVGV1ZWdXcEVcL1l4RTBmTDRQcnpZZz09IiwibWFjIjoiNzRmOGJmNjBkNDZkYWEzMzgxNzcwYzljNWU2NGMwODRiZWU3ZTA1OGMyNGJhYjc0MTBiYzJlZDA2N2Y0N2M5YSJ9;
+        expires=Wed, 02-Dec-2015 19:30:53 GMT; Max-Age=7200; path=/; httponly
     body:
       encoding: UTF-8
       string: '{"data":{"id":2027930,"project_id":57459,"parent_id":2186086,"template_id":243138,"custom_state_id":241861,"position":"7","name":"Web
@@ -368,5 +368,5 @@ http_interactions:
         22:00:00.000000","timezone_type":3,"timezone":"UTC"}},{"status_id":241861,"overdue":true,"due_date":{"date":"2015-10-12
         22:00:00.000000","timezone_type":3,"timezone":"UTC"}}]}}}'
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 21:32:29 GMT
+  recorded_at: Wed, 02 Dec 2015 17:30:53 GMT
 recorded_with: VCR 2.9.3

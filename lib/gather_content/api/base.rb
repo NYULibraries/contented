@@ -1,9 +1,6 @@
 module GatherContent
   module Api
     class Base
-      API_KEY = 'e11feb3e-b97c-4d55-a638-5759dd0b15ce'
-      USERNAME = 'ba36@nyu.edu'
-      API_HOST = 'https://api.gathercontent.com'
 
       def initialize
         raise RuntimeError, "Cannot initialize this interface!"
@@ -30,10 +27,10 @@ module GatherContent
     private
 
       def connection
-        @connection ||= Faraday.new(url: "#{API_HOST}:443") do |faraday|
+        @connection ||= Faraday.new(url: "#{ENV['gather_content_api_host']}:443") do |faraday|
           faraday.request  :url_encoded
-          faraday.request  :basic_auth, USERNAME, API_KEY
-          faraday.response :logger
+          faraday.request  :basic_auth, ENV['gather_content_api_username'], ENV['gather_content_api_key']
+          # faraday.response :logger
           faraday.adapter  Faraday.default_adapter
         end
       end
