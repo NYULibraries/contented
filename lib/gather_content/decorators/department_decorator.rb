@@ -12,14 +12,6 @@ module GatherContent
         @department = department
       end
 
-      def filename
-        if title
-          title.downcase.gsub(/\s/,'-')
-        else
-          "department_#{Time.now.strftime('%Y%m%d%H%M%S')}"
-        end
-      end
-
       def title
         @title ||= find_element_by(section: :contact_info, type: 'choice_radio', label: 'Department Name')
       end
@@ -46,7 +38,9 @@ module GatherContent
           space_array << area_name unless area_name.nil?
           space_array << "#{floor} #{cardinal_direction}" unless [floor, cardinal_direction].all? {|e| e.nil?}
         end
-        return @space.join(", ") unless space_array.empty?
+        return @space.join(", ") unless @space.empty?
+      rescue NoMethodError
+        nil
       end
 
       def email
@@ -66,8 +60,10 @@ module GatherContent
       def blog
         @blog ||= begin
           raw = find_element_by(section: :social_media, type: 'text', label: 'Blog')
-          raw.gsub(/&nbsp;/,'').split(/\n/).map {|part| part.split(/: /) }.map {|key, value| [key.to_sym, value] }.to_h
+          raw.gsub(/'/,'').gsub(/&nbsp;/,'').split(/\n/).map {|part| part.split(/: /) }.map {|key, value| [key.to_sym, value] }.to_h
         end
+      rescue NoMethodError
+        nil
       end
 
       def libcal_id
@@ -113,8 +109,8 @@ module GatherContent
 
       def quick_link(label)
         raw = find_element_by(section: :links, type: 'text', label: label)
-        title, url = raw.split(': ')
-        return { "#{title}" => url.gsub("'",'') } if title && url
+        title, url = raw.split(': ') unless raw.nil?
+        (title && url) ? { "#{title}" => url.gsub("'",'') } : {}
       end
 
       def room

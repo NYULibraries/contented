@@ -3,7 +3,6 @@ module GatherContent
     ATTRIBUTES = [:title, :location, :space, :email, :phone, :twitter, :facebook, :blog,
                   :subtitle, :classes, :keywords, :links, :libcal_id, :libanswers_id, :buttons, :body]
     attr_reader *ATTRIBUTES
-    attr_accessor :filename
 
     def initialize(item_id)
       super(item_id)
@@ -11,7 +10,7 @@ module GatherContent
     end
 
     extend Forwardable
-    def_delegators :@department_decorator, *ATTRIBUTES, :filename
+    def_delegators :@department_decorator, *ATTRIBUTES
 
     def to_markdown
       to_markdown = ["---"]
@@ -26,7 +25,23 @@ module GatherContent
     end
     alias_method :to_md, :to_markdown
 
+    def filename
+      if title
+        title.downcase.gsub(/\s/,'-').gsub(/&amp;/,'and').gsub(/,/,'')
+      else
+        "department_#{Time.now.strftime('%Y%m%d%H%M%S')}"
+      end
+    end
+
+    def published?
+      status == "Final edits"
+    end
+
   private
+
+    def status
+      self.get_item["data"]["status"]["data"]["name"]
+    end
 
     def convert_to_markdown(hash_name)
       convert_to_markdown = ["#{hash_name}:"]
