@@ -17,15 +17,15 @@ describe GatherContent::Department, vcr: true do
   end
   describe '#space' do
     subject { department.space }
-    it { is_expected.to be_empty }
+    it { is_expected.to be_nil }
   end
   describe '#email' do
     subject { department.email }
-    it { is_expected.to be_empty }
+    it { is_expected.to be_nil }
   end
   describe '#phone' do
     subject { department.phone }
-    it { is_expected.to be_empty  }
+    it { is_expected.to be_nil  }
   end
   describe '#twitter' do
     subject { department.twitter }
@@ -33,7 +33,7 @@ describe GatherContent::Department, vcr: true do
   end
   describe '#facebook' do
     subject { department.facebook }
-    it { is_expected.to be_empty  }
+    it { is_expected.to be_nil  }
   end
   describe '#blog' do
     subject { department.blog }
@@ -41,11 +41,11 @@ describe GatherContent::Department, vcr: true do
   end
   describe '#libcal_id' do
     subject { department.libcal_id }
-    it { is_expected.to be_empty  }
+    it { is_expected.to be_nil  }
   end
   describe '#libanswers_id' do
     subject { department.libanswers_id }
-    it { is_expected.to be_empty  }
+    it { is_expected.to be_nil  }
   end
   describe '#links' do
     subject { department.links }
@@ -55,10 +55,15 @@ describe GatherContent::Department, vcr: true do
   end
   describe '#buttons' do
     subject { department.buttons }
-    it { is_expected.to be_empty }
+    it { is_expected.to be_nil }
+  end
+  describe '#filename' do
+    subject { department.filename }
+    it { is_expected.to eql 'web-services' }
   end
   describe '#to_markdown' do
     subject { department.to_markdown }
     it { is_expected.to be_a String }
+    it { is_expected.to eql "---\ntitle: Web Services\nlocation: Elmer Holmes Bobst Library\nspace: \nemail: \nphone: \ntwitter: libtechnyu\nfacebook: \nsubtitle: \nclasses: \nkeywords: \nlibcal_id: \nlibanswers_id: \nblog:\n\ttitle: 'libtechnyu Blog'\n\tlink: 'http://web1.library.nyu.edu/libtechnyu/'\n\trss: 'http://web1.library.nyu.edu/libtechnyu/atom.xml'\nbuttons:\nlinks:\n\t@NYULibraries on GitHub: https://github.com/NYULibraries\n\tlibtechnyu Blog: http://web1.library.nyu.edu/libtechnyu/\n\tThe Agile Manifesto: http://agilemanifesto.org/\n---\n\n# What We Do\n\nWe provide administrative management and technical support for the Libraries’ website and BobCat, its primary discovery interface. We also develop and maintain web-based services and special projects." }
   end
 end

@@ -1,8 +1,9 @@
 module GatherContent
   class Department < Api::Item
-    ATTRIBUTES = [:filename, :title, :location, :space, :email, :phone, :twitter, :facebook, :blog,
+    ATTRIBUTES = [:title, :location, :space, :email, :phone, :twitter, :facebook, :blog,
                   :subtitle, :classes, :keywords, :links, :libcal_id, :libanswers_id, :buttons, :body]
     attr_reader *ATTRIBUTES
+    attr_accessor :filename
 
     def initialize(item_id)
       super(item_id)
@@ -10,7 +11,7 @@ module GatherContent
     end
 
     extend Forwardable
-    def_delegators :@department_decorator, *ATTRIBUTES
+    def_delegators :@department_decorator, *ATTRIBUTES, :filename
 
     def to_markdown
       to_markdown = ["---"]
@@ -29,8 +30,10 @@ module GatherContent
 
     def convert_to_markdown(hash_name)
       convert_to_markdown = ["#{hash_name}:"]
-      send(hash_name).each_pair do |key, value|
-        convert_to_markdown << "\t#{key}: #{value}"
+      unless send(hash_name).nil?
+        send(hash_name).each_pair do |key, value|
+          convert_to_markdown << "\t#{key}: #{value}"
+        end
       end
       return convert_to_markdown
     end

@@ -13,7 +13,11 @@ module GatherContent
       end
 
       def filename
-        title || "department_#{Date.now.to_s}"
+        if title
+          title.downcase.gsub(/\s/,'-')
+        else
+          "department_#{Time.now.strftime('%Y%m%d%H%M%S')}"
+        end
       end
 
       def title
@@ -38,11 +42,11 @@ module GatherContent
 
       def space(space_array = [])
         @space ||= begin
-          space_array << room unless room == ''
-          space_array << area_name unless area_name == ''
-          space_array << "#{floor} #{cardinal_direction}" unless floor == '' && cardinal_direction == ''
+          space_array << room unless room.nil?
+          space_array << area_name unless area_name.nil?
+          space_array << "#{floor} #{cardinal_direction}" unless [floor, cardinal_direction].all? {|e| e.nil?}
         end
-        (space_array.empty?) ? '' : @space.join(", ")
+        return @space.join(", ") unless space_array.empty?
       end
 
       def email
@@ -71,19 +75,15 @@ module GatherContent
       end
 
       def libanswers_id
-        @libanswers_id ||= ''
       end
 
       def subtitle
-        @subtitle ||= ''
       end
 
       def classes
-        @classes ||= ''
       end
 
       def keywords
-        @keywords ||= ''
       end
 
       def links
@@ -93,7 +93,7 @@ module GatherContent
       def buttons
         @buttons ||= begin
           raw = find_element_by(section: :links, type: 'text', label: 'Form URL or Email address used for appointment requests')
-          (raw.empty? || raw.nil?) ? {} : { "Request an Appointment" => raw }
+          { "Request an Appointment" => raw } unless raw.nil? || raw.empty?
         end
       end
 
@@ -114,7 +114,7 @@ module GatherContent
       def quick_link(label)
         raw = find_element_by(section: :links, type: 'text', label: label)
         title, url = raw.split(': ')
-        (title && url) ? { "#{title}" => url.gsub("'",'') } : {}
+        return { "#{title}" => url.gsub("'",'') } if title && url
       end
 
       def room
@@ -140,16 +140,18 @@ module GatherContent
         raise ArgumentError, "Label is required to find element!" if label.nil?
         type_search = section.first["elements"].select {|element| element["type"] == conditions[:type] && !element["label"].match(/#{label}/).nil? }
         unless type_search.empty?
-          search = case conditions[:type]
-          when 'text'
-            type_search.first["value"]
-          when 'choice_radio'
-            type_search.first["options"].select {|option| option["selected"] == true }.first["label"]
-          when 'choice_checkbox'
-            type_search.first["options"].select {|option| option["selected"] == true }.first["label"]
+          search = begin
+            if conditions[:type] == 'text'
+              type_search.first["value"]
+            else
+              type_search.first["options"].select {|option| option["selected"] == true }.first["label"]
+            end
           end
-          # Strip leading and trailing whitespace and wrapping <p> tags
-          return format_search_results(search)
+          # Return nil if result was empty or whitespace only
+          unless search.empty? || search.match(/^(\s)+$/)
+            # Strip leading and trailing whitespace and wrapping <p> tags
+            return format_search_results(search)
+          end
         end
       rescue NoMethodError
         return nil
