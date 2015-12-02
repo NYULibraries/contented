@@ -4,9 +4,6 @@ module GatherContent
       include Enumerable
       attr_accessor :project_id
 
-      extend Forwardable
-      def_delegators :to_a, :each
-
       def initialize(project_id)
         raise ArgumentError, "Project_id is required!" if project_id.nil?
         @project_id = project_id
@@ -18,6 +15,10 @@ module GatherContent
           items << new_item
         end
         return items
+      end
+
+      def each(&block)
+        self.to_a.each(&block)
       end
 
     protected
