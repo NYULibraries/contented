@@ -1,4 +1,4 @@
-require './lib/convert/convert'
+require './lib/conversion/convert'
 require 'figs'
 Figs.load
 namespace :siteleaf do

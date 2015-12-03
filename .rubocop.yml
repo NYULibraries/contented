@@ -9,4 +9,10 @@
 Metrics/LineLength:
   Max: 174
 
+# Offense count: 4
+Style/ClassVars:
+  Exclude:
+    - 'lib/conversion/collections/people.rb'
+    - 'lib/conversion/collections/people_helpers/person.rb'
+
 
