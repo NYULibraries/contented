@@ -110,7 +110,7 @@ module GatherContent
       def quick_link(label)
         raw = find_element_by(section: :links, type: 'text', label: label)
         title, url = raw.split(': ') unless raw.nil?
-        (title && url) ? { "#{title}" => url.gsub("'",'') } : {}
+        (title && url) ? { "\"#{title}\"" => url.gsub("'",'') } : {}
       end
 
       def room
