@@ -6,14 +6,10 @@ module Conversion
     module PeopleHelpers
       # Parses the person data into the required format.
       class ExpandedPersonExhibitor
-        ATTRIBUTES = [:about, :address, :buttons, :departments, :email, :expertise, :guides, :image,
-                      :jobtitle, :keywords, :location, :netid, :phone, :space, :status, :subtitle,
-                      :title, :twitter, :publications, :employee_id, :last_name, :first_name,
-                      :primary_work_space_address, :work_phone, :email_address, :all_positions_jobs]
-        attr_accessor *ATTRIBUTES
 
         def initialize(expanded_person)
-          ATTRIBUTES.each { |attr| send("#{attr}=", expanded_person.send("#{attr}")) }
+          expanded_person.instance_variables.each { |name|  define_singleton_method("#{name}".delete('@')) { expanded_person.send("#{name}".delete('@')) } }
+          expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').instance_variables.each { |name| define_singleton_method("#{name}".delete('@')) { expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').instance_variable_get("#{name}") } }
         end
 
         def to_markdown
