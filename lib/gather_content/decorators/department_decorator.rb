@@ -89,11 +89,18 @@ module GatherContent
       def buttons
         @buttons ||= begin
           raw = find_element_by(section: :links, type: 'text', label: 'Form URL or Email address used for appointment requests')
-          { "Request an Appointment" => raw } unless raw.nil? || raw.empty?
+          raw = (matches_email?(raw)) ? "mailto:#{raw}" : raw
+          { "Request an Appointment" => "\"#{raw}\"" } unless raw.nil? || raw.empty?
         end
       end
 
     private
+
+      # Very loose regex for seeing if the request appointment field
+      # is actually an email address
+      def matches_email?(str)
+        !str.match(/^(.+)@(.+)\.(.+)$/).nil?
+      end
 
       def quick_link_1
         @quick_link_1 ||= quick_link("Quick Link 1")
