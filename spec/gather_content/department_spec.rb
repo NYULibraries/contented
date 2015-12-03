@@ -49,9 +49,9 @@ describe GatherContent::Department, vcr: true do
   end
   describe '#links' do
     subject { department.links }
-    it { is_expected.to include("@NYULibraries on GitHub"=>"https://github.com/NYULibraries") }
-    it { is_expected.to include("libtechnyu Blog"=>"http://web1.library.nyu.edu/libtechnyu/") }
-    it { is_expected.to include("The Agile Manifesto"=>"http://agilemanifesto.org/") }
+    it { is_expected.to include("\"@NYULibraries on GitHub\""=>"https://github.com/NYULibraries") }
+    it { is_expected.to include("\"libtechnyu Blog\""=>"http://web1.library.nyu.edu/libtechnyu/") }
+    it { is_expected.to include("\"The Agile Manifesto\""=>"http://agilemanifesto.org/") }
   end
   describe '#buttons' do
     subject { department.buttons }
@@ -64,6 +64,6 @@ describe GatherContent::Department, vcr: true do
   describe '#to_markdown' do
     subject { department.to_markdown }
     it { is_expected.to be_a String }
-    it { is_expected.to eql "---\ntitle: Web Services\nlocation: Elmer Holmes Bobst Library\nspace: \nemail: \nphone: \ntwitter: libtechnyu\nfacebook: \nsubtitle: \nclasses: \nkeywords: \nlibcal_id: \nlibanswers_id: \nblog:\n\ttitle: libtechnyu Blog\n\tlink: http://web1.library.nyu.edu/libtechnyu/\n\trss: http://web1.library.nyu.edu/libtechnyu/atom.xml\nbuttons:\nlinks:\n\t@NYULibraries on GitHub: https://github.com/NYULibraries\n\tlibtechnyu Blog: http://web1.library.nyu.edu/libtechnyu/\n\tThe Agile Manifesto: http://agilemanifesto.org/\n---\n\n# What We Do\n\nWe provide administrative management and technical support for the Libraries’ website and BobCat, its primary discovery interface. We also develop and maintain web-based services and special projects." }
+    it { is_expected.to eql "---\ntitle: Web Services\nlocation: Elmer Holmes Bobst Library\nspace: \nemail: \nphone: \ntwitter: libtechnyu\nfacebook: \nsubtitle: \nclasses: \nkeywords: \nlibcal_id: \nlibanswers_id: \nblog:\n  title: libtechnyu Blog\n  link: http://web1.library.nyu.edu/libtechnyu/\n  rss: http://web1.library.nyu.edu/libtechnyu/atom.xml\nbuttons:\nlinks:\n  \"@NYULibraries on GitHub\": https://github.com/NYULibraries\n  \"libtechnyu Blog\": http://web1.library.nyu.edu/libtechnyu/\n  \"The Agile Manifesto\": http://agilemanifesto.org/\n---\n\n# What We Do\n\nWe provide administrative management and technical support for the Libraries’ website and BobCat, its primary discovery interface. We also develop and maintain web-based services and special projects." }
   end
 end
