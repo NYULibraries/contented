@@ -35,7 +35,7 @@ private
   end
 
   def departments
-    "departments: '#{person.departments}'"
+    "departments: #{person.departments}"
   end
 
   def status
@@ -43,7 +43,7 @@ private
   end
 
   def expertise
-    "expertise: '#{person.expertise}'"
+    "expertise: #{person.expertise}"
   end
 
   def email
@@ -63,19 +63,19 @@ private
   end
 
   def buttons
-    "buttons: '#{person.buttons}'"
+    "buttons: #{person.buttons}"
   end
 
   def guides
-    "guides: '#{person.guides}'"
+    "guides: #{person.guides}"
   end
 
   def publications
-    "publications: '#{person.publications}'"
+    "publications: #{person.publications}"
   end
 
   def keywords
-    "keywords: '#{person.keywords}'"
+    "keywords: #{person.keywords}"
   end
 
   def title
