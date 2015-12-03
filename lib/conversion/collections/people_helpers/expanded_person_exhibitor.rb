@@ -1,5 +1,6 @@
 require_relative 'expanded_person'
 require_relative '../../helpers/markdown_presenter'
+require_relative 'markdown_field_helpers'
 
 module Conversion
   module Collections
@@ -9,8 +10,8 @@ module Conversion
 
         def initialize(expanded_person)
           @expanded_person = expanded_person
-          @correct_job_position ||= expanded_person.all_positions_jobs.find { |job| job['Is_Primary_Job'] == '1' } || {}
-          city, @location, @space = @correct_job_position['Position_Work_Space'].split('>')
+          @job_position = expanded_person.all_positions_jobs ? expanded_person.all_positions_jobs.find { |job| job['Is_Primary_Job'] == '1' } || {} : {}
+          city, @location, @space = @job_position['Position_Work_Space'].to_s.split('>')
         end
 
         def to_markdown
@@ -26,7 +27,7 @@ module Conversion
         end
 
         def departments
-          @expanded_person.departments.to_s.empty? ? department_formatter(@correct_job_position['Supervisory_Org_Name']) : @expanded_person.departments
+          @expanded_person.departments.to_s.empty? ? department_formatter(@job_position['Supervisory_Org_Name']) : Markdown_Field_Helpers.new.listify(@expanded_person.departments)
         end
 
         def location
@@ -38,7 +39,7 @@ module Conversion
         end
 
         def jobtitle
-          @expanded_person.jobtitle.to_s.empty? ? @correct_job_position['Business_Title'] : @expanded_person.jobtitle
+          @expanded_person.jobtitle.to_s.empty? ? @job_position['Business_Title'].to_s : @expanded_person.jobtitle
         end
 
         def subtitle
@@ -50,7 +51,7 @@ module Conversion
         end
 
         def expertise
-          @expanded_person.expertise
+           Markdown_Field_Helpers.new.listify(@expanded_person.expertise)
         end
 
         def twitter
@@ -62,19 +63,19 @@ module Conversion
         end
 
         def buttons
-          @expanded_person.buttons
+          Markdown_Field_Helpers.new.instancify(@expanded_person.buttons)
         end
 
         def guides
-          @expanded_person.guides
+          Markdown_Field_Helpers.new.instancify(@expanded_person.guides)
         end
 
         def publications
-          @expanded_person.publications
+          Markdown_Field_Helpers.new.instancify(@expanded_person.publications)
         end
 
         def keywords
-          @expanded_person.keywords
+          Markdown_Field_Helpers.new.listify(@expanded_person.keywords)
         end
 
         def title
