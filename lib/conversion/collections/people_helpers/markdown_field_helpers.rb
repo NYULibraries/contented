@@ -3,20 +3,12 @@ module Conversion
     module PeopleHelpers
       # Formats the Markdown fields
       class Markdown_Field_Helpers
-        def strip_spaces_in_between(element, char)
-          element.gsub(/\s+#{char}/, "#{char}").gsub(/#{char}\s+/, "#{char}")
+        def listify(str)
+          "\n#{str.split(';').collect { |d| " -  '#{d.strip!}'" }.join("\n")}" unless str.empty?
         end
 
-        def listify(element)
-          return '' if element.empty?
-          element = strip_spaces_in_between(element, ';') # Replace ; with new line and - for list in Yaml
-          "\n  - '" + element.gsub(';', "'\n  - '") + "'"
-        end
-
-        def instancify(element)
-          return '' if element.empty?
-          element = strip_spaces_in_between(element, ';') # Replace ; with new line and - for list in Yaml
-          "\n  " + element.gsub(';', "\n  ")
+        def instancify(str)
+          "\n#{str.split(';').collect { |d| "  #{d.strip!}" }.join("\n")}" unless str.empty?
         end
       end
     end

@@ -10,8 +10,7 @@ module Conversion
 
         def initialize(expanded_person)
           @expanded_person = expanded_person
-          @job_position = expanded_person.all_positions_jobs ? expanded_person.all_positions_jobs.find { |job| job['Is_Primary_Job'] == '1' } || {} : {}
-          city, @location, @space = @job_position['Position_Work_Space'].to_s.split('>')
+          city, @location, @space = job_position['Position_Work_Space'].to_s.split('>')
         end
 
         def to_markdown
@@ -27,7 +26,7 @@ module Conversion
         end
 
         def departments
-          @expanded_person.departments.to_s.empty? ? department_formatter(@job_position['Supervisory_Org_Name']) : Markdown_Field_Helpers.new.listify(@expanded_person.departments)
+          @expanded_person.departments.to_s.empty? ? department_formatter(job_position['Supervisory_Org_Name']) : Markdown_Field_Helpers.new.listify(@expanded_person.departments)
         end
 
         def location
@@ -39,7 +38,7 @@ module Conversion
         end
 
         def jobtitle
-          @expanded_person.jobtitle.to_s.empty? ? @job_position['Business_Title'].to_s : @expanded_person.jobtitle
+          @expanded_person.jobtitle.to_s.empty? ? job_position['Business_Title'].to_s : @expanded_person.jobtitle
         end
 
         def subtitle
@@ -94,6 +93,14 @@ module Conversion
         # output = 'Department Name'
         def department_formatter(department_name)
           department_name.to_s.split('(')[0].strip
+        end
+
+        def job_position
+          if @expanded_person.all_positions_jobs
+            @job_position ||=  @expanded_person.all_positions_jobs.find { |job| job['Is_Primary_Job'] == '1' } || {}
+          else
+            @job_position ||= {}
+          end
         end
       end
     end
