@@ -8,8 +8,9 @@ module Conversion
       class ExpandedPersonExhibitor
 
         def initialize(expanded_person)
-          expanded_person.instance_variables.each { |name|  define_singleton_method("#{name}".delete('@')) { expanded_person.send("#{name}".delete('@')) } }
-          expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').instance_variables.each { |name| define_singleton_method("#{name}".delete('@')) { expanded_person.instance_variable_get('@GoogleSpreadsheetPerson').instance_variable_get("#{name}") } }
+          @expanded_person = expanded_person
+          @correct_job_position ||= expanded_person.all_positions_jobs.find { |job| job['Is_Primary_Job'] == '1' } || {}
+          city, @location, @space = @correct_job_position['Position_Work_Space'].split('>')
         end
 
         def to_markdown
@@ -17,57 +18,83 @@ module Conversion
         end
 
         def email
-          @email = @email_address if @email.to_s.empty?
+          @expanded_person.email.to_s.empty? ? @expanded_person.email_address.to_s : @expanded_person.email
         end
 
         def phone
-          @phone = phone_formatter(@work_phone) if @phone.to_s.empty?
+         @expanded_person.phone.to_s.empty? ? phone_formatter(@expanded_person.work_phone) : @expanded_person.phone
         end
 
         def departments
-          if @departments.to_s.empty? && correct_job_position && correct_job_position['Supervisory_Org_Name']
-            # Must return anything before the '(' if it exists
-            @departments ||= department_formatter(correct_job_position['Supervisory_Org_Name'])
-          end
-        end
-
-        def location_space
-          if correct_job_position && correct_job_position['Position_Work_Space']
-            city, location, space = correct_job_position['Position_Work_Space'].split('>')
-            @location = location if @location.to_s.empty?
-            @space = space if @space.to_s.empty?
-          end
+          @expanded_person.departments.to_s.empty? ? department_formatter(@correct_job_position['Supervisory_Org_Name']) : @expanded_person.departments
         end
 
         def location
-          location_space
+          @expanded_person.location.to_s.empty? ? @location.to_s : @expanded_person.location
+        end
+
+        def space
+          @expanded_person.space.to_s.empty? ? @space.to_s : @expanded_person.space
         end
 
         def jobtitle
-          if @jobtitle.to_s.empty? && correct_job_position && correct_job_position['Business_Title']
-            @jobtitle = correct_job_position['Business_Title']
-          end
+          @expanded_person.jobtitle.to_s.empty? ? @correct_job_position['Business_Title'].to_s : @expanded_person.jobtitle
+        end
+
+        def subtitle
+          @expanded_person.subtitle.to_s
+        end
+
+        def status
+          @expanded_person.status.to_s
+        end
+
+        def expertise
+          @expanded_person.expertise.to_s
+        end
+
+
+        def twitter
+          @expanded_person.twitter.to_s
+        end
+
+
+        def image
+          @expanded_person.image.to_s
+        end
+
+        def buttons
+          @expanded_person.buttons.to_s
+        end
+
+        def guides
+          @expanded_person.guides.to_s
+        end
+
+        def publications
+          @expanded_person.publications.to_s
+        end
+
+        def keywords
+          @expanded_person.keywords.to_s
+        end
+
+        def title
+          @expanded_person.title.to_s
         end
 
         private
 
+        # input = '+1 (555) 5555555'
+        # output = '(555) 555-5555'
         def phone_formatter(phone_number)
-          # input = '+1 (555) 5555555'
-          # output = '(555) 555-5555'
-          phone_number.delete('+1 ').insert(-5, '-')
+          phone_number.to_s.empty? ? '' : phone_number.delete('+1 ').insert(-5, '-')
         end
 
+        # input = 'Department Name (something)' or 'Department Name'
+        # output = 'Department Name'
         def department_formatter(department_name)
-          # input = 'Department Name (something)' or 'Department Name'
-          # output = 'Department Name'
-          department_name.split('(')[0].strip
-        end
-
-        def correct_job_position
-          @all_positions_jobs.each do |job|
-            @correct_job_position ||= job if job['Is_Primary_Job'] == '1'
-          end
-          @correct_job_position
+          department_name.to_s.split('(')[0].strip
         end
       end
     end
