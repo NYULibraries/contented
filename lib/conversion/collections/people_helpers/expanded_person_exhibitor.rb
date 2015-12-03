@@ -18,7 +18,7 @@ module Conversion
         end
 
         def email
-          @expanded_person.email.to_s.empty? ? @expanded_person.email_address.to_s : @expanded_person.email
+          @expanded_person.email.to_s.empty? ? @expanded_person.email_address : @expanded_person.email
         end
 
         def phone
@@ -30,57 +30,55 @@ module Conversion
         end
 
         def location
-          @expanded_person.location.to_s.empty? ? @location.to_s : @expanded_person.location
+          @expanded_person.location.to_s.empty? ? @location : @expanded_person.location
         end
 
         def space
-          @expanded_person.space.to_s.empty? ? @space.to_s : @expanded_person.space
+          @expanded_person.space.to_s.empty? ? @space : @expanded_person.space
         end
 
         def jobtitle
-          @expanded_person.jobtitle.to_s.empty? ? @correct_job_position['Business_Title'].to_s : @expanded_person.jobtitle
+          @expanded_person.jobtitle.to_s.empty? ? @correct_job_position['Business_Title'] : @expanded_person.jobtitle
         end
 
         def subtitle
-          @expanded_person.subtitle.to_s
+          @expanded_person.subtitle
         end
 
         def status
-          @expanded_person.status.to_s
+          @expanded_person.status
         end
 
         def expertise
-          @expanded_person.expertise.to_s
+          @expanded_person.expertise
         end
-
 
         def twitter
-          @expanded_person.twitter.to_s
+          @expanded_person.twitter
         end
 
-
         def image
-          @expanded_person.image.to_s
+          @expanded_person.image
         end
 
         def buttons
-          @expanded_person.buttons.to_s
+          @expanded_person.buttons
         end
 
         def guides
-          @expanded_person.guides.to_s
+          @expanded_person.guides
         end
 
         def publications
-          @expanded_person.publications.to_s
+          @expanded_person.publications
         end
 
         def keywords
-          @expanded_person.keywords.to_s
+          @expanded_person.keywords
         end
 
         def title
-          @expanded_person.title.to_s
+          @expanded_person.title
         end
 
         private
