@@ -47,7 +47,7 @@ module GatherContent
       convert_to_markdown = ["#{hash_name}:"]
       unless send(hash_name).nil?
         send(hash_name).each_pair do |key, value|
-          convert_to_markdown << "\t#{key}: #{value}"
+          convert_to_markdown << "  #{key}: #{value}"
         end
       end
       return convert_to_markdown
