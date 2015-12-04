@@ -1,5 +1,6 @@
 module GatherContent
   class Department < Api::Item
+    PUBLISHED_STATUS = "Ready for the Web"
     ATTRIBUTES = [:title, :location, :space, :email, :phone, :twitter, :facebook, :blog,
                   :subtitle, :classes, :keywords, :links, :libcal_id, :libanswers_id, :buttons, :body]
     attr_reader *ATTRIBUTES
@@ -34,7 +35,7 @@ module GatherContent
     end
 
     def published?
-      status == "Final edits"
+      status == PUBLISHED_STATUS
     end
 
   private
