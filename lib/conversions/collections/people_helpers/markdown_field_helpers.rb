@@ -1,4 +1,4 @@
-module Conversion
+module Conversions
   module Collections
     module PeopleHelpers
       # Formats the Markdown fields
