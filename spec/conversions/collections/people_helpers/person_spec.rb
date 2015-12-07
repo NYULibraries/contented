@@ -8,7 +8,7 @@ end
 
 describe 'Person' do
   let(:json_data) { "{}" }
-  subject(:person) { Conversion::Collections::PeopleHelpers::Person.new(json_data) }
+  subject(:person) { Conversions::Collections::PeopleHelpers::Person.new(json_data) }
   context "when no JSON formatted data is provided" do
     attributes.each do |attribute|
       it "should not have #{attribute}" do
