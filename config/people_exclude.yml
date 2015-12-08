@@ -1,3 +1,0 @@
-# just add staff members net_id to the array to exclude from the site entirely to this YAML file.
-people_exclude:
-  - rm3155
