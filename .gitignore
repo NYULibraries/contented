@@ -1,29 +1,2 @@
-secret_study.yml
-
-wiki/
-*.wiki
-
 .DS_Store
-
 Gemfile.lock
-
-# This directory is created by rubycrtic
-tmp/
-
-# Folder for simplecov coverage reports
-coverage/
-
-# Mardowns that don't need to be put into GH
-.siteleaf.yml
-.markdown
-
-# jekyll instances
-_site
-site/_site/
-.jekyll-metadata
-.sass-cache
-node_modules
-
-
-# Temporary directory for any sort of siteleaf pushes
-tmp_site/
