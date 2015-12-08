@@ -1,28 +1,11 @@
+#!/usr/bin/env rake
+begin
+  require 'bundler/setup'
+rescue LoadError
+  puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
+end
+Bundler::GemHelper.install_tasks
+
 require 'rspec/core/rake_task'
-require 'rubocop/rake_task'
-
-desc 'Checking Bundler setup'
-begin
-  Bundler.setup
-rescue Bundler::BundlerError => e
-  $stderr.puts e.message
-  $stderr.puts 'Run `bundle install` to install missing gems'
-  exit e.status_code
-  puts 'Run `bundle install` to install missing gems'
-end
-
-desc 'Run Rspec'
-begin
-  RSpec::Core::RakeTask.new :spec
-  task default: :spec
-rescue LoadError
-  puts 'No Rspec available'
-end
-
-desc 'Run RuboCop'
-begin
-  RuboCop::RakeTask.new :rubocop
-  task default: :rubocop
-rescue LoadError
-  puts 'No Rubocop available'
-end
+RSpec::Core::RakeTask.new(:spec)
+task :default => :spec
