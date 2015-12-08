@@ -1,0 +1,2 @@
+module Contented
+end
