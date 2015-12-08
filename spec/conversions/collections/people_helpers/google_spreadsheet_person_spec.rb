@@ -18,10 +18,6 @@ describe 'GooglSpreadsheetPerson' do
       end
     end
 
-    it 'should be able to convert to markdown' do
-      expect(google_spreadsheet_person).to respond_to :to_markdown
-    end
-
     it 'should be a person' do
       expect(google_spreadsheet_person).to be_a_kind_of(Conversions::Collections::PeopleHelpers::Person)
     end
@@ -119,10 +115,6 @@ describe 'GooglSpreadsheetPerson' do
 
     it "should have the #{google_spreadsheet_attributes.size} instance variables" do
       expect(google_spreadsheet_person.instance_variables.size).to eql(google_spreadsheet_attributes.size)
-    end
-
-    it 'should be able to convert to markdown' do
-      expect(google_spreadsheet_person).to respond_to :to_markdown
     end
 
     it 'should be a person' do
