@@ -1,16 +1,22 @@
+require 'forwardable'
 require_relative 'expanded_person'
 require_relative '../../helpers/markdown_presenter'
-require_relative 'markdown_field_helpers'
+require_relative '../../helpers/markdown_field_helpers/markdown_field_helpers'
 
 module Conversions
   module Collections
     module PeopleHelpers
       # Parses the person data into the required format.
       class ExpandedPersonExhibitor
+        extend Forwardable
+        include MarkdownFieldHelpers
+        def_delegators :@expanded_person, :subtitle, :status, :twitter, :twitter, :image, :title
+        attr_reader :expanded_person
 
         def initialize(expanded_person)
           @expanded_person = expanded_person
-          city, @location, @space = job_position['Position_Work_Space'].to_s.split('>')
+          @job_position ||=  @expanded_person.all_positions_jobs.find { |job| job['Is_Primary_Job'] == '1' } || {}
+          city, @location, @space = @job_position['Position_Work_Space'].to_s.split('>')
         end
 
         def to_markdown
@@ -18,67 +24,47 @@ module Conversions
         end
 
         def email
-          @expanded_person.email.to_s.empty? ? @expanded_person.email_address : @expanded_person.email
+          expanded_person.email || expanded_person.email_address
         end
 
         def phone
-         @expanded_person.phone.to_s.empty? ? phone_formatter(@expanded_person.work_phone) : @expanded_person.phone
+         expanded_person.phone || phone_formatter(expanded_person.work_phone)
         end
 
         def departments
-          @expanded_person.departments.to_s.empty? ? department_formatter(job_position['Supervisory_Org_Name']) : Markdown_Field_Helpers.new.listify(@expanded_person.departments)
+          to_yaml_list(expanded_person.departments) || department_formatter(@job_position['Supervisory_Org_Name'])
         end
 
         def location
-          @expanded_person.location.to_s.empty? ? @location : @expanded_person.location
+          expanded_person.location || @location
         end
 
         def space
-          @expanded_person.space.to_s.empty? ? @space : @expanded_person.space
+          expanded_person.space || @space
         end
 
         def jobtitle
-          @expanded_person.jobtitle.to_s.empty? ? job_position['Business_Title'].to_s : @expanded_person.jobtitle
-        end
-
-        def subtitle
-          @expanded_person.subtitle
-        end
-
-        def status
-          @expanded_person.status
+          expanded_person.jobtitle || @job_position['Business_Title']
         end
 
         def expertise
-           Markdown_Field_Helpers.new.listify(@expanded_person.expertise)
-        end
-
-        def twitter
-          @expanded_person.twitter
-        end
-
-        def image
-          @expanded_person.image
+           to_yaml_list(expanded_person.expertise)
         end
 
         def buttons
-          Markdown_Field_Helpers.new.instancify(@expanded_person.buttons)
+          to_yaml_object(expanded_person.buttons)
         end
 
         def guides
-          Markdown_Field_Helpers.new.instancify(@expanded_person.guides)
+          to_yaml_object(expanded_person.guides)
         end
 
         def publications
-          Markdown_Field_Helpers.new.instancify(@expanded_person.publications)
+          to_yaml_object(expanded_person.publications)
         end
 
         def keywords
-          Markdown_Field_Helpers.new.listify(@expanded_person.keywords)
-        end
-
-        def title
-          @expanded_person.title
+          to_yaml_list(expanded_person.keywords)
         end
 
         private
@@ -93,14 +79,6 @@ module Conversions
         # output = 'Department Name'
         def department_formatter(department_name)
           department_name.to_s.split('(')[0].strip
-        end
-
-        def job_position
-          if @expanded_person.all_positions_jobs
-            @job_position ||=  @expanded_person.all_positions_jobs.find { |job| job['Is_Primary_Job'] == '1' } || {}
-          else
-            @job_position ||= {}
-          end
         end
       end
     end
