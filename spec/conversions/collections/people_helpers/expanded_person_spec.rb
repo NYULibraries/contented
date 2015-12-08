@@ -17,12 +17,9 @@ describe 'ExpandedPerson' do
     subject(:expanded_person) { Conversions::Collections::PeopleHelpers::ExpandedPerson.new(json_data) }
     expanded_person_attributes.each do |attribute|
       it "should not have #{attribute}" do
+        next if attribute == 'all_positions_jobs'
         expect(expanded_person.send( attribute.to_sym )).to be_nil
       end
-    end
-
-    it 'should be able to convert to markdown' do
-      expect(expanded_person).to respond_to :to_markdown
     end
 
     it 'should be a person' do
@@ -148,10 +145,6 @@ describe 'ExpandedPerson' do
       it "should have #{attribute}" do
         expect(expanded_person).to respond_to attribute
       end
-    end
-
-    it 'should be able to convert to markdown' do
-      expect(expanded_person).to respond_to :to_markdown
     end
 
     it 'should be a person' do
