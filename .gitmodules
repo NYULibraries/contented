@@ -1,6 +1,0 @@
-[submodule "vendor/jquery-rails"]
-	path = vendor/jquery-rails
-	url = https://github.com/rails/jquery-rails
-[submodule "vendor/nyu-libraries-javascripts"]
-	path = vendor/nyu-libraries-javascripts
-	url = https://github.com/NYULibraries/nyu-libraries-javascripts
