@@ -72,7 +72,7 @@ module Conversions
         # input = '+1 (555) 5555555'
         # output = '(555) 555-5555'
         def phone_formatter(phone_number)
-          phone_number.delete('+1').insert(-5, '-').strip if phone_number
+          phone_number.gsub('+1 ', '').insert(-5, '-') if phone_number
         end
 
         # input = 'Department Name (something)' or 'Department Name'
