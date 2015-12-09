@@ -72,13 +72,13 @@ module Conversions
         # input = '+1 (555) 5555555'
         # output = '(555) 555-5555'
         def phone_formatter(phone_number)
-          phone_number.to_s.empty? ? '' : phone_number.delete('+1 ').insert(-5, '-')
+          phone_number.delete('+1').insert(-5, '-').strip if phone_number
         end
 
         # input = 'Department Name (something)' or 'Department Name'
         # output = 'Department Name'
         def department_formatter(department_name)
-          department_name.to_s.split('(')[0].strip
+          department_name.split('(')[0].strip if department_name
         end
       end
     end
