@@ -8,60 +8,25 @@
 
 These are happy little content conversions!
 
-This repository handles all the content gathering from various sources (JSON APIs, Google Spreadsheets, etc.) and the conversion to Jekyll style markdowns which get synced via [library.nyu.edu repos](http://github.com/nyulibraries/library.nyu.edu) to Siteleaf.
+This repository handles all the content conversions from various sources (JSON APIs, Google Spreadsheets, etc.) and the conversion to Jekyll style markdowns with YAML frontmatter which we then use for Siteleaf.
 
-## Wiki
+## Install
 
-[Read our wiki](https://github.com/NYULibraries/contented/wiki), for more information on this project.
+In your Gemfile
 
-## How to feed data into library.nyu.edu _(Needs updating)_
+```ruby
+gem 'contented', github: "NYULibraries/contented"
+```
 
-Create a file called `secret_study.yml` in the root folder of this project.
+Then run:
 
-Inside that file add this line ```GOOGLE_SHEET_KEY : '<Sheet_key>'```
-
-Replace ```<Sheet_key>``` with the google sheet key that is found in the URL.
-
-## Siteleaf Authentication _(Needs updating)_
-
-In the above mentioned `secret_study.yml` create 3 different Environment Variables namely :
-
-1. ```api_key```        : Key can be found on siteleaf site in Account
-2. ```api_secret```     : Secret can be found on siteleaf site in Account
-3. ```site_id```        : Site ID can be found in the URL of a particular site.
+```shell
+$ bundle install
+```
 
 
-## Capistrano Tasks _(Needs updating)_
+## Rake
 
-    cap convert:sheet_to_md:all          # Converts all worksheets to Markdown and places them in their respective directory
-
-    cap convert:sheet_to_md:departments  # Converts departments worksheet to Markdown and places them in their respective directory
-
-    cap convert:sheet_to_md:locations    # Converts locations worksheet to Markdown and places them in their respective directory
-
-    cap convert:sheet_to_md:people       # Converts people worksheet to Markdown and places them in their respective directory
-
-    cap convert:sheet_to_md:services     # Converts services worksheet to Markdown and places them in their respective directory
-
-    cap convert:sheet_to_md:spaces       # Converts spaces worksheet to Markdown and places them in their respective directory
-
-    cap deploy:compile_js_sass           # Compile Javascript and Sass from assets Folder to dist folder
-
-    cap deploy:init                      # Initialize Deploy for library.nyu.edu
-
-    cap siteleaf:auth                    # Authenticate Siteleaf using ENV Variables in .siteleaf.yml files
-
-    cap siteleaf:clean_up                # Cleans up the site directory
-
-    cap siteleaf:push_all                # Push all theme files alongwith Markdown collections to Siteleaf after converting them from worksheet to markdown
-
-    cap siteleaf:push_only_people        # Push only people markdown files
-
-
-## Rake Tasks for library.nyu.edu-data _(Needs updating)_
-
-    rake rubocop               # Run RuboCop
-
-    rake rubocop:auto_correct  # Auto-correct RuboCop offenses
-
-    rake spec                  # Run Rspec
+```shell
+$ bundle exec rake
+```
