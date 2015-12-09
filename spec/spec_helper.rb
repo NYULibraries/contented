@@ -1,4 +1,6 @@
-require File.expand_path('../../lib/convert/convert.rb', __FILE__)
-Dir['../../lib/convert/helpers/*.rb'].each { |file| require file }
+$: <<  "#{File.dirname(__FILE__)}/../lib"
+Dir['#{File.dirname(__FILE__)}/support/**/*.rb'].each {|f| require f}
 require 'coveralls'
 Coveralls.wear!
+
+require "contented"
