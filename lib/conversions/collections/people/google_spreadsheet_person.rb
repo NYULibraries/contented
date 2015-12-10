@@ -1,10 +1,10 @@
 require 'json'
-require_relative '../../helpers/google_spreadsheet_helpers/google_spreadsheet_helpers'
+require_relative '../helpers/google_spreadsheet_helpers'
 require_relative 'person'
 
 module Conversions
   module Collections
-    module PeopleHelpers
+    module People
       # Edits the Google Sheet People workbook for markdown conversion
       class GoogleSpreadsheetPerson < Person
         include Conversions::Collections::Helpers::GoogleSpreadsheetHelpers

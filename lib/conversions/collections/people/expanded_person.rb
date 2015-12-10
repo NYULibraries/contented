@@ -4,7 +4,7 @@ require_relative 'google_spreadsheet_person'
 
 module Conversions
   module Collections
-    module PeopleHelpers
+    module People
       # Combines Person class attributes with google_spreadsheet_person class attributes
       class ExpandedPerson < Person
         extend Forwardable
