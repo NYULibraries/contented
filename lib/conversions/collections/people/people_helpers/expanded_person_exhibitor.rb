@@ -1,6 +1,6 @@
 require 'forwardable'
 require_relative 'expanded_person'
-require_relative '../../helpers/markdown_presenter'
+require_relative 'people_markdown_presenter'
 require_relative '../../helpers/markdown_field_helpers/markdown_field_helpers'
 
 module Conversions
@@ -9,7 +9,7 @@ module Conversions
       # Parses the person data into the required format.
       class ExpandedPersonExhibitor
         extend Forwardable
-        include MarkdownFieldHelpers
+        include Conversions::Collections::Helpers::MarkdownFieldHelpers
         def_delegators :@expanded_person, :subtitle, :status, :twitter, :twitter, :image, :title
         attr_reader :expanded_person
 

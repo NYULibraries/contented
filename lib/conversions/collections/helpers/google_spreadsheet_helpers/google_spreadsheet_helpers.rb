@@ -1,6 +1,6 @@
 module Conversions
   module Collections
-    module PeopleHelpers
+    module Helpers
       module GoogleSpreadsheetHelpers
         def useful_spreadsheet_hash(spreadsheet_json_hash = {})
           spreadsheet_json_hash.keys.each do |key|
