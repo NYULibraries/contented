@@ -1,5 +1,5 @@
 require 'json'
-require_relative 'google_spreadsheet_helpers'
+require_relative '../../helpers/google_spreadsheet_helpers/google_spreadsheet_helpers'
 require_relative 'person'
 
 module Conversions
@@ -7,7 +7,7 @@ module Conversions
     module PeopleHelpers
       # Edits the Google Sheet People workbook for markdown conversion
       class GoogleSpreadsheetPerson < Person
-        include GoogleSpreadsheetHelpers
+        include Conversions::Collections::Helpers::GoogleSpreadsheetHelpers
         attr_accessor :about, :address, :buttons, :departments, :email, :expertise, :guides, :image, :jobtitle, :keywords, :location, :netid, :phone, :space, :status, :subtitle, :title, :twitter, :publications
 
         def initialize(json_data)
