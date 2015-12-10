@@ -1,11 +1,11 @@
 require 'forwardable'
 require_relative 'expanded_person'
-require_relative 'people_markdown_presenter'
-require_relative '../../helpers/markdown_field_helpers/markdown_field_helpers'
+require_relative 'presenter/markdown_presenter'
+require_relative '../helpers/markdown_field_helpers'
 
 module Conversions
   module Collections
-    module PeopleHelpers
+    module People
       # Parses the person data into the required format.
       class ExpandedPersonExhibitor
         extend Forwardable
@@ -20,7 +20,7 @@ module Conversions
         end
 
         def to_markdown
-          MarkdownPresenter.new(self).render
+          Presenter::MarkdownPresenter.new(self).render
         end
 
         def email

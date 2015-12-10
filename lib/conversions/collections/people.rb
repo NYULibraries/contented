@@ -3,15 +3,19 @@ require 'json'
 module Conversions
   module Collections
     module People
-      def get_peoplesync()
+      def peoplesync
 
       end
 
-      def people_sheet()
+      def people_sheet
 
       end
 
-      def merge_all_people()
+      def people_exclude
+
+      end
+
+      def merge_all_people
 
       end
     end
