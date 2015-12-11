@@ -15,7 +15,7 @@ DEPARTMENTS_REGEX = /^[^()]+$/
 LOCATION_SPACE_REGEX = /^[^>]+$/
 
 describe 'ExpandedPersonExhibitor' do
-  let(:json_data) {
+  let(:peoplesync) {
       {
          NetID: "xx123",
          Employee_ID: "N00000001",
@@ -37,7 +37,7 @@ describe 'ExpandedPersonExhibitor' do
          ]
       }.to_json
     }
-  let(:json_data_expand) {
+  let(:people_sheet) {
     {
       id: {
         :$t => "https://spreadsheets.google.com/feeds/list/V8nNaf-000k1dESZGCwBvkuxoCe000k1dESZGCwBvkuxoCe/0/public/values/bpgoi"
@@ -121,11 +121,13 @@ describe 'ExpandedPersonExhibitor' do
       }
     }.to_json
   }
-  let (:expanded_person) { Conversions::Collections::PeopleHelpers::ExpandedPerson.new(json_data, json_data_expand) }
-  subject(:expanded_person_exhibitor) { Conversions::Collections::PeopleHelpers::ExpandedPersonExhibitor.new(expanded_person) }
+  let(:person) { Conversions::Collections::People::Person.new(peoplesync) }
+  let(:person_sheet) { Conversions::Collections::People::GoogleSpreadsheetPerson.new(people_sheet) }
+  let(:expanded_person) { Conversions::Collections::People::ExpandedPerson.new(person, person_sheet) }
+  subject(:expanded_person_exhibitor) { Conversions::Collections::People::ExpandedPersonExhibitor.new(expanded_person) }
   context 'when no JSON formatted data is provided' do
-    let (:json_data) { '{}' }
-    let (:json_data_expand) { '{}' }
+    let (:peoplesync) { '{}' }
+    let (:people_sheet) { '{}' }
 
     json_data_expand_attributes.each do |attribute|
       it "should not have #{attribute}" do
@@ -141,7 +143,7 @@ describe 'ExpandedPersonExhibitor' do
   end
 
   context 'when only json_data_expand is provided i.e. spreadsheet data' do
-    let(:json_data) { '{}'}
+    let(:peoplesync) { '{}'}
 
     json_data_expand_attributes.each do |attribute|
       it "should have #{attribute}" do
@@ -157,7 +159,7 @@ describe 'ExpandedPersonExhibitor' do
   end
 
   context 'when only json_data is provided i.e. peoplesync data' do
-    let(:json_data_expand) { '{}' }
+    let(:people_sheet) { '{}' }
 
     json_data_expand_attributes.each do |attribute|
       it "should have #{attribute}" do

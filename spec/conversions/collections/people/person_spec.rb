@@ -1,14 +1,13 @@
 require File.expand_path('../../../../spec_helper.rb', __FILE__)
 
 def attributes
-  %w[netid employee_id last_name first_name
-  primary_work_space_address work_phone
-  email_address all_positions_jobs title]
+  %w[netid last_name first_name work_phone
+  email_address all_positions_jobs backup_title]
 end
 
 describe 'Person' do
   let(:json_data) { "{}" }
-  subject(:person) { Conversions::Collections::PeopleHelpers::Person.new(json_data) }
+  subject(:person) { Conversions::Collections::People::Person.new(json_data) }
   context "when no JSON formatted data is provided" do
     attributes.each do |attribute|
       next if attribute == 'all_positions_jobs'
