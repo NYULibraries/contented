@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe GatherContent::Department, vcr: true do
+describe Contented::GatherContent::Department, vcr: true do
   let(:item_id) { '2027930' }
-  let(:department) { GatherContent::Department.new(item_id) }
+  let(:department) { Contented::GatherContent::Department.new(item_id) }
   describe '#title' do
     subject { department.title }
     it { is_expected.to eql 'Web Services' }

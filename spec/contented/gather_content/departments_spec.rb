@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe GatherContent::Departments, vcr: true do
+describe Contented::GatherContent::Departments, vcr: true do
   let(:project_id) { '57459' }
-  let(:departments) { GatherContent::Departments.new(project_id) }
+  let(:departments) { Contented::GatherContent::Departments.new(project_id) }
   describe '.new' do
     subject { departments }
     context 'when project ID is passed in' do
-      it { is_expected.to be_a GatherContent::Api::Items }
+      it { is_expected.to be_a Contented::GatherContent::Api::Items }
     end
     context 'when project ID is not passed in' do
       let(:project_id) { nil }
@@ -24,13 +24,13 @@ describe GatherContent::Departments, vcr: true do
     it { is_expected.to be_a Enumerable }
     it 'should contain Item objects' do
       departments.each do |item|
-        expect(item).to be_a GatherContent::Api::Item
-        expect(item).to be_a GatherContent::Department
+        expect(item).to be_a Contented::GatherContent::Api::Item
+        expect(item).to be_a Contented::GatherContent::Department
       end
     end
   end
   describe '#item_class' do
     subject { departments.send(:item_class) }
-    it { is_expected.to eql GatherContent::Department }
+    it { is_expected.to eql Contented::GatherContent::Department }
   end
 end

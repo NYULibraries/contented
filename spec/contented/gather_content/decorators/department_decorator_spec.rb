@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe GatherContent::Decorators::DepartmentDecorator, vcr: true do
+describe Contented::GatherContent::Decorators::DepartmentDecorator, vcr: true do
   let(:item_id) { '2027930' }
-  let(:department) { GatherContent::Department.new(item_id) }
-  let(:department_decorator) { GatherContent::Decorators::DepartmentDecorator.new(department) }
+  let(:department) { Contented::GatherContent::Department.new(item_id) }
+  let(:department_decorator) { Contented::GatherContent::Decorators::DepartmentDecorator.new(department) }
   describe '#matches_email?' do
     subject { department_decorator.send(:matches_email?, str) }
     context 'when string passed in is an email' do

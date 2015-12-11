@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe GatherContent::Api::Items, vcr: true do
+describe Contented::GatherContent::Api::Items, vcr: true do
   let(:project_id) { '57459' }
-  let(:items) { GatherContent::Api::Items.new(project_id) }
+  let(:items) { Contented::GatherContent::Api::Items.new(project_id) }
   describe '.new' do
     subject { items }
     context 'when project ID is passed in' do
-      it { is_expected.to be_a GatherContent::Api::Items }
+      it { is_expected.to be_a Contented::GatherContent::Api::Items }
     end
     context 'when project ID is not passed in' do
       let(:project_id) { nil }
@@ -24,7 +24,7 @@ describe GatherContent::Api::Items, vcr: true do
     it { is_expected.to be_a Enumerable }
     it 'should contain Item objects' do
       items.each do |item|
-        expect(item).to be_a GatherContent::Api::Item
+        expect(item).to be_a Contented::GatherContent::Api::Item
       end
     end
   end

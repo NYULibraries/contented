@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-describe GatherContent::Api::Item, vcr: true do
+describe Contented::GatherContent::Api::Item, vcr: true do
   let(:item_id) { '2027930' }
-  let(:item) { GatherContent::Api::Item.new(item_id) }
+  let(:item) { Contented::GatherContent::Api::Item.new(item_id) }
   describe '.new' do
     subject { item }
     context 'when item ID is passed in' do
-      it { is_expected.to be_a GatherContent::Api::Item }
+      it { is_expected.to be_a Contented::GatherContent::Api::Item }
     end
     context 'when item ID is not passed in' do
       let(:item_id) { nil }

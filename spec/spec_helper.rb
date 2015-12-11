@@ -3,8 +3,11 @@ Dir['#{File.dirname(__FILE__)}/support/**/*.rb'].each {|f| require f}
 require 'coveralls'
 Coveralls.wear!
 
+require 'pry'
+require 'figs'
+require 'vcr'
 Figs.load()
-require "contented"
+require 'contented'
 
 VCR.configure do |c|
   c.filter_sensitive_data('api-key') { ENV['gather_content_api_key'] }
