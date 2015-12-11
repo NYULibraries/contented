@@ -39,9 +39,8 @@ module Conversions
         people_merged
       end
 
-      def write_all(people_sync='[]', people_spreadsheet='[]')
-        all = join_people_sync_sheet(list_peoplesync(people_sync), list_people_sheet(people_spreadsheet))
-        all.each { |person| puts person.to_markdown  }
+      def staff_directory(people_sync='[]', people_spreadsheet='[]')
+        join_people_sync_sheet(list_peoplesync(people_sync), list_people_sheet(people_spreadsheet))
       end
     end
   end
