@@ -6,12 +6,14 @@ module Conversions
   module Collections
     module People
       # Combines Person class attributes with google_spreadsheet_person class attributes
-      class ExpandedPerson < Person
+      class ExpandedPerson
         extend Forwardable
-        def_delegators :@GoogleSpreadsheetPerson, :about, :address, :buttons, :departments, :email, :expertise, :guides, :image, :jobtitle, :keywords, :location, :netid, :phone, :space, :status, :subtitle, :title, :twitter, :publications
-        def initialize(peoplesync_json, sheet_json='{}')
-          super(peoplesync_json)
-          @GoogleSpreadsheetPerson = GoogleSpreadsheetPerson.new(sheet_json)
+        def_delegators :@Person, :work_phone, :email_address, :all_positions_jobs, :backup_title
+        def_delegators :@GoogleSpreadsheetPerson, :address, :buttons, :departments, :email, :expertise, :guides, :image, :jobtitle, :keywords, :location, :phone, :space, :status, :subtitle, :title, :twitter, :publications
+
+        def initialize(person, google_person)
+          @Person = person
+          @GoogleSpreadsheetPerson = google_person
         end
       end
     end
