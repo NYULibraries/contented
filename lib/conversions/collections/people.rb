@@ -11,16 +11,12 @@ module Conversions
 
       # Creates an Array of Person objects from JSON data
       def list_peoplesync(json_data)
-        peoplesync = []
-        JSON.parse(json_data).each { |person| peoplesync<<Person.new(person.to_json) }
-        peoplesync
+        JSON.parse(json_data).collect { |person| Person.new(person.to_json) }
       end
 
       # Creates an Array of GoogleSpreadsheetPerson objects from JSON data
       def list_people_sheet(json_data)
-        people_sheet = []
-        JSON.parse(json_data).each { |person| people_sheet<<GoogleSpreadsheetPerson.new(person.to_json) }
-        people_sheet
+        JSON.parse(json_data).collect { |person| GoogleSpreadsheetPerson.new(person.to_json) }
       end
 
       # Finds the person matching the netid in sheet
