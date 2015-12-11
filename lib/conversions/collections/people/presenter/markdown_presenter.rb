@@ -1,18 +1,18 @@
+require_relative '../../helpers/presenter_helpers'
+
 module Conversions
   module Collections
     module People
       module Presenter
         class MarkdownPresenter
+          include Conversions::Collections::Helpers::PresenterHelpers
           attr_reader :person
           def initialize(person)
             @person = person
+            render
           end
 
-          def render
-            render = ""
-            (self.private_methods - Object.private_methods - Module.methods).each do |method_sym|
-              render = "#{render}#{self.send(method_sym)}\n"
-            end
+          def run
             render
           end
 
