@@ -26,3 +26,6 @@ begin
 rescue LoadError
   puts 'No Rubocop available'
 end
+
+# Load up all rake tasks in lib/tasks
+Dir.glob('lib/tasks/collections/*.rake').each { |r| import r }
