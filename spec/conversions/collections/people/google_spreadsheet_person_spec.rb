@@ -1,7 +1,7 @@
 require File.expand_path('../../../../spec_helper.rb', __FILE__)
 
 def google_spreadsheet_attributes
-  %w[about address buttons departments
+  %w[address buttons departments
   email expertise guides image jobtitle
   keywords location netid phone space
   status subtitle title twitter publications]
@@ -10,16 +10,12 @@ end
 
 describe 'GooglSpreadsheetPerson' do
   let(:json_data) { '{}' }
-  subject(:google_spreadsheet_person) { Conversions::Collections::PeopleHelpers::GoogleSpreadsheetPerson.new(json_data) }
+  subject(:google_spreadsheet_person) { Conversions::Collections::People::GoogleSpreadsheetPerson.new(json_data) }
   context "when no JSON formatted data is provided" do
     google_spreadsheet_attributes.each do |attribute|
       it "should not have #{attribute}" do
         expect(google_spreadsheet_person.send( attribute.to_sym )).to be_nil
       end
-    end
-
-    it 'should be a person' do
-      expect(google_spreadsheet_person).to be_a_kind_of(Conversions::Collections::PeopleHelpers::Person)
     end
   end
   context "when proper JSON formatted data is provided" do
@@ -115,10 +111,6 @@ describe 'GooglSpreadsheetPerson' do
 
     it "should have the #{google_spreadsheet_attributes.size} instance variables" do
       expect(google_spreadsheet_person.instance_variables.size).to eql(google_spreadsheet_attributes.size)
-    end
-
-    it 'should be a person' do
-      expect(google_spreadsheet_person).to be_a_kind_of(Conversions::Collections::PeopleHelpers::Person)
     end
   end
 end
