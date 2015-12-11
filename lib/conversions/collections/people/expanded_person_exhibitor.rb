@@ -10,7 +10,7 @@ module Conversions
       class ExpandedPersonExhibitor
         extend Forwardable
         include Conversions::Collections::Helpers::MarkdownFieldHelpers
-        def_delegators :@expanded_person, :subtitle, :status, :twitter, :twitter, :image, :title
+        def_delegators :@expanded_person, :subtitle, :status, :twitter, :image
         attr_reader :expanded_person
 
         def initialize(expanded_person)
@@ -23,12 +23,16 @@ module Conversions
           Presenter::MarkdownPresenter.new(self).render
         end
 
+        def title
+          expanded_person.title || expanded_person.backup_title
+        end
+
         def email
           expanded_person.email || expanded_person.email_address
         end
 
         def phone
-         expanded_person.phone || phone_formatter(expanded_person.work_phone)
+          expanded_person.phone || phone_formatter(expanded_person.work_phone)
         end
 
         def departments
