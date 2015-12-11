@@ -3,8 +3,6 @@ require_relative 'people/expanded_person_exhibitor'
 module Conversions
   module Collections
     module People
-      include Conversions::Collections::Helpers::GoogleSpreadsheetHelpers
-
       # Returns array of Net ID's of people that need to be excluded
       def people_exclude
       end
