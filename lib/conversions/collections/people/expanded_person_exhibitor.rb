@@ -20,7 +20,7 @@ module Conversions
         end
 
         def to_markdown
-          Presenter::MarkdownPresenter.new(self).render
+          Presenter::MarkdownPresenter.new(self).run
         end
 
         def title
