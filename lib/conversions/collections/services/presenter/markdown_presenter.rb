@@ -21,8 +21,12 @@ module Conversions
             "---\n"
           end
 
-          def subtitle
+          def title
             "title: '#{service.title}'"
+          end
+
+          def subtitle
+            "subtitle: '#{service.subtitle}'"
           end
 
           def location
