@@ -2,10 +2,10 @@ require_relative 'departments/department_exhibitor'
 
 module Conversions
   module Collections
+    # Creates an Array of Department objects from JSON data
     module Departments
-      # Creates an Array of Department objects from JSON data
       def departments(json_data)
-        JSON.parse(json_data).collect { |service| DepartmentExhibitor.new(Department.new(service.to_json)) }
+        JSON.parse(json_data).collect { |department| DepartmentExhibitor.new(Department.new(department.to_json)) }
       end
     end
   end
