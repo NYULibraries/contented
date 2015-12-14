@@ -4,6 +4,7 @@ module Conversions
   module Collections
     module Departments
       module Presenter
+        # Presneter class with private methods to depict output and run method to run all private methods
         class MarkdownPresenter
           include Conversions::Collections::Helpers::PresenterHelpers
           attr_reader :department
@@ -15,7 +16,7 @@ module Conversions
             render
           end
 
-        private
+          private
 
           def yaml_start
             "---\n"
@@ -77,6 +78,10 @@ module Conversions
             "image: '#{department.image}'"
           end
 
+          def buttons
+            "buttons: #{department.buttons}"
+          end
+
           def keywords
             "keywords: #{department.keywords}"
           end
@@ -93,4 +98,3 @@ module Conversions
     end
   end
 end
-

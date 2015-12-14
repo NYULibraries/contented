@@ -5,7 +5,7 @@ require_relative '../helpers/markdown_field_helpers'
 module Conversions
   module Collections
     module Departments
-      # Parses the person data into the required format.
+      # Parses the Department data into the required format.
       class DepartmentExhibitor
         extend Forwardable
         include Conversions::Collections::Helpers::MarkdownFieldHelpers
@@ -30,6 +30,10 @@ module Conversions
 
         def links
           to_yaml_object(department.links)
+        end
+
+        def buttons
+          to_yaml_object(department.buttons)
         end
 
         def keywords
