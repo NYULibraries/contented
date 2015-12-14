@@ -4,17 +4,17 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'contented/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "contented"
+  gem.name          = 'contented'
   gem.version       = Contented::VERSION
-  gem.authors       = ["Amay Yadav"]
-  gem.email         = ["amay@nyu.edu"]
-  gem.description   = %q{Contented converts multiple data streams to yaml for siteleaf}
-  gem.summary       = %q{Contented - Usable YAML from various data sources}
-  gem.homepage      = "https://github.com/NYULibraries/contented"
+  gem.authors       = ['Amay Yadav']
+  gem.email         = ['amay@nyu.edu']
+  gem.description   = 'Contented converts multiple data streams to yaml for siteleaf'
+  gem.summary       = 'Contented - Usable YAML from various data sources'
+  gem.homepage      = 'https://github.com/NYULibraries/contented'
 
-  gem.files         = `git ls-files`.split($/)
+  gem.files         = `git ls-files`.split($RS)
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.require_paths = ["lib"]
+  gem.require_paths = ['lib']
 
   gem.licenses      = ['MIT']
 
