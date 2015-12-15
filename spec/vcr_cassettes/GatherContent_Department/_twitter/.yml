@@ -1,0 +1,372 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-id:api-key@api.gathercontent.com/items/2027930
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept:
+      - application/vnd.gathercontent.v0.5+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.6
+      Date:
+      - Wed, 02 Dec 2015 17:30:50 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Powered-By:
+      - PHP/5.5.26-1+deb.sury.org~precise+1
+      Cache-Control:
+      - private, must-revalidate
+      Pragma:
+      - no-cache
+      Expires:
+      - "-1"
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - laravel_session=eyJpdiI6Ik5UVE9PNGZYaXdNd0s0ZmVla1wvaFwvWEVNUTVkMHI5dFwvb2lMTlFsZWUyMnM9IiwidmFsdWUiOiJ0aDVPUHl5NVltcHBkZk05dWpxa1o2TFRJeXZtT1VMUThYcUdOTVRNeFlnME9KVGRMc2loZjJCT09hZ1hWZWhDUU9HclwvSkt6UmJwNG5VZUhKeFgyM0E9PSIsIm1hYyI6ImVkYTU1YTYxZTI0ZjhhOWE5MzU3MDg1ODg3OTY2YmJjM2QyMjFlMjg4ZjRkZDhlZDE2ODIxZDUyMTkwNzQ0ZGUifQ%3D%3D;
+        expires=Wed, 02-Dec-2015 19:30:50 GMT; Max-Age=7200; path=/; httponly
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":2027930,"project_id":57459,"parent_id":2186086,"template_id":243138,"custom_state_id":241861,"position":"7","name":"Web
+        Services","config":[{"label":"READ ME","name":"tab1440713097801","hidden":false,"elements":[{"type":"section","name":"el1440713129929","title":"Hurrah!
+        Your department gets a new webpage, now what?","subtitle":"<h3>The new Libraries
+        Website allows NYU Libraries\u00a0departments to have an easy-to-maintain\u00a0digital\u00a0presence.
+        These pages\u00a0are designed to\u00a0highlight what our\u00a0departments\u00a0do
+        and who we are;\u00a0better enabling users and the NYU community to utilize
+        our\u00a0services. \u00a0<\/h3><p><br \/><\/p><p>We need your help to gather
+        your department''s content and ensure it''s\u00a0up-to-date. \u00a0The User
+        Experience team is running\u00a0workshops throughout the fall to introduce
+        departments to the\u00a0new website design and to collect content for the
+        site. \u00a0<\/p><p>Y\u200bour department''s content will be loaded into a
+        development site (called a beta site) where we can test the site as a whole.
+        \u00a0Testing will happen throughout the fall. \u00a0The site will go live
+        (switching from beta to alpha)\u00a0and replace the current website in 2016.
+        \u00a0<\/p><p>There will be\u00a0followup training on how to edit and maintain
+        your department''s page once we have all the content gathered.<br \/><\/p><p>Thank
+        you for your contribution to the success of the new site!<\/p><p><br \/><\/p><p>If
+        you have any follow up questions about the workshop please contact:\u00a0<\/p><p>Nadaleen
+        Templeman-Kluit, UX head<\/p><p>Tele: (212) 998-2469<\/p><p><a href=\"mailto:ntk2@nyu.edu\"><u>ntk2@nyu.edu<\/u><\/a><br
+        \/><\/p>"},{"type":"section","name":"el1441034346013","title":"How this Software
+        Works","subtitle":"<p>GatherContent allows the department stakeholders and
+        the User Experience team to have a central place to collect a department''s
+        website content. \u00a0The content is broken up into the\u00a0tabs for your\u00a0department
+        stakeholders to work through.\u00a0<\/p><p>Some of the work is validating
+        existing information coming from HR, while other sections ask you to create
+        new content, which may\u00a0require deeper thought and consideration. \u00a0<\/p><p><strong>Please
+        work through all the tabs.\u00a0<\/strong><\/p><p>We have tried to make the
+        system\u00a0as simple as possible, but understand that you may have questions
+        while working through this process.<\/p><p>Do not hesitate to get in touch
+        with us either by email, phone, or IM. \u00a0You can also leave comments in
+        this system. \u00a0<br \/><\/p><p><br \/><\/p>"}]},{"label":"About Your Dept","name":"tab1440693399101","hidden":false,"elements":[{"type":"section","name":"el1440698631693","title":"The
+        \"What We Do\" Statement","subtitle":"\n\n\n\n\n\n\n\n<h3><span>This section
+        of the department web page provides a space to communicate the role of your
+        department.<\/span>\u200b\u00a0<\/h3><p><strong><br \/><\/strong><\/p><p><strong>\u200bREMEMBER
+        TO SAVE!<\/strong><br \/><\/p>"},{"type":"section","name":"el1442245133857","title":"Brainstorming
+        ","subtitle":"<p><em>We have found creating a bulleted list of your core competencies
+        is helpful for this writing process.\u200b\u00a0<\/em><span class=\"redactor-invisible-space\">\u200b<\/span><\/p><ul><li>Focus
+        on the key ways\u00a0users can benefit from your department\u2019s services.<\/li><\/ul><p><em>Use
+        the box below\u00a0to help collaboratively\u00a0brainstorm your department''s
+        core competencies.<\/em><span class=\"redactor-invisible-space\">\u200b<\/span><\/p>"},{"type":"text","name":"el1441035442464","required":false,"label":"Core
+        Competencies","value":"<ul>\n    <li>We are great at...\n    <\/li>\n<\/ul>","microcopy":"The
+        text in the box is just a placeholder.","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1442245420960","title":"Writing
+        Your Statement","subtitle":"<p><em>Using the Core Competencies list\u00a0as
+        a\u00a0guide may help you create the prose for your \"What We Do\" statement.
+        \u00a0<\/em><br \/><\/p><p><strong>\u200bGUIDELINES:<\/strong><\/p><ol><li><span>The
+        statement should be\u00a0<\/span><strong>no more than 250 characters long<\/strong><span>.\u00a0<\/span><br
+        \/><\/li><li><span>The mobile view of the page\u00a0will only be able to\u00a0show
+        the first two lines of this section, so keep that in mind when writing. \u00a0\u00a0\u200b\u200b<span
+        class=\"redactor-invisible-space\">\u200b<\/span><br \/><\/span><\/li><\/ol><p><em><strong>Writing
+        Style\u00a0Tips:<\/strong><\/em><\/p><ul><li>Use action oriented language.
+        \u00a0<\/li><li>Avoid recreating a list of your services.<\/li><li>The Library\u2019s
+        mission is to serve NYU faculty, students, and staff. \u00a0\u00a0It\u00a0isn''t
+        necessary to mention these groups in your statement, unless your department
+        has a different service scope.<\/li><\/ul><p><strong><br \/><\/strong><\/p><p><strong>EXAMPLE:<\/strong><\/p><p>ADRSS
+        wrote the following:<\/p><p><em>We support access to and use of our own and
+        other libraries\u2019 collections. \u00a0We also provide access to study spaces
+        and manage visitor access to Bobst Library.<\/em><span class=\"redactor-invisible-space\"><em><\/em><\/span><\/p><p><br
+        \/><\/p>"},{"type":"text","name":"el1440698629009","required":false,"label":"What
+        We Do","value":"<p>\n    We provide administrative management and technical
+        support for the Libraries\u2019 website and BobCat, its primary discovery
+        interface. We also develop and maintain web-based services and special projects.\n<\/p>","microcopy":"Simply
+        delete the sample text above and write in your own statement. The statement
+        should be no more than 250 characters long.","limit_type":"chars","limit":250,"plain_text":false}]},{"label":"Contact
+        Info","name":"tab1440692574326","hidden":false,"elements":[{"type":"section","name":"el1442508062623","title":"DEPARTMENT
+        NAME","subtitle":"<p>Department names are being sourced from the most current
+        HR data. \u00a0<\/p><p>Please select your department''s name below. \u00a0If
+        your department name is not correct please enter the correct on in the \"other\"
+        box.<\/p>"},{"type":"choice_radio","name":"el1440713408672","required":false,"label":"Department
+        Name\u00a0","microcopy":"If your department''s name is out of date or incorrect
+        please provide your correct name in the \"other\" box.","other_option":true,"options":[{"name":"op144071340867339751829","label":"Access,
+        Delivery &amp; Resource Sharing Services","selected":false},{"name":"op144071340867435522680","label":"Archival
+        Collections Management","selected":false},{"name":"op144071340867553401872","label":"Avery
+        Fisher Center","selected":false},{"name":"op144112567259323086462","label":"Bern
+        Dibner Library","selected":false},{"name":"op144112568320845066624","label":"Budget
+        and Planning","selected":false},{"name":"op14411256853004126624","label":"Business
+        &amp; Government Information Services","selected":false},{"name":"op144112568700780993061","label":"Campus
+        Cable","selected":false},{"name":"op144112576324099398435","label":"Cantor
+        Film Center","selected":false},{"name":"op144112576461245153944","label":"Circulation
+        Services","selected":false},{"name":"op144112576601750518793","label":"Classroom
+        Media","selected":false},{"name":"op144112576734256322163","label":"Client
+        Services","selected":false},{"name":"op144112576886239422859","label":"Collection
+        Development","selected":false},{"name":"op14411258025292257820","label":"Collections
+        &amp; Research Services","selected":false},{"name":"op144112580417962381021","label":"Courant
+        Institute Library","selected":false},{"name":"op144112580567662825484","label":"Data
+        Services","selected":false},{"name":"op144112580738687064208","label":"Delivery
+        &amp; Resource Sharing Services","selected":false},{"name":"op144112588001946452990","label":"Development
+        at Bobst","selected":false},{"name":"op14411258821555949132","label":"Digital
+        Library Publication and Access","selected":false},{"name":"op14411258839347409571","label":"Digital
+        Library Technology Services","selected":false},{"name":"op144112980287220106526","label":"Digital
+        Scholarship Services","selected":false},{"name":"op144112609600784799732","label":"Digital
+        Studio","selected":false},{"name":"op144112609933839146946","label":"Fales
+        Library","selected":false},{"name":"op14411261009214905246","label":"Global
+        Processing","selected":false},{"name":"op144112615288488511278","label":"Human
+        Resources","selected":false},{"name":"op144112615456896151030","label":"IFA
+        Library","selected":false},{"name":"op144112615621830067928","label":"IT Services
+        &amp; Media Services","selected":false},{"name":"op144112618671822375037","label":"Knowledge
+        Access &amp; Resource Management Services","selected":false},{"name":"op144112618976555793464","label":"Knowledge
+        Access Design &amp; Development","selected":false},{"name":"op144112619147857648213","label":"Library
+        for Arabic Literature","selected":false},{"name":"op144112619296465913869","label":"Library
+        Privileges","selected":false},{"name":"op14411262471186792411","label":"Margaret
+        Sanger Papers","selected":false},{"name":"op144112625031389721134","label":"Metadata
+        Production &amp; Management","selected":false},{"name":"op144112625211673719028","label":"Monographs","selected":false},{"name":"op14411262538021734927","label":"NYU
+        Press","selected":false},{"name":"op144112625562179535779","label":"NYU Press
+        Budget","selected":false},{"name":"op144112630004581682174","label":"NYU-TV","selected":false},{"name":"op144112630332135117362","label":"Office
+        of the Dean","selected":false},{"name":"op14411263048831933296","label":"Preservation","selected":false},{"name":"op144112630642481592026","label":"Production
+        &amp; Design","selected":false},{"name":"op144112630815477912731","label":"Public
+        Services","selected":false},{"name":"op1445442793537","label":"Reference Services","selected":false},{"name":"op144112634640627025311","label":"Reserves","selected":false},{"name":"op144112634966386744864","label":"Resource
+        Management","selected":false},{"name":"op144112639273979452804","label":"Sciences
+        Reference Librarians","selected":false},{"name":"op144112639529955012331","label":"Sciences
+        Reference Services","selected":false},{"name":"op144112639698597455740","label":"Serials","selected":false},{"name":"op144112639967370771015","label":"SocHum
+        Reference Librarians","selected":false},{"name":"op144112643495959644040","label":"SocHum
+        Reference Services","selected":false},{"name":"op1447263213153","label":"Specialized
+        Research Services","selected":false},{"name":"op144112643693537747231","label":"Stacks","selected":false},{"name":"op14411264669995711319","label":"Systems","selected":false},{"name":"op144112651082050648817","label":"Tamiment
+        Library","selected":false},{"name":"op144112653613371476760","label":"The
+        Institute for the Study of the Ancient World Library","selected":false},{"name":"op144112653846336589381","label":"Undergraduate,
+        Instructional &amp; Global Services","selected":false},{"name":"op14411265405248268405","label":"University
+        Archives","selected":false},{"name":"op14411265754262731217","label":"User
+        Experience","selected":false},{"name":"op144112659145582183293","label":"Web
+        Services","selected":true},{"name":"op144071343471599575588","label":"Other","selected":false,"value":""}]},{"type":"text","name":"el1448904846615","required":false,"label":"Acronym
+        or initials used by your department (if any)","value":"","microcopy":"Example:
+        UX, KARMS, ADRSS, etc. ","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1442859904671","title":"LOCATION
+        INFO","subtitle":"<p><strong>Your department''s location information includes:<\/strong><\/p><ul><li><span>Library
+        or building name where your department is located<\/span>\u200b<br \/><\/li><li>interior
+        space information<\/li><\/ul><p><a href=\"https:\/\/docs.google.com\/a\/nyu.edu\/document\/d\/197KJGNnK3cnIlAdNh4jk32891bVLX7QYac9Dv4z1cl4\/edit?usp=sharing\"
+        target=\"_blank\">List of\u00a0Locations<\/a>\u200b<\/p>"},{"type":"text","name":"el1442863968730","required":false,"label":"Please
+        provide the name of your building\u00a0","value":"<p>\n    Elmer Holmes Bobst
+        Library\n<\/p>","microcopy":"Please see the link in the LOCATION INFO for
+        a list of all the locations.","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1442508336169","title":"Interior
+        Location","subtitle":"<p>Interior information should include as much of the
+        following as applicable:<\/p><ul><li>\u200bFloor Number (FORMAT:\u00a0ordinal
+        number)<\/li><li>Cardinal Direction (Required for departments at Bobst)<\/li><li>Room
+        Number<\/li><li>Area Name<br \/><\/li><\/ul>"},{"type":"choice_checkbox","name":"el1442860178022","required":false,"label":"Floor","microcopy":"","options":[{"name":"op1444328964389","label":"Atrium","selected":false},{"name":"op1444328940733","label":"Mezzanine","selected":false},{"name":"op1442860178023","label":"Lower
+        Level 1","selected":false},{"name":"op1442860178024","label":"Lower Level
+        2","selected":false},{"name":"op1442860178025","label":"1st Floor","selected":false},{"name":"op1442860196100","label":"2nd
+        Floor","selected":false},{"name":"op1442860198090","label":"3rd Floor","selected":false},{"name":"op1442860199978","label":"4th
+        Floor","selected":false},{"name":"op1442860201837","label":"5th Floor","selected":false},{"name":"op1442860203849","label":"6th
+        Floor","selected":false},{"name":"op1442860205878","label":"7th Floor","selected":false},{"name":"op1442860267190","label":"8th
+        Floor","selected":false},{"name":"op1442860269400","label":"9th Floor","selected":false},{"name":"op1442860271506","label":"10th
+        Floor","selected":false},{"name":"op1442860274255","label":"11th Floor","selected":false},{"name":"op1442860276259","label":"12th
+        Floor","selected":false},{"name":"op1442860300822","label":"13th Floor","selected":false},{"name":"op1442860303852","label":"14th
+        Floor","selected":false},{"name":"op1442860305996","label":"15th Floor","selected":false},{"name":"op1442860308362","label":"Other
+        \u200b","selected":false}]},{"type":"text","name":"el1442864114091","required":false,"label":"If
+        you selected ''Other'' please write your floor number below\u00a0","value":"","microcopy":"","limit_type":"words","limit":0,"plain_text":false},{"type":"choice_radio","name":"el1442864205102","required":false,"label":"Cardinal
+        Direction if your office uses it for directions (Required for departments
+        in Bobst)","microcopy":"","other_option":false,"options":[{"name":"op1442864205103","label":"North","selected":false},{"name":"op1442864205104","label":"South","selected":false},{"name":"op1442864205105","label":"East
+        ","selected":false},{"name":"op1442864229876","label":"West","selected":false}]},{"type":"text","name":"el1442864990850","required":false,"label":"Room
+        Number as appears on door plate (if applicable)","value":"","microcopy":"","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"el1445275798116","required":false,"label":"Area
+        Name - ex. Research Commons","value":"","microcopy":"","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1442508390537","title":"DEPARTMENT
+        EMAIL and PHONE NUMBER","subtitle":"<p>Please select the primary email address
+        for your department. \u00a0<\/p><p>If your department does not have a group
+        email and would be interested in getting one <a href=\"https:\/\/nyu.service-now.com\/servicelink\/kb_search.do?id=KB0013048\"
+        target=\"_blank\">ITS has provided instructions on how to do so<\/a>.\u00a0<\/p>"},{"type":"text","name":"el1440693551720","required":false,"label":"Department
+        Email\u00a0","value":"","microcopy":"If your department has an email group
+        please provide that address above.  \n\nIf your department does not have a
+        group email and would be interested this link will give you information and
+        instructions on how to obtain one:  https:\/\/nyu.service-now.com\/servicelink\/kb_search.do?id=041203711453241
+        .","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"el1440695007124","required":false,"label":"Phone
+        Number","value":"","microcopy":"If your department has a phone number please
+        list it above.  If your department does not have designated phone number please
+        provide the general number for your library.\n\nPhone numbers should be in
+        this format:\n(area code) ###-####  \n\ne.g. (212) 222-2222","limit_type":"words","limit":0,"plain_text":false},{"type":"files","name":"el1445275233603","required":false,"label":"Department
+        Image - Will appear in the header of the department''s page","microcopy":"If
+        there is an image that is representative of your department please feel free
+        to include that as an upload it above.  \n\nImage should be high quality high-res.  "}]},{"label":"Related
+        Dept\/Units","name":"tab1445275885837","hidden":false,"elements":[{"type":"section","name":"el1445275885839","title":"Departments
+        and units under your group (if applicable)","subtitle":"<p>We want to show
+        the organizational\u00a0relationships between departments so users know how
+        departments and their services interconnect. \u00a0<\/p><p>If your department
+        has other departments or units under you use the space below to list them.
+        \u00a0<\/p><p><span>For a full listing of\u00a0<\/span><a href=\"https:\/\/docs.google.com\/a\/nyu.edu\/document\/d\/1U3m8HElSmz47DAEu9-awN_sxkdiB4pWNAzVuWicQot0\/edit?usp=sharing\"
+        target=\"_blank\">Library Departments (as of 2015)<\/a><\/p><p><br \/><\/p><p>If
+        this is not relevant to your department select the \"Does Not Apply\" at the
+        bottom of this page.<\/p>"},{"type":"text","name":"el1445275885840","required":false,"label":"Please
+        list any departments or units under your group, if applicable\u00a0","value":"<p>\n    -\n<\/p>\n<p>\n    -\n<\/p>\n<p>\n    -\n<\/p>","microcopy":"","limit_type":"words","limit":0,"plain_text":false},{"type":"choice_radio","name":"el1445276464041","required":false,"label":"If
+        you have no departments or units under you click \"Does Not Apply\"\u00a0","microcopy":"","other_option":false,"options":[{"name":"op1445276464042","label":"Does
+        Not Apply","selected":false}]}]},{"label":"People","name":"tab1445437188625","hidden":false,"elements":[{"type":"section","name":"el1445455313359","title":"This
+        tab covers...","subtitle":"<ul><li>\u200bThe people that will appear on your
+        department''s webpage<\/li><li>If certain people should appear at the top
+        of a listing of all your staff for your department<\/li><li>Professional photos
+        for the Staff Directory<\/li><\/ul>"},{"type":"section","name":"el1445437220426","title":"The
+        \"People\" Section of Your Department Page","subtitle":"<p><strong>The \"People\"\u00a0section
+        is designed to help users recognize some of the most front-facing members
+        of your department, along with the department''s\u00a0manager(s). \u00a0<\/strong><br
+        \/><\/p><p><strong><br \/><\/strong><\/p><ul><li>\u200bUp\u00a0to <strong>6<\/strong>
+        employee \"contact cards\"\u00a0(featuring an image or avatar and basic contact
+        information,\u00a0same as in the staff directory) can be displayed.\u00a0<br
+        \/><\/li><\/ul><p><br \/><\/p><ul><li>There is a \"See More\" link at the
+        bottom of the section that takes users to a pre-filtered list displaying\u00a0all
+        the employees for your department (so no one is left out). \u00a0<ul><li>If
+        you have department members that should appear at the top of the pre-filtered
+        \"see more\" list, you can provide their info in the \"<strong>Department''s
+        Staff List View\" section on the tab.<\/strong><\/li><\/ul><\/li><\/ul><p><br
+        \/><\/p><p><strong>\u200bWho should be included?<\/strong><br \/><\/p><p>Total
+        of 6 people, including DMs\u200b<\/p><p><strong>Department Manager(s)<\/strong>
+        - the DMs will be displayed first on the People page.\u00a0<\/p><p><strong>Front-facing
+        employees<\/strong> - those\u00a0people who interact most with users, offer
+        consultations, teach classes, etc.\u00a0<\/p><p><strong><\/strong><\/p><p><strong><\/strong><\/p>"},{"type":"text","name":"el1445437215965","required":false,"label":"Department
+        Manager (Name and NetID) 1\u00a0","value":"","microcopy":"Include name and
+        NetID of Department Managers\n\nEx.  John Doe, jd123","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"1445441490083","required":false,"label":"Department
+        Manager (Name and NetID) 2","value":"","microcopy":"Include name and NetID
+        of Department Managers\n\nEx.  John Doe, jd123","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1445441645825","title":"Front-facing
+        Employees","subtitle":"<p>People who interact most with users, offer consultations,
+        teach classes, etc.\u00a0\u200b\u200b<\/p><p><br \/><\/p><p>If you have...<\/p><p>
+        1 DM include up to 5 employees<\/p><p>2 DMs include up to 4 employees<\/p>"},{"type":"text","name":"el1445441477765","required":false,"label":"Front-facing
+        Employee 1","value":"","microcopy":"Include Name and NetID of employee\n\nEx.
+        John Doe, jd123","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"1445441763356","required":false,"label":"Front-facing
+        Employee 2","value":"","microcopy":"Include Name and NetID of employee\n\nEx.
+        John Doe, jd123","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"1445441760350","required":false,"label":"Front-facing
+        Employee 3\u00a0","value":"","microcopy":"Include Name and NetID of employee\n\nEx.
+        John Doe, jd123","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"1445441757311","required":false,"label":"Front-facing
+        Employee 4\u00a0","value":"","microcopy":"Include Name and NetID of employee\n\nEx.
+        John Doe, jd123","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"1445441754587","required":false,"label":"Front-facing
+        Employee 5\u00a0","value":"","microcopy":"Include Name and NetID of employee\n\nEx.
+        John Doe, jd123","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1445456076955","title":"Department''s
+        Staff List View","subtitle":"<p>The \"see more\" tab at the bottom of the
+        People section will take users to a pre-filtered list from the staff directory
+        showing all your staff members. \u00a0<\/p><p><span>If certain members of
+        your staff need to appear the top of this list\u00a0you can provide their
+        names and netIDs below. \u00a0<\/span><br \/><\/p>"},{"type":"text","name":"el1445456705472","required":false,"label":"Names
+        and NetIDs of staff who should appear at the top of your department''s list
+        of employees \u00a0","value":"","microcopy":"One employee per line.  Employees
+        will appear in department''s staff list in the order written here.\n\nEx.
+        \nJohn Doe, jd123\nJane Doe, jd124\n","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1445456493963","title":"Professional
+        Photos ","subtitle":"<p>We are coordinating photoshoots for those who would
+        like to have a\u00a0\u200bprofessional photograph for their listing in the
+        staff directory. \u00a0Those that do not have a professional photo will have
+        an avatar.<\/p><p>Please indicate below if you would be interested in having
+        your staff get professional photos and we will set that up. \u00a0<\/p>"},{"type":"choice_radio","name":"el1445455145762","required":false,"label":"Would
+        you like your staff members the opportunity to have professional photos for
+        the staff directory?","microcopy":"","other_option":false,"options":[{"name":"op1445455145763","label":"Yes","selected":false},{"name":"op1445455145764","label":"No","selected":false}]}]},{"label":"Links\/Guides\/Class","name":"tab1440693363390","hidden":false,"elements":[{"type":"section","name":"el1445275083849","title":"This
+        Section Covers Content for...","subtitle":"<ul><li>\u200bUseful links relevant
+        to your department<\/li><li>Frequently Asked Questions\u00a0<\/li><li>Hours<\/li><li>Library
+        Classes<\/li><li>Requesting an Appointment<\/li><\/ul>"},{"type":"section","name":"el1442439470955","title":"Your
+        Relevant Links - Optional","subtitle":"\n\n\n\n\n\n\n\n<p><span>Your department
+        may have some resources it particularly wants to highlight on its department
+        page.\u00a0<\/span><\/p><p><span>For example, you may want to add: a link
+        to an article written about your department; a link to a libguide; \u00a0to
+        a collection or exhibit; or a service your department provides.<\/span>\u200b<br
+        \/><\/p><p>\u200b<\/p><p>\u00a0<span>Below you''ll find 3 \"Quick Link\"\u00a0sections,
+        one for each resource link.\u00a0<\/span><\/p><p>Links will appear on your
+        department page in the order they appear here\u00a0(i.e. Quick Link 1, Quick
+        Link 2, Quick Link 3).<\/p>"},{"type":"text","name":"el1440698073404","required":false,"label":"Quick
+        Link 1","value":"<p>\n    @NYULibraries on GitHub: ''https:\/\/github.com\/NYULibraries''\n<\/p>","microcopy":"FORMAT\n\ntitle
+        of link (how the text will appear on the page): url (surround with '' on either
+        side of the url\n\nex. Google: ''http:\/\/www.google.com''","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"1442853523733","required":false,"label":"Quick
+        Link 2","value":"<p>\n    libtechnyu Blog: ''http:\/\/web1.library.nyu.edu\/libtechnyu\/''\n<\/p>","microcopy":"FORMAT\n\ntitle
+        of link (how the text will appear on the page): url (surround with '' on either
+        side of the url\n\nex. Google: ''http:\/\/www.google.com'' ","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"1442853521934","required":false,"label":"Quick
+        Link 3","value":"<p>\n    The Agile Manifesto: ''http:\/\/agilemanifesto.org\/''\n<\/p>","microcopy":"FORMAT\n\ntitle
+        of link (how the text will appear on the page): url (surround with '' on either
+        side of the url\n\nex. Google: ''http:\/\/www.google.com''","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1442439491780","title":"Your
+        FAQs ","subtitle":"<p>Departmental FAQs can currently be found via LibAnswers
+        and\/or on departments'' LibGuides, blogs, or websites. \u00a0We would like
+        to be able to make your FAQs findable via your department page.\u00a0<\/p><p>Below
+        are instructions for providing FAQ content for the new site.<\/p>"},{"type":"choice_checkbox","name":"el1442858313488","required":false,"label":"Does
+        your department currently have any FAQs?","microcopy":"Select all that apply.","options":[{"name":"op1442858313490","label":"Yes
+        - We use LibAnswers","selected":false},{"name":"op1442858313489","label":"Yes
+        - On our blog, current website, or in PDFs","selected":false},{"name":"op1442858313491","label":"No
+        - But we would like to.  Can you help us set that up in LibAnswers?","selected":false},{"name":"op1442858407365","label":"No
+        - We don''t have any FAQs ","selected":true}]},{"type":"section","name":"el1445531672298","title":"What
+        categories or topics do you add to your FAQs, if any?","subtitle":"<p><strong>If
+        you use LibAnswers\u00a0<\/strong>-\u00a0<a href=\"http:\/\/goo.gl\/forms\/HAJo3aAnKR\"
+        target=\"_blank\">This form lets you select the topics your department applies
+        to FAQs<\/a><\/p>"},{"type":"text","name":"el1442858477022","required":false,"label":"\u200bProvide
+        any other topics or categories you add to FAQs not in LibAnswers, if any.","value":"","microcopy":"","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"el1441206560617","required":false,"label":"If
+        you don''t use LibAnswers please provide the URLS to your FAQs","value":"","microcopy":"\u200bProvide
+        url to your FAQs on blogs, current webpages, etc.","limit_type":"words","limit":0,"plain_text":false},{"type":"files","name":"el1442857676188","required":false,"label":"FAQ
+        Files or PDFs can be uploaded here","microcopy":"If your department has FAQ
+        pdfs or files not available via a url upload them here."},{"type":"section","name":"el1442505534094","title":"HOURS","subtitle":"<p>Some
+        departments have service hours. \u00a0These hours will be displayed on pages
+        related to your services, as well as linked to your department page. \u00a0<\/p><p><strong>NO
+        ACTION IS REQUIRED\u200b. \u00a0Your LibCal ID number will appear below if
+        your department has hours.<\/strong><\/p>"},{"type":"text","name":"el1440698075004","required":false,"label":"LibCal
+        ID Number","value":"","microcopy":"If your department has service hours, your
+        LibCal hours ID will be shown above.  No action is required. ","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1442505447009","title":"LIBRARY
+        CLASSES","subtitle":"<p>\u200bSome departments offer\u00a0classes. \u00a0A\u00a0calendar
+        of library classes can be included as a link on your department''s page.<\/p>"},{"type":"choice_radio","name":"el1442505356854","required":false,"label":"Does
+        your department want to include a link to library classes?","microcopy":"","other_option":false,"options":[{"name":"op14425053568557138","label":"Yes","selected":false},{"name":"op14425053568566463","label":"No","selected":true}]},{"type":"section","name":"el1442507745550","title":"REQUESTING
+        AN APPOINTMENT","subtitle":"<p>If your department offers consultation appointments
+        please include the url or email address your department uses for making appointments.\u00a0<\/p>"},{"type":"text","name":"el1440698239060","required":false,"label":"Form
+        URL or Email address used for appointment requests","value":"<p>\n    <br>\n<\/p>","microcopy":"If
+        your department uses a form to schedule appointments please provide the url
+        or email contact info.","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1442507942331","title":"DEPARTMENT
+        IMAGE","subtitle":"<p>If there is an image that is representative of your
+        department please feel free to include that as an upload below. \u00a0<\/p>"},{"type":"files","name":"el1440698226105","required":false,"label":"Department
+        Image","microcopy":"If your department has an image that should appear on
+        the department page please upload it here. "}]},{"label":"Social Media","name":"tab1440693355056","hidden":false,"elements":[{"type":"section","name":"el1442864383451","title":"If
+        your department uses social media...","subtitle":"<p>Some departments use
+        social media such as\u00a0<\/p><ul><li>\u200btwitter<\/li><li>blogs<\/li><li>facebook<\/li><\/ul><p>If
+        you answer YES in the question below please fill in the rest of this page
+        with the appropriate information.\u00a0\u200b<\/p>"},{"type":"choice_radio","name":"el1442864483254","required":false,"label":"Does
+        your department use social media?","microcopy":"","other_option":false,"options":[{"name":"op1442864483255","label":"No,
+        and don''t want to.","selected":false},{"name":"op1442864483256","label":"Not
+        at the moment, but might be interested in social media.","selected":false},{"name":"op1442864483257","label":"Yes","selected":true}]},{"type":"text","name":"el1440697232178","required":false,"label":"Facebook","value":"","microcopy":"Please
+        provide your department''s Facbook user name","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"el1440697234074","required":false,"label":"Twitter","value":"<p>\n    libtechnyu\n<\/p>","microcopy":"Please
+        provide your department''s Twitter handle.  \n\nFormat: only the text no @
+        symbol\ne.g. departmenthandle","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1442864607367","title":"Department
+        Blogs","subtitle":"<p>If you use a blog the site highlight your blog two ways:<\/p><ol><li><span>\u200bPull
+        in feeds of your latest posts that will appear on your department page via
+        an <strong>RSS<\/strong> link<\/span><\/li><li><span>Link out to your blog\u00a0<\/span><\/li><\/ol><p><br
+        \/><\/p><p><strong>To use an RSS<\/strong> type in your blog url then \/feed\/
+        (backslash feed backslash)\u00a0 example: http:\/\/blog.com\/feed\/<\/p>"},{"type":"text","name":"el1440697237834","required":false,"label":"Blog","value":"<p>\n    title:
+        ''libtechnyu Blog''\n<\/p>\n<p>\n    link: ''http:\/\/web1.library.nyu.edu\/libtechnyu\/''\n<\/p>\n<p>\n    rss:
+        ''http:\/\/web1.library.nyu.edu\/libtechnyu\/atom.xml''\n<\/p>","microcopy":"The
+        new website offers better visibility for departmental blogs.  If your department
+        has a blog that you would like to include please provide the following:\n\ntitle:
+        \"Blog Name\"\nlink: url\n\nTo use an RSS type in your blog url then \/feed\/
+        (backslash feed backslash)  example: http:\/\/blog.com\/feed\/\n","limit_type":"words","limit":0,"plain_text":false}]},{"label":"Services","name":"tab1442865600336","hidden":false,"elements":[{"type":"section","name":"el1442865616527","title":"Service
+        Pages on the new website","subtitle":"<p>As part of the content gathering
+        process there will be a followup relating to your department''s services.
+        \u00a0<\/p><p>Please stay tuned, and thanks in advance for your help!<\/p>"},{"type":"choice_radio","name":"el1442865713604","required":false,"label":"Does
+        your department provide front facing services?","microcopy":"","other_option":false,"options":[{"name":"op1442865713605","label":"Yes,
+        we provide services that should be exposed on the website, so the NYU community
+        can utilize them.","selected":false},{"name":"op1442865713606","label":"No,
+        we work more behind the scenes and don''t author any service documents. ","selected":true}]}]}],"notes":"","type":"item","overdue":true,"created_at":{"date":"2015-09-15
+        16:47:39.000000","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-12-01
+        21:31:03.000000","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241861","is_default":false,"position":"3","color":"#5eb95e","name":"Final
+        edits","description":"DMs should give a final review to content and make changes
+        if needed in order to give it final approval.","can_edit":true}},"due_dates":{"data":[{"status_id":241859,"overdue":true,"due_date":{"date":"2015-10-05
+        22:00:00.000000","timezone_type":3,"timezone":"UTC"}},{"status_id":241860,"overdue":true,"due_date":{"date":"2015-10-08
+        22:00:00.000000","timezone_type":3,"timezone":"UTC"}},{"status_id":241861,"overdue":true,"due_date":{"date":"2015-10-12
+        22:00:00.000000","timezone_type":3,"timezone":"UTC"}}]}}}'
+    http_version: 
+  recorded_at: Wed, 02 Dec 2015 17:30:50 GMT
+recorded_with: VCR 2.9.3
