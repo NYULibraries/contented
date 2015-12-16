@@ -14,7 +14,13 @@ module Contented
         end
 
         def title
-          @title ||= find_element_by(section: :contact_info, type: 'choice_radio', label: 'Department Name')
+          @title ||= begin
+            title = find_element_by(section: :contact_info, type: 'choice_radio', label: 'Department Name')
+            if title == "Other"
+              title = find_element_by(section: :contact_info, type: 'choice_radio', label: 'Department Name', value: true)
+            end
+            title
+          end
         end
 
         def location
@@ -154,6 +160,8 @@ module Contented
             search = begin
               if conditions[:type] == 'text'
                 type_search.first["value"]
+              elsif conditions[:value]
+                type_search.first["options"].select {|option| option["selected"] == true }.first["value"]
               else
                 type_search.first["options"].select {|option| option["selected"] == true }.first["label"]
               end
