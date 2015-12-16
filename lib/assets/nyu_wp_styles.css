@@ -1,0 +1,97 @@
+/*---------------------------------------------------------------------------------
+
+NYU Look and Feel for Hemingway Wordpress theme (http://www.andersnoren.se/teman/hemingway-wordpress-theme/)
+Bobcat Blog was originally set to FLATO theme. Changed to Hemingway for these styles.
+
+----------------------------------------------------------------------------------- */
+
+.big-wrapper div.header {
+    background-image: url('');
+    background-position: 0px 100px;
+    background-color: #57068c;
+    padding: 0;
+}
+
+.big-wrapper h2.blog-title a {
+    display: none;
+}
+
+.big-wrapper h3.blog-description {
+    display: none;
+}
+
+.big-wrapper div.blog-info {
+    background-color: #57068c;
+    background-image: url('https://dev.library.nyu.edu/assets/images/nyulibraries-logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 233px;
+    height: 93px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.big-wrapper div.header-inner {
+    text-align: left;
+    height: 93px;
+}
+
+.big-wrapper div.navigation {
+    background-color: white;
+}
+
+.big-wrapper a {
+    color: #57068c;
+}
+
+.big-wrapper .blog-menu a:hover {
+    text-decoration: underline;
+}
+
+.big-wrapper .blog-menu li:hover > a {
+    color: #6C07AE;
+}
+
+.big-wrapper .blog-menu .current-menu-item a {
+    font-weight: bold;
+    color: black;
+}
+
+.big-wrapper .blog-menu li:hover a {
+    background-color: white;
+	  cursor: pointer;
+}
+
+.big-wrapper h2 > a {
+    color: #22272d;
+}
+
+.big-wrapper .bg-dark {
+    background-color: #22272d;
+}
+
+.big-wrapper .footer  a {
+    color: #acb6c2;
+}
+
+.big-wrapper .credits a {
+    color: #acb6c2;
+}
+
+.blog-logo a img {
+    display: none;
+}
+
+.big-wrapper .blog-logo {
+    background-image: url('https://dev.library.nyu.edu/assets/images/nyulibraries-logo.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 233px;
+    height: 93px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+}
