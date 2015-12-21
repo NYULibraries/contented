@@ -15,16 +15,16 @@ module Conversions
 
         def initialize(expanded_person)
           @expanded_person = expanded_person
-          @job_position ||=  @expanded_person.all_positions_jobs.find { |job| job['Is_Primary_Job'] == '1' } || {}
-          city, @location, @space = @job_position['Position_Work_Space'].to_s.split('>')
+          @job_position ||= @expanded_person.all_positions_jobs.find { |job| job['Is_Primary_Job'] == '1' } || {}
+          _city, @location, @space = @job_position['Position_Work_Space'].to_s.split('>')
         end
 
         def to_markdown
-          Presenter::MarkdownPresenter.new(self).run
+          Presenter::MarkdownPresenter.new(self).render
         end
 
         def title
-          expanded_person.title || expanded_person.backup_title
+          expanded_person.title || "#{expanded_person.first_name} #{expanded_person.last_name}"
         end
 
         def email
@@ -52,7 +52,7 @@ module Conversions
         end
 
         def expertise
-           to_yaml_list(expanded_person.expertise)
+          to_yaml_list(expanded_person.expertise)
         end
 
         def buttons
