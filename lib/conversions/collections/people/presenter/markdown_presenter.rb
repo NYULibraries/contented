@@ -4,19 +4,15 @@ module Conversions
   module Collections
     module People
       module Presenter
+        # Presenter class for Expanded Person Exhibitor. Lists all items in People Markdown
         class MarkdownPresenter
           include Conversions::Collections::Helpers::PresenterHelpers
           attr_reader :person
           def initialize(person)
             @person = person
-            render
           end
 
-          def run
-            render
-          end
-
-        private
+          private
 
           def yaml_start
             "---\n"
@@ -98,4 +94,3 @@ module Conversions
     end
   end
 end
-
