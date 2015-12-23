@@ -1,4 +1,3 @@
-require 'forwardable'
 require_relative 'expanded_person'
 require_relative 'presenter/markdown_presenter'
 require_relative '../helpers/markdown_field_helpers'

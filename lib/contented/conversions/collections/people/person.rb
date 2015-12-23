@@ -1,5 +1,3 @@
-require 'json'
-
 module Contented
   module Conversions
     module Collections

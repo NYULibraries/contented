@@ -1,4 +1,3 @@
-require 'forwardable'
 require_relative 'person'
 require_relative 'google_spreadsheet_person'
 

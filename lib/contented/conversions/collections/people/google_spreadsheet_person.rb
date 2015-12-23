@@ -1,4 +1,3 @@
-require 'json'
 require_relative '../helpers/google_spreadsheet_helpers'
 require_relative 'person'
 
