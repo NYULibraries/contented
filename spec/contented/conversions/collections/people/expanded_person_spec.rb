@@ -1,4 +1,4 @@
-require File.expand_path('../../../../spec_helper.rb', __FILE__)
+require 'spec_helper'
 
 def expanded_person_attributes
   %w[work_phone email_address all_positions_jobs
@@ -115,21 +115,24 @@ describe 'ExpandedPerson' do
       }
     }.to_json
   }
-  subject(:expanded_person) { Conversions::Collections::People::ExpandedPerson.new(person, person_sheet) }
+  subject(:expanded_person) { Contented::Conversions::Collections::People::ExpandedPerson.new(person, person_sheet) }
   context 'when no JSON formatted data is provided' do
-    let(:person) { Conversions::Collections::People::Person.new('{}') }
-    let(:person_sheet) { Conversions::Collections::People::GoogleSpreadsheetPerson.new('{}') }
+    let(:person) { Contented::Conversions::Collections::People::Person.new('{}') }
+    let(:person_sheet) { Contented::Conversions::Collections::People::GoogleSpreadsheetPerson.new('{}') }
     expanded_person_attributes.each do |attribute|
       it "should not have #{attribute}" do
         next if attribute == 'all_positions_jobs'
         expect(expanded_person.send( attribute.to_sym )).to be_nil
       end
     end
+
+    it "can have empty array for all_positions_jobs but never nil" do
+      expect(expanded_person.all_positions_jobs).to_not be_nil
+    end
   end
   context "when proper JSON formatted data is provided" do
-    # subject(:expanded_person) { Conversions::Collections::People::GoogleSpreadsheetPerson.new(person, person_sheet) }
-    let(:person) { Conversions::Collections::People::Person.new(peoplesync) }
-    let(:person_sheet) { Conversions::Collections::People::GoogleSpreadsheetPerson.new(people_sheet) }
+    let(:person) { Contented::Conversions::Collections::People::Person.new(peoplesync) }
+    let(:person_sheet) { Contented::Conversions::Collections::People::GoogleSpreadsheetPerson.new(people_sheet) }
     expanded_person_attributes.each do |attribute|
       it "should have #{attribute}" do
         expect(expanded_person.send( attribute.to_sym )).not_to be_nil

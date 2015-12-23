@@ -1,4 +1,4 @@
-require File.expand_path('../../../../spec_helper.rb', __FILE__)
+require 'spec_helper'
 
 def google_spreadsheet_attributes
   %w[address buttons departments
@@ -10,7 +10,7 @@ end
 
 describe 'GooglSpreadsheetPerson' do
   let(:json_data) { '{}' }
-  subject(:google_spreadsheet_person) { Conversions::Collections::People::GoogleSpreadsheetPerson.new(json_data) }
+  subject(:google_spreadsheet_person) { Contented::Conversions::Collections::People::GoogleSpreadsheetPerson.new(json_data) }
   context "when no JSON formatted data is provided" do
     google_spreadsheet_attributes.each do |attribute|
       it "should not have #{attribute}" do

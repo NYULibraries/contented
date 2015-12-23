@@ -1,4 +1,4 @@
-require File.expand_path('../../../../spec_helper.rb', __FILE__)
+require 'spec_helper'
 
 def json_data_expand_attributes
   %w[buttons departments
@@ -121,18 +121,23 @@ describe 'ExpandedPersonExhibitor' do
       }
     }.to_json
   }
-  let(:person) { Conversions::Collections::People::Person.new(peoplesync) }
-  let(:person_sheet) { Conversions::Collections::People::GoogleSpreadsheetPerson.new(people_sheet) }
-  let(:expanded_person) { Conversions::Collections::People::ExpandedPerson.new(person, person_sheet) }
-  subject(:expanded_person_exhibitor) { Conversions::Collections::People::ExpandedPersonExhibitor.new(expanded_person) }
+  let(:person) { Contented::Conversions::Collections::People::Person.new(peoplesync) }
+  let(:person_sheet) { Contented::Conversions::Collections::People::GoogleSpreadsheetPerson.new(people_sheet) }
+  let(:expanded_person) { Contented::Conversions::Collections::People::ExpandedPerson.new(person, person_sheet) }
+  subject(:expanded_person_exhibitor) { Contented::Conversions::Collections::People::ExpandedPersonExhibitor.new(expanded_person) }
   context 'when no JSON formatted data is provided' do
     let (:peoplesync) { '{}' }
     let (:people_sheet) { '{}' }
 
     json_data_expand_attributes.each do |attribute|
       it "should not have #{attribute}" do
+        next if attribute == 'title'
         expect(expanded_person_exhibitor.send( attribute.to_sym )).to be_nil
       end
+    end
+
+    it "can have blank title but never nil" do
+      expect(expanded_person_exhibitor.title).to_not be_nil
     end
 
     json_data_expand_attributes.each do |attribute|
