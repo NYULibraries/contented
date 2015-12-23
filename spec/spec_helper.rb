@@ -4,9 +4,7 @@ require 'coveralls'
 Coveralls.wear!
 
 require 'pry'
-require 'figs'
 require 'vcr'
-Figs.load()
 require 'contented'
 
 VCR.configure do |c|
