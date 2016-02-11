@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
 gemspec
 
+gem "gather_content-api", github: "NYULibraries/gather_content-api"
+
 group :development do
   gem 'vcr', '~> 2.9'
   gem 'webmock', '~> 1.21'

@@ -1,8 +1,11 @@
 require 'json'
 require 'faraday'
+require 'gather_content'
 
 module Contented
-  autoload :GatherContent, 'contented/gather_content'
-  autoload :Conversions, 'contented/conversions'
   require 'contented/version'
+  autoload :Decorators, 'contented/decorators'
+  autoload :Conversions, 'contented/conversions'
+  autoload :Department, 'contented/department'
+  autoload :Departments, 'contented/departments'
 end
