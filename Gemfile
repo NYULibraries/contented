@@ -12,5 +12,4 @@ group :development do
   gem 'rubycritic', '~> 1.4'
   gem 'coveralls', '~> 0.8'
   gem 'figs', '~> 2.0'
-  # gem 'pry'
 end
