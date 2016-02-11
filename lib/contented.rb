@@ -3,10 +3,9 @@ require 'faraday'
 require 'gather_content'
 
 module Contented
+  require 'contented/version'
   autoload :Decorators, 'contented/decorators'
   autoload :Conversions, 'contented/conversions'
-  require 'contented/version'
-  require 'contented/department'
-  require 'contented/departments'
-  require 'contented/conversions'
+  autoload :Department, 'contented/department'
+  autoload :Departments, 'contented/departments'
 end
