@@ -1,6 +1,3 @@
-require_relative '../helpers/google_spreadsheet_helpers'
-require_relative 'person'
-
 module Contented
   module Conversions
     module Collections

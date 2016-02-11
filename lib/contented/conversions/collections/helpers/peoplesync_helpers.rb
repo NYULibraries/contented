@@ -1,9 +1,8 @@
-require 'RestClient'
 module Conversions
   module Collections
     module Helpers
       # Grabs the peoplesync data
-      module Peoplesync
+      module PeoplesyncHelpers
         def people_json_call
           RestClient::Request.new(method: :get, url: "#{ENV['PEOPLE_JSON_URL']}", user: "#{ENV['PEOPLE_JSON_USER']}",
                                   password: "#{ENV['PEOPLE_JSON_PASS']}",
