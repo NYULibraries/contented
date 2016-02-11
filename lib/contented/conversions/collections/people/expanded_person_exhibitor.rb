@@ -1,7 +1,3 @@
-require_relative 'expanded_person'
-require_relative 'presenter/markdown_presenter'
-require_relative '../helpers/markdown_field_helpers'
-
 module Contented
   module Conversions
     module Collections
@@ -20,7 +16,7 @@ module Contented
           end
 
           def to_markdown
-            Presenter::MarkdownPresenter.new(self).render
+            Presenters::MarkdownPresenter.new(self).render
           end
 
           def title
