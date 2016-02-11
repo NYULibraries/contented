@@ -1,10 +1,8 @@
-require_relative '../../helpers/presenter_helpers'
-
 module Contented
   module Conversions
     module Collections
       module People
-        module Presenter
+        module Presenters
           # Presenter class for Expanded Person Exhibitor. Lists all items in People Markdown
           class MarkdownPresenter
             include Conversions::Collections::Helpers::PresenterHelpers
