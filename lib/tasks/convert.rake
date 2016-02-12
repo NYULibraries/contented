@@ -12,6 +12,10 @@ def find_in_json(people_sheet=[], netid)
   people_sheet.find { |person_sheet| person_sheet['gsx$netid']['$t'] == netid } || {}
 end
 
+def people_dir
+  "_people"
+end
+
 namespace :contented do
   namespace :convert do
     desc 'Converts people into markdown'
@@ -28,14 +32,18 @@ namespace :contented do
           google_spreadsheet_person = Contented::Conversions::Collections::People::GoogleSpreadsheetPerson.new(find_person.to_json)
           expanded_person = Contented::Conversions::Collections::People::ExpandedPerson.new(person, google_spreadsheet_person)
           exhibitor = Contented::Conversions::Collections::People::ExpandedPersonExhibitor.new(expanded_person)
-          puts "#{exhibitor.title}.markdown", exhibitor.to_markdown
+          filename = Contented::Helpers::TitleHelpers::titlize(exhibitor.title.downcase)
+          puts "Writing '#{exhibitor.title}' to #{people_dir}/#{filename}.markdown..."
+          File.write "#{people_dir}/#{filename}.markdown", exhibitor.to_markdown
         end
 
         people_sheet.each  do |person_sheet|
           google_spreadsheet_person = Contented::Conversions::Collections::People::GoogleSpreadsheetPerson.new(person_sheet.to_json)
           expanded_person = Contented::Conversions::Collections::People::ExpandedPerson.new(nil, google_spreadsheet_person)
           exhibitor = Contented::Conversions::Collections::People::ExpandedPersonExhibitor.new(expanded_person)
-          puts "#{exhibitor.title}.markdown", exhibitor.to_markdown
+          filename = Contented::Helpers::TitleHelpers::titlize(exhibitor.title.downcase)
+          puts "Writing '#{exhibitor.title}' to #{people_dir}/#{filename}.markdown..."
+          File.write "#{people_dir}/#{filename}.markdown", exhibitor.to_markdown
         end
       end
     end
