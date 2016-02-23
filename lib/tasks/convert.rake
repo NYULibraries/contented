@@ -27,6 +27,7 @@ namespace :contented do
 
         peoplesync.each do |peoplesync_person|
           person = Contented::Conversions::Collections::People::Person.new(peoplesync_person.to_json)
+          next if (ENV['exclude_people'] || '').include? person.netid
           find_person = find_in_json(people_sheet, person.netid)
           people_sheet.delete(find_person)
           google_spreadsheet_person = Contented::Conversions::Collections::People::GoogleSpreadsheetPerson.new(find_person.to_json)
@@ -39,6 +40,7 @@ namespace :contented do
 
         people_sheet.each  do |person_sheet|
           google_spreadsheet_person = Contented::Conversions::Collections::People::GoogleSpreadsheetPerson.new(person_sheet.to_json)
+          next if (ENV['exclude_people'] || '').include? google_spreadsheet_person.netid
           expanded_person = Contented::Conversions::Collections::People::ExpandedPerson.new(nil, google_spreadsheet_person)
           exhibitor = Contented::Conversions::Collections::People::ExpandedPersonExhibitor.new(expanded_person)
           filename = Contented::Helpers::TitleHelpers::titlize(exhibitor.title.downcase)
