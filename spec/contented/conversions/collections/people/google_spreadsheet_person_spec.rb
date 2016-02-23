@@ -4,7 +4,7 @@ def google_spreadsheet_attributes
   %w[address buttons departments
   email expertise guides image jobtitle
   keywords location netid phone space
-  status subtitle title twitter publications]
+  status subtitle title twitter publications blog about]
 end
 
 
@@ -67,6 +67,9 @@ describe 'GooglSpreadsheetPerson' do
         },
         "gsx$publications" => {
           :$t => "Publications"
+        },
+        "gsx$blog" => {
+          :$t => "rss: rss.xml"
         },
         "gsx$keywords" => {
           :$t => "Key Word"

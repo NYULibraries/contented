@@ -18,19 +18,19 @@ module Contented
             end
 
             def subtitle
-              "subtitle: '#{person.subtitle}'"
+              "subtitle: #{wrap_in_quotes(person.subtitle)}"
             end
 
             def job_title
-              "job_title: '#{person.jobtitle}'"
+              "job_title: #{wrap_in_quotes(person.jobtitle)}"
             end
 
             def location
-              "location: '#{person.location}'"
+              "location: #{wrap_in_quotes(person.location)}"
             end
 
             def space
-              "space: '#{person.space}'"
+              "space: #{wrap_in_quotes(person.space)}"
             end
 
             def departments
@@ -38,7 +38,7 @@ module Contented
             end
 
             def status
-              "status: '#{person.status}'"
+              "status: #{wrap_in_quotes(person.status)}"
             end
 
             def expertise
@@ -46,19 +46,19 @@ module Contented
             end
 
             def email
-              "email: '#{person.email}'"
+              "email: #{wrap_in_quotes(person.email)}"
             end
 
             def phone
-              "phone: '#{person.phone}'"
+              "phone: #{wrap_in_quotes(person.phone)}"
             end
 
             def twitter
-              "twitter: '#{person.twitter}'"
+              "twitter: #{wrap_in_quotes(person.twitter)}"
             end
 
             def image
-              "image: '#{person.image}'"
+              "image: #{wrap_in_quotes(person.image)}"
             end
 
             def buttons
@@ -73,12 +73,16 @@ module Contented
               "publications: #{person.publications}"
             end
 
+            def blog
+              "blog: #{person.blog}"
+            end
+
             def keywords
               "keywords: #{person.keywords}"
             end
 
             def title
-              "title: '#{person.title}'"
+              "title: #{wrap_in_quotes(person.title)}"
             end
 
             def yaml_end
@@ -86,7 +90,11 @@ module Contented
             end
 
             def about_block
-              "# About #{person.title}"
+              "# About #{person.title}\n\n#{person.about}" unless person.about == '' || person.about.nil?
+            end
+
+            def wrap_in_quotes(raw=nil)
+              "'#{raw.gsub(/'/,'\'\'')}'" unless raw.nil? || raw == ''
             end
           end
         end

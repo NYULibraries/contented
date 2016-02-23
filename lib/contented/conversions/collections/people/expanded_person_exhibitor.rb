@@ -6,7 +6,7 @@ module Contented
         class ExpandedPersonExhibitor
           extend Forwardable
           include Conversions::Collections::Helpers::MarkdownFieldHelpers
-          def_delegators :@expanded_person, :subtitle, :status, :twitter, :image
+          def_delegators :@expanded_person, :subtitle, :status, :twitter, :image, :about
           attr_reader :expanded_person
 
           def initialize(expanded_person)
@@ -61,6 +61,10 @@ module Contented
 
           def publications
             to_yaml_object(expanded_person.publications)
+          end
+
+          def blog
+            to_yaml_object(expanded_person.blog)
           end
 
           def keywords
