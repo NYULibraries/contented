@@ -1,7 +1,7 @@
 module Contented
   module Helpers
     module TitleHelpers
-      def self.titlize(str)
+      def titlize(str)
         str.gsub(/[\s']/, '-')
       end
     end
