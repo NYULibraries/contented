@@ -1,4 +1,7 @@
 require 'contented'
+include Contented::Conversions::Collections::People
+include Contented::Helpers::TitleHelpers
+include Contented::Helpers::PeopleSyncHelpers
 
 def uri(sheet_num)
   "http://spreadsheets.google.com/feeds/list/1dulIx-iDMH4R1RwHfZs_HPGuvslQTCNcGNAkxim0v5k/#{sheet_num}/public/values?alt=json"
