@@ -1,7 +1,6 @@
 require 'json'
 require 'faraday'
 require 'gather_content'
-require 'RestClient'
 require 'open-uri'
 
 module Contented
