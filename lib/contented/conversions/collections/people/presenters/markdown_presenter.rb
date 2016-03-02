@@ -90,7 +90,7 @@ module Contented
             end
 
             def about_block
-              "# About #{person.title}\n\n#{person.about}" unless person.about == '' || person.about.nil?
+              "#{person.about}" unless person.about == '' || person.about.nil?
             end
 
             def wrap_in_quotes(raw=nil)
