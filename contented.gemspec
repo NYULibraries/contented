@@ -21,6 +21,5 @@ Gem::Specification.new do |gem|
   gem.required_ruby_version = '>= 1.9.3'
   gem.add_dependency 'sshkit', '>= 1.7.1'
   gem.add_dependency 'rake', '>= 10.0.0'
-  gem.add_dependency 'rest-client'
   gem.add_dependency 'faraday', '>= 0.9.0'
 end

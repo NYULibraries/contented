@@ -7,6 +7,10 @@ require 'pry'
 require 'vcr'
 require 'contented'
 
+
+ENV['gather_content_api_username']  ||= 'api-id'
+ENV['gather_content_api_key']       ||= 'api-key'
+
 VCR.configure do |c|
   c.filter_sensitive_data('api-key') { ENV['gather_content_api_key'] }
   c.filter_sensitive_data('api-id') { ENV['gather_content_api_username'].gsub(/@/,'%40') }

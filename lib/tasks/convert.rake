@@ -1,51 +1,41 @@
 require 'contented'
-
-def uri(sheet_num)
-  "http://spreadsheets.google.com/feeds/list/1dulIx-iDMH4R1RwHfZs_HPGuvslQTCNcGNAkxim0v5k/#{sheet_num}/public/values?alt=json"
-end
-
-def google_sheet_json(sheet_num)
-  JSON.parse(open(uri(sheet_num)).read)['feed']['entry']
-end
-
-def find_in_json(people_sheet=[], netid)
-  people_sheet.find { |person_sheet| person_sheet['gsx$netid']['$t'] == netid } || {}
-end
-
-def people_dir
-  "_people"
-end
+include Contented::Conversions::Collections::People
+include Contented::Helpers::TitleHelpers
+include Contented::Helpers::PeopleSyncHelpers
+include Contented::Helpers::PersonHelpers
+include Contented::Helpers::GoogleSpreadsheetHelpers
 
 namespace :contented do
   namespace :convert do
     desc 'Converts people into markdown'
     namespace :people do
-      task :to_markdown do
-        peoplesync = []
-        # peoplesync = JSON.parse(File.read('NYU-REP-HRI053-Libraries-Directory.json'))['Report_Entry']
-        people_sheet = google_sheet_json(6)
+      namespace :people_sync do
+        task :to_markdown do
+          people_sync_people = people_sync_json || []
+          google_spreadsheet_people = google_sheet_json(6)
 
-        peoplesync.each do |peoplesync_person|
-          person = Contented::Conversions::Collections::People::Person.new(peoplesync_person.to_json)
-          next if (ENV['exclude_people'] || '').include? person.netid
-          find_person = find_in_json(people_sheet, person.netid)
-          people_sheet.delete(find_person)
-          google_spreadsheet_person = Contented::Conversions::Collections::People::GoogleSpreadsheetPerson.new(find_person.to_json)
-          expanded_person = Contented::Conversions::Collections::People::ExpandedPerson.new(person, google_spreadsheet_person)
-          exhibitor = Contented::Conversions::Collections::People::ExpandedPersonExhibitor.new(expanded_person)
-          filename = Contented::Helpers::TitleHelpers::titlize(exhibitor.title.downcase)
-          puts "Writing '#{exhibitor.title}' to #{people_dir}/#{filename}.markdown..."
-          File.write "#{people_dir}/#{filename}.markdown", exhibitor.to_markdown
+          people_sync_people.each do |people_sync_person|
+            # skip if the person is in excluded list
+            next if person_in_exclude_list? people_sync_person
+            # create a person object
+            person = Person.new(people_sync_person.to_json)
+            # Find person from google sheet and pop it off
+            google_spreadsheet_person = find_in_json(google_spreadsheet_people, person.netid)
+            google_spreadsheet_people.delete(google_spreadsheet_person)
+            # Expand the person
+            write_person_file(person, google_spreadsheet_person)
+          end
         end
+      end
 
-        people_sheet.each  do |person_sheet|
-          google_spreadsheet_person = Contented::Conversions::Collections::People::GoogleSpreadsheetPerson.new(person_sheet.to_json)
-          next if (ENV['exclude_people'] || '').include? google_spreadsheet_person.netid
-          expanded_person = Contented::Conversions::Collections::People::ExpandedPerson.new(nil, google_spreadsheet_person)
-          exhibitor = Contented::Conversions::Collections::People::ExpandedPersonExhibitor.new(expanded_person)
-          filename = Contented::Helpers::TitleHelpers::titlize(exhibitor.title.downcase)
-          puts "Writing '#{exhibitor.title}' to #{people_dir}/#{filename}.markdown..."
-          File.write "#{people_dir}/#{filename}.markdown", exhibitor.to_markdown
+      namespace :google_spreadsheet do
+        task :to_markdown do
+          google_spreadsheet_people = google_sheet_json(6)
+
+          google_spreadsheet_people.each  do |google_spreadsheet_person|
+            next if person_in_exclude_list? google_spreadsheet_person
+            write_person_file(nil, google_spreadsheet_person)
+          end
         end
       end
     end

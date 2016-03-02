@@ -351,4 +351,48 @@ http_interactions:
         22:00:00","timezone_type":3,"timezone":"UTC"}}]}}}'
     http_version: 
   recorded_at: Wed, 10 Feb 2016 00:05:52 GMT
+- request:
+    method: get
+    uri: https://api.gathercontent.com/items/2027930
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept:
+      - application/vnd.gathercontent.v0.5+json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - text/html; charset=UTF-8
+      Date:
+      - Tue, 01 Mar 2016 20:44:39 GMT
+      Server:
+      - nginx/1.8.1
+      Set-Cookie:
+      - laravel_session=eyJpdiI6Im5NZTc2UXZQXC9meWxmM3BZSW1Rdm56QlZlKzFPekl4WWgyNzJ0UjlyMmpFPSIsInZhbHVlIjoiNyt5OHRWcmdcL2RWYmh6eFZjXC9wZldpa1ZycUJXK1hSeE9TdnZXdnFQdEtMZVZKOCtUdXZZbGg4RFBMbGd4VHdDRFFMK0xvQzJpT2hLNTZST3R0XC9RaWc9PSIsIm1hYyI6IjRlZWU0YWIxMDRmYmNkYWI4YTBhNzc5MzEwZDBhMDdjNWQyYjg0MmYxMGViNjI5ZDAyNTBhNjg2YjY5OWYyNzIifQ%3D%3D;
+        expires=Tue, 01-Mar-2016 22:44:39 GMT; Max-Age=7200; path=/; httponly
+      Www-Authenticate:
+      - Basic
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.14
+      Content-Length:
+      - '20'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: Invalid credentials.
+    http_version: 
+  recorded_at: Tue, 01 Mar 2016 20:44:39 GMT
 recorded_with: VCR 2.9.3
