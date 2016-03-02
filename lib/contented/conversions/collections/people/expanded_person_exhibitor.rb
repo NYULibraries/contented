@@ -36,7 +36,7 @@ module Contented
           end
 
           def location
-            expanded_person.location || @location
+            location_formatter(expanded_person.location) || location_formatter(@location)
           end
 
           def space
@@ -83,6 +83,14 @@ module Contented
           # output = 'Department Name'
           def department_formatter(department_name)
             department_name.split('(')[0].strip if department_name
+          end
+
+          def location_formatter(location_name)
+            location_map[location_name] || location_name
+          end
+
+          def location_map
+            @location_map ||= YAML.load(File.read(File.join(File.dirname(__FILE__), '../../../../../','config/locations_map.yml')))
           end
         end
       end

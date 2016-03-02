@@ -108,7 +108,7 @@ describe 'ExpandedPersonExhibitor' do
         :$t => "Astroland"
       },
       "gsx$location" => {
-        :$t => "Coney Island"
+        :$t => "20 Cooper Square"
       },
       "gsx$space" => {
         :$t => "Some Floor"
@@ -197,6 +197,10 @@ describe 'ExpandedPersonExhibitor' do
       end
     end
 
+    it "should have proper location format mapped from config file" do
+      expect(expanded_person_exhibitor.location).to eql "Cooper Union Library"
+    end
+
     json_data_expand_attributes.each do |attribute|
       it "should have #{attribute}" do
         expect(expanded_person_exhibitor).to respond_to attribute
@@ -204,4 +208,3 @@ describe 'ExpandedPersonExhibitor' do
     end
   end
 end
-
