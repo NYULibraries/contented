@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/NYULibraries/contented.svg)](https://travis-ci.org/NYULibraries/contented)
 [![Dependency Status](https://gemnasium.com/NYULibraries/contented.svg)](https://gemnasium.com/NYULibraries/contented)
 [![Code Climate](https://codeclimate.com/github/NYULibraries/contented/badges/gpa.svg)](https://codeclimate.com/github/NYULibraries/contented)
-[![Coverage Status](https://coveralls.io/repos/NYULibraries/contented/badge.svg?branch=development&service=github)](https://coveralls.io/github/NYULibraries/contented?branch=development)
+[![Coverage Status](https://coveralls.io/repos/github/NYULibraries/contented/badge.svg?branch=master)](https://coveralls.io/github/NYULibraries/contented?branch=master)
 
 These are happy little content conversions!
 
