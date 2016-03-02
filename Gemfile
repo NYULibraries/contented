@@ -9,7 +9,6 @@ group :development do
   gem 'pry', '~> 0.10'
   gem 'rubocop', '~> 0.34'
   gem 'rspec', '~> 3.3'
-  gem 'rubycritic', '~> 1.4'
   gem 'coveralls', '~> 0.8'
   gem 'figs', '~> 2.0'
 end
