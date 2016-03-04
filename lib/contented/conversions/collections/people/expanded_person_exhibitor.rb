@@ -86,7 +86,9 @@ module Contented
           end
 
           def location_formatter(location_name)
-            location_map[location_name] || location_name
+            unless location_name.nil?
+              location_map[location_name.strip] || location_name.strip
+            end
           end
 
           def location_map
