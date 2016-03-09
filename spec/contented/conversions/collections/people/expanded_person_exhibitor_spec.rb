@@ -108,7 +108,7 @@ describe 'ExpandedPersonExhibitor' do
         :$t => "Astroland"
       },
       "gsx$location" => {
-        :$t => "20 Cooper Square"
+        :$t => "   20 Cooper Square   "
       },
       "gsx$space" => {
         :$t => "Some Floor"
