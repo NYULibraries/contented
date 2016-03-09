@@ -30,7 +30,7 @@ module Contented
       if title
         title.downcase.gsub(/\s/,'-').gsub(/&amp;/,'and').gsub(/,/,'')
       else
-        "department_#{Time.now.strftime('%Y%m%d%H%M%S')}"
+        "department_#{DateTime.now.strftime('%Q')}"
       end
     end
 
