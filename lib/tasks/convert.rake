@@ -30,7 +30,7 @@ namespace :contented do
 
       namespace :google_spreadsheet do
         task :to_markdown do
-          google_spreadsheet_people = google_sheet_json(6)
+          google_spreadsheet_people = google_sheet_json_nyu_ad_sh(2)
 
           google_spreadsheet_people.each  do |google_spreadsheet_person|
             next if person_in_exclude_list? google_spreadsheet_person
