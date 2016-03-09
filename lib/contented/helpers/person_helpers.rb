@@ -4,7 +4,7 @@ module Contented
 
       def person_in_exclude_list?(person_json)
         netid = netid_from_person_json(person_json)
-        return (ENV['exclude_people'] || '').include? netid unless !netid.nil?
+        return (ENV['exclude_people'] || '').include? netid unless netid.nil?
       end
 
       def netid_from_person_json(person_json)
