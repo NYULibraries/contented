@@ -2,7 +2,7 @@ module Contented
   module Helpers
     module TitleHelpers
       def titlize(str)
-        str.gsub(/[\s']/, '-')
+        I18n.transliterate(str.gsub(/[\s']/, '-'))
       end
     end
   end
