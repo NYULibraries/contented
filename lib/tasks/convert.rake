@@ -7,12 +7,12 @@ include Contented::Helpers::GoogleSpreadsheetHelpers
 
 namespace :contented do
   namespace :convert do
-    desc 'Converts people into markdown'
     namespace :people do
+      desc 'Converts people from PeopleSync into markdown after enriching with data from a Google Spreadsheet'
       namespace :people_sync do
         task :to_markdown do
           people_sync_people = people_sync_json || []
-          google_spreadsheet_people = google_sheet_json(6)
+          google_spreadsheet_people = google_sheet_json
 
           people_sync_people.each do |people_sync_person|
             # skip if the person is in excluded list
@@ -28,9 +28,14 @@ namespace :contented do
         end
       end
 
+      desc 'Converts people from a Google Spreadsheet into markdown'
       namespace :google_spreadsheet do
-        task :to_markdown do
-          google_spreadsheet_people = google_sheet_json(6)
+        task :to_markdown, [:environment_var_name] do |task_name, args|
+          if args[:environment_var_name].nil?
+            google_spreadsheet_people = google_sheet_json
+          else
+            google_spreadsheet_people = google_sheet_json(args[:environment_var_name])
+          end
 
           google_spreadsheet_people.each  do |google_spreadsheet_person|
             next if person_in_exclude_list? google_spreadsheet_person

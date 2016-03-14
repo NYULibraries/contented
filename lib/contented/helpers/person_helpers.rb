@@ -1,8 +1,22 @@
 module Contented
   module Helpers
     module PersonHelpers
-      def person_in_exclude_list?(person)
-        (ENV['exclude_people'] || '').include? (person["NetID"] || '')
+
+      def person_in_exclude_list?(person_json)
+        netid = netid_from_person_json(person_json)
+        return (ENV['exclude_people'] || '').include? netid unless netid.nil?
+      end
+
+      def netid_from_person_json(person_json)
+        netid_from_peoplesync_json(person_json) or netid_from_google_spreadsheet_json(person_json)
+      end
+
+      def netid_from_peoplesync_json(person_json)
+        person_json["NetID"]
+      end
+
+      def netid_from_google_spreadsheet_json(person_json)
+        person_json["gsx$netid"]["$t"] unless person_json["gsx$netid"].nil?
       end
 
       def person_filename(exhibitor)
