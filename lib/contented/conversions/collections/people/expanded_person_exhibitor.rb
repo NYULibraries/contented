@@ -56,6 +56,10 @@ module Contented
             to_yaml_list(expanded_person.liaison_relationship)
           end
 
+          def linkedin
+            to_yaml_list(expanded_person.linkedin)
+          end
+
           def buttons
             to_yaml_object(expanded_person.buttons)
           end

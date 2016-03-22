@@ -49,6 +49,10 @@ module Contented
               "liaison_relationship: #{person.liaison_relationship}"
             end
 
+            def linkedin
+              "linkedin: #{person.linkedin}"
+            end
+
             def email
               "email: #{wrap_in_quotes(person.email)}"
             end
