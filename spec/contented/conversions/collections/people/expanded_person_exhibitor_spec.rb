@@ -3,18 +3,13 @@ require 'spec_helper'
 def json_data_expand_attributes
   %w[buttons departments
   email expertise guides image jobtitle
-  keywords location phone space
+  keywords library phone space
   status subtitle title twitter publications]
 end
 
-# PHONE format : (555) 555-5555
-PHONE_REGEX = /^[(]\d{3}[)][ ]\d{3}[-]\d{4}$/
-# departemnts format should be anything before any opening parenthesis '('
-DEPARTMENTS_REGEX = /^[^()]+$/
-# Location and space almost have the same regex should not have greater than '>'
-LOCATION_SPACE_REGEX = /^[^>]+$/
+describe Contented::Conversions::Collections::People::ExpandedPersonExhibitor do
 
-describe 'ExpandedPersonExhibitor' do
+  let(:unmapped_library) { "Bobst Library" }
   let(:peoplesync) {
       {
          NetID: "xx123",
@@ -29,9 +24,9 @@ describe 'ExpandedPersonExhibitor' do
                Job_Profile: "000000 - Some Job Profile",
                Is_Primary_Job: "1",
                Job_Family_Group: "NYU - Something",
-               Supervisory_Org_Name: "Some Group",
+               Supervisory_Org_Name: "LITS",
                Business_Title: "Super Fancy Title",
-               Position_Work_Space: "Earth > America > New York",
+               Position_Work_Space: "New York > #{unmapped_library} > Web Services",
                Division_Name: "Division of Tests"
             }
          ]
@@ -107,7 +102,7 @@ describe 'ExpandedPersonExhibitor' do
       "gsx$departments" => {
         :$t => "Astroland"
       },
-      "gsx$location" => {
+      "gsx$library" => {
         :$t => "   20 Cooper Square   "
       },
       "gsx$space" => {
@@ -124,86 +119,99 @@ describe 'ExpandedPersonExhibitor' do
   let(:person) { Contented::Conversions::Collections::People::Person.new(peoplesync) }
   let(:person_sheet) { Contented::Conversions::Collections::People::GoogleSpreadsheetPerson.new(people_sheet) }
   let(:expanded_person) { Contented::Conversions::Collections::People::ExpandedPerson.new(person, person_sheet) }
-  subject(:expanded_person_exhibitor) { Contented::Conversions::Collections::People::ExpandedPersonExhibitor.new(expanded_person) }
-  context 'when no JSON formatted data is provided' do
-    let (:peoplesync) { '{}' }
-    let (:people_sheet) { '{}' }
 
-    json_data_expand_attributes.each do |attribute|
-      it "should not have #{attribute}" do
-        next if attribute == 'title'
-        expect(expanded_person_exhibitor.send( attribute.to_sym )).to be_nil
+  describe '.new' do
+
+    subject(:expanded_person_exhibitor) { Contented::Conversions::Collections::People::ExpandedPersonExhibitor.new(expanded_person) }
+
+    context 'when only a spreadsheet is provided' do
+      let(:peoplesync) { '{}'}
+
+      json_data_expand_attributes.each do |attribute|
+        it "should have #{attribute}" do
+          expect(expanded_person_exhibitor.send( attribute.to_sym )).not_to be_nil
+        end
+      end
+
+      json_data_expand_attributes.each do |attribute|
+        it "should have #{attribute}" do
+          expect(expanded_person_exhibitor).to respond_to attribute
+        end
+      end
+
+      it "should have proper library format mapped from config file" do
+        expect(expanded_person_exhibitor.library).to eql "Cooper Union Library"
       end
     end
 
-    it "can have blank title but never nil" do
-      expect(expanded_person_exhibitor.title).to_not be_nil
-    end
+    context 'when only PeopleSync data is provided' do
+      let(:people_sheet) { '{}' }
 
-    json_data_expand_attributes.each do |attribute|
-      it "should have #{attribute}" do
-         expect(expanded_person_exhibitor).to respond_to attribute
+      json_data_expand_attributes.each do |attribute|
+        it "should have #{attribute}" do
+          expect(expanded_person_exhibitor).to respond_to attribute
+        end
       end
-    end
-  end
 
-  context 'when only json_data_expand is provided i.e. spreadsheet data' do
-    let(:peoplesync) { '{}'}
-
-    json_data_expand_attributes.each do |attribute|
-      it "should have #{attribute}" do
-        expect(expanded_person_exhibitor.send( attribute.to_sym )).not_to be_nil
+      it "should have proper phone format" do
+        expect(expanded_person_exhibitor.phone).to eql '(555) 555-5555'
       end
-    end
 
-    json_data_expand_attributes.each do |attribute|
-      it "should have #{attribute}" do
-        expect(expanded_person_exhibitor).to respond_to attribute
+      it "should have proper department format" do
+        expect(expanded_person_exhibitor.departments).to eql "LITS"
       end
-    end
-  end
 
-  context 'when only json_data is provided i.e. peoplesync data' do
-    let(:people_sheet) { '{}' }
-
-    json_data_expand_attributes.each do |attribute|
-      it "should have #{attribute}" do
-        expect(expanded_person_exhibitor).to respond_to attribute
+      describe 'library value' do
+        subject { expanded_person_exhibitor.library }
+        context 'when library has a mappable corrected value' do
+          let(:unmapped_library) { "Bobst Library" }
+          it { should eql "Elmer Holmes Bobst Library" }
+        end
+        context 'when library has unmappable value' do
+          let(:unmapped_library) { "Unknown Library" }
+          it { should eql unmapped_library }
+        end
       end
-    end
 
-    it "should have proper phone format" do
-      expect(expanded_person_exhibitor.phone).to match PHONE_REGEX
-    end
-
-    it "should have proper department format" do
-      expect(expanded_person_exhibitor.departments).to match DEPARTMENTS_REGEX
-    end
-
-    it "should have proper location format" do
-      expect(expanded_person_exhibitor.location).to match LOCATION_SPACE_REGEX
-    end
-
-    it "should have proper space format" do
-      expect(expanded_person_exhibitor.space).to match LOCATION_SPACE_REGEX
-    end
-  end
-
-  context 'when proper JSON formatted data is provided' do
-
-    json_data_expand_attributes.each do |attribute|
-      it "should have #{attribute}" do
-        expect(expanded_person_exhibitor.send( attribute.to_sym )).not_to be_nil
+      it "should have proper space format" do
+        expect(expanded_person_exhibitor.space).to eql 'Web Services'
       end
     end
 
-    it "should have proper location format mapped from config file" do
-      expect(expanded_person_exhibitor.location).to eql "Cooper Union Library"
+    context 'when both PeopleSync and spreadsheet data are provided' do
+
+      json_data_expand_attributes.each do |attribute|
+        it "should have #{attribute}" do
+          expect(expanded_person_exhibitor.send( attribute.to_sym )).not_to be_nil
+        end
+      end
+
+      json_data_expand_attributes.each do |attribute|
+        it "should have #{attribute}" do
+          expect(expanded_person_exhibitor).to respond_to attribute
+        end
+      end
     end
 
-    json_data_expand_attributes.each do |attribute|
-      it "should have #{attribute}" do
-        expect(expanded_person_exhibitor).to respond_to attribute
+    context 'when no data is provided from either PeopleSync or a spreasheet' do
+      let (:peoplesync) { '{}' }
+      let (:people_sheet) { '{}' }
+
+      json_data_expand_attributes.each do |attribute|
+        it "should not have #{attribute}" do
+          next if attribute == 'title'
+          expect(expanded_person_exhibitor.send( attribute.to_sym )).to be_nil
+        end
+      end
+
+      it "can have blank title but never nil" do
+        expect(expanded_person_exhibitor.title).to_not be_nil
+      end
+
+      json_data_expand_attributes.each do |attribute|
+        it "should have #{attribute}" do
+           expect(expanded_person_exhibitor).to respond_to attribute
+        end
       end
     end
   end

@@ -11,8 +11,8 @@ describe Contented::Department, vcr: true do
     subject { department.body }
     it { is_expected.to eql "We provide administrative management and technical support for the Libraries’ website and BobCat, its primary discovery interface. We also develop and maintain web-based services and special projects." }
   end
-  describe '#location' do
-    subject { department.location }
+  describe '#library' do
+    subject { department.library }
     it { is_expected.to eql 'Elmer Holmes Bobst Library' }
   end
   describe '#space' do
@@ -64,7 +64,7 @@ describe Contented::Department, vcr: true do
   describe '#to_markdown' do
     subject { department.to_markdown }
     it { is_expected.to be_a String }
-    it { is_expected.to eql "---\ntitle: Web Services\nlocation: Elmer Holmes Bobst Library\nspace: \nemail: \nphone: \ntwitter: libtechnyu\nfacebook: \nsubtitle: \nclasses: \nkeywords: \nlibcal_id: \nlibanswers_id: \nblog:\n  title: libtechnyu Blog\n  link: http://web1.library.nyu.edu/libtechnyu/\n  rss: http://web1.library.nyu.edu/libtechnyu/atom.xml\nbuttons:\nlinks:\n  \"@NYULibraries on GitHub\": https://github.com/NYULibraries\n  \"libtechnyu Blog\": http://web1.library.nyu.edu/libtechnyu/\n  \"The Agile Manifesto\": http://agilemanifesto.org/\n---\n\n# What We Do\n\nWe provide administrative management and technical support for the Libraries’ website and BobCat, its primary discovery interface. We also develop and maintain web-based services and special projects." }
+    it { is_expected.to eql "---\ntitle: Web Services\nlibrary: Elmer Holmes Bobst Library\nspace: \nemail: \nphone: \ntwitter: libtechnyu\nfacebook: \nsubtitle: \nclasses: \nkeywords: \nlibcal_id: \nlibanswers_id: \nblog:\n  title: libtechnyu Blog\n  link: http://web1.library.nyu.edu/libtechnyu/\n  rss: http://web1.library.nyu.edu/libtechnyu/atom.xml\nbuttons:\nlinks:\n  \"@NYULibraries on GitHub\": https://github.com/NYULibraries\n  \"libtechnyu Blog\": http://web1.library.nyu.edu/libtechnyu/\n  \"The Agile Manifesto\": http://agilemanifesto.org/\n---\n\n# What We Do\n\nWe provide administrative management and technical support for the Libraries’ website and BobCat, its primary discovery interface. We also develop and maintain web-based services and special projects." }
   end
 
 end

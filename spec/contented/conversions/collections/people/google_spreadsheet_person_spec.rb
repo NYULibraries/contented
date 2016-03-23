@@ -3,7 +3,7 @@ require 'spec_helper'
 def google_spreadsheet_attributes
   %w[address buttons departments
   email expertise guides image jobtitle
-  keywords location netid phone space
+  keywords library netid phone space
   status subtitle title twitter publications blog about]
 end
 
@@ -92,7 +92,7 @@ describe 'GooglSpreadsheetPerson' do
         "gsx$departments" => {
           :$t => "Astroland"
         },
-        "gsx$location" => {
+        "gsx$library" => {
           :$t => "Coney Island"
         },
         "gsx$space" => {

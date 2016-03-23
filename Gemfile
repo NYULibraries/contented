@@ -11,4 +11,5 @@ group :development do
   gem 'rspec', '~> 3.3'
   gem 'coveralls', '~> 0.8'
   gem 'figs', '~> 2.0'
+  gem 'factory_girl', '~> 4.5.0'
 end

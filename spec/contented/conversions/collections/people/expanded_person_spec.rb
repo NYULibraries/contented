@@ -4,11 +4,12 @@ def expanded_person_attributes
   %w[work_phone email_address all_positions_jobs
   address buttons departments
   email expertise guides image jobtitle
-  keywords location phone space
+  keywords library phone space
   status subtitle title twitter publications]
 end
 
-describe 'ExpandedPerson' do
+describe Contented::Conversions::Collections::People::ExpandedPerson do
+  let(:unmapped_library) { 'Bobst Library' }
   let(:peoplesync) {
     {
       NetID: "xx123",
@@ -25,7 +26,7 @@ describe 'ExpandedPerson' do
           Job_Family_Group: "NYU - Something",
           Supervisory_Org_Name: "Some Group",
           Business_Title: "Super Fancy Title",
-          Position_Work_Space: "Earth > America > New York > New York",
+          Position_Work_Space: "New York > #{unmapped_library} > LITS > Web Services",
           Division_Name: "Division of Tests"
         }
       ]
@@ -101,8 +102,8 @@ describe 'ExpandedPerson' do
       "gsx$departments" => {
         :$t => "Astroland"
       },
-      "gsx$location" => {
-        :$t => "Coney Island"
+      "gsx$library" => {
+        :$t => "  20 Cooper  "
       },
       "gsx$space" => {
         :$t => "Some Floor"

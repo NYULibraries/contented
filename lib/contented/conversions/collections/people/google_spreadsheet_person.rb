@@ -6,7 +6,7 @@ module Contented
         class GoogleSpreadsheetPerson < Person
           include Conversions::Collections::Helpers::GoogleSpreadsheetHelpers
           attr_accessor :address, :buttons, :departments, :email, :expertise, :guides,
-                        :image, :jobtitle, :keywords, :location, :netid, :phone, :space,
+                        :image, :jobtitle, :keywords, :library, :netid, :phone, :space,
                         :status, :subtitle, :title, :twitter, :publications, :blog, :about
 
           def initialize(json_data)
