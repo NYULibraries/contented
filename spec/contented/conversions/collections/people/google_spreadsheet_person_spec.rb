@@ -4,7 +4,9 @@ def google_spreadsheet_attributes
   %w[address buttons departments
   email expertise guides image jobtitle
   keywords library netid phone space
-  status subtitle title twitter publications blog about]
+  status subtitle title twitter publications blog about
+  liaison_relationship
+  ]
 end
 
 
@@ -103,6 +105,9 @@ describe 'GooglSpreadsheetPerson' do
         },
         "gsx$jobtitle" => {
           :$t => "Jobtitle"
+        },
+        "gsx$liaison_relationship" => {
+          :$t => "liason relationship"
         }
       }.to_json
     }
