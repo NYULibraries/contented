@@ -5,7 +5,7 @@ def json_data_expand_attributes
   email expertise guides image jobtitle
   keywords library phone space
   status subtitle title twitter publications
-  liaison_relationship
+  liaison_relationship linkedin
   ]
 end
 
@@ -118,6 +118,9 @@ describe Contented::Conversions::Collections::People::ExpandedPersonExhibitor do
       },
       "gsx$liaison_relationship" => {
         :$t => "liason relationship"
+      },
+      "gsx$linkedin" => {
+        :$t => "linkedin"
       }
     }.to_json
   }
