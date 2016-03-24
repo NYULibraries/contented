@@ -5,7 +5,7 @@ def google_spreadsheet_attributes
   email expertise guides image jobtitle
   keywords library netid phone space
   status subtitle title twitter publications blog about
-  liaison_relationship
+  liaison_relationship linkedin
   ]
 end
 
@@ -108,6 +108,9 @@ describe 'GooglSpreadsheetPerson' do
         },
         "gsx$liaison_relationship" => {
           :$t => "liason relationship"
+        },
+        "gsx$linkedin" => {
+          :$t => "linkedin"
         }
       }.to_json
     }
