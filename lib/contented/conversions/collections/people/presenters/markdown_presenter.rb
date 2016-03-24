@@ -45,6 +45,10 @@ module Contented
               "expertise: #{person.expertise}"
             end
 
+            def liaison_relationship
+              "liaison_relationship: #{person.liaison_relationship}"
+            end
+
             def email
               "email: #{wrap_in_quotes(person.email)}"
             end

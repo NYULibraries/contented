@@ -7,7 +7,8 @@ module Contented
           include Conversions::Collections::Helpers::GoogleSpreadsheetHelpers
           attr_accessor :address, :buttons, :departments, :email, :expertise, :guides,
                         :image, :jobtitle, :keywords, :library, :netid, :phone, :space,
-                        :status, :subtitle, :title, :twitter, :publications, :blog, :about
+                        :status, :subtitle, :title, :twitter, :publications, :blog, :about,
+                        :liaison_relationship
 
           def initialize(json_data)
             useful_spreadsheet_hash(JSON.parse(json_data)).each_pair { |var, val| send("#{var}=", val) if respond_to?(var) && !val.empty? }

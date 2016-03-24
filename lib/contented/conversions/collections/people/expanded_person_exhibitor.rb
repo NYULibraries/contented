@@ -52,6 +52,10 @@ module Contented
             to_yaml_list(expanded_person.expertise)
           end
 
+          def liaison_relationship
+            to_yaml_list(expanded_person.liaison_relationship)
+          end
+
           def buttons
             to_yaml_object(expanded_person.buttons)
           end

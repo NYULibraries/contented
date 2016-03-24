@@ -4,7 +4,9 @@ def json_data_expand_attributes
   %w[buttons departments
   email expertise guides image jobtitle
   keywords library phone space
-  status subtitle title twitter publications]
+  status subtitle title twitter publications
+  liaison_relationship
+  ]
 end
 
 describe Contented::Conversions::Collections::People::ExpandedPersonExhibitor do
@@ -113,6 +115,9 @@ describe Contented::Conversions::Collections::People::ExpandedPersonExhibitor do
       },
       "gsx$jobtitle" => {
         :$t => "Jobtitle"
+      },
+      "gsx$liaison_relationship" => {
+        :$t => "liason relationship"
       }
     }.to_json
   }
