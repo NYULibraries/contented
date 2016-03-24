@@ -22,8 +22,8 @@ module Contented
         end
       end
 
-      def location
-        @location ||= find_element_by(section: :contact_info, type: 'text', label: 'Please provide the name of your building')
+      def library
+        @library ||= find_element_by(section: :contact_info, type: 'text', label: 'Please provide the name of your building')
       end
 
       def twitter
