@@ -2,10 +2,12 @@ require 'spec_helper'
 
 def expanded_person_attributes
   %w[work_phone email_address all_positions_jobs
-  address buttons departments
-  email expertise guides image jobtitle
-  keywords library phone space
-  status subtitle title twitter publications]
+    address buttons departments
+    email expertise guides image jobtitle
+    keywords library phone space
+    status subtitle title twitter publications
+    liaison_relationship
+  ]
 end
 
 describe Contented::Conversions::Collections::People::ExpandedPerson do
@@ -113,6 +115,9 @@ describe Contented::Conversions::Collections::People::ExpandedPerson do
       },
       "gsx$jobtitle" => {
         :$t => "Jobtitle"
+      },
+      "gsx$liaison_relationship" => {
+        :$t => "liason relationship"
       }
     }.to_json
   }
