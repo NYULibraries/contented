@@ -7,9 +7,15 @@ describe ExpandedPersonExhibitor do
   let(:person) { Person.new(peoplesync) }
   let(:google_spreadsheet_person) { GoogleSpreadsheetPerson.new(google_spreadsheet) }
   let(:expanded_person) { ExpandedPerson.new(person, google_spreadsheet_person) }
+  let(:expanded_person_exhibitor) { ExpandedPersonExhibitor.new(expanded_person) }
+
+  describe '#to_markdown' do
+    subject { expanded_person_exhibitor.to_markdown }
+    it { is_expected.to eql "---\n\nsubtitle: 'Reference Associate'\njob_title: 'Jobtitle'\nlibrary: 'Cooper Union Library'\nspace: 'Office LC12'\ndepartments: \n  - 'Web Services, LITS'\nstatus: 'Status'\nexpertise: \n  - 'History'\nliaison_relationship: \nlinkedin: \nemail: 'xx99@nyu.edu'\nphone: '(555) 555-5555'\ntwitter: '@handle'\nimage: 'image.png'\nbuttons: \n  mailto:xx99@nyu.edu\nguides: \n  title: Title\n  libguide_id: number\npublications: \n  rss: http://www.refworks.com/123&rss\nblog: \n  rss: rss.xml\nkeywords: \n  - 'histories'\ntitle: 'Mr Robot'\n\n---\n\nThis is test data about\n\n" }
+  end
 
   describe '.new' do
-    subject(:expanded_person_exhibitor) { ExpandedPersonExhibitor.new(expanded_person) }
+    subject { expanded_person_exhibitor }
 
     context 'when only a spreadsheet is provided' do
       let(:peoplesync) { '{}' }
@@ -29,6 +35,7 @@ describe ExpandedPersonExhibitor do
       its(:subtitle) { is_expected.to eql "Reference Associate" }
       its(:title) { is_expected.to eql "Mr Robot" }
       its(:twitter) { is_expected.to eql "@handle" }
+      its(:blog) { is_expected.to eql "\n  rss: rss.xml" }
       its(:publications) { is_expected.to eql "\n  rss: http://www.refworks.com/123&rss" }
     end
 
