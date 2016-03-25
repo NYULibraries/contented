@@ -54,7 +54,4 @@ describe Contented::Decorators::DepartmentDecorator, vcr: true do
       it { is_expected.to eql 'My floor' }
     end
   end
-  describe ''
-  # before { allow(department).to receive(:title).and_return('Web Services') }
-  # TITLE, SPACE, BLOG
 end
