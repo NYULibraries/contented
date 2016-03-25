@@ -5,15 +5,16 @@ module Contented
         # Combines Person class attributes with google_spreadsheet_person class attributes
         class ExpandedPerson
           extend Forwardable
+          attr_reader :person, :google_spreadsheet_person
           def_delegators :@person, :netid, :last_name, :first_name, :work_phone, :email_address, :all_positions_jobs
-          def_delegators :@google_sheet_person, :address, :buttons, :departments, :email, :expertise,
+          def_delegators :@google_spreadsheet_person, :address, :buttons, :departments, :email, :expertise,
                          :guides, :image, :jobtitle, :keywords, :library, :netid, :phone, :space,
                          :status, :subtitle, :title, :twitter, :publications, :blog, :about, :liaison_relationship,
                          :linkedin
 
-          def initialize(person, google_person)
+          def initialize(person, google_spreadsheet_person)
             @person = person ? person : Person.new('{}')
-            @google_sheet_person = google_person ? google_person : GoogleSpreadsheetPerson.new('{}')
+            @google_spreadsheet_person = google_spreadsheet_person ? google_spreadsheet_person : GoogleSpreadsheetPerson.new('{}')
           end
         end
       end

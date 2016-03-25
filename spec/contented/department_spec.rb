@@ -59,12 +59,23 @@ describe Contented::Department, vcr: true do
   end
   describe '#filename' do
     subject { department.filename }
-    it { is_expected.to eql 'web-services' }
+    context 'when title is blank' do
+      before { allow(department).to receive(:title).and_return(nil) }
+      it { is_expected.to include 'department_' }
+    end
+    context 'when title is present' do
+      before { allow(department).to receive(:title).and_return('Web Services') }
+      it { is_expected.to eql 'web-services' }
+    end
   end
   describe '#to_markdown' do
     subject { department.to_markdown }
     it { is_expected.to be_a String }
     it { is_expected.to eql "---\ntitle: Web Services\nlibrary: Elmer Holmes Bobst Library\nspace: \nemail: \nphone: \ntwitter: libtechnyu\nfacebook: \nsubtitle: \nclasses: \nkeywords: \nlibcal_id: \nlibanswers_id: \nblog:\n  title: libtechnyu Blog\n  link: http://web1.library.nyu.edu/libtechnyu/\n  rss: http://web1.library.nyu.edu/libtechnyu/atom.xml\nbuttons:\nlinks:\n  \"@NYULibraries on GitHub\": https://github.com/NYULibraries\n  \"libtechnyu Blog\": http://web1.library.nyu.edu/libtechnyu/\n  \"The Agile Manifesto\": http://agilemanifesto.org/\n---\n\n# What We Do\n\nWe provide administrative management and technical support for the Libraries’ website and BobCat, its primary discovery interface. We also develop and maintain web-based services and special projects." }
+  end
+  describe '#published?' do
+    subject { department.published? }
+    it { is_expected.to be true }
   end
 
 end

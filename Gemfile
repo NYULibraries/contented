@@ -9,6 +9,7 @@ group :development do
   gem 'pry', '~> 0.10'
   gem 'rubocop', '~> 0.34'
   gem 'rspec', '~> 3.3'
+  gem 'rspec-its', '~> 1.2.0'
   gem 'coveralls', '~> 0.8'
   gem 'figs', '~> 2.0'
   gem 'factory_girl', '~> 4.5.0'

@@ -1,4 +1,5 @@
 $: <<  "#{File.dirname(__FILE__)}/../lib"
+require 'rspec/its'
 require 'coveralls'
 Coveralls.wear!
 require 'pry'
