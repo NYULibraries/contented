@@ -45,8 +45,8 @@ module Contented
               "expertise: #{person.expertise}"
             end
 
-            def liaison_relationship
-              "liaison_relationship: #{person.liaison_relationship}"
+            def liaisonrelationship
+              "liaison_relationship: #{person.liaisonrelationship}"
             end
 
             def linkedin
