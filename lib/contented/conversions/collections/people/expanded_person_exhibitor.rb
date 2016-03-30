@@ -52,8 +52,8 @@ module Contented
             to_yaml_list(expanded_person.expertise)
           end
 
-          def liaison_relationship
-            to_yaml_list(expanded_person.liaison_relationship)
+          def liaisonrelationship
+            to_yaml_list(expanded_person.liaisonrelationship)
           end
 
           def linkedin
