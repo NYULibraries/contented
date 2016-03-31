@@ -100,10 +100,6 @@ module Contented
             def about_block
               "#{person.about}" unless person.about == '' || person.about.nil?
             end
-
-            def wrap_in_quotes(raw=nil)
-              "'#{raw.gsub(/'/,'\'\'')}'" unless raw.nil? || raw == ''
-            end
           end
         end
       end
