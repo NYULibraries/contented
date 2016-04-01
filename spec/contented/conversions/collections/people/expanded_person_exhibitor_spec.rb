@@ -11,7 +11,7 @@ describe ExpandedPersonExhibitor do
 
   describe '#to_markdown' do
     subject { expanded_person_exhibitor.to_markdown }
-    it { is_expected.to eql "---\n\nsubtitle: 'Reference Associate'\njob_title: 'Jobtitle'\nlibrary: 'Cooper Union Library'\nspace: 'Office LC12'\ndepartments: \n  - 'Web Services, LITS'\nstatus: 'Status'\nexpertise: \n  - 'History'\nliaison_relationship: \nlinkedin: \nemail: 'xx99@nyu.edu'\nphone: '(555) 555-5555'\ntwitter: '@handle'\nimage: 'image.png'\nbuttons: \n  mailto:xx99@nyu.edu\nguides: \n  title: Title\n  libguide_id: number\npublications: \n  rss: http://www.refworks.com/123&rss\nblog: \n  rss: rss.xml\nkeywords: \n  - 'histories'\ntitle: 'Mr Robot'\n\n---\n\nThis is test data about\n\n" }
+    it { is_expected.to eql "---\n\nsubtitle: 'Reference Associate'\njob_title: 'Jobtitle'\nlibrary: 'Cooper Union Library'\nspace: 'Office LC12'\ndepartments: \n  - 'Web Services, LITS'\nstatus: 'Status'\nexpertise: \n  - 'History'\nliaison_relationship: \nlinkedin: \nemail: 'xx99@nyu.edu'\nphone: '(555) 555-5555'\ntwitter: '@handle'\nimage: 'image.png'\nbuttons: \n  mailto:xx99@nyu.edu\nguides: \n  title: Title\n  libguide_id: number\npublications: \n  rss: http://www.refworks.com/123&rss\nblog: \n  rss: rss.xml\nkeywords: \n  - 'histories'\ntitle: 'Mr Robot'\n\n---\n\nThis is test data about\n" }
   end
 
   describe '.new' do

@@ -6,10 +6,41 @@ module Contented
         module PresenterHelpers
           def render
             render = ''
-            (private_methods - Object.private_methods - Module.methods).each do |method_sym|
+            (method_output_order).each do |method_sym|
               render = "#{render}#{send(method_sym)}\n"
             end
             render
+          end
+
+          def method_output_order
+            [
+              :yaml_start,
+              :subtitle,
+              :job_title,
+              :library,
+              :space,
+              :departments,
+              :status,
+              :expertise,
+              :liaisonrelationship,
+              :linkedin,
+              :email,
+              :phone,
+              :twitter,
+              :image,
+              :buttons,
+              :guides,
+              :publications,
+              :blog,
+              :keywords,
+              :title,
+              :yaml_end,
+              :about_block
+            ]
+          end
+
+          def wrap_in_quotes(raw=nil)
+            "'#{raw.gsub(/'/,'\'\'')}'" unless raw.nil? || raw == ''
           end
         end
       end
