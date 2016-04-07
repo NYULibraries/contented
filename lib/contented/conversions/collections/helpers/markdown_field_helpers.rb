@@ -2,7 +2,7 @@ module Contented
   module Conversions
     module Collections
       module Helpers
-        # Jekyll front matter yaml field creators, such as collection and list
+        # Yaml front matter field creators such as collections and list
         module MarkdownFieldHelpers
           def to_yaml_list(str)
             "\n#{close_open_quotes(str).split(by_semicolon_if_not_in_single_quotes).collect { |item| "  - #{wrap_in_single_quotes(item.strip)}" }.join("\n")}" unless str.to_s.empty?
