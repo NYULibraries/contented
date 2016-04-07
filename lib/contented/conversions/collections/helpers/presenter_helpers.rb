@@ -5,14 +5,15 @@ module Contented
         # Renderer for presenters in collections
         module PresenterHelpers
           def render
-            render = ''
+            rendered_output = ''
             (method_output_order).each do |method_sym|
-              render = "#{render}#{send(method_sym)}\n"
+              rendered_output = "#{rendered_output}#{send(method_sym)}\n"
             end
-            render
+            rendered_output
           end
 
           def method_output_order
+<<<<<<< HEAD
             [
               :yaml_start,
               :subtitle,
@@ -42,6 +43,31 @@ module Contented
               :yaml_end,
               :about_block
             ]
+=======
+            @method_output_order ||= [:yaml_start,
+                                      :subtitle,
+                                      :job_title,
+                                      :library,
+                                      :space,
+                                      :departments,
+                                      :status,
+                                      :expertise,
+                                      :liaisonrelationship,
+                                      :linkedin,
+                                      :email,
+                                      :phone,
+                                      :twitter,
+                                      :image,
+                                      :buttons,
+                                      :guides,
+                                      :publications,
+                                      :blog,
+                                      :keywords,
+                                      :title,
+                                      :yaml_end,
+                                      :about_block
+                                    ]
+>>>>>>> Add list for yaml output
           end
 
           def wrap_in_quotes(raw=nil)
