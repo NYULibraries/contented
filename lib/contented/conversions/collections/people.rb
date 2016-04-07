@@ -1,7 +1,6 @@
 module Contented
   module Conversions
     module Collections
-      autoload :Helpers, 'contented/conversions/collections/helpers'
       module People
         autoload :Person, 'contented/conversions/collections/people/person'
         autoload :ExpandedPerson, 'contented/conversions/collections/people/expanded_person'
