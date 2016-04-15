@@ -11,6 +11,10 @@ module Contented
           def to_yaml_object(str)
             "\n#{str.split(';').collect { |item| "  #{item.strip}" }.join("\n")}" unless str.to_s.empty?
           end
+
+          def yaml_remove_start(yaml_str)
+            yaml_str[4..-1]
+          end
         end
       end
     end

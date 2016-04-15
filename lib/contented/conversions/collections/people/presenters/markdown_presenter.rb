@@ -6,6 +6,7 @@ module Contented
           # Presenter class for Expanded Person Exhibitor. Lists all items in People Markdown
           class MarkdownPresenter
             include Conversions::Collections::Helpers::PresenterHelpers
+            include Conversions::Collections::Helpers::MarkdownFieldHelpers
             attr_reader :person
             def initialize(person)
               @person = person
