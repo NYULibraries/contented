@@ -5,7 +5,7 @@ module Contented
         # Edits the Google Sheet People workbook for markdown conversion
         class GoogleSpreadsheetPerson < Person
           include Conversions::Collections::Helpers::GoogleSpreadsheetHelpers
-          attr_accessor :address, :buttons, :departments, :email, :expertise, :guides,
+          attr_accessor :address, :buttons, :departments, :email, :subject_specialties, :guides,
                         :image, :jobtitle, :keywords, :library, :netid, :phone, :space,
                         :status, :subtitle, :title, :twitter, :publications, :blog, :about,
                         :liaisonrelationship, :linkedin

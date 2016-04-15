@@ -7,7 +7,7 @@ module Contented
           extend Forwardable
           attr_reader :person, :google_spreadsheet_person
           def_delegators :@person, :netid, :last_name, :first_name, :work_phone, :email_address, :all_positions_jobs
-          def_delegators :@google_spreadsheet_person, :address, :buttons, :departments, :email, :expertise,
+          def_delegators :@google_spreadsheet_person, :address, :buttons, :departments, :email, :subject_specialties,
                          :guides, :image, :jobtitle, :keywords, :library, :netid, :phone, :space,
                          :status, :subtitle, :title, :twitter, :publications, :blog, :about, :liaisonrelationship,
                          :linkedin

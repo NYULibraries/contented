@@ -41,8 +41,8 @@ module Contented
               "status: #{wrap_in_quotes(person.status)}"
             end
 
-            def expertise
-              "expertise: #{person.expertise}"
+            def subject_specialties
+              yaml_remove_start({"subject_specialties" => YAML.load(person.subject_specialties)}.to_yaml).strip
             end
 
             def liaisonrelationship
