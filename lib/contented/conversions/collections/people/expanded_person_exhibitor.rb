@@ -48,8 +48,10 @@ module Contented
             expanded_person.jobtitle || @job_position['Business_Title']
           end
 
-          def expertise
-            to_yaml_list(expanded_person.expertise)
+          def subject_specialties
+            YAML.load(expanded_person.subject_specialties).to_yaml[4...-1]
+          rescue
+            expanded_person.subject_specialties
           end
 
           def liaisonrelationship
