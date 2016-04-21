@@ -6,6 +6,7 @@ module Contented
           # Presenter class for Expanded Person Exhibitor. Lists all items in People Markdown
           class MarkdownPresenter
             include Conversions::Collections::Helpers::PresenterHelpers
+            include Conversions::Collections::Helpers::MarkdownFieldHelpers
             attr_reader :person
             def initialize(person)
               @person = person
@@ -41,8 +42,12 @@ module Contented
               "status: #{wrap_in_quotes(person.status)}"
             end
 
-            def expertise
-              "expertise: #{person.expertise}"
+            def subjectspecialties
+              if person.subjectspecialties.nil? || person.subjectspecialties.empty?
+                return "subject_specialties: "
+              else
+                yaml_remove_start({"subject_specialties" => YAML.load(person.subjectspecialties)}.to_yaml).strip
+              end
             end
 
             def liaisonrelationship

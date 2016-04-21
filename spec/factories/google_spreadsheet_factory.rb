@@ -44,8 +44,16 @@ FactoryGirl.define do
     send :"gsx$subtitle" do
       { :$t => "Reference Associate" }
     end
-    send :"gsx$expertise" do
-      { :$t => "History" }
+    send :"gsx$subjectspecialties" do
+      { :$t => <<EOF
+First Subject:
+- First Specialty
+- Second Specialty
+Second Subject:
+- 'Quoted: specialty'
+- Last Specialty
+EOF
+       }
     end
     send :"gsx$twitter" do
       { :$t => "@handle" }
