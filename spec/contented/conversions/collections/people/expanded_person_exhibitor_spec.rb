@@ -23,7 +23,7 @@ describe ExpandedPersonExhibitor do
       its(:buttons) { is_expected.to eql "\n  mailto:xx99@nyu.edu" }
       its(:departments) { is_expected.to eql "\n  - 'Web Services, LITS'" }
       its(:email) { is_expected.to eql "xx99@nyu.edu" }
-      its(:subject_specialties) { is_expected.to eql "First Subject:\n- First Specialty\n- Second Specialty\nSecond Subject:\n- 'Quoted: specialty'\n- Last Specialty" }
+      its(:subjectspecialties) { is_expected.to eql "First Subject:\n- First Specialty\n- Second Specialty\nSecond Subject:\n- 'Quoted: specialty'\n- Last Specialty" }
       its(:guides) { is_expected.to eql "\n  title: Title\n  libguide_id: number" }
       its(:image) { is_expected.to eql "image.png" }
       its(:jobtitle) { is_expected.to eql "Jobtitle" }
@@ -64,7 +64,7 @@ describe ExpandedPersonExhibitor do
       its(:buttons) { is_expected.to eql "\n  mailto:xx99@nyu.edu" }
       its(:departments) { is_expected.to eql "\n  - 'Web Services, LITS'" }
       its(:email) { is_expected.to eql "xx99@nyu.edu" }
-      its(:subject_specialties) { is_expected.to eql "First Subject:\n- First Specialty\n- Second Specialty\nSecond Subject:\n- 'Quoted: specialty'\n- Last Specialty" }
+      its(:subjectspecialties) { is_expected.to eql "First Subject:\n- First Specialty\n- Second Specialty\nSecond Subject:\n- 'Quoted: specialty'\n- Last Specialty" }
       its(:guides) { is_expected.to eql "\n  title: Title\n  libguide_id: number" }
       its(:image) { is_expected.to eql "image.png" }
       its(:jobtitle) { is_expected.to eql "Jobtitle" }
@@ -86,7 +86,7 @@ describe ExpandedPersonExhibitor do
       its(:buttons) { is_expected.to be_nil }
       its(:departments) { is_expected.to be_nil }
       its(:email) { is_expected.to be_nil }
-      its(:subject_specialties) { is_expected.to be_nil }
+      its(:subjectspecialties) { is_expected.to be_nil }
       its(:guides) { is_expected.to be_nil }
       its(:image) { is_expected.to be_nil }
       its(:jobtitle) { is_expected.to be_nil }

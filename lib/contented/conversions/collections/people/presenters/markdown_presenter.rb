@@ -42,8 +42,12 @@ module Contented
               "status: #{wrap_in_quotes(person.status)}"
             end
 
-            def subject_specialties
-              yaml_remove_start({"subject_specialties" => YAML.load(person.subject_specialties)}.to_yaml).strip
+            def subjectspecialties
+              if person.subjectspecialties.nil? || person.subjectspecialties.empty?
+                return "subject_specialties: "
+              else
+                yaml_remove_start({"subject_specialties" => YAML.load(person.subjectspecialties)}.to_yaml).strip
+              end
             end
 
             def liaisonrelationship

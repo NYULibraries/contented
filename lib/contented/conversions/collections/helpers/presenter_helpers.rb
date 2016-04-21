@@ -21,7 +21,7 @@ module Contented
               :space,
               :departments,
               :status,
-              :subject_specialties,
+              :subjectspecialties,
               :liaisonrelationship,
               :linkedin,
               :email,

@@ -48,10 +48,10 @@ module Contented
             expanded_person.jobtitle || @job_position['Business_Title']
           end
 
-          def subject_specialties
-            YAML.load(expanded_person.subject_specialties).to_yaml[4...-1]
+          def subjectspecialties
+            YAML.load(expanded_person.subjectspecialties).to_yaml[4...-1] unless expanded_person.subjectspecialties.empty?
           rescue
-            expanded_person.subject_specialties
+            expanded_person.subjectspecialties
           end
 
           def liaisonrelationship

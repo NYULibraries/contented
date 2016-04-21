@@ -16,7 +16,7 @@ describe GoogleSpreadsheetPerson do
     its(:buttons) { is_expected.to eql "mailto:xx99@nyu.edu" }
     its(:departments) { is_expected.to eql "Web Services, LITS" }
     its(:email) { is_expected.to eql "xx99@nyu.edu" }
-    its(:subject_specialties) { is_expected.to eql "First Subject:\n- First Specialty\n- Second Specialty\nSecond Subject:\n- 'Quoted: specialty'\n- Last Specialty\n" }
+    its(:subjectspecialties) { is_expected.to eql "First Subject:\n- First Specialty\n- Second Specialty\nSecond Subject:\n- 'Quoted: specialty'\n- Last Specialty\n" }
     its(:guides) { is_expected.to eql "title: Title ;\nlibguide_id: number" }
     its(:image) { is_expected.to eql "image.png" }
     its(:jobtitle) { is_expected.to eql "Jobtitle" }
