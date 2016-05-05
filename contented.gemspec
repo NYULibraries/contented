@@ -23,4 +23,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'rake', '>= 10.0.0'
   gem.add_dependency 'faraday', '>= 0.9.0'
   gem.add_dependency 'i18n', '>= 0.7.0'
+  gem.add_dependency 'swiftype', '~> 1.2.2'
 end
