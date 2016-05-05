@@ -29,7 +29,7 @@ module Contented
 
         Dir.mkdir(DIR_NAME) unless Dir.exist?(DIR_NAME)
 
-        filename = "#{dir_name}/#{titlize(exhibitor.title.downcase)}.markdown"
+        filename = "#{DIR_NAME}/#{titlize(exhibitor.title.downcase)}.markdown"
 
         puts "Writing '#{exhibitor.title}' to #{filename}..."
         File.write filename, exhibitor.to_markdown
