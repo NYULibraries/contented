@@ -13,4 +13,9 @@ group :development do
   gem 'coveralls', '~> 0.8'
   gem 'figs', '~> 2.0'
   gem 'factory_girl', '~> 4.5.0'
+  gem 'swiftype', '~> 1.2.2'
+end
+
+group :test do
+  gem 'climate_control'
 end

@@ -2,6 +2,8 @@ module Contented
   module Helpers
     module PersonHelpers
 
+      DIR_NAME = "_people"
+
       def person_in_exclude_list?(person_json)
         netid = netid_from_person_json(person_json)
         return (ENV['exclude_people'] || '').include? netid unless netid.nil?
@@ -25,8 +27,7 @@ module Contented
 
         exhibitor = ExpandedPersonExhibitor.new(expanded_person)
 
-        dir_name = "_people"
-        Dir.mkdir(dir_name) unless Dir.exist?(dir_name)
+        Dir.mkdir(DIR_NAME) unless Dir.exist?(DIR_NAME)
 
         filename = "#{dir_name}/#{titlize(exhibitor.title.downcase)}.markdown"
 
