@@ -29,7 +29,7 @@ describe ExpandedPerson do
     its(:image) { is_expected.to eql "image.png" }
     its(:jobtitle) { is_expected.to eql "Jobtitle" }
     its(:keywords) { is_expected.to eql "histories" }
-    its(:library) { is_expected.to eql "  20 Cooper Square  " }
+    its(:location) { is_expected.to eql "  20 Cooper Square  " }
     its(:work_phone) { is_expected.to eql "+1 (555) 5555555" }
     its(:phone) { is_expected.to eql "(555) 555-5555" }
     its(:space) { is_expected.to eql "Office LC12" }

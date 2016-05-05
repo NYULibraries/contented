@@ -6,7 +6,7 @@ module Contented
         class GoogleSpreadsheetPerson < Person
           include Conversions::Collections::Helpers::GoogleSpreadsheetHelpers
           attr_accessor :address, :buttons, :departments, :email, :subjectspecialties, :guides,
-                        :image, :jobtitle, :keywords, :library, :netid, :phone, :space,
+                        :image, :jobtitle, :keywords, :location, :netid, :phone, :space,
                         :status, :subtitle, :title, :twitter, :publications, :blog, :about,
                         :liaisonrelationship, :linkedin, :parentdepartment
 

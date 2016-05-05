@@ -17,7 +17,7 @@ module Contented
               :yaml_start,
               :subtitle,
               :job_title,
-              :library,
+              :location,
               :space,
               :parentdepartment,
               :departments,

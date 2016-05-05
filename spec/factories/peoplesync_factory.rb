@@ -23,7 +23,7 @@ FactoryGirl.define do
       ]
     end
 
-    factory :peoplesync_with_unmapped_library do
+    factory :peoplesync_with_unmapped_location do
       send :"All_Positions_Jobs" do
         [
           {
@@ -32,13 +32,13 @@ FactoryGirl.define do
              Job_Family_Group: "NYU - Something",
              Supervisory_Org_Name: "LITS & Media Services",
              Business_Title: "Web Administrator",
-             Position_Work_Space: "New York > Unmapped Library > LITS > Web Services",
+             Position_Work_Space: "New York > Unmapped location > LITS > Web Services",
              Division_Name: "Division of Libraries"
           }
         ]
       end
     end
-    
+
     initialize_with { attributes }
   end
 end

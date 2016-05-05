@@ -1,7 +1,7 @@
 module Contented
   class Department < GatherContent::Api::Item
     PUBLISHED_STATUSES = ["Ready for the Web"]
-    ATTRIBUTES = [:title, :library, :space, :email, :phone, :twitter, :facebook, :blog,
+    ATTRIBUTES = [:title, :location, :space, :email, :phone, :twitter, :facebook, :blog,
                   :subtitle, :classes, :keywords, :links, :libcal_id, :libanswers_id, :buttons, :body]
     attr_reader *ATTRIBUTES
 

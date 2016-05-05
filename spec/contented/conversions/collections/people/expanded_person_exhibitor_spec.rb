@@ -11,7 +11,7 @@ describe ExpandedPersonExhibitor do
 
   describe '#to_markdown' do
     subject { expanded_person_exhibitor.to_markdown }
-    it { is_expected.to eql "---\n\nsubtitle: 'Reference Associate'\njob_title: 'Jobtitle'\nlibrary: '20 Cooper Square'\nspace: 'Office LC12'\nparent_department: 'LITS'\ndepartments: \n  - 'Web Services, LITS'\nstatus: 'Status'\nsubject_specialties:\n  First Subject:\n  - First Specialty\n  - Second Specialty\n  Second Subject:\n  - 'Quoted: specialty'\n  - Last Specialty\nliaison_relationship: \nlinkedin: \nemail: 'xx99@nyu.edu'\nphone: '(555) 555-5555'\ntwitter: '@handle'\nimage: 'image.png'\nbuttons: \n  mailto:xx99@nyu.edu\nguides: \n  title: Title\n  libguide_id: number\npublications: \n  rss: http://www.refworks.com/123&rss\nblog: \n  rss: rss.xml\nkeywords: \n  - 'histories'\ntitle: 'Mr Robot'\n\n---\n\nThis is test data about\n" }
+    it { is_expected.to eql "---\n\nsubtitle: 'Reference Associate'\njob_title: 'Jobtitle'\nlocation: '20 Cooper Square'\nspace: 'Office LC12'\nparent_department: 'LITS'\ndepartments: \n  - 'Web Services, LITS'\nstatus: 'Status'\nsubject_specialties:\n  First Subject:\n  - First Specialty\n  - Second Specialty\n  Second Subject:\n  - 'Quoted: specialty'\n  - Last Specialty\nliaison_relationship: \nlinkedin: \nemail: 'xx99@nyu.edu'\nphone: '(555) 555-5555'\ntwitter: '@handle'\nimage: 'image.png'\nbuttons: \n  mailto:xx99@nyu.edu\nguides: \n  title: Title\n  libguide_id: number\npublications: \n  rss: http://www.refworks.com/123&rss\nblog: \n  rss: rss.xml\nkeywords: \n  - 'histories'\ntitle: 'Mr Robot'\n\n---\n\nThis is test data about\n" }
   end
 
   describe '.new' do
@@ -29,7 +29,7 @@ describe ExpandedPersonExhibitor do
       its(:image) { is_expected.to eql "image.png" }
       its(:jobtitle) { is_expected.to eql "Jobtitle" }
       its(:keywords) { is_expected.to eql "\n  - 'histories'" }
-      its(:library) { is_expected.to eql "20 Cooper Square" }
+      its(:location) { is_expected.to eql "20 Cooper Square" }
       its(:phone) { is_expected.to eql "(555) 555-5555" }
       its(:space) { is_expected.to eql "Office LC12" }
       its(:status) { is_expected.to eql "Status" }
@@ -47,14 +47,14 @@ describe ExpandedPersonExhibitor do
       its(:departments) { is_expected.to eql "LITS & Media Services" }
       its(:space) { is_expected.to eql "LITS" }
 
-      describe 'library value' do
-        subject { expanded_person_exhibitor.library }
-        context 'when library has a mappable corrected value' do
+      describe 'location value' do
+        subject { expanded_person_exhibitor.location }
+        context 'when location has a mappable corrected value' do
           it { should eql "Elmer Holmes Bobst Library" }
         end
-        context 'when library has unmappable value' do
-          let(:peoplesync) { FactoryGirl.build(:peoplesync_with_unmapped_library).to_json }
-          it { should eql "Unmapped Library" }
+        context 'when location has unmappable value' do
+          let(:peoplesync) { FactoryGirl.build(:peoplesync_with_unmapped_location).to_json }
+          it { should eql "Unmapped location" }
         end
       end
 
@@ -71,7 +71,7 @@ describe ExpandedPersonExhibitor do
       its(:image) { is_expected.to eql "image.png" }
       its(:jobtitle) { is_expected.to eql "Jobtitle" }
       its(:keywords) { is_expected.to eql "\n  - 'histories'" }
-      its(:library) { is_expected.to eql "20 Cooper Square" }
+      its(:location) { is_expected.to eql "20 Cooper Square" }
       its(:phone) { is_expected.to eql "(555) 555-5555" }
       its(:space) { is_expected.to eql "Office LC12" }
       its(:status) { is_expected.to eql "Status" }
@@ -94,7 +94,7 @@ describe ExpandedPersonExhibitor do
       its(:image) { is_expected.to be_nil }
       its(:jobtitle) { is_expected.to be_nil }
       its(:keywords) { is_expected.to be_nil }
-      its(:library) { is_expected.to be_nil }
+      its(:location) { is_expected.to be_nil }
       its(:phone) { is_expected.to be_nil }
       its(:space) { is_expected.to be_nil }
       its(:status) { is_expected.to be_nil }

@@ -26,8 +26,8 @@ module Contented
               "job_title: #{wrap_in_quotes(person.jobtitle)}"
             end
 
-            def library
-              "library: #{wrap_in_quotes(person.library)}"
+            def location
+              "location: #{wrap_in_quotes(person.location)}"
             end
 
             def space
