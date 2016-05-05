@@ -19,6 +19,7 @@ module Contented
               :job_title,
               :library,
               :space,
+              :parentdepartment,
               :departments,
               :status,
               :subjectspecialties,
