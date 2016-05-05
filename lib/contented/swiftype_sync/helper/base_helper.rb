@@ -1,5 +1,3 @@
-require 'pry'
-
 module Contented
   module SwiftypeSync
     module Helpers
