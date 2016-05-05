@@ -1,5 +1,4 @@
 require 'contented'
-require 'pry'
 
 namespace :contented do
   namespace :reindex do
