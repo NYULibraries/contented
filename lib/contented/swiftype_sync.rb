@@ -5,10 +5,10 @@ module Contented
     PEOPLE_DIR_NAME = Contented::Helpers::PersonHelpers::DIR_NAME
     PEOPLE_URL_BASE = "http://dev.library.nyu.edu/people/"
 
-    def self.reindex_people(verbose: false)
+    def self.reindex_people(base_url: PEOPLE_URL_BASE, directory: PEOPLE_DIR_NAME, verbose: false)
       Contented::SwiftypeSync::Crawler.crawl(
-        base_url: PEOPLE_URL_BASE,
-        directory: PEOPLE_DIR_NAME,
+        base_url: base_url,
+        directory: directory,
         verbose: verbose
       )
     end
