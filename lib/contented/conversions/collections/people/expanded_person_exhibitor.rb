@@ -12,7 +12,7 @@ module Contented
           def initialize(expanded_person)
             @expanded_person = expanded_person
             @job_position ||= @expanded_person.all_positions_jobs.find { |job| job['Is_Primary_Job'] == '1' } || {}
-            _city, @library, @space = @job_position['Position_Work_Space'].to_s.split('>')
+            _city, @location, @space = @job_position['Position_Work_Space'].to_s.split('>')
           end
 
           def to_markdown
@@ -35,8 +35,8 @@ module Contented
             to_yaml_list(expanded_person.departments) || department_formatter(@job_position['Supervisory_Org_Name'])
           end
 
-          def library
-            library_formatter(expanded_person.library) || library_formatter(@library)
+          def location
+            location_formatter(expanded_person.location) || location_formatter(@location)
           end
 
           def space
@@ -96,14 +96,14 @@ module Contented
             department_name.split('(')[0].strip if department_name
           end
 
-          def library_formatter(library_name)
-            unless library_name.nil?
-              library_map[library_name.strip] || library_name.strip
+          def location_formatter(location_name)
+            unless location_name.nil?
+              location_map[location_name.strip] || location_name.strip
             end
           end
 
-          def library_map
-            @library_map ||= YAML.load(File.read(File.join(File.dirname(__FILE__), '../../../../../','config/library_map.yml')))
+          def location_map
+            @location_map ||= YAML.load(File.read(File.join(File.dirname(__FILE__), '../../../../../','config/location_map.yml')))
           end
         end
       end

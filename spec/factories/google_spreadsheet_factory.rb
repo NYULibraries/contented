@@ -97,7 +97,7 @@ EOF
     send :"gsx$parentdepartment" do
       { :$t => "LITS" }
     end
-    send :"gsx$library" do
+    send :"gsx$location" do
       { :$t => "  20 Cooper Square  " }
     end
     send :"gsx$space" do
