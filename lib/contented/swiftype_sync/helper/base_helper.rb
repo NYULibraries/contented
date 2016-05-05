@@ -38,7 +38,7 @@ module Contented
         end
 
         def api_key
-          ENV['SWIFTYPE_API_KEY'] || raise("Must set SWIFTYPE_API_KEY to use Contented::Swiftype features")
+          ENV['swiftype_api_key'] || raise("Must set swiftype_api_key to use Contented::Swiftype features")
         end
 
       end

@@ -88,7 +88,7 @@ describe Contented::SwiftypeSync::Helpers::BaseHelper do
       let(:swiftype_api_key){ "XXXX" }
 
       around do |example|
-        with_modified_env SWIFTYPE_API_KEY: swiftype_api_key do
+        with_modified_env swiftype_api_key: swiftype_api_key do
           example.run
         end
       end
@@ -101,13 +101,13 @@ describe Contented::SwiftypeSync::Helpers::BaseHelper do
 
     context "without SWIFTYPE_API_KEY" do
       around do |example|
-        with_modified_env SWIFTYPE_API_KEY: nil do
+        with_modified_env swiftype_api_key: nil do
           example.run
         end
       end
 
       it "should raise an error" do
-        expect{ helper.client }.to raise_error "Must set SWIFTYPE_API_KEY to use Contented::Swiftype features"
+        expect{ helper.client }.to raise_error "Must set swiftype_api_key to use Contented::Swiftype features"
       end
     end
   end
