@@ -11,7 +11,7 @@ describe ExpandedPersonExhibitor do
 
   describe '#to_markdown' do
     subject { expanded_person_exhibitor.to_markdown }
-    it { is_expected.to eql "---\n\nsubtitle: 'Reference Associate'\njob_title: 'Jobtitle'\nlibrary: 'Cooper Union Library'\nspace: 'Office LC12'\ndepartments: \n  - 'Web Services, LITS'\nstatus: 'Status'\nsubject_specialties:\n  First Subject:\n  - First Specialty\n  - Second Specialty\n  Second Subject:\n  - 'Quoted: specialty'\n  - Last Specialty\nliaison_relationship: \nlinkedin: \nemail: 'xx99@nyu.edu'\nphone: '(555) 555-5555'\ntwitter: '@handle'\nimage: 'image.png'\nbuttons: \n  mailto:xx99@nyu.edu\nguides: \n  title: Title\n  libguide_id: number\npublications: \n  rss: http://www.refworks.com/123&rss\nblog: \n  rss: rss.xml\nkeywords: \n  - 'histories'\ntitle: 'Mr Robot'\n\n---\n\nThis is test data about\n" }
+    it { is_expected.to eql "---\n\nsubtitle: 'Reference Associate'\njob_title: 'Jobtitle'\nlibrary: '20 Cooper Square'\nspace: 'Office LC12'\nparent_department: 'LITS'\ndepartments: \n  - 'Web Services, LITS'\nstatus: 'Status'\nsubject_specialties:\n  First Subject:\n  - First Specialty\n  - Second Specialty\n  Second Subject:\n  - 'Quoted: specialty'\n  - Last Specialty\nliaison_relationship: \nlinkedin: \nemail: 'xx99@nyu.edu'\nphone: '(555) 555-5555'\ntwitter: '@handle'\nimage: 'image.png'\nbuttons: \n  mailto:xx99@nyu.edu\nguides: \n  title: Title\n  libguide_id: number\npublications: \n  rss: http://www.refworks.com/123&rss\nblog: \n  rss: rss.xml\nkeywords: \n  - 'histories'\ntitle: 'Mr Robot'\n\n---\n\nThis is test data about\n" }
   end
 
   describe '.new' do
@@ -22,13 +22,14 @@ describe ExpandedPersonExhibitor do
 
       its(:buttons) { is_expected.to eql "\n  mailto:xx99@nyu.edu" }
       its(:departments) { is_expected.to eql "\n  - 'Web Services, LITS'" }
+      its(:parentdepartment) { is_expected.to eql "LITS" }
       its(:email) { is_expected.to eql "xx99@nyu.edu" }
       its(:subjectspecialties) { is_expected.to eql "First Subject:\n- First Specialty\n- Second Specialty\nSecond Subject:\n- 'Quoted: specialty'\n- Last Specialty" }
       its(:guides) { is_expected.to eql "\n  title: Title\n  libguide_id: number" }
       its(:image) { is_expected.to eql "image.png" }
       its(:jobtitle) { is_expected.to eql "Jobtitle" }
       its(:keywords) { is_expected.to eql "\n  - 'histories'" }
-      its(:library) { is_expected.to eql "Cooper Union Library" }
+      its(:library) { is_expected.to eql "20 Cooper Square" }
       its(:phone) { is_expected.to eql "(555) 555-5555" }
       its(:space) { is_expected.to eql "Office LC12" }
       its(:status) { is_expected.to eql "Status" }
@@ -63,13 +64,14 @@ describe ExpandedPersonExhibitor do
 
       its(:buttons) { is_expected.to eql "\n  mailto:xx99@nyu.edu" }
       its(:departments) { is_expected.to eql "\n  - 'Web Services, LITS'" }
+      its(:parentdepartment) { is_expected.to eql "LITS" }
       its(:email) { is_expected.to eql "xx99@nyu.edu" }
       its(:subjectspecialties) { is_expected.to eql "First Subject:\n- First Specialty\n- Second Specialty\nSecond Subject:\n- 'Quoted: specialty'\n- Last Specialty" }
       its(:guides) { is_expected.to eql "\n  title: Title\n  libguide_id: number" }
       its(:image) { is_expected.to eql "image.png" }
       its(:jobtitle) { is_expected.to eql "Jobtitle" }
       its(:keywords) { is_expected.to eql "\n  - 'histories'" }
-      its(:library) { is_expected.to eql "Cooper Union Library" }
+      its(:library) { is_expected.to eql "20 Cooper Square" }
       its(:phone) { is_expected.to eql "(555) 555-5555" }
       its(:space) { is_expected.to eql "Office LC12" }
       its(:status) { is_expected.to eql "Status" }
@@ -85,6 +87,7 @@ describe ExpandedPersonExhibitor do
 
       its(:buttons) { is_expected.to be_nil }
       its(:departments) { is_expected.to be_nil }
+      its(:parentdepartment) { is_expected.to be_nil }
       its(:email) { is_expected.to be_nil }
       its(:subjectspecialties) { is_expected.to be_nil }
       its(:guides) { is_expected.to be_nil }
