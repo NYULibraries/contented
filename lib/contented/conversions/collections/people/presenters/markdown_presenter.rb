@@ -38,6 +38,10 @@ module Contented
               "departments: #{person.departments}"
             end
 
+            def parentdepartment
+              "parent_department: #{wrap_in_quotes(person.parentdepartment)}"
+            end
+
             def status
               "status: #{wrap_in_quotes(person.status)}"
             end

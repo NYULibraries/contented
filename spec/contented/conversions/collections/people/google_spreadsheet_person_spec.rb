@@ -15,6 +15,7 @@ describe GoogleSpreadsheetPerson do
     its(:address) { is_expected.to eql "70 Washington Square South" }
     its(:buttons) { is_expected.to eql "mailto:xx99@nyu.edu" }
     its(:departments) { is_expected.to eql "Web Services, LITS" }
+    its(:parentdepartment) { is_expected.to eql "LITS" }
     its(:email) { is_expected.to eql "xx99@nyu.edu" }
     its(:subjectspecialties) { is_expected.to eql "First Subject:\n- First Specialty\n- Second Specialty\nSecond Subject:\n- 'Quoted: specialty'\n- Last Specialty\n" }
     its(:guides) { is_expected.to eql "title: Title ;\nlibguide_id: number" }
@@ -32,6 +33,6 @@ describe GoogleSpreadsheetPerson do
     its(:publications) { is_expected.to eql "rss: http://www.refworks.com/123&rss" }
     its(:blog) { is_expected.to eql "rss: rss.xml" }
     its(:about) { is_expected.to eql "This is test data about" }
-    its("instance_variables.size") { is_expected.to be 20 }
+    its("instance_variables.size") { is_expected.to be 21 }
   end
 end

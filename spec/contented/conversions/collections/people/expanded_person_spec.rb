@@ -23,6 +23,7 @@ describe ExpandedPerson do
     its(:address) { is_expected.to eql "70 Washington Square South" }
     its(:buttons) { is_expected.to eql "mailto:xx99@nyu.edu" }
     its(:departments) { is_expected.to eql "Web Services, LITS" }
+    its(:parentdepartment) { is_expected.to eql "LITS" }
     its(:subjectspecialties) { is_expected.to eql "First Subject:\n- First Specialty\n- Second Specialty\nSecond Subject:\n- 'Quoted: specialty'\n- Last Specialty\n" }
     its(:guides) { is_expected.to eql "title: Title ;\nlibguide_id: number" }
     its(:image) { is_expected.to eql "image.png" }
@@ -43,6 +44,6 @@ describe ExpandedPerson do
 
     its("instance_variables.size") { is_expected.to eql 2 }
     its("person.instance_variables.size") { is_expected.to eql 6 }
-    its("google_spreadsheet_person.instance_variables.size") { is_expected.to eql 20 }
+    its("google_spreadsheet_person.instance_variables.size") { is_expected.to eql 21 }
   end
 end

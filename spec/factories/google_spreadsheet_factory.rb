@@ -94,6 +94,9 @@ EOF
     send :"gsx$departments" do
       { :$t => "Web Services, LITS" }
     end
+    send :"gsx$parentdepartment" do
+      { :$t => "LITS" }
+    end
     send :"gsx$library" do
       { :$t => "  20 Cooper Square  " }
     end
