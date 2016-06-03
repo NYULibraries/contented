@@ -47,20 +47,35 @@ The specified base URL must include the protocol (http vs https). The protocol m
 
 ### Cucumber tests
 
-These tasks must be executed within the contented project. To run tests against the beta site:
+These tasks must be executed within the contented project. To run against an arbitrary domain:
 
 ```
-bundle exec rake features:run:beta
+bundle exec rake features:all DOMAIN=https://example.com
+```
+
+To run tests against the beta site:
+
+```
+bundle exec rake features:all:beta
 ```
 
 To run tests against the local Jekyll server (must be started manually from within the libraries project):
 
 ```
-bundle exec rake features:run:local
+bundle exec rake features:all:local
 ```
 
-To run against an arbitrary domain:
+To run tests for a specific collection, replace `all` with the collection name, e.g.:
 
 ```
-bundle exec rake features:run DOMAIN=https://example.com
+bundle exec rake features:locations DOMAIN=https://example.com
+bundle exec rake features:people:beta
+bundle exec rake features:departments:local
+```
+
+To benchmark which step definitions consume the most time:
+
+```
+bundle exec rake features:benchmark:beta
+bundle exec rake features:benchmark:local
 ```
