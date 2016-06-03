@@ -16,7 +16,7 @@ module SharedHelper
   def result_row_selector
     "tbody tr"
   end
-  
+
   def filter_select(filter_name)
     all('select').detect do |select_input|
       within(select_input) do
