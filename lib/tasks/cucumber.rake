@@ -7,7 +7,7 @@ SITES = {
   local: "http://localhost:9292"
 }
 
-FEATURE_COLLECTIONS = %w[departments locations people about]
+FEATURE_COLLECTIONS = %w[departments locations people about services]
 
 namespace(:features) do
   Cucumber::Rake::Task.new(:all) do |t|
