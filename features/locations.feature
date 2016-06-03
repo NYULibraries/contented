@@ -4,6 +4,7 @@ Feature: Locations collection
     Given I visit the homepage
     And I click on the "Libraries" link
 
+  @wip
   Scenario: Resorting
     When I click the column title "Location"
       Then I should see "Bern Dibner Library" as the first result
