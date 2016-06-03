@@ -7,11 +7,16 @@ Given /^I click on the "(.+)" link$/ do |link_text|
   expect(page).to have_text link_text
 end
 
+When /^I click "(.+)"$/ do |link_text|
+  click_on link_text
+end
+
 When /^I search for the term "(.+)"$/ do |search_text|
   within "main" do
     fill_in "section__search__field", with: search_text
     click_on "🔍"
   end
+  wait_for_loading_ux
 end
 
 When /^I select "(.+)" in the "(.+)" dropdown filter$/ do |option_text, filter_name|

@@ -1,10 +1,4 @@
 module LocationsHelper
-  def first_result
-    within results do
-      first(result_row_selector)
-    end
-  end
-
   def last_result
     all_results.last
   end

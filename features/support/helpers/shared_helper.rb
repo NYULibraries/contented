@@ -3,8 +3,14 @@ module SharedHelper
     find('.table--collection')
   end
 
+  def first_result
+    within(results) do
+      first(result_row_selector)
+    end
+  end
+
   def all_results
-    within results do
+    within(results) do
       all(result_row_selector)
     end
   end
