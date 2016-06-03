@@ -14,8 +14,48 @@ When /^I search for the term "(.+)"$/ do |search_text|
   end
 end
 
+When /^I select "(.+)" in the "(.+)" dropdown filter$/ do |option_text, filter_name|
+  expect(filter_select(filter_name)).to be_visible
+  select option_text, from: filter_select(filter_name)[:name]
+  wait_for_loading_ux
+end
+
+When /^I click the column title "(.+)"$/ do |column_name|
+  column_title(column_name).hover
+  column_title(column_name).click
+  wait_for_loading_ux
+end
+
 Then /^I should see only "(.+)" in the results$/ do |result_text|
   within(results) do
     expect(page).to have_css result_row_selector, count: 1, text: /#{result_text}/i
+  end
+end
+
+Then /^I should see "(.+)" as the first result$/ do |result_text|
+  expect(first_result).to have_text result_text
+end
+
+Then /^all results should have "(.+)" in the "(.+)" column$/ do |result_text, column_name|
+  column_index = get_column_index(column_name)
+  expect(results).to be_visible
+  all_results.each do |result_row|
+    within(result_row) do
+      expect(nth_column(column_index)).to have_text result_text
+    end
+  end
+end
+
+Then /^I should see a descending sort arrow next to the column "(.+)"$/ do |column_name|
+  expect(column_title(column_name)).to be_visible
+  expect(column_title(column_name)[:"data-sort"]).to eq "asc"
+end
+
+Then /^all results should link from each column$/ do
+  expect(results).to be_visible
+  all_results.each do |result_row|
+    all_columns(result_row).each do |row_column|
+      expect(row_column).to have_css 'a'
+    end
   end
 end

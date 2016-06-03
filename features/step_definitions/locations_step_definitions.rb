@@ -12,19 +12,9 @@ When /^I check "(.+)" in the "(.+)" filter$/ do |filter_name, section_name|
   wait_for_loading_ux
 end
 
-When /^I click the column title "(.+)"$/ do |column_name|
-  column_title(column_name).hover
-  column_title(column_name).click
-  wait_for_loading_ux
-end
-
 When /^I click on page "(.+)"$/ do |page_number|
   page_link(page_number).click
   wait_for_loading_ux
-end
-
-Then /^I should see "(.+)" as the first result$/ do |result_text|
-  expect(first_result).to have_text result_text
 end
 
 Then /^I should see "(.+)" as the last result$/ do |result_text|
