@@ -3,6 +3,10 @@ module SharedHelper
     find('.table--collection')
   end
 
+  def result_count
+    all_results.count
+  end
+
   def first_result
     within(results) do
       first(result_row_selector)
@@ -17,6 +21,14 @@ module SharedHelper
 
   def column_title(column_name)
     find('th', text: /^#{column_name}$/i)
+  end
+
+  def cell_selector_for_column(column_name)
+    {
+      "Located in" => ".table__cell--location",
+      "Library" => ".table__cell--location",
+      "Library Department" => ".table__cell--departments",
+    }[column_name]
   end
 
   def result_row_selector

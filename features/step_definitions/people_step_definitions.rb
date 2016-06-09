@@ -10,5 +10,5 @@ Then /^results should have a column "(.+)"$/ do |column_name|
 end
 
 Then /^results should not have a column "(.+)"$/ do |column_name|
-  expect{ column_title(column_name) }.to raise_error Capybara::ElementNotFound
+  expect(page).to_not have_selector('th', text: column_name)
 end

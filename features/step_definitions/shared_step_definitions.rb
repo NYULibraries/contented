@@ -42,13 +42,8 @@ Then /^I should see "(.+)" as the first result$/ do |result_text|
 end
 
 Then /^all results should have "(.+)" in the "(.+)" column$/ do |result_text, column_name|
-  column_index = get_column_index(column_name)
   expect(results).to be_visible
-  all_results.each do |result_row|
-    within(result_row) do
-      expect(nth_column(column_index)).to have_text result_text
-    end
-  end
+  expect(results).to have_selector(cell_selector_for_column(column_name), text: result_text, count: result_count)
 end
 
 Then /^I should see a descending sort arrow next to the column "(.+)"$/ do |column_name|
