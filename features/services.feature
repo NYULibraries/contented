@@ -9,6 +9,7 @@ Feature: Services collection
       But the topic "Print, Copy, Scan" should not have a "See more" link
     Then I should see a topic "Borrowing"
       And the topic "Borrowing" should have a "See more" link
+  
   Scenario: Searching
     When I search for the term "find a video"
     Then I should see "Find a Video" as the first topic result

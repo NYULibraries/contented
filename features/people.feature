@@ -8,15 +8,18 @@ Feature: People collection
     Then I should see a descending sort arrow next to the column "Staff Member"
     And all results on the first page should begin with "A"
 
-  Scenario: Filtering
+  Scenario: Filtering by library and department
     When I select "Elmer Holmes Bobst Library" in the "Library" dropdown filter
-      Then all results should have "Elmer Holmes Bobst Library" in the "Library" column
+    Then all results should have "Elmer Holmes Bobst Library" in the "Library" column
+
+  Scenario: Filtering by department
     When I select "Library Leadership" in the "Library Department" dropdown filter
-      Then all results should have "Library Leadership" in the "Library Department" column
-    When I click "Reset"
-      And I select "See all Subject Specialists" in the "Subject Specialty" dropdown filter
-      Then results should have a column "Subject Specialty"
-      But results should not have a column "Library Department"
+    Then all results should have "Library Leadership" in the "Library Department" column
+
+  Scenario: Filtering by speciality
+    And I select "See all Subject Specialists" in the "Subject Specialty" dropdown filter
+    Then results should have a column "Subject Specialty"
+    But results should not have a column "Library Department"
 
   Scenario: Reset
     When I select "Elmer Holmes Bobst Library" in the "Library" dropdown filter
