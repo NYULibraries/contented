@@ -17,5 +17,10 @@ group :development do
 end
 
 group :test do
+  gem 'cucumber'#, '< 2.0'
+  gem 'selenium-webdriver'
+  gem 'phantomjs'
+  gem 'poltergeist'
+
   gem 'climate_control'
 end

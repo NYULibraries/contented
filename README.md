@@ -44,3 +44,21 @@ $ bundle exec rake contented:reindex:people[http://beta.library.nyu.edu/people]
 ```
 
 The specified base URL must include the protocol (http vs https). The protocol must match the protocol of the URL as originally indexed (if accessible via both protocols). Otherwise, Swiftype apparently processes it as a new document (indicated in the verbose output of the rake task) then identifies it as duplicate, causing it to silently ignore the reindex request. (This is observed not documented behavior.)
+
+### Cucumber tests
+
+These tasks must be executed within the contented project. To run specify a domain:
+
+```
+bundle exec rake features DOMAIN=http://localhost:9292
+```
+
+To run tests for a specific collection:
+
+```
+bundle exec rake features:about DOMAIN=http://localhost:9292
+bundle exec rake features:departments DOMAIN=http://localhost:9292
+bundle exec rake features:locations DOMAIN=http://localhost:9292
+bundle exec rake features:people DOMAIN=http://localhost:9292
+bundle exec rake features:services DOMAIN=http://localhost:9292
+```
