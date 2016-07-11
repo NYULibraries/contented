@@ -9,7 +9,7 @@ Feature: People collection
     And all results on the first page should begin with "A"
 
   Scenario: Filtering by library and department
-    When I select "Elmer Holmes Bobst Library" in the "Library" dropdown filter
+    When I select "Elmer Holmes Bobst Library" in the "Location" dropdown filter
     Then all results should have "Elmer Holmes Bobst Library" in the "Library" column
 
   Scenario: Filtering by department
@@ -22,14 +22,14 @@ Feature: People collection
     But results should not have a column "Library Department"
 
   Scenario: Reset
-    When I select "Elmer Holmes Bobst Library" in the "Library" dropdown filter
+    When I select "Elmer Holmes Bobst Library" in the "Location" dropdown filter
     And I click "Reset"
     Then all results on the first page should begin with "A"
 
   Scenario: Resorting
-    When I click the column title "Library"
+    When I click the column title "Location"
       Then I should see "20 Cooper Square" in the results
-      Then I should see a descending sort arrow next to the column "Library"
+      Then I should see a descending sort arrow next to the column "Location"
     When I click the column title "Library Department"
       Then I should see a descending sort arrow next to the column "Library Department"
 
