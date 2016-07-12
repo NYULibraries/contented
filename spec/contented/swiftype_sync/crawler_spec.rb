@@ -137,8 +137,31 @@ describe Contented::SwiftypeSync::Crawler do
       it "should generate correct URL for relative filepath" do
         expect(crawler.filepath_to_url("_dir/adam-kokosinski.markdown")).to eq "https://subdomain.example.com/subpath/adam-kokosinski/"
       end
+      it "should generate correct URL for relative, nested filepath" do
+        expect(crawler.filepath_to_url("_dir/sub/dir/adam-kokosinski.markdown")).to eq "https://subdomain.example.com/subpath/sub/dir/adam-kokosinski/"
+      end
       it "should generate correct URL for absolute filepath" do
         expect(crawler.filepath_to_url("/home/user/library.nyu.edu/_dir/adam-kokosinski.markdown")).to eq "https://subdomain.example.com/subpath/adam-kokosinski/"
+      end
+      it "should generate correct URL for absolute, nested filepath" do
+        expect(crawler.filepath_to_url("/home/user/library.nyu.edu/_dir/sub/path/to/adam-kokosinski.markdown")).to eq "https://subdomain.example.com/subpath/sub/path/to/adam-kokosinski/"
+      end
+      
+      context "without directory slash" do
+        let(:directory){ "_dir" }
+        
+        it "should generate correct URL for relative filepath" do
+          expect(crawler.filepath_to_url("_dir/adam-kokosinski.markdown")).to eq "https://subdomain.example.com/subpath/adam-kokosinski/"
+        end
+        it "should generate correct URL for relative, nested filepath" do
+          expect(crawler.filepath_to_url("_dir/sub/dir/adam-kokosinski.markdown")).to eq "https://subdomain.example.com/subpath/sub/dir/adam-kokosinski/"
+        end
+        it "should generate correct URL for absolute filepath" do
+          expect(crawler.filepath_to_url("/home/user/library.nyu.edu/_dir/adam-kokosinski.markdown")).to eq "https://subdomain.example.com/subpath/adam-kokosinski/"
+        end
+        it "should generate correct URL for absolute, nested filepath" do
+          expect(crawler.filepath_to_url("/home/user/library.nyu.edu/_dir/sub/path/to/adam-kokosinski.markdown")).to eq "https://subdomain.example.com/subpath/sub/path/to/adam-kokosinski/"
+        end
       end
     end
 

@@ -1,4 +1,5 @@
 require 'contented/swiftype_sync/helper/base_helper'
+require 'pry'
 
 module Contented
   module SwiftypeSync
@@ -36,8 +37,8 @@ module Contented
       end
 
       def filepath_to_url(filepath)
-        basename = File.basename(filepath).gsub(/#{FILE_EXTENSION}$/, '')
-        URI.join(@base_url, add_trailing_slash(basename)).to_s
+        basename = filepath.gsub(/^.*#{@directory}/, '').gsub(/#{FILE_EXTENSION}$/, '')
+        File.join(@base_url, add_trailing_slash(basename)).to_s
       end
 
       def crawl_domain_url(url, verbose: false)
