@@ -83,12 +83,31 @@ describe Contented::SwiftypeSync::Crawler do
     end
 
     describe "filepaths" do
-      let(:filepaths){ %w[_dir/abc.markdown _dir/def.markdown _dir/ghi.markdown] }
+      subject{ crawler.filepaths }
+      let(:filepaths1){ %w[_dir/abc.markdown _dir/def.markdown] }
+      let(:filepaths2){ %w[_dir/abc/def.markdown] }
+      let(:filepaths3){ %w[_dir/abc/def/abc.markdown _dir/abc/def/ghi.markdown] }
+      let(:filepaths4){ %w[_dir/abc/def/ghi/abc.markdown] }
+      let(:filepaths5){ %w[_dir/abc/def/ghi/abc/def.markdown _dir/abc/def/ghi/abc/ghi.markdown] }
+      let(:filepaths6){ %w[_dir/abc/def/ghi/abc/def/abc.markdown] }
+      let(:all_filepaths){ filepaths1 + filepaths2 + filepaths3 + filepaths4 + filepaths5 + filepaths6 }
 
-      it "should call Dir.glob with correct path and return result" do
-        expect(Dir).to receive(:glob).with("_dir/*.markdown").and_return filepaths
-        expect(crawler.filepaths).to match_array filepaths
+      before do
+        allow(Dir).to receive(:glob).and_return filepaths1, filepaths2, filepaths3, filepaths4, filepaths5, filepaths6
       end
+
+      it "should call Dir.glob with correct paths (nested 6 levels deep)" do
+        expect(Dir).to receive(:glob).once.with("_dir/*.markdown")
+        expect(Dir).to receive(:glob).once.with("_dir/**/*.markdown")
+        expect(Dir).to receive(:glob).once.with("_dir/**/**/*.markdown")
+        expect(Dir).to receive(:glob).once.with("_dir/**/**/**/*.markdown")
+        expect(Dir).to receive(:glob).once.with("_dir/**/**/**/**/*.markdown")
+        expect(Dir).to receive(:glob).once.with("_dir/**/**/**/**/**/*.markdown")
+        expect(Dir).to_not receive(:glob)
+        subject
+      end
+
+      it { is_expected.to match_array all_filepaths }
     end
 
     describe "domain_id" do
