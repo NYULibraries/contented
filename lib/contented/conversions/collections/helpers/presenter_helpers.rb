@@ -35,6 +35,8 @@ module Contented
               :blog,
               :keywords,
               :title,
+              :first_name,
+              :last_name,
               :yaml_end,
               :about_block
             ]

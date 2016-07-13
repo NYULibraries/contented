@@ -20,8 +20,8 @@ describe Person do
     let(:peoplesync_data) { FactoryGirl.build(:peoplesync).to_json }
 
     its(:netid) { is_expected.to eql 'xx123' }
-    its(:last_name) { is_expected.to eql 'Diderot' }
-    its(:first_name) { is_expected.to eql 'Denis' }
+    its(:last_name) { is_expected.to eql 'Robot' }
+    its(:first_name) { is_expected.to eql 'Mr' }
     its(:work_phone) { is_expected.to eql '+1 (555) 5555555' }
     its(:email_address) { is_expected.to eql 'lib-no-reply@nyu.edu' }
     its("all_positions_jobs") { is_expected.to be_a Array }

@@ -21,6 +21,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'phantomjs'
   gem 'poltergeist'
-
+  gem 'guard-rspec', require: false
   gem 'climate_control'
 end

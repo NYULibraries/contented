@@ -4,8 +4,8 @@ FactoryGirl.define do
 
     send :"NetID", "xx123"
     send :"Employee_ID", "N1234"
-    send :"Last_Name", "Diderot"
-    send :"First_Name", "Denis"
+    send :"Last_Name", "Robot"
+    send :"First_Name", "Mr"
     send :"Primary_Work_Space_Address", "10 Number Place"
     send :"Work_Phone", "+1 (555) 5555555"
     send :"Email_Address", "lib-no-reply@nyu.edu"

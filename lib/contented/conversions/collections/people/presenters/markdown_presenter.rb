@@ -18,6 +18,14 @@ module Contented
               "---\n"
             end
 
+            def first_name
+              "first_name: #{wrap_in_quotes(person.first_name)}"
+            end
+
+            def last_name
+              "last_name: #{wrap_in_quotes(person.last_name)}"
+            end
+
             def subtitle
               "subtitle: #{wrap_in_quotes(person.subtitle)}"
             end
