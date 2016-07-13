@@ -10,7 +10,7 @@ module Contented
           def_delegators :@google_spreadsheet_person, :address, :buttons, :departments, :email, :subjectspecialties,
                          :guides, :image, :jobtitle, :keywords, :location, :netid, :phone, :space,
                          :status, :subtitle, :title, :twitter, :publications, :blog, :about, :liaisonrelationship,
-                         :linkedin, :parentdepartment
+                         :linkedin, :parentdepartment, :firstname, :lastname
 
           def initialize(person, google_spreadsheet_person)
             @person = person ? person : Person.new('{}')

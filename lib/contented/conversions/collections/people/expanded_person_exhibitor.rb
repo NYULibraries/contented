@@ -20,7 +20,16 @@ module Contented
           end
 
           def title
-            expanded_person.title || "#{expanded_person.first_name} #{expanded_person.last_name}"
+            return "#{expanded_person.title}" if first_name.nil? || last_name.nil?
+             "#{first_name} #{last_name}"
+          end
+
+          def first_name
+            expanded_person.firstname || expanded_person.first_name
+          end
+
+          def last_name
+            expanded_person.lastname || expanded_person.last_name
           end
 
           def email
