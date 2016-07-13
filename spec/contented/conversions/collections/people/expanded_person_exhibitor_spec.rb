@@ -11,7 +11,7 @@ describe ExpandedPersonExhibitor do
 
   describe '#to_markdown' do
     subject { expanded_person_exhibitor.to_markdown }
-    it { is_expected.to eql "---\n\nsubtitle: 'Reference Associate'\njob_title: 'Jobtitle'\nlocation: '20 Cooper Square'\nspace: 'Office LC12'\nparent_department: 'LITS'\ndepartments: \n  - 'Web Services, LITS'\nstatus: 'Status'\nsubject_specialties:\n  First Subject:\n  - First Specialty\n  - Second Specialty\n  Second Subject:\n  - 'Quoted: specialty'\n  - Last Specialty\nliaison_relationship: \nlinkedin: \nemail: 'xx99@nyu.edu'\nphone: '(555) 555-5555'\ntwitter: '@handle'\nimage: 'image.png'\nbuttons: \n  mailto:xx99@nyu.edu\nguides: \n  title: Title\n  libguide_id: number\npublications: \n  rss: http://www.refworks.com/123&rss\nblog: \n  rss: rss.xml\nkeywords: \n  - 'histories'\ntitle: 'Mr Robot'\n\n---\n\nThis is test data about\n" }
+    it { is_expected.to eql "---\n\nsubtitle: 'Reference Associate'\njob_title: 'Jobtitle'\nlocation: '20 Cooper Square'\nspace: 'Office LC12'\nparent_department: 'LITS'\ndepartments: \n  - 'Web Services, LITS'\nstatus: 'Status'\nsubject_specialties:\n  First Subject:\n  - First Specialty\n  - Second Specialty\n  Second Subject:\n  - 'Quoted: specialty'\n  - Last Specialty\nliaison_relationship: \nlinkedin: \nemail: 'xx99@nyu.edu'\nphone: '(555) 555-5555'\ntwitter: '@handle'\nimage: 'image.png'\nbuttons: \n  mailto:xx99@nyu.edu\nguides: \n  title: Title\n  libguide_id: number\npublications: \n  rss: http://www.refworks.com/123&rss\nblog: \n  rss: rss.xml\nkeywords: \n  - 'histories'\ntitle: 'Mr Robot'\nfirst_name: 'Mr'\nlast_name: 'Robot'\n\n---\n\nThis is test data about\n" }
   end
 
   describe '.new' do
@@ -38,6 +38,8 @@ describe ExpandedPersonExhibitor do
       its(:twitter) { is_expected.to eql "@handle" }
       its(:blog) { is_expected.to eql "\n  rss: rss.xml" }
       its(:publications) { is_expected.to eql "\n  rss: http://www.refworks.com/123&rss" }
+      its(:first_name) { is_expected.to be_nil }
+      its(:last_name) { is_expected.to be_nil }
     end
 
     context 'when only PeopleSync data is provided' do
@@ -79,6 +81,8 @@ describe ExpandedPersonExhibitor do
       its(:title) { is_expected.to eql "Mr Robot" }
       its(:twitter) { is_expected.to eql "@handle" }
       its(:publications) { is_expected.to eql "\n  rss: http://www.refworks.com/123&rss" }
+      its(:first_name) { is_expected.to eql "Mr" }
+      its(:last_name) { is_expected.to eql "Robot" }
     end
 
     context 'when no data is provided from either PeopleSync or a spreadsheet' do
@@ -101,8 +105,10 @@ describe ExpandedPersonExhibitor do
       its(:subtitle) { is_expected.to be_nil }
       its(:twitter) { is_expected.to be_nil }
       its(:publications) { is_expected.to be_nil }
+      its(:first_name) { is_expected.to be_nil }
+      its(:last_name) { is_expected.to be_nil }
 
-      its(:title) { is_expected.to eql " " }
+      its(:title) { is_expected.to eql "" }
     end
   end
 end
