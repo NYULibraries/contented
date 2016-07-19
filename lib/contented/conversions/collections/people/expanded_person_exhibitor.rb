@@ -24,6 +24,14 @@ module Contented
              "#{first_name} #{last_name}"
           end
 
+          def sort_title
+            if !last_name.nil? && !first_name.nil?
+              "#{last_name}, #{first_name}"
+            else
+              title
+            end
+          end
+
           def first_name
             expanded_person.firstname || expanded_person.first_name
           end

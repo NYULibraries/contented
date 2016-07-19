@@ -26,6 +26,10 @@ module Contented
               "last_name: #{wrap_in_quotes(person.last_name)}"
             end
 
+            def sort_title
+              "sort_title: #{wrap_in_quotes(person.sort_title)}"
+            end
+
             def subtitle
               "subtitle: #{wrap_in_quotes(person.subtitle)}"
             end

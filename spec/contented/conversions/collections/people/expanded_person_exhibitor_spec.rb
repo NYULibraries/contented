@@ -40,6 +40,7 @@ describe ExpandedPersonExhibitor do
       its(:publications) { is_expected.to eql "\n  rss: http://www.refworks.com/123&rss" }
       its(:first_name) { is_expected.to be_nil }
       its(:last_name) { is_expected.to be_nil }
+      its(:sort_title) { is_expected.to eql "Mr Robot" }
     end
 
     context 'when only PeopleSync data is provided' do
@@ -83,6 +84,7 @@ describe ExpandedPersonExhibitor do
       its(:publications) { is_expected.to eql "\n  rss: http://www.refworks.com/123&rss" }
       its(:first_name) { is_expected.to eql "Mr" }
       its(:last_name) { is_expected.to eql "Robot" }
+      its(:sort_title) { is_expected.to eql "Robot, Mr" }
     end
 
     context 'when no data is provided from either PeopleSync or a spreadsheet' do
@@ -108,6 +110,7 @@ describe ExpandedPersonExhibitor do
       its(:first_name) { is_expected.to be_nil }
       its(:last_name) { is_expected.to be_nil }
 
+      its(:sort_title) { is_expected.to eql "" }
       its(:title) { is_expected.to eql "" }
     end
   end

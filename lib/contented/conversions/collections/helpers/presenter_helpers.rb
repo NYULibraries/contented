@@ -37,6 +37,7 @@ module Contented
               :title,
               :first_name,
               :last_name,
+              :sort_title,
               :yaml_end,
               :about_block
             ]
