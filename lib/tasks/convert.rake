@@ -8,6 +8,13 @@ include Contented::Helpers::GoogleSpreadsheetHelpers
 namespace :contented do
   namespace :convert do
     namespace :people do
+      desc 'Run all conversions for People'
+      task :all do
+        Rake::Task["contented:convert:people:people_sync:to_markdown"].invoke
+        Rake::Task["contented:convert:people:google_spreadsheet:to_markdown"].invoke('nyu_ad_sh_google_sheet_uri')
+        Rake::Task["contented:convert:people:google_spreadsheet:to_markdown"].invoke('digital_studio_google_sheet_uri')
+      end
+
       desc 'Converts people from PeopleSync into markdown after enriching with data from a Google Spreadsheet'
       namespace :people_sync do
         task :to_markdown do
