@@ -42,6 +42,10 @@ module Contented
               "location: #{wrap_in_quotes(person.location)}"
             end
 
+            def address
+              "address: #{wrap_in_quotes(person.address)}"
+            end
+
             def space
               "space: #{wrap_in_quotes(person.space)}"
             end

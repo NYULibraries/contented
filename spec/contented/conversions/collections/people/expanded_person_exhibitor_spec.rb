@@ -11,7 +11,29 @@ describe ExpandedPersonExhibitor do
 
   describe '#to_markdown' do
     subject { expanded_person_exhibitor.to_markdown }
-    it { is_expected.to eql "---\n\nsubtitle: 'Reference Associate'\njob_title: 'Jobtitle'\nlocation: '20 Cooper Square'\nspace: 'Office LC12'\nparent_department: 'LITS'\ndepartments: \n  - 'Web Services, LITS'\nstatus: 'Status'\nsubject_specialties:\n  First Subject:\n  - First Specialty\n  - Second Specialty\n  Second Subject:\n  - 'Quoted: specialty'\n  - Last Specialty\nliaison_relationship: \nlinkedin: \nemail: 'xx99@nyu.edu'\nphone: '(555) 555-5555'\ntwitter: '@handle'\nimage: 'image.png'\nbuttons: \n  mailto:xx99@nyu.edu\nguides: \n  title: Title\n  libguide_id: number\npublications: \n  rss: http://www.refworks.com/123&rss\nblog: \n  rss: rss.xml\nkeywords: \n  - 'histories'\ntitle: 'Mr Robot'\nfirst_name: 'Mr'\nlast_name: 'Robot'\n\n---\n\nThis is test data about\n" }
+    it { is_expected.to include "---\n\n" }
+    it { is_expected.to include "subtitle: 'Reference Associate'\n" }
+    it { is_expected.to include "job_title: 'Jobtitle'\n" }
+    it { is_expected.to include "address: '70 Washington Square South'\n" }
+    it { is_expected.to include "space: 'Office LC12'\n" }
+    it { is_expected.to include "parent_department: 'LITS'\n" }
+    it { is_expected.to include "departments: \n  - 'Web Services, LITS'\n" }
+    it { is_expected.to include "status: 'Status'\n" }
+    it { is_expected.to include "subject_specialties:\n  First Subject:\n  - First Specialty\n  - Second Specialty\n  Second Subject:\n  - 'Quoted: specialty'\n  - Last Specialty\n" }
+    it { is_expected.to include "liaison_relationship: \n" }
+    it { is_expected.to include "linkedin: \n" }
+    it { is_expected.to include "email: 'xx99@nyu.edu'\n" }
+    it { is_expected.to include "phone: '(555) 555-5555'\n" }
+    it { is_expected.to include "twitter: '@handle'\n" }
+    it { is_expected.to include "image: 'image.png'\n" }
+    it { is_expected.to include "buttons: \n  mailto:xx99@nyu.edu\n" }
+    it { is_expected.to include "guides: \n  title: Title\n  libguide_id: number\npublications: \n  rss: http://www.refworks.com/123&rss\nblog: \n  rss: rss.xml\n" }
+    it { is_expected.to include "keywords: \n  - 'histories'\n" }
+    it { is_expected.to include "title: 'Mr Robot'\n" }
+    it { is_expected.to include "first_name: 'Mr'\n" }
+    it { is_expected.to include "last_name: 'Robot'\n" }
+    it { is_expected.to include "---\n\nThis is test data about\n" }
+
   end
 
   describe '.new' do

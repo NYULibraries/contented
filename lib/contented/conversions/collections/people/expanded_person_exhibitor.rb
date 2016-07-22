@@ -6,7 +6,7 @@ module Contented
         class ExpandedPersonExhibitor
           extend Forwardable
           include Conversions::Collections::Helpers::MarkdownFieldHelpers
-          def_delegators :@expanded_person, :subtitle, :status, :twitter, :image, :about, :parentdepartment
+          def_delegators :@expanded_person, :subtitle, :status, :twitter, :image, :about, :parentdepartment, :address
           attr_reader :expanded_person
 
           def initialize(expanded_person)

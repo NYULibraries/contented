@@ -18,6 +18,7 @@ module Contented
               :subtitle,
               :job_title,
               :location,
+              :address,
               :space,
               :parentdepartment,
               :departments,
