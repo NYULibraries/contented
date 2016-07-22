@@ -51,6 +51,7 @@ describe ExpandedPersonExhibitor do
       its(:image) { is_expected.to eql "image.png" }
       its(:jobtitle) { is_expected.to eql "Jobtitle" }
       its(:keywords) { is_expected.to eql "\n  - 'histories'" }
+      its(:address) { is_expected.to eql "70 Washington Square South" }
       its(:location) { is_expected.to eql "20 Cooper Square" }
       its(:phone) { is_expected.to eql "(555) 555-5555" }
       its(:space) { is_expected.to eql "Office LC12" }
@@ -79,7 +80,7 @@ describe ExpandedPersonExhibitor do
         end
         context 'when location has unmappable value' do
           let(:peoplesync) { FactoryGirl.build(:peoplesync_with_unmapped_location).to_json }
-          it { should eql "Unmapped location" }
+          it { should be_nil }
         end
       end
 
@@ -96,6 +97,7 @@ describe ExpandedPersonExhibitor do
       its(:image) { is_expected.to eql "image.png" }
       its(:jobtitle) { is_expected.to eql "Jobtitle" }
       its(:keywords) { is_expected.to eql "\n  - 'histories'" }
+      its(:address) { is_expected.to eql "70 Washington Square South" }
       its(:location) { is_expected.to eql "20 Cooper Square" }
       its(:phone) { is_expected.to eql "(555) 555-5555" }
       its(:space) { is_expected.to eql "Office LC12" }

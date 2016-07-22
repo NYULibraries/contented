@@ -115,7 +115,7 @@ module Contented
 
           def location_formatter(location_name)
             unless location_name.nil?
-              location_map[location_name.strip] || location_name.strip
+              location_map[location_name.strip] || (expanded_person.location.strip unless expanded_person.location.nil?)
             end
           end
 
