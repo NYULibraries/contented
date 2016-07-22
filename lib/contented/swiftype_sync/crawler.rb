@@ -1,5 +1,4 @@
 require 'contented/swiftype_sync/helper/base_helper'
-require 'pry'
 
 module Contented
   module SwiftypeSync
