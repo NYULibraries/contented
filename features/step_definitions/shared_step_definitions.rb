@@ -51,6 +51,11 @@ Then /^I should see a descending sort arrow next to the column "(.+)"$/ do |colu
   expect(column_title(column_name)[:"data-sort"]).to eq "asc"
 end
 
+Then /^I should see an ascending sort arrow next to the column "(.+)"$/ do |column_name|
+  expect(column_title(column_name)).to be_visible
+  expect(column_title(column_name)[:"data-sort"]).to eq "desc"
+end
+
 Then /^all results should link from each column$/ do
   expect(results).to be_visible
   all_results.each do |result_row|
