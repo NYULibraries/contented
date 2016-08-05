@@ -22,6 +22,16 @@ describe Contented::Conversions::Collections::Helpers::MarkdownFieldHelpers do
         it { is_expected.to eql "\n  - 'http://hello.edu?param=1&amp;quobene=me'\n  - 'test'" }
       end
     end
+    context 'when string contains quotes' do
+      context 'but those quotes are not properly terminated' do
+        let(:non_yaml_str) { "'test string" }
+        it { is_expected.to eql "\n  - 'test string'"}
+      end
+      context 'and those quotes are properly terminated' do
+        let(:non_yaml_str) { "'test string'" }
+        it { is_expected.to eql "\n  - 'test string'"}
+      end
+    end
   end
 
   describe '#to_yaml_object' do
@@ -37,6 +47,16 @@ describe Contented::Conversions::Collections::Helpers::MarkdownFieldHelpers do
       context 'and those semi-colons are nested within quotes' do
         let(:non_yaml_str) { "rss: 'http://hello.edu?param=1&amp;quobene=me'" }
         it { is_expected.to eql "\n  rss: 'http://hello.edu?param=1&amp;quobene=me'" }
+      end
+    end
+    context 'when string contains quotes' do
+      context 'but those quotes are not properly terminated' do
+        let(:non_yaml_str) { "rss: 'http://hello.edu" }
+        it { is_expected.to eql "\n  rss: 'http://hello.edu'"}
+      end
+      context 'and those quotes are properly terminated' do
+        let(:non_yaml_str) { "rss: 'http://hello.edu'" }
+        it { is_expected.to eql "\n  rss: 'http://hello.edu'"}
       end
     end
   end

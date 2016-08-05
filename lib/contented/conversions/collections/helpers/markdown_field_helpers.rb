@@ -5,11 +5,11 @@ module Contented
         # Jekyll front matter yaml field creators, such as collection and list
         module MarkdownFieldHelpers
           def to_yaml_list(str)
-            "\n#{str.split(by_semicolon_if_not_in_single_quotes).collect { |item| "  - #{wrap_in_single_quotes(item.strip)}" }.join("\n")}" unless str.to_s.empty?
+            "\n#{close_open_quotes(str).split(by_semicolon_if_not_in_single_quotes).collect { |item| "  - #{wrap_in_single_quotes(item.strip)}" }.join("\n")}" unless str.to_s.empty?
           end
 
           def to_yaml_object(str)
-            "\n#{str.split(by_semicolon_if_not_in_single_quotes).collect { |item| "  #{item.strip}" }.join("\n")}" unless str.to_s.empty?
+            "\n#{close_open_quotes(str).split(by_semicolon_if_not_in_single_quotes).collect { |item| "  #{close_open_quotes(item.strip)}" }.join("\n")}" unless str.to_s.empty?
           end
 
           def yaml_remove_start(yaml_str)
@@ -29,6 +29,10 @@ module Contented
           # wrap_in_single_quotes("im so cold") => 'im so cold'
           def wrap_in_single_quotes(str)
             "'#{str.chomp("'").reverse.chomp("'").reverse}'"
+          end
+
+          def close_open_quotes(str)
+            (str.count("'")%2 != 0) ? "#{str}'" : str
           end
         end
       end
