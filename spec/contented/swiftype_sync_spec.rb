@@ -1,26 +1,12 @@
 require 'spec_helper'
 
 describe Contented::SwiftypeSync do
-  let(:sync){ Contented::SwiftypeSync }
 
-  describe "self.reindex_people" do
-    it "should call crawl on Crawler with correct default parameters" do
-      expect(Contented::SwiftypeSync::Crawler).to receive(:crawl).with(
-        base_url: "http://dev.library.nyu.edu/people/",
-        directory: "_people",
-        verbose: false
-      )
-      sync.reindex_people
-    end
+  it { should be_const_defined(:PEOPLE_DIR_NAME) }
+  it { should be_const_defined(:PEOPLE_URL_BASE) }
+  it { should be_const_defined(:SERVICES_DIR_NAME) }
+  it { should be_const_defined(:SERVICES_URL_BASE) }
+  it { should be_const_defined(:LOCATIONS_DIR_NAME) }
+  it { should be_const_defined(:LOCATIONS_URL_BASE) }
 
-    it "should call crawl on Crawler with verbose option if specified" do
-      expect(Contented::SwiftypeSync::Crawler).to receive(:crawl).with(
-        base_url: "http://dev.library.nyu.edu/people/",
-        directory: "_people",
-        verbose: true
-      )
-      sync.reindex_people verbose: true
-    end
-  end
-  
 end

@@ -28,7 +28,7 @@ module Contented
       end
 
       def filepaths
-        @filepaths ||= Dir.glob(File.join(@directory, "*#{FILE_EXTENSION}"))
+        @filepaths ||= glob_subdirectories(5)
       end
 
       def domain_id
@@ -36,8 +36,8 @@ module Contented
       end
 
       def filepath_to_url(filepath)
-        basename = File.basename(filepath).gsub(/#{FILE_EXTENSION}$/, '')
-        URI.join(@base_url, add_trailing_slash(basename)).to_s
+        basename = filepath.gsub(/^.*#{@directory}/, '').gsub(/#{FILE_EXTENSION}$/, '')
+        File.join(@base_url, add_trailing_slash(basename)).to_s
       end
 
       def crawl_domain_url(url, verbose: false)
@@ -51,6 +51,12 @@ module Contented
       private
       def add_trailing_slash(url)
         url[-1] == '/' ? url : url + '/'
+      end
+
+      def glob_subdirectories(nested_dir_num=0)
+        (0..nested_dir_num).map do |dir_num|
+          Dir.glob(File.join(@directory, (1..dir_num).map{'**'}.join('/'), "*#{FILE_EXTENSION}"))
+        end.flatten.uniq
       end
     end
   end
