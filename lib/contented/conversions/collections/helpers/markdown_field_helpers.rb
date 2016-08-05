@@ -28,11 +28,21 @@ module Contented
           # wrap_in_single_quotes("'im wrapped up'") => 'im wrapped up'
           # wrap_in_single_quotes("im so cold") => 'im so cold'
           def wrap_in_single_quotes(str)
-            "'#{str.chomp("'").reverse.chomp("'").reverse}'"
+            "'#{ascii_string(str.chomp("'").reverse.chomp("'").reverse)}'"
           end
 
           def close_open_quotes(str)
-            (str.count("'")%2 != 0) ? "#{str}'" : str
+            (str.count("'")%2 != 0) ? "#{ascii_string(str)}'" : ascii_string(str)
+          end
+
+          def ascii_string(non_ascii_string)
+            encoding_options = {
+              :invalid           => :replace,  # Replace invalid byte sequences
+              :undef             => :replace,  # Replace anything not defined in ASCII
+              :replace           => '',        # Use a blank for those replacements
+              :universal_newline => true       # Always break lines with \n
+            }
+            non_ascii_string.encode(Encoding.find('ASCII'), encoding_options)
           end
         end
       end

@@ -32,6 +32,10 @@ describe Contented::Conversions::Collections::Helpers::MarkdownFieldHelpers do
         it { is_expected.to eql "\n  - 'test string'"}
       end
     end
+    context 'when string contains non ascii characters' do
+      let(:non_yaml_str) { "'test string’" }
+      it { is_expected.to eql "\n  - 'test string'"}
+    end
   end
 
   describe '#to_yaml_object' do
@@ -58,6 +62,10 @@ describe Contented::Conversions::Collections::Helpers::MarkdownFieldHelpers do
         let(:non_yaml_str) { "rss: 'http://hello.edu'" }
         it { is_expected.to eql "\n  rss: 'http://hello.edu'"}
       end
+    end
+    context 'when string contains non ascii characters' do
+      let(:non_yaml_str) { "rss: 'http://hello.edu’" }
+      it { is_expected.to eql "\n  rss: 'http://hello.edu'"}
     end
   end
 
