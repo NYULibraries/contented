@@ -1,9 +1,9 @@
 require 'rubygems'
 require 'cucumber'
 require 'cucumber/rake/task'
-require 'contented/helpers/project_dir_helpers'
+require 'cucumber_helpers/project_dir_helpers'
 
-include Contented::Helpers::ProjectDirHelpers
+include CucumberHelpers::ProjectDirHelpers
 
 FEATURE_COLLECTIONS = %w[departments locations people about services]
 

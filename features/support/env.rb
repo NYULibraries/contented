@@ -3,9 +3,9 @@ require 'capybara/cucumber'
 require 'capybara/poltergeist'
 require 'capybara'
 require 'rspec'
-require 'contented/helpers/project_dir_helpers'
+require 'cucumber_helpers/project_dir_helpers'
 
-include Contented::Helpers::ProjectDirHelpers
+include CucumberHelpers::ProjectDirHelpers
 
 # add project directory to load path
 $LOAD_PATH.unshift(project_dir) unless $LOAD_PATH.include?(project_dir)
