@@ -3,10 +3,11 @@ require 'capybara/cucumber'
 require 'capybara/poltergeist'
 require 'capybara'
 require 'rspec'
-require 'pry'
+require 'contented/helpers/project_dir_helpers'
+
+include Contented::Helpers::ProjectDirHelpers
 
 # add project directory to load path
-project_dir = File.expand_path(File.join(File.dirname(__FILE__), '../..'))
 $LOAD_PATH.unshift(project_dir) unless $LOAD_PATH.include?(project_dir)
 
 def constantize_helper_path(helper_path)
@@ -16,7 +17,7 @@ end
 
 # Require and include helper modules
 # in feature/support/helpers and its subdirectories.
-Dir["features/support/helpers/**/*.rb"].each do |helper_path|
+Dir[File.join(project_dir, "features", "support", "helpers", "**", "*.rb")].each do |helper_path|
   require helper_path
   World constantize_helper_path helper_path
 end
