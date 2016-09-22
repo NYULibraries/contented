@@ -5,7 +5,7 @@ Feature: About collection
     And I click on the "About" link
 
   Scenario: Default display
-    Then I should see a topic "History & Mission"
+    Then I should see a topic "History"
     And I should see a topic "Who We Are"
     And I should see a topic "Using NYU Libraries"
     And I should see a topic "Collections"
@@ -17,7 +17,7 @@ Feature: About collection
   Scenario: Reset
     When I search for the term "library hours"
     And I click "Reset"
-    Then I should see a topic "History & Mission"
+    Then I should see a topic "History"
     And I should see a topic "Who We Are"
     And I should see a topic "Using NYU Libraries"
     And I should see a topic "Collections"
