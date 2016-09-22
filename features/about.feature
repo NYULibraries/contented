@@ -4,6 +4,7 @@ Feature: About collection
     Given I visit the homepage
     And I click on the "About" link
 
+  @wip
   Scenario: Default display
     Then I should see a topic "History"
     And I should see a topic "Who We Are"
@@ -14,6 +15,7 @@ Feature: About collection
     When I search for the term "library hours"
     Then I should see "Library Hours" as the first topic result
 
+  @wip
   Scenario: Reset
     When I search for the term "library hours"
     And I click "Reset"
