@@ -4,13 +4,12 @@ Feature: Locations collection
     Given I visit the homepage
     And I click on the "Libraries" link
 
-  @wip
   Scenario: Resorting
     When I click the column title "Location"
-      Then I should see "Bern Dibner Library" as the first result
+      Then I should see "Avery Fisher Center for Music & Media" as the first result
     When I click the column title "Location"
       And I click on page "2"
-      Then I should see "Bern Dibner Library" as the last result
+      Then I should see "Avery Fisher Center for Music & Media" as the last result
 
   Scenario: Default sorting
     Then I should see "Elmer Holmes Bobst Library" as the first result
