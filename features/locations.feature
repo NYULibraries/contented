@@ -20,6 +20,7 @@ Feature: Locations collection
     And the "Type" filter should have "Libraries" checked
     And the "Type" filter should have "Special Collections & Archives" checked
 
+  @wip
   Scenario: Refiltering
     When I uncheck "NYU" in the "Organization" filter
     And I check "Consortium & Affiliate Libraries" in the "Organization" filter
