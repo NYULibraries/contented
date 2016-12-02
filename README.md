@@ -31,6 +31,8 @@ $ bundle install
 $ bundle exec rake
 ```
 
+### Reindexing
+
 Reindex people in libraries project:
 
 ```shell
@@ -47,18 +49,18 @@ The specified base URL must include the protocol (http vs https). The protocol m
 
 ### Cucumber tests
 
-These tasks must be executed within the contented project. To run specify a domain:
+To run, specify a domain:
 
 ```
-bundle exec rake features DOMAIN=http://localhost:9292
+rake features DOMAIN=http://localhost:9292
 ```
 
 To run tests for a specific collection:
 
 ```
-bundle exec rake features:about DOMAIN=http://localhost:9292
-bundle exec rake features:departments DOMAIN=http://localhost:9292
-bundle exec rake features:locations DOMAIN=http://localhost:9292
-bundle exec rake features:people DOMAIN=http://localhost:9292
-bundle exec rake features:services DOMAIN=http://localhost:9292
+rake features:about DOMAIN=http://localhost:9292
+rake features:departments DOMAIN=http://localhost:9292
+rake features:locations DOMAIN=http://localhost:9292
+rake features:people DOMAIN=http://localhost:9292
+rake features:services DOMAIN=http://localhost:9292
 ```
