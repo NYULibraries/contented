@@ -8,7 +8,6 @@ group :development do
   gem 'webmock', '~> 1.21'
   gem 'pry', '~> 0.10'
   gem 'rubocop', '~> 0.34'
-  gem 'rspec', '~> 3.3'
   gem 'rspec-its', '~> 1.2.0'
   gem 'coveralls', '~> 0.8'
   gem 'figs', '~> 2.0'
@@ -17,10 +16,6 @@ group :development do
 end
 
 group :test do
-  gem 'cucumber'#, '< 2.0'
-  gem 'selenium-webdriver'
-  gem 'phantomjs'
-  gem 'poltergeist'
   gem 'guard-rspec', require: false
   gem 'climate_control'
 end

@@ -13,7 +13,7 @@ end
 
 desc "Run cucumber tests for all pages on specified DOMAIN"
 task :features do
-  sh "bundle exec cucumber --tags ~@wip #{features_directory}"
+  sh "bundle exec cucumber --tags ~@wip --require #{features_directory} #{features_directory}"
 end
 
 namespace(:features) do

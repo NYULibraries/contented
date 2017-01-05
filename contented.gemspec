@@ -18,15 +18,15 @@ Gem::Specification.new do |gem|
 
   gem.licenses      = ['MIT']
 
-  gem.required_ruby_version = '>= 1.9.3'
+  gem.required_ruby_version = '>= 2.2.5'
   gem.add_dependency 'sshkit', '>= 1.7.1'
   gem.add_dependency 'rake', '>= 10.0.0'
   gem.add_dependency 'faraday', '>= 0.9.0'
   gem.add_dependency 'i18n', '>= 0.7.0'
   gem.add_dependency 'swiftype', '~> 1.2.2'
-  gem.add_dependency 'cucumber'
-  gem.add_dependency 'rspec'
-  gem.add_dependency 'selenium-webdriver'
-  gem.add_dependency 'phantomjs'
-  gem.add_dependency 'poltergeist'
+  gem.add_dependency 'cucumber', '>= 2.3.3'
+  gem.add_dependency 'rspec', '>= 3.3'
+  gem.add_dependency 'selenium-webdriver', '>= 2.53.4'
+  gem.add_dependency 'phantomjs', '>= 2.1.1'
+  gem.add_dependency 'poltergeist', '>= 1.12.0'
 end
