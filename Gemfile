@@ -8,6 +8,7 @@ group :development do
   gem 'webmock', '~> 1.21'
   gem 'pry', '~> 0.10'
   gem 'rubocop', '~> 0.34'
+  gem 'rainbow', '~> 2.1.0'
   gem 'rspec-its', '~> 1.2.0'
   gem 'coveralls', '~> 0.8'
   gem 'figs', '~> 2.0'
