@@ -3,7 +3,7 @@ Then(/^I should see \d+ formatted RSS feed results under "(.+)"$/) do |title_tex
     expect(page).to have_selector rss_element_selector
     all_rss_elements.each do |rss_element|
       within(rss_element) do
-        expect(page).to have_link nil, href: /^https:\/\/wp\.nyu\.edu\/library-news/
+        expect(page).to have_link nil, href: /^https?:\/\/[^\/]+\.nyu\.edu\//
         expect(page).to have_text date_with_author_regex
       end
     end
