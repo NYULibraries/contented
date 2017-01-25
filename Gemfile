@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 gemspec
 
-gem "gather_content-api", github: "NYULibraries/gather_content-api"
+gem "gather_content-api", git: "https://github.com/NYULibraries/gather_content-api"
 
 group :development do
   gem 'vcr', '~> 2.9'
