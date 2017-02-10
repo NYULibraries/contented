@@ -12,6 +12,6 @@ module HomepageHelper
   end
 
   def date_with_author_regex
-    /\w+ \d+, \d{4} by \w+/
+    /\w+ \d+\w+, \d{4} by \w+/
   end
 end
