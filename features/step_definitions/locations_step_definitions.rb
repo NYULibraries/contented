@@ -22,6 +22,7 @@ Then /^I should see "(.+)" as the last result$/ do |result_text|
 end
 
 Then /^the "(.+)" filter should have "(.+)" checked$/ do |section_name, filter_name|
+  sleep 5
   within filter_group(section_name) do
     expect(filter_checkbox(filter_name)).to be_checked
   end

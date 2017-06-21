@@ -20,6 +20,7 @@ When /^I search for the term "(.+)"$/ do |search_text|
 end
 
 When /^I select "(.+)" in the "(.+)" dropdown filter$/ do |option_text, filter_name|
+  sleep 5
   expect(filter_select(filter_name)).to be_visible
   select option_text, from: filter_select(filter_name)[:name]
   wait_for_loading_ux
