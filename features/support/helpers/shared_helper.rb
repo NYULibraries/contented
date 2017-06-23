@@ -35,12 +35,16 @@ module SharedHelper
     "tbody tr"
   end
 
-  def filter_select(filter_name)
-    all('select').detect do |select_input|
-      within(select_input) do
-        all("option[value='']", text: filter_name).count == 1
-      end
-    end
+  def dropdown_filter(filter_text)
+    find("select[name='#{filter_name(filter_text)}']")
+  end
+
+  def filter_name(filter_text)
+    {
+      "Library Department" => "departments",
+      "Subject Specialty" => "subject_specialties",
+      "Located in" => "location",
+    }[filter_text] || raise("Unrecognzied filter: \"#{filter_text}\"")
   end
 
   def get_column_index(column_name)

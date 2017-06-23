@@ -3,14 +3,21 @@ module LocationsHelper
     all_results.last
   end
 
-  def filter_group(section_name)
-    first('.filter__group', text: /#{section_name}/i)
+  def find_checkbox(section_text, filter_text)
+    find("input[type='checkbox'][name='#{section_name(section_text)}'][value='#{filter_value(filter_text)}']")
   end
 
-  def filter_checkbox(filter_name)
-    within first('label', text: /#{filter_name}/i) do
-      first('input')
-    end
+  def section_name(section_text)
+    {
+      "Organization" => "org_type[]",
+      "Type" => "type[]"
+    }[section_text] || raise("Unrecognized section text: '#{section_text}'")
+  end
+
+  def filter_value(filter_text)
+    {
+      "Libraries" => "Library",
+    }[filter_text] || filter_text
   end
 
   def page_link(page_number)

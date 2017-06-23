@@ -21,10 +21,8 @@ Then /^I should see "(.+)" as the last result$/ do |result_text|
   expect(last_result).to have_text result_text
 end
 
-Then /^the "(.+)" filter should have "(.+)" checked$/ do |section_name, filter_name|
-  within filter_group(section_name) do
-    expect(filter_checkbox(filter_name)).to be_checked
-  end
+Then /^the "(.+)" filter should have "(.+)" checked$/ do |section_text, filter_text|
+  expect(find_checkbox(section_text, filter_text)).to be_checked
 end
 
 Then /^I should see "(.+)" in the results$/ do |result_text|

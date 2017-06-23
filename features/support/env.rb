@@ -4,6 +4,7 @@ require 'capybara/poltergeist'
 require 'capybara'
 require 'rspec'
 require 'cucumber_helpers/project_dir_helpers'
+require 'pry'
 
 include CucumberHelpers::ProjectDirHelpers
 

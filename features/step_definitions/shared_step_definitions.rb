@@ -19,9 +19,9 @@ When /^I search for the term "(.+)"$/ do |search_text|
   wait_for_loading_ux
 end
 
-When /^I select "(.+)" in the "(.+)" dropdown filter$/ do |option_text, filter_name|
-  expect(filter_select(filter_name)).to be_visible
-  select option_text, from: filter_select(filter_name)[:name]
+When /^I select "(.+)" in the "(.+)" dropdown filter$/ do |option_text, filter_text|
+  expect(dropdown_filter(filter_text)).to be_visible
+  select option_text, from: filter_name(filter_text)
   wait_for_loading_ux
 end
 
