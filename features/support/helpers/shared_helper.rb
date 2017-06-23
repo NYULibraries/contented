@@ -35,6 +35,10 @@ module SharedHelper
     "tbody tr"
   end
 
+  def dropdown_filter(filter_text)
+    find("select[name='#{filter_name(filter_text)}']")
+  end
+
   def filter_name(filter_text)
     {
       "Library Department" => "departments",

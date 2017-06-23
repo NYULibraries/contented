@@ -20,7 +20,7 @@ When /^I search for the term "(.+)"$/ do |search_text|
 end
 
 When /^I select "(.+)" in the "(.+)" dropdown filter$/ do |option_text, filter_text|
-  expect(find("select[name='#{filter_name(filter_text)}']")).to be_visible
+  expect(dropdown_filter(filter_text)).to be_visible
   select option_text, from: filter_name(filter_text)
   wait_for_loading_ux
 end
