@@ -9,7 +9,8 @@ def configure_poltergeist
       window_size: [1280, 1024],
       timeout: (ENV['TIMEOUT'] || 30).to_i,
       js_errors: false,
-      phantomjs_logger: StringIO.new
+      phantomjs_logger: StringIO.new,
+      url_blacklist: Figs::ENV['cucumber_backlist_urls']
     )
   end
 end
