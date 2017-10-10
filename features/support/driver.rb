@@ -2,7 +2,6 @@
 # set for our tests
 def configure_poltergeist
   # DEFAULT: headless tests with poltergeist/PhantomJS
-  puts "Blacklisting URLS: #{Figs::ENV['cucumber_backlist_urls']}"
   Capybara.register_driver :poltergeist do |app|
     Capybara::Poltergeist::Driver.new(
       app,
@@ -11,7 +10,7 @@ def configure_poltergeist
       timeout: (ENV['TIMEOUT'] || 30).to_i,
       js_errors: false,
       phantomjs_logger: StringIO.new,
-      url_blacklist: Figs::ENV['cucumber_backlist_urls']
+      url_blacklist: ["https://libraryh3lp.com", "https://js-agent.newrelic.com"]
     )
   end
 end
