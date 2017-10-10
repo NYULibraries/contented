@@ -2,6 +2,7 @@
 # set for our tests
 def configure_poltergeist
   # DEFAULT: headless tests with poltergeist/PhantomJS
+  puts "Blacklisting URLS: #{Figs::ENV['cucumber_backlist_urls']}"
   Capybara.register_driver :poltergeist do |app|
     Capybara::Poltergeist::Driver.new(
       app,
