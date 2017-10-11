@@ -1,4 +1,4 @@
-require 'figs'; Figs.load()
+# require 'figs'; Figs.load()
 require 'capybara/cucumber'
 require 'capybara/poltergeist'
 require 'capybara'
