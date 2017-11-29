@@ -1,7 +1,6 @@
 # Contented
 
-[![NYU](https://github.com/NYULibraries/nyulibraries-assets/blob/master/lib/assets/images/nyu.png)](https://dev.library.nyu.edu)
-[![Build Status](https://travis-ci.org/NYULibraries/contented.svg)](https://travis-ci.org/NYULibraries/contented)
+[![CircleCI](https://circleci.com/gh/NYULibraries/contented.svg?style=svg)](https://circleci.com/gh/NYULibraries/contented)
 [![Dependency Status](https://gemnasium.com/NYULibraries/contented.svg)](https://gemnasium.com/NYULibraries/contented)
 [![Code Climate](https://codeclimate.com/github/NYULibraries/contented/badges/gpa.svg)](https://codeclimate.com/github/NYULibraries/contented)
 [![Coverage Status](https://coveralls.io/repos/github/NYULibraries/contented/badge.svg?branch=master)](https://coveralls.io/github/NYULibraries/contented?branch=master)
@@ -23,7 +22,6 @@ Then run:
 ```shell
 $ bundle install
 ```
-
 
 ## Rake
 

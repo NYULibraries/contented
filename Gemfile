@@ -1,22 +1,19 @@
 source 'http://rubygems.org'
 gemspec
 
-gem "gather_content-api", git: "https://github.com/NYULibraries/gather_content-api"
+gem 'gather_content-api', github: 'NYULibraries/gather_content-api', tag: 'v0.0.2'
 
-group :development do
-  gem 'vcr', '~> 2.9'
-  gem 'webmock', '~> 1.21'
-  gem 'pry', '~> 0.10'
-  gem 'rubocop', '~> 0.34'
-  gem 'rainbow', '~> 2.1.0'
+group :development, :test do
+  gem 'vcr', '~> 3'
+  gem 'webmock', '~> 3'
   gem 'rspec-its', '~> 1.2.0'
   gem 'coveralls', '~> 0.8'
-  gem 'figs', '~> 2.0'
   gem 'factory_girl', '~> 4.5.0'
   gem 'swiftype', '~> 1.2.2'
-end
+  gem 'figs', '~> 2.0'
+  gem 'rspec', '~> 3.5'
 
-group :test do
   gem 'guard-rspec', require: false
   gem 'climate_control'
+  gem 'pry'
 end

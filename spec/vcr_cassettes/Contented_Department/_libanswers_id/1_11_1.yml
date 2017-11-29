@@ -2,15 +2,17 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-id:api-key@api.gathercontent.com/items/2027930
+    uri: https://api.gathercontent.com/items/2027930
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.2
+      - Faraday v0.13.1
       Accept:
       - application/vnd.gathercontent.v0.5+json
+      Authorization:
+      - Basic YmEzNkBueXUuZWR1OmI3ZjliZmE2LTk1NzItNDc1OS1iMTI3LTI0MjFlNjQ2YjY0MA==
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -23,22 +25,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Fri, 25 Mar 2016 15:36:48 GMT
+      - Wed, 29 Nov 2017 20:18:31 GMT
       Server:
-      - nginx/1.8.1
-      Set-Cookie:
-      - laravel_session=eyJpdiI6ImhyTzZ2eUVVNk5WRU9CYUU2Nm9Lbkp0RkN3clU2SnY1N2gwVEZrTGZOWjg9IiwidmFsdWUiOiI1SFwvRFpVNnVRUllaWVl5c05XK2F6bGVGbFhEVll0bGtpakhIempUeVpKMHI0Z09xTWRNVXJXN3Y1dldwU2NtNk1HQ2xPR0hudTRcL0RVbG91bWYyZmt3PT0iLCJtYWMiOiJiM2Q4YjBlZTU1NDQ0ODgzNmE2YjExMDhiNzYzODQwOTZkM2IyNGYyYzExMTliNzcxM2E1MzBhNjJiODVjOTE0In0%3D;
-        expires=Fri, 25-Mar-2016 17:36:48 GMT; Max-Age=7200; path=/; HttpOnly
-      Vary:
-      - Accept-Encoding
-      X-Frame-Options:
-      - SAMEORIGIN
+      - nginx
       Content-Length:
-      - '7673'
+      - '8504'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"data":{"id":2027930,"project_id":57459,"parent_id":2186086,"template_id":243138,"custom_state_id":241862,"position":"7","name":"Web
         Services","config":[{"label":"READ ME","name":"tab1440713097801","hidden":false,"elements":[{"type":"section","name":"el1440713129929","title":"Hurrah!
         Your department gets a new webpage, now what?","subtitle":"<h3>The new Libraries
@@ -275,5 +270,5 @@ http_interactions:
         22:00:00.000000","timezone_type":3,"timezone":"UTC"}},{"status_id":241861,"overdue":true,"due_date":{"date":"2015-10-12
         22:00:00.000000","timezone_type":3,"timezone":"UTC"}}]}}}'
     http_version: 
-  recorded_at: Fri, 25 Mar 2016 15:36:47 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Wed, 29 Nov 2017 20:18:31 GMT
+recorded_with: VCR 3.0.3

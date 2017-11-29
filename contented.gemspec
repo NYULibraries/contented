@@ -6,10 +6,10 @@ require 'contented/version'
 Gem::Specification.new do |gem|
   gem.name          = "contented"
   gem.version       = Contented::VERSION
-  gem.authors       = ["Amay Yadav"]
-  gem.email         = ["amay@nyu.edu"]
-  gem.description   = %q{Contented converts multiple data streams to yaml for siteleaf}
-  gem.summary       = %q{Contented - Usable YAML from various data sources}
+  gem.authors       = ["Amay Yadav", "Eric Griffis", "Barnaby Alter"]
+  gem.email         = ["amay@nyu.edu", "eric.griffis@nyu.edu", "barnaby.alter@nyu.edu"]
+  gem.description   = %q{Content and test helpers for the NYU Libraries website}
+  gem.summary       = %q{Content and test helpers for the NYU Libraries website}
   gem.homepage      = "https://github.com/NYULibraries/contented"
 
   gem.files         = `git ls-files`.split($/)
