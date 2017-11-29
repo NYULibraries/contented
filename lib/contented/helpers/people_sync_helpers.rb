@@ -2,6 +2,8 @@ module Contented
   module Helpers
     module PeopleSyncHelpers
 
+      PEOPLESYNC_FILENAME = 'tmp/people_sync.json'
+
       def people_sync_json
         @people_sync_json ||= JSON.parse(stored_people_sync_data)['Report_Entry']
       end
@@ -47,12 +49,13 @@ module Contented
       end
 
       def stored_people_sync_data
-        if File.exist?('tmp/people_sync.json')
-          people_sync_data = File.open("tmp/people_sync.json", "rb").read
+        if File.exist?(PEOPLESYNC_FILENAME) && Date.parse(File.ctime(PEOPLESYNC_FILENAME).to_s) == Date.today
+          people_sync_data = File.read(PEOPLESYNC_FILENAME)
         else
           people_sync_data = people_sync_response.body
-          File.write("tmp/people_sync.json", people_sync_data)
+          File.open(PEOPLESYNC_FILENAME, "w") { |file| file.write(people_sync_data) }
         end
+
         return people_sync_data
       end
     end

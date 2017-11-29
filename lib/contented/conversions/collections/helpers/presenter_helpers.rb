@@ -5,11 +5,11 @@ module Contented
         # Renderer for presenters in collections
         module PresenterHelpers
           def render
-            render = ''
+            rendered_output = ''
             (method_output_order).each do |method_sym|
-              render = "#{render}#{send(method_sym)}\n"
+              rendered_output = "#{rendered_output}#{send(method_sym)}\n"
             end
-            render
+            rendered_output
           end
 
           def method_output_order
