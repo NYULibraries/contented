@@ -2,15 +2,17 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-id:api-key@api.gathercontent.com/items/2027930
+    uri: https://api.gathercontent.com/items/2027930
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.9.2
+      - Faraday v0.13.1
       Accept:
       - application/vnd.gathercontent.v0.5+json
+      Authorization:
+      - Basic YmEzNkBueXUuZWR1OmI3ZjliZmE2LTk1NzItNDc1OS1iMTI3LTI0MjFlNjQ2YjY0MA==
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -23,24 +25,15 @@ http_interactions:
       Content-Type:
       - application/json
       Date:
-      - Wed, 10 Feb 2016 00:05:48 GMT
+      - Wed, 29 Nov 2017 20:18:26 GMT
       Server:
-      - nginx/1.8.0
-      Set-Cookie:
-      - laravel_session=eyJpdiI6IjAyTk1qblFZQnNXdWtmd3hKUllpT3NpK21kRGg4MnBNVGdqZ2JZUGpwUUE9IiwidmFsdWUiOiJ5WHdJdlJVMWhEcHZtQjBzaHJyOWxcLzdGekNJRTZaclNhazZSY2hlQjVFbHZkSmxCTlJcL3JnNlpcL1Z2Y2lNMVdMXC9tWU5IRG9tVkZnbllaUXBoUVNjckE9PSIsIm1hYyI6IjFlOTE5N2Y4ZWQ5OGZkNWViYTFlN2EzMzU2NTAyZjVhZDc0NjA3MjVjNWFjN2NlNzgzZDkwYjI2ODIxNjY4ODQifQ%3D%3D;
-        expires=Wed, 10-Feb-2016 02:05:48 GMT; Max-Age=7200; path=/; httponly
-      Vary:
-      - Accept-Encoding
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Powered-By:
-      - PHP/5.5.9-1ubuntu4.14
+      - nginx
       Content-Length:
-      - '9528'
+      - '8504'
       Connection:
       - keep-alive
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"data":{"id":2027930,"project_id":57459,"parent_id":2186086,"template_id":243138,"custom_state_id":241862,"position":"7","name":"Web
         Services","config":[{"label":"READ ME","name":"tab1440713097801","hidden":false,"elements":[{"type":"section","name":"el1440713129929","title":"Hurrah!
         Your department gets a new webpage, now what?","subtitle":"<h3>The new Libraries
@@ -71,25 +64,11 @@ http_interactions:
         system\u00a0as simple as possible, but understand that you may have questions
         while working through this process.<\/p><p>Do not hesitate to get in touch
         with us either by email, phone, or IM. \u00a0You can also leave comments in
-        this system. \u00a0<br \/><\/p><p><br \/><\/p>"}]},{"label":"About Your Dept","name":"tab1440693399101","hidden":false,"elements":[{"type":"section","name":"el1449630636890","title":"This
-        tab covers...","subtitle":"<ul><li><span>Writing original\u00a0content for
-        the web describing what your department does<\/span><\/li><\/ul>"},{"type":"section","name":"el1440698631693","title":"THE
-        \"WHAT WE DO\" STATEMENT","subtitle":"<h3>This section of the department web
-        page provides a space to communicate the role of your department.\u200b\u00a0<\/h3><p><strong><br
-        \/><\/strong><\/p><p><strong>\u200bREMEMBER TO SAVE!<\/strong><br \/><\/p>"},{"type":"section","name":"el1442245133857","title":"BRAINSTORMING
-        ","subtitle":"<p><em>We have found creating a bulleted list of your core competencies
-        is helpful for this writing process.\u200b\u00a0<\/em>\u200b<\/p><ul><li>Focus
-        on the key ways\u00a0users can benefit from your department\u2019s services.<\/li><\/ul><p><em>Use
-        the box below\u00a0to help collaboratively\u00a0brainstorm your department''s
-        core competencies.<\/em>\u200b<\/p>"},{"type":"text","name":"el1441035442464","required":false,"label":"Core
-        Competencies","value":"<ul>\n    <li>We are great at...\n    <\/li>\n<\/ul>","microcopy":"The
-        text in the box is just a placeholder.","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1442245420960","title":"WRITING
-        YOUR STATEMENT","subtitle":"<p>Using the Core Competencies list\u00a0as a\u00a0guide
-        may help you create the prose for your \"What We Do\" statement. \u00a0<br
-        \/><\/p><p><strong>\u200bGUIDELINES:<\/strong><\/p><ol><li>The statement should
-        be\u00a0<strong>no more than 250 characters long<\/strong>.\u00a0<br \/><\/li><li>The
-        mobile view of the page\u00a0will only be able to\u00a0show the first two
-        lines of this section, so keep that in mind when writing. \u00a0\u00a0\u200b\u200b\u200b<br
+        this system. \u00a0<br \/><\/p><p><br \/><\/p>"}]},{"label":"About Your Dept","name":"tab1440693399101","hidden":false,"elements":[{"type":"section","name":"el1442245420960","title":"WRITING
+        YOUR STATEMENT","subtitle":"<p><strong>\u200bGUIDELINES:<\/strong><br \/><\/p><ol><li>The
+        statement should be\u00a0<strong>no more than 250 characters long<\/strong>.\u00a0<br
+        \/><\/li><li>The mobile view of the page\u00a0will only be able to\u00a0show
+        the first two lines of this section, so keep that in mind when writing. \u00a0\u00a0\u200b\u200b\u200b<br
         \/><\/li><\/ol><p><em><strong>Writing Style\u00a0Tips:<\/strong><\/em><\/p><ul><li>Use
         action oriented language. \u00a0<\/li><li>Avoid recreating a list of your
         services.<\/li><li>The Library\u2019s mission is to serve NYU faculty, students,
@@ -104,64 +83,10 @@ http_interactions:
         interface. We also develop and maintain web-based services and special projects.\n<\/p>","microcopy":"Simply
         delete the sample text above and write in your own statement. The statement
         should be no more than 250 characters long.","limit_type":"chars","limit":250,"plain_text":false}]},{"label":"Contact
-        Info","name":"tab1440692574326","hidden":false,"elements":[{"type":"section","name":"el1449630401275","title":"This
-        tab covers...","subtitle":"<ul><li><span>Contact and location information
-        for your department<\/span><\/li><\/ul>"},{"type":"section","name":"el1442508062623","title":"DEPARTMENT
-        NAME","subtitle":"<p>Department names are being sourced from the most current
-        HR data. \u00a0<\/p><p>Please select your department''s name below. \u00a0If
-        your department name is not correct please enter the correct on in the \"other\"
-        box.<\/p>"},{"type":"choice_radio","name":"el1440713408672","required":false,"label":"Department
-        Name\u00a0","microcopy":"If your department''s name is out of date or incorrect
-        please provide your correct name in the \"other\" box.","other_option":true,"options":[{"name":"op144071340867339751829","label":"Access,
-        Delivery &amp; Resource Sharing Services","selected":false},{"name":"op144071340867435522680","label":"Archival
-        Collections Management","selected":false},{"name":"op144071340867553401872","label":"Avery
-        Fisher Center","selected":false},{"name":"op144112567259323086462","label":"Bern
-        Dibner Library","selected":false},{"name":"op144112568320845066624","label":"Budget
-        and Planning","selected":false},{"name":"op14411256853004126624","label":"Business
-        &amp; Government Information Services","selected":false},{"name":"op144112568700780993061","label":"Campus
-        Cable","selected":false},{"name":"op144112576324099398435","label":"Cantor
-        Film Center","selected":false},{"name":"op144112576461245153944","label":"Circulation
-        Services","selected":false},{"name":"op144112576601750518793","label":"Classroom
-        Media","selected":false},{"name":"op144112576734256322163","label":"Client
-        Services","selected":false},{"name":"op144112576886239422859","label":"Collection
-        Development","selected":false},{"name":"op14411258025292257820","label":"Collections
-        &amp; Research Services","selected":false},{"name":"op144112580417962381021","label":"Courant
-        Institute Library","selected":false},{"name":"op144112580567662825484","label":"Data
-        Services","selected":false},{"name":"op144112580738687064208","label":"Delivery
-        &amp; Resource Sharing Services","selected":false},{"name":"op144112588001946452990","label":"Development
-        at Bobst","selected":false},{"name":"op14411258821555949132","label":"Digital
-        Library Publication and Access","selected":false},{"name":"op14411258839347409571","label":"Digital
-        Library Technology Services","selected":false},{"name":"op144112980287220106526","label":"Digital
-        Scholarship Services","selected":false},{"name":"op144112609600784799732","label":"Digital
-        Studio","selected":false},{"name":"op144112609933839146946","label":"Fales
-        Library","selected":false},{"name":"op14411261009214905246","label":"Global
-        Processing","selected":false},{"name":"op144112615288488511278","label":"Human
-        Resources","selected":false},{"name":"op144112615456896151030","label":"IFA
-        Library","selected":false},{"name":"op144112615621830067928","label":"IT Services
-        &amp; Media Services","selected":false},{"name":"op144112618671822375037","label":"Knowledge
-        Access &amp; Resource Management Services","selected":false},{"name":"op144112618976555793464","label":"Knowledge
-        Access Design &amp; Development","selected":false},{"name":"op144112619147857648213","label":"Library
-        for Arabic Literature","selected":false},{"name":"op144112619296465913869","label":"Library
-        Privileges","selected":false},{"name":"op14411262471186792411","label":"Margaret
-        Sanger Papers","selected":false},{"name":"op144112625031389721134","label":"Metadata
-        Production &amp; Management","selected":false},{"name":"op144112625211673719028","label":"Monographs","selected":false},{"name":"op14411262538021734927","label":"NYU
-        Press","selected":false},{"name":"op144112625562179535779","label":"NYU Press
-        Budget","selected":false},{"name":"op144112630004581682174","label":"NYU-TV","selected":false},{"name":"op144112630332135117362","label":"Office
-        of the Dean","selected":false},{"name":"op14411263048831933296","label":"Preservation","selected":false},{"name":"op144112630642481592026","label":"Production
-        &amp; Design","selected":false},{"name":"op144112630815477912731","label":"Public
-        Services","selected":false},{"name":"op1445442793537","label":"Reference Services","selected":false},{"name":"op144112634640627025311","label":"Reserves","selected":false},{"name":"op144112634966386744864","label":"Resource
-        Management","selected":false},{"name":"op144112639273979452804","label":"Sciences
-        Reference Librarians","selected":false},{"name":"op144112639529955012331","label":"Sciences
-        Reference Services","selected":false},{"name":"op144112639698597455740","label":"Serials","selected":false},{"name":"op144112639967370771015","label":"SocHum
-        Reference Librarians","selected":false},{"name":"op144112643495959644040","label":"SocHum
-        Reference Services","selected":false},{"name":"op1447263213153","label":"Specialized
-        Research Services","selected":false},{"name":"op144112643693537747231","label":"Stacks","selected":false},{"name":"op14411264669995711319","label":"Systems","selected":false},{"name":"op144112651082050648817","label":"Tamiment
-        Library","selected":false},{"name":"op144112653613371476760","label":"The
-        Institute for the Study of the Ancient World Library","selected":false},{"name":"op144112653846336589381","label":"Undergraduate,
-        Instructional &amp; Global Services","selected":false},{"name":"op14411265405248268405","label":"University
-        Archives","selected":false},{"name":"op14411265754262731217","label":"User
-        Experience","selected":false},{"name":"op144112659145582183293","label":"Web
-        Services","selected":true},{"name":"op144071343471599575588","label":"Other","selected":false,"value":""}]},{"type":"text","name":"el1448904846615","required":false,"label":"Acronym
+        Info","name":"tab1440692574326","hidden":false,"elements":[{"type":"text","name":"el1457388300246","required":false,"label":"Department
+        Name \u00a0\u00a0","value":"<p>\n    \u200b\n<\/p>","microcopy":"Use ampersands
+        instead of the word \"and\" \ne.g. Knowledge Access &amp; Resource Management
+        Services","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"el1448904846615","required":false,"label":"Acronym
         or initials used by your department (if any)","value":"","microcopy":"Example:
         UX, KARMS, ADRSS, etc. ","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1442859904671","title":"LOCATION
         INFO","subtitle":"<p><strong>Your department''s location information includes:<\/strong><\/p><ul><li><span>Library
@@ -244,7 +169,9 @@ http_interactions:
         Manager (Name and NetID) 1\u00a0","value":"","microcopy":"Include name and
         NetID of Department Managers\n\nEx.  John Doe, jd123","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"1445441490083","required":false,"label":"Department
         Manager (Name and NetID) 2","value":"","microcopy":"Include name and NetID
-        of Department Managers\n\nEx.  John Doe, jd123","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1445441645825","title":"Front-facing
+        of Department Managers\n\nEx.  John Doe, jd123","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"1457388580276","required":false,"label":"Department
+        Manager (Name and NetID) 3","value":"<p>\n    \u200b\n<\/p>","microcopy":"Include
+        name and NetID of Department Managers\n\nEx.  John Doe, jd123","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1445441645825","title":"Front-facing
         Employees","subtitle":"<h3>People who interact most with users, offer consultations,
         teach classes, etc.\u00a0\u200b\u200b<\/h3>"},{"type":"text","name":"el1449626412924","required":false,"label":"List
         the front-faceing employees for your department (if applicable)","value":"<p>\n    <br>\n<\/p>\n<table>\n    <thead>\n        <tr>\n            <th>\n                \u200bName
@@ -310,16 +237,9 @@ http_interactions:
         please include the url or email address your department uses for making appointments.\u00a0<\/p>"},{"type":"text","name":"el1440698239060","required":false,"label":"Email
         address or URL to a form used for appointment requests","value":"<p>\n    <br>\n<\/p>","microcopy":"If
         your department uses a form to schedule appointments please provide the url
-        or email contact info.","limit_type":"words","limit":0,"plain_text":false}]},{"label":"Social
-        Media","name":"tab1440693355056","hidden":false,"elements":[{"type":"section","name":"el1449630596339","title":"This
-        tab covers...","subtitle":"<ul><li><span>Social media accounts for your department\u200b<\/span><\/li><\/ul>"},{"type":"section","name":"el1442864383451","title":"IF
-        YOUR DEPARTMENT USES SOCIAL MEDIA...","subtitle":"<p>Some departments use
-        social media such as\u00a0<\/p><ul><li>\u200btwitter<\/li><li>blogs<\/li><li>facebook<\/li><\/ul><p>If
-        you answer YES in the question below please fill in the rest of this page
-        with the appropriate information.\u00a0\u200b<\/p>"},{"type":"choice_radio","name":"el1442864483254","required":false,"label":"Does
-        your department use social media?","microcopy":"","other_option":false,"options":[{"name":"op1442864483255","label":"No,
-        and don''t want to.","selected":false},{"name":"op1442864483256","label":"Not
-        at the moment, but might be interested in social media.","selected":false},{"name":"op1442864483257","label":"Yes","selected":true}]},{"type":"text","name":"el1440697232178","required":false,"label":"Facebook","value":"","microcopy":"Please
+        or email contact info.","limit_type":"words","limit":0,"plain_text":false}]},{"label":"Blog
+        &amp; Social Media","name":"tab1440693355056","hidden":false,"elements":[{"type":"section","name":"el1442864383451","title":"IF
+        YOUR DEPARTMENT USES SOCIAL MEDIA...","subtitle":"<p>\u200b<\/p>"},{"type":"text","name":"el1440697232178","required":false,"label":"Facebook","value":"","microcopy":"Please
         provide your department''s Facbook user name","limit_type":"words","limit":0,"plain_text":false},{"type":"text","name":"el1440697234074","required":false,"label":"Twitter","value":"<p>\n    libtechnyu\n<\/p>","microcopy":"Please
         provide your department''s Twitter handle.  \n\nFormat: only the text no @
         symbol\ne.g. departmenthandle","limit_type":"words","limit":0,"plain_text":false},{"type":"section","name":"el1442864607367","title":"DEPARTMENT
@@ -340,59 +260,15 @@ http_interactions:
         your department provide front facing services?","microcopy":"","other_option":false,"options":[{"name":"op1442865713605","label":"Yes,
         we provide services that should be exposed on the website, so the NYU community
         can utilize them.","selected":false},{"name":"op1442865713606","label":"No,
-        we work more behind the scenes and don''t author any service documents. ","selected":true}]}]}],"notes":"","type":"item","overdue":false,"created_at":{"date":"2015-09-15
-        16:47:39","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2015-12-16
-        17:23:00","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241862","is_default":false,"position":"5","color":"#5eb95e","name":"Ready
+        we work more behind the scenes and don''t author any service documents. ","selected":true}]}]}],"notes":"","type":"item","overdue":false,"archived_by":null,"archived_at":null,"created_at":{"date":"2015-09-15
+        16:47:39","timezone_type":3,"timezone":"UTC"},"updated_at":{"date":"2016-03-07
+        22:12:35","timezone_type":3,"timezone":"UTC"},"status":{"data":{"id":"241862","is_default":false,"position":"5","color":"#5eb95e","name":"Ready
         for the Web","description":"Content looks good and is ready to be published
         for the website. \nCongratulations, you''re done! UX department will take
         it from here. \n\nWHO: DMs and UX","can_edit":false}},"due_dates":{"data":[{"status_id":241859,"overdue":true,"due_date":{"date":"2015-10-05
-        22:00:00","timezone_type":3,"timezone":"UTC"}},{"status_id":241860,"overdue":true,"due_date":{"date":"2015-10-08
-        22:00:00","timezone_type":3,"timezone":"UTC"}},{"status_id":241861,"overdue":true,"due_date":{"date":"2015-10-12
-        22:00:00","timezone_type":3,"timezone":"UTC"}}]}}}'
+        22:00:00.000000","timezone_type":3,"timezone":"UTC"}},{"status_id":241860,"overdue":true,"due_date":{"date":"2015-10-08
+        22:00:00.000000","timezone_type":3,"timezone":"UTC"}},{"status_id":241861,"overdue":true,"due_date":{"date":"2015-10-12
+        22:00:00.000000","timezone_type":3,"timezone":"UTC"}}]}}}'
     http_version: 
-  recorded_at: Wed, 10 Feb 2016 00:05:48 GMT
-- request:
-    method: get
-    uri: https://api.gathercontent.com/items/2027930
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v0.9.2
-      Accept:
-      - application/vnd.gathercontent.v0.5+json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-  response:
-    status:
-      code: 401
-      message: Unauthorized
-    headers:
-      Cache-Control:
-      - no-cache
-      Content-Type:
-      - text/html; charset=UTF-8
-      Date:
-      - Tue, 01 Mar 2016 20:44:37 GMT
-      Server:
-      - nginx/1.8.1
-      Set-Cookie:
-      - laravel_session=eyJpdiI6Inp5azkxa3hwbDZZVjJrZmJad2RpbHhDbGpcL01uRlNGS21vY2N6c0Q1U244PSIsInZhbHVlIjoibHBmRFBxaTZ5Vit4Mno3aGlFS05QamgyK056KzNXeE13T29nVk1qcHhDKzZvOFwvS2ZEK291Zm45V05wOEdSd3lpREVhd2oyRXowd2laK1dic2RzNTR3PT0iLCJtYWMiOiJkMGRiYzU0NmEyYTA5MzhhMTI0NDE2OWZhMjM5ZmNlM2U0YzBjNjU5NmE5M2FkMzVlMWJiN2MyOGNjYzJhZDBmIn0%3D;
-        expires=Tue, 01-Mar-2016 22:44:37 GMT; Max-Age=7200; path=/; httponly
-      Www-Authenticate:
-      - Basic
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Powered-By:
-      - PHP/5.5.9-1ubuntu4.14
-      Content-Length:
-      - '20'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: Invalid credentials.
-    http_version: 
-  recorded_at: Tue, 01 Mar 2016 20:44:36 GMT
-recorded_with: VCR 2.9.3
+  recorded_at: Wed, 29 Nov 2017 20:18:26 GMT
+recorded_with: VCR 3.0.3
