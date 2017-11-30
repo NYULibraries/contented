@@ -1,57 +1,19 @@
 require 'contented'
-include Contented::Conversions::Collections::People
-include Contented::Helpers::TitleHelpers
-include Contented::Helpers::PeopleSyncHelpers
-include Contented::Helpers::PersonHelpers
-include Contented::Helpers::GoogleSpreadsheetHelpers
 
 namespace :contented do
   namespace :convert do
-    namespace :people do
-      desc 'Run all conversions for People'
-      task :all do
-        Rake::Task["contented:convert:people:people_sync:to_markdown"].invoke
-        Rake::Task["contented:convert:people:google_spreadsheet:to_markdown"].invoke('non_peoplesync_google_sheet_uri')
-      end
 
-      desc 'Converts people from PeopleSync into markdown after enriching with data from a Google Spreadsheet'
-      namespace :people_sync do
-        task :to_markdown do
-          people_sync_people = people_sync_json || []
-          google_spreadsheet_people = google_sheet_json
-
-          people_sync_people.each do |people_sync_person|
-            # skip if the person is in excluded list
-            next if person_in_exclude_list? people_sync_person
-            # create a person object
-            person = Person.new(people_sync_person.to_json)
-            # Find person from google sheet and pop it off
-            google_spreadsheet_person = find_in_json(google_spreadsheet_people, person.netid)
-            google_spreadsheet_people.delete(google_spreadsheet_person)
-            # Expand the person
-            write_person_file(person, google_spreadsheet_person)
-          end
-        end
-      end
-
-      desc 'Converts people from a Google Spreadsheet into markdown'
-      namespace :google_spreadsheet do
-        task :to_markdown, [:environment_var_name] do |task_name, args|
-          if args[:environment_var_name].nil?
-            google_spreadsheet_people = google_sheet_json
-          else
-            google_spreadsheet_people = google_sheet_json(args[:environment_var_name])
-          end
-
-          google_spreadsheet_people.each  do |google_spreadsheet_person|
-            next if person_in_exclude_list? google_spreadsheet_person
-            write_person_file(nil, google_spreadsheet_person)
-          end
-        end
+    desc 'Convert people from XML file to Markdown'
+    task :people, :file do |t, args|
+      file = args[:file] || '../data/staff_directory_load.xml'
+      people = Contented::People.new(file)
+      people.each do |p|
+        person = Contented::Person.new(p)
+        person.to_markdown!
       end
     end
 
-    desc 'Convert departments from GatherContent JSON to Markdowns with YAML Front Matter'
+    desc 'Convert departments from GatherContent JSON to Markdown with YAML Front Matter'
     task :departments do
       departments = Contented::Departments.new(project_id = '57459')
       departments.each do |department|
@@ -61,5 +23,6 @@ namespace :contented do
         end
       end
     end
+
   end
 end

@@ -40,7 +40,7 @@ $ bundle exec rake contented:reindex:people
 You may specify a base URL with which to generate URLs for indexing, e.g.:
 
 ```shell
-$ bundle exec rake contented:reindex:people[http://beta.library.nyu.edu/people]
+$ bundle exec rake contented:reindex:people[http://dev.library.nyu.edu/people]
 ```
 
 The specified base URL must include the protocol (http vs https). The protocol must match the protocol of the URL as originally indexed (if accessible via both protocols). Otherwise, Swiftype apparently processes it as a new document (indicated in the verbose output of the rake task) then identifies it as duplicate, causing it to silently ignore the reindex request. (This is observed not documented behavior.)

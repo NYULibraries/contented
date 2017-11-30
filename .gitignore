@@ -2,3 +2,5 @@
 Gemfile.lock
 coverage/
 Figsfile
+data/
+tmp/
