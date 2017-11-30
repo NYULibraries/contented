@@ -11,6 +11,8 @@ module Contented
   autoload :Department, 'contented/department'
   autoload :Departments, 'contented/departments'
   autoload :SwiftypeSync, 'contented/swiftype_sync'
+  autoload :Person, 'contented/person'
+  autoload :SourceReaders, 'contented/source_readers'
 
   if I18n.available_locales.empty?
     I18n.available_locales = [:en]
