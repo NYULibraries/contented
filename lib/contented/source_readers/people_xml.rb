@@ -1,4 +1,6 @@
-# 
+require 'ox'
+require 'ostruct'
+#
 module Contented
   module SourceReaders
     class PeopleXML
@@ -7,9 +9,12 @@ module Contented
       attr_accessor :file, :people
 
       def initialize(file)
+        unless File.exist?(file)
+          raise ArgumentError.new("File doesn't exist")
+        end
         @file = file
         xml_string = File.read(file)
-        @people = OpenStruct.new(Hash.from_xml(xml_string))
+        @people = Ox.load(xml_string, mode: :hash_no_attrs)[:DATA][:"staff-record"]
       end
 
       def each(&block)
