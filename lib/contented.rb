@@ -6,13 +6,8 @@ require 'i18n'
 require 'swiftype'
 
 module Contented
-  require 'contented/version'
-  autoload :Decorators, 'contented/decorators'
-  autoload :Department, 'contented/department'
-  autoload :Departments, 'contented/departments'
-  autoload :SwiftypeSync, 'contented/swiftype_sync'
-  autoload :Person, 'contented/person'
-  autoload :SourceReaders, 'contented/source_readers'
+  # Load all files in lib/contented into the Contented module
+  Dir[File.dirname(__FILE__) + "/contented/**/*.rb"].each {|f| require f }
 
   if I18n.available_locales.empty?
     I18n.available_locales = [:en]

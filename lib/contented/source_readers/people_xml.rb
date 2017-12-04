@@ -1,3 +1,4 @@
+# 
 module Contented
   module SourceReaders
     class PeopleXML
