@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: head
+    uri: https://s3.amazonaws.com/nyulibraries-www-assets/staff-images/jane-doe.jpg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      X-Amz-Request-Id:
+      - D5CBE91BE5393B68
+      X-Amz-Id-2:
+      - TSdhQqgDaWYZpBRFwpyxmmmwL/5yJUICRDACgg9OufJ/UkPGwBUohylQfpVGuGENiYsJR6AnR1o=
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 05 Dec 2017 21:13:44 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Tue, 05 Dec 2017 21:13:45 GMT
+recorded_with: VCR 3.0.3
