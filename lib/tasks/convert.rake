@@ -12,6 +12,7 @@ namespace :contented do
       people = Contented::SourceReaders::PeopleXML.new(file)
       exclude_people = Figs.env.exclude_people || []
       FileUtils.mkdir_p(save_location)
+      FileUtils.rm Dir.glob('_people/*.markdown')
       # Expect people to be a hash
       people.each do |p|
         # Expect p to be a hash
