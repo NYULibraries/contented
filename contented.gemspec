@@ -29,4 +29,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'selenium-webdriver', '>= 2.53.4'
   gem.add_dependency 'phantomjs', '>= 2.1.1'
   gem.add_dependency 'poltergeist', '>= 1.12.0'
+  gem.add_dependency 'ox'
+  gem.add_dependency 'liquid'
 end
