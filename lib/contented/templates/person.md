@@ -26,7 +26,9 @@ phone: {{ work_phone }}
 twitter: {{ twitter }}
 image: {{ image }}
 buttons:
+{%- if appointment_request_button %}
   Request an Appointment: {{ appointment_request_button }}
+{%- endif %}
 guides:
   libguides_account_ids: {{ libguides_account_id }}
   libguides_guide_ids: {{ guide_id_numbers }}
