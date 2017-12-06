@@ -2,8 +2,6 @@ require 'ostruct'
 require 'liquid'
 module Contented
   class Person
-    attr_accessor :raw, :person, :save_location
-
     S3_IMAGE_PREFIX = 'https://s3.amazonaws.com/nyulibraries-www-assets/staff-images/'
     ATTRS_FROM_RAW = [
                         :net_id, :first_name, :last_name, :job_title, :departments,
@@ -13,11 +11,9 @@ module Contented
                         :guide_id_numbers, :orcid, :twitter, :linkedin, :blog_title, :blog_rss, :blog_url, :subject_specialties,
                         :sort_title, :image, :title
                       ]
+    attr_accessor :raw, :person, :save_location
     # If parent department is one of these then append it to the departments list as well
     APPEND_PARENT_DEPARTMENTS = ["Knowledge Access & Resource Management Services"]
-
-    extend Forwardable
-    def_delegators :@person, *ATTRS_FROM_RAW
 
     def self.template_file
       File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) + '/contented/templates/person.md')
@@ -41,8 +37,13 @@ module Contented
     #   Raw => {:Area_Cultural_Studies=>nil, :Health=>"Health Sciences, Medicine (Bobst), Nursing", :Social_Sciences=>"<U+200B>"}
     #   Formatted => { :Health => ["Health Sciences", "Medicine (Bobst)", "Nursing"] }
     def subject_specialties
-      @subject_specialties = person.subject_specialties.reject {|ss| person.subject_specialties[ss]&.nil? || ascii_string(person.subject_specialties[ss])&.empty? }
-      @subject_specialties = Hash[@subject_specialties.map { |k, v| [k, ascii_string(v)&.split(',')&.map(&:strip)] }]
+      return {} if person.subject_specialties.nil? || !person.subject_specialties.is_a?(Hash)
+      # Remove subject specialty categories nil and empty strings, unfortunately having to
+      # account for non ascii data in the raw XML
+      @subject_specialties = person.subject_specialties.reject {|ss| person.subject_specialties[ss].nil? || ascii_string(person.subject_specialties[ss]).empty? }
+      # Then map these filtered values into a hash and split the values by commas
+      # into an array with no non-ascii values or leading/trailing spaces
+      @subject_specialties = Hash[@subject_specialties.map { |k, v| [k, ascii_string(v).split(',').map(&:strip)] }]
       @subject_specialties
     end
 
@@ -84,16 +85,21 @@ module Contented
       @liaison_relationships ||= person.liaison_relationships&.split(';')&.map(&:strip)
     end
 
-    # Transform semi-colon (;) delimited string into array and pull out Departments
-    # prefixed with a "ParentDepartment/"
+    # Transform semi-colon (;) delimited string into array and pull out departments
+    # prefixed with a "ParentDepartment/" and replace "and" with "&"
     #
     # Ex.
-    #   "KARMS/Metadata Production and Management; Another Department" => ["Metadata Production and Management", "Another Department"]
+    #   "KARMS/Metadata Production and Management (Adjuncts); Another Department" => ["Metadata Production & Management", "Another Department"]
     def departments
       @departments ||= begin
-        deps = person.departments.split(';').map { |d| d.split('/')&.last&.strip }
-        deps.push(person.parent_department) if APPEND_PARENT_DEPARTMENTS.include?(person.parent_department)
-        deps
+        # Turn list of depratments into an array and remove leading "KARMS/"-like data
+        departments = person.departments&.split(';').map { |d| d.split('/')&.last&.strip }
+        # Append parent department if it's in the list
+        departments&.push(person.parent_department) if APPEND_PARENT_DEPARTMENTS.include?(person.parent_department)
+        # Replace "And|and" with an ampersand (&) and remove everything in parentheses
+        departments = departments.map {|d| d.gsub(/(a|A)nd/,'&').gsub(/\((.+?)\)/, '') }
+        # Remove dupes
+        departments.uniq
       end
     end
 
@@ -108,15 +114,16 @@ module Contented
       to_markdown = template.render(to_hash_for_liquid, { strict_variables: true })
     end
 
-  private
-
     # Convert this object back into a hash but with all the customizations
     # made with instance methods, and make sure to cast keys as strings
     def to_hash_for_liquid
       @to_hash = Hash[ATTRS_FROM_RAW.map {|k| [k.to_s, self.send(k)]}]
+      # Process subject_specialties hash into a hash with string keys
       @to_hash["subject_specialties"] = Hash[@to_hash["subject_specialties"].map {|k, v| [k.to_s,v]}]
       @to_hash
     end
+
+  private
 
     # Do a quick HTTP check to see if this image exists in S3
     def image_exists?
@@ -150,6 +157,20 @@ module Contented
         transform[key.downcase] = ascii_string(transform.delete(key))
       end
       transform
+    end
+
+    # Forward methods onto the person object so calls like
+    # self.net_id can be made
+    def method_missing(meth, *args)
+      if respond_to_missing?(meth)
+        person.send(meth)
+      else
+        super(meth, *args)
+      end
+    end
+
+    def respond_to_missing?(meth, include_private = false)
+      ATTRS_FROM_RAW.include?(meth) || super
     end
 
   end
