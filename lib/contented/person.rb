@@ -16,7 +16,11 @@ module Contented
     APPEND_PARENT_DEPARTMENTS = ["Knowledge Access & Resource Management Services"]
 
     def self.template_file
-      File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) + '/contented/templates/person.md')
+      File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) + '/contented/templates/person.markdown')
+    end
+
+    def self.subject_specialties_config
+      YAML.load(File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) + '/../config/subject_specialties.yml'))
     end
 
     def initialize(raw, save_location)
@@ -43,7 +47,7 @@ module Contented
       @subject_specialties = person.subject_specialties.reject {|ss| person.subject_specialties[ss].nil? || ascii_string(person.subject_specialties[ss]).empty? }
       # Then map these filtered values into a hash and split the values by commas
       # into an array with no non-ascii values or leading/trailing spaces
-      @subject_specialties = Hash[@subject_specialties.map { |k, v| [k, ascii_string(v).split(',').map(&:strip)] }]
+      @subject_specialties = Hash[@subject_specialties.map { |k, v| [Person.subject_specialties_config[k.to_s], ascii_string(v).split(',').map(&:strip)] }]
       @subject_specialties
     end
 
@@ -92,12 +96,12 @@ module Contented
     #   "KARMS/Metadata Production and Management (Adjuncts); Another Department" => ["Metadata Production & Management", "Another Department"]
     def departments
       @departments ||= begin
+        # Replace "And|and" with an ampersand (&) and remove everything in parentheses
+        departments = person.departments&.gsub(/(a|A)nd/,'&')&.gsub(/\((.+?)\)/, '')
         # Turn list of depratments into an array and remove leading "KARMS/"-like data
-        departments = person.departments&.split(';').map { |d| d.split('/')&.last&.strip }
+        departments = departments&.split(';').map { |d| d.split('/')&.last&.strip }
         # Append parent department if it's in the list
         departments&.push(person.parent_department) if APPEND_PARENT_DEPARTMENTS.include?(person.parent_department)
-        # Replace "And|and" with an ampersand (&) and remove everything in parentheses
-        departments = departments.map {|d| d.gsub(/(a|A)nd/,'&').gsub(/\((.+?)\)/, '') }
         # Remove dupes
         departments.uniq
       end

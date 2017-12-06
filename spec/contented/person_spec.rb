@@ -7,7 +7,7 @@ describe Contented::Person do
       :First_Name=>"Jane",
       :Last_Name=>"Doe",
       :Job_Title=>"Curator: Health Sciences Librarian",
-      :Departments=>"KARMS/Metadata Production and Management; Another Department",
+      :Departments=>"KARMS/Metadata Production and Management (Adjuncts); Another Department",
       :Parent_Department=>"Knowledge Access & Resource Management Services",
       :Work_Phone=>"+1 212 998 1234",
       :Email_Address=>"dj123@nyu.edu",
@@ -36,10 +36,10 @@ describe Contented::Person do
         :History=>nil,
         :Business=>nil,
         :Education=>nil,
-        :Humanities=>'another',
+        :Humanities=>nil,
         :Health=>"Health Sciences, Medicine (Bobst), Nursing",
         :Language_Linguistics=>nil,
-        :Media_Communication_Journalism=>nil,
+        :Media_Communication_Journalism=>'Another',
         :Science_Engineering=>nil,
         :Social_Sciences=>"​",
         :Special_Collections=>nil
@@ -109,11 +109,11 @@ describe Contented::Person do
   describe '#departments' do
     subject { person.departments }
     context 'when parent department is Knowledge Access & Resource Management Services' do
-      it { is_expected.to eql ['Metadata Production and Management', 'Another Department', 'Knowledge Access & Resource Management Services'] }
+      it { is_expected.to eql ['Metadata Production & Management', 'Another Department', 'Knowledge Access & Resource Management Services'] }
     end
     context 'when parent department is not KARMS' do
       before { allow(person.person).to receive(:parent_department).and_return('Anything But KARMS') }
-      it { is_expected.to eql ['Metadata Production and Management', 'Another Department'] }
+      it { is_expected.to eql ['Metadata Production & Management', 'Another Department'] }
     end
   end
 
@@ -136,7 +136,8 @@ describe Contented::Person do
   describe '#subject_specialties' do
     subject { person.subject_specialties }
     context 'when subject specialties exists' do
-      it { is_expected.to include :Health => ["Health Sciences", "Medicine (Bobst)", "Nursing"] }
+      it { is_expected.to include "Health" => ["Health Sciences", "Medicine (Bobst)", "Nursing"] }
+      it { is_expected.to include "Media, Communication & Journalism" => ["Another"] }
     end
     context 'when subject specialties is nil' do
       before { allow(person).to receive(:subject_specialties).and_return(nil) }
@@ -172,12 +173,14 @@ describe Contented::Person do
     it { is_expected.to include "address: 70 Washington Square South" }
     it { is_expected.to include "parent_department: Knowledge Access & Resource Management Services" }
     it { is_expected.to include "departments:" }
-    it { is_expected.to include "- Metadata Production and Management" }
+    it { is_expected.to include "- Metadata Production & Management" }
     it { is_expected.to include "subject_specialties:" }
     it { is_expected.to include "Health:" }
     it { is_expected.to include "- Health Sciences" }
     it { is_expected.to include "- Medicine (Bobst)" }
     it { is_expected.to include "- Nursing" }
+    it { is_expected.to include "Media, Communication & Journalism:" }
+    it { is_expected.to include "- Another" }
     it { is_expected.to include "liaison_relationship:" }
     it { is_expected.to include "- NYU Rory Meyers College of Nursing" }
     it { is_expected.to include "- NYU Steinhardt School - Division of Physical Therapy, Division of Occupational Therapy," }
