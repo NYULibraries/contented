@@ -109,7 +109,7 @@ module Contented
 
     # Save markdown to file `title`.md
     def save_as_markdown!
-      File.write("#{save_location}/#{filename}.md", to_markdown)
+      File.write("#{save_location}/#{filename}.markdown", to_markdown)
     end
 
     # Convert this object to a markdown string
