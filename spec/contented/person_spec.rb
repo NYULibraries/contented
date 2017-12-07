@@ -71,11 +71,11 @@ describe Contented::Person do
     its(:first_name) { is_expected.to eql 'Jane' }
     its(:last_name) { is_expected.to eql 'Doe' }
     its(:parent_department) { is_expected.to eql 'Knowledge Access & Resource Management Services' }
-    its(:work_phone) { is_expected.to eql '+1 212 998 1234' }
+    its(:work_phone) { is_expected.to eql "+1 212 998 1234" }
     its(:email_address) { is_expected.to eql 'dj123@nyu.edu' }
     its(:building_address_line_1) { is_expected.to eql '70 Washington Square South, New York, NY 10012' }
     its(:name) { is_expected.to eql 'Jane Doe' }
-    its(:nickname) { is_expected.to eql '(Janie)' }
+    its(:nickname) { is_expected.to eql "(Janie)" }
     its(:about_you) { is_expected.to eql 'I am responsible for Instruction, Reference, Collection Development, and Faculty liaison for the NYU Rory Meyers College of Nursing, Steinhardt School Departments of Occupational Therapy, Physical Therapy, and Communication Sciences and Disorders.' }
     its(:appointment_request_button) { is_expected.to eql 'mailto:jane.doe@nyu.edu' }
     its(:publications_rss) { is_expected.to eql 'http://www.refworks.com/refshare/?site=010331135918800000/RWWS1A706085/Jacobs%20articles%20RSS&rss' }
@@ -167,7 +167,7 @@ describe Contented::Person do
     subject { person.to_markdown }
 
     it { is_expected.to include "title: Jane Doe" }
-    it { is_expected.to include "subtitle: (Janie)" }
+    it { is_expected.to include "subtitle: '(Janie)'" }
     it { is_expected.to include "job_title: Health Sciences Librarian" }
     it { is_expected.to include "location: Elmer Holmes Bobst Library" }
     it { is_expected.to include "address: 70 Washington Square South" }
@@ -177,7 +177,7 @@ describe Contented::Person do
     it { is_expected.to include "subject_specialties:" }
     it { is_expected.to include "Health:" }
     it { is_expected.to include "- Health Sciences" }
-    it { is_expected.to include "- Medicine (Bobst)" }
+    it { is_expected.to include "- 'Medicine (Bobst)'" }
     it { is_expected.to include "- Nursing" }
     it { is_expected.to include "Media, Communication & Journalism:" }
     it { is_expected.to include "- Another" }
@@ -187,7 +187,7 @@ describe Contented::Person do
     it { is_expected.to include "Division of Communicative Sciences & Disorders" }
     it { is_expected.to include "linkedin: jane-doe-1b960512" }
     it { is_expected.to include "email: dj123@nyu.edu" }
-    it { is_expected.to include "phone: +1 212 998 1234" }
+    it { is_expected.to include "phone: '+1 212 998 1234'" }
     it { is_expected.to include "twitter: NYUSciHealthLib" }
     it { is_expected.to include "image:" }
     it { is_expected.to include "buttons:" }

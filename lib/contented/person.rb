@@ -14,6 +14,7 @@ module Contented
     attr_accessor :raw, :person, :save_location
     # If parent department is one of these then append it to the departments list as well
     APPEND_PARENT_DEPARTMENTS = ["Knowledge Access & Resource Management Services"]
+    KEYS_TO_WRAP_IN_QUOTES = [:work_phone]
 
     def self.template_file
       File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) + '/contented/templates/person.markdown')
@@ -47,12 +48,13 @@ module Contented
       @subject_specialties = person.subject_specialties.reject {|ss| person.subject_specialties[ss].nil? || ascii_string(person.subject_specialties[ss]).empty? }
       # Then map these filtered values into a hash and split the values by commas
       # into an array with no non-ascii values or leading/trailing spaces
+      # Format values with quotes
       @subject_specialties = Hash[@subject_specialties.map { |k, v| [Person.subject_specialties_config[k.to_s], ascii_string(v).split(',').map(&:strip)] }]
       @subject_specialties
     end
 
     def filename
-      @filename ||= "#{first_name.gsub(/ /,'-')}-#{last_name.gsub(/ /,'-')}".downcase
+      @filename ||= "#{first_name.gsub(/ /,'-').tr('\'','')}-#{last_name.gsub(/ /,'-').gsub('\'','')}".downcase
     end
 
     def title
@@ -118,16 +120,17 @@ module Contented
       to_markdown = template.render(to_hash_for_liquid, { strict_variables: true })
     end
 
+  private
+
     # Convert this object back into a hash but with all the customizations
     # made with instance methods, and make sure to cast keys as strings
     def to_hash_for_liquid
-      @to_hash = Hash[ATTRS_FROM_RAW.map {|k| [k.to_s, self.send(k)]}]
+      # Wrap fields in quotes where appropriate for Liquid
+      @to_hash = Hash[ATTRS_FROM_RAW.map {|k| [k.to_s, format_with_quotes(k, self.send(k))]}]
       # Process subject_specialties hash into a hash with string keys
-      @to_hash["subject_specialties"] = Hash[@to_hash["subject_specialties"].map {|k, v| [k.to_s,v]}]
+      @to_hash["subject_specialties"] = Hash[@to_hash["subject_specialties"].map {|k, v| [k.to_s, v.map {|s| format_with_quotes(k, s)}]}]
       @to_hash
     end
-
-  private
 
     # Do a quick HTTP check to see if this image exists in S3
     def image_exists?
@@ -148,6 +151,38 @@ module Contented
         :universal_newline => true       # Always break lines with \n
       }
       non_ascii_string.encode(Encoding.find('ASCII'), encoding_options).strip
+    end
+
+    # Remove messy quotes and wrap full value in quotes
+    #
+    # Ex.
+    #   format_with_quotes(:work_phone, "+1 234 567") => '+1 234 567'
+    #   format_with_quotes(:blog_title, "[Archive Blog] Thing") => '[Archive Blog] Thing'
+    def format_with_quotes(key, value)
+      value = remove_open_quotes(value)
+      # Remove leading and trailing single quotes so we don't quote twice
+      # if this key is flagged to be wrapped or it contains a special character
+      if !value.nil? && (KEYS_TO_WRAP_IN_QUOTES.include?(key) || /(\[|\]|\(|\)|: )/ === value)
+        return "'#{value.chomp("'").reverse.chomp("'").reverse}'"
+      else
+        return value
+      end
+    end
+
+    # Some of the url data is pretty messy, so we have to strip out quotes
+    # that will mess up the liquid templates
+    #
+    # Ex.
+    #   remove_open_quotes("http://google.com''") => "http://google.com"
+    #   remove_open_quotes("http://google.com'") => "http://google.com"
+    def remove_open_quotes(str)
+      return if str.nil?
+      # If the string is a URL and it ends with two single quotes, remove them
+      str = (/^http(s)?:\/\// === str && /''$/ === str) ? str.gsub(/''$/, '') : str
+      # If there are an odd number of single quotes, strip a trailing ones
+      # because...assumptions, I guess
+      str = (str.count("'")%2 != 0) ? str.chomp("'") : str
+      str
     end
 
     # Assumes hash with uppercase keys and returns a version with lowercase
