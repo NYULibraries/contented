@@ -79,10 +79,6 @@ module Contented
       @image ||= image_filename
     end
 
-    def job_title
-      @job_title ||= person.job_title&.gsub(/(a|A)nd/,'&')
-    end
-
     # If the building address equals the location then there is no Location
     # it is just a repetition of the address in the data
     def location
@@ -94,7 +90,7 @@ module Contented
     # Ex.
     #   "Curator: Health Science Librarian" => "Health Science Librarian"
     def job_title
-      @job_title ||= person.job_title&.split(':')&.last&.strip
+      @job_title ||= person.job_title&.split(':')&.last&.strip&.gsub(/(a|A)nd/,'&')
     end
 
     # Transform semi-colon (;) delimited string into array

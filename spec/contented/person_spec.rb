@@ -6,7 +6,7 @@ describe Contented::Person do
       :Net_ID=>"jd123",
       :First_Name=>"Jane",
       :Last_Name=>"Doe",
-      :Job_Title=>"Curator: Health Sciences Librarian",
+      :Job_Title=>"Curator: Health Sciences Librarian And Other",
       :Departments=>"KARMS/Metadata Production and Management (Adjuncts); Another Department",
       :Parent_Department=>"Knowledge Access & Resource Management Services",
       :Work_Phone=>"+1 212 998 1234",
@@ -103,7 +103,7 @@ describe Contented::Person do
 
   describe '#job_title' do
     subject { person.job_title }
-    it { is_expected.to eql 'Health Sciences Librarian' }
+    it { is_expected.to eql 'Health Sciences Librarian & Other' }
   end
 
   describe '#departments' do
