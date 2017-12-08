@@ -109,7 +109,7 @@ module Contented
     def departments
       @departments ||= begin
         # Replace "And|and" with an ampersand (&) and remove everything in parentheses
-        departments = person.departments&.gsub(/(a|A)nd/,'&')&.gsub(/\((.+?)\)/, '')
+        departments = person.departments&.gsub(/ (a|A)nd /,' & ')&.gsub(/\((.+?)\)/, '')
         # Turn list of depratments into an array and remove leading "KARMS/"-like data
         departments = departments&.split(';').map { |d| d.split('/')&.last&.strip }
         # Append parent department if it's in the list
