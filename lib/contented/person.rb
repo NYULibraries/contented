@@ -90,7 +90,7 @@ module Contented
     # Ex.
     #   "Curator: Health Science Librarian" => "Health Science Librarian"
     def job_title
-      @job_title ||= person.job_title&.gsub(/(a|A)nd/,'&')&.split(':')&.last&.strip
+      @job_title ||= person.job_title&.gsub(/ (a|A)nd /,' & ')&.split(':')&.last&.strip
     end
 
     # Transform semi-colon (;) delimited string into array
