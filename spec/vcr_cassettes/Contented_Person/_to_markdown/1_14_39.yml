@@ -17,20 +17,53 @@ http_interactions:
       message: Forbidden
     headers:
       X-Amz-Request-Id:
-      - 53E4E91FCAEC2520
+      - 8523C0CCF30C22DD
       X-Amz-Id-2:
-      - b9VH9G5Xq15OdxDxA9w5c8eG8OkXJf6UL0FtqLKcKMGFuN/hB08IiHT8JmO7XC9GqRxvHj5I6QE=
+      - ttFrqthqbWHCys3pLRqFsglROK9k7MeKlsO4fzcOJmYCvy8kUtbYtCt41KHuZaIePt8W7ooYllw=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 05 Dec 2017 21:43:13 GMT
+      - Fri, 08 Dec 2017 19:38:33 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Tue, 05 Dec 2017 21:43:13 GMT
+  recorded_at: Fri, 08 Dec 2017 19:38:33 GMT
+- request:
+    method: head
+    uri: https://s3.amazonaws.com/nyulibraries-www-assets/people-images/jane-doe.jpg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.13.1
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      X-Amz-Request-Id:
+      - 9BCFA69BA6BC6CA8
+      X-Amz-Id-2:
+      - KBXF+zYlIv+bxNl0RRtsFs5ctL1NXGS86LUV1Dzb2Y0T4ZqO7aoM7gCh12XIQR4BTSm/yHdhMOI=
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Fri, 08 Dec 2017 19:38:33 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 08 Dec 2017 19:38:33 GMT
 recorded_with: VCR 3.0.3

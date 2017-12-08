@@ -1,8 +1,10 @@
 require 'ostruct'
 require 'liquid'
+#
 module Contented
   class Person
-    S3_IMAGE_PREFIX = 'https://s3.amazonaws.com/nyulibraries-www-assets/staff-images/'
+    S3_IMAGE_PREFIXES = ['https://s3.amazonaws.com/nyulibraries-www-assets/staff-images/', 'https://s3.amazonaws.com/nyulibraries-www-assets/people-images/']
+    S3_IMAGE_EXTENSION = '.jpg'
     ATTRS_FROM_RAW = [
                         :net_id, :first_name, :last_name, :job_title, :departments,
                         :parent_department, :work_phone, :email_address, :building_address_line_1, :location,
@@ -54,19 +56,27 @@ module Contented
     end
 
     def filename
-      @filename ||= "#{first_name.gsub(/ /,'-').tr('\'','')}-#{last_name.gsub(/ /,'-').gsub('\'','')}".downcase
+      @filename ||= "#{name.tr(' ','-').gsub(/('|\.)/,'')}".downcase
     end
 
     def title
-      @title ||= "#{first_name} #{last_name}"
+      @title ||= "#{name}"
     end
 
     def sort_title
       @sort_title ||= "#{last_name}, #{first_name}"
     end
 
+    def first_name
+      @first_name ||= name&.gsub(/#{last_name}/, '').strip || person.first_name
+    end
+
+    def name
+      @name ||= person.name || "#{person.first_name} #{last_name}"
+    end
+
     def image
-      @image ||= image_filename if image_exists?
+      @image ||= image_filename
     end
 
     # If the building address equals the location then there is no Location
@@ -133,13 +143,13 @@ module Contented
     end
 
     # Do a quick HTTP check to see if this image exists in S3
-    def image_exists?
-      @image_exists ||= Faraday.head(image_filename)
-      @image_exists.status == 200
-    end
-
     def image_filename
-      @image_filename ||= "#{S3_IMAGE_PREFIX}#{filename}.jpg"
+      S3_IMAGE_PREFIXES.each do |image_prefix|
+        image_filename = "#{image_prefix}#{filename}#{S3_IMAGE_EXTENSION}"
+        image_exists = Faraday.head(image_filename)
+        return image_filename if image_exists.status == 200
+      end
+      return nil
     end
 
     def ascii_string(non_ascii_string)
@@ -150,7 +160,11 @@ module Contented
         :replace           => '',        # Use a blank for those replacements
         :universal_newline => true       # Always break lines with \n
       }
-      non_ascii_string.encode(Encoding.find('ASCII'), encoding_options).strip
+      # Encode the string as ASCII and strip out non standard characters
+      ascii_string = non_ascii_string.encode(Encoding.find('ASCII'), encoding_options).strip
+      # This may leave some empty parens in cases where we're stripping out
+      # foreign language characters, e.g. (图书馆助理) => ()
+      ascii_string.gsub(/(\(\)|\[\])/, '')
     end
 
     # Remove messy quotes and wrap full value in quotes
