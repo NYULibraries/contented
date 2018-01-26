@@ -17,11 +17,11 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - J3/losQUR8wMAFkrrfpBhJelm4ExLNvC7Lq6r8wxzW93YxvmOOk+5Cummm0+3c0Tny6SUJevK7w=
+      - 0r5HzVxrYcb8n+tsfWhmSxTEg/8I3z8nD63j62rnUQbcwhSF0mfjgNDorZPqA6D/W1KX1Rp33JQ=
       X-Amz-Request-Id:
-      - 41DB6943E462A91A
+      - A7FD1BEE1B6D406C
       Date:
-      - Fri, 08 Dec 2017 19:38:24 GMT
+      - Fri, 26 Jan 2018 17:31:31 GMT
       Last-Modified:
       - Mon, 14 Nov 2016 23:19:36 GMT
       Etag:
@@ -40,5 +40,5 @@ http_interactions:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 08 Dec 2017 19:38:23 GMT
+  recorded_at: Fri, 26 Jan 2018 17:31:30 GMT
 recorded_with: VCR 3.0.3
