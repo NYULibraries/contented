@@ -11,8 +11,13 @@ namespace :contented do
       save_location = args[:save_location] || './_people'
       people = Contented::SourceReaders::PeopleXML.new(file)
       exclude_people = Figs.env.exclude_people || []
+      manage_people_manually = Figs.env.manage_people_manually || []
       FileUtils.mkdir_p(save_location)
-      FileUtils.rm Dir.glob('_people/*.markdown')
+      # Delete users not excluded for managing manually
+      Dir["#{save_location}/*.markdown"].each do |f|
+        filename = f.split('/').last.split('.').first
+        FileUtils.rm(f) unless manage_people_manually.include?(filename)
+      end
       # Expect people to be a hash
       people.each do |p|
         # Expect p to be a hash
@@ -23,6 +28,6 @@ namespace :contented do
         end
       end
     end
-    
+
   end
 end
