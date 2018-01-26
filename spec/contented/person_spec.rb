@@ -152,7 +152,7 @@ describe Contented::Person do
     end
     context 'when user image does exists on S3' do
       before { allow(person).to receive(:filename).and_return('barnaby-alter') }
-      it { is_expected.to eql 'https://s3.amazonaws.com/nyulibraries-www-assets/staff-images/barnaby-alter.jpg' }
+      it { is_expected.to eql 'https://s3.amazonaws.com/nyulibraries-www-assets/people-images/barnaby-alter.jpg' }
     end
   end
 

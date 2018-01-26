@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: head
-    uri: https://s3.amazonaws.com/nyulibraries-www-assets/staff-images/barnaby-alter.jpg
+    uri: https://s3.amazonaws.com/nyulibraries-www-assets/people-images/barnaby-alter.jpg
     body:
       encoding: US-ASCII
       string: ''
@@ -17,28 +17,28 @@ http_interactions:
       message: OK
     headers:
       X-Amz-Id-2:
-      - 0r5HzVxrYcb8n+tsfWhmSxTEg/8I3z8nD63j62rnUQbcwhSF0mfjgNDorZPqA6D/W1KX1Rp33JQ=
+      - VhlF/hN4IXZ6qxilhdtQwBy+0RQdCf+GF4JVsWOksdqerI1Eew23jap3XQKekirIWV39oK8pISc=
       X-Amz-Request-Id:
-      - A7FD1BEE1B6D406C
+      - 9E6F4C52B0667F73
       Date:
-      - Fri, 26 Jan 2018 17:31:31 GMT
+      - Fri, 26 Jan 2018 18:14:27 GMT
       Last-Modified:
-      - Mon, 14 Nov 2016 23:19:36 GMT
+      - Fri, 31 Mar 2017 18:55:56 GMT
       Etag:
-      - '"0bdb05ab66ef40f8253c79b2f43ec7a7"'
+      - '"a1e5d99b917b87a6e63e6295a9d8c7ad"'
       X-Amz-Version-Id:
-      - kmKmeIUWmTnzAQnTQTRWBk5oC7fI2yHH
+      - Ovk_Lcs1N0y1gmblAi7LukrIXwYkbq.4
       Accept-Ranges:
       - bytes
       Content-Type:
       - image/jpeg
       Content-Length:
-      - '85344'
+      - '86241'
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 26 Jan 2018 17:31:30 GMT
+  recorded_at: Fri, 26 Jan 2018 18:14:26 GMT
 recorded_with: VCR 3.0.3
