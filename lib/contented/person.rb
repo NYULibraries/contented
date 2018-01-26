@@ -3,7 +3,7 @@ require 'liquid'
 #
 module Contented
   class Person
-    S3_IMAGE_PREFIXES = ['https://s3.amazonaws.com/nyulibraries-www-assets/staff-images/', 'https://s3.amazonaws.com/nyulibraries-www-assets/people-images/']
+    S3_IMAGE_PREFIXES = ['https://s3.amazonaws.com/nyulibraries-www-assets/people-images/']
     S3_IMAGE_EXTENSION = '.jpg'
     ATTRS_FROM_RAW = [
                         :net_id, :first_name, :last_name, :job_title, :departments,
@@ -119,7 +119,7 @@ module Contented
       end
     end
 
-    # Save markdown to file `title`.md
+    # Save markdown to file `title`.markdown
     def save_as_markdown!
       File.write("#{save_location}/#{filename}.markdown", to_markdown)
     end
