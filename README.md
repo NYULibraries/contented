@@ -11,7 +11,7 @@ Contented is a library of auxiliary functionality for the [NYU Division of Libra
 
 ### Automated integration tests
 
-In the [`features`](tree/master/features) folder we maintain cucumber integration tests to make sure core functionality isn't affected by any changes to either the code or the content.
+In the [`features`](features) folder we maintain cucumber integration tests to make sure core functionality isn't affected by any changes to either the code or the content.
 
 Read our automated testing page on the wiki for more info.
 
