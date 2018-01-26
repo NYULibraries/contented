@@ -5,9 +5,27 @@
 [![Code Climate](https://codeclimate.com/github/NYULibraries/contented/badges/gpa.svg)](https://codeclimate.com/github/NYULibraries/contented)
 [![Coverage Status](https://coveralls.io/repos/github/NYULibraries/contented/badge.svg?branch=master)](https://coveralls.io/github/NYULibraries/contented?branch=master)
 
-These are happy little content conversions!
+Contented is a library of auxiliary functionality for the [NYU Division of Libraries website](/NYULibraries/library.nyu.edu).
 
-This repository handles all the content conversions from various sources (JSON APIs, Google Spreadsheets, etc.) and the conversion to Jekyll style markdowns with YAML frontmatter which we then use for Siteleaf.
+## What does contented do?
+
+### Automated integration tests
+
+In the [`features`](tree/master/features) folder we maintain cucumber integration tests to make sure core functionality isn't affected by any changes to either the code or the content.
+
+Read our automated testing page on the wiki for more info.
+
+### Automatic content creation
+
+Content for the Libraries website needs to be delivered to Jekyll in Markdown format, however, there are a number of sources from where we get the data, these include GatherContent, XML Feeds, etc.
+
+Read our content conversion page on the wiki for more info.
+
+### Reindexing of content
+
+When we create the content from external sources and push it to the site, the indexing service ([Swiftype](https://swiftype.com/documentation/overview)) will take up to three days to fully reindex all the content. However, the APIs do allow for manual crawls and when we create pages manually we know which pages need to be recrawled. The tasks for launching that recrawl are also housed in this repository.
+
+Read our reindexing page on the wiki for more info.
 
 ## Install
 
@@ -23,42 +41,8 @@ Then run:
 $ bundle install
 ```
 
-## Rake
+## Running rspec
 
 ```shell
 $ bundle exec rake
-```
-
-### Reindexing
-
-Reindex people in libraries project:
-
-```shell
-$ bundle exec rake contented:reindex:people
-```
-
-You may specify a base URL with which to generate URLs for indexing, e.g.:
-
-```shell
-$ bundle exec rake contented:reindex:people[http://dev.library.nyu.edu/people]
-```
-
-The specified base URL must include the protocol (http vs https). The protocol must match the protocol of the URL as originally indexed (if accessible via both protocols). Otherwise, Swiftype apparently processes it as a new document (indicated in the verbose output of the rake task) then identifies it as duplicate, causing it to silently ignore the reindex request. (This is observed not documented behavior.)
-
-### Cucumber tests
-
-To run, specify a domain:
-
-```
-rake features DOMAIN=http://localhost:9292
-```
-
-To run tests for a specific collection:
-
-```
-rake features:about DOMAIN=http://localhost:9292
-rake features:departments DOMAIN=http://localhost:9292
-rake features:locations DOMAIN=http://localhost:9292
-rake features:people DOMAIN=http://localhost:9292
-rake features:services DOMAIN=http://localhost:9292
 ```
