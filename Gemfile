@@ -11,6 +11,7 @@ group :development, :test do
   gem 'factory_bot', '~> 4.8'
   gem 'swiftype', '~> 1.2.2'
   gem 'figs', '~> 2.1'
+  gem 'i18n'
   gem 'rspec', '~> 3.5'
 
   gem 'guard-rspec', require: false

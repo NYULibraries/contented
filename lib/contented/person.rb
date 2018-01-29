@@ -1,6 +1,7 @@
 require 'ostruct'
 require 'liquid'
-#
+require 'i18n'
+# Ruby object representation of a Person / Staff member
 module Contented
   class Person
     S3_IMAGE_PREFIXES = ['https://s3.amazonaws.com/nyulibraries-www-assets/people-images/']
@@ -18,10 +19,12 @@ module Contented
     APPEND_PARENT_DEPARTMENTS = ["Knowledge Access & Resource Management Services"]
     KEYS_TO_WRAP_IN_QUOTES = [:work_phone]
 
+    # Location of the liquid template we'll use for generating these People for Jekyll
     def self.template_file
       File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) + '/contented/templates/person.markdown')
     end
 
+    # Location of Subject Specialties mapping config file
     def self.subject_specialties_config
       YAML.load(File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) + '/../config/subject_specialties.yml'))
     end
@@ -56,7 +59,7 @@ module Contented
     end
 
     def filename
-      @filename ||= "#{name.tr(' ','-').gsub(/('|\.)/,'')}".downcase
+      @filename ||= I18n.transliterate("#{name.tr(' ','-').gsub(/('|\.)/,'')}".downcase)
     end
 
     def title
@@ -68,7 +71,7 @@ module Contented
     end
 
     def first_name
-      @first_name ||= name&.gsub(/#{last_name}/, '').strip || person.first_name
+      @first_name ||= I18n.transliterate(name)&.gsub(/#{I18n.transliterate(last_name)}/, '').strip || person.first_name
     end
 
     def name
@@ -90,7 +93,7 @@ module Contented
     # Ex.
     #   "Curator: Health Science Librarian" => "Health Science Librarian"
     def job_title
-      @job_title ||= person.job_title&.gsub(/ (a|A)nd /,' & ')&.split(':')&.last&.strip
+      @job_title ||= ascii_string(person.job_title&.gsub(/ (a|A)nd /,' & ')&.split(':')&.last&.strip)
     end
 
     # Transform semi-colon (;) delimited string into array
@@ -161,7 +164,7 @@ module Contented
         :universal_newline => true       # Always break lines with \n
       }
       # Encode the string as ASCII and strip out non standard characters
-      ascii_string = non_ascii_string.encode(Encoding.find('ASCII'), encoding_options).strip
+      ascii_string = non_ascii_string.encode(Encoding.find('ASCII'), encoding_options)
       # This may leave some empty parens in cases where we're stripping out
       # foreign language characters, e.g. (图书馆助理) => ()
       ascii_string.gsub(/(\(\)|\[\])/, '')
@@ -207,7 +210,9 @@ module Contented
     def transform_raw_keys_to_downcase
       transform = raw
       transform.keys.each do |key|
-        transform[key.downcase] = ascii_string(transform.delete(key))
+        transform[key.downcase] = transform.delete(key)
+        # Strip leading/trailing whitespace
+        transform[key.downcase] = transform[key.downcase].strip if transform[key.downcase].is_a?(String)
       end
       transform
     end
