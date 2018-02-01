@@ -19,6 +19,7 @@ module Contented
       # If parent department is one of these then append it to the departments list as well
       APPEND_PARENT_DEPARTMENTS = ["Knowledge Access & Resource Management Services"]
       KEYS_TO_WRAP_IN_QUOTES = [:work_phone]
+      KEYS_TO_EXCLUDE_FROM_QUOTES = [:about_you]
 
       # Location of the liquid template we'll use for generating these People for Jekyll
       def self.template_file
@@ -194,7 +195,8 @@ module Contented
         value = remove_open_quotes(value)
         # Remove leading and trailing single quotes so we don't quote twice
         # if this key is flagged to be wrapped or it contains a special character
-        if !value.nil? && (KEYS_TO_WRAP_IN_QUOTES.include?(key) || /(\[|\]|\(|\)|: )/ === value)
+        # and it's not a full text field, such as About You
+        if !value.nil? && !KEYS_TO_EXCLUDE_FROM_QUOTES.include?(key) && (KEYS_TO_WRAP_IN_QUOTES.include?(key) || /(\[|\]|\(|\)|: )/ === value)
           return "'#{value.chomp("'").reverse.chomp("'").reverse}'"
         else
           return value

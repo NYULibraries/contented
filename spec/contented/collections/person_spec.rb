@@ -16,7 +16,7 @@ describe Contented::Collections::Person do
       :Name=>"Jane Doe Márquez",
       :Nickname=>"(Janie)",
       :about_you=>"
-        I am responsible for
+        I am responsible for:
 
         * Instruction, Reference, Collection Development, and Faculty liaison for the NYU Rory Meyers College of Nursing,
         * Steinhardt School Departments of Occupational Therapy, Physical Therapy, and Communication Sciences and Disorders.
@@ -81,7 +81,7 @@ describe Contented::Collections::Person do
     its(:building_address_line_1) { is_expected.to eql '70 Washington Square South, New York, NY 10012' }
     its(:name) { is_expected.to eql 'Jane Doe Marquez' }
     its(:nickname) { is_expected.to eql "(Janie)" }
-    its(:about_you) { is_expected.to eql 'I am responsible for
+    its(:about_you) { is_expected.to eql 'I am responsible for:
 
         * Instruction, Reference, Collection Development, and Faculty liaison for the NYU Rory Meyers College of Nursing,
         * Steinhardt School Departments of Occupational Therapy, Physical Therapy, and Communication Sciences and Disorders.' }
@@ -216,7 +216,16 @@ describe Contented::Collections::Person do
     it { is_expected.to include "first_name: Jane" }
     it { is_expected.to include "last_name: Doe Marquez" }
     it { is_expected.to include "sort_title: Doe Marquez, Jane" }
+    it { is_expected.to include "---" }
+    # Test that it doesn't wrap about_you in single quotes
+    it { is_expected.not_to include "'I am responsible for:
 
+        * Instruction, Reference, Collection Development, and Faculty liaison for the NYU Rory Meyers College of Nursing,
+        * Steinhardt School Departments of Occupational Therapy, Physical Therapy, and Communication Sciences and Disorders.'" }
+    it { is_expected.to include "I am responsible for:
+
+        * Instruction, Reference, Collection Development, and Faculty liaison for the NYU Rory Meyers College of Nursing,
+        * Steinhardt School Departments of Occupational Therapy, Physical Therapy, and Communication Sciences and Disorders." }
   end
 
   describe '#save_as_markdown!', vcr: true do
