@@ -59,7 +59,7 @@ module Contented
     end
 
     def filename
-      @filename ||= I18n.transliterate("#{name.tr(' ','-').gsub(/('|\.)/,'')}".downcase)
+      @filename ||= "#{name.tr(' ','-').gsub(/('|\.)/,'')}".downcase
     end
 
     def title
@@ -71,7 +71,7 @@ module Contented
     end
 
     def first_name
-      @first_name ||= I18n.transliterate(name)&.gsub(/#{I18n.transliterate(last_name)}/, '').strip || person.first_name
+      @first_name ||= name&.gsub(/#{last_name}/, '').strip || person.first_name
     end
 
     def name
@@ -93,7 +93,7 @@ module Contented
     # Ex.
     #   "Curator: Health Science Librarian" => "Health Science Librarian"
     def job_title
-      @job_title ||= ascii_string(person.job_title&.gsub(/ (a|A)nd /,' & ')&.split(':')&.last&.strip)
+      @job_title ||= person.job_title&.gsub(/ (a|A)nd /,' & ')&.split(':')&.last&.strip
     end
 
     # Transform semi-colon (;) delimited string into array
@@ -163,11 +163,25 @@ module Contented
         :replace           => '',        # Use a blank for those replacements
         :universal_newline => true       # Always break lines with \n
       }
-      # Encode the string as ASCII and strip out non standard characters
-      ascii_string = non_ascii_string.encode(Encoding.find('ASCII'), encoding_options)
+      # Transliterate to keep accented letters
+      translitrated_string = replace_known_diacritics(non_ascii_string)
+      # Encode the string as ASCII and strip out remaining non standard chars
+      ascii_string = translitrated_string.encode(Encoding.find('ASCII'), encoding_options)
       # This may leave some empty parens in cases where we're stripping out
       # foreign language characters, e.g. (图书馆助理) => ()
-      ascii_string.gsub(/(\(\)|\[\])/, '')
+      ascii_string.gsub(/(\(\)|\[\])/, '').strip
+    end
+
+    # Replace known diacritics with their non-accented version
+    #
+    # Ex.
+    #   replace_known_diacritics("Gabriel García Márquez") => "Gabriel Garcia Marquez"
+    #   replace_known_diacritics("图") => "图"
+    def replace_known_diacritics(str)
+      str.tr(
+        "ÀÁÂÃÄÅàáâãäåĀāĂăĄąÇçĆćĈĉĊċČčÐðĎďĐđÈÉÊËèéêëĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħÌÍÎÏìíîïĨĩĪīĬĭĮįİıĴĵĶķĸĹĺĻļĽľĿŀŁłÑñŃńŅņŇňŉŊŋÒÓÔÕÖØòóôõöøŌōŎŏŐőŔŕŖŗŘřŚśŜŝŞşŠšſŢţŤťŦŧÙÚÛÜùúûüŨũŪūŬŭŮůŰűŲųŴŵÝýÿŶŷŸŹźŻżŽž",
+        "AAAAAAaaaaaaAaAaAaCcCcCcCcCcDdDdDdEEEEeeeeEeEeEeEeEeGgGgGgGgHhHhIIIIiiiiIiIiIiIiIiJjKkkLlLlLlLlLlNnNnNnNnnNnOOOOOOooooooOoOoOoRrRrRrSsSsSsSssTtTtTtUUUUuuuuUuUuUuUuUuUuWwYyyYyYZzZzZz"
+      )
     end
 
     # Remove messy quotes and wrap full value in quotes
@@ -210,9 +224,7 @@ module Contented
     def transform_raw_keys_to_downcase
       transform = raw
       transform.keys.each do |key|
-        transform[key.downcase] = transform.delete(key)
-        # Strip leading/trailing whitespace
-        transform[key.downcase] = transform[key.downcase].strip if transform[key.downcase].is_a?(String)
+        transform[key.downcase] = ascii_string(transform.delete(key))
       end
       transform
     end

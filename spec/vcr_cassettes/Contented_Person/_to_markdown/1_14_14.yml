@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: head
-    uri: https://s3.amazonaws.com/nyulibraries-www-assets/people-images/jane-doe.jpg
+    uri: https://s3.amazonaws.com/nyulibraries-www-assets/people-images/jane-doe-marquez.jpg
     body:
       encoding: US-ASCII
       string: ''
@@ -17,20 +17,20 @@ http_interactions:
       message: Forbidden
     headers:
       X-Amz-Request-Id:
-      - 1A7F99A9CCC54A0F
+      - 1301A9263BA20B90
       X-Amz-Id-2:
-      - INsDOdTgMj+QuMO85JguqbhyzF7hAtBGEKl8UTZbar4rEmlG8cUf0eWW0ghK0DLzAIakEpDjwXI=
+      - r4bam6X8LjJ1fKorqm2dae1yvAQhbXMEoNC5u471gn7cb9VUc+/L3E25plx5FkWl4r8B0c2fDbg=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Fri, 26 Jan 2018 18:14:27 GMT
+      - Thu, 01 Feb 2018 19:01:41 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Fri, 26 Jan 2018 18:14:27 GMT
+  recorded_at: Thu, 01 Feb 2018 19:01:41 GMT
 recorded_with: VCR 3.0.3

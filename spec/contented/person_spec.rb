@@ -5,7 +5,7 @@ describe Contented::Person do
     {
       :Net_ID=>"jd123",
       :First_Name=>"Jane",
-      :Last_Name=>"Doe",
+      :Last_Name=>"Doe Márquez",
       :Job_Title=>"Curator: Health Sciences Librarian And Other",
       :Departments=>"KARMS/Metadata Production and Management (Adjuncts); Another Department",
       :Parent_Department=>"Knowledge Access & Resource Management Services",
@@ -13,7 +13,7 @@ describe Contented::Person do
       :Email_Address=>"dj123@nyu.edu",
       :Building_Address_Line_1=>"70 Washington Square South, New York, NY 10012",
       :Location=>"Elmer Holmes Bobst Library",
-      :Name=>"Jane Doe",
+      :Name=>"Jane Doe Márquez",
       :Nickname=>"(Janie)",
       :about_you=>"I am responsible for Instruction, Reference, Collection Development, and Faculty liaison for the NYU Rory Meyers College of Nursing, Steinhardt School Departments of Occupational Therapy, Physical Therapy, and Communication Sciences and Disorders.",
       :Liaison_Relationships=>"NYU Rory Meyers College of Nursing; NYU Steinhardt School - Division of Physical Therapy, Division of Occupational Therapy, Division of Communicative Sciences & Disorders",
@@ -69,12 +69,12 @@ describe Contented::Person do
     subject { person }
     its(:net_id) { is_expected.to eql 'jd123' }
     its(:first_name) { is_expected.to eql 'Jane' }
-    its(:last_name) { is_expected.to eql 'Doe' }
+    its(:last_name) { is_expected.to eql 'Doe Marquez' }
     its(:parent_department) { is_expected.to eql 'Knowledge Access & Resource Management Services' }
     its(:work_phone) { is_expected.to eql "+1 212 998 1234" }
     its(:email_address) { is_expected.to eql 'dj123@nyu.edu' }
     its(:building_address_line_1) { is_expected.to eql '70 Washington Square South, New York, NY 10012' }
-    its(:name) { is_expected.to eql 'Jane Doe' }
+    its(:name) { is_expected.to eql 'Jane Doe Marquez' }
     its(:nickname) { is_expected.to eql "(Janie)" }
     its(:about_you) { is_expected.to eql 'I am responsible for Instruction, Reference, Collection Development, and Faculty liaison for the NYU Rory Meyers College of Nursing, Steinhardt School Departments of Occupational Therapy, Physical Therapy, and Communication Sciences and Disorders.' }
     its(:appointment_request_button) { is_expected.to eql 'mailto:jane.doe@nyu.edu' }
@@ -93,12 +93,12 @@ describe Contented::Person do
 
   describe '#title' do
     subject { person.title }
-    it { is_expected.to eql 'Jane Doe' }
+    it { is_expected.to eql 'Jane Doe Marquez' }
   end
 
   describe '#filename' do
     subject { person.filename }
-    it { is_expected.to eql 'jane-doe' }
+    it { is_expected.to eql 'jane-doe-marquez' }
   end
 
   describe '#job_title' do
@@ -166,7 +166,7 @@ describe Contented::Person do
   describe '#to_markdown', vcr: true do
     subject { person.to_markdown }
 
-    it { is_expected.to include "title: Jane Doe" }
+    it { is_expected.to include "title: Jane Doe Marquez" }
     it { is_expected.to include "subtitle: '(Janie)'" }
     it { is_expected.to include "job_title: Health Sciences Librarian" }
     it { is_expected.to include "location: Elmer Holmes Bobst Library" }
@@ -206,8 +206,8 @@ describe Contented::Person do
     it { is_expected.to include "orcid_id: orcid.org/0000-0002-9959-5627" }
     it { is_expected.to include "keywords:" }
     it { is_expected.to include "first_name: Jane" }
-    it { is_expected.to include "last_name: Doe" }
-    it { is_expected.to include "sort_title: Doe, Jane" }
+    it { is_expected.to include "last_name: Doe Marquez" }
+    it { is_expected.to include "sort_title: Doe Marquez, Jane" }
 
   end
 
