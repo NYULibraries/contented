@@ -29,17 +29,23 @@ buttons:
 {%- if appointment_request_button %}
   Request an Appointment: {{ appointment_request_button }}
 {%- endif %}
+{%- if libguides_account_id || guide_id_numbers || libguides_author_profile_url %}
 guides:
   libguides_account_ids: {{ libguides_account_id }}
   libguides_guide_ids: {{ guide_id_numbers }}
   link: {{ libguides_author_profile_url }}
+{%- endif %}
+{%- if publications_rss || publications_url %}
 publications:
   rss: {{ publications_rss }}
   link: {{ publications_url }}
+{%- endif %}
+{%- if blog_rss || blog_title || blog_url %}
 blog:
   rss: {{ blog_rss }}
   title: {{ blog_title }}
   link: {{ blog_url }}
+{%- endif %}
 orcid_id: {{ orcid }}
 keywords:
 first_name: {{ first_name }}
