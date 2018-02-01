@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Contented::Person do
+describe Contented::Collections::Person do
   let(:raw) do
     {
       :Net_ID=>"jd123",
@@ -15,7 +15,12 @@ describe Contented::Person do
       :Location=>"Elmer Holmes Bobst Library",
       :Name=>"Jane Doe Márquez",
       :Nickname=>"(Janie)",
-      :about_you=>"I am responsible for Instruction, Reference, Collection Development, and Faculty liaison for the NYU Rory Meyers College of Nursing, Steinhardt School Departments of Occupational Therapy, Physical Therapy, and Communication Sciences and Disorders.",
+      :about_you=>"
+        I am responsible for
+
+        * Instruction, Reference, Collection Development, and Faculty liaison for the NYU Rory Meyers College of Nursing,
+        * Steinhardt School Departments of Occupational Therapy, Physical Therapy, and Communication Sciences and Disorders.
+      ",
       :Liaison_Relationships=>"NYU Rory Meyers College of Nursing; NYU Steinhardt School - Division of Physical Therapy, Division of Occupational Therapy, Division of Communicative Sciences & Disorders",
       :Appointment_Request_button=>"mailto:jane.doe@nyu.edu",
       :Publications_Rss=>"http://www.refworks.com/refshare/?site=010331135918800000/RWWS1A706085/Jacobs%20articles%20RSS&rss",
@@ -47,7 +52,7 @@ describe Contented::Person do
     }
   end
   let(:save_location) { '.' }
-  let(:person) { Contented::Person.new(raw, save_location) }
+  let(:person) { Contented::Collections::Person.new(raw, save_location) }
 
   describe '#raw' do
     subject { person.raw }
@@ -76,7 +81,10 @@ describe Contented::Person do
     its(:building_address_line_1) { is_expected.to eql '70 Washington Square South, New York, NY 10012' }
     its(:name) { is_expected.to eql 'Jane Doe Marquez' }
     its(:nickname) { is_expected.to eql "(Janie)" }
-    its(:about_you) { is_expected.to eql 'I am responsible for Instruction, Reference, Collection Development, and Faculty liaison for the NYU Rory Meyers College of Nursing, Steinhardt School Departments of Occupational Therapy, Physical Therapy, and Communication Sciences and Disorders.' }
+    its(:about_you) { is_expected.to eql 'I am responsible for
+
+        * Instruction, Reference, Collection Development, and Faculty liaison for the NYU Rory Meyers College of Nursing,
+        * Steinhardt School Departments of Occupational Therapy, Physical Therapy, and Communication Sciences and Disorders.' }
     its(:appointment_request_button) { is_expected.to eql 'mailto:jane.doe@nyu.edu' }
     its(:publications_rss) { is_expected.to eql 'http://www.refworks.com/refshare/?site=010331135918800000/RWWS1A706085/Jacobs%20articles%20RSS&rss' }
     its(:publications_url) { is_expected.to eql 'http://www.refworks.com/refshare/?site=010331135918800000/RWWS1A706085/Jacobs%20articles%20RSS&amp;rss%27' }

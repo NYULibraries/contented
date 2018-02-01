@@ -21,7 +21,7 @@ namespace :contented do
       # Expect people to be a hash
       people.each do |p|
         # Expect p to be a hash
-        person = Contented::Person.new(p, save_location)
+        person = Contented::Collections::Person.new(p, save_location)
         unless exclude_people.include?(person.net_id)
           # Save the file as markdown
           person.save_as_markdown!
