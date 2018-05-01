@@ -2,3 +2,7 @@
 Gemfile.lock
 coverage/
 Figsfile
+data/
+tmp/
+_people/
+wiki

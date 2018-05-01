@@ -2,7 +2,7 @@ require 'contented/swiftype_sync/crawler'
 
 module Contented
   module SwiftypeSync
-    PEOPLE_DIR_NAME = Contented::Helpers::PersonHelpers::DIR_NAME
+    PEOPLE_DIR_NAME = "_people"
     PEOPLE_URL_BASE = "http://dev.library.nyu.edu/people/"
 
     SERVICES_DIR_NAME = "_services"
