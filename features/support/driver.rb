@@ -29,4 +29,8 @@ else
   Capybara.default_driver = driver
   Capybara.javascript_driver = driver
   Capybara.current_driver = driver
+
+  Before do |scenario|
+    Capybara.page.driver.browser.manage.window.resize_to(1024, 800)
+  end
 end
