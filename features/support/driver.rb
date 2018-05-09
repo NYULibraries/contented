@@ -25,13 +25,8 @@ when nil
   Capybara.default_max_wait_time = (ENV['MAX_WAIT'] || 8).to_i
 # otherwise, run driver as a browser via selenium
 else
-  Capybara.register_driver :selenium do |app|
-    Capybara::Selenium::Driver.new(
-      app,
-      browser: ENV['DRIVER'].to_sym,
-    )
-  end
-  Capybara.default_driver = :selenium
-  Capybara.javascript_driver = :selenium
-  Capybara.default_max_wait_time = (ENV['MAX_WAIT'] || 15).to_i
+  driver = ENV['DRIVER'].to_sym
+  Capybara.default_driver = driver
+  Capybara.javascript_driver = driver
+  Capybara.current_driver = driver
 end

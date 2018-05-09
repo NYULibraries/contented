@@ -21,3 +21,7 @@ Dir[File.join(project_dir, "features", "support", "helpers", "**", "*.rb")].each
   require helper_path
   World constantize_helper_path helper_path
 end
+
+Before do |scenario|
+  Capybara.page.driver.browser.manage.window.resize_to(1024, 800)
+end
