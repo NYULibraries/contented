@@ -3,7 +3,7 @@ Given(/^I visit the homepage$/) do
 end
 
 Given /^I click on the "(.+)" link$/ do |link_text|
-  click_link_or_button link_text
+  click_on link_text
   expect(page).to have_text link_text
 end
 
