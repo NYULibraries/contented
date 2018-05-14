@@ -23,14 +23,36 @@ when nil
   Capybara.javascript_driver = :poltergeist
   Capybara.current_driver = :poltergeist
   Capybara.default_max_wait_time = (ENV['MAX_WAIT'] || 8).to_i
-# otherwise, run driver as a browser via selenium
-else
-  driver = ENV['DRIVER'].to_sym
-  Capybara.default_driver = driver
-  Capybara.javascript_driver = driver
-  Capybara.current_driver = driver
+# run chrome headless when specified
+when "chrome"
+  Capybara.register_driver :chrome_headless do |app|
+    capabilities = Selenium::WebDriver::Remote::Capabilities.chrome(
+      chromeOptions: {
+        args: %w[ no-sandbox headless disable-gpu window-size=1280,1024]
+      }
+    )
 
-  Before do |scenario|
-    Capybara.page.driver.browser.manage.window.resize_to(1024, 800)
+    Capybara::Selenium::Driver.new(app, browser: :chrome, desired_capabilities: capabilities)
   end
+
+  Capybara.javascript_driver = :chrome_headless
+  Capybara.default_driver = :chrome_headless
+  Capybara.current_driver = :chrome_headless
+# run firefox headless when specified
+# when "firefox"
+#   Capybara.register_driver :firefox_headless do |app|
+#     capabilities = Selenium::WebDriver::Remote::Capabilities.firefox(
+#       firefoxOptions: {
+#         args: %w[ no-sandbox headless disable-gpu window-size=1280,1024]
+#       }
+#     )
+#
+#     Capybara::Selenium::Driver.new(app, browser: :firefox, desired_capabilities: capabilities)
+#   end
+#
+#   Capybara.javascript_driver = :firefox_headless
+#   Capybara.default_driver = :firefox_headless
+#   Capybara.current_driver = :firefox_headless
+else
+  raise "Invalid driver '#{ENV['DRIVER']}'"
 end

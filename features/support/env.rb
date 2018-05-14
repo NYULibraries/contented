@@ -5,6 +5,7 @@ require 'capybara'
 require 'rspec'
 require 'cucumber_helpers/project_dir_helpers'
 require 'capybara-screenshot/cucumber' if ENV['SCREENSHOT_FAILURES']
+require "selenium-webdriver"
 
 include CucumberHelpers::ProjectDirHelpers
 
