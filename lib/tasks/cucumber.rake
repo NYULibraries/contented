@@ -13,14 +13,14 @@ end
 
 desc "Run cucumber tests for all pages on specified DOMAIN"
 task :features do
-  sh "bundle exec cucumber --tags ~@wip --require #{features_directory} #{features_directory}"
+  sh "bundle exec cucumber --tags 'not @wip' --require #{features_directory} #{features_directory}"
 end
 
 namespace(:features) do
   FEATURE_COLLECTIONS.each do |collection_name|
     desc "Run cucumber tests for #{collection_name} pages on specified DOMAIN"
     task collection_name do
-      sh "bundle exec cucumber --tags ~@wip --require #{features_directory} #{File.join(features_directory, "#{collection_name}.feature")}"
+      sh "bundle exec cucumber --tags 'not @wip' --require #{features_directory} #{File.join(features_directory, "#{collection_name}.feature")}"
     end
   end
 end
