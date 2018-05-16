@@ -1,0 +1,9 @@
+version: "3"
+services:
+  contented:
+    build: .
+    tty: true
+    environment:
+      - DRIVER=chrome
+      - DOMAIN=https://library.nyu.edu
+    shm_size: 1g
