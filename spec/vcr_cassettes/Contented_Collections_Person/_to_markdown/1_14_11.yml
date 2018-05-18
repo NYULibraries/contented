@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v0.13.1
+      - Faraday v0.15.1
       Accept:
       - "*/*"
   response:
@@ -17,20 +17,20 @@ http_interactions:
       message: Forbidden
     headers:
       X-Amz-Request-Id:
-      - F3748FCE6F5EFE71
+      - 266CF11B5F279182
       X-Amz-Id-2:
-      - pvjQBq/gmbJ+a8M9j59CIFArFL9PnTvP7BJv/UXYDAMz1OCIGuY76sCrE/EhzoLDxqO9wobxWwA=
+      - e4n924tD0iyhTiCbis3MWEsJVP/HtSMtLFt2DujlGP6JgXIOCkdT4W1i2iumJAMFnPT+TWd3JFw=
       Content-Type:
       - application/xml
       Transfer-Encoding:
       - chunked
       Date:
-      - Thu, 01 Feb 2018 19:54:05 GMT
+      - Fri, 18 May 2018 16:00:09 GMT
       Server:
       - AmazonS3
     body:
       encoding: UTF-8
       string: ''
     http_version: 
-  recorded_at: Thu, 01 Feb 2018 19:54:05 GMT
+  recorded_at: Fri, 18 May 2018 16:00:10 GMT
 recorded_with: VCR 3.0.3

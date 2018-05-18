@@ -1,2 +1,0 @@
-ENV['GATHER_CONTENT_API_KEY'] ||= 'api-key'
-ENV['GATHER_CONTENT_API_USERNAME'] ||= 'api-id'
