@@ -24,11 +24,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'faraday', '>= 0.9.0'
   gem.add_dependency 'i18n', '>= 0.7.0'
   gem.add_dependency 'swiftype', '~> 1.2.2'
-  gem.add_dependency 'cucumber', '>= 2.3.3'
-  gem.add_dependency 'rspec', '>= 3.3'
-  gem.add_dependency 'selenium-webdriver', '>= 2.53.4'
-  gem.add_dependency 'phantomjs', '>= 2.1.1'
-  gem.add_dependency 'poltergeist', '>= 1.12.0'
   gem.add_dependency 'ox'
   gem.add_dependency 'liquid'
 end
