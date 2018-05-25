@@ -27,7 +27,7 @@ module Contented
         # return tiny_tds result object(.each)
       end
 
-      def classrooms
+      def rooms
         # executes sql query for classrooms
         # execute <<~SQL
           # SELECT ...

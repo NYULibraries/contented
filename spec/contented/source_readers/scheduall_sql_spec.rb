@@ -15,7 +15,7 @@ describe Contented::SourceReaders::Scheduall do
 
   end
 
-  describe '#classrooms' do
+  describe '#rooms' do
 
   end
 
