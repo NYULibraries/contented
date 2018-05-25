@@ -6,3 +6,5 @@ data/
 tmp/
 _people/
 wiki
+# Ignore application configuration
+config/settings_scheduall.yml

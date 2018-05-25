@@ -14,4 +14,6 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'climate_control'
   gem 'pry'
+
+  gem 'tiny_tds'
 end
