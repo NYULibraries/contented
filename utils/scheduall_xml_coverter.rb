@@ -6,12 +6,12 @@ ROOM_ATTRS = ["notes", "capacity", "instructions", "image", "software_image"]
 BUILDING_ATTRS = ["address"]
 
 def rooms
-  xml_string = File.read('rooms-info.xml')
+  xml_string = File.read("#{File.expand_path(File.dirname(File.dirname(__FILE__)))}/config/campusmedia/rooms-info.xml")
   Ox.load(xml_string, mode: :hash, skip: :skip_none)[:rooms][:room]
 end
 
 def buildings
-  xml_string = File.read('buildings-info.xml')
+  xml_string = File.read("#{File.expand_path(File.dirname(File.dirname(__FILE__)))}/config/campusmedia/buildings-info.xml")
   Ox.load(xml_string, mode: :hash, skip: :skip_none)[:buildings][:building]
 end
 
@@ -44,7 +44,7 @@ def write_to_yaml(hash, filename)
     hash[loc_key] = nil if loc_attrs.empty?
   end
 
-  File.open(filename, 'w') { |file| file.write(hash.to_yaml) }
+  File.open("#{File.expand_path(File.dirname(File.dirname(__FILE__)))}/config/campusmedia/#{filename}", 'w') { |file| file.write(hash.to_yaml) }
 end
 
 write_to_yaml normalize(rooms, ROOM_ATTRS), 'rooms.yml'
