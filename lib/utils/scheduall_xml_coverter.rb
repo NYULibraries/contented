@@ -17,9 +17,9 @@ end
 
 def hashify_props_array(arr)
   arr.reduce({}) do |props, attr_hash|
-    # transforms keys to string, nil values to empty strings
+    # transforms keys to string, excludes nil/empty values
     transformed = attr_hash.reduce({}) do |h, (k, v)|
-      h.merge({ k.to_s => ( v.nil? ? '' : v) })
+      h.merge(v && v.is_a?(String) && v.strip.length > 0 ? { k.to_s => v } : {})
     end
 
     props.merge(transformed)
@@ -35,7 +35,12 @@ def normalize(data, attrs)
   end
 end
 
-def write_to_yaml(hash, dir, filename)
+def write_to_yaml(hash, filename)
+  # converts empty hashes to nil
+  hash.each do |k, v|
+    hash[k] = nil if v.empty?
+  end
+
   File.open(filename, 'w') { |file| file.write(hash.to_yaml) }
 end
 

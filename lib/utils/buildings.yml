@@ -3,10 +3,8 @@ cm-building-2114:
   address: 110 5th Ave.
 cm-building-244:
   address: 111 2nd Ave.
-cm-building-2108:
-  address: ''
-cm-building-791:
-  address: " "
+cm-building-2108: 
+cm-building-791: 
 cm-building-412:
   address: 19 University Place
 cm-building-792:
@@ -57,7 +55,7 @@ cm-building-204:
   address: 35 West Fourth Street
 cm-building-2666:
   address: 18 Washington Place
-cm-building-2667: {}
+cm-building-2667: 
 cm-building-2677:
   address: 238 Thompson Street
 cm-building-214:
@@ -98,8 +96,7 @@ cm-building-202:
   address: 100 Washington Square East
 cm-building-205:
   address: 40 West Fourth Street
-cm-building-209:
-  address: ''
+cm-building-209: 
 cm-building-194:
   address: 24 Waverly Place
 cm-building-2638:
