@@ -1,16 +1,16 @@
 ---
 cm-room-3965:
-  capacity: '24'
+  capacity: 24
 cm-room-1134:
-  capacity: '35'
+  capacity: 35
 cm-room-1136:
-  capacity: '16'
+  capacity: 16
 cm-room-1137:
-  capacity: '20'
+  capacity: 20
 cm-room-1138:
-  capacity: '25'
+  capacity: 25
 cm-room-1139:
-  capacity: '25'
+  capacity: 25
 cm-room-25043:
   notes: Not a general purpose classroom
 cm-room-22008:
@@ -18,13 +18,13 @@ cm-room-22008:
 cm-room-22015:
   notes: Not a general purpose classroom
 cm-room-1140:
-  capacity: '20'
+  capacity: 20
 cm-room-1141:
-  capacity: '25'
+  capacity: 25
 cm-room-4095:
-  capacity: '14'
+  capacity: 14
 cm-room-1142:
-  capacity: '25'
+  capacity: 25
 cm-room-24396:
   notes: Not a general purpose classroom
 cm-room-26216:
@@ -36,7 +36,7 @@ cm-room-24400:
 cm-room-22715:
   notes: Not a general purpose classroom
 cm-room-2131:
-  capacity: '25'
+  capacity: 25
 cm-room-22473:
   notes: Not a general purpose classroom
 cm-room-22526:
@@ -48,87 +48,87 @@ cm-room-20427:
 cm-room-5546:
   notes: Not a general purpose classroom
 cm-room-29686:
-  capacity: '36'
+  capacity: 36
   image: GlobalCenter261.jpg
 cm-room-29687:
-  capacity: '32'
+  capacity: 32
   image: GlobalCenter265.jpg
 cm-room-29690:
-  capacity: '40'
+  capacity: 40
   image: GlobalCenter269.jpg
 cm-room-5547:
-  capacity: '24'
+  capacity: 24
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer201.jpg
 cm-room-5548:
-  capacity: '29'
+  capacity: 29
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer202.jpg
 cm-room-5549:
-  capacity: '56'
+  capacity: 56
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer203.jpg
 cm-room-5550:
-  capacity: '26'
+  capacity: 26
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer204.jpg
 cm-room-5551:
-  capacity: '26'
+  capacity: 26
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer205.jpg
 cm-room-5552:
-  capacity: '26'
+  capacity: 26
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer206.jpg
 cm-room-5553:
-  capacity: '24'
+  capacity: 24
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer207.jpg
 cm-room-5554:
-  capacity: '26'
+  capacity: 26
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer208.jpg
 cm-room-5555:
-  capacity: '26'
+  capacity: 26
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer209.jpg
 cm-room-5556:
-  capacity: '25'
+  capacity: 25
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer210.jpg
 cm-room-5557:
-  capacity: '25'
+  capacity: 25
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer301.jpg
 cm-room-5558:
-  capacity: '17'
+  capacity: 17
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer303.jpg
 cm-room-6768:
-  capacity: '30'
+  capacity: 30
 cm-room-5559:
-  capacity: '47'
+  capacity: 47
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer305.jpg
 cm-room-5560:
-  capacity: '93'
+  capacity: 93
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer306.jpg
 cm-room-5561:
-  capacity: '47'
+  capacity: 47
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer307.jpg
 cm-room-5562:
-  capacity: '25'
+  capacity: 25
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer308.jpg
-cm-room-5563: 
+cm-room-5563:
 cm-room-24570:
   notes: Not a general purpose classroom
 cm-room-22341:
   notes: Not a general purpose classroom
 cm-room-20195:
-  capacity: '120'
+  capacity: 120
   instructions: 19UP_102_Instructions.pdf
   image: 19 University 102.jpg
 cm-room-19616:
@@ -172,11 +172,11 @@ cm-room-24587:
 cm-room-25082:
   notes: Not a general purpose classroom
 cm-room-21550:
-  capacity: '188'
+  capacity: 188
   instructions: 19w4_101_Instructions.pdf
   image: 19W4th101.jpg
 cm-room-24527:
-  capacity: '46'
+  capacity: 46
   instructions: 19w4_102_Instructions.pdf
   image: 19W4th102.jpg
 cm-room-14681:
@@ -190,83 +190,83 @@ cm-room-21097:
 cm-room-24652:
   notes: Not a general purpose classroom
 cm-room-237:
-  capacity: '27'
+  capacity: 27
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-01.jpg
 cm-room-260:
-  capacity: '28'
+  capacity: 28
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-02.jpg
 cm-room-261:
-  capacity: '24'
+  capacity: 24
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-03.jpg
 cm-room-262:
-  capacity: '25'
+  capacity: 25
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-04.jpg
 cm-room-263:
-  capacity: '22'
+  capacity: 22
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-05.jpg
 cm-room-264:
-  capacity: '24'
+  capacity: 24
   instructions: 25W4_C6_Instructions.pdf
   image: 25W4StC-06.jpg
 cm-room-265:
-  capacity: '18'
+  capacity: 18
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-07.jpg
 cm-room-266:
-  capacity: '30'
+  capacity: 30
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-08.jpg
 cm-room-267:
-  capacity: '25'
+  capacity: 25
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-09.jpg
 cm-room-268:
-  capacity: '25'
+  capacity: 25
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-10.jpg
 cm-room-1145:
-  capacity: '25'
+  capacity: 25
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-11.jpg
 cm-room-1146:
-  capacity: '24'
+  capacity: 24
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-12.jpg
 cm-room-1147:
-  capacity: '30'
+  capacity: 30
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-13.jpg
 cm-room-1149:
-  capacity: '24'
+  capacity: 24
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-14.jpg
 cm-room-1151:
-  capacity: '24'
+  capacity: 24
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-15.jpg
 cm-room-1152:
-  capacity: '18'
+  capacity: 18
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-16.jpg
 cm-room-1153:
-  capacity: '25'
+  capacity: 25
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-17.jpg
 cm-room-1155:
-  capacity: '20'
+  capacity: 20
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-18.jpg
 cm-room-1156:
-  capacity: '20'
+  capacity: 20
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-19.jpg
 cm-room-1157:
-  capacity: '40'
+  capacity: 40
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-20.jpg
 cm-room-2377:
@@ -318,31 +318,31 @@ cm-room-1673:
 cm-room-19261:
   notes: Not a general purpose classroom
 cm-room-269:
-  capacity: '30'
+  capacity: 30
   instructions: 145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf
   image: 4thAve204.jpg
 cm-room-270:
   notes: Not a general purpose classroom
-  capacity: '24'
+  capacity: 24
   instructions: 145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf
 cm-room-1174:
-  capacity: '20'
+  capacity: 20
   instructions: 145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf
   image: 4thAve206.jpg
 cm-room-1175:
-  capacity: '21'
+  capacity: 21
   instructions: 145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf
   image: 4thAve207.jpg
 cm-room-1176:
-  capacity: '25'
+  capacity: 25
   instructions: 145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf
   image: 4thAve208.jpg
 cm-room-1178:
-  capacity: '28'
+  capacity: 28
   instructions: 145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf
   image: 4thAve209.jpg
 cm-room-1179:
-  capacity: '23'
+  capacity: 23
   instructions: 145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf
   image: 4thAve210.jpg
 cm-room-26292:
@@ -362,7 +362,7 @@ cm-room-22640:
 cm-room-3649:
   notes: Not a general purpose classroom
 cm-room-26004:
-  capacity: '120'
+  capacity: 120
   instructions: 5WP_Instructions.pdf
   image: 5WP101.jpg
 cm-room-5774:
@@ -563,7 +563,7 @@ cm-room-5387:
   notes: Not a general purpose classroom
 cm-room-1181:
   notes: Not a general purpose classroom
-  capacity: '100'
+  capacity: 100
   instructions: Barney_Building_Room_105_Equipment_Instructions.pdf
 cm-room-1183:
   notes: Not a general purpose classroom
@@ -620,120 +620,120 @@ cm-room-3648:
 cm-room-1471:
   notes: Not a general purpose classroom
 cm-room-29365:
-  capacity: '28'
+  capacity: 28
   instructions: ARCLL01_02_03Classrooms_Instructions.pdf
   image: ARC-LL1.jpg
 cm-room-29366:
-  capacity: '28'
+  capacity: 28
   instructions: ARCLL01_02_03Classrooms_Instructions.pdf
   image: ARC-LL2.jpg
 cm-room-29369:
-  capacity: '21'
+  capacity: 21
   instructions: ARCLL01_02_03Classrooms_Instructions.pdf
   image: ARC-LL3.jpg
 cm-room-29370:
-  capacity: '25'
+  capacity: 25
   instructions: VC_Instructions_ARCLL04.pdf
   image: ARC-LL4.jpg
 cm-room-29371:
-  capacity: '24'
+  capacity: 24
   instructions: ARCLL05.pdf
   image: ARC-LL5.jpg
 cm-room-29372:
-  capacity: '6'
+  capacity: 6
   image: ARC-LL16.jpg
 cm-room-29373:
-  capacity: '6'
+  capacity: 6
   image: ARC-LL16.jpg
 cm-room-1159:
-  capacity: '15'
+  capacity: 15
   image: Bobst436.jpg
 cm-room-1160:
-  capacity: '15'
+  capacity: 15
   image: Bobst437.jpg
 cm-room-1161:
-  capacity: '15'
+  capacity: 15
   image: Bobst536.jpg
 cm-room-1162:
-  capacity: '15'
+  capacity: 15
   image: Bobst537.jpg
 cm-room-1163:
-  capacity: '15'
+  capacity: 15
   instructions: Bobst_736,737,836,837_Instructions.pdf
   image: Bobst736.jpg
 cm-room-1164:
-  capacity: '15'
+  capacity: 15
   instructions: Bobst_736,737,836,837_Instructions.pdf
   image: Bobst737.jpg
 cm-room-2082:
-  capacity: '15'
+  capacity: 15
   instructions: Instructions_Bobst_836_837.pdf
   image: Bobst836.jpg
 cm-room-1166:
-  capacity: '15'
+  capacity: 15
   instructions: Instructions_Bobst_836_837.pdf
   image: Bobst837.jpg
 cm-room-19617:
   notes: Not a general purpose classroom
-cm-room-1167: 
+cm-room-1167:
 cm-room-27999:
-  capacity: '48'
+  capacity: 48
   instructions: Bobst_LL1-38,LL1-50_Instructions.pdf
   image: BobstLL38.jpg
 cm-room-28000:
-  capacity: '30'
+  capacity: 30
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL39.jpg
 cm-room-28001:
-  capacity: '16'
+  capacity: 16
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL40.jpg
 cm-room-28002:
-  capacity: '24'
+  capacity: 24
   instructions: Bobst LL1-41,LL1-43_Instructions.pdf
   image: Bobst_LL141_43.jpg
 cm-room-28003:
-  capacity: '20'
+  capacity: 20
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL42.jpg
 cm-room-28004:
-  capacity: '24'
+  capacity: 24
   instructions: Bobst LL1-41,LL1-43_Instructions.pdf
   image: Bobst_LL141_43.jpg
 cm-room-28006:
-  capacity: '24'
+  capacity: 24
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL45.jpg
 cm-room-28007:
-  capacity: '20'
+  capacity: 20
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL46.jpg
 cm-room-28008:
-  capacity: '24'
+  capacity: 24
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL47.jpg
 cm-room-28009:
-  capacity: '16'
+  capacity: 16
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL48.jpg
 cm-room-28010:
-  capacity: '30'
+  capacity: 30
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL49.jpg
 cm-room-28011:
-  capacity: '48'
+  capacity: 48
   instructions: Bobst_LL1-38,LL1-50_Instructions.pdf
   image: BobstLL50.jpg
 cm-room-28111:
-  capacity: '30'
+  capacity: 30
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL51.jpg
 cm-room-2822:
-  capacity: '184'
+  capacity: 184
 cm-room-4570:
-  capacity: '177'
+  capacity: 177
 cm-room-2823:
-  capacity: '319'
+  capacity: 319
 cm-room-1480:
   notes: Not a general purpose classroom
 cm-room-1481:
@@ -808,10 +808,10 @@ cm-room-5768:
   notes: Not a general purpose classroom
 cm-room-1205:
   notes: Not a general purpose classroom
-  capacity: '24'
+  capacity: 24
 cm-room-5539:
   notes: Not a general purpose classroom
-  capacity: '24'
+  capacity: 24
 cm-room-9069:
   notes: Not a general purpose classroom
 cm-room-1209:
@@ -851,43 +851,43 @@ cm-room-1556:
 cm-room-3167:
   notes: Not a general purpose classroom
 cm-room-1213:
-  capacity: '330'
+  capacity: 330
   image: Educ176.jpg
 cm-room-18863:
   notes: Not a general purpose classroom
 cm-room-2747:
   notes: Not a general purpose classroom
 cm-room-1216:
-  capacity: '74'
+  capacity: 74
   image: Educ303.jpg
 cm-room-1557:
   notes: Not a general purpose classroom
 cm-room-1558:
   notes: Not a general purpose classroom
 cm-room-1217:
-  capacity: '25'
+  capacity: 25
   image: Educ306.jpg
 cm-room-1219:
-  capacity: '25'
+  capacity: 25
   image: Educ307.jpg
 cm-room-29014:
-  capacity: '138'
+  capacity: 138
   instructions: Genomics_Auditorium_Instructions.pdf
   image: GenomicsAud-108.jpg
 cm-room-29010:
-  capacity: '22'
+  capacity: 22
   instructions: Genomics_L111_Instructions.pdf
   image: Genomics-111.jpg
 cm-room-29011:
-  capacity: '20'
+  capacity: 20
   instructions: Genomics_L113-L114_Instructions.pdf
   image: Genomics-L113.jpg
 cm-room-29012:
-  capacity: '20'
+  capacity: 20
   instructions: Genomics_L113-L114_Instructions.pdf
   image: Genomics-L114.jpg
 cm-room-29013:
-  capacity: '69'
+  capacity: 69
   instructions: Genomics_L120_Instructions.pdf
   image: Genomics-L120.jpg
 cm-room-21691:
@@ -927,67 +927,67 @@ cm-room-4566:
 cm-room-1240:
   notes: Not a general purpose classroom
 cm-room-29382:
-  capacity: '34'
+  capacity: 34
   image: SCPS_121.jpg
 cm-room-29383:
-  capacity: '30'
+  capacity: 30
   image: SCPS_123.jpg
 cm-room-29384:
-  capacity: '28'
+  capacity: 28
   image: SCPS_124.jpg
 cm-room-29385:
-  capacity: '35'
+  capacity: 35
   image: SCPS_125.jpg
 cm-room-29386:
-  capacity: '24'
+  capacity: 24
   image: SCPS_127.jpg
 cm-room-29387:
-  capacity: '30'
+  capacity: 30
   image: SCPS_129.jpg
 cm-room-29388:
-  capacity: '20'
+  capacity: 20
   image: SCPS_131.jpg
 cm-room-29389:
-  capacity: '27'
+  capacity: 27
   image: SCPS_134.jpg
 cm-room-29374:
-  capacity: '28'
+  capacity: 28
   image: SCPS_LL21.jpg
 cm-room-29376:
-  capacity: '50'
+  capacity: 50
   image: SCPS_LL23.jpg
 cm-room-29377:
-  capacity: '32'
+  capacity: 32
   image: SCPS_LL25.jpg
 cm-room-29378:
-  capacity: '30'
+  capacity: 30
   image: SCPS_LL27.jpg
 cm-room-29379:
-  capacity: '24'
+  capacity: 24
   image: SCPS_LL31.jpg
 cm-room-29380:
-  capacity: '30'
+  capacity: 30
   image: SCPS_LL33.jpg
 cm-room-29381:
-  capacity: '27'
+  capacity: 27
 cm-room-1233:
-  capacity: '24'
+  capacity: 24
   instructions: Goddard_Instructions.pdf
   image: Goddard B-01.jpg
 cm-room-1234:
-  capacity: '35'
+  capacity: 35
   instructions: Goddard_Instructions.pdf
   image: Goddard B-02.jpg
 cm-room-1235:
-  capacity: '20'
+  capacity: 20
   instructions: Goddard_Instructions.pdf
   image: Goddard B-04.jpg
 cm-room-1237:
-  capacity: '35'
+  capacity: 35
   instructions: Goddard_Instructions.pdf
   image: Goddard B-06.jpg
 cm-room-1239:
-  capacity: '20'
+  capacity: 20
   instructions: Goddard_Instructions.pdf
   image: Goddard B-07.jpg
 cm-room-1588:
@@ -1123,24 +1123,24 @@ cm-room-1667:
 cm-room-5410:
   notes: Not a general purpose classroom
 cm-room-1350:
-  capacity: '73'
+  capacity: 73
   instructions: Meyer102_Instructions.pdf
   image: Meyer102.jpg
 cm-room-1351:
   notes: Not a general purpose classroom
-cm-room-1353: 
+cm-room-1353:
 cm-room-1354:
-  capacity: '185'
+  capacity: 185
   instructions: Meyer121_Instructions.pdf
   image: Meyer121.jpg
 cm-room-1356:
-  capacity: '93'
+  capacity: 93
   instructions: Meyer122_Instructions.pdf
   image: Meyer122.jpg
 cm-room-1358:
   notes: Not a general purpose classroom
 cm-room-2933:
-  capacity: '35'
+  capacity: 35
   instructions: Meyer157_Instructions.pdf
   image: Meyer157.jpg
 cm-room-2447:
@@ -1154,7 +1154,7 @@ cm-room-1360:
 cm-room-1361:
   notes: Not a general purpose classroom
 cm-room-1362:
-  capacity: '30'
+  capacity: 30
   instructions: Meyer261_Instructions.pdf
   image: Meyer261.jpg
 cm-room-1364:
@@ -1256,7 +1256,7 @@ cm-room-3936:
 cm-room-4754:
   notes: Not a general purpose classroom
 cm-room-1247:
-  capacity: '80'
+  capacity: 80
   instructions: Silver_101A.pdf
   image: Silver101A.jpg
 cm-room-1348:
@@ -1268,15 +1268,15 @@ cm-room-1253:
 cm-room-1254:
   notes: Not a general purpose classroom
 cm-room-1255:
-  capacity: '88'
+  capacity: 88
   instructions: Silver 206,208 new instructions.pdf
   image: Silver206.jpg
 cm-room-1257:
-  capacity: '128'
+  capacity: 128
   instructions: Silver 207 new instructions.pdf
   image: Silver207.jpg
 cm-room-1260:
-  capacity: '61'
+  capacity: 61
   instructions: Silver 206,208 new instructions.pdf
   image: Silver208.jpg
 cm-room-8697:
@@ -1294,123 +1294,123 @@ cm-room-5771:
 cm-room-1263:
   notes: Not a general purpose classroom
 cm-room-236:
-  capacity: '70'
+  capacity: 70
   instructions: Silver 401 new 2013 instructions.pdf
   image: Silver401.jpg
 cm-room-238:
-  capacity: '18'
+  capacity: 18
   instructions: Silver 402 406 409 new 2013 instructions.pdf
   image: Silver402.jpg
 cm-room-257:
-  capacity: '33'
+  capacity: 33
   instructions: Silver 403 404 407 410 new 2013 instructions.pdf
   image: Silver403.jpg
 cm-room-258:
-  capacity: '27'
+  capacity: 27
   instructions: Silver 403 404 407 410 new 2013 instructions.pdf
   image: Silver404.jpg
 cm-room-259:
-  capacity: '108'
+  capacity: 108
   instructions: Silver405_instructions.pdf
   image: Silver405.jpg
 cm-room-1265:
-  capacity: '22'
+  capacity: 22
   instructions: Silver 402 406 409 new 2013 instructions.pdf
   image: Silver406.jpg
 cm-room-1266:
-  capacity: '32'
+  capacity: 32
   instructions: Silver 403 404 407 410 new 2013 instructions.pdf
   image: Silver407.jpg
 cm-room-1268:
-  capacity: '108'
+  capacity: 108
   instructions: Silver 408 new 2013 instructions.pdf
   image: Silver408.jpg
 cm-room-1269:
-  capacity: '20'
+  capacity: 20
   instructions: Silver 402 406 409 new 2013 instructions.pdf
   image: Silver409.jpg
 cm-room-1271:
-  capacity: '37'
+  capacity: 37
   instructions: Silver 403 404 407 410 new 2013 instructions.pdf
   image: Silver410.jpg
 cm-room-1272:
-  capacity: '71'
+  capacity: 71
   instructions: Silver 411 new 2013 instructions.pdf
   image: Silver411.jpg
 cm-room-1274:
-  capacity: '25'
+  capacity: 25
   instructions: Silver_412.pdf
   image: Silver412.jpg
 cm-room-1275:
-  capacity: '8'
+  capacity: 8
   instructions: Silver 413 new 2013 instructions.pdf
   image: Silver413.jpg
 cm-room-1277:
-  capacity: '68'
+  capacity: 68
   instructions: Silver 414 new 2013 instructions.pdf
   image: Silver414.jpg
 cm-room-11850:
   notes: Not a general purpose classroom
 cm-room-1280:
-  capacity: '25'
+  capacity: 25
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver500.jpg
 cm-room-1282:
-  capacity: '28'
+  capacity: 28
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver501.jpg
 cm-room-2429:
   notes: Not a general purpose classroom
 cm-room-1284:
-  capacity: '20'
+  capacity: 20
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver504.jpg
 cm-room-1286:
-  capacity: '16'
+  capacity: 16
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver505.jpg
 cm-room-1287:
-  capacity: '20'
+  capacity: 20
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver506.jpg
 cm-room-1289:
-  capacity: '30'
+  capacity: 30
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver507.jpg
 cm-room-1291:
-  capacity: '25'
+  capacity: 25
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver508.jpg
 cm-room-1292:
-  capacity: '36'
+  capacity: 36
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver509.jpg
 cm-room-1293:
-  capacity: '20'
+  capacity: 20
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver510.jpg
 cm-room-1294:
-  capacity: '17'
+  capacity: 17
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver511.jpg
 cm-room-1296:
-  capacity: '20'
+  capacity: 20
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver512.jpg
 cm-room-1297:
-  capacity: '28'
+  capacity: 28
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver514.jpg
 cm-room-1298:
-  capacity: '25'
+  capacity: 25
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver515.jpg
 cm-room-1299:
-  capacity: '26'
+  capacity: 26
   instructions: Silver_518_Instructions.pdf
   image: Silver518.jpg
 cm-room-1300:
-  capacity: '90'
+  capacity: 90
   instructions: Silver_520_Instructions.pdf
   image: Silver520.jpg
 cm-room-5200:
@@ -1428,11 +1428,11 @@ cm-room-18971:
 cm-room-1306:
   notes: Not a general purpose classroom
 cm-room-1307:
-  capacity: '30'
+  capacity: 30
   instructions: Silver 620-Digital.pdf
   image: Silver620.jpg
 cm-room-1308:
-  capacity: '33'
+  capacity: 33
   instructions: Silver 621-Digital.pdf
   image: Silver621.jpg
 cm-room-4941:
@@ -1452,67 +1452,67 @@ cm-room-4987:
 cm-room-3987:
   notes: Not a general purpose classroom
 cm-room-1373:
-  capacity: '20'
+  capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC01.jpg
 cm-room-1374:
-  capacity: '20'
+  capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC02.jpg
 cm-room-1375:
-  capacity: '20'
+  capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC03.jpg
 cm-room-1376:
-  capacity: '20'
+  capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC04.jpg
 cm-room-1377:
-  capacity: '20'
+  capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC05.jpg
 cm-room-27380:
-  capacity: '20'
+  capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC06.jpg
 cm-room-27381:
-  capacity: '20'
+  capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC07.jpg
 cm-room-27382:
-  capacity: '45'
+  capacity: 45
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC09.jpg
 cm-room-27383:
-  capacity: '50'
+  capacity: 50
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC11.jpg
 cm-room-27384:
-  capacity: '20'
+  capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC13.jpg
 cm-room-27385:
-  capacity: '20'
+  capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC15.jpg
 cm-room-27438:
-  capacity: '36'
+  capacity: 36
   instructions: TISCH HALL LC-19 PODIUM.pdf
   image: TISCH HALL LC-19.jpg
 cm-room-1379:
-  capacity: '35'
+  capacity: 35
   instructions: Tisch_Hall_UC,_LC_Equipment_Instructions.pdf
 cm-room-1381:
-  capacity: '30'
+  capacity: 30
   instructions: Tisch_Hall_UC,_LC_Equipment_Instructions.pdf
 cm-room-1382:
-  capacity: '38'
+  capacity: 38
   instructions: Tisch_Hall_UC,_LC_Equipment_Instructions.pdf
 cm-room-1643:
-  capacity: '44'
+  capacity: 44
   instructions: Tisch_Hall_UC,_LC_Equipment_Instructions.pdf
 cm-room-1644:
-  capacity: '58'
+  capacity: 58
   instructions: Tisch_Hall_UC,_LC_Equipment_Instructions.pdf
 cm-room-1383:
   notes: Not a general purpose classroom
@@ -1555,232 +1555,232 @@ cm-room-24208:
 cm-room-1397:
   notes: Not a general purpose classroom
 cm-room-1398:
-  capacity: '39'
+  capacity: 39
   instructions: Waverly 3rd floor.pdf
   image: Waverly366.jpg
 cm-room-1399:
-  capacity: '35'
+  capacity: 35
   instructions: Waverly 3rd floor.pdf
   image: Waverly367.jpg
 cm-room-1401:
-  capacity: '33'
+  capacity: 33
   instructions: Waverly 3rd floor.pdf
   image: Waverly369.jpg
 cm-room-1402:
-  capacity: '30'
+  capacity: 30
   instructions: Waverly 3rd floor.pdf
   image: Waverly370.jpg
 cm-room-1409:
-  capacity: '26'
+  capacity: 26
   instructions: Waverly 4th floor.pdf
   image: Waverly_429.jpg
 cm-room-1412:
-  capacity: '33'
+  capacity: 33
   instructions: Waverly 4th floor.pdf
   image: waverly_431.jpg
 cm-room-1413:
-  capacity: '33'
+  capacity: 33
   instructions: Waverly 4th floor.pdf
   image: Waverly_433.jpg
 cm-room-1415:
-  capacity: '33'
+  capacity: 33
   instructions: Waverly 4th floor.pdf
   image: Waverly_435.jpg
 cm-room-2094:
-  capacity: '32'
+  capacity: 32
   instructions: Waverly 5th floor.pdf
   image: Waverly 566A.jpg
 cm-room-1417:
-  capacity: '20'
+  capacity: 20
   instructions: Waverly 5th floor.pdf
   image: Waverly 566B.jpg
 cm-room-1419:
-  capacity: '30'
+  capacity: 30
   instructions: Waverly 5th floor.pdf
   image: Waverly 567.jpg
 cm-room-1420:
-  capacity: '30'
+  capacity: 30
   instructions: Waverly 5th floor.pdf
   image: Waverly 569.jpg
 cm-room-2093:
-  capacity: '24'
+  capacity: 24
   instructions: Waverly 5th floor.pdf
   image: Waverly 570.jpg
 cm-room-1404:
-  capacity: '37'
+  capacity: 37
   instructions: Waverly667-digital.pdf
   image: Waverly667.jpg
 cm-room-1406:
-  capacity: '35'
+  capacity: 35
   instructions: Waverly 6th floor.pdf
   image: Waverly_668.jpg
 cm-room-1408:
-  capacity: '27'
+  capacity: 27
   instructions: Waverly 669-digital.pdf
   image: Waverly669.jpg
 cm-room-1473:
   notes: Not a general purpose classroom
 cm-room-27429:
-  capacity: '18'
+  capacity: 18
   instructions: UHALL C02A- Digital.pdf
   image: Univ_Hall C02A.jpg
 cm-room-28022:
-  capacity: '24'
+  capacity: 24
   instructions: Weinstein SB-20, SB-35 Instructions.pdf
   image: WeinsteinSB-20.jpg
 cm-room-28023:
-  capacity: '16'
+  capacity: 16
   instructions: Weinstein SB-20, SB-35 Instructions.pdf
   image: WeinsteinSB-35.jpg
 cm-room-29688:
-  capacity: '18'
+  capacity: 18
   image: GlobalCenter274.jpg
 cm-room-29689:
-  capacity: '40'
+  capacity: 40
   image: GlobalCenter275.jpg
 cm-room-29691:
-  capacity: '48'
+  capacity: 48
   image: GlobalCenter279.jpg
 cm-room-29707:
-  capacity: '30'
+  capacity: 30
   image: GlobalCenter288.jpg
 cm-room-29693:
-  capacity: '36'
+  capacity: 36
   image: GlobalCenter361.jpg
 cm-room-29694:
-  capacity: '32'
+  capacity: 32
   image: GlobalCenter365.jpg
 cm-room-29708:
-  capacity: '40'
+  capacity: 40
   image: GlobalCenter369.jpg
 cm-room-29695:
-  capacity: '18'
+  capacity: 18
   image: GlobalCenter374.jpg
 cm-room-29696:
-  capacity: '32'
+  capacity: 32
   image: GlobalCenter375.jpg
 cm-room-29697:
-  capacity: '32'
+  capacity: 32
   image: GlobalCenter379.jpg
 cm-room-29698:
-  capacity: '42'
+  capacity: 42
   image: GlobalCenter383.jpg
 cm-room-29699:
-  capacity: '30'
+  capacity: 30
   image: GlobalCenter388.jpg
 cm-room-29700:
-  capacity: '32'
+  capacity: 32
   image: GlobalCenter461.jpg
 cm-room-29703:
-  capacity: '32'
+  capacity: 32
   image: GlobalCenter475.jpg
 cm-room-29685:
-  capacity: '257'
+  capacity: 257
   instructions: GCASL_C95_Instructions.pdf
   image: GlobalCenterC95.jpg
 cm-room-29768:
-  capacity: '16'
+  capacity: 16
 cm-room-29767:
-  capacity: '12'
+  capacity: 12
 cm-room-29773:
-  capacity: '22'
+  capacity: 22
   image: GlobalCenter384.jpg
 cm-room-29772:
-  capacity: '22'
+  capacity: 22
   image: GCASL_284.jpg
 cm-room-32048:
-  capacity: '15'
+  capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin101.jpg
 cm-room-32049:
-  capacity: '15'
+  capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin102.jpg
 cm-room-32050:
-  capacity: '15'
+  capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin103.jpg
 cm-room-32051:
-  capacity: '15'
+  capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin104.jpg
 cm-room-32052:
-  capacity: '15'
+  capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin105.jpg
 cm-room-32053:
-  capacity: '14'
+  capacity: 14
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin106.jpg
 cm-room-32054:
-  capacity: '15'
+  capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin107.jpg
 cm-room-32055:
-  capacity: '15'
+  capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin108.jpg
 cm-room-32056:
-  capacity: '14'
+  capacity: 14
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin109.jpg
 cm-room-32057:
-  capacity: '15'
+  capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin110.jpg
 cm-room-32716:
   notes: Instructions coming soon
-  capacity: '64'
+  capacity: 64
   image: 60FA_110.jpg
 cm-room-32718:
   notes: Instructions coming soon
-  capacity: '34'
+  capacity: 34
   image: 60FA_125.jpg
 cm-room-32719:
   notes: Instructions coming soon
-  capacity: '90'
+  capacity: 90
   image: 60FA_150.jpg
 cm-room-32720:
   notes: Instructions coming soon
-  capacity: '31'
+  capacity: 31
   image: 60FA_161.jpg
 cm-room-32721:
   notes: Instructions coming soon
-  capacity: '32'
+  capacity: 32
   image: 60FA_165.jpg
 cm-room-32722:
   notes: Instructions coming soon
-  capacity: '12'
+  capacity: 12
   image: 60FA_202.jpg
 cm-room-32723:
   notes: Instructions coming soon
-  capacity: '16'
+  capacity: 16
   image: 60FA_250.jpg
 cm-room-32724:
   notes: Instructions coming soon
-  capacity: '26'
+  capacity: 26
   image: 60FA_261.jpg
 cm-room-32725:
   notes: Instructions coming soon
-  capacity: '26'
+  capacity: 26
   image: 60FA_265.jpg
 cm-room-32726:
   notes: Instructions and picture coming soon
-  capacity: '33'
+  capacity: 33
   image: 60FA_C03.jpg
 cm-room-32727:
   notes: Instructions and picture coming soon
-  capacity: '30'
+  capacity: 30
   image: 60FA_C04.jpg
 cm-room-32728:
   notes: Instructions and picture coming soon
-  capacity: '39'
+  capacity: 39
   image: 60FA_C10.jpg
 cm-room-32729:
   notes: Instructions and picture coming soon
-  capacity: '39'
+  capacity: 39
   image: 60FA_C12.jpg
 cm-room-32730:
   notes: Instructions and picture coming soon
-  capacity: '31'
+  capacity: 31
   image: 60FA_C14.jpg

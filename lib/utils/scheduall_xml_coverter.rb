@@ -2,7 +2,7 @@
 require 'yaml'
 require 'ox'
 
-ROOM_ATTRS = ["notes", "capacity", "instructions", "image"]
+ROOM_ATTRS = ["notes", "capacity", "instructions", "image", "software_image"]
 BUILDING_ATTRS = ["address"]
 
 def rooms
@@ -36,9 +36,12 @@ def normalize(data, attrs)
 end
 
 def write_to_yaml(hash, filename)
-  # converts empty hashes to nil
-  hash.each do |k, v|
-    hash[k] = nil if v.empty?
+  hash.each do |loc_key, loc_attrs|
+    # converts numbers to int
+    capacity = loc_attrs["capacity"]
+    loc_attrs["capacity"] = capacity.to_i if capacity
+    # converts empty hashes to nil
+    hash[loc_key] = nil if loc_attrs.empty?
   end
 
   File.open(filename, 'w') { |file| file.write(hash.to_yaml) }
