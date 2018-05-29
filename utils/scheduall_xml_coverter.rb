@@ -16,14 +16,14 @@ def buildings
 end
 
 def hashify_props_array(arr)
-  arr.reduce({}) do |props, attr_hash|
-    # transforms keys to string, excludes nil/empty values
-    transformed = attr_hash.reduce({}) do |h, (k, v)|
-      h.merge(v && v.is_a?(String) && v.strip.length > 0 ? { k.to_s => v } : {})
-    end
-
-    props.merge(transformed)
+  # merge array into single hash
+  props = arr.reduce({}) do |props, attr_hash|
+    val = attr_hash.first[1]
+    # excludes nil & empty valalues
+    val.is_a?(String) && val.strip.length > 0 ? props.merge(attr_hash) : props
   end
+
+  props.transform_keys { |k| k.to_s }
 end
 
 def normalize(data, attrs)
@@ -31,7 +31,8 @@ def normalize(data, attrs)
     id = arr.find { |hash| hash.has_key?(:id) }[:id]
     props_array = arr.reject { |h| h.has_key?(:id) }
     props = hashify_props_array(props_array)
-    normalized.merge({ id => props.slice(*attrs) })
+    normalized[id] = props.slice(*attrs)
+    normalized
   end
 end
 
