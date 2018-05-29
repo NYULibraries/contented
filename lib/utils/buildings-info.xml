@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<buildings>
+	<building id="cm-building-2114">
+		<address>110 5th Ave.</address>
+	</building>
+	<building id="cm-building-244">
+		<address>111 2nd Ave.</address>
+	</building>
+	<building id="cm-building-2108">
+		<address></address>
+	</building>
+	<building id="cm-building-791">
+		<address> </address>
+	</building>
+	<building id="cm-building-412">
+		<address>19 University Place</address>
+	</building>
+	<building id="cm-building-792">
+		<address>194 Mercer Street</address>
+	</building>
+	<building id="cm-building-2055">
+		<address>19 West 4th Street</address>
+	</building>
+	<building id="cm-building-222">
+		<address>1 Washington Square North</address>
+	</building>
+	<building id="cm-building-2008">
+		<address>58 Washington Square South</address>
+	</building>
+	<building id="cm-building-96">
+		<address>25 West 4th Street.</address>
+	</building>
+	<building id="cm-building-215">
+		<address>269 Mercer Street</address>
+	</building>
+	<building id="cm-building-2034">
+		<address>75 Third Avenue</address>
+	</building>
+	<building id="cm-building-2109">
+		<address>41 East 11th Street</address>
+	</building>
+	<building id="cm-building-2127">
+		<address>411 Lafayette Street</address>
+	</building>
+	<building id="cm-building-107">
+		<address>145 4th Avenue</address>
+	</building>
+	<building id="cm-building-1938">
+		<address>5 Washington Place</address>
+	</building>
+	<building id="cm-building-206">
+		<address>715 Broadway</address>
+	</building>
+	<building id="cm-building-207">
+		<address>719 Broadway</address>
+	</building>
+	<building id="cm-building-208">
+		<address>721 Broadway</address>
+	</building>
+	<building id="cm-building-284">
+		<address>726 Broadway</address>
+	</building>
+	<building id="cm-building-108">
+		<address>34 Stuyvesant Street</address>
+	</building>
+	<building id="cm-building-210">
+		<address>70 Washington Square South</address>
+	</building>
+	<building id="cm-building-219">
+		<address>29 Washington Place/245 Greene Street</address>
+	</building>
+	<building id="cm-building-660">
+		<address>100 Washington Square East</address>
+	</building>
+	<building id="cm-building-512">
+		<address>36 East Eighth Street</address>
+	</building>
+	<building id="cm-building-513">
+		<address>10 Washington Place</address>
+	</building>
+	<building id="cm-building-211">
+		<address>239 Greene Street</address>
+	</building>
+	<building id="cm-building-204">
+		<address>35 West Fourth Street</address>
+	</building>
+	<building id="cm-building-2666">
+		<address>18 Washington Place</address>
+	</building>
+	<building id="cm-building-2667">
+		<bold><address>FOR TECHNICAL ASSISTANCE IN THESE ROOMS PLEASE CONTACT SCPS - TEL.: 212-998-7232; EMAIL: 7e.12av@nyu.edu</address></bold>
+	</building>
+	<building id="cm-building-2677">
+		<address>238 Thompson Street</address>
+	</building>
+	<building id="cm-building-214">
+		<address>45 West 4th Street - Basement</address>
+	</building>
+	<building id="cm-building-109">
+		<address>1 West 4th Street</address>
+	</building>
+	<building id="cm-building-1904">
+		<address>50 Washington Square South</address>
+	</building>
+	<building id="cm-building-220">
+		<address>246 Greene Street</address>
+	</building>
+	<building id="cm-building-227">
+		<address>53 Washington Square South</address>
+	</building>
+	<building id="cm-building-212">
+		<address>4 Washington Place</address>
+	</building>
+	<building id="cm-building-223">
+		<address>82 Washington Square East</address>
+	</building>
+	<building id="cm-building-213">
+		<address>50 West Fourth Street</address>
+	</building>
+	<building id="cm-building-203">
+		<address>100 Washington Square East</address>
+	</building>
+	<building id="cm-building-195">
+		<address>100 Washington Square East</address>
+	</building>
+	<building id="cm-building-196">
+		<address>100 Washington Square East</address>
+	</building>
+	<building id="cm-building-197">
+		<address>100 Washington Square East</address>
+	</building>
+	<building id="cm-building-94">
+		<address>100 Washington Square East</address>
+	</building>
+	<building id="cm-building-198">
+		<address>100 Washington Square East</address>
+	</building>
+	<building id="cm-building-199">
+		<address>100 Washington Square East</address>
+	</building>
+	<building id="cm-building-200">
+		<address>100 Washington Square East</address>
+	</building>
+	<building id="cm-building-201">
+		<address>100 Washington Square East</address>
+	</building>
+	<building id="cm-building-202">
+		<address>100 Washington Square East</address>
+	</building>
+	<building id="cm-building-205">
+		<address>40 West Fourth Street</address>
+	</building>
+	<building id="cm-building-209">
+		<address></address>
+	</building>
+	<building id="cm-building-194">
+		<address>24 Waverly Place</address>
+	</building>
+	<building id="cm-building-2638">
+		<address>12 Waverly Place</address>
+	</building>
+
+	<building id="cm-building-2924">
+		<address>60 Fifth Avenue</address>
+	</building>
+</buildings>

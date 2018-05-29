@@ -1,0 +1,3483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rooms>
+	<room id="cm-room-3965">
+		<notes></notes>
+		<capacity>24</capacity>
+	</room>
+	<room id="cm-room-1134">
+		<notes></notes>
+		<capacity>35</capacity>
+	</room>
+	<room id="cm-room-1136">
+		<notes></notes>
+		<capacity>16</capacity>
+	</room>
+	<room id="cm-room-1137">
+		<notes></notes>
+		<capacity>20</capacity>
+	</room>
+	<room id="cm-room-1138">
+		<notes></notes>
+		<capacity>25</capacity>
+	</room>
+	<room id="cm-room-1139">
+		<notes></notes>
+		<capacity>25</capacity>
+	</room>
+	<room id="cm-room-25043">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22008">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22015">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1140">
+		<notes></notes>
+		<capacity>20</capacity>
+	</room>
+	<room id="cm-room-1141">
+		<notes></notes>
+		<capacity>25</capacity>
+	</room>
+	<room id="cm-room-4095">
+		<notes></notes>
+		<capacity>14</capacity>
+	</room>
+	<room id="cm-room-1142">
+		<notes></notes>
+		<capacity>25</capacity>
+	</room>
+	<room id="cm-room-24396">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-26216">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21981">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24400">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22715">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2131">
+		<notes></notes>
+		<capacity>25</capacity>
+	</room>
+	<room id="cm-room-22473">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22526">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22469">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20427">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5546">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-29686" name="Interfaith Center - 235 Thompson">
+		<notes></notes>
+		<capacity>36</capacity>
+	</room>
+	<room id="cm-room-29687" name="Interfaith Center - 235 Thompson">
+		<notes></notes>
+		<capacity>32</capacity>
+	</room>
+	<room id="cm-room-29690" name="Interfaith Center - 235 Thompson">
+		<notes></notes>
+		<capacity>40</capacity>
+	</room>
+	<room id="cm-room-5547" name="194 Mercer 201">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer201.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5548" name="194 Mercer 202">
+		<notes></notes>
+		<capacity>29</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer202.jpg</image>
+		<software-image>ACS</software-image>
+    	</room>
+	<room id="cm-room-5549" name="194 Mercer 203">
+		<notes></notes>
+		<capacity>56</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer203.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5550" name="194 Mercer 204">
+		<notes></notes>
+		<capacity>26</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer204.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5551" name="194 Mercer 205">
+		<notes></notes>
+		<capacity>26</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer205.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5552" name="194 Mercer 206">
+		<notes></notes>
+		<capacity>26</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer206.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5553" name="194 Mercer 207">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer207.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5554" name="194 Mercer 208">
+		<notes></notes>
+		<capacity>26</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer208.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5555" name="194 Mercer 209">
+		<notes></notes>
+		<capacity>26</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer209.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5556" name="194 Mercer 210">
+		<notes></notes>
+		<capacity>25</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer210.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5557" name="194 Mercer 301">
+		<notes></notes>
+		<capacity>25</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer301.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5558" name="194 Mercer 303">
+		<notes></notes>
+		<capacity>17</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer303.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-6768" name="194 Mercer 304">
+		<notes></notes>
+		<capacity>30</capacity>
+		<software-image>ACS_LAB</software-image>
+	</room>
+	<room id="cm-room-5559" name="194 Mercer 305">
+		<notes></notes>
+		<capacity>47</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer305.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5560" name="194 Mercer 306">
+		<notes></notes>
+		<capacity>93</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer306.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5561" name="194 Mercer 307">
+		<notes></notes>
+		<capacity>47</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer307.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5562" name="194 Mercer 308">
+		<notes></notes>
+		<capacity>25</capacity>
+		<instructions>194_Mercer_Instructions.pdf</instructions>
+        	<image>194Mercer308.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5563" name="194 Mercer Office">
+		<notes></notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24570">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22341">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20195">
+		<notes></notes>
+		<capacity>120</capacity>
+		<instructions>19UP_102_Instructions.pdf</instructions>
+		<image>19 University 102.jpg</image>
+		<software-image>ACS</software-image>
+ 	</room>
+	<room id="cm-room-19616">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4336">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4568">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-9068">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5794">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18862">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2696">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20348">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5320">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21994">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3937">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19623">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5347">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19621">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21752">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-26304">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24590">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24817">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24587">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-25082">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21550" name="19W4-101">
+		<notes></notes>
+		<capacity>188</capacity>
+		<instructions>19w4_101_Instructions.pdf</instructions>
+        	<image>19W4th101.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-24527" name="19W4-102">
+		<notes></notes>
+		<capacity>46</capacity>
+		<instructions>19w4_102_Instructions.pdf</instructions>
+        	<image>19W4th102.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-14681">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-25304">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5319">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21097">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24652">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-237" name="25W4 C-01">
+		<notes></notes>
+		<capacity>27</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-01.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-260" name="25W4 C-02">
+		<notes></notes>
+		<capacity>28</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-02.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-261" name="25W4 C-03">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-03.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-262" name="25W4 C-04">
+		<notes></notes>
+		<capacity>25</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-04.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-263" name="25W4 C-05">
+		<notes></notes>
+		<capacity>22</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-05.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-264" name="25W4 C-06">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>25W4_C6_Instructions.pdf</instructions>
+        	<image>25W4StC-06.jpg</image>
+		<software-image>ACS_LAB</software-image>
+	</room>
+	<room id="cm-room-265" name="25W4 C-07">
+		<notes></notes>
+		<capacity>18</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-07.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-266" name="25W4 C-08">
+		<notes></notes>
+		<capacity>30</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-08.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-267" name="25W4 C-09">
+		<notes></notes>
+		<capacity>25</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-09.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-268" name="25W4 C-10">
+		<notes></notes>
+		<capacity>25</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-10.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1145" name="25W4 C-11">
+		<notes></notes>
+		<capacity>25</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-11.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1146">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+ 		<image>25W4StC-12.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1147" name="25W4 C-13">
+		<notes></notes>
+		<capacity>30</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-13.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1149" name="25W4 C-14">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-14.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1151" name="25W4 C-15">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-15.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1152" name="25W4 C-16">
+		<notes></notes>
+		<capacity>18</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+		<image>25W4StC-16.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1153" name="25W4 C-17">
+		<notes></notes>
+		<capacity>25</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-17.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1155" name="25W4 C-18">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+		<image>25W4StC-18.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1156" name="25W4 C-19">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-19.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1157" name="25W4 C-20">
+		<notes></notes>
+		<capacity>40</capacity>
+		<instructions>25W4_Instructions.pdf</instructions>
+        	<image>25W4StC-20.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-2377">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2826">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24506">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8363">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2928">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1122">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19564">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1126">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5158">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19572">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5181">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19541">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4253">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5763">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2804">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4567">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5296">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1677">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8350">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1676">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5538">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-26127">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1673">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19261">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-269">
+		<notes></notes>
+		<capacity>30</capacity>
+		<image>4thAve204.jpg</image>
+		<instructions>145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-270" name="4 Ave 205">
+		<notes>Not a general purpose classroom</notes>
+		<capacity>24</capacity>
+		<instructions>145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-1174">
+		<notes></notes>
+		<capacity>20</capacity>
+		<image>4thAve206.jpg</image>
+		<instructions>145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-1175">
+		<notes></notes>
+		<capacity>21</capacity>
+		<image>4thAve207.jpg</image>
+		<instructions>145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-1176">
+		<notes></notes>
+		<capacity>25</capacity>
+		<image>4thAve208.jpg</image>
+		<instructions>145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-1178">
+		<notes></notes>
+		<capacity>28</capacity>
+		<image>4thAve209.jpg</image>
+		<instructions>145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-1179">
+		<notes></notes>
+		<capacity>23</capacity>
+		<image>4thAve210.jpg</image>
+		<instructions>145_4th_Ave_Rooms_204,_205,_206,_207,_208,_209,_210_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-26292">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22938">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22582">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-23182">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22424">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22530">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22640">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3649">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-26004" name="5 Washington Place-101">
+		<notes></notes>
+		<capacity>120</capacity>
+		<image>5WP101.jpg</image>
+
+        	<instructions>5WP_Instructions.pdf</instructions>
+		
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5774">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1128">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1130">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5195">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20365">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2821">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2829">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-26490">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4563">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20233">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8696">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-23185">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4192">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1645">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4962">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5364">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21993">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8347">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2699">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21741">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19263">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20081">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5932">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20426">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21740">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4935">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19924">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19618">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3982">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8346">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3955">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22605">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-13617">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4569">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-9067">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21025">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-15821">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8338">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-7318">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19257">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19041">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-12793">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21388">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3833">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8426">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5795">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5291">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-15796">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21270">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1650">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5772">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1649">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8358">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19289">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-25289">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21037">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18685">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21758">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19260">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-25481">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1646">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18686">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24998">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21972">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1647">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1648">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-15669">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5318">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21762">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18932">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22717">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20482">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20313">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22527">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5276">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5363">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-26311">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22547">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20087">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2080">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21549">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24994">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21305">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22727">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1651">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-9075">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3986">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1652">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5402">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24143">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-9972">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8487">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-23142">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-6784">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1653">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1450">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1452">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5387">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1181">
+		<notes>Not a general purpose classroom</notes>
+		<capacity>100</capacity>
+		<instructions>Barney_Building_Room_105_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-1183">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1186">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-272">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22207">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-271">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3904">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1456">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1457">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1458">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1459">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1460">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1461">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1462">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24999">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8495">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19761">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1463">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19057">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1188">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1464">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1467">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1466">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1469">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1470">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4916">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3648">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1471">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-29365">
+		<notes></notes>
+		<capacity>28</capacity>
+		<image>ARC-LL1.jpg</image>
+		<instructions>ARCLL01_02_03Classrooms_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29366">
+		<notes></notes>
+		<capacity>28</capacity>
+		<image>ARC-LL2.jpg</image>
+		<instructions>ARCLL01_02_03Classrooms_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29369">
+		<notes></notes>
+		<capacity>21</capacity>		
+		<image>ARC-LL3.jpg</image>
+		<instructions>ARCLL01_02_03Classrooms_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29370">
+		<notes></notes>
+		<capacity>25</capacity>
+		<image>ARC-LL4.jpg</image>
+		<instructions>VC_Instructions_ARCLL04.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29371">
+		<notes></notes>
+		<capacity>24</capacity>
+<instructions>ARCLL05.pdf</instructions>
+		<image>ARC-LL5.jpg</image>
+		
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29372">
+		<notes></notes>
+		<capacity>6</capacity>
+		<image>ARC-LL16.jpg</image>
+		
+
+	</room>
+	<room id="cm-room-29373">
+		<notes></notes>
+		<capacity>6</capacity>
+		<image>ARC-LL16.jpg</image>
+		
+		
+	</room>
+	<room id="cm-room-1159" name="Bobst 436">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Bobst436.jpg</image>
+		
+		<software-image>ACS</software-image>
+        </room>
+	<room id="cm-room-1160" name="Bobst 437">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Bobst437.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1161">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Bobst536.jpg</image>
+		
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1162" name="Bobst 537">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Bobst537.jpg</image>
+		
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1163" name="Bobst 736">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Bobst736.jpg</image>
+		<instructions>Bobst_736,737,836,837_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1164" name="Bobst 737">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Bobst737.jpg</image>
+		<instructions>Bobst_736,737,836,837_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-2082" name="Bobst 836">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Bobst836.jpg</image>
+		<instructions>Instructions_Bobst_836_837.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1166" name="Bobst 837">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Bobst837.jpg</image>
+		<instructions>Instructions_Bobst_836_837.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-19617">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1167" name="Bobst 937">
+		<notes></notes>
+		<capacity></capacity>
+		<image></image>
+		<instructions></instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-27999" name="Bobst LL1.38">
+		<notes></notes>
+		<capacity>48</capacity>
+		<instructions>Bobst_LL1-38,LL1-50_Instructions.pdf</instructions>
+		<image>BobstLL38.jpg</image>
+		<software-image>ACS</software-image>
+       </room>
+	<room id="cm-room-28000" name="Bobst LL1.39">
+		<notes></notes>
+		<capacity>30</capacity>
+		<instructions>Bobst_LL_Instructions.pdf</instructions>
+		<image>BobstLL39.jpg</image>
+		<software-image>ACS</software-image>
+       </room>
+	<room id="cm-room-28001" name="Bobst LL1.40">
+		<notes></notes>
+		<capacity>16</capacity>
+		<instructions>Bobst_LL_Instructions.pdf</instructions>
+		<image>BobstLL40.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-28002" name="Bobst LL1.41">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>Bobst LL1-41,LL1-43_Instructions.pdf</instructions>
+
+		<image>Bobst_LL141_43.jpg</image>
+		<software-image>ACS</software-image>
+    	</room>
+	<room id="cm-room-28003" name="Bobst LL1.42">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Bobst_LL_Instructions.pdf</instructions>
+		<image>BobstLL42.jpg</image>      
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-28004" name="Bobst LL1.43">
+		<notes></notes>
+		<capacity>24</capacity>
+	<instructions>Bobst LL1-41,LL1-43_Instructions.pdf</instructions>
+		<image>Bobst_LL141_43.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-28006" name="Bobst LL1.45">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>Bobst_LL_Instructions.pdf</instructions>
+		<image>BobstLL45.jpg</image>
+		<software-image>ACS</software-image>
+       </room>
+	<room id="cm-room-28007" name="Bobst LL1.46">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Bobst_LL_Instructions.pdf</instructions>
+		<image>BobstLL46.jpg</image>
+		<software-image>ACS</software-image>
+       </room>
+	<room id="cm-room-28008" name="Bobst LL1.47">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>Bobst_LL_Instructions.pdf</instructions>
+		<image>BobstLL47.jpg</image>
+		<software-image>ACS</software-image>
+       </room>
+	<room id="cm-room-28009" name="Bobst LL1.48">
+		<notes></notes>
+		<capacity>16</capacity>
+		<instructions>Bobst_LL_Instructions.pdf</instructions>
+		<image>BobstLL48.jpg</image>
+		<software-image>ACS</software-image>
+       </room>
+	<room id="cm-room-28010" name="Bobst LL1.49">
+		<notes></notes>
+		<capacity>30</capacity>
+		<instructions>Bobst_LL_Instructions.pdf</instructions>
+		<image>BobstLL49.jpg</image>
+		<software-image>ACS</software-image>
+       </room>
+	<room id="cm-room-28011" name="Bobst LL1.50">
+		<notes></notes>
+		<capacity>48</capacity>
+		<instructions>Bobst_LL1-38,LL1-50_Instructions.pdf</instructions>
+		<image>BobstLL50.jpg</image>
+		<software-image>ACS</software-image>
+       </room>
+	<room id="cm-room-28111" name="Bobst LL1.51">
+		<notes></notes>
+		<capacity>30</capacity>
+		<instructions>Bobst_LL_Instructions.pdf</instructions>
+		<image>BobstLL51.jpg</image>
+		<software-image>ACS</software-image>
+       </room>
+	<room id="cm-room-2822">
+		<notes></notes>
+		<capacity>184</capacity>
+		<image>Cantor101.jpg</image>
+	</room>
+	<room id="cm-room-4570">
+		<notes></notes>
+		<capacity>177</capacity>
+		<image>Cantor102.jpg</image>
+	</room>
+	<room id="cm-room-2823">
+		<notes></notes>
+		<capacity>319</capacity>
+		<image>Cantor200.jpg</image>
+	</room>
+	<room id="cm-room-1480">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1481">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1483">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1484">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1485">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1486">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1487">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1488">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8698">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-25306">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1489">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1490">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1492">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1493">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1494">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1495">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3858">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2822">
+		<notes></notes>
+		<capacity>184</capacity>
+	</room>
+	<room id="cm-room-4570">
+		<notes></notes>
+		<capacity>177</capacity>
+	</room>
+	<room id="cm-room-2823">
+		<notes></notes>
+		<capacity>319</capacity>
+	</room>
+	<room id="cm-room-4994">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21982">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3928">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2825">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4744">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19620">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4986">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-25435">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4024">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5323">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3834">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-23010">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21122">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1201">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5322">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1202">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5321">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1204">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5768">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1205">
+		<notes>Not a general purpose classroom</notes>
+		<capacity>24</capacity>
+	</room>
+	<room id="cm-room-5539">
+		<notes>Not a general purpose classroom</notes>
+		<capacity>24</capacity>
+	</room>
+	<room id="cm-room-9069">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1209">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4954">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22692">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1211">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-13968">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8706">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5002">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8353">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4335">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24905">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1549">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1553">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1551">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1230">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1554">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1231">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1556">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3167">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1213">
+		<notes></notes>
+		<capacity>330</capacity>
+		<image>Educ176.jpg</image>
+	</room>
+	<room id="cm-room-18863">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2747">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1216">
+		<notes></notes>
+		<capacity>74</capacity>
+		<image>Educ303.jpg</image>
+	</room>
+	<room id="cm-room-1557">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1558">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1217">
+		<notes></notes>
+		<capacity>25</capacity>
+		<image>Educ306.jpg</image>
+	</room>
+	<room id="cm-room-1219">
+		<notes></notes>
+		<capacity>25</capacity>
+		<image>Educ307.jpg</image>
+	</room>
+	<room id="cm-room-29014" name="Genomics - 12 Waverly">
+		<notes></notes>
+		<capacity>138</capacity>
+		<instructions>Genomics_Auditorium_Instructions.pdf</instructions>
+        	<image>GenomicsAud-108.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29010" name="Genomics - 12 Waverly">
+		<notes></notes>
+		<capacity>22</capacity>
+		<instructions>Genomics_L111_Instructions.pdf</instructions>
+        	<image>Genomics-111.jpg</image>
+		<software-image>ACS_LAB</software-image>
+	</room>
+	<room id="cm-room-29011" name="Genomics - 12 Waverly">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Genomics_L113-L114_Instructions.pdf</instructions>
+        	<image>Genomics-L113.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29012" name="Genomics - 12 Waverly">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Genomics_L113-L114_Instructions.pdf</instructions>
+        	<image>Genomics-L114.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29013" name="Genomics - 12 Waverly">
+		<notes></notes>
+		<capacity>69</capacity>
+		<instructions>Genomics_L120_Instructions.pdf</instructions>
+        	<image>Genomics-L120.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-21691">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20367">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19265">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2373">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3603">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4752">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4750">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1561">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1222">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8348">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-15757">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5198">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1226">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2160">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5201">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20370">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4566">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1240">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-29382" name="NYU-SCPS 121">
+		<image>SCPS_121.jpg</image>
+		<capacity>34</capacity>
+		</room>
+
+
+	<room id="cm-room-29383" name="NYU-SCPS 123">
+		<notes></notes>
+		<image>SCPS_123.jpg</image>
+		<capacity>30</capacity>
+		
+		
+	</room>
+
+	<room id="cm-room-29384" name="NYU-SCPS 124">
+		<notes></notes>
+		<image>SCPS_124.jpg</image>
+		<capacity>28</capacity>
+		
+		<image></image>
+	</room>
+	<room id="cm-room-29385" name="NYU-SCPS 125">
+<image>SCPS_125.jpg</image>
+		<notes></notes>
+		<capacity>35</capacity>
+		
+		<image></image>
+	</room>
+	<room id="cm-room-29386" name="NYU-SCPS 127">
+		<image>SCPS_127.jpg</image>
+		<notes></notes>
+		<capacity>24</capacity>
+		
+		<image></image>
+	</room>
+	<room id="cm-room-29387" name="NYU-SCPS 129">
+		<image>SCPS_129.jpg</image>
+		<notes></notes>
+		<capacity>30</capacity>
+		
+		<image></image>
+	</room>
+	<room id="cm-room-29388" name="NYU-SCPS 131">
+		<image>SCPS_131.jpg</image>
+		<notes></notes>
+		<capacity>20</capacity>
+		
+		<image></image>
+	</room>
+	<room id="cm-room-29389" name="NYU-SCPS 134">
+		<image>SCPS_134.jpg</image>
+		<notes></notes>
+		<capacity>27</capacity>
+		
+		<image></image>
+	</room>
+	<room id="cm-room-29374" name="NYU-SCPS LL-21">
+		<image>SCPS_LL21.jpg</image>
+		<notes></notes>
+		<capacity>28</capacity>
+		
+		<image></image>
+	</room>
+	<room id="cm-room-29376" name="NYU-SCPS LL-23">
+		<image>SCPS_LL23.jpg</image>
+		<notes></notes>
+		<capacity>50</capacity>
+	
+		<image></image>
+	</room>
+	<room id="cm-room-29377" name="NYU-SCPS LL-25">
+		<image>SCPS_LL25.jpg</image>
+		<notes></notes>
+		<capacity>32</capacity>
+		
+		<image></image>
+	</room>
+	<room id="cm-room-29378" name="NYU-SCPS LL-27">
+
+		<image>SCPS_LL27.jpg</image>
+		<notes></notes>
+		<capacity>30</capacity>
+		
+		<image></image>
+	</room>
+	<room id="cm-room-29379" name="NYU-SCPS LL-31">
+
+		<image>SCPS_LL31.jpg</image>
+		<notes></notes>
+		<capacity>24</capacity>
+		
+		<image></image>
+	</room>
+	<room id="cm-room-29380" name="NYU-SCPS LL-33">
+		<image>SCPS_LL33.jpg</image>
+		<notes></notes>
+		<capacity>30</capacity>
+		
+		<image></image>
+	</room>
+	<room id="cm-room-29381">
+		<notes></notes>
+		<capacity>27</capacity>
+		
+		<image></image>
+	</room>
+	<room id="cm-room-1233" name="Goddard B-01">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>Goddard_Instructions.pdf</instructions>
+        	<image>Goddard B-01.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1234" name="Goddard B-02">
+		<notes></notes>
+		<capacity>35</capacity>
+		<instructions>Goddard_Instructions.pdf</instructions>
+		<image>Goddard B-02.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1235" name="Goddard B-04">
+		<notes></notes>
+		<instructions>Goddard_Instructions.pdf</instructions>
+		<capacity>20</capacity>
+        	<image>Goddard B-04.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1237" name="Goddard B-06">
+		<notes></notes>
+		<capacity>35</capacity>
+		<instructions>Goddard_Instructions.pdf</instructions>
+        	<image>Goddard B-06.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1239" name="Goddard B-07">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Goddard_Instructions.pdf</instructions>
+        	<image>Goddard B-07.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1588">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1589">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1590">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1591">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-275">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-276">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1593">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1595">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1597">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1598">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20472">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1599">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1600">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1601">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1602">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3650">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1242">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20471">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-26293">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5191">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3843">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24890">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22035">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5206">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21391">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1243">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5403">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-23340">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2164">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2168">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1244">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22014">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21976">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2815">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1245">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5004">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18915">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22643">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5525">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2723">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1658">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1659">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1660">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1661">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2700">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24589">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19939">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1662">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1663">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22762">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19565">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1664">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21817">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1665">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22018">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22436">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21979">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1666">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5308">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2788">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18972">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5344">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22451">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22452">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1667">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5410">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	
+	<room id="cm-room-1350">
+		<notes></notes>
+		<capacity>73</capacity>
+		<instructions>Meyer102_Instructions.pdf</instructions>
+     		<software-image>ACS</software-image>
+		<image>Meyer102.jpg</image>
+	</room>
+	<room id="cm-room-1351">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1353">
+		<notes></notes>
+	
+		
+		
+	</room>
+	<room id="cm-room-1354" name="Meyer 121">
+		<notes></notes>
+		<capacity>185</capacity>
+		<instructions>Meyer121_Instructions.pdf</instructions>
+	       <image>Meyer121.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1356" name="Meyer 122">
+		<notes></notes>
+		<capacity>93</capacity>
+		<instructions>Meyer122_Instructions.pdf</instructions>
+	       <image>Meyer122.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1358">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2933" name="Meyer 157">
+		<notes></notes>
+		<capacity>35</capacity>
+		<instructions>Meyer157_Instructions.pdf</instructions>
+	       <image>Meyer157.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-2447">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1359">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18894">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1360">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1361">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1362">
+		<notes></notes>
+		<capacity>30</capacity>
+		<instructions>Meyer261_Instructions.pdf</instructions>
+		<image>Meyer261.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	
+	<room id="cm-room-1364">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1365">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22465">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21496">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20082">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4753">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1366">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21839">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5274">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1367">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24310">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1369">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5793">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8502">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2452">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1370">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8497">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22432">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2918">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20369">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2888">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22721">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-23009">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5297">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3927">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21819">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5275">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18051">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2935">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20430">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22802">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8486">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-17168">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8425">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8341">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1669">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1668">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5770">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-15056">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4093">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-2459">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1371">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-8015">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5197">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5180">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1345">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-26247">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3936">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4754">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1247">
+		<notes></notes>
+		<capacity>80</capacity>
+		<instructions>Silver_101A.pdf</instructions>
+        	<image>Silver101A.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1348">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1251">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1253">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1254">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1255" name="Silver 206">
+		<notes></notes>
+		<capacity>88</capacity>
+		<instructions>Silver 206,208 new instructions.pdf</instructions>
+        	<image>Silver206.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1257" name="Silver 207">
+		<notes></notes>
+		<capacity>128</capacity>
+		<instructions>Silver 207 new instructions.pdf</instructions>
+        	<image>Silver207.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1260" name="Silver 208">
+	
+		<notes></notes>
+		<capacity>61</capacity>
+		<image>Silver208.jpg</image>
+		<instructions>Silver 206,208 new instructions.pdf</instructions>
+     		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-8697">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20298">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5571">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5199">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-14094">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5771">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1263">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-236">
+		<notes></notes>
+		<capacity>70</capacity>
+        	<image>Silver401.jpg</image>
+		<instructions>Silver 401 new 2013 instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-238">
+		<notes></notes>
+		<capacity>18</capacity>
+		<instructions>Silver 402 406 409 new 2013 instructions.pdf</instructions>
+        	<image>Silver402.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-257">
+		<notes></notes>
+		<capacity>33</capacity>
+		<instructions>Silver 403 404 407 410 new 2013 instructions.pdf</instructions>
+        	<image>Silver403.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-258">
+		<notes></notes>
+		<capacity>27</capacity>
+		<instructions>Silver 403 404 407 410 new 2013 instructions.pdf</instructions>
+        	<image>Silver404.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-259">
+		<notes></notes>
+		<capacity>108</capacity>
+        	<image>Silver405.jpg</image>
+		<instructions>Silver405_instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1265">
+		<notes></notes>
+		<capacity>22</capacity>
+		<instructions>Silver 402 406 409 new 2013 instructions.pdf</instructions>
+        	<image>Silver406.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1266">
+		<notes></notes>
+		<capacity>32</capacity>
+		<instructions>Silver 403 404 407 410 new 2013 instructions.pdf</instructions>
+        	<image>Silver407.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1268">
+		<notes></notes>
+		<capacity>108</capacity>
+        	<image>Silver408.jpg</image>
+		<instructions>Silver 408 new 2013 instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1269">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Silver 402 406 409 new 2013 instructions.pdf</instructions>
+        	<image>Silver409.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1271" name="Silver 410">
+		<notes></notes>
+		<capacity>37</capacity>
+		<instructions>Silver 403 404 407 410 new 2013 instructions.pdf</instructions>
+        	<image>Silver410.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1272">
+		<notes></notes>
+		<capacity>71</capacity>
+        	<image>Silver411.jpg</image>
+		<instructions>Silver 411 new 2013 instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1274" name="Silver 412">
+		<notes></notes>
+		<capacity>25</capacity>
+		<instructions>Silver_412.pdf</instructions>
+        	<image>Silver412.jpg</image>
+	</room>
+	<room id="cm-room-1275">
+		<notes></notes>
+		<capacity>8</capacity>
+		<instructions>Silver 413 new 2013 instructions.pdf</instructions>
+        	<image>Silver413.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1277">
+		<notes></notes>
+		<capacity>68</capacity>
+        	<image>Silver414.jpg</image>
+		<instructions>Silver 414 new 2013 instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-11850">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1280">
+		<notes></notes>
+		<capacity>25</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+        	<image>Silver500.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1282">
+		<notes></notes>
+		<capacity>28</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+        	<image>Silver501.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-2429">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1284">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+       	<image>Silver504.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1286">
+		<notes></notes>
+		<capacity>16</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+        	<image>Silver505.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1287">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+        	<image>Silver506.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1289">
+		<notes></notes>
+		<capacity>30</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+        	<image>Silver507.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1291">
+		<notes></notes>
+		<capacity>25</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+        	<image>Silver508.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1292">
+		<notes></notes>
+		<capacity>36</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+        	<image>Silver509.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1293">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+        	<image>Silver510.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1294">
+		<notes></notes>
+		<capacity>17</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+        	<image>Silver511.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1296" name="Silver 512">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+        	<image>Silver512.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1297">
+		<notes></notes>
+		<capacity>28</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+        	<image>Silver514.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1298">
+		<notes></notes>
+		<capacity>25</capacity>
+		<instructions>Silver 5th Floor Instructions.pdf</instructions>
+        	<image>Silver515.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1299">
+		<notes></notes>
+		<capacity>26</capacity>
+		<instructions>Silver_518_Instructions.pdf</instructions>
+        	<image>Silver518.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1300">
+		<notes></notes>
+		<capacity>90</capacity>
+		<instructions>Silver_520_Instructions.pdf</instructions>
+        	<image>Silver520.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-5200">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18913">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18914">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-20431">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18926">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18971">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1306">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1307">
+		<notes></notes>
+		<capacity>30</capacity>
+		<instructions>Silver 620-Digital.pdf</instructions>
+        	<image>Silver620.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1308">
+		<notes></notes>
+		<capacity>33</capacity>
+		<instructions>Silver 621-Digital.pdf</instructions>
+        	<image>Silver621.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+		<room id="cm-room-4941">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5775">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1641">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1642">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-21221">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-22418">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-4987">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-3987">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1373">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Tisch_Hall_Instructions_CD.pdf</instructions>
+		<image>TischLC01.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1374">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Tisch_Hall_Instructions_CD.pdf</instructions>
+		<image>TischLC02.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1375">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Tisch_Hall_Instructions_CD.pdf</instructions>
+		<image>TischLC03.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1376">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Tisch_Hall_Instructions_CD.pdf</instructions>
+		<image>TischLC04.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1377">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Tisch_Hall_Instructions_CD.pdf</instructions>
+		<image>TischLC05.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-27380">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Tisch_Hall_Instructions_CD.pdf</instructions>
+		<image>TischLC06.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-27381">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Tisch_Hall_Instructions_CD.pdf</instructions>
+		<image>TischLC07.jpg</image>
+	</room>
+	<room id="cm-room-27382">
+		<notes></notes>
+		<capacity>45</capacity>
+		<instructions>Tisch_Hall_Instructions_CD.pdf</instructions>
+		<image>TischLC09.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-27383">
+		<notes></notes>
+		<capacity>50</capacity>
+		<instructions>Tisch_Hall_Instructions_CD.pdf</instructions>
+		<image>TischLC11.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-27384">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Tisch_Hall_Instructions_CD.pdf</instructions>
+		<image>TischLC13.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-27385">
+		<notes></notes>
+		<capacity>20</capacity>
+		<instructions>Tisch_Hall_Instructions_CD.pdf</instructions>
+		<image>TischLC15.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-27438">
+		<notes></notes>
+		<capacity>36</capacity>
+		<instructions>TISCH HALL LC-19 PODIUM.pdf</instructions>
+		<image>TISCH HALL LC-19.jpg</image>
+		<software-image>ACS_LAB</software-image>
+	</room>
+	<room id="cm-room-1379">
+		<notes></notes>
+		<capacity>35</capacity>
+		<instructions>Tisch_Hall_UC,_LC_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-1381">
+		<notes></notes>
+		<capacity>30</capacity>
+		<instructions>Tisch_Hall_UC,_LC_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-1382">
+		<notes></notes>
+		<capacity>38</capacity>
+		<instructions>Tisch_Hall_UC,_LC_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-1643">
+		<notes></notes>
+		<capacity>44</capacity>
+		<instructions>Tisch_Hall_UC,_LC_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-1644">
+		<notes></notes>
+		<capacity>58</capacity>
+		<instructions>Tisch_Hall_UC,_LC_Equipment_Instructions.pdf</instructions>
+	</room>
+	<room id="cm-room-1383">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1392">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1384">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1385">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1477">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1393">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-15021">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1395">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5809">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19058">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1386">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-18910">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1387">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5969">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1389">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-19537">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1390">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-5545">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-24208">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1397">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-1398">
+		<notes></notes>
+		<capacity>39</capacity>
+		<image>Waverly366.jpg</image>
+		<instructions>Waverly 3rd floor.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1399">
+		<notes></notes>
+		<capacity>35</capacity>
+		<image>Waverly367.jpg</image>
+		<instructions>Waverly 3rd floor.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1401">
+		<notes></notes>
+		<capacity>33</capacity>
+		<image>Waverly369.jpg</image>
+		<instructions>Waverly 3rd floor.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1402" name="Waverly 370">
+		<notes></notes>
+		<capacity>30</capacity>
+		<image>Waverly370.jpg</image>
+        <instructions>Waverly 3rd floor.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1409">
+		<notes></notes>
+		<image>Waverly_429.jpg</image>
+		<instructions>Waverly 4th floor.pdf</instructions>
+		<capacity>26</capacity>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1412">
+		<notes></notes>
+		<image>waverly_431.jpg</image>
+		<instructions>Waverly 4th floor.pdf</instructions>
+		<capacity>33</capacity>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1413">
+		<notes></notes>
+		<image>Waverly_433.jpg</image>
+		<instructions>Waverly 4th floor.pdf</instructions>
+		<capacity>33</capacity>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1415">
+		<notes></notes>
+		<capacity>33</capacity>
+		<instructions>Waverly 4th floor.pdf</instructions>
+		<image>Waverly_435.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-2094">
+		<notes></notes>
+		<capacity>32</capacity>
+		<instructions>Waverly 5th floor.pdf</instructions>
+		<image>Waverly 566A.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1417">
+		<notes></notes>
+		<capacity>20</capacity>
+		<image>Waverly 566B.jpg</image>
+		<instructions>Waverly 5th floor.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1419">
+		<notes></notes>
+		<capacity>30</capacity>
+		<image>Waverly 567.jpg</image>
+		<instructions>Waverly 5th floor.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1420">
+		<notes></notes>
+		<capacity>30</capacity>
+		<instructions>Waverly 5th floor.pdf</instructions>
+		<image>Waverly 569.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-2093">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>Waverly 5th floor.pdf</instructions>
+		<image>Waverly 570.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1404">
+		<notes></notes>
+		<capacity>37</capacity>
+		<instructions>Waverly667-digital.pdf</instructions>
+        	<image>Waverly667.jpg</image>
+		
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1406">
+		<notes></notes>
+		<capacity>35</capacity>
+<image>Waverly_668.jpg</image>
+        	<instructions>Waverly 6th floor.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1408">
+		<notes></notes>
+		<capacity>27</capacity>
+		<image>Waverly669.jpg</image>
+		<instructions>Waverly 669-digital.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-1473">
+		<notes>Not a general purpose classroom</notes>
+		<capacity></capacity>
+	</room>
+	<room id="cm-room-27429">
+		<notes></notes>
+		<capacity>18</capacity>
+		<instructions>UHALL C02A- Digital.pdf</instructions>
+		<image>Univ_Hall C02A.jpg</image>
+	</room>
+	<room id="cm-room-28022">
+		<notes></notes>
+		<capacity>24</capacity>
+		<instructions>Weinstein SB-20, SB-35 Instructions.pdf</instructions>
+		<image>WeinsteinSB-20.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-28023">
+		<notes></notes>
+		<capacity>16</capacity>
+		<instructions>Weinstein SB-20, SB-35 Instructions.pdf</instructions>
+		<image>WeinsteinSB-35.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29686" name="Global Center - 238 Thompson ">
+		<notes></notes>
+		<capacity>36</capacity>
+		
+		<image>GlobalCenter261.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29687" name="Global Center - 238 Thompson ">
+		<notes></notes>
+		<capacity>32</capacity>
+
+		<image>GlobalCenter265.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29690" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>40</capacity>
+
+		<image>GlobalCenter269.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29688" name="Global Center - 238 Thompson ">
+		<notes></notes>
+		<capacity>18</capacity>
+
+		<image>GlobalCenter274.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29689" name="Global Center - 238 Thompson ">
+		<notes></notes>
+		<capacity>40</capacity>
+		<image>GlobalCenter275.jpg</image>
+
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29691" name="Global Center - 238 Thompson ">
+		<notes></notes>
+		<capacity>48</capacity>
+
+		<image>GlobalCenter279.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29707" name="Global Center - 238 Thompson ">
+		<notes></notes>
+		<capacity>30</capacity>
+
+		<image>GlobalCenter288.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29693" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>36</capacity>
+
+		<image>GlobalCenter361.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29694" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>32</capacity>
+
+		<image>GlobalCenter365.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29708" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>40</capacity>
+
+		<image>GlobalCenter369.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29695" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>18</capacity>
+
+		<image>GlobalCenter374.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29696" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>32</capacity>
+
+		<image>GlobalCenter375.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29697" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>32</capacity>
+
+		<image>GlobalCenter379.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29698" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>42</capacity>
+
+		<image>GlobalCenter383.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29699" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>30</capacity>
+
+		<image>GlobalCenter388.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29700" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>32</capacity>
+		<image>GlobalCenter461.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29703" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>32</capacity>
+		<image>GlobalCenter475.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29685" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>257</capacity>
+<instructions>GCASL_C95_Instructions.pdf</instructions>
+		<image>GlobalCenterC95.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29768" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>16</capacity>
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-29767" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>12</capacity>
+		<software-image>ACS</software-image>
+	</room>
+		<room id="cm-room-29773" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>22</capacity>
+		<image>GlobalCenter384.jpg</image>
+		<software-image>ACS</software-image>
+	</room>
+
+	<room id="cm-room-29772" name="Global Center - 238 Thompson">
+		<notes></notes>
+		<capacity>22</capacity>
+		<image>GCASL_284.jpg</image>
+		<software-image>ACS_LAB</software-image>
+	</room>
+
+
+<room id="cm-room-32048" name="Rubin Hall">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Rubin101.jpg</image>
+<instructions>Rubin_Hall_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+<room id="cm-room-32049" name="Rubin Hall">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Rubin102.jpg</image>
+<instructions>Rubin_Hall_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+<room id="cm-room-32050" name="Rubin Hall">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Rubin103.jpg</image>
+<instructions>Rubin_Hall_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+<room id="cm-room-32051" name="Rubin Hall">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Rubin104.jpg</image>
+<instructions>Rubin_Hall_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+<room id="cm-room-32052" name="Rubin Hall">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Rubin105.jpg</image>
+<instructions>Rubin_Hall_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+<room id="cm-room-32053" name="Rubin Hall">
+		<notes></notes>
+		<capacity>14</capacity>
+		<image>Rubin106.jpg</image>
+<instructions>Rubin_Hall_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+
+<room id="cm-room-32054" name="Rubin Hall">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Rubin107.jpg</image>
+<instructions>Rubin_Hall_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+<room id="cm-room-32055" name="Rubin Hall">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Rubin108.jpg</image>
+<instructions>Rubin_Hall_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+
+<room id="cm-room-32056" name="Rubin Hall">
+		<notes></notes>
+		<capacity>14</capacity>
+		<image>Rubin109.jpg</image>
+<instructions>Rubin_Hall_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+<room id="cm-room-32057" name="Rubin Hall">
+		<notes></notes>
+		<capacity>15</capacity>
+		<image>Rubin110.jpg</image>
+<instructions>Rubin_Hall_Instructions.pdf</instructions>
+		<software-image>ACS</software-image>
+	</room>
+
+
+
+	<room id="cm-room-32716" name="60 FA 110">
+		<notes>Instructions coming soon</notes>
+		<capacity>64</capacity>
+		<image>60FA_110.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+
+	<room id="cm-room-32718" name="60 FA 125">
+		<notes>Instructions coming soon</notes>
+		<capacity>34</capacity>
+		<image>60FA_125.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+
+	<room id="cm-room-32719" name="60 FA 150">
+		<notes>Instructions coming soon</notes>
+		<capacity>90</capacity>
+		<image>60FA_150.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+
+	<room id="cm-room-32720" name="60 FA 161">
+		<notes>Instructions coming soon</notes>
+		<capacity>31</capacity>
+		<image>60FA_161.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+
+	<room id="cm-room-32721" name="60 FA 165">
+		<notes>Instructions coming soon</notes>
+		<capacity>32</capacity>
+		<image>60FA_165.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+
+	<room id="cm-room-32722" name="60 FA 202">
+		<notes>Instructions coming soon</notes>
+		<capacity>12</capacity>
+		<image>60FA_202.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+
+	<room id="cm-room-32723" name="60 FA 250">
+		<notes>Instructions coming soon</notes>
+		<capacity>16</capacity>
+		<image>60FA_250.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+
+	<room id="cm-room-32724" name="60 FA 261">
+		<notes>Instructions coming soon</notes>
+		<capacity>26</capacity>
+		<image>60FA_261.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-32725" name="60 FA 265">
+		<notes>Instructions coming soon</notes>
+		<capacity>26</capacity>
+		<image>60FA_265.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+	<room id="cm-room-32726" name="60 FA C03">
+		<notes>Instructions and picture coming soon</notes>
+		<capacity>33</capacity>
+		<image>60FA_C03.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+
+	<room id="cm-room-32727" name="60 FA C04">
+		<notes>Instructions and picture coming soon</notes>
+		<capacity>30</capacity>
+		<image>60FA_C04.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+
+	<room id="cm-room-32728" name="60 FA C10">
+		<notes>Instructions and picture coming soon</notes>
+		<capacity>39</capacity>
+		<image>60FA_C10.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+
+	<room id="cm-room-32729" name="60 FA C12">
+		<notes>Instructions and picture coming soon</notes>
+		<capacity>39</capacity>
+		<image>60FA_C12.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+
+	<room id="cm-room-32730" name="60 FA C14">
+		<notes>Instructions and picture coming soon</notes>
+		<capacity>31</capacity>
+		<image>60FA_C14.jpg</image>
+	
+		<software-image>ACS</software-image>
+	</room>
+
+
+
+
+	
+</rooms>
