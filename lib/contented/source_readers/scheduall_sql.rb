@@ -1,6 +1,5 @@
 require 'figs'
 require 'tiny_tds'
-require 'pry'
 
 module Contented
   module SourceReaders
@@ -10,8 +9,7 @@ module Contented
       end
 
       def initialize(options)
-        # options: host, username, password
-        @options = options
+        @options = options.slice(:host, :username, :password)
         @client = self.class.create_connection_client(options)
         puts 'Connecting to SQL Server'
         message = @client.active? ? 'Done' : "Client couldn't connect"
@@ -55,6 +53,7 @@ module Contented
       end
 
       private
+      attr_reader :client
 
       def execute(sql)
         client.execute(sql)
@@ -62,3 +61,11 @@ module Contented
     end
   end
 end
+
+Figs.load()
+host = Figs.env["SCHEDUALL_HOST"]
+username = Figs.env["SCHEDUALL_USERNAME"]
+password = Figs.env["SCHEDUALL_PASSWORD"]
+
+scheduall = Contented::SourceReaders::Scheduall.new(host: host, username: username, password: password)
+scheduall.rooms
