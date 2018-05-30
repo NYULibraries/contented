@@ -26,9 +26,10 @@ def hashify_props_array(arr)
   props.transform_keys { |k| k.to_s }
 end
 
-def normalize(data, attrs)
+def normalize(data, attrs, prefix_strip=0)
   data.reduce({}) do |normalized, arr|
     id = arr.find { |hash| hash.has_key?(:id) }[:id]
+    id = id.slice(prefix_strip, id.length)
     props_array = arr.reject { |h| h.has_key?(:id) }
     props = hashify_props_array(props_array)
     normalized[id] = props.slice(*attrs)
@@ -48,5 +49,5 @@ def write_to_yaml(hash, filename)
   File.open("#{File.expand_path(File.dirname(File.dirname(__FILE__)))}/config/campusmedia/#{filename}", 'w') { |file| file.write(hash.to_yaml) }
 end
 
-write_to_yaml normalize(rooms, ROOM_ATTRS), 'rooms.yml'
-write_to_yaml normalize(buildings, BUILDING_ATTRS), 'buildings.yml'
+write_to_yaml normalize(rooms, ROOM_ATTRS, 8), 'rooms.yml'
+write_to_yaml normalize(buildings, BUILDING_ATTRS, 12), 'buildings.yml'
