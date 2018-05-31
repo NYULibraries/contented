@@ -101,5 +101,36 @@ describe Contented::SourceReaders::Scheduall do
       end
     end
 
+    describe 'merge_config_values' do
+      subject { scheduall.send :merge_config_values }
+
+      # assumes buildings_yaml and rooms_yaml functions
+      let(:rooms_yaml) { load_yaml_file('./spec/fixtures/config/rooms.yml') }
+      let(:buildings_yaml) { load_yaml_file('./spec/fixtures/config/buildings.yml') }
+      let(:normalized) { load_yaml_file('./spec/fixtures/normalized_rooms.yml') }
+
+      before do
+        scheduall.instance_variable_set :@data, normalized
+        scheduall.stub(:rooms_yaml).and_return rooms_yaml
+        scheduall.stub(:buildings_yaml).and_return buildings_yaml
+      end
+
+      it 'merges building_address value based on building_id' do
+        subject.each do |k, props|
+          expect(props["building_address"]).to eq "19 University Place"
+        end
+      end
+
+      it 'merges room configuration data' do
+        expect(subject['3937']['room_capacity']).to eq 25
+        expect(subject['2696']['room_capacity']).to eq 30
+        expect(subject['2696']['room_notes']).to eq 'Not a general purpose classroom'
+      end
+
+      it 'assigsn return value to @data' do
+        subject
+        expect(scheduall.data).to eq subject
+      end
+    end
   end
 end

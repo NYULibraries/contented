@@ -77,7 +77,7 @@ module Contented
 
         @data = @data.reduce({}) do |res, (id, props)|
           padding = static_rooms_data[id]
-          address = buildings.dig(props["building_id"], "address")
+          address = buildings.dig(props["building_id"], "building_address")
           padding&.merge!({ "building_address" => address })
 
           new_props = props.merge(padding || {})
