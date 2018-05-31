@@ -132,18 +132,17 @@ describe Contented::SourceReaders::Scheduall do
         expect(scheduall.data).to eq subject
       end
     end
+  end
 
+  describe '#each' do
+    before do
+      scheduall.stub(:data).and_return Hash.new('123' => {}, '456' => {})
     end
 
-    describe '#each' do
-      before do
-        scheduall.stub(:data).and_return Hash.new('123' => {}, '456' => {})
+    it 'loops over the @data' do
+      scheduall.each do |room|
+        expect room.to be_a Hash
       end
-
-      it 'loops over the @data' do
-        scheduall.each do |room|
-          expect room.to be_a Hash
-        end
-      end
+    end
   end
 end
