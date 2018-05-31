@@ -5,16 +5,18 @@ require 'yaml'
 module Contented
   module SourceReaders
     class Scheduall
+      include Enumerable
+
       attr_reader :client, :data
 
       @@driver = TinyTds::Client
 
       def initialize(options)
         @client = @@driver.new(options)
-        @data = nil
+        @data = {}
       end
 
-      def rooms
+      def fetch_rooms
         fetch_technologies
         normalize_rooms_by_id
         merge_config_values
@@ -23,6 +25,10 @@ module Contented
 
       def close
         client.close
+      end
+
+      def each(&block)
+        data.each(&block)
       end
 
       private

@@ -23,8 +23,8 @@ describe Contented::SourceReaders::Scheduall do
       expect(scheduall.client).to be driver_client
     end
 
-    it 'sets @data to nil' do
-      expect(scheduall.data).to be(nil)
+    it 'sets @data to empty hash' do
+      expect(scheduall.data).to eq({})
     end
   end
 
@@ -132,5 +132,18 @@ describe Contented::SourceReaders::Scheduall do
         expect(scheduall.data).to eq subject
       end
     end
+
+    end
+
+    describe '#each' do
+      before do
+        scheduall.stub(:data).and_return Hash.new('123' => {}, '456' => {})
+      end
+
+      it 'loops over the @data' do
+        scheduall.each do |room|
+          expect room.to be_a Hash
+        end
+      end
   end
 end
