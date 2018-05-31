@@ -2,17 +2,17 @@
 require 'yaml'
 require 'ox'
 
-ROOM_ATTRS = ["notes", "capacity", "instructions", "image", "software_image"]
+ROOM_ATTRS = ["notes", "capacity", "instructions", "image", "software-image"]
 BUILDING_ATTRS = ["address"]
 
 def rooms
   xml_string = File.read("#{File.expand_path(File.dirname(File.dirname(__FILE__)))}/config/campusmedia/rooms-info.xml")
-  Ox.load(xml_string, mode: :hash, skip: :skip_none)[:rooms][:room]
+  Ox.load(xml_string, mode: :hash, skip: :skip_none).dig(:rooms, :room)
 end
 
 def buildings
   xml_string = File.read("#{File.expand_path(File.dirname(File.dirname(__FILE__)))}/config/campusmedia/buildings-info.xml")
-  Ox.load(xml_string, mode: :hash, skip: :skip_none)[:buildings][:building]
+  Ox.load(xml_string, mode: :hash, skip: :skip_none).dig(:buildings, :building)
 end
 
 def hashify_props_array(arr)
@@ -38,12 +38,11 @@ def normalize(data, attrs, prefix_strip=0)
 end
 
 def write_to_yaml(hash, filename)
-  hash.each do |loc_key, loc_attrs|
+  hash.each do |loc_key, loc_props|
     # converts numbers to int
-    capacity = loc_attrs["capacity"]
-    loc_attrs["capacity"] = capacity.to_i if capacity
+    loc_props["capacity"] = loc_props["capacity"]&.to_i
     # converts empty hashes to nil
-    hash[loc_key] = nil if loc_attrs.empty?
+    hash[loc_key] = nil if loc_props.empty?
   end
 
   File.open("#{File.expand_path(File.dirname(File.dirname(__FILE__)))}/config/campusmedia/#{filename}", 'w') { |file| file.write(hash.to_yaml) }

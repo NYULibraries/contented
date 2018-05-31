@@ -50,78 +50,98 @@
 '29686':
   capacity: 36
   image: GlobalCenter261.jpg
+  software-image: ACS
 '29687':
   capacity: 32
   image: GlobalCenter265.jpg
+  software-image: ACS
 '29690':
   capacity: 40
   image: GlobalCenter269.jpg
+  software-image: ACS
 '5547':
   capacity: 24
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer201.jpg
+  software-image: ACS
 '5548':
   capacity: 29
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer202.jpg
+  software-image: ACS
 '5549':
   capacity: 56
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer203.jpg
+  software-image: ACS
 '5550':
   capacity: 26
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer204.jpg
+  software-image: ACS
 '5551':
   capacity: 26
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer205.jpg
+  software-image: ACS
 '5552':
   capacity: 26
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer206.jpg
+  software-image: ACS
 '5553':
   capacity: 24
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer207.jpg
+  software-image: ACS
 '5554':
   capacity: 26
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer208.jpg
+  software-image: ACS
 '5555':
   capacity: 26
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer209.jpg
+  software-image: ACS
 '5556':
   capacity: 25
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer210.jpg
+  software-image: ACS
 '5557':
   capacity: 25
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer301.jpg
+  software-image: ACS
 '5558':
   capacity: 17
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer303.jpg
+  software-image: ACS
 '6768':
   capacity: 30
+  software-image: ACS_LAB
 '5559':
   capacity: 47
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer305.jpg
+  software-image: ACS
 '5560':
   capacity: 93
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer306.jpg
+  software-image: ACS
 '5561':
   capacity: 47
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer307.jpg
+  software-image: ACS
 '5562':
   capacity: 25
   instructions: 194_Mercer_Instructions.pdf
   image: 194Mercer308.jpg
+  software-image: ACS
 '5563': 
 '24570':
   notes: Not a general purpose classroom
@@ -131,6 +151,7 @@
   capacity: 120
   instructions: 19UP_102_Instructions.pdf
   image: 19 University 102.jpg
+  software-image: ACS
 '19616':
   notes: Not a general purpose classroom
 '4336':
@@ -175,10 +196,12 @@
   capacity: 188
   instructions: 19w4_101_Instructions.pdf
   image: 19W4th101.jpg
+  software-image: ACS
 '24527':
   capacity: 46
   instructions: 19w4_102_Instructions.pdf
   image: 19W4th102.jpg
+  software-image: ACS
 '14681':
   notes: Not a general purpose classroom
 '25304':
@@ -193,82 +216,102 @@
   capacity: 27
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-01.jpg
+  software-image: ACS
 '260':
   capacity: 28
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-02.jpg
+  software-image: ACS
 '261':
   capacity: 24
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-03.jpg
+  software-image: ACS
 '262':
   capacity: 25
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-04.jpg
+  software-image: ACS
 '263':
   capacity: 22
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-05.jpg
+  software-image: ACS
 '264':
   capacity: 24
   instructions: 25W4_C6_Instructions.pdf
   image: 25W4StC-06.jpg
+  software-image: ACS_LAB
 '265':
   capacity: 18
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-07.jpg
+  software-image: ACS
 '266':
   capacity: 30
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-08.jpg
+  software-image: ACS
 '267':
   capacity: 25
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-09.jpg
+  software-image: ACS
 '268':
   capacity: 25
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-10.jpg
+  software-image: ACS
 '1145':
   capacity: 25
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-11.jpg
+  software-image: ACS
 '1146':
   capacity: 24
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-12.jpg
+  software-image: ACS
 '1147':
   capacity: 30
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-13.jpg
+  software-image: ACS
 '1149':
   capacity: 24
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-14.jpg
+  software-image: ACS
 '1151':
   capacity: 24
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-15.jpg
+  software-image: ACS
 '1152':
   capacity: 18
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-16.jpg
+  software-image: ACS
 '1153':
   capacity: 25
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-17.jpg
+  software-image: ACS
 '1155':
   capacity: 20
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-18.jpg
+  software-image: ACS
 '1156':
   capacity: 20
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-19.jpg
+  software-image: ACS
 '1157':
   capacity: 40
   instructions: 25W4_Instructions.pdf
   image: 25W4StC-20.jpg
+  software-image: ACS
 '2377':
   notes: Not a general purpose classroom
 '2826':
@@ -365,6 +408,7 @@
   capacity: 120
   instructions: 5WP_Instructions.pdf
   image: 5WP101.jpg
+  software-image: ACS
 '5774':
   notes: Not a general purpose classroom
 '1128':
@@ -623,22 +667,27 @@
   capacity: 28
   instructions: ARCLL01_02_03Classrooms_Instructions.pdf
   image: ARC-LL1.jpg
+  software-image: ACS
 '29366':
   capacity: 28
   instructions: ARCLL01_02_03Classrooms_Instructions.pdf
   image: ARC-LL2.jpg
+  software-image: ACS
 '29369':
   capacity: 21
   instructions: ARCLL01_02_03Classrooms_Instructions.pdf
   image: ARC-LL3.jpg
+  software-image: ACS
 '29370':
   capacity: 25
   instructions: VC_Instructions_ARCLL04.pdf
   image: ARC-LL4.jpg
+  software-image: ACS
 '29371':
   capacity: 24
   instructions: ARCLL05.pdf
   image: ARC-LL5.jpg
+  software-image: ACS
 '29372':
   capacity: 6
   image: ARC-LL16.jpg
@@ -648,86 +697,108 @@
 '1159':
   capacity: 15
   image: Bobst436.jpg
+  software-image: ACS
 '1160':
   capacity: 15
   image: Bobst437.jpg
+  software-image: ACS
 '1161':
   capacity: 15
   image: Bobst536.jpg
+  software-image: ACS
 '1162':
   capacity: 15
   image: Bobst537.jpg
+  software-image: ACS
 '1163':
   capacity: 15
   instructions: Bobst_736,737,836,837_Instructions.pdf
   image: Bobst736.jpg
+  software-image: ACS
 '1164':
   capacity: 15
   instructions: Bobst_736,737,836,837_Instructions.pdf
   image: Bobst737.jpg
+  software-image: ACS
 '2082':
   capacity: 15
   instructions: Instructions_Bobst_836_837.pdf
   image: Bobst836.jpg
+  software-image: ACS
 '1166':
   capacity: 15
   instructions: Instructions_Bobst_836_837.pdf
   image: Bobst837.jpg
+  software-image: ACS
 '19617':
   notes: Not a general purpose classroom
-'1167': 
+'1167':
+  software-image: ACS
 '27999':
   capacity: 48
   instructions: Bobst_LL1-38,LL1-50_Instructions.pdf
   image: BobstLL38.jpg
+  software-image: ACS
 '28000':
   capacity: 30
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL39.jpg
+  software-image: ACS
 '28001':
   capacity: 16
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL40.jpg
+  software-image: ACS
 '28002':
   capacity: 24
   instructions: Bobst LL1-41,LL1-43_Instructions.pdf
   image: Bobst_LL141_43.jpg
+  software-image: ACS
 '28003':
   capacity: 20
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL42.jpg
+  software-image: ACS
 '28004':
   capacity: 24
   instructions: Bobst LL1-41,LL1-43_Instructions.pdf
   image: Bobst_LL141_43.jpg
+  software-image: ACS
 '28006':
   capacity: 24
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL45.jpg
+  software-image: ACS
 '28007':
   capacity: 20
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL46.jpg
+  software-image: ACS
 '28008':
   capacity: 24
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL47.jpg
+  software-image: ACS
 '28009':
   capacity: 16
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL48.jpg
+  software-image: ACS
 '28010':
   capacity: 30
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL49.jpg
+  software-image: ACS
 '28011':
   capacity: 48
   instructions: Bobst_LL1-38,LL1-50_Instructions.pdf
   image: BobstLL50.jpg
+  software-image: ACS
 '28111':
   capacity: 30
   instructions: Bobst_LL_Instructions.pdf
   image: BobstLL51.jpg
+  software-image: ACS
 '2822':
   capacity: 184
 '4570':
@@ -874,22 +945,27 @@
   capacity: 138
   instructions: Genomics_Auditorium_Instructions.pdf
   image: GenomicsAud-108.jpg
+  software-image: ACS
 '29010':
   capacity: 22
   instructions: Genomics_L111_Instructions.pdf
   image: Genomics-111.jpg
+  software-image: ACS_LAB
 '29011':
   capacity: 20
   instructions: Genomics_L113-L114_Instructions.pdf
   image: Genomics-L113.jpg
+  software-image: ACS
 '29012':
   capacity: 20
   instructions: Genomics_L113-L114_Instructions.pdf
   image: Genomics-L114.jpg
+  software-image: ACS
 '29013':
   capacity: 69
   instructions: Genomics_L120_Instructions.pdf
   image: Genomics-L120.jpg
+  software-image: ACS
 '21691':
   notes: Not a general purpose classroom
 '20367':
@@ -974,22 +1050,27 @@
   capacity: 24
   instructions: Goddard_Instructions.pdf
   image: Goddard B-01.jpg
+  software-image: ACS
 '1234':
   capacity: 35
   instructions: Goddard_Instructions.pdf
   image: Goddard B-02.jpg
+  software-image: ACS
 '1235':
   capacity: 20
   instructions: Goddard_Instructions.pdf
   image: Goddard B-04.jpg
+  software-image: ACS
 '1237':
   capacity: 35
   instructions: Goddard_Instructions.pdf
   image: Goddard B-06.jpg
+  software-image: ACS
 '1239':
   capacity: 20
   instructions: Goddard_Instructions.pdf
   image: Goddard B-07.jpg
+  software-image: ACS
 '1588':
   notes: Not a general purpose classroom
 '1589':
@@ -1126,6 +1207,7 @@
   capacity: 73
   instructions: Meyer102_Instructions.pdf
   image: Meyer102.jpg
+  software-image: ACS
 '1351':
   notes: Not a general purpose classroom
 '1353': 
@@ -1133,16 +1215,19 @@
   capacity: 185
   instructions: Meyer121_Instructions.pdf
   image: Meyer121.jpg
+  software-image: ACS
 '1356':
   capacity: 93
   instructions: Meyer122_Instructions.pdf
   image: Meyer122.jpg
+  software-image: ACS
 '1358':
   notes: Not a general purpose classroom
 '2933':
   capacity: 35
   instructions: Meyer157_Instructions.pdf
   image: Meyer157.jpg
+  software-image: ACS
 '2447':
   notes: Not a general purpose classroom
 '1359':
@@ -1157,6 +1242,7 @@
   capacity: 30
   instructions: Meyer261_Instructions.pdf
   image: Meyer261.jpg
+  software-image: ACS
 '1364':
   notes: Not a general purpose classroom
 '1365':
@@ -1259,6 +1345,7 @@
   capacity: 80
   instructions: Silver_101A.pdf
   image: Silver101A.jpg
+  software-image: ACS
 '1348':
   notes: Not a general purpose classroom
 '1251':
@@ -1271,14 +1358,17 @@
   capacity: 88
   instructions: Silver 206,208 new instructions.pdf
   image: Silver206.jpg
+  software-image: ACS
 '1257':
   capacity: 128
   instructions: Silver 207 new instructions.pdf
   image: Silver207.jpg
+  software-image: ACS
 '1260':
   capacity: 61
   instructions: Silver 206,208 new instructions.pdf
   image: Silver208.jpg
+  software-image: ACS
 '8697':
   notes: Not a general purpose classroom
 '20298':
@@ -1297,46 +1387,57 @@
   capacity: 70
   instructions: Silver 401 new 2013 instructions.pdf
   image: Silver401.jpg
+  software-image: ACS
 '238':
   capacity: 18
   instructions: Silver 402 406 409 new 2013 instructions.pdf
   image: Silver402.jpg
+  software-image: ACS
 '257':
   capacity: 33
   instructions: Silver 403 404 407 410 new 2013 instructions.pdf
   image: Silver403.jpg
+  software-image: ACS
 '258':
   capacity: 27
   instructions: Silver 403 404 407 410 new 2013 instructions.pdf
   image: Silver404.jpg
+  software-image: ACS
 '259':
   capacity: 108
   instructions: Silver405_instructions.pdf
   image: Silver405.jpg
+  software-image: ACS
 '1265':
   capacity: 22
   instructions: Silver 402 406 409 new 2013 instructions.pdf
   image: Silver406.jpg
+  software-image: ACS
 '1266':
   capacity: 32
   instructions: Silver 403 404 407 410 new 2013 instructions.pdf
   image: Silver407.jpg
+  software-image: ACS
 '1268':
   capacity: 108
   instructions: Silver 408 new 2013 instructions.pdf
   image: Silver408.jpg
+  software-image: ACS
 '1269':
   capacity: 20
   instructions: Silver 402 406 409 new 2013 instructions.pdf
   image: Silver409.jpg
+  software-image: ACS
 '1271':
   capacity: 37
   instructions: Silver 403 404 407 410 new 2013 instructions.pdf
   image: Silver410.jpg
+  software-image: ACS
 '1272':
   capacity: 71
   instructions: Silver 411 new 2013 instructions.pdf
   image: Silver411.jpg
+  software-image: ACS
 '1274':
   capacity: 25
   instructions: Silver_412.pdf
@@ -1345,74 +1446,91 @@
   capacity: 8
   instructions: Silver 413 new 2013 instructions.pdf
   image: Silver413.jpg
+  software-image: ACS
 '1277':
   capacity: 68
   instructions: Silver 414 new 2013 instructions.pdf
   image: Silver414.jpg
+  software-image: ACS
 '11850':
   notes: Not a general purpose classroom
 '1280':
   capacity: 25
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver500.jpg
+  software-image: ACS
 '1282':
   capacity: 28
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver501.jpg
+  software-image: ACS
 '2429':
   notes: Not a general purpose classroom
 '1284':
   capacity: 20
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver504.jpg
+  software-image: ACS
 '1286':
   capacity: 16
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver505.jpg
+  software-image: ACS
 '1287':
   capacity: 20
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver506.jpg
+  software-image: ACS
 '1289':
   capacity: 30
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver507.jpg
+  software-image: ACS
 '1291':
   capacity: 25
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver508.jpg
+  software-image: ACS
 '1292':
   capacity: 36
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver509.jpg
+  software-image: ACS
 '1293':
   capacity: 20
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver510.jpg
+  software-image: ACS
 '1294':
   capacity: 17
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver511.jpg
+  software-image: ACS
 '1296':
   capacity: 20
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver512.jpg
+  software-image: ACS
 '1297':
   capacity: 28
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver514.jpg
+  software-image: ACS
 '1298':
   capacity: 25
   instructions: Silver 5th Floor Instructions.pdf
   image: Silver515.jpg
+  software-image: ACS
 '1299':
   capacity: 26
   instructions: Silver_518_Instructions.pdf
   image: Silver518.jpg
+  software-image: ACS
 '1300':
   capacity: 90
   instructions: Silver_520_Instructions.pdf
   image: Silver520.jpg
+  software-image: ACS
 '5200':
   notes: Not a general purpose classroom
 '18913':
@@ -1431,10 +1549,12 @@
   capacity: 30
   instructions: Silver 620-Digital.pdf
   image: Silver620.jpg
+  software-image: ACS
 '1308':
   capacity: 33
   instructions: Silver 621-Digital.pdf
   image: Silver621.jpg
+  software-image: ACS
 '4941':
   notes: Not a general purpose classroom
 '5775':
@@ -1455,26 +1575,32 @@
   capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC01.jpg
+  software-image: ACS
 '1374':
   capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC02.jpg
+  software-image: ACS
 '1375':
   capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC03.jpg
+  software-image: ACS
 '1376':
   capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC04.jpg
+  software-image: ACS
 '1377':
   capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC05.jpg
+  software-image: ACS
 '27380':
   capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC06.jpg
+  software-image: ACS
 '27381':
   capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
@@ -1483,22 +1609,27 @@
   capacity: 45
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC09.jpg
+  software-image: ACS
 '27383':
   capacity: 50
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC11.jpg
+  software-image: ACS
 '27384':
   capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC13.jpg
+  software-image: ACS
 '27385':
   capacity: 20
   instructions: Tisch_Hall_Instructions_CD.pdf
   image: TischLC15.jpg
+  software-image: ACS
 '27438':
   capacity: 36
   instructions: TISCH HALL LC-19 PODIUM.pdf
   image: TISCH HALL LC-19.jpg
+  software-image: ACS_LAB
 '1379':
   capacity: 35
   instructions: Tisch_Hall_UC,_LC_Equipment_Instructions.pdf
@@ -1558,66 +1689,82 @@
   capacity: 39
   instructions: Waverly 3rd floor.pdf
   image: Waverly366.jpg
+  software-image: ACS
 '1399':
   capacity: 35
   instructions: Waverly 3rd floor.pdf
   image: Waverly367.jpg
+  software-image: ACS
 '1401':
   capacity: 33
   instructions: Waverly 3rd floor.pdf
   image: Waverly369.jpg
+  software-image: ACS
 '1402':
   capacity: 30
   instructions: Waverly 3rd floor.pdf
   image: Waverly370.jpg
+  software-image: ACS
 '1409':
   capacity: 26
   instructions: Waverly 4th floor.pdf
   image: Waverly_429.jpg
+  software-image: ACS
 '1412':
   capacity: 33
   instructions: Waverly 4th floor.pdf
   image: waverly_431.jpg
+  software-image: ACS
 '1413':
   capacity: 33
   instructions: Waverly 4th floor.pdf
   image: Waverly_433.jpg
+  software-image: ACS
 '1415':
   capacity: 33
   instructions: Waverly 4th floor.pdf
   image: Waverly_435.jpg
+  software-image: ACS
 '2094':
   capacity: 32
   instructions: Waverly 5th floor.pdf
   image: Waverly 566A.jpg
+  software-image: ACS
 '1417':
   capacity: 20
   instructions: Waverly 5th floor.pdf
   image: Waverly 566B.jpg
+  software-image: ACS
 '1419':
   capacity: 30
   instructions: Waverly 5th floor.pdf
   image: Waverly 567.jpg
+  software-image: ACS
 '1420':
   capacity: 30
   instructions: Waverly 5th floor.pdf
   image: Waverly 569.jpg
+  software-image: ACS
 '2093':
   capacity: 24
   instructions: Waverly 5th floor.pdf
   image: Waverly 570.jpg
+  software-image: ACS
 '1404':
   capacity: 37
   instructions: Waverly667-digital.pdf
   image: Waverly667.jpg
+  software-image: ACS
 '1406':
   capacity: 35
   instructions: Waverly 6th floor.pdf
   image: Waverly_668.jpg
+  software-image: ACS
 '1408':
   capacity: 27
   instructions: Waverly 669-digital.pdf
   image: Waverly669.jpg
+  software-image: ACS
 '1473':
   notes: Not a general purpose classroom
 '27429':
@@ -1628,159 +1775,204 @@
   capacity: 24
   instructions: Weinstein SB-20, SB-35 Instructions.pdf
   image: WeinsteinSB-20.jpg
+  software-image: ACS
 '28023':
   capacity: 16
   instructions: Weinstein SB-20, SB-35 Instructions.pdf
   image: WeinsteinSB-35.jpg
+  software-image: ACS
 '29688':
   capacity: 18
   image: GlobalCenter274.jpg
+  software-image: ACS
 '29689':
   capacity: 40
   image: GlobalCenter275.jpg
+  software-image: ACS
 '29691':
   capacity: 48
   image: GlobalCenter279.jpg
+  software-image: ACS
 '29707':
   capacity: 30
   image: GlobalCenter288.jpg
+  software-image: ACS
 '29693':
   capacity: 36
   image: GlobalCenter361.jpg
+  software-image: ACS
 '29694':
   capacity: 32
   image: GlobalCenter365.jpg
+  software-image: ACS
 '29708':
   capacity: 40
   image: GlobalCenter369.jpg
+  software-image: ACS
 '29695':
   capacity: 18
   image: GlobalCenter374.jpg
+  software-image: ACS
 '29696':
   capacity: 32
   image: GlobalCenter375.jpg
+  software-image: ACS
 '29697':
   capacity: 32
   image: GlobalCenter379.jpg
+  software-image: ACS
 '29698':
   capacity: 42
   image: GlobalCenter383.jpg
+  software-image: ACS
 '29699':
   capacity: 30
   image: GlobalCenter388.jpg
+  software-image: ACS
 '29700':
   capacity: 32
   image: GlobalCenter461.jpg
+  software-image: ACS
 '29703':
   capacity: 32
   image: GlobalCenter475.jpg
+  software-image: ACS
 '29685':
   capacity: 257
   instructions: GCASL_C95_Instructions.pdf
   image: GlobalCenterC95.jpg
+  software-image: ACS
 '29768':
   capacity: 16
+  software-image: ACS
 '29767':
   capacity: 12
+  software-image: ACS
 '29773':
   capacity: 22
   image: GlobalCenter384.jpg
+  software-image: ACS
 '29772':
   capacity: 22
   image: GCASL_284.jpg
+  software-image: ACS_LAB
 '32048':
   capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin101.jpg
+  software-image: ACS
 '32049':
   capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin102.jpg
+  software-image: ACS
 '32050':
   capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin103.jpg
+  software-image: ACS
 '32051':
   capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin104.jpg
+  software-image: ACS
 '32052':
   capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin105.jpg
+  software-image: ACS
 '32053':
   capacity: 14
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin106.jpg
+  software-image: ACS
 '32054':
   capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin107.jpg
+  software-image: ACS
 '32055':
   capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin108.jpg
+  software-image: ACS
 '32056':
   capacity: 14
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin109.jpg
+  software-image: ACS
 '32057':
   capacity: 15
   instructions: Rubin_Hall_Instructions.pdf
   image: Rubin110.jpg
+  software-image: ACS
 '32716':
   notes: Instructions coming soon
   capacity: 64
   image: 60FA_110.jpg
+  software-image: ACS
 '32718':
   notes: Instructions coming soon
   capacity: 34
   image: 60FA_125.jpg
+  software-image: ACS
 '32719':
   notes: Instructions coming soon
   capacity: 90
   image: 60FA_150.jpg
+  software-image: ACS
 '32720':
   notes: Instructions coming soon
   capacity: 31
   image: 60FA_161.jpg
+  software-image: ACS
 '32721':
   notes: Instructions coming soon
   capacity: 32
   image: 60FA_165.jpg
+  software-image: ACS
 '32722':
   notes: Instructions coming soon
   capacity: 12
   image: 60FA_202.jpg
+  software-image: ACS
 '32723':
   notes: Instructions coming soon
   capacity: 16
   image: 60FA_250.jpg
+  software-image: ACS
 '32724':
   notes: Instructions coming soon
   capacity: 26
   image: 60FA_261.jpg
+  software-image: ACS
 '32725':
   notes: Instructions coming soon
   capacity: 26
   image: 60FA_265.jpg
+  software-image: ACS
 '32726':
   notes: Instructions and picture coming soon
   capacity: 33
   image: 60FA_C03.jpg
+  software-image: ACS
 '32727':
   notes: Instructions and picture coming soon
   capacity: 30
   image: 60FA_C04.jpg
+  software-image: ACS
 '32728':
   notes: Instructions and picture coming soon
   capacity: 39
   image: 60FA_C10.jpg
+  software-image: ACS
 '32729':
   notes: Instructions and picture coming soon
   capacity: 39
   image: 60FA_C12.jpg
+  software-image: ACS
 '32730':
   notes: Instructions and picture coming soon
   capacity: 31
   image: 60FA_C14.jpg
+  software-image: ACS
