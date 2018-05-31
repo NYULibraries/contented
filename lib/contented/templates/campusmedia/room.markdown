@@ -4,7 +4,7 @@ title: {{ room_title }}
 subtitle: {{ room_subtitle }}
 capacity: {{ room_capacity }}
 links:
-  Room Instructions: {{ room_instructions_url }}
+  Room Instructions: {{ room_instructions }}
   Software list:
     {{% for software in room_softwares -%}}
       - {{ software }}
@@ -28,7 +28,7 @@ keywords:
 help:
   text: {{ room_help_text }}
   phone: {{ room_help_phone }}
-  email: {{ constant_help_email }}
+  email: {{ room_help_email }}
 access: {{ room_access }}
 ---
 

@@ -101,11 +101,10 @@ module Contented
   end
 end
 
-Figs.load()
-host = Figs.env["SCHEDUALL_HOST"]
-username = Figs.env["SCHEDUALL_USERNAME"]
-password = Figs.env["SCHEDUALL_PASSWORD"]
-
-scheduall = Contented::SourceReaders::Scheduall.new(host: host, username: username, password: password)
-scheduall.rooms
-scheduall.close
+# Figs.load
+# host = Figs.env["SCHEDUALL_HOST"]
+# username = Figs.env["SCHEDUALL_USERNAME"]
+# password = Figs.env["SCHEDUALL_PASSWORD"]
+#
+# scheduall = Contented::SourceReaders::Scheduall.new(host: host, username: username, password: password)
+# scheduall.close
