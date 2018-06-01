@@ -5,8 +5,6 @@ require 'yaml'
 module Contented
   module SourceReaders
     class Scheduall
-      include Enumerable
-
       attr_reader :client, :data
 
       @@driver = TinyTds::Client
@@ -17,9 +15,9 @@ module Contented
       end
 
       def fetch_rooms
-        fetch_technologies
-        normalize_rooms_by_id
-        merge_config_values
+        fetch_technologies && @fetched = true unless @fetched
+        normalize_rooms_by_id && @normalized = true unless @normalized
+        merge_config_values && @merged = true unless @merged
         data
       end
 
@@ -27,14 +25,15 @@ module Contented
         client.close
       end
 
-      def each(&block)
-        data.each(&block)
+      def each(&blk)
+        data.each(&blk)
       end
 
       private
 
       def fetch_technologies
-        @data = execute <<~SQL
+        @data = (execute <<~SQL
+          USE schedwin
           SELECT DISTINCT
           schedwin.resctlg.resid as room_id,
           schedwin.resctlg.descript as room_description,
@@ -47,8 +46,8 @@ module Contented
           WHERE schedwin.resctlg.cat=53
           ORDER BY schedwin.resctlg.typedesc;
         SQL
-
-        @data = @data.map { |h| h.transform_values!(&:strip) }
+        ).map { |h| h.transform_values(&:strip) }
+        data
       end
 
       def normalize_rooms_by_id
@@ -61,47 +60,50 @@ module Contented
         @data = @data.reduce(starter) do |normalized, room_data|
           room_id = room_data["room_id"]
           tech_item = room_data["technology_description"].split(' ')[1..-1].join(' ') # remove first descriptor word
-          normalized.dig(room_id, "room_technologies") << tech_item
+
+          normalized[room_id]["room_technologies"] << tech_item
           room_data = room_data.slice("room_description", "building_id", "room_building_description")
-          normalized[room_id].merge!(room_data)
+          normalized[room_id] = normalized[room_id].merge(room_data)
           normalized
         end
       end
 
+      def merge_config_values
+        @data = @data.reduce({}) do |res, (id, props)|
+          building_id = props["building_id"]
+          address = buildings_yaml[building_id]&.slice("building_address") || {}
+          room_config = rooms_yaml[id] || {}
+
+          merged_props = [room_config, address].reduce(&:merge)
+
+          res.merge!({ id => merged_props })
+        end
+      end
+
       def rooms_yaml
+        return @rooms_yaml if @rooms_yaml
+
         yaml = File.read('config/campusmedia/rooms.yml')
         hash = YAML.safe_load(yaml)
 
-        hash.transform_values! do |props|
+        @rooms_yaml = hash.transform_values! do |props|
           props&.transform_keys! { |k| "room_#{k}" }
         end
       end
 
-      def merge_config_values
-        static_rooms_data = rooms_yaml
-        buildings = buildings_yaml
+      def buildings_yaml
+        return @buildings_yaml if @buildings_yaml
 
-        @data = @data.reduce({}) do |res, (id, props)|
-          padding = static_rooms_data[id]
-          address = buildings.dig(props["building_id"], "building_address")
-          padding&.merge!({ "building_address" => address })
+        yaml = File.read('config/campusmedia/buildings.yml')
+        hash = YAML.safe_load(yaml)
 
-          new_props = props.merge(padding || {})
-          res[id] = new_props
-          res
+        @buildings_yaml = hash.transform_values! do |props|
+          props&.transform_keys! { |k| "building_#{k}" }
         end
       end
 
-      def buildings_yaml
-        yaml = File.read('config/campusmedia/buildings.yml')
-        YAML.safe_load(yaml)
-      end
-
       def execute(sql)
-        client.execute <<~SQL
-          USE schedwin
-          #{sql}
-        SQL
+        client.execute(sql)
       end
     end
   end
