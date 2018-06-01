@@ -7,10 +7,12 @@ module Contented
     class Scheduall
       attr_reader :client, :data
 
-      @@driver = TinyTds::Client
+      def self.driver
+        TinyTds::Client
+      end
 
       def initialize(options)
-        @client = @@driver.new(options)
+        @client = Scheduall.driver.new(options)
         @data = {}
       end
 

@@ -3,9 +3,9 @@ require 'liquid'
 module Contented
   module Collections
     class Room
-      # def self.template_file
-      #   File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) + '/../contented/templates/camuspmedia/room.markdown')
-      # end
+      def self.template_file
+        File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) + '/../contented/templates/camuspmedia/room.markdown')
+      end
 
       def initialize(raw, save_location)
         @data = raw

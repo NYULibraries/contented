@@ -14,7 +14,7 @@ describe Contented::SourceReaders::Scheduall do
   let(:technologies) { load_yaml_file('./spec/fixtures/scheduall_technology.yml') }
 
   before do
-    Contented::SourceReaders::Scheduall.class_variable_set :@@driver, driver
+    Contented::SourceReaders::Scheduall.stub(:driver).and_return(driver)
     allow(driver).to receive(:new).and_return driver_client
   end
 
