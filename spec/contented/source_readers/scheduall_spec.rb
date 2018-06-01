@@ -127,7 +127,7 @@ describe Contented::SourceReaders::Scheduall do
         expect(subject['2696']['room_notes']).to eq 'Not a general purpose classroom'
       end
 
-      it 'assigsn return value to @data' do
+      it 'assigns return value to @data' do
         subject
         expect(scheduall.data).to eq subject
       end
