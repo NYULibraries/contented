@@ -5,7 +5,7 @@ require 'yaml'
 module Contented
   module SourceReaders
     class Scheduall
-      attr_reader :client, :data
+      attr_reader :client, :rooms, :fetched
 
       def self.driver
         TinyTds::Client
@@ -13,14 +13,21 @@ module Contented
 
       def initialize(options)
         @client = Scheduall.driver.new(options)
-        @data = {}
+        @rooms = {}
+
+        begin
+          fetch_rooms
+        rescue => e
+          puts 'Something went wrong during the Scheduall SQL fetch.'
+          puts e.message
+        end
       end
 
       def fetch_rooms
-        fetch_technologies && @fetched = true unless @fetched
-        normalize_rooms_by_id && @normalized = true unless @normalized
-        merge_config_values && @merged = true unless @merged
-        data
+        fetch_technologies
+        normalize_rooms_by_id
+        merge_config_values
+        rooms
       end
 
       def close
@@ -28,13 +35,13 @@ module Contented
       end
 
       def each(&blk)
-        data.each(&blk)
+        rooms.each(&blk)
       end
 
       private
 
       def fetch_technologies
-        @data = (execute <<~SQL
+        @rooms = (execute <<~SQL
           USE schedwin
           SELECT DISTINCT
           schedwin.resctlg.resid as room_id,
@@ -49,7 +56,6 @@ module Contented
           ORDER BY schedwin.resctlg.typedesc;
         SQL
         ).map { |h| h.transform_values(&:strip) }
-        data
       end
 
       def normalize_rooms_by_id
@@ -59,7 +65,7 @@ module Contented
           end
         end
 
-        @data = @data.reduce(starter) do |normalized, room_data|
+        @rooms = @rooms.reduce(starter) do |normalized, room_data|
           room_id = room_data["room_id"]
           tech_item = room_data["technology_description"].split(' ')[1..-1].join(' ') # remove first descriptor word
 
@@ -71,7 +77,7 @@ module Contented
       end
 
       def merge_config_values
-        @data = @data.reduce({}) do |res, (id, props)|
+        @rooms = @rooms.reduce({}) do |res, (id, props)|
           building_id = props["building_id"]
           address = buildings_yaml[building_id]&.slice("building_address") || {}
           room_config = rooms_yaml[id] || {}
@@ -110,11 +116,3 @@ module Contented
     end
   end
 end
-
-# Figs.load
-# host = Figs.env["SCHEDUALL_HOST"]
-# username = Figs.env["SCHEDUALL_USERNAME"]
-# password = Figs.env["SCHEDUALL_PASSWORD"]
-#
-# scheduall = Contented::SourceReaders::Scheduall.new(host: host, username: username, password: password)
-# scheduall.close

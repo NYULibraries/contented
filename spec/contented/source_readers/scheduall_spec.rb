@@ -16,30 +16,10 @@ describe Contented::SourceReaders::Scheduall do
   before do
     Contented::SourceReaders::Scheduall.stub(:driver).and_return(driver)
     allow(driver).to receive(:new).and_return driver_client
+    allow(driver_client).to receive(:execute).and_return(technologies)
   end
 
-  describe '#initialize' do
-    it 'sets @client to driver' do
-      expect(scheduall.client).to be driver_client
-    end
-
-    it 'sets @data to empty hash' do
-      expect(scheduall.data).to eq({})
-    end
-  end
-
-  describe '#close' do
-    before { allow(driver_client).to receive(:close).and_return true }
-
-    it "calls driver's close method" do
-      expect(driver_client).to receive(:close)
-      scheduall.close
-    end
-  end
-
-  describe '#rooms' do
-    before { allow(driver_client).to receive(:execute).and_return(technologies) }
-
+  describe '#fetch_rooms' do
     describe 'fetch_technologies' do
       subject { scheduall.send :fetch_technologies }
 
@@ -52,9 +32,9 @@ describe Contented::SourceReaders::Scheduall do
         expect(subject.first["technology_id"]).to eq technologies.first["technology_id"].strip
       end
 
-      it 'assigns return value to @data' do
+      it 'assigns return value to @rooms' do
         subject
-        expect(scheduall.data).to eq subject
+        expect(scheduall.rooms).to eq subject
       end
     end
 
@@ -64,7 +44,7 @@ describe Contented::SourceReaders::Scheduall do
       let(:denormalized) { load_yaml_file('./spec/fixtures/denormalized_rooms.yml') }
       let(:normalized) { load_yaml_file('./spec/fixtures/normalized_rooms.yml') }
 
-      before { scheduall.instance_variable_set :@data, denormalized }
+      before { scheduall.instance_variable_set :@rooms, denormalized }
 
       it 'retains all unique room_id keys' do
         uniq_ids = denormalized.map { |v| v["room_id"] }.uniq
@@ -95,9 +75,9 @@ describe Contented::SourceReaders::Scheduall do
         end
       end
 
-      it 'assigns return value to @data' do
+      it 'assigns return value to @rooms' do
         subject
-        expect(scheduall.data).to eq subject
+        expect(scheduall.rooms).to eq subject
       end
     end
 
@@ -110,7 +90,7 @@ describe Contented::SourceReaders::Scheduall do
       let(:normalized) { load_yaml_file('./spec/fixtures/normalized_rooms.yml') }
 
       before do
-        scheduall.instance_variable_set :@data, normalized
+        scheduall.instance_variable_set :@rooms, normalized
         scheduall.stub(:rooms_yaml).and_return rooms_yaml
         scheduall.stub(:buildings_yaml).and_return buildings_yaml
       end
@@ -127,19 +107,26 @@ describe Contented::SourceReaders::Scheduall do
         expect(subject['2696']['room_notes']).to eq 'Not a general purpose classroom'
       end
 
-      it 'assigns return value to @data' do
+      it 'assigns return value to @rooms' do
         subject
-        expect(scheduall.data).to eq subject
+        expect(scheduall.rooms).to eq subject
       end
     end
   end
 
+  describe '#rooms' do
+    subject { scheduall.rooms }
+
+    it { is_expected.to be_a Hash }
+    its(:count) { is_expected.to eql technologies.length }
+  end
+
   describe '#each' do
     before do
-      scheduall.stub(:data).and_return Hash.new('123' => {}, '456' => {})
+      scheduall.stub(:rooms).and_return Hash.new('123' => {}, '456' => {})
     end
 
-    it 'loops over the @data' do
+    it 'loops over the @rooms' do
       scheduall.each do |room|
         expect room.to be_a Hash
       end
