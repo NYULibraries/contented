@@ -1,8 +1,8 @@
 ---
 '3937':
-  room_capacity: 25
+  capacity: 25
 '2696':
-  room_capacity: 30
-  room_notes: Not a general purpose classroom
+  capacity: 30
+  notes: Not a general purpose classroom
 '25043':
-  room_notes: Not a general purpose classroom
+  notes: Not a general purpose classroom
