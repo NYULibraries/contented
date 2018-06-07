@@ -43,10 +43,10 @@ module Contented
         @rooms = (execute <<~SQL
           USE schedwin
           SELECT DISTINCT
-          schedwin.resctlg.resid as room_id,
-          schedwin.resctlg.descript as room_description,
+          schedwin.resctlg.resid as id,
+          schedwin.resctlg.descript as description,
           schedwin.resctlg.type as building_id,
-          schedwin.resctlg.typedesc as room_building_description,
+          schedwin.resctlg.typedesc as building_description,
           schedwin.svcctlg.svcode as technology_id,
           schedwin.svcctlg.servdesc as technology_description
           FROM schedwin.resctlg
@@ -60,15 +60,15 @@ module Contented
       def normalize_rooms_by_id
         starter = Hash.new do |rooms_hash, room_id|
           rooms_hash[room_id] = Hash.new do |room_hash, _k|
-            room_hash["room_technologies"] = []
+            room_hash["technologies"] = []
           end
         end
 
         @rooms = @rooms.reduce(starter) do |normalized, room_data|
-          room_id = room_data["room_id"]
+          room_id = room_data["id"]
           tech_item = room_data["technology_description"].split(' ')[1..-1].join(' ') # remove first descriptor word
 
-          normalized[room_id]["room_technologies"] << tech_item
+          normalized[room_id]["technologies"] << tech_item
           room_data = room_data
           normalized[room_id] = normalized[room_id].merge(room_data)
           normalized

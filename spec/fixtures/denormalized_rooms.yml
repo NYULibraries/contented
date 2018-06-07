@@ -1,19 +1,19 @@
 ---
-- room_id: "2696"
-  room_description: 19Univ 229
+- id: "2696"
+  description: 19Univ 229
   building_id: "412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "20405"
   technology_description: CM-Wireless Internet Connection
-- room_id: "3937"
-  room_description: 19Univ 337
+- id: "3937"
+  description: 19Univ 337
   building_id: "412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "20405"
   technology_description: CM-Wireless Internet Connection
-- room_id: "3937"
-  room_description: 19Univ 222
+- id: "3937"
+  description: 19Univ 222
   building_id: "412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "20410"
   technology_description: CM-Installed Keyboard

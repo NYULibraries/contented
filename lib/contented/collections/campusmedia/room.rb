@@ -3,86 +3,89 @@ require 'liquid'
 module Contented
   module Collections
     class Room
-      ROOMS_CONFIG_FILE = 'config/campusmedia/rooms.yml'
-      BUILDINGS_CONFIG_FILE = 'config/campusmedia/buildings.yml'
+      ROOMS_CONFIG_FILE = 'config/campusmedia/rooms.yml'.freeze
+      BUILDINGS_CONFIG_FILE = 'config/campusmedia/buildings.yml'.freeze
 
       ATTRIBUTE_KEYS = [
-        :room_id,
-        :room_title, :room_subtitle, :room_capacity,
-        :room_instructions, :room_image,
-        :room_departments, :room_floor, :room_type,
-        :room_notes, :room_technologies,
-        :building_address,
+        :id,
+        :title, :capacity, :instructions, :image,
+        :departments, :floor, :type,
+        :notes, :technologies,
+        :building_address, :building_id,
         :constant_form_url, :constant_policies_url,
-        :software
-      ]
+        :software,
+      ].freeze
 
-      attr_accessor :raw, :save_location, :room
-      attr_reader :id
+      attr_accessor :raw, :save_location
 
       def self.template_file
-        File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) + '/../contented/templates/camuspmedia/room.markdown')
+        File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) +
+          '/../contented/templates/camuspmedia/room.markdown')
       end
 
       def self.rooms_config
         return @rooms_config if @rooms_config
-        hash = YAML.safe_load(File.read(ROOMS_CONFIG_FILE))
-
-        @rooms_config = hash.transform_values! do |props|
-          props&.transform_keys! { |k| "room_#{k}".to_sym }
-        end
+        yaml = YAML.safe_load(File.read(ROOMS_CONFIG_FILE))
+        @rooms_config =
+          yaml.transform_values do |props|
+            props.transform_keys(&:to_sym)
+          end
       end
 
       def self.buildings_config
         return @buildings_config if @buildings_config
-        hash = YAML.safe_load(File.read(BUILDINGS_CONFIG_FILE))
-
-        @buildings_config = hash.transform_values! do |props|
-          props&.transform_keys! { |k| "building_#{k}".to_sym }
-        end
+        yaml = YAML.safe_load(File.read(BUILDINGS_CONFIG_FILE))
+        @buildings_config =
+          yaml.transform_values do |props|
+            props.transform_keys(&:to_sym)
+          end
       end
 
       def initialize(raw_yaml)
-        @raw = raw_yaml.transform_keys(&:to_sym)
-        @id = @raw[:room_id]
+        self.raw = raw_yaml.transform_keys(&:to_sym)
 
         attributes = ATTRIBUTE_KEYS.reduce({}) do |hash, attr_key|
-          binding.pry
           hash.merge!({ attr_key => raw[attr_key] })
         end
 
-        p attributes
-
-        @room = OpenStruct.new(attributes)
+        self.room = OpenStruct.new(attributes)
       end
 
       def filename
-        "#{room_id}"
+        "#{id}"
       end
 
-      def building_address
-        building_config.dig(building_id.to_s, "address")
+      def address
+        Room.buildings_config.dig(building_id, :address)
       end
 
-      def room_notes
-        room_config.dig(room_id.to_s, "notes")
+      def notes
+        Room.rooms_config.dig(id, :notes)
       end
 
-      def room_capacity
-        room_config.dig(room_id.to_s, "notes")
+      def capacity
+        Room.rooms_config.dig(id, :capacity)
       end
 
       def software
-        room_config.dig(room_id.to_s, "software-image")
+        !!Room.rooms_config.dig(id, :"software-image")
+      end
+
+      def image
+        Room.rooms_config.dig(id, :image)
       end
 
       def method_missing(meth, *args)
-        if ATTRIBUTE_KEYS.includes?(meth)
+        if ATTRIBUTE_KEYS.include?(meth)
           room.send(meth)
         else
           super(meth, *args)
         end
       end
+
+      private
+
+      attr_accessor :room
 
       # def to_markdown
       #   template = Liquid::Template.parse(Room.template_file)

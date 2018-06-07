@@ -1,67 +1,67 @@
 ---
-- room_id: "    2696"
-  room_description: 19Univ 229
+- id: "    2696"
+  description: 19Univ 229
   building_id: "     412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "   20405"
   technology_description: CM-Wireless Internet Connection
-- room_id: "    3937"
-  room_description: 19Univ 337
+- id: "    3937"
+  description: 19Univ 337
   building_id: "     412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "   20405"
   technology_description: CM-Wireless Internet Connection
-- room_id: "    4336"
-  room_description: 19Univ 222
+- id: "    4336"
+  description: 19Univ 222
   building_id: "     412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "   20405"
   technology_description: CM-Wireless Internet Connection
-- room_id: "    4568"
-  room_description: 19Univ 223
+- id: "    4568"
+  description: 19Univ 223
   building_id: "     412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "   20405"
   technology_description: CM-Wireless Internet Connection
-- room_id: "    5320"
-  room_description: 19Univ 305
+- id: "    5320"
+  description: 19Univ 305
   building_id: "     412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "   20405"
   technology_description: CM-Wireless Internet Connection
-- room_id: "    5347"
-  room_description: 19Univ 405
+- id: "    5347"
+  description: 19Univ 405
   building_id: "     412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "   20405"
   technology_description: CM-Wireless Internet Connection
-- room_id: "    9068"
-  room_description: 19Univ 224
+- id: "    9068"
+  description: 19Univ 224
   building_id: "     412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "   20405"
   technology_description: CM-Wireless Internet Connection
-- room_id: "   18862"
-  room_description: 19Univ 228
+- id: "   18862"
+  description: 19Univ 228
   building_id: "     412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "   20405"
   technology_description: CM-Wireless Internet Connection
-- room_id: "   19621"
-  room_description: 19Univ 435
+- id: "   19621"
+  description: 19Univ 435
   building_id: "     412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "   20405"
   technology_description: CM-Wireless Internet Connection
-- room_id: "   19623"
-  room_description: 19Univ 402
+- id: "   19623"
+  description: 19Univ 402
   building_id: "     412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "   20405"
   technology_description: CM-Wireless Internet Connection
-- room_id: "   20195"
-  room_description: 19Univ 102 ( Lecture Hall)
+- id: "   20195"
+  description: 19Univ 102 ( Lecture Hall)
   building_id: "     412"
-  room_building_description: 19 University Place
+  building_description: 19 University Place
   technology_id: "     564"
   technology_description: CM-Installed Data/Video Projection

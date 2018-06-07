@@ -21,7 +21,7 @@ describe Contented::SourceReaders::Scheduall do
       its(:count) { is_expected.to eql technologies.count }
 
       it 'strips ids' do
-        expect(subject.first["room_id"]).to eq technologies.first["room_id"].strip
+        expect(subject.first["id"]).to eq technologies.first["id"].strip
         expect(subject.first["building_id"]).to eq technologies.first["building_id"].strip
         expect(subject.first["technology_id"]).to eq technologies.first["technology_id"].strip
       end
@@ -48,24 +48,24 @@ describe Contented::SourceReaders::Scheduall do
 
       it 'merges all properties' do
         subject.each do |id, props|
-          expect(props.key?("room_description")).to be true
-          expect(props.key?("room_building_description")).to be true
+          expect(props.key?("description")).to be true
+          expect(props.key?("building_description")).to be true
           expect(props.key?("building_id")).to be true
-          expect(props.key?("room_id")).to be true
+          expect(props.key?("id")).to be true
         end
       end
 
-      describe 'room_technologies property' do
-        it 'provides room_technologies array to each key' do
+      describe 'technologies property' do
+        it 'provides technologies array to each key' do
           subject.each_value do |props|
-            expect(props["room_technologies"]).to be_a Array
+            expect(props["technologies"]).to be_a Array
           end
         end
 
         it 'strips first word from each entry' do
-          expect(subject.dig("3937", "room_technologies")).to include("Keyboard")
-          expect(subject.dig("3937", "room_technologies")).to include("Internet Connection")
-          expect(subject.dig("2696", "room_technologies")).to include("Internet Connection")
+          expect(subject.dig("3937", "technologies")).to include("Keyboard")
+          expect(subject.dig("3937", "technologies")).to include("Wireless Internet Connection")
+          expect(subject.dig("2696", "technologies")).to include("Wireless Internet Connection")
         end
       end
 

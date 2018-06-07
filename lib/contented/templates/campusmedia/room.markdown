@@ -1,16 +1,15 @@
 ---
-address: {{ building_address }}
-title: {{ room_title }}
-subtitle: {{ room_subtitle }}
-capacity: {{ room_capacity }}
+address: {{ address }}
+title: {{ title }}
+capacity: {{ capacity }}
 links:
-  Room Instructions: {{ room_instructions }}
+  Room Instructions: {{ instructions }}
   Software list:
     {{ software }}
 image: {{ room_image }}
 departments: {{ room_departments }}
 floor: {{ room_floor }}
-published: {{ room_published }}
+published: false
 buttons:
   Reserve Equipment for this Room: {{ constant_form_url }}
 features: {{ room_features }}
@@ -24,10 +23,10 @@ description: {{ room_notes }}
 type: {{ room_type }}
 keywords:
 help:
-  text: {{ room_help_text }}
-  phone: {{ room_help_phone }}
-  email: {{ room_help_email }}
-access: {{ room_access }}
+  text: {{ building_help_text }}
+  phone: {{ building_help_phone }}
+  email: {{ building_help_email }}
+access: {{ building_access }}
 ---
 
 {{ room_notes }}

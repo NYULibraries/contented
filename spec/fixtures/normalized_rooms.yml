@@ -1,16 +1,16 @@
 ---
 '2696':
-  room_id: '2696'
-  room_description: 19Univ 229
-  building_id: "412"
-  room_building_description: 19 University Place
-  room_technologies:
+  id: '2696'
+  description: 19Univ 229
+  building_id: '412'
+  building_description: 19 University Place
+  technologies:
     - Internet Connection
 '3937':
-  room_id: '3937'
-  room_description: 19Univ 337
-  building_id: "412"
-  room_building_description: 19 University Place
-  room_technologies:
+  id: '3937'
+  description: 19Univ 337
+  building_id: '412'
+  building_description: 19 University Place
+  technologies:
     - Internet Connection
     - Keyboard
