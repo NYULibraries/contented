@@ -3,6 +3,7 @@ require 'coveralls'
 Coveralls.wear!
 require 'pry'
 require 'contented'
+require 'yaml'
 
 Dir[File.dirname(__FILE__) + "/support/**/*.rb"].each {|f| require f }
 
@@ -19,4 +20,9 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
+end
+
+def load_yaml(filename)
+  yml = File.read(filename)
+  YAML.safe_load(yml)
 end
