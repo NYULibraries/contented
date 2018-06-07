@@ -40,7 +40,7 @@ describe Contented::SourceReaders::Scheduall do
       before { scheduall.instance_variable_set :@rooms, denormalized }
 
       it 'retains all unique room_id keys' do
-        uniq_ids = denormalized.map { |v| v["room_id"] }.uniq
+        uniq_ids = denormalized.map { |v| v["id"] }.uniq
         overlap = subject.keys & uniq_ids
 
         expect(overlap.length).to eq uniq_ids.length
@@ -55,17 +55,17 @@ describe Contented::SourceReaders::Scheduall do
         end
       end
 
-      describe 'technologies property' do
-        it 'provides technologies array to each key' do
+      describe 'equipment property' do
+        it 'provides equipment array to each key' do
           subject.each_value do |props|
-            expect(props["technologies"]).to be_a Array
+            expect(props["equipment"]).to be_a Array
           end
         end
 
-        it 'strips first word from each entry' do
-          expect(subject.dig("3937", "technologies")).to include("Keyboard")
-          expect(subject.dig("3937", "technologies")).to include("Wireless Internet Connection")
-          expect(subject.dig("2696", "technologies")).to include("Wireless Internet Connection")
+        it 'Inserts values into array' do
+          expect(subject.dig("3937", "equipment")).to include("CM-Installed Wireless Keyboard")
+          expect(subject.dig("3937", "equipment")).to include("CM-Wireless Internet Connection")
+          expect(subject.dig("2696", "equipment")).to include("CM-Wireless Internet Connection")
         end
       end
 

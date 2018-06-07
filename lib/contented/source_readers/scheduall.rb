@@ -60,15 +60,15 @@ module Contented
       def normalize_rooms_by_id
         starter = Hash.new do |rooms_hash, room_id|
           rooms_hash[room_id] = Hash.new do |room_hash, _k|
-            room_hash["technologies"] = []
+            room_hash["equipment"] = []
           end
         end
 
         @rooms = @rooms.reduce(starter) do |normalized, room_data|
           room_id = room_data["id"]
-          tech_item = room_data["technology_description"].split(' ')[1..-1].join(' ') # remove first descriptor word
+          tech_item = room_data["technology_description"]
 
-          normalized[room_id]["technologies"] << tech_item
+          normalized[room_id]["equipment"] << tech_item
           room_data = room_data
           normalized[room_id] = normalized[room_id].merge(room_data)
           normalized
@@ -81,3 +81,13 @@ module Contented
     end
   end
 end
+
+# Figs.load
+# host = Figs.env["SCHEDUALL_HOST"]
+# username = Figs.env["SCHEDUALL_USERNAME"]
+# password = Figs.env["SCHEDUALL_PASSWORD"]
+#
+# scheduall = Contented::SourceReaders::Scheduall.new(host: host, username: username, password: password)
+# require 'json'
+# p scheduall.rooms.to_json
+# scheduall.close
