@@ -1,17 +1,11 @@
 require 'spec_helper'
-require 'yaml'
-
-def load_yaml_file(filename)
-  yml = File.read(filename)
-  YAML.safe_load(yml)
-end
 
 describe Contented::SourceReaders::Scheduall do
   let(:driver) { double 'driver' }
   let(:host_credentials) { Hash.new host: 'host.nyu.edu', password: 'password', username: 'nyuser' }
   let(:scheduall) { Contented::SourceReaders::Scheduall.new(host_credentials) }
   let(:driver_client) { double('driver_client') }
-  let(:technologies) { load_yaml_file('./spec/fixtures/scheduall_technology.yml') }
+  let(:technologies) { load_yaml('./spec/fixtures/scheduall_technology.yml') }
 
   before do
     Contented::SourceReaders::Scheduall.stub(:driver).and_return(driver)
@@ -41,8 +35,7 @@ describe Contented::SourceReaders::Scheduall do
     describe 'normalize_rooms_by_id' do
       subject { scheduall.send :normalize_rooms_by_id }
 
-      let(:denormalized) { load_yaml_file('./spec/fixtures/denormalized_rooms.yml') }
-      let(:normalized) { load_yaml_file('./spec/fixtures/normalized_rooms.yml') }
+      let(:denormalized) { load_yaml('./spec/fixtures/denormalized_rooms.yml') }
 
       before { scheduall.instance_variable_set :@rooms, denormalized }
 
@@ -53,18 +46,19 @@ describe Contented::SourceReaders::Scheduall do
         expect(overlap.length).to eq uniq_ids.length
       end
 
-      it 'merges room_description, room_building_description, & building_id properties' do
+      it 'merges all properties' do
         subject.each do |id, props|
           expect(props.key?("room_description")).to be true
           expect(props.key?("room_building_description")).to be true
           expect(props.key?("building_id")).to be true
+          expect(props.key?("room_id")).to be true
         end
       end
 
       describe 'room_technologies property' do
         it 'provides room_technologies array to each key' do
-          subject.each do |k, v|
-            expect(v["room_technologies"]).to be_a Array
+          subject.each_value do |props|
+            expect(props["room_technologies"]).to be_a Array
           end
         end
 
@@ -73,38 +67,6 @@ describe Contented::SourceReaders::Scheduall do
           expect(subject.dig("3937", "room_technologies")).to include("Internet Connection")
           expect(subject.dig("2696", "room_technologies")).to include("Internet Connection")
         end
-      end
-
-      it 'assigns return value to @rooms' do
-        subject
-        expect(scheduall.rooms).to eq subject
-      end
-    end
-
-    describe 'merge_config_values' do
-      subject { scheduall.send :merge_config_values }
-
-      # assumes buildings_yaml and rooms_yaml functions
-      let(:rooms_yaml) { load_yaml_file('./spec/fixtures/config/rooms.yml') }
-      let(:buildings_yaml) { load_yaml_file('./spec/fixtures/config/buildings.yml') }
-      let(:normalized) { load_yaml_file('./spec/fixtures/normalized_rooms.yml') }
-
-      before do
-        scheduall.instance_variable_set :@rooms, normalized
-        scheduall.stub(:rooms_yaml).and_return rooms_yaml
-        scheduall.stub(:buildings_yaml).and_return buildings_yaml
-      end
-
-      it 'merges building_address value based on building_id' do
-        subject.each do |k, props|
-          expect(props["building_address"]).to eq "19 University Place"
-        end
-      end
-
-      it 'merges room configuration data' do
-        expect(subject['3937']['room_capacity']).to eq 25
-        expect(subject['2696']['room_capacity']).to eq 30
-        expect(subject['2696']['room_notes']).to eq 'Not a general purpose classroom'
       end
 
       it 'assigns return value to @rooms' do

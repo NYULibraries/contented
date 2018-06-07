@@ -26,7 +26,6 @@ module Contented
       def fetch_rooms
         fetch_technologies
         normalize_rooms_by_id
-        merge_config_values
         rooms
       end
 
@@ -70,43 +69,9 @@ module Contented
           tech_item = room_data["technology_description"].split(' ')[1..-1].join(' ') # remove first descriptor word
 
           normalized[room_id]["room_technologies"] << tech_item
-          room_data = room_data.slice("room_description", "building_id", "room_building_description")
+          room_data = room_data
           normalized[room_id] = normalized[room_id].merge(room_data)
           normalized
-        end
-      end
-
-      def merge_config_values
-        @rooms = @rooms.reduce({}) do |res, (id, props)|
-          building_id = props["building_id"]
-          address = buildings_yaml[building_id]&.slice("building_address") || {}
-          room_config = rooms_yaml[id] || {}
-
-          merged_props = [room_config, address].reduce(&:merge)
-
-          res.merge!({ id => merged_props })
-        end
-      end
-
-      def rooms_yaml
-        return @rooms_yaml if @rooms_yaml
-
-        yaml = File.read('config/campusmedia/rooms.yml')
-        hash = YAML.safe_load(yaml)
-
-        @rooms_yaml = hash.transform_values! do |props|
-          props&.transform_keys! { |k| "room_#{k}" }
-        end
-      end
-
-      def buildings_yaml
-        return @buildings_yaml if @buildings_yaml
-
-        yaml = File.read('config/campusmedia/buildings.yml')
-        hash = YAML.safe_load(yaml)
-
-        @buildings_yaml = hash.transform_values! do |props|
-          props&.transform_keys! { |k| "building_#{k}" }
         end
       end
 
