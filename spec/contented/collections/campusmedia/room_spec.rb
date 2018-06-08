@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pry'
 
 describe Contented::Collections::Room do
   raw_rooms = load_yaml('spec/fixtures/normalized_rooms.yml')
@@ -9,6 +8,7 @@ describe Contented::Collections::Room do
   before do
     stub_const('Contented::Collections::Room::ROOMS_CONFIG_FILE', 'spec/fixtures/config/rooms.yml')
     stub_const('Contented::Collections::Room::BUILDINGS_CONFIG_FILE', 'spec/fixtures/config/buildings.yml')
+    stub_const('Contented::Collections::Room::EQUIPMENT_CONFIG_FILE', 'spec/fixtures/config/technology.yml')
   end
 
   describe '::rooms_config' do
@@ -29,6 +29,12 @@ describe Contented::Collections::Room do
     it 'props are converted to symbols' do
       subject.values.map(&:keys).all? { |key| key.is_a? Symbol }
     end
+  end
+
+  describe '::equipment_config' do
+    subject { Contented::Collections::Room.technology_config }
+
+    it { is_expected.to be_a Hash }
   end
 
   describe '#initialize' do
@@ -72,7 +78,8 @@ describe Contented::Collections::Room do
       its(:capacity) { is_expected.to eql 30 }
       its(:software) { is_expected.to be true }
       its(:image) { is_expected.to eql 'GlobalCenter261.jpg' }
-      its(:technologies) { is_expected.to eql ['Internet Connection'] }
+      its(:equipment) { is_expected.to eql ['Wireless Keyboard'] }
+      its(:features) { is_expected.to eql ['Wireless Internet Connection'] }
     end
 
   end

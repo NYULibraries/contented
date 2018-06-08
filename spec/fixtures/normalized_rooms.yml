@@ -4,13 +4,13 @@
   description: 19Univ 229
   building_id: '412'
   building_description: 19 University Place
-  technologies:
-    - Internet Connection
+  technology:
+    - CM-Wireless Internet Connection
+    - CM-Installed Wireless Keyboard
 '3937':
   id: '3937'
   description: 19Univ 337
   building_id: '412'
   building_description: 19 University Place
-  technologies:
-    - Internet Connection
-    - Keyboard
+  technology:
+    - CM-Wireless Internet Connection

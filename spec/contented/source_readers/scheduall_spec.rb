@@ -58,14 +58,14 @@ describe Contented::SourceReaders::Scheduall do
       describe 'equipment property' do
         it 'provides equipment array to each key' do
           subject.each_value do |props|
-            expect(props["equipment"]).to be_a Array
+            expect(props["technology"]).to be_a Array
           end
         end
 
         it 'Inserts values into array' do
-          expect(subject.dig("3937", "equipment")).to include("CM-Installed Wireless Keyboard")
-          expect(subject.dig("3937", "equipment")).to include("CM-Wireless Internet Connection")
-          expect(subject.dig("2696", "equipment")).to include("CM-Wireless Internet Connection")
+          expect(subject.dig("3937", "technology")).to include("CM-Installed Wireless Keyboard")
+          expect(subject.dig("3937", "technology")).to include("CM-Wireless Internet Connection")
+          expect(subject.dig("2696", "technology")).to include("CM-Wireless Internet Connection")
         end
       end
 

@@ -6,27 +6,33 @@ links:
   Room Instructions: {{ instructions }}
   Software list:
     {{ software }}
-image: {{ room_image }}
-departments: {{ room_departments }}
-floor: {{ room_floor }}
-published: false
+image: {{ image }}
+departments: {{ departments }}
+floor: {{ floor }}
+published: {{ published }}
 buttons:
-  Reserve Equipment for this Room: {{ constant_form_url }}
-features: {{ room_features }}
-technology:
-  {% for equipment in room_technologies -%}
-    - {{ equipment }}
+  Reserve Equipment for this Room: {{ form_url }}
+features:
+  {% for item in features -%}
+    - {{ item }}
+  {{%- endfor -%}}
+equipment:
+  {% for item in equipment -%}
+    - {{ item }}
   {{%- endfor -%}}
 policies:
-  Policies: {{ constant_policies_url }}
-description: {{ room_notes }}
-type: {{ room_type }}
+  Policies: {{ policies_url }}
+description: {{ notes }}
+type: {{ type }}
 keywords:
+  {% for keyword in keywords -%}
+    - {{ keyword }}
+  {{%- endfor -%}}
 help:
-  text: {{ building_help_text }}
-  phone: {{ building_help_phone }}
-  email: {{ building_help_email }}
-access: {{ building_access }}
+  text: {{ help_text }}
+  phone: {{ help_phone }}
+  email: {{ help_email }}
+access: {{ access }}
 ---
 
 {{ room_notes }}

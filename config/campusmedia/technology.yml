@@ -1,0 +1,160 @@
+---
+CM-Installed Data/Video Projection:
+  label: Data/Video Projection
+  type: equipment
+CM-Installed Screen:
+  label: Screen
+  type: equipment
+CM-Installed Podium Mic:
+  label: Podium Mic
+  type: equipment
+CM-Pick-Up Wireless lav Mic:
+  label: Wireless lav Mic
+  type: equipment
+CM-Installed Document Camera:
+  label: Document Camera
+  type: equipment
+CM-Installed Computer:
+  label: Computer
+  type: equipment
+CM-Wireless Internet Connection:
+  label: Wireless Internet Connection
+  type: feature
+CM-Installed Wireless Keyboard:
+  label: Wireless Keyboard
+  type: equipment
+CM-Installed Wired Keyboard:
+  label: Wired Keyboard
+  type: equipment
+CM-Installed Blu-Ray Disc Player:
+  label: Blu-Ray Disc Player
+  type: equipment
+CM-Pick-up Slide Remote:
+  label: Slide Remote
+  type: equipment
+CM-Installed Flat Screen (2):
+  label: Flat Screen (2)
+  type: equipment
+CM-Installed Course Capture:
+  label: Course Capture
+  type: equipment
+CM-Class Portable Data Projector:
+  label: Portable Data Projector
+  type: equipment
+CM-Pick-up Data Projector:
+  label: Data Projector
+  type: equipment
+CM-Installed DVD World Deck:
+  label: DVD World Deck
+  type: equipment
+CM-Installed Flat Screen:
+  label: Flat Screen
+  type: equipment
+CM-Class Portable Slide Projector:
+  label: Portable Slide Projector
+  type: equipment
+CM-Installed DVD:
+  label: DVD
+  type: equipment
+CM-Installed Audio Cassette:
+  label: Audio Cassette
+  type: equipment
+CM-Installed CD:
+  label: CD
+  type: equipment
+CM-Installed VCR:
+  label: VCR
+  type: equipment
+CM-Installed DAT Audio Recorder:
+  label: DAT Audio Recorder
+  type: equipment
+CM-Installed Overhead:
+  label: Overhead
+  type: equipment
+CM-Installed Screens(2):
+  label: Screens(2)
+  type: equipment
+CM-Installed Video Conferencing:
+  label: Video Conferencing
+  type: equipment
+CM-Pick-Up Blu-Ray Remote:
+  label: Blu-Ray Remote
+  type: equipment
+CM-Wired Internet Connection:
+  label: Wired Internet Connection
+  type: feature
+CM-Temp Install VCR:
+  label: Install VCR
+  type: equipment
+CM-Tisch Pick-Up Wireless Lav:
+  label: Pick-Up Wireless Lav
+  type: equipment
+CM-Tisch Crestron Remote:
+  label: Crestron Remote
+  type: equipment
+CM-Pick-up Wireless PC:
+  label: Wireless PC
+  type: equipment
+CM-Installed TV Viewing cart:
+  label: TV Viewing cart
+  type: equipment
+CM-Installed Slide Projector:
+  label: Slide Projector
+  type: equipment
+CM-Installed Wireless Handheld Mic:
+  label: Wireless Handheld Mic
+  type: equipment
+CM-Installed 16mm Film Projection:
+  label: 16mm Film Projection
+  type: equipment
+CM-Installed 2 Slide Projectors:
+  label: 2 Slide Projectors
+  type: equipment
+CM-Installed 35mm Film Projection:
+  label: 35mm Film Projection
+  type: equipment
+CM-Portable DVD Cart:
+  label: DVD Cart
+  type: equipment
+CM-194 Mercer Slide Proj.:
+  label: Mercer Slide Proj.
+  type: equipment
+CM-194 Mercer camera:
+  label: Mercer camera
+  type: equipment
+CM-194 Mercer zip drive:
+  label: Mercer zip drive
+  type: equipment
+CM-194 Mercer Pick-Up wireless lav:
+  label: Mercer Pick-Up wireless lav
+  type: equipment
+CM-194 Mercer Pick-Up Wireless Handheld:
+  label: Mercer Pick-Up Wireless Handheld
+  type: equipment
+CM-Pick-Up Wireless Handheld Mic:
+  label: Wireless Handheld Mic
+  type: equipment
+CM-Installed DVD/VCR Combo:
+  label: DVD/VCR Combo
+  type: equipment
+CM-Installed Flat Screen (3):
+  label: Flat Screen (3)
+  type: equipment
+CM-Installed Smart Board:
+  label: Smart Board
+  type: equipment
+CM-Global Center Pick-up Wireless Lav:
+  label: Center Pick-up Wireless Lav
+  type: equipment
+CM-Global Pick-Up Wireless Handheld:
+  label: Pick-Up Wireless Handheld
+  type: equipment
+CM-Global Inst Document Camera:
+  label: Inst Document Camera
+  type: equipment
+CM-Installed AirMedia:
+  label: AirMedia
+  type: equipment
+CM-60 FA Pick-Up Wireless Lav:
+  label: FA Pick-Up Wireless Lav
+  type: equipment

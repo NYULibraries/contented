@@ -60,7 +60,7 @@ module Contented
       def normalize_rooms_by_id
         starter = Hash.new do |rooms_hash, room_id|
           rooms_hash[room_id] = Hash.new do |room_hash, _k|
-            room_hash["equipment"] = []
+            room_hash["technology"] = []
           end
         end
 
@@ -68,7 +68,7 @@ module Contented
           room_id = room_data["id"]
           tech_item = room_data["technology_description"]
 
-          normalized[room_id]["equipment"] << tech_item
+          normalized[room_id]["technology"] << tech_item
           room_data = room_data
           normalized[room_id] = normalized[room_id].merge(room_data)
           normalized
