@@ -189,10 +189,10 @@ describe Contented::Collections::Room do
       subject { room.save_as_markdown! }
 
       # Comment this line out to actually write the file and see what it looks like
-      it('test write file:') { room.save_as_markdown! }
+      # it('test write file:') { room.save_as_markdown! }
 
-      # before { allow(File).to receive(:write).and_return(true) }
-      # it { is_expected.to eql true }
+      before { allow(File).to receive(:write).and_return(true) }
+      it { is_expected.to eql true }
     end
   end
 end
