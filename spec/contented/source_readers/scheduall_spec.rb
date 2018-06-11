@@ -80,7 +80,21 @@ describe Contented::SourceReaders::Scheduall do
     subject { scheduall.rooms }
 
     it { is_expected.to be_a Hash }
-    its(:count) { is_expected.to eql technologies.length }
+    its(:count) { is_expected.to eql 0 }
+
+    context 'rooms fetched' do
+      before do
+        allow(scheduall).to receive :fetch_rooms do
+          scheduall.instance_variable_set(:@rooms, technologies)
+        end
+
+        scheduall.fetch_rooms
+      end
+
+      subject { scheduall.rooms }
+
+      its(:count) { is_expected.to eql technologies.length }
+    end
   end
 
   describe '#each' do
