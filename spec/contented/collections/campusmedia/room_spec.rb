@@ -90,7 +90,7 @@ describe Contented::Collections::Room do
     describe '#filename' do
       subject { room.filename }
 
-      it { is_expected.to eql id }
+      it { is_expected.to eql '2696_19Univ_229' }
     end
 
     describe '#save_location' do
@@ -181,8 +181,18 @@ describe Contented::Collections::Room do
       it { is_expected.to include "phone: 212 222 2222" }
       it { is_expected.to include "email: library-help@nyu.edu" }
 
-      # complex
+      # other
       it { is_expected.to include "title: 19 University Place 229" }
+    end
+
+    describe '#save_as_markdown!' do
+      subject { room.save_as_markdown! }
+
+      # Comment this line out to actually write the file and see what it looks like
+      it('test write file:') { room.save_as_markdown! }
+
+      # before { allow(File).to receive(:write).and_return(true) }
+      # it { is_expected.to eql true }
     end
   end
 end

@@ -96,7 +96,8 @@ module Contented
       end
 
       def filename
-        "#{id}"
+        description = raw[:room_description].gsub(' ', '_')
+        "#{id}_#{description}"
       end
 
       def address
@@ -127,6 +128,10 @@ module Contented
         else
           super(meth, *args)
         end
+      end
+
+      def save_as_markdown!
+        File.write("#{save_location}/#{filename}.markdown", to_markdown)
       end
 
       private
