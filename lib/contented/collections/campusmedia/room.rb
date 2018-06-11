@@ -15,31 +15,31 @@ module Contented
         :address, :title, :capacity,
         :instructions, :software,
         :image, :departments, :floor,
-        :published, :form_url, :features,
-        :equipment, :policies_url, :notes,
+        :features, :equipment, :policies_url,
+        :form_url, :notes, :published,
         :type, :help_text, :help_phone,
-        :help_email, :access,
+        :help_email, :access, :keywords,
+        :description,
       ].freeze
 
       DEFAULTS = {
         published: false,
         departments: 'Campus Media',
-        policies_url: 'http://library.nyu.edu',
-        form_url: 'http://library.nyu.edu',
-        policies: 'http://library.nyu.edu',
+        policies_url: 'http://library.nyu.edu/policies',
+        form_url: 'http://library.nyu.edu/form',
         type: 'Lecture Room',
         help_text: 'Placeholder text about contact info',
         help_phone: '212 222 2222',
-        help_email: 'http://library.nyu.edu',
+        help_email: 'library-help@nyu.edu',
         access: 'NYU Faculty',
-        keywords: ['campus', 'media']
+        keywords: ['campus', 'media'],
+        description: 'Placeholder description text',
       }.freeze
 
       attr_accessor :raw, :save_location
 
       def self.template_file
-        File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) +
-          '/../contented/templates/camuspmedia/room.markdown')
+        File.read('lib/contented/templates/campusmedia/room.markdown')
       end
 
       def self.rooms_config
@@ -79,14 +79,18 @@ module Contented
           end
       end
 
-      def initialize(raw_yaml)
+      def initialize(raw_yaml, save_location)
         self.raw = raw_yaml.transform_keys(&:to_sym)
+        self.save_location = save_location
+        id = raw[:id]
 
-        attributes = ATTRIBUTE_KEYS.reduce({}) do |hash, attr_key|
-          hash.merge!({ attr_key => raw[attr_key] })
-        end
-
+        attributes = {}
         attributes.merge!(DEFAULTS)
+        ATTRIBUTE_KEYS.reduce(attributes) do |attr, attr_key|
+          val = raw[attr_key]
+          val ? attr.merge!({ attr_key => val }) : attr
+        end
+        attributes.merge!(Room.rooms_config[id])
 
         self.room = OpenStruct.new(attributes)
       end
@@ -99,20 +103,8 @@ module Contented
         Room.buildings_config.dig(building_id, :address)
       end
 
-      def notes
-        Room.rooms_config.dig(id, :notes)
-      end
-
-      def capacity
-        Room.rooms_config.dig(id, :capacity)
-      end
-
       def software
-        !!Room.rooms_config.dig(id, :"software-image")
-      end
-
-      def image
-        Room.rooms_config.dig(id, :image)
+        !!Room.rooms_config.dig(id, :'software-image')
       end
 
       def equipment
@@ -121,6 +113,12 @@ module Contented
 
       def features
         technology.map { |item| Room.features_with_labels[item] }.compact
+      end
+
+      def title
+        room_number = raw[:room_description].split(' ').last
+        building_description = raw[:building_description]
+        "#{building_description} #{room_number}"
       end
 
       def method_missing(meth, *args)
@@ -135,21 +133,15 @@ module Contented
 
       attr_accessor :room
 
-      # def to_markdown
-      #   template = Liquid::Template.parse(Room.template_file)
-      #   template.render(to_hash_for_liquid, { strict_variables: true })
-      # end
-
-      # def save_as_markdown!
-      #   File.write("#{save_location}/#{filename}.markdown", to_markdown)
-      # end
-
-      private
-
-      def to_hash_for_liquid
-        ATTRIBUTE_KEYS.reduce({}) do |hash, attribute|
-          hash.merge!({ attribute => send(attribute) })
+      def to_markdown
+        liquid_hash = ATTRIBUTE_KEYS.reduce({}) do |hash, attribute|
+          hash.merge!({ attribute.to_s => send(attribute) })
         end
+
+        template = Liquid::Template.parse(Room.template_file)
+        rendered = template.render(liquid_hash, { strict_variables: true })
+        p template.errors
+        rendered
       end
     end
   end

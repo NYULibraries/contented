@@ -44,7 +44,7 @@ module Contented
           USE schedwin
           SELECT DISTINCT
           schedwin.resctlg.resid as id,
-          schedwin.resctlg.descript as description,
+          schedwin.resctlg.descript as room_description,
           schedwin.resctlg.type as building_id,
           schedwin.resctlg.typedesc as building_description,
           schedwin.svcctlg.svcode as technology_id,
@@ -69,8 +69,7 @@ module Contented
           tech_item = room_data["technology_description"]
 
           normalized[room_id]["technology"] << tech_item
-          room_data = room_data
-          normalized[room_id] = normalized[room_id].merge(room_data)
+          normalized[room_id].merge!(room_data)
           normalized
         end
       end

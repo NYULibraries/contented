@@ -4,8 +4,7 @@ title: {{ title }}
 capacity: {{ capacity }}
 links:
   Room Instructions: {{ instructions }}
-  Software list:
-    {{ software }}
+  Software List: {{ software }}
 image: {{ image }}
 departments: {{ departments }}
 floor: {{ floor }}
@@ -13,21 +12,21 @@ published: {{ published }}
 buttons:
   Reserve Equipment for this Room: {{ form_url }}
 features:
-  {% for item in features -%}
-    - {{ item }}
-  {{%- endfor -%}}
+  {% for feature in features %}
+    {{ feature }}
+  {% endfor %}
 equipment:
-  {% for item in equipment -%}
-    - {{ item }}
-  {{%- endfor -%}}
+  {% for item in equipment %}
+    {{ item }}
+  {% endfor %}
 policies:
   Policies: {{ policies_url }}
-description: {{ notes }}
+description: {{ description }}
 type: {{ type }}
 keywords:
-  {% for keyword in keywords -%}
-    - {{ keyword }}
-  {{%- endfor -%}}
+  {% for keyword in keywords %}
+    {{ keyword }}
+  {% endfor %}
 help:
   text: {{ help_text }}
   phone: {{ help_phone }}
@@ -35,4 +34,4 @@ help:
 access: {{ access }}
 ---
 
-{{ room_notes }}
+{{ notes }}

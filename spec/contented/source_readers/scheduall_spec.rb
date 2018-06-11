@@ -48,7 +48,7 @@ describe Contented::SourceReaders::Scheduall do
 
       it 'merges all properties' do
         subject.each do |id, props|
-          expect(props.key?("description")).to be true
+          expect(props.key?("room_description")).to be true
           expect(props.key?("building_description")).to be true
           expect(props.key?("building_id")).to be true
           expect(props.key?("id")).to be true
