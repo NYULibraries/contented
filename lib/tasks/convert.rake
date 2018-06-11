@@ -42,7 +42,7 @@ namespace :contented do
       scheduall.close
 
       task :rooms do
-        scheduall.each do |r|
+        scheduall.rooms.each do |r|
           room = Contented::Collections::CampusMedia::Room.new(r, './_rooms')
           room.save_as_markdown!
         end
