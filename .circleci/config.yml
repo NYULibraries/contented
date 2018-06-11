@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-       - image: circleci/ruby:2.4.2
+       - image: circleci/ruby:2.5.0
 
     working_directory: ~/app
 
@@ -15,6 +15,20 @@ jobs:
           - v1-dependencies-{{ checksum "Gemfile.lock" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
+
+      - run:
+          name: install TinyTD
+          command: |
+            apt-get install wget
+            apt-get install build-essential
+            apt-get install libc6-dev
+
+            wget http://www.freetds.org/files/stable/freetds-1.00.21.tar.gz
+            tar -xzf freetds-1.00.21.tar.gz
+            cd freetds-1.00.21
+            ./configure --prefix=/usr/local --with-tdsver=7.3
+            make
+            make install
 
       - run:
           name: install dependencies
