@@ -38,13 +38,12 @@ namespace :contented do
       )
 
       scheduall = Contented::SourceReaders::Scheduall.new(options)
+      scheduall.fetch_rooms
       scheduall.close
 
       task :rooms do
-        rooms = scheduall.rooms
-
-        rooms.each do |r|
-          room = Contented::Collections::CampusMedia::Room.new(r)
+        scheduall.rooms.each do |r|
+          room = Contented::Collections::CampusMedia::Room.new(r, './_rooms')
           room.save_as_markdown!
         end
       end

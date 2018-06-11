@@ -12,17 +12,15 @@ module Contented
       def initialize(options)
         @client = Scheduall.driver.new(options)
         @rooms = {}
+      end
 
+      def fetch_rooms
         begin
-          fetch_rooms
+          fetch_technologies
         rescue => e
           puts 'Something went wrong during the Scheduall SQL fetch.'
           puts e.message
         end
-      end
-
-      def fetch_rooms
-        fetch_technologies
         normalize_rooms_by_id
         rooms
       end
