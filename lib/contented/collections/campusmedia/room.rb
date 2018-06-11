@@ -1,5 +1,5 @@
 require 'liquid'
-require 'pry'
+require 'ostruct'
 
 module Contented
   module Collections

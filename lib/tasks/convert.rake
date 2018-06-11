@@ -29,5 +29,25 @@ namespace :contented do
       end
     end
 
+    namespace :campusmedia do
+      Figs.load
+      options = Figs.env.slice(
+        "SCHEDUALL_HOST",
+        "SCHEDUALL_USERNAME",
+        "SCHEDUALL_PASSWORD"
+      )
+
+      scheduall = Contented::SourceReaders::Scheduall.new(options)
+      scheduall.close
+
+      task :rooms do
+        rooms = scheduall.rooms
+
+        rooms.each do |r|
+          room = Contented::Collections::CampusMedia::Room.new(r)
+          room.save_as_markdown!
+        end
+      end
+    end
   end
 end

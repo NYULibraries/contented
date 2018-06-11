@@ -4,6 +4,7 @@ describe Contented::Collections::Room do
   raw_rooms = load_yaml('spec/fixtures/normalized_rooms.yml')
   id = '2696'
   raw_data = raw_rooms[id]
+  save_location = './spec/test_output'.freeze
 
   FIXTURE_FILES = {
     rooms: 'spec/fixtures/config/rooms.yml',
@@ -69,7 +70,7 @@ describe Contented::Collections::Room do
   end
 
   describe '#initialize' do
-    let(:room) { Contented::Collections::Room.new(raw_data, '.') }
+    let(:room) { Contented::Collections::Room.new(raw_data, save_location) }
 
     describe '#raw' do
       subject { room.raw }
@@ -96,7 +97,7 @@ describe Contented::Collections::Room do
     describe '#save_location' do
       subject { room.save_location }
 
-      it { is_expected.to eql '.' }
+      it { is_expected.to eql save_location }
     end
 
     describe 'attributes' do
@@ -188,11 +189,15 @@ describe Contented::Collections::Room do
     describe '#save_as_markdown!' do
       subject { room.save_as_markdown! }
 
-      # Comment this line out to actually write the file and see what it looks like
-      # it('test write file:') { room.save_as_markdown! }
+      it 'writes file to directory' do
+        file_exists = File.exist?(
+          File.expand_path(File.dirname(File.dirname(__FILE__)))
+            .split('/')[0...-2].join('/') +
+            '/test_output/2696_19Univ_229.markdown'
+        )
 
-      before { allow(File).to receive(:write).and_return(true) }
-      it { is_expected.to eql true }
+        expect(file_exists).to be true
+      end
     end
   end
 end
