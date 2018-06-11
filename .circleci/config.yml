@@ -29,6 +29,7 @@ jobs:
             ./configure --prefix=/usr/local --with-tdsver=7.3
             make
             make install
+            cd ../
 
       - run:
           name: install dependencies
