@@ -3,7 +3,7 @@ require 'tiny_tds'
 module Contented
   module SourceReaders
     class Scheduall
-      attr_reader :client, :rooms, :fetched
+      attr_reader :client, :fetched
 
       def self.driver
         TinyTds::Client
@@ -15,14 +15,15 @@ module Contented
       end
 
       def fetch_rooms
-        begin
-          fetch_technologies
-        rescue => e
-          puts 'Something went wrong during the Scheduall SQL fetch.'
-          puts e.message
-        end
-        normalize_rooms_by_id
-        rooms
+        rooms_list =
+          begin
+            fetch_technologies
+          rescue => e
+            puts 'Something went wrong during the Scheduall SQL fetch.'
+            puts e.message
+          end
+
+        @rooms = normalize_rooms_by_id(rooms_list)
       end
 
       def close
@@ -33,10 +34,18 @@ module Contented
         rooms.each(&blk)
       end
 
+      def rooms
+        @rooms.values
+      end
+
+      def rooms_by_id
+        @rooms
+      end
+
       private
 
       def fetch_technologies
-        @rooms = (execute <<~SQL
+        (execute <<~SQL
           USE schedwin
           SELECT DISTINCT
           schedwin.resctlg.resid as id,
@@ -53,14 +62,14 @@ module Contented
         ).map { |h| h.transform_values(&:strip) }
       end
 
-      def normalize_rooms_by_id
+      def normalize_rooms_by_id(rooms_list)
         starter = Hash.new do |rooms_hash, room_id|
           rooms_hash[room_id] = Hash.new do |room_hash, _k|
             room_hash["technology"] = []
           end
         end
 
-        @rooms = @rooms.reduce(starter) do |normalized, room_data|
+        rooms_list.reduce(starter) do |normalized, room_data|
           room_id = room_data["id"]
           tech_item = room_data["technology_description"]
 

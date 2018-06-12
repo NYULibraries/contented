@@ -30,19 +30,22 @@ namespace :contented do
     end
 
     namespace :campusmedia do
-      Figs.load
-      options = Figs.env.slice(
-        "SCHEDUALL_HOST",
-        "SCHEDUALL_USERNAME",
-        "SCHEDUALL_PASSWORD"
-      )
+      desc 'Convert rooms from Scheduall SQL data to Markdown'
+      task :rooms do |t, args|
+        Figs.load
 
-      scheduall = Contented::SourceReaders::Scheduall.new(options)
-      scheduall.fetch_rooms
-      scheduall.close
+        options = {
+          host: Figs.env["SCHEDUALL_HOST"],
+          username: Figs.env["SCHEDUALL_USERNAME"],
+          password: Figs.env["SCHEDUALL_PASSWORD"],
+        }
 
-      task :rooms do
-        scheduall.rooms.each do |r|
+        scheduall = Contented::SourceReaders::Scheduall.new(options)
+        scheduall.fetch_rooms
+        scheduall.close
+
+        rooms = scheduall.rooms
+        rooms.each do |r|
           room = Contented::Collections::CampusMedia::Room.new(r, './_rooms')
           room.save_as_markdown!
         end

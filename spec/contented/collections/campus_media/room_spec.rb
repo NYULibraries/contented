@@ -1,6 +1,7 @@
 require 'spec_helper'
 
-describe Contented::Collections::Room do
+describe Contented::Collections::CampusMedia::Room do
+  klass = Contented::Collections::CampusMedia::Room
   raw_rooms = load_yaml('spec/fixtures/normalized_rooms.yml')
   id = '2696'
   raw_data = raw_rooms[id]
@@ -13,13 +14,13 @@ describe Contented::Collections::Room do
   }.freeze
 
   before do
-    stub_const('Contented::Collections::Room::ROOMS_CONFIG_FILE', FIXTURE_FILES[:rooms])
-    stub_const('Contented::Collections::Room::BUILDINGS_CONFIG_FILE', FIXTURE_FILES[:buildings])
-    stub_const('Contented::Collections::Room::EQUIPMENT_CONFIG_FILE', FIXTURE_FILES[:technology])
+    stub_const("#{klass}::ROOMS_CONFIG_FILE", FIXTURE_FILES[:rooms])
+    stub_const("#{klass}::BUILDINGS_CONFIG_FILE", FIXTURE_FILES[:buildings])
+    stub_const("#{klass}::EQUIPMENT_CONFIG_FILE", FIXTURE_FILES[:technology])
   end
 
   describe '::rooms_config' do
-    subject { Contented::Collections::Room.rooms_config }
+    subject { klass.rooms_config }
 
     it { is_expected.to be_a Hash }
 
@@ -33,7 +34,7 @@ describe Contented::Collections::Room do
   end
 
   describe '::buildings_config' do
-    subject { Contented::Collections::Room.rooms_config }
+    subject { klass.rooms_config }
 
     it { is_expected.to be_a Hash }
 
@@ -47,13 +48,13 @@ describe Contented::Collections::Room do
   end
 
   describe '::technology_config' do
-    subject { Contented::Collections::Room.technology_config }
+    subject { klass.technology_config }
 
     it { is_expected.to be_a Hash }
   end
 
   describe '::equipment_with_labels' do
-    subject { Contented::Collections::Room.equipment_with_labels }
+    subject { klass.equipment_with_labels }
 
     it { is_expected.to be_a Hash }
 
@@ -61,7 +62,7 @@ describe Contented::Collections::Room do
   end
 
   describe '::features_with_labels' do
-    subject { Contented::Collections::Room.features_with_labels }
+    subject { klass.features_with_labels }
 
     it { is_expected.to be_a Hash }
 
@@ -70,7 +71,7 @@ describe Contented::Collections::Room do
   end
 
   describe '#initialize' do
-    let(:room) { Contented::Collections::Room.new(raw_data, save_location) }
+    let(:room) { klass.new(raw_data, save_location) }
 
     describe '#raw' do
       subject { room.raw }
@@ -97,7 +98,7 @@ describe Contented::Collections::Room do
     describe '#save_location' do
       subject { room.save_location }
 
-      it { is_expected.to eql save_location }
+      it { is_expected.to include save_location }
     end
 
     describe 'attributes' do

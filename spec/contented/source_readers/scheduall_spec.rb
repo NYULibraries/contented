@@ -17,7 +17,7 @@ describe Contented::SourceReaders::Scheduall do
     describe 'fetch_technologies' do
       subject { scheduall.send :fetch_technologies }
 
-      it { is_expected.to be_a Enumerable }
+      it { is_expected.to be_a Array }
       its(:count) { is_expected.to eql technologies.count }
 
       it 'strips ids' do
@@ -25,19 +25,12 @@ describe Contented::SourceReaders::Scheduall do
         expect(subject.first["building_id"]).to eq technologies.first["building_id"].strip
         expect(subject.first["technology_id"]).to eq technologies.first["technology_id"].strip
       end
-
-      it 'assigns return value to @rooms' do
-        subject
-        expect(scheduall.rooms).to eq subject
-      end
     end
 
     describe 'normalize_rooms_by_id' do
-      subject { scheduall.send :normalize_rooms_by_id }
+      denormalized = load_yaml('./spec/fixtures/denormalized_rooms.yml')
 
-      let(:denormalized) { load_yaml('./spec/fixtures/denormalized_rooms.yml') }
-
-      before { scheduall.instance_variable_set :@rooms, denormalized }
+      subject { scheduall.send :normalize_rooms_by_id, denormalized }
 
       it 'retains all unique room_id keys' do
         uniq_ids = denormalized.map { |v| v["id"] }.uniq
@@ -68,24 +61,21 @@ describe Contented::SourceReaders::Scheduall do
           expect(subject.dig("2696", "technology")).to include("CM-Wireless Internet Connection")
         end
       end
-
-      it 'assigns return value to @rooms' do
-        subject
-        expect(scheduall.rooms).to eq subject
-      end
     end
   end
 
   describe '#rooms' do
     subject { scheduall.rooms }
 
-    it { is_expected.to be_a Hash }
+    it { is_expected.to be_an Array }
     its(:count) { is_expected.to eql 0 }
 
     context 'rooms fetched' do
+      normalized_rooms = load_yaml('./spec/fixtures/normalized_rooms.yml')
+
       before do
         allow(scheduall).to receive :fetch_rooms do
-          scheduall.instance_variable_set(:@rooms, technologies)
+          scheduall.instance_variable_set(:@rooms, normalized_rooms)
         end
 
         scheduall.fetch_rooms
@@ -93,7 +83,8 @@ describe Contented::SourceReaders::Scheduall do
 
       subject { scheduall.rooms }
 
-      its(:count) { is_expected.to eql technologies.length }
+      it { is_expected.to be_an Array }
+      its(:count) { is_expected.to eql normalized_rooms.length }
     end
   end
 
@@ -102,7 +93,7 @@ describe Contented::SourceReaders::Scheduall do
       scheduall.stub(:rooms).and_return Hash.new('123' => {}, '456' => {})
     end
 
-    it 'loops over the @rooms' do
+    it 'loops over the #rooms array' do
       scheduall.each do |room|
         expect room.to be_a Hash
       end

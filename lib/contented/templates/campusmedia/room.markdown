@@ -11,22 +11,19 @@ floor: {{ floor }}
 published: {{ published }}
 buttons:
   Reserve Equipment for this Room: {{ form_url }}
-features:
-  {% for feature in features %}
-    {{ feature }}
-  {% endfor %}
-equipment:
-  {% for item in equipment %}
-    {{ item }}
-  {% endfor %}
+features: {% for feature in features %}
+  - {{ feature }}
+{%- endfor %}
+equipment: {% for item in equipment %}
+  - {{ item }}
+{%- endfor %}
 policies:
   Policies: {{ policies_url }}
 description: {{ description }}
 type: {{ type }}
-keywords:
-  {% for keyword in keywords %}
-    {{ keyword }}
-  {% endfor %}
+keywords: {% for keyword in keywords %}
+  {{ keyword }}
+{%- endfor %}
 help:
   text: {{ help_text }}
   phone: {{ help_phone }}
