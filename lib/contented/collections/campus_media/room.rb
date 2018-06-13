@@ -108,8 +108,33 @@ module Contented
         end
 
         def filename
-          description = raw[:room_description].gsub(' ', '_')
-          "#{id}_#{description}"
+          filename =
+            raw[:room_description]
+              .downcase
+              .squeeze(' ')
+              .gsub(/\([^()]*\)/, "") # removes parentheses
+              .gsub(' ', '-') # hyphenate
+              .gsub('|', '') # remove pipes
+              .gsub('.', '') # remove dots
+              .squeeze('-')
+
+          # helpers
+          is_i = ->(char) { char =~ /\A[-+]?[0-9]+\z/ }
+          adds_hyphen = ->(chars, char, idx) do
+            next_char = chars[idx + 1]
+
+            is_i[char] &&
+            !is_i[next_char] &&
+            char =~ /\-|\./ &&
+            idx < chars.length - 1
+          end
+
+          chars = filename.chars
+          chars
+            .map.with_index do |char, idx|
+              adds_hyphen[chars, char, idx] ? "#{char}-" : char
+            end
+            .join('')
         end
 
         def address

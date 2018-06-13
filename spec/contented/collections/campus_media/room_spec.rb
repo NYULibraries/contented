@@ -110,7 +110,7 @@ describe Contented::Collections::CampusMedia::Room do
     describe '#filename' do
       subject { room.filename }
 
-      it { is_expected.to eql '2696_19Univ_229' }
+      it { is_expected.to eql '19-univ-229' }
     end
 
     describe '#save_location' do
