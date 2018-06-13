@@ -6,17 +6,28 @@ describe Contented::Collections::CampusMedia::Room do
   id = '2696'
   raw_data = raw_rooms[id]
   save_location = './spec/test_output'.freeze
+  let(:http) { double 'http' }
 
   FIXTURE_FILES = {
-    rooms: 'spec/fixtures/config/rooms.yml',
-    buildings: 'spec/fixtures/config/buildings.yml',
-    technology: 'spec/fixtures/config/technology.yml',
+    rooms: File.read("spec/fixtures/config/rooms.yml"),
+    buildings: File.read("spec/fixtures/config/buildings.yml"),
+    technology: File.read("spec/fixtures/config/technology.yml"),
   }.freeze
 
   before do
-    stub_const("#{klass}::ROOMS_CONFIG_FILE", FIXTURE_FILES[:rooms])
-    stub_const("#{klass}::BUILDINGS_CONFIG_FILE", FIXTURE_FILES[:buildings])
-    stub_const("#{klass}::EQUIPMENT_CONFIG_FILE", FIXTURE_FILES[:technology])
+    allow(http)
+      .to receive(:get).with(/rooms.yml/)
+      .and_return OpenStruct.new(body: FIXTURE_FILES[:rooms])
+
+    allow(http)
+      .to receive(:get).with(/buildings.yml/)
+      .and_return OpenStruct.new(body: FIXTURE_FILES[:buildings])
+
+    allow(http)
+      .to receive(:get).with(/technology.yml/)
+      .and_return OpenStruct.new(body: FIXTURE_FILES[:technology])
+
+    stub_const "HTTParty", http
   end
 
   describe '::rooms_config' do

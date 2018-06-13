@@ -1,14 +1,16 @@
 require 'liquid'
 require 'ostruct'
+require 'httparty'
 
 module Contented
   module Collections
     module CampusMedia
       class Room
         FILE_ROOT = File.expand_path(File.dirname(File.dirname(__FILE__))) + '/../../..'
-        ROOMS_CONFIG_FILE = "#{FILE_ROOT}/config/campusmedia/rooms.yml".freeze
-        BUILDINGS_CONFIG_FILE = "#{FILE_ROOT}/config/campusmedia/buildings.yml".freeze
-        EQUIPMENT_CONFIG_FILE = "#{FILE_ROOT}/config/campusmedia/technology.yml".freeze
+        GIT_URL= "https://raw.githubusercontent.com/NYULibraries/campusmedia-fillins/master/".freeze
+        ROOMS_CONFIG_FILE = "rooms.yml".freeze
+        BUILDINGS_CONFIG_FILE = "buildings.yml".freeze
+        TECHNOLOGY_CONFIG_FILE = "technology.yml".freeze
 
         ATTRIBUTE_KEYS = [
           # attributes for class
@@ -25,7 +27,7 @@ module Contented
         ].freeze
 
         DEFAULTS = {
-          published: true,
+          published: false,
           departments: 'Campus Media',
           policies_url: 'http://library.nyu.edu/policies',
           form_url: 'http://library.nyu.edu/form',
@@ -41,12 +43,14 @@ module Contented
         attr_reader :raw, :save_location
 
         def self.template_file
-          File.read(FILE_ROOT + '/lib/contented/templates/campusmedia/room.markdown')
+          File.read("#{FILE_ROOT}/lib/contented/templates/campusmedia/room.markdown")
         end
 
         def self.rooms_config
           @rooms_config ||= (
-            yaml = YAML.safe_load(File.read(ROOMS_CONFIG_FILE))
+            url = GIT_URL + ROOMS_CONFIG_FILE
+            res = HTTParty.get(url)
+            yaml = YAML.safe_load(res.body)
             yaml.transform_values do |props|
               props ? props.transform_keys(&:to_sym) : next
             end
@@ -55,7 +59,9 @@ module Contented
 
         def self.buildings_config
           @buildings_config ||= (
-            yaml = YAML.safe_load(File.read(BUILDINGS_CONFIG_FILE))
+            url = GIT_URL + BUILDINGS_CONFIG_FILE
+            res = HTTParty.get(url)
+            yaml = YAML.safe_load(res.body)
             yaml.transform_values do |props|
               props ? props.transform_keys(&:to_sym) : next
             end
@@ -63,8 +69,11 @@ module Contented
         end
 
         def self.technology_config
-          @technology_config ||=
-            YAML.safe_load(File.read(EQUIPMENT_CONFIG_FILE))
+          @technology_config ||= (
+            url = GIT_URL + TECHNOLOGY_CONFIG_FILE
+            res = HTTParty.get(url)
+            YAML.safe_load(res.body)
+          )
         end
 
         def self.equipment_with_labels

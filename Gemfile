@@ -11,6 +11,7 @@ group :development, :test do
   gem 'figs', '~> 2.1'
   gem 'rspec', '~> 3.5'
   gem 'tiny_tds'
+  gem 'httparty'
 
   gem 'guard-rspec', require: false
   gem 'climate_control'
