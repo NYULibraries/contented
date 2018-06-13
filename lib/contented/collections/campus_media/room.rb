@@ -117,8 +117,15 @@ module Contented
         end
 
         def software
-          Room.rooms_config.dig(id, :'software-image') ?
-            'http://library.nyu.edu/software' : nil
+          @room[:'software-image'] ? 'http://library.nyu.edu/software' : nil
+        end
+
+        def image
+          "https://www.nyu.edu/campusmedia/images/rooms/#{@room[:image]}"
+        end
+
+        def instructions
+          "https://www.nyu.edu/campusmedia/data/pdfs/smartrooms/#{@room[:instructions]}"
         end
 
         def equipment

@@ -145,9 +145,9 @@ describe Contented::Collections::CampusMedia::Room do
 
       describe 'includes values ::rooms_config' do
         its(:capacity) { is_expected.to eql 30 }
-        its(:instructions) { is_expected.to eql '19_University_Instructions.pdf' }
+        its(:instructions) { is_expected.to eql 'https://www.nyu.edu/campusmedia/data/pdfs/smartrooms/19_University_Instructions.pdf' }
         its(:software) { is_expected.to eql 'http://library.nyu.edu/software' }
-        its(:image) { is_expected.to eql '19University229.jpg' }
+        its(:image) { is_expected.to eql 'https://www.nyu.edu/campusmedia/images/rooms/19University229.jpg' }
         its(:notes) { is_expected.to eql 'Not a general purpose classroom' }
       end
 
@@ -173,9 +173,9 @@ describe Contented::Collections::CampusMedia::Room do
       # rooms_config
       it { is_expected.to include "capacity: 30" }
       it { is_expected.to include "links:" }
-      it { is_expected.to include "Room Instructions: 19_University_Instructions.pdf" }
+      it { is_expected.to include "Room Instructions: https://www.nyu.edu/campusmedia/data/pdfs/smartrooms/19_University_Instructions.pdf" }
       it { is_expected.to include "Software List: http://library.nyu.edu/software" }
-      it { is_expected.to include "image: 19University229.jpg" }
+      it { is_expected.to include "image: https://www.nyu.edu/campusmedia/images/rooms/19University229.jpg" }
 
       #tech_config
       it { is_expected.to include "features:" }
