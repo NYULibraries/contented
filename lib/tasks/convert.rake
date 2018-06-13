@@ -31,12 +31,10 @@ namespace :contented do
 
     namespace :campusmedia do
       desc 'Convert rooms from Scheduall SQL data to Markdown'
-      task :rooms, :save_location do |t, args|
+      task :rooms, [:save_location] do |t, args|
         Figs.load
 
         save_location = args[:save_location] || './_campusmedia'
-
-        p save_location
 
         options = {
           host: Figs.env["SCHEDUALL_HOST"],

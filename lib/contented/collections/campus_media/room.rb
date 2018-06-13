@@ -25,7 +25,7 @@ module Contented
         ].freeze
 
         DEFAULTS = {
-          published: false,
+          published: true,
           departments: 'Campus Media',
           policies_url: 'http://library.nyu.edu/policies',
           form_url: 'http://library.nyu.edu/form',
@@ -36,7 +36,7 @@ module Contented
           access: 'NYU Faculty',
           keywords: ['campus', 'media'],
           description: 'Placeholder description text',
-        }.freeze
+        }
 
         attr_reader :raw, :save_location
 
@@ -70,7 +70,8 @@ module Contented
         def self.equipment_with_labels
           @equipment_with_labels ||=
             technology_config.reduce({}) do |acc, (k, props)|
-              props['type'] === 'equipment' ? acc.merge!({ k => props['label'] }) : acc
+              is_equipment = props['type'] === 'equipment'
+              is_equipment ? acc.merge!(k => props.slice('label', 'description')) : acc
             end
         end
 
@@ -112,7 +113,14 @@ module Contented
         end
 
         def equipment
-          technology.map { |item| Room.equipment_with_labels[item] }.compact
+          technology.reduce({}) do |res, item|
+            item_data = Room.equipment_with_labels[item]
+            if item_data
+              res.merge!(item_data["label"] => item_data["description"])
+            else
+              res
+            end
+          end
         end
 
         def features

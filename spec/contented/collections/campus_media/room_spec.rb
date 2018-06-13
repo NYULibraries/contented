@@ -56,9 +56,16 @@ describe Contented::Collections::CampusMedia::Room do
   describe '::equipment_with_labels' do
     subject { klass.equipment_with_labels }
 
-    it { is_expected.to be_a Hash }
+    expected = {
+      'CM-Installed Wireless Keyboard' => {
+        'label' => 'Wireless Keyboard',
+        'description' => 'Used for typing things',
+      },
+    }
 
-    it { is_expected.to eql({ 'CM-Installed Wireless Keyboard' => 'Wireless Keyboard' }) }
+
+    it { is_expected.to be_a Hash }
+    it { is_expected.to be_deep_equal expected }
   end
 
   describe '::features_with_labels' do
@@ -135,7 +142,7 @@ describe Contented::Collections::CampusMedia::Room do
 
       describe 'includes values from ::technology_config' do
         its(:features) { is_expected.to eql ['Wireless Internet Connection'] }
-        its(:equipment) { is_expected.to eql ['Wireless Keyboard'] }
+        its(:equipment) { is_expected.to eql("Wireless Keyboard" => "Used for typing things") }
       end
 
       describe '#title' do
@@ -162,8 +169,8 @@ describe Contented::Collections::CampusMedia::Room do
       #tech_config
       it { is_expected.to include "features:" }
       it { is_expected.to include "Wireless Internet Connection" }
-      it { is_expected.to include "equipment:" }
-      it { is_expected.to include "Wireless Keyboard" }
+      it { is_expected.to include "technology:" }
+      it { is_expected.to include "Wireless Keyboard: Used for typing things" }
 
       # defaults
       it { is_expected.to include "departments: Campus Media" }

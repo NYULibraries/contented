@@ -14,8 +14,8 @@ buttons:
 features: {% for feature in features %}
   - {{ feature }}
 {%- endfor %}
-equipment: {% for item in equipment %}
-  - {{ item }}
+technology: {% for item in equipment %}
+  {{ item[0] }}: {{ item[1] }}
 {%- endfor %}
 policies:
   Policies: {{ policies_url }}
