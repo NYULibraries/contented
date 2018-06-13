@@ -121,11 +121,13 @@ module Contented
         end
 
         def image
-          "https://www.nyu.edu/campusmedia/images/rooms/#{@room[:image]}"
+          image_val = room[:image]
+          image_val ? "https://www.nyu.edu/campusmedia/images/rooms/#{image_val}" : nil
         end
 
         def instructions
-          "https://www.nyu.edu/campusmedia/data/pdfs/smartrooms/#{@room[:instructions]}"
+          instructions_val = room[:instructions]
+          instructions_val ? "https://www.nyu.edu/campusmedia/data/pdfs/smartrooms/#{room[:instructions]}" : nil
         end
 
         def equipment
