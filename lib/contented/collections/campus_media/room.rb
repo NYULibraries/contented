@@ -38,10 +38,10 @@ module Contented
           description: 'Placeholder description text',
         }.freeze
 
-        attr_reader :raw
+        attr_reader :raw, :save_location
 
         def self.template_file
-          File.read('lib/contented/templates/campusmedia/room.markdown')
+          File.read(FILE_ROOT + '/lib/contented/templates/campusmedia/room.markdown')
         end
 
         def self.rooms_config
@@ -107,7 +107,8 @@ module Contented
         end
 
         def software
-          !!Room.rooms_config.dig(id, :'software-image')
+          Room.rooms_config.dig(id, :'software-image') ?
+            'http://library.nyu.edu/software' : nil
         end
 
         def equipment
@@ -130,10 +131,6 @@ module Contented
           else
             super(meth, *args)
           end
-        end
-
-        def save_location
-          "#{FILE_ROOT}/#{@save_location}"
         end
 
         def save_as_markdown!

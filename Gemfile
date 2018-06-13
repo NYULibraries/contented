@@ -10,10 +10,9 @@ group :development, :test do
   gem 'swiftype', '~> 1.2.2'
   gem 'figs', '~> 2.1'
   gem 'rspec', '~> 3.5'
+  gem 'tiny_tds'
 
   gem 'guard-rspec', require: false
   gem 'climate_control'
   gem 'pry'
-
-  gem 'tiny_tds'
 end
