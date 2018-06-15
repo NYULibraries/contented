@@ -87,7 +87,8 @@ module Contented
         def self.features_with_labels
           @features_with_labels ||=
             technology_config.reduce({}) do |acc, (k, props)|
-              props['type'] === 'feature' ? acc.merge!({ k => props['label'] }) : acc
+              is_feature = props['type'] === 'feature'
+              is_feature ? acc.merge!({ k => props['label'] }) : acc
             end
         end
 
@@ -108,33 +109,22 @@ module Contented
         end
 
         def filename
-          filename =
-            raw[:room_description]
-              .downcase
-              .squeeze(' ')
-              .gsub(/\([^()]*\)/, "") # removes parentheses
-              .gsub(' ', '-') # hyphenate
-              .gsub('|', '') # remove pipes
-              .gsub('.', '') # remove dots
-              .squeeze('-')
-
-          # helpers
           is_i = ->(char) { char =~ /\A[-+]?[0-9]+\z/ }
           adds_hyphen = ->(chars, char, idx) do
-            next_char = chars[idx + 1]
-
-            is_i[char] &&
-            !is_i[next_char] &&
-            char =~ /\-|\./ &&
-            idx < chars.length - 1
+            is_i[char] && !is_i[chars[idx + 1]] && idx + 1 < chars.length
           end
 
+          filename =
+            raw[:room_description]
+              .downcase.squeeze(' ')
+              .gsub(/\([^()]*\)/, "") # removes parentheses and contents
+              .gsub(/[ |.]/, '-') # hyphenate special chars
+
           chars = filename.chars
-          chars
-            .map.with_index do |char, idx|
-              adds_hyphen[chars, char, idx] ? "#{char}-" : char
-            end
-            .join('')
+          chars.each_with_index.reduce("") do |str, (char, i)|
+            "#{str}#{char}#{'-' if adds_hyphen[chars, char, i]}"
+          end
+            .squeeze('-').chomp('-')
         end
 
         def address
@@ -158,16 +148,17 @@ module Contented
         def equipment
           technology.reduce({}) do |res, item|
             item_data = Room.equipment_with_labels[item]
-            if item_data
+            item_data ?
               res.merge!(item_data["label"] => item_data["description"])
-            else
-              res
-            end
+              : res
           end
         end
 
         def features
-          technology.map { |item| Room.features_with_labels[item] }.compact
+          technology.reduce([]) do |list, f|
+            feature = Room.features_with_labels[f]
+            feature ? list.push(feature) : list
+          end
         end
 
         def title

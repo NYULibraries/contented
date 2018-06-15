@@ -111,6 +111,11 @@ describe Contented::Collections::CampusMedia::Room do
       subject { room.filename }
 
       it { is_expected.to eql '19-univ-229' }
+
+      it 'handles complex descriptions' do
+        complex_room = klass.new({ room_description: '19University--C|13.2 ( lounge ) ' }, '.')
+        expect(complex_room.filename).to eql "19-university-c-13-2"
+      end
     end
 
     describe '#save_location' do
