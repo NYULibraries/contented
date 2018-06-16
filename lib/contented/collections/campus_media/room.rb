@@ -38,7 +38,7 @@ module Contented
           access: 'NYU Faculty',
           keywords: ['campus', 'media'],
           description: 'Placeholder description text',
-        }
+        }.freeze
 
         attr_reader :raw, :save_location
 
@@ -88,7 +88,7 @@ module Contented
           @features_with_labels ||=
             technology_config.reduce({}) do |acc, (k, props)|
               is_feature = props['type'] === 'feature'
-              is_feature ? acc.merge!({ k => props['label'] }) : acc
+              is_feature ? acc.merge!(k => props['label']) : acc
             end
         end
 
@@ -97,15 +97,12 @@ module Contented
           @save_location = save_location
           id = raw[:id]
 
-          attributes = {}
-          attributes.merge!(DEFAULTS)
-          ATTRIBUTE_KEYS.reduce(attributes) do |attr, attr_key|
-            val = raw[attr_key]
-            val ? attr.merge!({ attr_key => val }) : attr
+          attributes = {}.merge!(DEFAULTS)
+          ATTRIBUTE_KEYS.reduce(attributes) do |hash, k|
+            attributes.merge!(k => raw[k])
           end
-          attributes.merge!(Room.rooms_config[id] || {})
-
-          self.room = OpenStruct.new(attributes)
+          attributes.merge!(Room.rooms_config[id]) if Room.rooms_config[id]
+          @room = OpenStruct.new(attributes)
         end
 
         def filename
@@ -132,7 +129,7 @@ module Contented
         end
 
         def software
-          @room[:'software-image'] ? 'http://library.nyu.edu/software' : nil
+          room[:'software-image'] ? 'http://library.nyu.edu/software' : nil
         end
 
         def image
@@ -148,9 +145,11 @@ module Contented
         def equipment
           technology.reduce({}) do |res, item|
             item_data = Room.equipment_with_labels[item]
-            item_data ?
-              res.merge!(item_data["label"] => item_data["description"])
-              : res
+            if item_data
+              item_data["label"], item_data["description"] = label, description
+              res.merge!(label => description)
+            end
+            res
           end
         end
 
@@ -168,11 +167,7 @@ module Contented
         end
 
         def method_missing(meth, *args)
-          if ATTRIBUTE_KEYS.include?(meth)
-            room.send(meth)
-          else
-            super(meth, *args)
-          end
+          ATTRIBUTE_KEYS.include?(meth) ? room.send(meth) : super(meth, *args)
         end
 
         def save_as_markdown!
@@ -185,7 +180,7 @@ module Contented
 
         def to_markdown
           liquid_hash = ATTRIBUTE_KEYS.reduce({}) do |hash, attribute|
-            hash.merge!({ attribute.to_s => send(attribute) })
+            hash.merge!(attribute.to_s => send(attribute))
           end
 
           template = Liquid::Template.parse(Room.template_file)
