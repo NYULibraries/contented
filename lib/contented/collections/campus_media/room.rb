@@ -1,6 +1,7 @@
 require 'liquid'
 require 'ostruct'
 require 'httparty'
+require 'pry'
 
 module Contented
   module Collections
@@ -27,7 +28,7 @@ module Contented
         ].freeze
 
         DEFAULTS = {
-          published: false,
+          published: true,
           departments: 'Campus Media',
           policies_url: 'http://library.nyu.edu/policies',
           form_url: 'http://library.nyu.edu/form',
@@ -99,7 +100,7 @@ module Contented
 
           attributes = {}.merge!(DEFAULTS)
           ATTRIBUTE_KEYS.reduce(attributes) do |hash, k|
-            attributes.merge!(k => raw[k])
+            attributes.merge!(k => raw[k]) unless attributes[k]
           end
           attributes.merge!(Room.rooms_config[id]) if Room.rooms_config[id]
           @room = OpenStruct.new(attributes)
@@ -146,7 +147,8 @@ module Contented
           technology.reduce({}) do |res, item|
             item_data = Room.equipment_with_labels[item]
             if item_data
-              item_data["label"], item_data["description"] = label, description
+              label = item_data['label']
+              description = item_data['description']
               res.merge!(label => description)
             end
             res
