@@ -2,33 +2,34 @@
 address: {{ address }}
 title: {{ title }}
 capacity: {{ capacity }}
-links:
-  Room Instructions: {{ instructions }}
-  Software List: {{ software }}
+links: {% for link in links %}
+  {{ link[0] }}: {{ link[1] }}
+{%- endfor %}
 image: {{ image }}
 departments: {{ departments }}
 floor: {{ floor }}
 published: {{ published }}
-buttons:
-  Reserve Equipment for this Room: {{ form_url }}
+buttons: {% for button in buttons %}
+  {{ button[0] }}: {{ button[1] }}
+{%- endfor %}
 features: {% for feature in features %}
   - {{ feature }}
 {%- endfor %}
 technology: {% for item in equipment %}
   {{ item[0] }}: {{ item[1] }}
 {%- endfor %}
-policies:
-  Policies: {{ policies_url }}
+policies: {% for policy in policies %}
+  {{ policy[0] }}: {{ policy[1] }}
+{%- endfor %}
 description: {{ description }}
 type: {{ type }}
 keywords: {% for keyword in keywords %}
   {{ keyword }}
 {%- endfor %}
-help:
-  text: {{ help_text }}
-  phone: {{ help_phone }}
-  email: {{ help_email }}
+help: {% for item in help %}
+  {{ item[0] }}: {{ item[1] }}
+{%- endfor %}
 access: {{ access }}
 ---
 
-{{ notes }}
+{{ body }}

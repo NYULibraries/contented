@@ -1,9 +1,12 @@
 require 'spec_helper'
+require 'active_support'
 
 describe Contented::Collections::CampusMedia::Room do
   klass = Contented::Collections::CampusMedia::Room
   raw_rooms = load_yaml('spec/fixtures/normalized_rooms.yml')
-  id = '2696'
+                .deep_symbolize_keys
+
+  id = :'2696'
   raw_data = raw_rooms[id]
   save_location = './spec/test_output'.freeze
   let(:http) { double 'http' }
@@ -36,25 +39,28 @@ describe Contented::Collections::CampusMedia::Room do
     it { is_expected.to be_a Hash }
 
     it 'props are converted to symbols' do
-      subject.values.map(&:keys).all? { |key| key.is_a? Symbol }
+      all_symbols = subject.values.map(&:keys).flatten.all? { |key| key.is_a? Symbol }
+      expect(all_symbols).to be true
     end
 
-    it 'id keys remain strings' do
-      subject.keys { |k| k.is_a? String }
+    it 'id keys symbolized' do
+      all_symbols =subject.keys.all? { |k| k.is_a? Symbol }
+      expect(all_symbols).to be true
     end
   end
 
   describe '::buildings_config' do
-    subject { klass.rooms_config }
+    subject { klass.buildings_config }
 
     it { is_expected.to be_a Hash }
 
     it 'props are converted to symbols' do
-      subject.values.map(&:keys).all? { |key| key.is_a? Symbol }
+      all_symbols = subject.values.map(&:keys).flatten.all? { |key| key.is_a? Symbol }
+      expect(all_symbols).to be true
     end
 
-    it 'id keys remain strings' do
-      subject.keys { |k| k.is_a? String }
+    it 'id keys symbolized' do
+      subject.keys.all? { |k| k.is_a? Symbol }
     end
   end
 
@@ -62,34 +68,182 @@ describe Contented::Collections::CampusMedia::Room do
     subject { klass.technology_config }
 
     it { is_expected.to be_a Hash }
+
+    it 'symbolizes keys' do
+      all_main_keys_symbols = subject.keys.all? { |k| k.is_a? Symbol }
+      expect(all_main_keys_symbols).to be true
+
+      all_props_symbolized = subject.values.map(&:keys).flatten.all? { |k| k.is_a? Symbol }
+      expect(all_props_symbolized).to be true
+    end
   end
 
-  describe '::equipment_with_labels' do
-    subject { klass.equipment_with_labels }
-
-    expected = {
-      'CM-Installed Wireless Keyboard' => {
-        'label' => 'Wireless Keyboard',
-        'description' => 'Used for typing things',
-      },
-    }
-
+  describe '::equipment' do
+    subject { klass.equipment }
 
     it { is_expected.to be_a Hash }
-    it { is_expected.to be_deep_equal expected }
+    its([:'CM-Installed Wireless Keyboard']) do
+      is_expected.to be_deep_equal(
+        label: 'Wireless Keyboard',
+        description: 'Used for typing things',
+        type: "equipment"
+      )
+    end
   end
 
   describe '::features_with_labels' do
-    subject { klass.features_with_labels }
+    subject { klass.features }
 
     it { is_expected.to be_a Hash }
+    its([:'CM-Wireless Internet Connection']) do
+      is_expected.to eql(
+        label: 'Wireless Internet Connection',
+        type: 'feature'
+      )
+    end
+  end
 
-    result = { 'CM-Wireless Internet Connection' => 'Wireless Internet Connection' }
-    it { is_expected.to eql result }
+  describe '::defaults' do
+    before do
+      allow(klass)
+        .to receive(:rooms_config)
+        .and_return({
+          default: {
+            links: nil,
+            policies: nil,
+            buttons: nil,
+            keywords: nil,
+            help: {
+              text: nil,
+              phone: nil,
+              email: nil,
+            },
+            body: nil
+          },
+        })
+    end
+
+    subject { klass.defaults }
+
+    its([:links]) { is_expected.to be_a Hash }
+    its([:policies]) { is_expected.to be_a Hash }
+    its([:buttons]) { is_expected.to be_a Hash }
+    its([:keywords]) { is_expected.to be_a Array }
+
+    its([:help]) { is_expected.to be_a Hash }
+    its([:help, :phone]) { is_expected.to be nil }
+    its([:help, :text]) { is_expected.to be nil }
+    its([:help, :email]) { is_expected.to be nil }
+
+    its([:body]) { is_expected.to be nil }
+  end
+
+  describe '::merge_defaults!' do
+    before do
+      allow(klass)
+        .to receive(:defaults)
+        .and_return({
+          links: {
+            :'Default Link' => 'defaultlink1.com',
+            :'Default Link2' => 'defaultlink2.com'
+          },
+          policies: {
+            :'Policy Link' => 'policy.com'
+          },
+          buttons: {
+            :'Button Link' => 'button.com'
+          },
+          keywords: ['key', 'word'],
+          help: {
+            text: 'Feel free to reach out',
+            phone: '212 222 2222',
+            email: 'email@email.com',
+          },
+          body: 'This is a placeholder body'
+        })
+    end
+
+    let(:dummy_data) do
+      {
+        links: {
+          :'Link 3' => 'link3.com',
+        },
+        policies: {
+          :'Extra policy' => 'policy2.com'
+        },
+        buttons: {
+          :'More Buttons' => 'button2.com'
+        },
+        keywords: ['more', 'special', 'words'],
+        help: {
+          phone: '212 555 5555'
+        },
+        body: 'Now this body should appear'
+      }
+    end
+
+    let(:merged) do
+      {
+        links: {
+          :'Default Link' => 'defaultlink1.com',
+          :'Default Link2' => 'defaultlink2.com',
+          :'Link 3' => 'link3.com',
+        },
+        policies: {
+          :'Policy Link' => 'policy.com',
+          :'Extra policy' => 'policy2.com'
+        },
+        buttons: {
+          :'Button Link' => 'button.com',
+          :'More Buttons' => 'button2.com'
+        },
+        keywords: ['key', 'word', 'more', 'special', 'words'],
+        help: {
+          text: 'Feel free to reach out',
+          phone: '212 555 5555',
+          email: 'email@email.com',
+        },
+        body: 'Now this body should appear'
+      }
+    end
+
+    subject { klass.merge_defaults!(dummy_data) }
+
+    its([:links]) { is_expected.to eql merged[:links] }
+    its([:policies]) { is_expected.to eql merged[:policies] }
+    its([:buttons]) { is_expected.to eql merged[:buttons] }
+    its([:keywords]) { is_expected.to eql merged[:keywords] }
+    its([:help]) { is_expected.to be_deep_equal merged[:help] }
+    its([:body]) { is_expected.to eql merged[:body] }
+    its(:object_id) { is_expected.to eql dummy_data.object_id }
   end
 
   describe '#initialize' do
     let(:room) { klass.new(raw_data, save_location) }
+
+    before do
+      allow(klass)
+        .to receive(:defaults)
+        .and_return({
+          links: {
+            :'Default Link' => 'defaultlink1.com',
+            :'Default Link2' => 'defaultlink2.com'
+          },
+          policies: {
+            :'Policy Link' => 'policy.com'
+          },
+          buttons: {
+            :'Button Link' => 'button.com'
+          },
+          keywords: ['key', 'word'],
+          help: {
+            text: 'Feel free to reach out',
+            phone: '212 222 2222',
+            email: 'email@email.com',
+          },
+          body: 'This is a placeholder body'
+        })
+    end
 
     describe '#raw' do
       subject { room.raw }
@@ -97,24 +251,19 @@ describe Contented::Collections::CampusMedia::Room do
       it { is_expected.to be_a Hash }
 
       it 'string keys are converted to symbols' do
-        expect(subject).to eq(raw_data.transform_keys(&:to_sym))
+        all_symbols = subject.keys.all? { |k| k.is_a? Symbol }
+        expect(all_symbols).to be true
       end
-    end
-
-    describe '#room' do
-      subject { room.send(:room) }
-
-      it { is_expected.to be_a OpenStruct }
     end
 
     describe '#filename' do
       subject { room.filename }
 
-      it { is_expected.to eql '19-univ-229' }
+      it { is_expected.to eql '19_university_place_209' }
 
       it 'handles complex descriptions' do
-        complex_room = klass.new({ room_description: '19University--C|13.2 ( lounge ) ' }, '.')
-        expect(complex_room.filename).to eql "19-university-c-13-2"
+        complex_room = klass.new(raw_data.merge(title: '19  University Place  88 8 '), '.')
+        expect(complex_room.filename).to eql "19_university_place_209"
       end
     end
 
@@ -127,36 +276,42 @@ describe Contented::Collections::CampusMedia::Room do
     describe 'attributes' do
       subject { room }
 
-      its(:id) { is_expected.to eql id }
+      its(:id) { is_expected.to eql id.to_s }
 
-      describe 'includes default values' do
+      describe 'include ::rooms_config values' do
+        its(:links) do
+          is_expected.to be_deep_equal(
+            :'Default Link' => 'defaultlink1.com',
+            :'Default Link2' => 'defaultlink2.com',
+            Instructions: '19_University_Instructions.pdf'
+          )
+        end
+
+        its(:capacity) { is_expected.to eql 30 }
+        its(:image) { is_expected.to eql '19University229.jpg' }
         its(:departments) { is_expected.to eql 'Campus Media' }
-        its(:policies_url) { is_expected.to eql 'http://library.nyu.edu/policies' }
-        its(:form_url) { is_expected.to eql 'http://library.nyu.edu/form' }
-        its(:published) { is_expected.to be false }
-        its(:type) { is_expected.to eql 'Lecture Room' }
-        its(:help_text) { is_expected.to eql 'Placeholder text about contact info' }
-        its(:help_phone) { is_expected.to eql '212 222 2222' }
-        its(:help_email) { is_expected.to eql 'library-help@nyu.edu' }
-        its(:access) { is_expected.to eql 'NYU Faculty' }
-        its(:keywords) { is_expected.to eql ['campus', 'media'] }
+        its(:policies) { is_expected.to be_deep_equal(:'Policy Link' => 'policy.com') }
+        its(:buttons) { is_expected.to be_deep_equal(:'Button Link' => 'button.com') }
+        its(:published) { is_expected.to be true }
+        its(:type) { is_expected.to eql nil }
+        its(:help) do
+          is_expected.to be_deep_equal(
+            text: 'Feel free to reach out',
+            phone: '212 222 2222',
+            email: 'email@email.com'
+          )
+        end
+        its(:access) { is_expected.to eql 'All' }
+        its(:keywords) { is_expected.to eql ['key', 'word', '19 University'] }
         its(:description) { is_expected.to eql 'Placeholder description text' }
-        its(:floor) { is_expected.to eql nil }
+        its(:floor) { is_expected.to eql 1 }
       end
 
-      describe 'includes values from ::buildings_config' do
+      describe 'includes ::buildings_config values' do
         its(:address) { is_expected.to eql '19 University Place' }
       end
 
-      describe 'includes values ::rooms_config' do
-        its(:capacity) { is_expected.to eql 30 }
-        its(:instructions) { is_expected.to eql 'https://www.nyu.edu/campusmedia/data/pdfs/smartrooms/19_University_Instructions.pdf' }
-        its(:software) { is_expected.to eql 'http://library.nyu.edu/software' }
-        its(:image) { is_expected.to eql 'https://www.nyu.edu/campusmedia/images/rooms/19University229.jpg' }
-        its(:notes) { is_expected.to eql 'Not a general purpose classroom' }
-      end
-
-      describe 'includes values from ::technology_config' do
+      describe 'includes ::technology_config values' do
         its(:features) { is_expected.to eql ['Wireless Internet Connection'] }
         its(:equipment) { is_expected.to eql("Wireless Keyboard" => "Used for typing things") }
       end
@@ -164,7 +319,7 @@ describe Contented::Collections::CampusMedia::Room do
       describe '#title' do
         subject { room.title }
 
-        it { is_expected.to eql '19 University Place 229' }
+        it { is_expected.to eql '19 University Place 209' }
       end
     end
 
@@ -173,41 +328,39 @@ describe Contented::Collections::CampusMedia::Room do
 
       # buildings_config
       it { is_expected.to include "address: 19 University Place" }
-      # it { is_expected.to include "title: " }
 
       # rooms_config
       it { is_expected.to include "capacity: 30" }
       it { is_expected.to include "links:" }
-      it { is_expected.to include "Room Instructions: https://www.nyu.edu/campusmedia/data/pdfs/smartrooms/19_University_Instructions.pdf" }
-      it { is_expected.to include "Software List: http://library.nyu.edu/software" }
-      it { is_expected.to include "image: https://www.nyu.edu/campusmedia/images/rooms/19University229.jpg" }
+      it { is_expected.to include "Default Link: defaultlink1.com" }
+      it { is_expected.to include "Default Link2: defaultlink2.com" }
+      it { is_expected.to include "Instructions: 19_University_Instructions.pdf" }
+      it { is_expected.to include "image: 19University229.jpg" }
+      it { is_expected.to include "departments: Campus Media" }
+      it { is_expected.to include "published: true" }
+      it { is_expected.to include "buttons:" }
+      it { is_expected.to include "Button Link: button.com" }
+      it { is_expected.to include "policies:" }
+      it { is_expected.to include "Policy Link: policy.com" }
+      it { is_expected.to include "description: Placeholder description text" }
+      it { is_expected.to include "type:" }
+      it { is_expected.to include "help:" }
+      it { is_expected.to include "text: Feel free to reach out" }
+      it { is_expected.to include "phone: 212 222 2222" }
+      it { is_expected.to include "email: 19Univ@nyu.edu" }
+      it { is_expected.to include "keywords:" }
+      it { is_expected.to include "key" }
+      it { is_expected.to include "word" }
+      it { is_expected.to include "19 University" }
+      it { is_expected.to include "This is a body paragraph about 19 University Place" }
 
       #tech_config
       it { is_expected.to include "features:" }
       it { is_expected.to include "Wireless Internet Connection" }
       it { is_expected.to include "technology:" }
       it { is_expected.to include "Wireless Keyboard: Used for typing things" }
-
-      # defaults
-      it { is_expected.to include "departments: Campus Media" }
-      it { is_expected.to include "published: false" }
-      it { is_expected.to include "buttons:" }
-      it { is_expected.to include "Reserve Equipment for this Room: http://library.nyu.edu/form" }
-      it { is_expected.to include "Not a general purpose classroom" }
-      it { is_expected.to include "policies:" }
-      it { is_expected.to include "Policies: http://library.nyu.edu/policies" }
-      it { is_expected.to include "description: Placeholder description text" }
-      it { is_expected.to include "type: Lecture Room" }
-      it { is_expected.to include "help:" }
-      it { is_expected.to include "text: Placeholder text about contact info" }
-      it { is_expected.to include "keywords:" }
-      it { is_expected.to include "campus" }
-      it { is_expected.to include "media" }
-      it { is_expected.to include "phone: 212 222 2222" }
-      it { is_expected.to include "email: library-help@nyu.edu" }
-
-      # other
-      it { is_expected.to include "title: 19 University Place 229" }
+      # title
+      it { is_expected.to include "title: 19 University Place 209" }
     end
 
     describe '#save_as_markdown!' do

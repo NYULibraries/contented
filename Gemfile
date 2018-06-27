@@ -12,6 +12,7 @@ group :development, :test do
   gem 'rspec', '~> 3.5'
   gem 'tiny_tds'
   gem 'httparty'
+  gem 'activesupport'
 
   gem 'guard-rspec', require: false
   gem 'climate_control'

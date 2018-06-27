@@ -1,6 +1,7 @@
 require 'liquid'
 require 'ostruct'
 require 'httparty'
+require 'active_support'
 require 'pry'
 
 module Contented
@@ -8,38 +9,22 @@ module Contented
     module CampusMedia
       class Room
         FILE_ROOT = File.expand_path(File.dirname(File.dirname(__FILE__))) + '/../../..'
-        GIT_URL= "https://raw.githubusercontent.com/NYULibraries/campusmedia-fillins/master/".freeze
-        ROOMS_CONFIG_FILE = "rooms.yml".freeze
-        BUILDINGS_CONFIG_FILE = "buildings.yml".freeze
-        TECHNOLOGY_CONFIG_FILE = "technology.yml".freeze
+        GIT_URL = "https://raw.githubusercontent.com/NYULibraries/campusmedia-fillins/master/".freeze
 
-        ATTRIBUTE_KEYS = [
-          # attributes for class
-          :id, :building_id, :technology,
-          # attributes for template
-          :address, :title, :capacity,
-          :instructions, :software,
-          :image, :departments, :floor,
-          :features, :equipment, :policies_url,
-          :form_url, :notes, :published,
-          :type, :help_text, :help_phone,
-          :help_email, :access, :keywords,
-          :description,
-        ].freeze
-
-        DEFAULTS = {
-          published: true,
-          departments: 'Campus Media',
-          policies_url: 'http://library.nyu.edu/policies',
-          form_url: 'http://library.nyu.edu/form',
-          type: 'Lecture Room',
-          help_text: 'Placeholder text about contact info',
-          help_phone: '212 222 2222',
-          help_email: 'library-help@nyu.edu',
-          access: 'NYU Faculty',
-          keywords: ['campus', 'media'],
-          description: 'Placeholder description text',
+        ATTRIBUTES_BY_SOURCE = {
+          room: [:id, :building_id, :technology],
+          padding: [
+            :title, :published, :capacity, :links,
+            :image, :departments, :floor, :buttons,
+            :policies, :description, :type, :keywords,
+            :help, :access, :body
+          ],
+          building: [:address],
+          technology: [:features, :equipment]
         }.freeze
+
+        # concatenate all the attribute arrays
+        ATTRIBUTES = ATTRIBUTES_BY_SOURCE.values.flatten
 
         attr_reader :raw, :save_location
 
@@ -47,129 +32,141 @@ module Contented
           File.read("#{FILE_ROOT}/lib/contented/templates/campusmedia/room.markdown")
         end
 
+        def self.get_config(key)
+          res = HTTParty.get("#{GIT_URL}#{key}.yml")
+          YAML.safe_load(res.body)
+            .deep_symbolize_keys
+        end
+
         def self.rooms_config
           @rooms_config ||= (
-            url = GIT_URL + ROOMS_CONFIG_FILE
-            res = HTTParty.get(url)
-            yaml = YAML.safe_load(res.body)
-            yaml.transform_values do |props|
-              props ? props.transform_keys(&:to_sym) : next
-            end
-          )
+            Room.get_config(:rooms)
+          ).freeze
         end
 
         def self.buildings_config
           @buildings_config ||= (
-            url = GIT_URL + BUILDINGS_CONFIG_FILE
-            res = HTTParty.get(url)
-            yaml = YAML.safe_load(res.body)
-            yaml.transform_values do |props|
-              props ? props.transform_keys(&:to_sym) : next
-            end
-          )
+            Room.get_config(:buildings)
+          ).freeze
         end
 
         def self.technology_config
           @technology_config ||= (
-            url = GIT_URL + TECHNOLOGY_CONFIG_FILE
-            res = HTTParty.get(url)
-            YAML.safe_load(res.body)
-          )
+            Room.get_config(:technology)
+          ).freeze
         end
 
-        def self.equipment_with_labels
-          @equipment_with_labels ||=
-            technology_config.reduce({}) do |acc, (k, props)|
-              is_equipment = props['type'] === 'equipment'
-              is_equipment ? acc.merge!(k => props.slice('label', 'description')) : acc
+        def self.equipment
+          @equipment ||= (
+            technology_config.reduce({}) do |dict, (id, props)|
+              is_equipment = props[:type] === "equipment"
+              is_equipment ? dict.merge!(id => props) : dict
             end
+          ).freeze
         end
 
-        def self.features_with_labels
-          @features_with_labels ||=
-            technology_config.reduce({}) do |acc, (k, props)|
-              is_feature = props['type'] === 'feature'
-              is_feature ? acc.merge!(k => props['label']) : acc
+        def self.features
+          @features ||= (
+            technology_config.reduce({}) do |dict, (id, props)|
+              is_feature = props[:type] === 'feature'
+              is_feature ? dict.merge!(id => props) : dict
             end
+          ).freeze
+        end
+
+        def self.defaults
+          default_vals = {
+            links: {},
+            policies: {},
+            buttons: {},
+            keywords: [],
+            help: {
+              text: nil,
+              phone: nil,
+              email: nil,
+            }
+          }
+
+          @defaults ||= (
+            Room.rooms_config[:default].reduce({}) do |config, (k, v)|
+              v ? config.merge!(k => v) : config.merge!(k => default_vals[k])
+            end
+          ).freeze
+        end
+
+        def self.merge_defaults!(attributes)
+          # key-value merges
+          [:links, :policies, :buttons].reduce(attributes) do |attrs, k|
+            merged = defaults[k].merge(attrs[k] || {})
+            attrs.merge!(k => merged)
+            attrs
+          end
+          # array merge
+          [:keywords].reduce(attributes) do |attrs, k|
+            merged = defaults[k].concat(attrs[k] || []).uniq
+            attrs.merge!(k => merged)
+          end
+          # deeper hash merges
+          [:help].reduce(attributes) do |attrs, k|
+            attrs[k] ||= {}
+            merged = defaults[k].merge(attrs[k] || {})
+            attrs[k].merge!(merged)
+          end
+          attributes
         end
 
         def initialize(raw_data, save_location)
-          @raw = raw_data.transform_keys(&:to_sym)
+          @raw = raw_data.deep_symbolize_keys
           @save_location = save_location
-          id = raw[:id]
+          id = raw_data[:id].to_sym
 
-          attributes = {}.merge!(DEFAULTS)
-          ATTRIBUTE_KEYS.reduce(attributes) do |hash, k|
-            attributes.merge!(k => raw[k]) unless attributes[k]
-          end
-          attributes.merge!(Room.rooms_config[id]) if Room.rooms_config[id]
-          @room = OpenStruct.new(attributes)
+          attributes = {}
+          attributes.merge!(raw.slice(*ATTRIBUTES_BY_SOURCE[:room]))
+          attributes.merge!(Room.rooms_config[id].slice(*ATTRIBUTES_BY_SOURCE[:padding]))
+          Room.merge_defaults!(attributes)
+
+          @room_props = OpenStruct.new(attributes)
         end
 
         def filename
-          is_i = ->(char) { char =~ /\A[-+]?[0-9]+\z/ }
-          adds_hyphen = ->(chars, char, idx) do
-            is_i[char] && !is_i[chars[idx + 1]] && idx + 1 < chars.length
-          end
-
-          filename =
-            raw[:room_description]
-              .downcase.squeeze(' ')
-              .gsub(/\([^()]*\)/, "") # removes parentheses and contents
-              .gsub(/[ |.]/, '-') # hyphenate special chars
-
-          chars = filename.chars
-          chars.each_with_index.reduce("") do |str, (char, i)|
-            "#{str}#{char}#{'-' if adds_hyphen[chars, char, i]}"
-          end
-            .squeeze('-').chomp('-')
+          title
+            .downcase
+            .gsub(' ', '_')
+            .squeeze('_')
+            .chomp('_')
         end
 
         def address
-          Room.buildings_config.dig(building_id, :address)
-        end
-
-        def software
-          room[:'software-image'] ? 'http://library.nyu.edu/software' : nil
-        end
-
-        def image
-          image_val = room[:image]
-          image_val ? "https://www.nyu.edu/campusmedia/images/rooms/#{image_val}" : nil
-        end
-
-        def instructions
-          instructions_val = room[:instructions]
-          instructions_val ? "https://www.nyu.edu/campusmedia/data/pdfs/smartrooms/#{room[:instructions]}" : nil
+          Room.buildings_config.dig(building_id.to_sym, :address)
         end
 
         def equipment
-          technology.reduce({}) do |res, item|
-            item_data = Room.equipment_with_labels[item]
+          # returns a dictionary { label => description, ... }
+          technology.reduce({}) do |dict, item|
+            item_data = Room.equipment[item.to_sym]
             if item_data
-              label = item_data['label']
-              description = item_data['description']
-              res.merge!(label => description)
+              label = item_data[:label]
+              description = item_data[:description]
+              dict.merge!(label => description)
             end
-            res
+            dict
           end
         end
 
         def features
+          # returns a list of technology features [label1, label2, ...]
           technology.reduce([]) do |list, f|
-            feature = Room.features_with_labels[f]
-            feature ? list.push(feature) : list
+            feature = Room.features[f.to_sym]
+            feature ? list.push(feature[:label]) : list
           end
         end
 
-        def title
-          room_number = raw[:room_description].split(' ').last
-          building_description = raw[:building_description]
-          "#{building_description} #{room_number}"
-        end
-
         def method_missing(meth, *args)
-          ATTRIBUTE_KEYS.include?(meth) ? room.send(meth) : super(meth, *args)
+          if ATTRIBUTES.include?(meth)
+            @room_props.send(meth)
+          else
+            super(meth, *args)
+          end
         end
 
         def save_as_markdown!
@@ -178,13 +175,12 @@ module Contented
 
         private
 
-        attr_accessor :room
-
         def to_markdown
-          liquid_hash = ATTRIBUTE_KEYS.reduce({}) do |hash, attribute|
-            hash.merge!(attribute.to_s => send(attribute))
+          liquid_hash = ATTRIBUTES.reduce({}) do |hash, attribute|
+            val = send(attribute)
+            val.deep_stringify_keys! if val.is_a? Hash
+            hash.merge!(attribute.to_s => val)
           end
-
           template = Liquid::Template.parse(Room.template_file)
           rendered = template.render(liquid_hash, { strict_variables: true })
           p template.errors
