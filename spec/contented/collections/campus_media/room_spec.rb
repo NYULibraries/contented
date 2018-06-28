@@ -3,32 +3,31 @@ require 'active_support'
 
 describe Contented::Collections::CampusMedia::Room do
   klass = Contented::Collections::CampusMedia::Room
-  raw_rooms = load_yaml('spec/fixtures/normalized_rooms.yml')
-                .deep_symbolize_keys
+  raw_rooms = load_yaml('spec/fixtures/normalized_rooms.yml').values
 
-  id = :'2696'
-  raw_data = raw_rooms[id]
-  save_location = './spec/test_output'.freeze
+  let(:id) { '2696' }
+  let(:raw_data) { raw_rooms.find { |r| r['id'] == id } }
+  let(:save_location) { './spec/test_output' }
   let(:http) { double 'http' }
 
-  FIXTURE_FILES = {
+  FIXTURES = {
     rooms: File.read("spec/fixtures/config/rooms.yml"),
     buildings: File.read("spec/fixtures/config/buildings.yml"),
     technology: File.read("spec/fixtures/config/technology.yml"),
   }.freeze
 
   before do
-    allow(http)
-      .to receive(:get).with(/rooms.yml/)
-      .and_return OpenStruct.new(body: FIXTURE_FILES[:rooms])
+    allow(http).
+      to receive(:get).with(/rooms.yml/).
+      and_return OpenStruct.new(body: FIXTURES[:rooms])
 
-    allow(http)
-      .to receive(:get).with(/buildings.yml/)
-      .and_return OpenStruct.new(body: FIXTURE_FILES[:buildings])
+    allow(http).
+      to receive(:get).with(/buildings.yml/).
+      and_return OpenStruct.new(body: FIXTURES[:buildings])
 
-    allow(http)
-      .to receive(:get).with(/technology.yml/)
-      .and_return OpenStruct.new(body: FIXTURE_FILES[:technology])
+    allow(http).
+      to receive(:get).with(/technology.yml/).
+      and_return OpenStruct.new(body: FIXTURES[:technology])
 
     stub_const "HTTParty", http
   end
@@ -44,7 +43,7 @@ describe Contented::Collections::CampusMedia::Room do
     end
 
     it 'id keys symbolized' do
-      all_symbols =subject.keys.all? { |k| k.is_a? Symbol }
+      all_symbols = subject.keys.all? { |k| k.is_a? Symbol }
       expect(all_symbols).to be true
     end
   end
@@ -105,9 +104,9 @@ describe Contented::Collections::CampusMedia::Room do
 
   describe '::defaults' do
     before do
-      allow(klass)
-        .to receive(:rooms_config)
-        .and_return({
+      allow(klass).
+        to receive(:rooms_config).
+        and_return(
           default: {
             links: nil,
             policies: nil,
@@ -118,9 +117,9 @@ describe Contented::Collections::CampusMedia::Room do
               phone: nil,
               email: nil,
             },
-            body: nil
+            body: nil,
           },
-        })
+        )
     end
 
     subject { klass.defaults }
@@ -140,18 +139,18 @@ describe Contented::Collections::CampusMedia::Room do
 
   describe '::merge_defaults!' do
     before do
-      allow(klass)
-        .to receive(:defaults)
-        .and_return({
+      allow(klass).
+        to receive(:defaults).
+        and_return(
           links: {
             :'Default Link' => 'defaultlink1.com',
-            :'Default Link2' => 'defaultlink2.com'
+            :'Default Link2' => 'defaultlink2.com',
           },
           policies: {
-            :'Policy Link' => 'policy.com'
+            :'Policy Link' => 'policy.com',
           },
           buttons: {
-            :'Button Link' => 'button.com'
+            :'Button Link' => 'button.com',
           },
           keywords: ['key', 'word'],
           help: {
@@ -159,9 +158,11 @@ describe Contented::Collections::CampusMedia::Room do
             phone: '212 222 2222',
             email: 'email@email.com',
           },
-          body: 'This is a placeholder body'
-        })
+          body: 'This is a placeholder body',
+        )
     end
+
+    subject { klass.merge_defaults!(dummy_data) }
 
     let(:dummy_data) do
       {
@@ -169,16 +170,16 @@ describe Contented::Collections::CampusMedia::Room do
           :'Link 3' => 'link3.com',
         },
         policies: {
-          :'Extra policy' => 'policy2.com'
+          :'Extra policy' => 'policy2.com',
         },
         buttons: {
-          :'More Buttons' => 'button2.com'
+          :'More Buttons' => 'button2.com',
         },
         keywords: ['more', 'special', 'words'],
         help: {
-          phone: '212 555 5555'
+          phone: '212 555 5555',
         },
-        body: 'Now this body should appear'
+        body: 'Now this body should appear',
       }
     end
 
@@ -191,11 +192,11 @@ describe Contented::Collections::CampusMedia::Room do
         },
         policies: {
           :'Policy Link' => 'policy.com',
-          :'Extra policy' => 'policy2.com'
+          :'Extra policy' => 'policy2.com',
         },
         buttons: {
           :'Button Link' => 'button.com',
-          :'More Buttons' => 'button2.com'
+          :'More Buttons' => 'button2.com',
         },
         keywords: ['key', 'word', 'more', 'special', 'words'],
         help: {
@@ -203,11 +204,9 @@ describe Contented::Collections::CampusMedia::Room do
           phone: '212 555 5555',
           email: 'email@email.com',
         },
-        body: 'Now this body should appear'
+        body: 'Now this body should appear',
       }
     end
-
-    subject { klass.merge_defaults!(dummy_data) }
 
     its([:links]) { is_expected.to eql merged[:links] }
     its([:policies]) { is_expected.to eql merged[:policies] }
@@ -222,18 +221,18 @@ describe Contented::Collections::CampusMedia::Room do
     let(:room) { klass.new(raw_data, save_location) }
 
     before do
-      allow(klass)
-        .to receive(:defaults)
-        .and_return({
+      allow(klass).
+        to receive(:defaults).
+        and_return(
           links: {
             :'Default Link' => 'defaultlink1.com',
-            :'Default Link2' => 'defaultlink2.com'
+            :'Default Link2' => 'defaultlink2.com',
           },
           policies: {
-            :'Policy Link' => 'policy.com'
+            :'Policy Link' => 'policy.com',
           },
           buttons: {
-            :'Button Link' => 'button.com'
+            :'Button Link' => 'button.com',
           },
           keywords: ['key', 'word'],
           help: {
@@ -241,8 +240,8 @@ describe Contented::Collections::CampusMedia::Room do
             phone: '212 222 2222',
             email: 'email@email.com',
           },
-          body: 'This is a placeholder body'
-        })
+          body: 'This is a placeholder body',
+        )
     end
 
     describe '#raw' do
@@ -273,12 +272,13 @@ describe Contented::Collections::CampusMedia::Room do
       it { is_expected.to include save_location }
     end
 
-    describe 'attributes' do
+    describe '#[attribute]' do
       subject { room }
 
-      its(:id) { is_expected.to eql id.to_s }
+      its(:id) { is_expected.to eql id }
 
-      describe 'include ::rooms_config values' do
+      describe 'include ::rooms_config values & merges with defaults' do
+        its(:title) { is_expected.to eql '19 University Place 209' }
         its(:links) do
           is_expected.to be_deep_equal(
             :'Default Link' => 'defaultlink1.com',
@@ -298,7 +298,7 @@ describe Contented::Collections::CampusMedia::Room do
           is_expected.to be_deep_equal(
             text: 'Feel free to reach out',
             phone: '212 222 2222',
-            email: 'email@email.com'
+            email: '19Univ@nyu.edu'
           )
         end
         its(:access) { is_expected.to eql 'All' }
@@ -314,12 +314,6 @@ describe Contented::Collections::CampusMedia::Room do
       describe 'includes ::technology_config values' do
         its(:features) { is_expected.to eql ['Wireless Internet Connection'] }
         its(:equipment) { is_expected.to eql("Wireless Keyboard" => "Used for typing things") }
-      end
-
-      describe '#title' do
-        subject { room.title }
-
-        it { is_expected.to eql '19 University Place 209' }
       end
     end
 
@@ -364,13 +358,13 @@ describe Contented::Collections::CampusMedia::Room do
     end
 
     describe '#save_as_markdown!' do
-      subject { room.save_as_markdown! }
+      before { room.save_as_markdown! }
 
       it 'writes file to directory' do
         file_exists = File.exist?(
-          File.expand_path(File.dirname(File.dirname(__FILE__)))
-            .split('/')[0...-2].join('/') +
-            '/test_output/2696_19Univ_229.markdown'
+          File.expand_path(File.dirname(File.dirname(__FILE__))).
+            split('/')[0...-2].join('/') +
+            '/test_output/19_university_place_209.markdown'
         )
 
         expect(file_exists).to be true

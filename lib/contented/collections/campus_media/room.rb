@@ -20,11 +20,11 @@ module Contented
             :help, :access, :body
           ],
           building: [:address],
-          technology: [:features, :equipment]
+          technology: [:features, :equipment],
         }.freeze
 
         # concatenate all the attribute arrays
-        ATTRIBUTES = ATTRIBUTES_BY_SOURCE.values.flatten
+        ATTRIBUTES = ATTRIBUTES_BY_SOURCE.values.flatten.freeze
 
         attr_reader :raw, :save_location
 
@@ -39,21 +39,15 @@ module Contented
         end
 
         def self.rooms_config
-          @rooms_config ||= (
-            Room.get_config(:rooms)
-          ).freeze
+          @rooms_config ||= Room.get_config(:rooms).freeze
         end
 
         def self.buildings_config
-          @buildings_config ||= (
-            Room.get_config(:buildings)
-          ).freeze
+          @buildings_config ||= Room.get_config(:buildings).freeze
         end
 
         def self.technology_config
-          @technology_config ||= (
-            Room.get_config(:technology)
-          ).freeze
+          @technology_config ||= Room.get_config(:technology).freeze
         end
 
         def self.equipment
@@ -84,7 +78,7 @@ module Contented
               text: nil,
               phone: nil,
               email: nil,
-            }
+            },
           }
 
           @defaults ||= (
@@ -118,7 +112,7 @@ module Contented
         def initialize(raw_data, save_location)
           @raw = raw_data.deep_symbolize_keys
           @save_location = save_location
-          id = raw_data[:id].to_sym
+          id = raw[:id].to_sym
 
           attributes = {}
           attributes.merge!(raw.slice(*ATTRIBUTES_BY_SOURCE[:room]))
@@ -129,11 +123,11 @@ module Contented
         end
 
         def filename
-          title
-            .downcase
-            .gsub(' ', '_')
-            .squeeze('_')
-            .chomp('_')
+          title.
+            downcase.
+            gsub(' ', '_').
+            squeeze('_').
+            chomp('_')
         end
 
         def address
@@ -173,16 +167,15 @@ module Contented
           File.write("#{save_location}/#{filename}.markdown", to_markdown)
         end
 
-        private
-
         def to_markdown
           liquid_hash = ATTRIBUTES.reduce({}) do |hash, attribute|
             val = send(attribute)
-            val.deep_stringify_keys! if val.is_a? Hash
+            val = val.deep_stringify_keys if val.is_a? Hash
             hash.merge!(attribute.to_s => val)
           end
+
           template = Liquid::Template.parse(Room.template_file)
-          rendered = template.render(liquid_hash, { strict_variables: true })
+          rendered = template.render(liquid_hash, strict_variables: true)
           p template.errors
           rendered
         end
