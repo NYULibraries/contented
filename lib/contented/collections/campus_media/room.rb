@@ -89,7 +89,7 @@ module Contented
 
         def self.merge_defaults!(attributes)
           # key-value merges
-          [:links, :policies, :buttons].reduce(attributes) do |attrs, k|
+          [:links, :policies, :buttons, :help].reduce(attributes) do |attrs, k|
             merged = defaults[k].merge(attrs[k] || {})
             attrs.merge!(k => merged)
             attrs
@@ -98,12 +98,6 @@ module Contented
           [:keywords].reduce(attributes) do |attrs, k|
             merged = defaults[k].concat(attrs[k] || []).uniq
             attrs.merge!(k => merged)
-          end
-          # deeper hash merges
-          [:help].reduce(attributes) do |attrs, k|
-            attrs[k] ||= {}
-            merged = defaults[k].merge(attrs[k] || {})
-            attrs[k].merge!(merged)
           end
           attributes
         end
