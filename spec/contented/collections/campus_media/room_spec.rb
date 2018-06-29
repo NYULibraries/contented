@@ -155,7 +155,12 @@ describe Contented::Collections::CampusMedia::Room do
             phone: '212 222 2222',
             email: 'email@email.com',
           },
+          image: 'placeholder.jpg',
           body: 'This is a placeholder body',
+          libanswers: {
+            topic_ids: 29679,
+            link: 'http://library.answers.nyu.edu/',
+          },
         )
     end
 
@@ -177,6 +182,9 @@ describe Contented::Collections::CampusMedia::Room do
           phone: '212 555 5555',
         },
         body: 'Now this body should appear',
+        libanswers: {
+          topic_ids: 12345,
+        },
       }
     end
 
@@ -201,7 +209,12 @@ describe Contented::Collections::CampusMedia::Room do
           phone: '212 555 5555',
           email: 'email@email.com',
         },
+        image: 'placeholder.jpg',
         body: 'Now this body should appear',
+        libanswers: {
+          topic_ids: 12345,
+          link: 'http://library.answers.nyu.edu/',
+        },
       }
     end
 
@@ -211,6 +224,8 @@ describe Contented::Collections::CampusMedia::Room do
     its([:keywords]) { is_expected.to eql merged[:keywords] }
     its([:help]) { is_expected.to be_deep_equal merged[:help] }
     its([:body]) { is_expected.to eql merged[:body] }
+    its([:image]) { is_expected.to eql merged[:image] }
+    its([:libanswers]) { is_expected.to be_deep_equal merged[:libanswers] }
     its(:object_id) { is_expected.to eql dummy_data.object_id }
   end
 

@@ -16,14 +16,39 @@ module Contented
             :title, :published, :capacity, :links,
             :image, :departments, :floor, :buttons,
             :policies, :description, :type, :keywords,
-            :help, :access, :body
+            :help, :access, :body, :libanswers,
           ],
           building: [:address],
           technology: [:features, :equipment],
         }.freeze
 
+        SCHEMA = {
+          id: String,
+          building_id: Integer,
+          technology: Array,
+          title: String,
+          address: String,
+          published: String, # Actually a boolean but interpreted the same in YAML
+          capacity: Integer,
+          links: Hash,
+          image: String,
+          departments: String,
+          floor: Integer,
+          buttons: Hash,
+          policies: Hash,
+          description: String,
+          type: String,
+          keywords: Array,
+          help: Hash,
+          access: String,
+          body: String,
+          libanswers: Hash,
+          features: Array,
+          equipment: Array,
+        }.freeze
+
         # concatenate all the attribute arrays
-        ATTRIBUTES = ATTRIBUTES_BY_SOURCE.values.flatten.freeze
+        ATTRIBUTES = SCHEMA.keys.freeze
 
         attr_reader :raw, :save_location
 
@@ -89,15 +114,20 @@ module Contented
 
         def self.merge_defaults!(attributes)
           # key-value merges
-          [:links, :policies, :buttons, :help].reduce(attributes) do |attrs, k|
-            merged = defaults[k].merge(attrs[k] || {})
-            attrs.merge!(k => merged)
-            attrs
+          hash_keys = SCHEMA.select { |k, v| v == Hash }.keys & defaults.keys
+          hash_keys.reduce(attributes) do |res, k|
+            merged = defaults[k].merge(res[k] || {})
+            res.merge!(k => merged)
           end
           # array merge
-          [:keywords].reduce(attributes) do |attrs, k|
-            merged = defaults[k].concat(attrs[k] || []).uniq
-            attrs.merge!(k => merged)
+          array_keys = SCHEMA.select { |k, v| v == Array }.keys & defaults.keys
+          array_keys.reduce(attributes) do |res, k|
+            merged = defaults[k].concat(res[k] || []).uniq
+            res.merge!(k => merged)
+          end
+          # merge other nil values
+          defaults.reduce(attributes) do |res, (k, v)|
+            attributes[k].nil? ? attributes.merge!(k => v) : attributes
           end
           attributes
         end
