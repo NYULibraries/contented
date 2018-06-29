@@ -38,10 +38,6 @@ module Contented
         @rooms.values
       end
 
-      def rooms_by_id
-        @rooms
-      end
-
       private
 
       def fetch_technologies

@@ -1,6 +1,3 @@
-require 'spec_helper'
-require 'active_support'
-
 describe Contented::Collections::CampusMedia::Room do
   klass = Contented::Collections::CampusMedia::Room
   raw_rooms = load_yaml('spec/fixtures/normalized_rooms.yml').values

@@ -36,6 +36,8 @@ namespace :contented do
 
         save_location = args[:save_location] || './_campusmedia'
 
+        FileUtils.rm_rf(Dir.glob("#{save_location}/*"))
+
         options = {
           host: Figs.env["SCHEDUALL_HOST"],
           username: Figs.env["SCHEDUALL_USERNAME"],

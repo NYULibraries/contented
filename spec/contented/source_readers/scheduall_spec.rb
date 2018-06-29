@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe Contented::SourceReaders::Scheduall do
   let(:driver) { double 'driver' }
   let(:host_credentials) { Hash.new host: 'host.nyu.edu', password: 'password', username: 'nyuser' }

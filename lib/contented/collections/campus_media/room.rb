@@ -1,7 +1,6 @@
 require 'liquid'
-require 'ostruct'
 require 'httparty'
-require 'active_support'
+require 'active_support/core_ext/hash'
 require 'pry'
 
 module Contented
@@ -116,10 +115,20 @@ module Contented
 
           attributes = {}
           attributes.merge!(raw.slice(*ATTRIBUTES_BY_SOURCE[:room]))
-          attributes.merge!(Room.rooms_config[id].slice(*ATTRIBUTES_BY_SOURCE[:padding]))
+
+          if Room.rooms_config[id]
+            room_config = Room.rooms_config[id]
+            attributes.merge!(room_config.slice(*ATTRIBUTES_BY_SOURCE[:padding]))
+          end
+
           Room.merge_defaults!(attributes)
 
           @room_props = OpenStruct.new(attributes)
+        end
+
+        def title
+          @room_props.title ||
+            "NO_DATA_#{id}_#{@raw[:room_description]}"
         end
 
         def filename
@@ -175,7 +184,7 @@ module Contented
           end
 
           template = Liquid::Template.parse(Room.template_file)
-          rendered = template.render(liquid_hash, strict_variables: true)
+          rendered = template.render(liquid_hash)
           p template.errors
           rendered
         end
