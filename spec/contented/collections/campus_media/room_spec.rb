@@ -255,11 +255,11 @@ describe Contented::Collections::CampusMedia::Room do
     describe '#filename' do
       subject { room.filename }
 
-      it { is_expected.to eql '19_university_place_209' }
+      it { is_expected.to eql '19-university-place-209' }
 
       it 'handles complex descriptions' do
         complex_room = klass.new(raw_data.merge(title: '19  University Place  88 8 '), '.')
-        expect(complex_room.filename).to eql "19_university_place_209"
+        expect(complex_room.filename).to eql "19-university-place-209"
       end
     end
 

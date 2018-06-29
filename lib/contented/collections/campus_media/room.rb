@@ -128,9 +128,9 @@ module Contented
         def filename
           title.
             downcase.
-            gsub(' ', '_').
-            squeeze('_').
-            chomp('_')
+            gsub(' ', '-').
+            squeeze('-').
+            chomp('-')
         end
 
         def address
