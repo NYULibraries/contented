@@ -378,7 +378,7 @@ describe Contented::Collections::CampusMedia::Room do
         file_exists = File.exist?(
           File.expand_path(File.dirname(File.dirname(__FILE__))).
             split('/')[0...-2].join('/') +
-            '/test_output/19_university_place_209.markdown'
+            '/test_output/19-university-place-209.markdown'
         )
 
         expect(file_exists).to be true
