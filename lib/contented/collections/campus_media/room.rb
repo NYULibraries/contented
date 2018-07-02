@@ -96,9 +96,13 @@ module Contented
         def initialize(raw_data, save_location)
           attributes = raw_data.deep_symbolize_keys
           @save_location = save_location
+
           id = attributes[:id].to_sym
-          attributes.merge!(Room.rooms_config[id] || {})
+          room_fillins = Room.rooms_config[id]
+          attributes.merge!(room_fillins) if room_fillins
+
           Room.merge_defaults!(attributes)
+
           @room = OpenStruct.new(attributes)
         end
 
