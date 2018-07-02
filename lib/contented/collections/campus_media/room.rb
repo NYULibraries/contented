@@ -35,7 +35,6 @@ module Contented
           equipment: Array,
         }.freeze
 
-        # concatenate all the attribute arrays
         ATTRIBUTES = SCHEMA.keys.freeze
 
         attr_reader :raw, :save_location
@@ -63,62 +62,47 @@ module Contented
 
         def self.equipment
           @equipment ||= (
-            technology_config.reduce({}) do |dict, (id, props)|
-              is_equipment = props[:type] === "equipment"
-              is_equipment ? dict.merge!(id => props) : dict
-            end
+            technology_config.select { |k, props| props[:type] == 'equipment' }
           ).freeze
         end
 
         def self.features
           @features ||= (
-            technology_config.reduce({}) do |dict, (id, props)|
-              is_feature = props[:type] === 'feature'
-              is_feature ? dict.merge!(id => props) : dict
-            end
+            technology_config.select { |k, props| props[:type] == 'feature' }
           ).freeze
         end
 
         def self.defaults
           @defaults ||= (
             Room.rooms_config[:default].reduce({}) do |config, (k, v)|
-              v.nil? ? config.merge!(k => SCHEMA[k].new) : config.merge!(k => v)
+              config.merge!(k => v || SCHEMA[k].new)
             end
           ).freeze
         end
 
         def self.merge_defaults!(attributes)
-          # key-value merges
-          hash_keys = defaults.select { |k, v| v.is_a? Hash }.keys
-          hash_keys.reduce(attributes) do |res, k|
-            merged = defaults[k].merge(res[k] || {})
-            res.merge!(k => merged)
-          end
-          # array merge
-          array_keys = defaults.select { |k, v| v.is_a? Array }.keys
-          array_keys.reduce(attributes) do |res, k|
-            merged = defaults[k].concat(res[k] || []).uniq
-            res.merge!(k => merged)
+          enums = defaults.select { |k, v| v.is_a? Enumerable }
+          enums.reduce(attributes) do |res, (k, v)|
+            union = v.to_a | attributes[k].to_a
+            union = union.to_h if v.is_a? Hash
+            res.merge!(k => union)
           end
           # merge other nil values
-          defaults.reduce(attributes) do |res, (k, v)|
-            attributes[k].nil? ? attributes.merge!(k => v) : attributes
-          end
+          attributes.default_proc = proc { |h, k| h[k] = defaults[k] }
           attributes
         end
 
         def initialize(raw_data, save_location)
-          @raw = raw_data.deep_symbolize_keys
+          attributes = raw_data.deep_symbolize_keys
           @save_location = save_location
-          id = raw[:id].to_sym
-          attributes = {}.merge(raw)
+          id = attributes[:id].to_sym
           attributes.merge!(Room.rooms_config[id] || {})
           Room.merge_defaults!(attributes)
           @room = OpenStruct.new(attributes)
         end
 
         def title
-          @room.title || "NO_DATA_#{id}_#{@raw[:room_description]}"
+          @room.title || "NO_DATA_#{id}_#{@room[:room_description]}"
         end
 
         def filename
@@ -134,7 +118,7 @@ module Contented
         end
 
         def equipment
-          # returns a dictionary { label => description, ... }
+          # dictionary of equipment { label => description, ... }
           technology.reduce({}) do |dict, item|
             item_data = Room.equipment[item.to_sym]
             if item_data
@@ -147,7 +131,7 @@ module Contented
         end
 
         def features
-          # returns a list of technology features [label1, label2, ...]
+          # list of technology features [label1, label2, ...]
           technology.reduce([]) do |list, f|
             feature = Room.features[f.to_sym]
             feature ? list.push(feature[:label]) : list
@@ -171,7 +155,7 @@ module Contented
 
           template = Liquid::Template.parse(Room.template_file)
           rendered = template.render(liquid_hash)
-          p template.errors
+          p template.errors unless template.errors.empty?
           rendered
         end
       end

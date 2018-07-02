@@ -87,7 +87,7 @@ describe Contented::Collections::CampusMedia::Room do
     end
   end
 
-  describe '::features_with_labels' do
+  describe '::features' do
     subject { klass.features }
 
     it { is_expected.to be_a Hash }
@@ -254,17 +254,6 @@ describe Contented::Collections::CampusMedia::Room do
           },
           body: 'This is a placeholder body',
         )
-    end
-
-    describe '#raw' do
-      subject { room.raw }
-
-      it { is_expected.to be_a Hash }
-
-      it 'string keys are converted to symbols' do
-        all_symbols = subject.keys.all? { |k| k.is_a? Symbol }
-        expect(all_symbols).to be true
-      end
     end
 
     describe '#filename' do
