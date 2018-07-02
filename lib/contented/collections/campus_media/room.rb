@@ -12,16 +12,16 @@ module Contented
 
         SCHEMA = {
           id: String,
-          building_id: Integer,
+          building_id: String,
           technology: Array,
           title: String,
           address: String,
           published: FalseClass, # Actually FalseClass or TrueClass
-          capacity: Integer,
+          capacity: String,
           links: Hash,
           image: String,
           departments: String,
-          floor: Integer,
+          floor: String,
           buttons: Hash,
           policies: Hash,
           description: String,
