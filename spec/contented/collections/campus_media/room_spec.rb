@@ -39,9 +39,8 @@ describe Contented::Collections::CampusMedia::Room do
       expect(all_symbols).to be true
     end
 
-    it 'id keys symbolized' do
-      all_symbols = subject.keys.all? { |k| k.is_a? Symbol }
-      expect(all_symbols).to be true
+    it 'symbolizes keys' do
+      expect(subject.deep_symbolize_keys).to be_deep_equal subject
     end
   end
 
@@ -55,8 +54,8 @@ describe Contented::Collections::CampusMedia::Room do
       expect(all_symbols).to be true
     end
 
-    it 'id keys symbolized' do
-      subject.keys.all? { |k| k.is_a? Symbol }
+    it 'symbolizes keys' do
+      expect(subject.deep_symbolize_keys).to be_deep_equal subject
     end
   end
 
@@ -66,11 +65,7 @@ describe Contented::Collections::CampusMedia::Room do
     it { is_expected.to be_a Hash }
 
     it 'symbolizes keys' do
-      all_main_keys_symbols = subject.keys.all? { |k| k.is_a? Symbol }
-      expect(all_main_keys_symbols).to be true
-
-      all_props_symbolized = subject.values.map(&:keys).flatten.all? { |k| k.is_a? Symbol }
-      expect(all_props_symbolized).to be true
+      expect(subject.deep_symbolize_keys).to be_deep_equal subject
     end
   end
 
@@ -92,7 +87,7 @@ describe Contented::Collections::CampusMedia::Room do
 
     it { is_expected.to be_a Hash }
     its([:'CM-Wireless Internet Connection']) do
-      is_expected.to eql(
+      is_expected.to be_deep_equal(
         label: 'Wireless Internet Connection',
         type: 'feature'
       )
@@ -291,7 +286,7 @@ describe Contented::Collections::CampusMedia::Room do
       it { is_expected.to include save_location }
     end
 
-    describe '#[attribute]' do
+    describe '#{attribute}' do
       subject { room }
 
       its(:id) { is_expected.to eql id }
