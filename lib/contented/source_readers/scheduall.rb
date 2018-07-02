@@ -41,7 +41,7 @@ module Contented
       private
 
       def fetch_technologies
-        (execute <<~SQL
+        execute(<<~SQL)
           USE schedwin
           SELECT DISTINCT
           schedwin.resctlg.resid as id,
@@ -55,7 +55,7 @@ module Contented
           WHERE schedwin.resctlg.cat=53
           ORDER BY schedwin.resctlg.typedesc;
         SQL
-        ).map { |h| h.transform_values(&:strip) }
+        .map { |h| h.transform_values(&:strip) }
       end
 
       def normalize_rooms_by_id(rooms_list)

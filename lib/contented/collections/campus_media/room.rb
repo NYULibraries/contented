@@ -81,15 +81,15 @@ module Contented
         end
 
         def self.merge_defaults!(attributes)
-          enums = defaults.select { |k, v| v.is_a? Enumerable }
-          enums.reduce(attributes) do |res, (k, v)|
-            union = v.to_a | attributes[k].to_a
-            union = union.to_h if v.is_a? Hash
-            res.merge!(k => union)
+          attributes.merge!(defaults) do |k, attr_val, def_val|
+            if attr_val.is_a? Hash
+              def_val.merge(attr_val)
+            elsif attr_val.is_a? Array
+              def_val.concat(attr_val)
+            else
+              attr_val.nil? ? def_val : attr_val
+            end
           end
-          # merge other nil values
-          attributes.default_proc = proc { |h, k| h[k] = defaults[k] }
-          attributes
         end
 
         def initialize(raw_data, save_location)
