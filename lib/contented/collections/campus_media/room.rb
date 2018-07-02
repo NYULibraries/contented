@@ -10,25 +10,13 @@ module Contented
         FILE_ROOT = File.expand_path(File.dirname(File.dirname(__FILE__))) + '/../../..'
         GIT_URL = "https://raw.githubusercontent.com/NYULibraries/campusmedia-fillins/master/".freeze
 
-        ATTRIBUTES_BY_SOURCE = {
-          room: [:id, :building_id, :technology],
-          padding: [
-            :title, :published, :capacity, :links,
-            :image, :departments, :floor, :buttons,
-            :policies, :description, :type, :keywords,
-            :help, :access, :body, :libanswers,
-          ],
-          building: [:address],
-          technology: [:features, :equipment],
-        }.freeze
-
         SCHEMA = {
           id: String,
           building_id: Integer,
           technology: Array,
           title: String,
           address: String,
-          published: String, # Actually a boolean but interpreted the same in YAML
+          published: FalseClass, # Actually FalseClass or TrueClass
           capacity: Integer,
           links: Hash,
           image: String,
@@ -58,8 +46,7 @@ module Contented
 
         def self.get_config(key)
           res = HTTParty.get("#{GIT_URL}#{key}.yml")
-          YAML.safe_load(res.body)
-            .deep_symbolize_keys
+          YAML.safe_load(res.body).deep_symbolize_keys
         end
 
         def self.rooms_config
@@ -93,34 +80,22 @@ module Contented
         end
 
         def self.defaults
-          default_vals = {
-            links: {},
-            policies: {},
-            buttons: {},
-            keywords: [],
-            help: {
-              text: nil,
-              phone: nil,
-              email: nil,
-            },
-          }
-
           @defaults ||= (
             Room.rooms_config[:default].reduce({}) do |config, (k, v)|
-              v ? config.merge!(k => v) : config.merge!(k => default_vals[k])
+              v.nil? ? config.merge!(k => SCHEMA[k].new) : config.merge!(k => v)
             end
           ).freeze
         end
 
         def self.merge_defaults!(attributes)
           # key-value merges
-          hash_keys = SCHEMA.select { |k, v| v == Hash }.keys & defaults.keys
+          hash_keys = defaults.select { |k, v| v.is_a? Hash }.keys
           hash_keys.reduce(attributes) do |res, k|
             merged = defaults[k].merge(res[k] || {})
             res.merge!(k => merged)
           end
           # array merge
-          array_keys = SCHEMA.select { |k, v| v == Array }.keys & defaults.keys
+          array_keys = defaults.select { |k, v| v.is_a? Array }.keys
           array_keys.reduce(attributes) do |res, k|
             merged = defaults[k].concat(res[k] || []).uniq
             res.merge!(k => merged)
@@ -136,23 +111,14 @@ module Contented
           @raw = raw_data.deep_symbolize_keys
           @save_location = save_location
           id = raw[:id].to_sym
-
-          attributes = {}
-          attributes.merge!(raw.slice(*ATTRIBUTES_BY_SOURCE[:room]))
-
-          if Room.rooms_config[id]
-            room_config = Room.rooms_config[id]
-            attributes.merge!(room_config.slice(*ATTRIBUTES_BY_SOURCE[:padding]))
-          end
-
+          attributes = {}.merge(raw)
+          attributes.merge!(Room.rooms_config[id] || {})
           Room.merge_defaults!(attributes)
-
-          @room_props = OpenStruct.new(attributes)
+          @room = OpenStruct.new(attributes)
         end
 
         def title
-          @room_props.title ||
-            "NO_DATA_#{id}_#{@raw[:room_description]}"
+          @room.title || "NO_DATA_#{id}_#{@raw[:room_description]}"
         end
 
         def filename
@@ -189,11 +155,7 @@ module Contented
         end
 
         def method_missing(meth, *args)
-          if ATTRIBUTES.include?(meth)
-            @room_props.send(meth)
-          else
-            super(meth, *args)
-          end
+          ATTRIBUTES.include?(meth) ? @room.send(meth) : super(meth, *args)
         end
 
         def save_as_markdown!

@@ -131,7 +131,7 @@ describe Contented::Collections::CampusMedia::Room do
     its([:help, :text]) { is_expected.to be nil }
     its([:help, :email]) { is_expected.to be nil }
 
-    its([:body]) { is_expected.to be nil }
+    its([:body]) { is_expected.to eql "" }
   end
 
   describe '::merge_defaults!' do

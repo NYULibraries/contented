@@ -33,8 +33,7 @@ namespace :contented do
       desc 'Convert rooms from Scheduall SQL data to Markdown'
       task :rooms, [:save_location] do |t, args|
         Figs.load
-
-        save_location = args[:save_location] || './_campusmedia'
+        save_location = args[:save_location] || './_services/campus-media/classrooms'
 
         FileUtils.rm_rf(Dir.glob("#{save_location}/*"))
 
