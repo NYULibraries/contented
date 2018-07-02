@@ -256,14 +256,32 @@ describe Contented::Collections::CampusMedia::Room do
         )
     end
 
+    describe '#title' do
+      subject { room.title }
+
+      it { is_expected.to eql '19 University Place 209' }
+
+      context 'with no title from fillins' do
+        before { allow(klass).to receive(:rooms_config).and_return(id.to_sym => { title: nil} ) }
+        subject { room.title }
+
+        it { is_expected.to eql "NO_TITLE_#{id}_#{raw_data['room_description']}" }
+      end
+    end
+
     describe '#filename' do
       subject { room.filename }
 
       it { is_expected.to eql '19-university-place-209' }
 
-      it 'handles complex descriptions' do
-        complex_room = klass.new(raw_data.merge(title: '19  University Place  88 8 '), '.')
-        expect(complex_room.filename).to eql "19-university-place-209"
+      context 'with complex descriptions' do
+        before do
+          allow(klass)
+            .to receive(:rooms_config)
+            .and_return(id.to_sym => { title: '19  University Place  88 8 ' })
+        end
+
+        it { is_expected.to eql "19-university-place-88-8" }
       end
     end
 

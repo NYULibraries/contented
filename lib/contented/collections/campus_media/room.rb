@@ -107,7 +107,7 @@ module Contented
         end
 
         def title
-          @room.title || "NO_DATA_#{id}_#{@room[:room_description]}"
+          @room.title || "NO_TITLE_#{id}_#{@room[:room_description]}"
         end
 
         def filename
