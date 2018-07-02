@@ -75,7 +75,8 @@ module Contented
         def self.defaults
           @defaults ||= (
             Room.rooms_config[:default].reduce({}) do |config, (k, v)|
-              v.nil? ? config.merge!(k => SCHEMA[k].new) : config.merge!(k => v)
+              v = v.nil? ? SCHEMA[k].new : v
+              config.merge!(k => v)
             end
           ).freeze
         end
