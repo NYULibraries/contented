@@ -363,7 +363,7 @@ describe Contented::Collections::CampusMedia::Room do
       it { is_expected.to include "19 University" }
       it { is_expected.to include "This is a body paragraph about 19 University Place" }
 
-      #tech_config
+      # tech_config
       it { is_expected.to include "features:" }
       it { is_expected.to include "Wireless Internet Connection" }
       it { is_expected.to include "technology:" }
@@ -373,17 +373,11 @@ describe Contented::Collections::CampusMedia::Room do
     end
 
     describe '#save_as_markdown!' do
-      before { room.save_as_markdown! }
+      before { allow(File).to receive(:write).and_return(true) }
 
-      it 'writes file to directory' do
-        file_exists = File.exist?(
-          File.expand_path(File.dirname(File.dirname(__FILE__))).
-            split('/')[0...-2].join('/') +
-            '/test_output/19-university-place-209.markdown'
-        )
+      subject { room.save_as_markdown!('./spec/test_output') }
 
-        expect(file_exists).to be true
-      end
+      it { is_expected.to be true }
     end
   end
 end
