@@ -1,0 +1,8 @@
+---
+CM-Installed Wireless Keyboard:
+  type: equipment
+  label: Wireless Keyboard
+  description: Used for typing things
+CM-Wireless Internet Connection:
+  type: feature
+  label: Wireless Internet Connection

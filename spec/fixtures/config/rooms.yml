@@ -1,0 +1,21 @@
+---
+'3937':
+  capacity: 25
+'2696':
+  title: 19 University Place 209
+  published: true
+  capacity: 30
+  departments: Campus Media
+  image: 19University229.jpg
+  floor: 1
+  access: All
+  keywords:
+    - 19 University
+  links:
+    Instructions: 19_University_Instructions.pdf
+  help:
+    email: 19Univ@nyu.edu
+  description: Placeholder description text
+  body: This is a body paragraph about 19 University Place
+'25043':
+  notes: Not a general purpose classroom
