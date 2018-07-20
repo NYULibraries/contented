@@ -375,7 +375,7 @@ describe Contented::Collections::CampusMedia::Room do
     describe '#save_as_markdown!' do
       before { allow(File).to receive(:write).and_return(true) }
 
-      subject { room.save_as_markdown!('./spec/test_output') }
+      subject { room.save_as_markdown! }
 
       it { is_expected.to be true }
     end
