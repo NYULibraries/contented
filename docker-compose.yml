@@ -1,0 +1,3 @@
+test:
+  build: .
+  command: bundle exec rspec

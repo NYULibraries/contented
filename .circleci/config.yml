@@ -1,55 +1,39 @@
+docker-defaults: &docker-defaults
+  docker:
+    - image: docker:18.05.0-ce-git
+  working_directory: ~/app
+
+setup: &setup
+  run:
+    name: Install dependencies
+    command: |
+      apk add --no-cache python3
+      pip3 install docker-compose==1.16.1
+
+build: &build
+  run:
+    name: Build
+    command: |
+      docker-compose build
+
+test: &test
+  run:
+    name: Test
+    command: |
+      docker-compose run test
+
 version: 2
 jobs:
-  build:
-    docker:
-       - image: circleci/ruby:2.5.0
-
-    working_directory: ~/app
-
+  build-and-test:
+    <<: *docker-defaults
     steps:
       - checkout
+      - setup_remote_docker
+      - <<: *setup
+      - <<: *test
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - run:
-          name: install TinyTD
-          command: |
-            apt-get install wget
-            apt-get install build-essential
-            apt-get install libc6-dev
-
-            wget http://www.freetds.org/files/stable/freetds-1.00.21.tar.gz
-            tar -xzf freetds-1.00.21.tar.gz
-            cd freetds-1.00.21
-            ./configure --prefix=/usr/local --with-tdsver=7.3
-            make
-            make install
-            cd ../
-
-      - run:
-          name: install dependencies
-          command: |
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
-
-      - save_cache:
-          paths:
-            - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-
-      # run tests!
-      - run:
-          name: run tests
-          command: |
-            rake
-
-      # collect reports
-      - store_test_results:
-          path: /tmp/test-results
-      - store_artifacts:
-          path: /tmp/test-results
-          destination: test-results
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+      - build-and-test

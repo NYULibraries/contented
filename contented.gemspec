@@ -28,4 +28,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'liquid'
   gem.add_dependency 'tiny_tds'
   gem.add_dependency 'activesupport'
+  gem.add_dependency 'httparty'
 end
