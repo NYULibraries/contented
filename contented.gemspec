@@ -6,8 +6,8 @@ require 'contented/version'
 Gem::Specification.new do |gem|
   gem.name          = "contented"
   gem.version       = Contented::VERSION
-  gem.authors       = ["Amay Yadav", "Eric Griffis", "Barnaby Alter"]
-  gem.email         = ["amay@nyu.edu", "eric.griffis@nyu.edu", "barnaby.alter@nyu.edu"]
+  gem.authors       = ["Amay Yadav", "Eric Griffis", "Barnaby Alter", "Elliott Grieco"]
+  gem.email         = ["amay@nyu.edu", "eric.griffis@nyu.edu", "barnaby.alter@nyu.edu", "elliott.grieco@nyu.edu"]
   gem.description   = %q{Content and test helpers for the NYU Libraries website}
   gem.summary       = %q{Content and test helpers for the NYU Libraries website}
   gem.homepage      = "https://github.com/NYULibraries/contented"
@@ -26,4 +26,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'swiftype', '~> 1.2.2'
   gem.add_dependency 'ox'
   gem.add_dependency 'liquid'
+  gem.add_dependency 'tiny_tds'
+  gem.add_dependency 'activesupport'
 end

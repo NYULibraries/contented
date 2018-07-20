@@ -97,4 +97,12 @@ describe Contented::SourceReaders::Scheduall do
       end
     end
   end
+
+  describe '#save_rooms!' do
+    before { allow(File).to receive(:write).and_return(true) }
+
+    subject { scheduall.save_rooms!('./spec/test_output') }
+
+    it { is_expected.to be true }
+  end
 end

@@ -33,7 +33,7 @@ namespace :contented do
       desc 'Convert rooms from Scheduall SQL data to Markdown'
       task :rooms, [:save_location] do |t, args|
         Figs.load
-        save_location = args[:save_location] || './_services/campus-media/classrooms'
+        save_location = args[:save_location] || './_classrooms'
 
         FileUtils.rm_rf(Dir.glob("#{save_location}/*"))
 
@@ -45,10 +45,10 @@ namespace :contented do
 
         scheduall = Contented::SourceReaders::Scheduall.new(options)
         scheduall.fetch_rooms
+        scheduall.save_rooms!(save_location)
         scheduall.close
 
-        rooms = scheduall.rooms
-        rooms.each do |r|
+        scheduall.each do |r|
           room = Contented::Collections::CampusMedia::Room.new(r, save_location)
           room.save_as_markdown!
         end

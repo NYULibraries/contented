@@ -1,4 +1,5 @@
 require 'tiny_tds'
+require 'yaml'
 
 module Contented
   module SourceReaders
@@ -26,6 +27,10 @@ module Contented
         @rooms = normalize_rooms_by_id(rooms_list)
       end
 
+      def save_rooms!(save_location)
+        File.write("#{save_location}/rooms_data.yml", @rooms.to_yaml)
+      end
+
       def close
         client.close
       end
@@ -41,7 +46,7 @@ module Contented
       private
 
       def fetch_technologies
-        execute(<<~SQL)
+        execute(<<~SQL).map { |h| h.transform_values(&:strip) }
           USE schedwin
           SELECT DISTINCT
           schedwin.resctlg.resid as id,
@@ -55,7 +60,6 @@ module Contented
           WHERE schedwin.resctlg.cat=53
           ORDER BY schedwin.resctlg.typedesc;
         SQL
-        .map { |h| h.transform_values(&:strip) }
       end
 
       def normalize_rooms_by_id(rooms_list)
