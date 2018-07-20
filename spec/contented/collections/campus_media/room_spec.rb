@@ -336,6 +336,7 @@ describe Contented::Collections::CampusMedia::Room do
 
       # buildings_config
       it { is_expected.to include "address: 19 University Place" }
+      it { is_expected.to include "location: 19 University Place" }
 
       # rooms_config
       it { is_expected.to include "capacity: 30" }

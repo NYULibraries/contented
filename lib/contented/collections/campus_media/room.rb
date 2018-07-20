@@ -13,6 +13,7 @@ module Contented
         SCHEMA = {
           id: String,
           building_id: String,
+          location: String,
           technology: Array,
           title: String,
           address: String,
@@ -116,6 +117,10 @@ module Contented
             gsub(' ', '-').
             squeeze('-').
             chomp('-')
+        end
+
+        def location
+          @room.building_description
         end
 
         def address

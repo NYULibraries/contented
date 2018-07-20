@@ -1,5 +1,6 @@
 ---
 address: {{ address }}
+location: {{ location }}
 title: {{ title }}
 capacity: {{ capacity }}
 links: {% for link in links %}
