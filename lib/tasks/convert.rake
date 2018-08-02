@@ -32,15 +32,18 @@ namespace :contented do
     namespace :campusmedia do
       desc 'Convert rooms from Scheduall SQL data to Markdown'
       task :rooms, [:save_location] do |t, args|
-        Figs.load
+        # allows optionally utilizing raw environment variables
+        unless ENV["SCHEDUALL_HOST"] || ENV["SCHEDUALL_USERNAME"] || ENV["SCHEDUALL_PASSWORD"]
+          Figs.load
+        end
         save_location = args[:save_location] || './_classrooms'
 
         FileUtils.rm_rf(Dir.glob("#{save_location}/*"))
 
         options = {
-          host: Figs.env["SCHEDUALL_HOST"],
-          username: Figs.env["SCHEDUALL_USERNAME"],
-          password: Figs.env["SCHEDUALL_PASSWORD"],
+          host: ENV["SCHEDUALL_HOST"],
+          username: ENV["SCHEDUALL_USERNAME"],
+          password: ENV["SCHEDUALL_PASSWORD"],
         }
 
         scheduall = Contented::SourceReaders::Scheduall.new(options)
