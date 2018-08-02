@@ -8,4 +8,3 @@ _people/
 wiki
 spec/test_output
 # Ignore application configuration
-config/settings_scheduall.yml

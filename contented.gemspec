@@ -12,7 +12,11 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Content and test helpers for the NYU Libraries website}
   gem.homepage      = "https://github.com/NYULibraries/contented"
 
-  gem.files         = `git ls-files`.split($/)
+  ignores = File.readlines(".dockerignore").grep(/\S+/).map(&:chomp)
+  all_files_without_ignores =
+    Dir["**/*"].reject { |f| File.directory?(f) || ignores.any? { |i| File.fnmatch(i, f) } }
+
+  gem.files         = all_files_without_ignores.sort
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
@@ -26,7 +30,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'swiftype', '~> 1.2.2'
   gem.add_dependency 'ox'
   gem.add_dependency 'liquid'
-  gem.add_dependency 'tiny_tds'
+  gem.add_dependency 'tiny_tds', '~> 2.1.2'
   gem.add_dependency 'activesupport'
   gem.add_dependency 'httparty'
 end

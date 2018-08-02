@@ -10,7 +10,7 @@ group :development, :test do
   gem 'swiftype', '~> 1.2.2'
   gem 'figs', '~> 2.1'
   gem 'rspec', '~> 3.5'
-  gem 'tiny_tds'
+  gem 'tiny_tds', '~> 2.1.2'
   gem 'httparty'
   gem 'activesupport'
 
