@@ -26,7 +26,7 @@ describe Contented::Collections::CampusMedia::Room do
       to receive(:get).with(/technology.yml/).
       and_return OpenStruct.new(body: FIXTURES[:technology])
 
-    stub_const "HTTParty", http
+    stub_const "Faraday", http
   end
 
   describe '::rooms_config' do
@@ -95,6 +95,8 @@ describe Contented::Collections::CampusMedia::Room do
   end
 
   describe '::defaults' do
+    subject { klass.defaults }
+
     before do
       allow(klass).
         to receive(:rooms_config).
@@ -114,8 +116,6 @@ describe Contented::Collections::CampusMedia::Room do
         )
     end
 
-    subject { klass.defaults }
-
     its([:links]) { is_expected.to be_a Hash }
     its([:policies]) { is_expected.to be_a Hash }
     its([:buttons]) { is_expected.to be_a Hash }
@@ -127,101 +127,6 @@ describe Contented::Collections::CampusMedia::Room do
     its([:help, :email]) { is_expected.to be nil }
 
     its([:body]) { is_expected.to eql "" }
-  end
-
-  describe '::merge_defaults!' do
-    before do
-      allow(klass).
-        to receive(:defaults).
-        and_return(
-          links: {
-            :'Default Link' => 'defaultlink1.com',
-            :'Default Link2' => 'defaultlink2.com',
-          },
-          policies: {
-            :'Policy Link' => 'policy.com',
-          },
-          buttons: {
-            :'Button Link' => 'button.com',
-          },
-          keywords: ['key', 'word'],
-          help: {
-            text: 'Feel free to reach out',
-            phone: '212 222 2222',
-            email: 'email@email.com',
-          },
-          image: 'placeholder.jpg',
-          body: 'This is a placeholder body',
-          libanswers: {
-            topic_ids: 29679,
-            link: 'http://library.answers.nyu.edu/',
-          },
-        )
-    end
-
-    subject { klass.merge_defaults!(dummy_data) }
-
-    let(:dummy_data) do
-      {
-        links: {
-          :'Link 3' => 'link3.com',
-        },
-        policies: {
-          :'Extra policy' => 'policy2.com',
-        },
-        buttons: {
-          :'More Buttons' => 'button2.com',
-        },
-        keywords: ['more', 'special', 'words'],
-        help: {
-          phone: '212 555 5555',
-        },
-        body: 'Now this body should appear',
-        libanswers: {
-          topic_ids: 12345,
-        },
-      }
-    end
-
-    let(:merged) do
-      {
-        links: {
-          :'Default Link' => 'defaultlink1.com',
-          :'Default Link2' => 'defaultlink2.com',
-          :'Link 3' => 'link3.com',
-        },
-        policies: {
-          :'Policy Link' => 'policy.com',
-          :'Extra policy' => 'policy2.com',
-        },
-        buttons: {
-          :'Button Link' => 'button.com',
-          :'More Buttons' => 'button2.com',
-        },
-        keywords: ['key', 'word', 'more', 'special', 'words'],
-        help: {
-          text: 'Feel free to reach out',
-          phone: '212 555 5555',
-          email: 'email@email.com',
-        },
-        image: 'placeholder.jpg',
-        body: 'Now this body should appear',
-        libanswers: {
-          topic_ids: 12345,
-          link: 'http://library.answers.nyu.edu/',
-        },
-      }
-    end
-
-    its([:links]) { is_expected.to eql merged[:links] }
-    its([:policies]) { is_expected.to eql merged[:policies] }
-    its([:buttons]) { is_expected.to eql merged[:buttons] }
-    its([:keywords]) { is_expected.to eql merged[:keywords] }
-    its([:help]) { is_expected.to be_deep_equal merged[:help] }
-    its([:body]) { is_expected.to eql merged[:body] }
-    its([:image]) { is_expected.to eql merged[:image] }
-    its([:libanswers]) { is_expected.to be_deep_equal merged[:libanswers] }
-    its(:object_id) { is_expected.to eql dummy_data.object_id }
   end
 
   describe '#initialize' do
@@ -257,8 +162,9 @@ describe Contented::Collections::CampusMedia::Room do
       it { is_expected.to eql '19 University Place 209' }
 
       context 'with no title from fillins' do
-        before { allow(klass).to receive(:rooms_config).and_return(id.to_sym => { title: nil} ) }
         subject { room.title }
+
+        before { allow(klass).to receive(:rooms_config).and_return(id.to_sym => { title: nil }) }
 
         it { is_expected.to eql "NO_TITLE_#{id}_#{raw_data['room_description']}" }
       end
@@ -303,14 +209,13 @@ describe Contented::Collections::CampusMedia::Room do
 
         its(:capacity) { is_expected.to eql 30 }
         its(:image) { is_expected.to eql '19University229.jpg' }
-        its(:departments) { is_expected.to eql 'Campus Media' }
         its(:policies) { is_expected.to be_deep_equal(:'Policy Link' => 'policy.com') }
         its(:buttons) { is_expected.to be_deep_equal(:'Button Link' => 'button.com') }
         its(:published) { is_expected.to be true }
         its(:type) { is_expected.to eql nil }
         its(:help) do
           is_expected.to be_deep_equal(
-            text: 'Feel free to reach out',
+            text: 'This help text is specific to 19 University Place',
             phone: '212 222 2222',
             email: '19Univ@nyu.edu'
           )
@@ -345,7 +250,6 @@ describe Contented::Collections::CampusMedia::Room do
       it { is_expected.to include "Default Link2: defaultlink2.com" }
       it { is_expected.to include "Instructions: 19_University_Instructions.pdf" }
       it { is_expected.to include "image: 19University229.jpg" }
-      it { is_expected.to include "departments: Campus Media" }
       it { is_expected.to include "published: true" }
       it { is_expected.to include "buttons:" }
       it { is_expected.to include "Button Link: button.com" }
@@ -354,7 +258,7 @@ describe Contented::Collections::CampusMedia::Room do
       it { is_expected.to include "description: Placeholder description text" }
       it { is_expected.to include "type:" }
       it { is_expected.to include "help:" }
-      it { is_expected.to include "text: Feel free to reach out" }
+      it { is_expected.to include "text: This help text is specific to 19 University Place" }
       it { is_expected.to include "phone: 212 222 2222" }
       it { is_expected.to include "email: 19Univ@nyu.edu" }
       it { is_expected.to include "keywords:" }

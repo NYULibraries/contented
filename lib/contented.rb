@@ -1,8 +1,8 @@
 require 'json'
-require 'faraday'
 require 'open-uri'
 require 'i18n'
 require 'swiftype'
+require 'faraday'
 
 module Contented
   # Load all files in lib/contented into the Contented module

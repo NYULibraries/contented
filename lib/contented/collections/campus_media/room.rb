@@ -1,7 +1,5 @@
 require 'liquid'
-require 'httparty'
 require 'active_support/core_ext/hash'
-require 'pry'
 
 module Contented
   module Collections
@@ -21,7 +19,6 @@ module Contented
           capacity: String,
           links: Hash,
           image: String,
-          departments: String,
           floor: String,
           buttons: Hash,
           policies: Hash,
@@ -45,7 +42,7 @@ module Contented
         end
 
         def self.get_config(key)
-          res = HTTParty.get("#{GIT_URL}#{key}.yml")
+          res = Faraday.get("#{GIT_URL}#{key}.yml")
           YAML.safe_load(res.body).deep_symbolize_keys
         end
 
@@ -82,14 +79,16 @@ module Contented
           ).freeze
         end
 
-        def self.merge_defaults!(attributes)
-          attributes.merge!(defaults) do |k, attr_val, def_val|
-            if attr_val.is_a? Hash
-              def_val.merge(attr_val)
-            elsif attr_val.is_a? Array
-              def_val.concat(attr_val)
-            else
-              attr_val.nil? ? def_val : attr_val
+        def self.merge!(room_attributes, *attributes_list)
+          attributes_list.each do |new_attributes|
+            room_attributes.merge!(new_attributes) do |k, room_val, new_val|
+              if room_val.is_a? Hash
+                room_val.merge(new_val)
+              elsif room_val.is_a? Array
+                room_val | new_val
+              else
+                new_val || room_val
+              end
             end
           end
         end
@@ -99,10 +98,14 @@ module Contented
           @save_location = save_location
 
           id = attributes[:id].to_sym
-          room_fillins = Room.rooms_config[id]
-          attributes.merge!(room_fillins) if room_fillins
+          building_id = attributes[:building_id].to_sym
 
-          Room.merge_defaults!(attributes)
+          Room.merge!(
+            attributes,
+            Room.defaults,
+            Room.buildings_config[building_id],
+            Room.rooms_config[id],
+          )
 
           @room = OpenStruct.new(attributes)
         end
@@ -117,14 +120,6 @@ module Contented
             gsub(' ', '-').
             squeeze('-').
             chomp('-')
-        end
-
-        def location
-          @room.building_description
-        end
-
-        def address
-          Room.buildings_config.dig(building_id.to_sym, :address)
         end
 
         def equipment

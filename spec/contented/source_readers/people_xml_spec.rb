@@ -22,5 +22,4 @@ describe Contented::SourceReaders::PeopleXML do
       end
     end
   end
-
 end

@@ -52,7 +52,7 @@ module Contented
           schedwin.resctlg.resid as id,
           schedwin.resctlg.descript as room_description,
           schedwin.resctlg.type as building_id,
-          schedwin.resctlg.typedesc as building_description,
+          schedwin.resctlg.typedesc as location,
           schedwin.svcctlg.svcode as technology_id,
           schedwin.svcctlg.servdesc as technology_description
           FROM schedwin.resctlg

@@ -3,7 +3,6 @@ require 'figs'
 
 namespace :contented do
   namespace :convert do
-
     desc 'Convert people from XML file to Markdown'
     task :people, :file, :save_location do |t, args|
       Figs.load()
