@@ -12,14 +12,11 @@ RUN apk add --no-cache $BUILD_PACKAGES \
   && cd freetds-1.00.92 \
   && ./configure \
   && make install \
-  && apk del $BUILD_PACKAGES \
   && cd ../ && rm -rf freetds-1.00.92
 
 COPY Gemfile .dockerignore contented.gemspec ./
 COPY ./lib/contented/version.rb ./lib/contented/version.rb
 
-RUN apk add --no-cache $BUILD_PACKAGES \
-  && gem install bundler && bundle install --jobs 20 --retry 5 \
-  && apk del $BUILD_PACKAGES
+RUN gem install bundler && bundle install --jobs 20 --retry 5
 
 COPY . .
