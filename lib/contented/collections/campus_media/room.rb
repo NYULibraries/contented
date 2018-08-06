@@ -83,7 +83,7 @@ module Contented
               elsif new_val.is_a? Array
                 room_val | new_val
               else
-                new_val || room_val
+                new_val.nil? ? room_val : new_val
               end
             end
           end
