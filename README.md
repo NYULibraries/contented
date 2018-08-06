@@ -43,5 +43,5 @@ $ bundle install
 ## Running rspec
 
 ```shell
-$ bundle exec rake
+$ bundle exec rspec
 ```
