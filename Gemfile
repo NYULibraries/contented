@@ -6,12 +6,9 @@ group :development, :test do
   gem 'webmock', '~> 3'
   gem 'rspec-its', '~> 1.2.0'
   gem 'coveralls', '~> 0.8'
-  gem 'factory_bot', '~> 4.8'
   gem 'swiftype', '~> 1.2.2'
   gem 'figs', '~> 2.1'
   gem 'rspec', '~> 3.5'
-  gem 'tiny_tds', '~> 2.1.2'
-  gem 'httparty'
   gem 'activesupport'
 
   gem 'guard-rspec', require: false

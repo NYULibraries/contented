@@ -7,7 +7,6 @@ links: {% for link in links %}
   {{ link[0] }}: {{ link[1] }}
 {%- endfor %}
 image: {{ image }}
-departments: {{ departments }}
 floor: {{ floor }}
 published: {{ published }}
 buttons: {% for button in buttons %}

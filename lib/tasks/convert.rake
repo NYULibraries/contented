@@ -3,7 +3,6 @@ require 'figs'
 
 namespace :contented do
   namespace :convert do
-
     desc 'Convert people from XML file to Markdown'
     task :people, :file, :save_location do |t, args|
       Figs.load()
@@ -33,7 +32,7 @@ namespace :contented do
       desc 'Convert rooms from Scheduall SQL data to Markdown'
       task :rooms, [:save_location] do |t, args|
         # allows optionally utilizing raw environment variables
-        unless ENV["SCHEDUALL_HOST"] || ENV["SCHEDUALL_USERNAME"] || ENV["SCHEDUALL_PASSWORD"]
+        unless ENV["SCHEDUALL_HOST"] && ENV["SCHEDUALL_USERNAME"] && ENV["SCHEDUALL_PASSWORD"]
           Figs.load
         end
         save_location = args[:save_location] || './_classrooms'
