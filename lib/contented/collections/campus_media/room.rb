@@ -15,7 +15,7 @@ module Contented
           technology: Array,
           title: String,
           address: String,
-          published: FalseClass, # Actually FalseClass or TrueClass
+          published: String, # true/false
           capacity: String,
           links: Hash,
           image: String,
@@ -71,20 +71,16 @@ module Contented
         end
 
         def self.defaults
-          @defaults ||= (
-            Room.rooms_config[:default].reduce({}) do |config, (k, v)|
-              v = v.nil? ? SCHEMA[k].new : v
-              config.merge!(k => v)
-            end
-          ).freeze
+          @defaults ||=
+            Room.rooms_config[:default].freeze
         end
 
         def self.merge!(room_attributes, *attributes_list)
           attributes_list.each do |new_attributes|
             room_attributes.merge!(new_attributes) do |k, room_val, new_val|
-              if room_val.is_a? Hash
+              if new_val.is_a? Hash
                 room_val.merge(new_val)
-              elsif room_val.is_a? Array
+              elsif new_val.is_a? Array
                 room_val | new_val
               else
                 new_val || room_val
@@ -94,11 +90,16 @@ module Contented
         end
 
         def initialize(raw_data, save_location)
-          attributes = raw_data.deep_symbolize_keys
           @save_location = save_location
 
           id = attributes[:id].to_sym
           building_id = attributes[:building_id].to_sym
+
+          # gives default empty value to all attributes
+          attributes = SCHEMA.reduce({}) do |acc, (k, v)|
+            value = raw_data.deep_symbolize_keys[k] || v.new
+            acc.merge!({ k => value })
+          end
 
           Room.merge!(
             attributes,
