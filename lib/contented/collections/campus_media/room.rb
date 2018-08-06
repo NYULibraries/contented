@@ -92,14 +92,14 @@ module Contented
         def initialize(raw_data, save_location)
           @save_location = save_location
 
-          id = attributes[:id].to_sym
-          building_id = attributes[:building_id].to_sym
-
           # gives default empty value to all attributes
           attributes = SCHEMA.reduce({}) do |acc, (k, v)|
             value = raw_data.deep_symbolize_keys[k] || v.new
             acc.merge!({ k => value })
           end
+
+          id = attributes[:id].to_sym
+          building_id = attributes[:building_id].to_sym
 
           Room.merge!(
             attributes,
@@ -112,7 +112,7 @@ module Contented
         end
 
         def title
-          @room.title || "NO_TITLE_#{id}_#{@room[:room_description]}"
+          @room.title.empty? ? "NO_TITLE_#{id}" : @room.title
         end
 
         def filename

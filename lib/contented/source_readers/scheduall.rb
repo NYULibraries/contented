@@ -50,7 +50,7 @@ module Contented
           USE schedwin
           SELECT DISTINCT
           schedwin.resctlg.resid as id,
-          schedwin.resctlg.descript as room_description,
+          schedwin.resctlg.descript as title,
           schedwin.resctlg.type as building_id,
           schedwin.resctlg.typedesc as location,
           schedwin.svcctlg.svcode as technology_id,

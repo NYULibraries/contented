@@ -97,36 +97,35 @@ describe Contented::Collections::CampusMedia::Room do
   describe '::defaults' do
     subject { klass.defaults }
 
+    let(:default) do
+      {
+        links: {
+          'Link_1': 'http://example.com',
+        },
+        policies: nil,
+        buttons: nil,
+        keywords: [
+          'classroom',
+          'media',
+        ],
+        help: {
+          text: nil,
+          phone: '212 222 22222',
+          email: nil,
+        },
+        body: 'This is the default body text',
+      }
+    end
+
     before do
       allow(klass).
         to receive(:rooms_config).
         and_return(
-          default: {
-            links: nil,
-            policies: nil,
-            buttons: nil,
-            keywords: nil,
-            help: {
-              text: nil,
-              phone: nil,
-              email: nil,
-            },
-            body: nil,
-          },
+          default: default
         )
     end
 
-    its([:links]) { is_expected.to be_a Hash }
-    its([:policies]) { is_expected.to be_a Hash }
-    its([:buttons]) { is_expected.to be_a Hash }
-    its([:keywords]) { is_expected.to be_a Array }
-
-    its([:help]) { is_expected.to be_a Hash }
-    its([:help, :phone]) { is_expected.to be nil }
-    its([:help, :text]) { is_expected.to be nil }
-    its([:help, :email]) { is_expected.to be nil }
-
-    its([:body]) { is_expected.to eql "" }
+    it { is_expected.to be_deep_equal default }
   end
 
   describe '#initialize' do
@@ -161,12 +160,15 @@ describe Contented::Collections::CampusMedia::Room do
 
       it { is_expected.to eql '19 University Place 209' }
 
-      context 'with no title from fillins' do
+      context 'with empty from fillins' do
         subject { room.title }
 
-        before { allow(klass).to receive(:rooms_config).and_return(id.to_sym => { title: nil }) }
+        before do
+          raw_data[:title] = nil
+          allow(klass).to receive(:rooms_config).and_return(id.to_sym => { title: nil })
+        end
 
-        it { is_expected.to eql "NO_TITLE_#{id}_#{raw_data['room_description']}" }
+        it { is_expected.to eql "NO_TITLE_#{id}" }
       end
     end
 
@@ -212,7 +214,7 @@ describe Contented::Collections::CampusMedia::Room do
         its(:policies) { is_expected.to be_deep_equal(:'Policy Link' => 'policy.com') }
         its(:buttons) { is_expected.to be_deep_equal(:'Button Link' => 'button.com') }
         its(:published) { is_expected.to be true }
-        its(:type) { is_expected.to eql nil }
+        its(:type) { is_expected.to eql '' }
         its(:help) do
           is_expected.to be_deep_equal(
             text: 'This help text is specific to 19 University Place',
