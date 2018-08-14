@@ -112,7 +112,11 @@ module Contented
         end
 
         def title
-          @room.title.empty? ? "NO_TITLE_#{id}" : @room.title
+          @room.title.blank? ? "NO_TITLE_#{id}" : @room.title
+        end
+
+        def published
+          technology.join(',').include?("CM-Installed") ? @room.published : false
         end
 
         def filename

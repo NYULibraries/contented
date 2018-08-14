@@ -155,6 +155,18 @@ describe Contented::Collections::CampusMedia::Room do
         )
     end
 
+    describe '#published' do
+      subject { room.published }
+
+      it { is_expected.to be true }
+
+      context 'with only wireless internet' do
+        let(:id) { '3937' }
+
+        it { is_expected.to be false }
+      end
+    end
+
     describe '#title' do
       subject { room.title }
 
