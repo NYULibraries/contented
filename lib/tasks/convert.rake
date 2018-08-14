@@ -1,11 +1,16 @@
 require 'contented'
-require 'figs'
+
+begin
+  require 'figs'
+  Figs.load
+rescue
+  # do nothing if gem unavailable or Figs.load fails
+end
 
 namespace :contented do
   namespace :convert do
     desc 'Convert people from XML file to Markdown'
     task :people, :file, :save_location do |t, args|
-      Figs.load()
       file = args[:file] || './data/staff_directory_load.xml'
       save_location = args[:save_location] || './_people'
       people = Contented::SourceReaders::PeopleXML.new(file)
@@ -31,10 +36,6 @@ namespace :contented do
     namespace :campusmedia do
       desc 'Convert rooms from Scheduall SQL data to Markdown'
       task :rooms, [:save_location] do |t, args|
-        # allows optionally utilizing raw environment variables
-        unless ENV["SCHEDUALL_HOST"] && ENV["SCHEDUALL_USERNAME"] && ENV["SCHEDUALL_PASSWORD"]
-          Figs.load
-        end
         save_location = args[:save_location] || './_classrooms'
 
         FileUtils.rm_rf(Dir.glob("#{save_location}/*"))
