@@ -3,7 +3,7 @@ require 'contented'
 begin
   require 'figs'
   Figs.load
-rescue
+rescue LoadError
   # do nothing if gem unavailable or Figs.load fails
 end
 
