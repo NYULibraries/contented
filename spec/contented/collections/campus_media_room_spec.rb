@@ -281,5 +281,21 @@ describe Contented::Collections::CampusMediaRoom do
       its(['equipment']) { is_expected.to be_a Hash }
       its(['equipment', 'Wireless Keyboard']) { is_expected.to eql 'Used for typing things' }
     end
+
+    describe "#save_as_markdown!" do
+      subject { room.save_as_markdown!(save_location: './output') }
+
+      before do
+        allow_any_instance_of(Contented::Markdownable).to receive(:save_as_markdown!).and_return true
+      end
+
+      it { is_expected.to be true }
+
+      context 'when not published' do
+        before { room.stub published: false }
+
+        it { is_expected.to be nil }
+      end
+    end
   end
 end

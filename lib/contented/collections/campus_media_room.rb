@@ -151,8 +151,8 @@ module Contented
         end
       end
 
-      def save_as_markdown!
-        super if published
+      def save_as_markdown!(options)
+        super(options) if published
       end
     end
   end
