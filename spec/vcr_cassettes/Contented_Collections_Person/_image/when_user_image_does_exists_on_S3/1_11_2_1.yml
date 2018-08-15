@@ -1,0 +1,44 @@
+---
+http_interactions:
+- request:
+    method: head
+    uri: https://s3.amazonaws.com/nyulibraries-www-assets/people-images/barnaby-alter.jpg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Amz-Id-2:
+      - b9twqgyhYw/S8RjsAFNFJeMIi/nkrLV5UbH1b58bOxlzhKTFvxJhDdMyT/djoDxoUlJxfYkDnPw=
+      X-Amz-Request-Id:
+      - C3635F56182B3924
+      Date:
+      - Wed, 15 Aug 2018 18:28:28 GMT
+      Last-Modified:
+      - Fri, 31 Mar 2017 18:55:56 GMT
+      Etag:
+      - '"a1e5d99b917b87a6e63e6295a9d8c7ad"'
+      X-Amz-Version-Id:
+      - Ovk_Lcs1N0y1gmblAi7LukrIXwYkbq.4
+      Accept-Ranges:
+      - bytes
+      Content-Type:
+      - image/jpeg
+      Content-Length:
+      - '86241'
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 15 Aug 2018 18:28:27 GMT
+recorded_with: VCR 3.0.3

@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: head
+    uri: https://s3.amazonaws.com/nyulibraries-www-assets/people-images/jane-doe-marquez.jpg
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.2
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      X-Amz-Request-Id:
+      - E6BF741AF5B61455
+      X-Amz-Id-2:
+      - xqrduS+A3SIey19brZMAWHCJez2RHHlwqXrHe/ZY+Y8KtrfX6DIYsXwkud24BLwylBQ5fj42+QQ=
+      Content-Type:
+      - application/xml
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Wed, 15 Aug 2018 17:41:57 GMT
+      Server:
+      - AmazonS3
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Wed, 15 Aug 2018 17:41:58 GMT
+recorded_with: VCR 3.0.3

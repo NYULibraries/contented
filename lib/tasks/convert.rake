@@ -25,10 +25,13 @@ namespace :contented do
       # Expect people to be a hash
       people.each do |p|
         # Expect p to be a hash
-        person = Contented::Collections::Person.new(p, save_location)
+        person = Contented::Collection::Person.new(p)
         unless exclude_people.include?(person.net_id)
           # Save the file as markdown
-          person.save_as_markdown!
+          person.
+            save_as_markdown! save_location: save_location,
+                              filename: person.filename,
+                              liquid_hash: person.to_liquid_hash
         end
       end
     end
@@ -38,6 +41,7 @@ namespace :contented do
       task :rooms, [:save_location] do |t, args|
         save_location = args[:save_location] || './_classrooms'
 
+        FileUtils.mkdir_p(save_location)
         FileUtils.rm_rf(Dir.glob("#{save_location}/*"))
 
         options = {
@@ -52,8 +56,12 @@ namespace :contented do
         scheduall.close
 
         scheduall.each do |r|
-          room = Contented::Collections::CampusMedia::Room.new(r, save_location)
-          room.save_as_markdown!
+          room = Contented::Collection::CampusMediaRoom.new(r)
+          room.
+            save_as_markdown! save_location: save_location,
+                              filename: room.filename,
+                              liquid_hash: room.to_liquid_hash
+
         end
       end
     end
