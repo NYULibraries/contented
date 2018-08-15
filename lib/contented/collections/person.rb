@@ -5,7 +5,7 @@ require 'liquid'
 module Contented
   module Collections
     class Person
-      include Contented::LiquidCollection
+      include Contented::Markdownable
       S3_IMAGE_PREFIXES = ['https://s3.amazonaws.com/nyulibraries-www-assets/people-images/']
       S3_IMAGE_EXTENSION = '.jpg'
       ATTRS_FROM_RAW = [

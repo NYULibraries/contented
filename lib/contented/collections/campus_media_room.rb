@@ -4,7 +4,7 @@ require 'active_support/core_ext/hash'
 module Contented
   module Collections
     class CampusMediaRoom
-      include Contented::LiquidCollection
+      include Contented::Markdownable
       GIT_URL = "https://raw.githubusercontent.com/NYULibraries/campusmedia-fillins/master/".freeze
 
       SCHEMA = {
@@ -149,6 +149,10 @@ module Contented
           val = val.deep_stringify_keys if val.is_a? Hash
           hash.merge!(attribute.to_s => val)
         end
+      end
+
+      def save_as_markdown!
+        super if published
       end
     end
   end

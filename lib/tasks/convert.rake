@@ -3,9 +3,7 @@ require 'contented'
 begin
   require 'figs'
   Figs.load
-rescue LoadError
-  # do nothing if gem unavailable or Figs.load fails
-end
+rescue LoadError; end
 
 namespace :contented do
   namespace :convert do
@@ -28,10 +26,7 @@ namespace :contented do
         person = Contented::Collection::Person.new(p)
         unless exclude_people.include?(person.net_id)
           # Save the file as markdown
-          person.
-            save_as_markdown! save_location: save_location,
-                              filename: person.filename,
-                              liquid_hash: person.to_liquid_hash
+          person.save_as_markdown! save_location: save_location
         end
       end
     end
@@ -57,11 +52,7 @@ namespace :contented do
 
         scheduall.each do |r|
           room = Contented::Collection::CampusMediaRoom.new(r)
-          room.
-            save_as_markdown! save_location: save_location,
-                              filename: room.filename,
-                              liquid_hash: room.to_liquid_hash
-
+          room.save_as_markdown! save_location: save_location
         end
       end
     end
