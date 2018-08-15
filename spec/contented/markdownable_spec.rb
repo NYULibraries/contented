@@ -41,14 +41,14 @@ describe Contented::Markdownable do
   end
 
   describe "#to_markdown" do
+    subject { dummy_instance.send(:to_markdown) }
+
     before do
       dummy_instance.stub(:to_liquid_hash) { true }
       liquid_template_parsed = double('liquid_template', render: rendered, errors: [])
       stub_const "Liquid::Template", double(parse: liquid_template_parsed)
       stub_const "File", double('File', read: true)
     end
-
-    subject { dummy_instance.send(:to_markdown) }
 
     it { is_expected.to eql rendered }
   end
