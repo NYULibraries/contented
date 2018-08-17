@@ -1,7 +1,6 @@
 # -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'contented/version'
+$LOAD_PATH.unshift File.dirname(__FILE__)
+require_relative './lib/contented/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "contented"
@@ -23,7 +22,6 @@ Gem::Specification.new do |gem|
   gem.licenses      = ['MIT']
 
   gem.required_ruby_version = '>= 2.4.0'
-  gem.add_dependency 'sshkit', '>= 1.7.1'
   gem.add_dependency 'rake', '>= 10.0.0'
   gem.add_dependency 'faraday', '>= 0.9.0'
   gem.add_dependency 'i18n', '>= 0.7.0'

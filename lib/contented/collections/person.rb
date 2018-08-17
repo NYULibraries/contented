@@ -1,10 +1,12 @@
 require 'ostruct'
 require 'liquid'
+require 'contented/markdownable'
 
 # Ruby object representation of a Person / Staff member
 module Contented
   module Collections
     class Person
+      include Contented::Markdownable
       S3_IMAGE_PREFIXES = ['https://s3.amazonaws.com/nyulibraries-www-assets/people-images/']
       S3_IMAGE_EXTENSION = '.jpg'
       ATTRS_FROM_RAW = [
@@ -15,28 +17,22 @@ module Contented
                           :guide_id_numbers, :orcid, :twitter, :linkedin, :blog_title, :blog_rss, :blog_url, :subject_specialties,
                           :sort_title, :image, :title
                         ]
-      attr_accessor :raw, :person, :save_location
+      attr_accessor :raw, :person
       # If parent department is one of these then append it to the departments list as well
       APPEND_PARENT_DEPARTMENTS = ["Knowledge Access & Resource Management Services"]
       KEYS_TO_WRAP_IN_QUOTES = [:work_phone]
       KEYS_TO_EXCLUDE_FROM_QUOTES = [:about_you]
-
-      # Location of the liquid template we'll use for generating these People for Jekyll
-      def self.template_file
-        File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) + '/../contented/templates/person.markdown')
-      end
 
       # Location of Subject Specialties mapping config file
       def self.subject_specialties_config
         YAML.load(File.read(File.expand_path(File.dirname(File.dirname(__FILE__))) + '/../../config/subject_specialties.yml'))
       end
 
-      def initialize(raw, save_location)
+      def initialize(raw)
         unless raw.is_a?(Hash)
           raise ArgumentError.new("Expecting a hash as the first parameter")
         end
         @raw = raw
-        @save_location = save_location
         # Make self.person an ostruct so that arbitrary calls to attrs,
         # i.e. person.net_id, can be made
         @person = OpenStruct.new(transform_raw_keys_to_downcase)
@@ -124,28 +120,17 @@ module Contented
         end
       end
 
-      # Save markdown to file `title`.markdown
-      def save_as_markdown!
-        File.write("#{save_location}/#{filename}.markdown", to_markdown)
-      end
-
-      # Convert this object to a markdown string
-      def to_markdown
-        template = Liquid::Template.parse(Person.template_file)
-        to_markdown = template.render(to_hash_for_liquid, { strict_variables: true })
-      end
-
-    private
-
       # Convert this object back into a hash but with all the customizations
       # made with instance methods, and make sure to cast keys as strings
-      def to_hash_for_liquid
+      def to_liquid_hash
         # Wrap fields in quotes where appropriate for Liquid
         @to_hash = Hash[ATTRS_FROM_RAW.map {|k| [k.to_s, format_with_quotes(k, self.send(k))]}]
         # Process subject_specialties hash into a hash with string keys
         @to_hash["subject_specialties"] = Hash[@to_hash["subject_specialties"].map {|k, v| [k.to_s, v.map {|s| format_with_quotes(k, s)}]}]
         @to_hash
       end
+
+      private
 
       # Do a quick HTTP check to see if this image exists in S3
       def image_filename

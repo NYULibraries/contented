@@ -1,14 +1,11 @@
 require 'contented'
 
-begin
-  require 'figs'
-  Figs.load
-rescue LoadError
-  # do nothing if gem unavailable or Figs.load fails
+unless ENV["DISABLE_FIGS"]
+  begin; require 'figs'; Figs.load; rescue LoadError; end
 end
 
 namespace :contented do
-  namespace :convert do
+  namespace :collections do
     desc 'Convert people from XML file to Markdown'
     task :people, :file, :save_location do |t, args|
       file = args[:file] || './data/staff_directory_load.xml'
@@ -25,36 +22,34 @@ namespace :contented do
       # Expect people to be a hash
       people.each do |p|
         # Expect p to be a hash
-        person = Contented::Collections::Person.new(p, save_location)
+        person = Contented::Collections::Person.new(p)
         unless exclude_people.include?(person.net_id)
           # Save the file as markdown
-          person.save_as_markdown!
+          person.save_as_markdown! save_location: save_location
         end
       end
     end
 
-    namespace :campusmedia do
-      desc 'Convert rooms from Scheduall SQL data to Markdown'
-      task :rooms, [:save_location] do |t, args|
-        save_location = args[:save_location] || './_classrooms'
+    task :classrooms, [:save_location] do |t, args|
+      save_location = args[:save_location] || './_classrooms'
 
-        FileUtils.rm_rf(Dir.glob("#{save_location}/*"))
+      FileUtils.mkdir_p(save_location)
+      FileUtils.rm_rf(Dir.glob("#{save_location}/*"))
 
-        options = {
-          host: ENV["SCHEDUALL_HOST"],
-          username: ENV["SCHEDUALL_USERNAME"],
-          password: ENV["SCHEDUALL_PASSWORD"],
-        }
+      options = {
+        host: ENV["SCHEDUALL_HOST"],
+        username: ENV["SCHEDUALL_USERNAME"],
+        password: ENV["SCHEDUALL_PASSWORD"],
+      }
 
-        scheduall = Contented::SourceReaders::Scheduall.new(options)
-        scheduall.fetch_rooms
-        scheduall.save_rooms!(save_location)
-        scheduall.close
+      scheduall = Contented::SourceReaders::Scheduall.new(options)
+      scheduall.fetch_rooms
+      scheduall.save_rooms!(save_location)
+      scheduall.close
 
-        scheduall.each do |r|
-          room = Contented::Collections::CampusMedia::Room.new(r, save_location)
-          room.save_as_markdown!
-        end
+      scheduall.each do |r|
+        room = Contented::Collections::CampusMediaRoom.new(r)
+        room.save_as_markdown! save_location: save_location
       end
     end
   end

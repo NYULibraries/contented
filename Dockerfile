@@ -6,7 +6,7 @@ WORKDIR $INSTALL_PATH
 
 ADD http://www.freetds.org/files/stable/freetds-1.00.92.tar.gz .
 
-ENV BUILD_PACKAGES build-base libc6-compat linux-headers
+ENV BUILD_PACKAGES build-base libc6-compat linux-headers git
 RUN apk add --no-cache $BUILD_PACKAGES \
   && tar -xzf freetds-1.00.92.tar.gz \
   && cd freetds-1.00.92 \

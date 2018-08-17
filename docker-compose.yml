@@ -2,5 +2,21 @@ version: '3.2'
 services:
 
   test:
+    image: contented:latest
     build: .
     command: bundle exec rspec
+    # volumes:
+      # - ./lib:/app/lib
+      # - ./spec:/app/spec
+
+  rake-classrooms:
+    image: contented:latest
+    command: bundle exec rake contented:collections:classrooms _classrooms
+    environment:
+      SCHEDUALL_HOST:
+      SCHEDUALL_USERNAME:
+      SCHEDUALL_PASSWORD:
+      DISABLE_FIGS: "true"
+    volumes:
+      - ./lib:/app/lib
+      - "./_classrooms:/app/_classrooms"

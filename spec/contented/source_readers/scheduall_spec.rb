@@ -1,14 +1,11 @@
 describe Contented::SourceReaders::Scheduall do
-  let(:driver) { double 'driver' }
   let(:host_credentials) { Hash.new host: 'host.nyu.edu', password: 'password', username: 'nyuser' }
   let(:scheduall) { Contented::SourceReaders::Scheduall.new(host_credentials) }
-  let(:driver_client) { double('driver_client') }
   let(:technologies) { load_yaml('./spec/fixtures/scheduall_technology.yml') }
 
   before do
-    Contented::SourceReaders::Scheduall.stub(:driver).and_return(driver)
-    allow(driver).to receive(:new).and_return driver_client
-    allow(driver_client).to receive(:execute).and_return(technologies)
+    tinytds_client = instance_double("TinyTds::Client", execute: technologies)
+    class_double("TinyTds::Client", new: tinytds_client).as_stubbed_const
   end
 
   describe '#fetch_rooms' do
@@ -99,7 +96,7 @@ describe Contented::SourceReaders::Scheduall do
   end
 
   describe '#save_rooms!' do
-    before { allow(File).to receive(:write).and_return(true) }
+    before { class_double("File", write: true).as_stubbed_const }
 
     subject { scheduall.save_rooms!('./spec/test_output') }
 
