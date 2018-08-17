@@ -5,9 +5,9 @@ services:
     image: contented:latest
     build: .
     command: bundle exec rspec
-    volumes:
-      - ./lib:/app/lib
-      - ./spec:/app/spec
+    # volumes:
+      # - ./lib:/app/lib
+      # - ./spec:/app/spec
 
   rake-classrooms:
     image: contented:latest
