@@ -12,11 +12,11 @@ module Contented
 
     def save_as_markdown!(options)
       save_location = "#{options[:save_location]}/#{filename}.markdown"
+      puts "Writing file to: #{save_location}"
       File.write(
         save_location,
         to_markdown
       )
-      puts "File successfully written to: #{save_location}"
     end
 
     private

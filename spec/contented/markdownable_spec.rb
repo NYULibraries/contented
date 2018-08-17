@@ -59,7 +59,7 @@ describe Contented::Markdownable do
     before do
       dummy_instance.stub(to_markdown: rendered)
       dummy_instance.stub(filename: 'output_file')
-      stub_const "File", double('File', write: true)
+      class_double("File", write: true).as_stubbed_const
     end
 
     it { is_expected.to be true }

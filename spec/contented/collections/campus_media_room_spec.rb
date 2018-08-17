@@ -4,7 +4,6 @@ describe Contented::Collections::CampusMediaRoom do
 
   let(:id) { '2696' }
   let(:raw_data) { raw_rooms.find { |r| r['id'] == id } }
-  let(:http) { double 'http' }
 
   FIXTURES = {
     rooms: File.read("spec/fixtures/config/rooms.yml"),
@@ -13,6 +12,7 @@ describe Contented::Collections::CampusMediaRoom do
   }.freeze
 
   before do
+    http = class_double('Faraday').as_stubbed_const(transfer_nested_constants: true)
     allow(http).
       to receive(:get).with(/rooms.yml/).
       and_return OpenStruct.new(body: FIXTURES[:rooms])
@@ -24,8 +24,6 @@ describe Contented::Collections::CampusMediaRoom do
     allow(http).
       to receive(:get).with(/technology.yml/).
       and_return OpenStruct.new(body: FIXTURES[:technology])
-
-    stub_const "Faraday", http
   end
 
   describe '::rooms_config' do
