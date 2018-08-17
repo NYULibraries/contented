@@ -1,6 +1,6 @@
 require 'liquid'
 require 'active_support/core_ext/hash'
-require_relative '../markdownable'
+require 'contented/markdownable'
 
 module Contented
   module Collections

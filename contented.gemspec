@@ -1,10 +1,11 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'contented/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "contented"
-  gem.version       = "3.2.0"
+  gem.version       = Contented::VERSION
   gem.authors       = ["Amay Yadav", "Eric Griffis", "Barnaby Alter", "Elliott Grieco"]
   gem.email         = ["amay@nyu.edu", "eric.griffis@nyu.edu", "barnaby.alter@nyu.edu", "elliott.grieco@nyu.edu"]
   gem.description   = %q{Content and test helpers for the NYU Libraries website}

@@ -1,6 +1,6 @@
 require 'ostruct'
 require 'liquid'
-require_relative '../markdownable'
+require 'contented/markdownable'
 
 # Ruby object representation of a Person / Staff member
 module Contented
