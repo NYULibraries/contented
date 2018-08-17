@@ -1,7 +1,6 @@
 Dockerfile*
 docker-compose.yml
 Gemfile.lock
-Figsfile
 coverage/
 .DS_Store
 .git

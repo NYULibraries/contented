@@ -4,7 +4,6 @@ describe Contented::Collections::CampusMediaRoom do
 
   let(:id) { '2696' }
   let(:raw_data) { raw_rooms.find { |r| r['id'] == id } }
-  let(:save_location) { './spec/test_output' }
   let(:http) { double 'http' }
 
   FIXTURES = {
@@ -129,7 +128,7 @@ describe Contented::Collections::CampusMediaRoom do
   end
 
   describe '#initialize' do
-    let(:room) { klass.new(raw_data, save_location) }
+    let(:room) { klass.new(raw_data) }
 
     before do
       allow(klass).
@@ -198,12 +197,6 @@ describe Contented::Collections::CampusMediaRoom do
 
         it { is_expected.to eql "19-university-place-88-8" }
       end
-    end
-
-    describe '#save_location' do
-      subject { room.save_location }
-
-      it { is_expected.to include save_location }
     end
 
     describe '#{attribute}' do
@@ -280,22 +273,6 @@ describe Contented::Collections::CampusMediaRoom do
       its(['features']) { is_expected.to include 'Wireless Internet Connection' }
       its(['equipment']) { is_expected.to be_a Hash }
       its(['equipment', 'Wireless Keyboard']) { is_expected.to eql 'Used for typing things' }
-    end
-
-    describe "#save_as_markdown!" do
-      subject { room.save_as_markdown!(save_location: './output') }
-
-      before do
-        allow_any_instance_of(Contented::Markdownable).to receive(:save_as_markdown!).and_return true
-      end
-
-      it { is_expected.to be true }
-
-      context 'when not published' do
-        before { room.stub published: false }
-
-        it { is_expected.to be nil }
-      end
     end
   end
 end

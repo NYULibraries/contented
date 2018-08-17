@@ -81,9 +81,7 @@ module Contented
 
       attr_reader :raw, :save_location
 
-      def initialize(raw_data, save_location)
-        @save_location = save_location
-
+      def initialize(raw_data)
         # gives default empty value to all attributes
         attributes = SCHEMA.reduce({}) do |acc, (k, v)|
           value = raw_data.deep_symbolize_keys[k] || v.new

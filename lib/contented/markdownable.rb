@@ -2,8 +2,7 @@ require 'active_support/inflector'
 
 module Contented
   module Markdownable
-    FILE_ROOT = File.join(File.dirname(__FILE__), '../').freeze
-    TEMPLATE_DIR = 'templates/'.freeze
+    TEMPLATE_DIR = File.join(File.dirname(__FILE__), 'templates/').freeze
 
     def self.included(base)
       [:to_liquid_hash, :filename].each do |meth|
@@ -12,10 +11,12 @@ module Contented
     end
 
     def save_as_markdown!(options)
+      save_location = "#{options[:save_location]}/#{filename}.markdown"
       File.write(
-        "#{options[:save_location]}/#{filename}.markdown",
+        save_location,
         to_markdown
       )
+      puts "File successfully written to: #{save_location}"
     end
 
     private
@@ -25,7 +26,7 @@ module Contented
     end
 
     def to_markdown
-      file = File.read("#{FILE_ROOT}#{TEMPLATE_DIR}#{template_file}.markdown")
+      file = File.read("#{TEMPLATE_DIR}#{template_file}.markdown")
       template = Liquid::Template.parse(file)
       rendered = template.render(to_liquid_hash, strict_variables: true)
       p template.errors unless template.errors.empty?
@@ -33,7 +34,7 @@ module Contented
     end
 
     def template_file
-      self.class.to_s.underscore
+      self.class.to_s.split('::').last.underscore
     end
   end
 end
