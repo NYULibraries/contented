@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
-$:.unshift File.dirname(__FILE__)
-require 'contented/version'
+$LOAD_PATH.unshift File.dirname(__FILE__)
+require_relative './lib/contented/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "contented"
