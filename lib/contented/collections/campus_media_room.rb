@@ -10,6 +10,7 @@ module Contented
 
       SCHEMA = {
         id: String,
+        url: String,
         building_id: String,
         location: String,
         technology: Array,
@@ -110,11 +111,7 @@ module Contented
       end
 
       def filename
-        title.
-          downcase.
-          gsub(' ', '-').
-          squeeze('-').
-          chomp('-')
+        url.present? ? url : title.downcase.gsub(' ', '-').squeeze('-').chomp('-')
       end
 
       def equipment

@@ -195,6 +195,18 @@ describe Contented::Collections::CampusMediaRoom do
 
         it { is_expected.to eql "19-university-place-88-8" }
       end
+
+      context 'with a specified url' do
+        let(:url) { '19-univ-place-209' }
+
+        before do
+          allow(klass)
+            .to receive(:rooms_config)
+            .and_return(id.to_sym => { url: url })
+        end
+
+        it { is_expected.to eql url }
+      end
     end
 
     describe '#{attribute}' do
