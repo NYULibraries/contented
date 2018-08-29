@@ -209,7 +209,28 @@ describe Contented::Collections::CampusMediaRoom do
       end
     end
 
-    describe '#{attribute}' do
+    describe 'buttons' do
+      subject { room.buttons }
+
+      context 'with more than one button specified' do
+        let(:new_button) { { 'new button' => 'buttonlink.com' } }
+
+        before do
+          new_buildings_config = YAML.safe_load(FIXTURES[:buildings])
+          new_buildings_config[raw_data['building_id']].
+            merge!('buttons' => new_button)
+          new_buildings_config.deep_symbolize_keys!
+
+          allow(klass).
+            to receive(:buildings_config).
+            and_return(new_buildings_config)
+        end
+
+        it { is_expected.to be_deep_equal new_button }
+      end
+    end
+
+    describe 'attributes' do
       subject { room }
 
       its(:id) { is_expected.to eql id }

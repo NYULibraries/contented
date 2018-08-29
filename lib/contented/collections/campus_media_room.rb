@@ -135,6 +135,11 @@ module Contented
         end
       end
 
+      def buttons
+        # Only displays the 'last' of the buttons hash
+        [@room.buttons.to_a.last].to_h
+      end
+
       def method_missing(meth, *args)
         ATTRIBUTES.include?(meth) ? @room.send(meth) : super(meth, *args)
       end
