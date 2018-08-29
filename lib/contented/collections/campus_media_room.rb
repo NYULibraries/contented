@@ -111,7 +111,7 @@ module Contented
       end
 
       def filename
-        url || title.downcase.gsub(' ', '-').squeeze('-').chomp('-')
+        url.present? ? url : title.downcase.gsub(' ', '-').squeeze('-').chomp('-')
       end
 
       def equipment
