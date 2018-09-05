@@ -13,5 +13,5 @@ group :development, :test do
 
   gem 'guard-rspec', require: false
   gem 'climate_control'
-  gem 'pry'
+  gem 'byebug'
 end
