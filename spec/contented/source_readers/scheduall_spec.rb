@@ -1,7 +1,7 @@
 describe Contented::SourceReaders::Scheduall do
-  let(:host_credentials) { Hash.new host: 'host.nyu.edu', password: 'password', username: 'nyuser' }
+  let(:host_credentials) { { host: 'host.nyu.edu', password: 'password', username: 'nyuser' } }
   let(:scheduall) { Contented::SourceReaders::Scheduall.new(host_credentials) }
-  let(:technologies) { load_yaml('./spec/fixtures/scheduall_technology.yml') }
+  let(:technologies) { load_yaml('./spec/fixtures/source_readers/scheduall_technology.yml') }
 
   before do
     tinytds_client = instance_double("TinyTds::Client", execute: technologies)
@@ -23,9 +23,9 @@ describe Contented::SourceReaders::Scheduall do
     end
 
     describe 'normalize_rooms_by_id' do
-      denormalized = load_yaml('./spec/fixtures/denormalized_rooms.yml')
-
       subject { scheduall.send :normalize_rooms_by_id, denormalized }
+
+      let(:denormalized) { load_yaml('./spec/fixtures/source_readers/denormalized_rooms.yml') }
 
       it 'retains all unique room_id keys' do
         uniq_ids = denormalized.map { |v| v["id"] }.uniq
@@ -62,21 +62,20 @@ describe Contented::SourceReaders::Scheduall do
   describe '#rooms' do
     subject { scheduall.rooms }
 
-    it { is_expected.to be_an Array }
-    its(:count) { is_expected.to eql 0 }
+    context 'before rooms fetched' do
+      it { is_expected.to be_an Array }
+      its(:count) { is_expected.to eql 0 }
+    end
 
-    context 'rooms fetched' do
-      normalized_rooms = load_yaml('./spec/fixtures/normalized_rooms.yml')
+    context 'when rooms fetched' do
+      let(:normalized_rooms) { load_yaml('./spec/fixtures/campus_media_room/normalized_rooms.yml') }
 
       before do
         allow(scheduall).to receive :fetch_rooms do
           scheduall.instance_variable_set(:@rooms, normalized_rooms)
         end
-
         scheduall.fetch_rooms
       end
-
-      subject { scheduall.rooms }
 
       it { is_expected.to be_an Array }
       its(:count) { is_expected.to eql normalized_rooms.length }
@@ -84,21 +83,23 @@ describe Contented::SourceReaders::Scheduall do
   end
 
   describe '#each' do
+    subject { scheduall.rooms }
+
     before do
-      scheduall.stub(:rooms).and_return Hash.new('123' => {}, '456' => {})
+      scheduall.stub(:rooms).and_return([{ '123' => {} }, { '456' => {} }])
     end
 
     it 'loops over the #rooms array' do
-      scheduall.each do |room|
-        expect room.to be_a Hash
+      scheduall.each do |r|
+        expect(r).to be_a Hash
       end
     end
   end
 
   describe '#save_rooms!' do
-    before { class_double("File", write: true).as_stubbed_const }
-
     subject { scheduall.save_rooms!('./spec/test_output') }
+
+    before { class_double("File", write: true).as_stubbed_const }
 
     it { is_expected.to be true }
   end

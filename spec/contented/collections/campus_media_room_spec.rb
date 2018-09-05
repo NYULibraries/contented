@@ -1,6 +1,6 @@
 describe Contented::Collections::CampusMediaRoom do
   klass = Contented::Collections::CampusMediaRoom
-  raw_rooms = load_yaml('spec/fixtures/normalized_rooms.yml').values
+  raw_rooms = load_yaml('spec/fixtures/campus_media_room/normalized_rooms.yml').values
 
   let(:id) { '2696' }
   let(:raw_data) { raw_rooms.find { |r| r['id'] == id } }
