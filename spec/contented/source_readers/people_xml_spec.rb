@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Contented::SourceReaders::PeopleXML do
-  let(:xml_file) { './spec/fixtures/people.xml' }
+  let(:xml_file) { './spec/fixtures/source_readers/people.xml' }
   let(:people_xml) { Contented::SourceReaders::PeopleXML.new(xml_file) }
 
   describe '#file' do
