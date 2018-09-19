@@ -30,7 +30,7 @@ help: {% for item in help %}
 libanswers: {% for item in libanswers %}
   {{ item[0] }}: {{ item[1] }}
 {%- endfor %}
-display_building_address: {% display_building_address %}
+display_building_address: {{ display_building_address }}
 ---
 
 {{ body }}

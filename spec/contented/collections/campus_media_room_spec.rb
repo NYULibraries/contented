@@ -164,7 +164,7 @@ describe Contented::Collections::CampusMediaRoom do
         let(:new_button) { { 'new button' => 'buttonlink.com' } }
 
         before do
-          new_buildings_config = YAML.safe_load(FIXTURES[:buildings])
+          new_buildings_config = YAML.safe_load(FIXTURES[:buildings]).transform_keys(&:to_s)
           new_buildings_config[raw_data['building_id']].
             merge!('buttons' => new_button)
           new_buildings_config.deep_symbolize_keys!
