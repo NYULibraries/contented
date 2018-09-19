@@ -1,5 +1,5 @@
 ---
-'default':
+default:
   display_building_address: true
   links:
     Default Link: defaultlink1.com
@@ -16,9 +16,9 @@
     phone: 212 222 2222
     email: email@email.com
   body: This is a placeholder body
-'3937':
+3937:
   capacity: 25
-'2696':
+2696:
   title: 19 University Place 209
   published: true
   capacity: 30
@@ -30,5 +30,5 @@
   help:
     email: 19Univ@nyu.edu
   body: This is a body paragraph about 19 University Place
-'25043':
+25043:
   notes: Not a general purpose classroom

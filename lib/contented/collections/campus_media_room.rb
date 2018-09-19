@@ -36,7 +36,9 @@ module Contented
 
       def self.get_config(key)
         res = Faraday.get("#{GIT_URL}#{key}.yml")
-        YAML.safe_load(res.body).deep_symbolize_keys
+        YAML.safe_load(res.body)
+          .deep_stringify_keys # Handles keys that are non-strings (i.e. integer IDs)
+          .deep_symbolize_keys
       end
 
       def self.rooms_config
