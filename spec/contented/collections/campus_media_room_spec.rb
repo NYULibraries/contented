@@ -94,63 +94,11 @@ describe Contented::Collections::CampusMediaRoom do
   describe '::defaults' do
     subject { klass.defaults }
 
-    let(:default) do
-      {
-        links: {
-          'Link_1': 'http://example.com',
-        },
-        policies: nil,
-        buttons: nil,
-        keywords: [
-          'classroom',
-          'media',
-        ],
-        help: {
-          text: nil,
-          phone: '212 222 22222',
-          email: nil,
-        },
-        body: 'This is the default body text',
-      }
-    end
-
-    before do
-      allow(klass).
-        to receive(:rooms_config).
-        and_return(
-          default: default
-        )
-    end
-
-    it { is_expected.to be_deep_equal default }
+    it { is_expected.to be_deep_equal YAML.safe_load(FIXTURES[:rooms])['default'].deep_symbolize_keys }
   end
 
   describe '#initialize' do
     let(:room) { klass.new(raw_data) }
-
-    before do
-      allow(klass).
-        to receive(:defaults).
-        and_return(
-          links: {
-            :'Default Link' => 'defaultlink1.com',
-            :'Default Link2' => 'defaultlink2.com',
-          },
-          policies: {
-            :'Policy Link' => 'policy.com',
-          },
-          buttons: {
-            :'Button Link' => 'button.com',
-          },
-          keywords: ['key', 'word'],
-          help: {
-            text: 'Feel free to reach out',
-            phone: '212 222 2222',
-            email: 'email@email.com',
-          },
-          body: 'This is a placeholder body',
-        )
-    end
 
     describe '#published' do
       subject { room.published }
@@ -259,6 +207,7 @@ describe Contented::Collections::CampusMediaRoom do
           )
         end
         its(:keywords) { is_expected.to eql ['key', 'word', '19 University'] }
+        its(:display_building_address) { is_expected.to be true }
       end
 
       describe 'includes ::buildings_config values' do
@@ -304,6 +253,7 @@ describe Contented::Collections::CampusMediaRoom do
       its(['features']) { is_expected.to include 'Wireless Internet Connection' }
       its(['equipment']) { is_expected.to be_a Hash }
       its(['equipment', 'Wireless Keyboard']) { is_expected.to eql 'Used for typing things' }
+      its(['display_building_address']) { is_expected.to be true }
     end
   end
 end
