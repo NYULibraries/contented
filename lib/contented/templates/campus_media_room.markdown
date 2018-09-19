@@ -2,6 +2,7 @@
 address: {{ address }}
 location: {{ location }}
 title: {{ title }}
+subtitle: {{ subtitle }}
 image: {{ image }}
 published: {{ published }}
 capacity: {{ capacity }}
