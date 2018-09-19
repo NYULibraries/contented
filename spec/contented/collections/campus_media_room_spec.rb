@@ -185,6 +185,7 @@ describe Contented::Collections::CampusMediaRoom do
 
       describe 'include ::rooms_config values & merges with defaults' do
         its(:title) { is_expected.to eql '19 University Place 209' }
+        its(:subtitle) { is_expected.to eql 'Floor 1' }
         its(:links) do
           is_expected.to be_deep_equal(
             :'Default Link' => 'defaultlink1.com',
@@ -247,6 +248,7 @@ describe Contented::Collections::CampusMediaRoom do
       its(['keywords']) { is_expected.to include 'word' }
       its(['body']) { is_expected.to eql 'This is a body paragraph about 19 University Place' }
       its(['title']) { is_expected.to eql '19 University Place 209' }
+      its(['subtitle']) { is_expected.to eql 'Floor 1' }
 
       # tech_config
       its(['features']) { is_expected.to be_a Array }
