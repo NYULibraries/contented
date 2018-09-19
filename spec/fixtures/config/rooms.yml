@@ -21,6 +21,7 @@ default:
 2696:
   title: 19 University Place 209
   published: true
+  subtitle: Floor 1
   capacity: 30
   image: 19University229.jpg
   keywords:

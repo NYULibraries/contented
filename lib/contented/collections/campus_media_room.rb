@@ -17,6 +17,7 @@ module Contented
         features: Array,
         equipment: Array,
         title: String,
+        subtitle: String,
         address: String,
         published: String, # true/false
         capacity: String,
