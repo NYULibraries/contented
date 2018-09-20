@@ -7,6 +7,7 @@ module Contented
     class CampusMediaRoom
       include Contented::Markdownable
       GIT_URL = "https://raw.githubusercontent.com/NYULibraries/campusmedia-fillins/master/".freeze
+      IMAGE_DIRECTORY = ENV['IMAGE_DIRECTORY'] || "https://s3.amazonaws.com/nyulibraries-www-assets/campus-media/classrooms/".freeze
 
       SCHEMA = {
         id: String,
@@ -145,7 +146,7 @@ module Contented
       end
 
       def image
-        @room.image.present? ? @room.image : "https://s3.amazonaws.com/nyulibraries-www-assets/campus-media/classrooms/#{filename}.jpg"
+        @room.image.present? ? @room.image : "#{IMAGE_DIRECTORY}#{filename}.jpg"
       end
 
       def method_missing(meth, *args)
