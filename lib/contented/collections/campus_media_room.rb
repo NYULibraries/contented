@@ -7,6 +7,7 @@ module Contented
     class CampusMediaRoom
       include Contented::Markdownable
       GIT_URL = "https://raw.githubusercontent.com/NYULibraries/campusmedia-fillins/master/".freeze
+      IMAGE_DIRECTORY = ENV['IMAGE_DIRECTORY'] || "https://s3.amazonaws.com/nyulibraries-www-assets/campus-media/classrooms/".freeze
 
       SCHEMA = {
         id: String,
@@ -115,7 +116,7 @@ module Contented
       end
 
       def filename
-        url.present? ? url : title.downcase.gsub(' ', '-').squeeze('-').chomp('-')
+        url.present? ? url : title.downcase.gsub(',', '').gsub(' ', '-').squeeze('-').chomp('-')
       end
 
       def equipment
@@ -142,6 +143,10 @@ module Contented
       def buttons
         # Only displays the 'last' of the buttons hash
         [@room.buttons.to_a.last].to_h
+      end
+
+      def image
+        @room.image.present? ? @room.image : "#{IMAGE_DIRECTORY}#{filename}.jpg"
       end
 
       def method_missing(meth, *args)
