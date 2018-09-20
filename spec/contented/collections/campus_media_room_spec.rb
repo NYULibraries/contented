@@ -37,7 +37,7 @@ describe Contented::Collections::CampusMediaRoom do
     end
 
     it 'symbolizes keys' do
-      expect(subject.deep_symbolize_keys).to be_deep_equal subject
+      expect(subject.deep_stringify_keys.deep_symbolize_keys).to be_deep_equal subject
     end
   end
 
@@ -94,7 +94,7 @@ describe Contented::Collections::CampusMediaRoom do
   describe '::defaults' do
     subject { klass.defaults }
 
-    it { is_expected.to be_deep_equal YAML.safe_load(FIXTURES[:rooms])['default'].deep_symbolize_keys }
+    it { is_expected.to be_deep_equal YAML.safe_load(FIXTURES[:rooms]).deep_symbolize_keys[:default] }
   end
 
   describe '#initialize' do
@@ -132,26 +132,28 @@ describe Contented::Collections::CampusMediaRoom do
     describe '#filename' do
       subject { room.filename }
 
-      it { is_expected.to eql '19-university-place-209' }
-
-      context 'with complex descriptions' do
+      context 'without a specified url' do
         before do
           allow(klass)
             .to receive(:rooms_config)
-            .and_return(id.to_sym => { title: '19  University Place  88 8 ' })
+            .and_return(id.to_sym => { title: '19 University Place 209', url: nil })
         end
 
-        it { is_expected.to eql "19-university-place-88-8" }
+        it { is_expected.to eql '19-university-place-209' }
+
+        context 'with complex descriptions' do
+          before do
+            allow(klass)
+              .to receive(:rooms_config)
+              .and_return(id.to_sym => { title: '19  University Place, Room 88 8 ' })
+          end
+
+          it { is_expected.to eql "19-university-place-room-88-8" }
+        end
       end
 
       context 'with a specified url' do
         let(:url) { '19-univ-place-209' }
-
-        before do
-          allow(klass)
-            .to receive(:rooms_config)
-            .and_return(id.to_sym => { url: url })
-        end
 
         it { is_expected.to eql url }
       end
@@ -195,7 +197,7 @@ describe Contented::Collections::CampusMediaRoom do
         end
 
         its(:capacity) { is_expected.to eql 30 }
-        its(:image) { is_expected.to eql '19University229.jpg' }
+        its(:image) { is_expected.to eql 'https://s3.amazonaws.com/nyulibraries-www-assets/campus-media/classrooms/19-univ-place-209.jpg' }
         its(:policies) { is_expected.to be_deep_equal(:'Policy Link' => 'policy.com') }
         its(:buttons) { is_expected.to be_deep_equal(:'Button Link' => 'button.com') }
         its(:published) { is_expected.to be true }
@@ -227,13 +229,13 @@ describe Contented::Collections::CampusMediaRoom do
       its(["address"]) { is_expected.to eql "19 University Place, New York, NY" }
       its(["location"]) { is_expected.to eql "19 University Place" }
 
-      # # rooms_config
+      # rooms_config
       its(['capacity']) { is_expected.to eql 30 }
       its(['links']) { is_expected.to be_a Hash }
       its(['links', 'Default Link']) { is_expected.to eql 'defaultlink1.com' }
       its(['links', 'Default Link2']) { is_expected.to eql 'defaultlink2.com' }
       its(['links', 'Instructions']) { is_expected.to eql '19_University_Instructions.pdf' }
-      its(['image']) { is_expected.to eql '19University229.jpg' }
+      its(['image']) { is_expected.to eql 'https://s3.amazonaws.com/nyulibraries-www-assets/campus-media/classrooms/19-univ-place-209.jpg' }
       its(['published']) { is_expected.to be true }
       its(['buttons']) { is_expected.to be_a Hash }
       its(['buttons', 'Button Link']) { is_expected.to eql 'button.com' }

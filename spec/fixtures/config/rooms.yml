@@ -23,7 +23,6 @@ default:
   published: true
   subtitle: Floor 1
   capacity: 30
-  image: 19University229.jpg
   keywords:
     - 19 University
   links:
@@ -31,5 +30,6 @@ default:
   help:
     email: 19Univ@nyu.edu
   body: This is a body paragraph about 19 University Place
+  url: 19-univ-place-209
 25043:
   notes: Not a general purpose classroom

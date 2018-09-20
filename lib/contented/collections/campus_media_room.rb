@@ -115,7 +115,7 @@ module Contented
       end
 
       def filename
-        url.present? ? url : title.downcase.gsub(' ', '-').squeeze('-').chomp('-')
+        url.present? ? url : title.downcase.gsub(',', '').gsub(' ', '-').squeeze('-').chomp('-')
       end
 
       def equipment
@@ -142,6 +142,10 @@ module Contented
       def buttons
         # Only displays the 'last' of the buttons hash
         [@room.buttons.to_a.last].to_h
+      end
+
+      def image
+        @room.image.present? ? @room.image : "https://s3.amazonaws.com/nyulibraries-www-assets/campus-media/classrooms/#{filename}.jpg"
       end
 
       def method_missing(meth, *args)
