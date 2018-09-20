@@ -100,8 +100,8 @@ module Contented
         self.class.merge!(
           attributes,
           self.class.defaults,
-          self.class.buildings_config[building_id],
-          self.class.rooms_config[id],
+          self.class.buildings_config[building_id] || {},
+          self.class.rooms_config[id] || {},
         )
 
         @room = OpenStruct.new(attributes)
