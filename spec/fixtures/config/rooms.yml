@@ -1,6 +1,6 @@
 ---
 default:
-  display_building_address: true
+  display_location: true
   links:
     Default Link: defaultlink1.com
     Default Link2: defaultlink2.com

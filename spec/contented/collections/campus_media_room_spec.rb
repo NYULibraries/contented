@@ -210,7 +210,7 @@ describe Contented::Collections::CampusMediaRoom do
           )
         end
         its(:keywords) { is_expected.to eql ['key', 'word', '19 University'] }
-        its(:display_building_address) { is_expected.to be true }
+        its(:display_location) { is_expected.to be true }
       end
 
       describe 'includes ::buildings_config values' do
@@ -257,7 +257,7 @@ describe Contented::Collections::CampusMediaRoom do
       its(['features']) { is_expected.to include 'Wireless Internet Connection' }
       its(['equipment']) { is_expected.to be_a Hash }
       its(['equipment', 'Wireless Keyboard']) { is_expected.to eql 'Used for typing things' }
-      its(['display_building_address']) { is_expected.to be true }
+      its(['display_location']) { is_expected.to be true }
     end
   end
 end

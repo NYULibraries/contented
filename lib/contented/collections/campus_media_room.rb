@@ -31,7 +31,7 @@ module Contented
         help: Hash,
         body: String,
         libanswers: Hash,
-        display_building_address: String # true/false
+        display_location: String # true/false
       }.freeze
 
       ATTRIBUTES = SCHEMA.keys.freeze
