@@ -65,3 +65,9 @@
   location: 19 University Place
   technology_id: "     564"
   technology_description: CM-Installed Data/Video Projection
+- id: "   99999"
+  description: 19Univ 102 ( Lecture Hall)
+  building_id: "     412"
+  location: 19 University Place
+  technology_id: "     88888"
+  technology_description: CM-University Data/Video Projection
