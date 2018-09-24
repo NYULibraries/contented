@@ -18,7 +18,7 @@ module Contented
       def fetch_rooms
         rooms_list =
           begin
-            fetch_technologies
+            fetch_filtered_technologies
           rescue => e
             puts 'Something went wrong during the Scheduall SQL fetch.'
             puts e.message
@@ -44,6 +44,13 @@ module Contented
       end
 
       private
+
+      def fetch_filtered_technologies
+        fetch_technologies.keep_if do |props|
+          description = props['technology_description'] || ''
+          public_technology?(description)
+        end
+      end
 
       def fetch_technologies
         execute(<<~SQL).map { |h| h.transform_values(&:strip) }
@@ -77,6 +84,11 @@ module Contented
           normalized[room_id].merge!(room_data)
           normalized
         end
+      end
+
+      def public_technology?(technology)
+        prefix = technology.split(' ').first
+        ['CM-Installed', 'CM-Wireless'].include?(prefix)
       end
 
       def execute(sql)

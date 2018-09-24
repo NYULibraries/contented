@@ -22,6 +22,17 @@ describe Contented::SourceReaders::Scheduall do
       end
     end
 
+    describe 'fetch_filtered_technologies' do
+      subject { scheduall.send :fetch_filtered_technologies }
+
+      it { is_expected.to be_a Array }
+      its(:count) { is_expected.to eql(technologies.count - 1) }
+
+      it 'filters out invalid equipment' do
+        expect(subject.all? { |props| props['technology_description'].include?('CM-Installed') || props['technology_description'].include?('CM-Wireless') })
+      end
+    end
+
     describe 'normalize_rooms_by_id' do
       subject { scheduall.send :normalize_rooms_by_id, denormalized }
 
@@ -102,5 +113,27 @@ describe Contented::SourceReaders::Scheduall do
     before { class_double("File", write: true).as_stubbed_const }
 
     it { is_expected.to be true }
+  end
+
+  describe '#public_technology?' do
+    subject { scheduall.send(:public_technology?, tech_item) }
+    let(:tech_item) { nil }
+
+    context 'with a valid prefix' do
+      describe "CM-Installed" do
+        let(:tech_item) { 'CM-Installed random technology item' }
+        it { is_expected.to be true }
+      end
+
+      describe "CM-Wirelss" do
+        let(:tech_item) { 'CM-Installed random technology item' }
+        it { is_expected.to be true }
+      end
+    end
+
+    context 'with an invalid prefix' do
+      let(:tech_item) { 'CM-GLOBAL random technology item' }
+      it { is_expected.to be false }
+    end
   end
 end
