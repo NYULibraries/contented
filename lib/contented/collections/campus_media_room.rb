@@ -14,9 +14,9 @@ module Contented
         url: String,
         building_id: String,
         location: String,
+        equipment: Array,
         technology: Array,
         features: Array,
-        equipment: Array,
         title: String,
         subtitle: String,
         address: String,
@@ -51,19 +51,19 @@ module Contented
         @buildings_config ||= get_config(:buildings).freeze
       end
 
-      def self.technology_config
-        @technology_config ||= get_config(:technology).freeze
+      def self.equipment_config
+        @equipment_config ||= get_config(:equipment).freeze
       end
 
-      def self.equipment
-        @equipment ||= (
-          technology_config.select { |k, props| props[:type] == 'equipment' }
+      def self.technology
+        @technology ||= (
+          equipment_config.select { |k, props| props[:type] == 'technology' }
         ).freeze
       end
 
       def self.features
         @features ||= (
-          technology_config.select { |k, props| props[:type] == 'feature' }
+          equipment_config.select { |k, props| props[:type] == 'feature' }
         ).freeze
       end
 
@@ -112,17 +112,17 @@ module Contented
       end
 
       def published
-        technology.join.include?("CM-Installed") ? @room.published : false
+        equipment.join.include?("CM-Installed") ? @room.published : false
       end
 
       def filename
         url.present? ? url : title.downcase.gsub(',', '').gsub(' ', '-').squeeze('-').chomp('-')
       end
 
-      def equipment
-        # dictionary of equipment { label => description, ... }
-        technology.reduce({}) do |dict, item|
-          item_data = self.class.equipment[item.to_sym]
+      def technology
+        # dictionary of technology { label => description, ... }
+        equipment.reduce({}) do |dict, item|
+          item_data = self.class.technology[item.to_sym]
           if item_data
             label = item_data[:label]
             description = item_data[:description]
@@ -133,8 +133,8 @@ module Contented
       end
 
       def features
-        # list of technology features [label1, label2, ...]
-        technology.reduce([]) do |list, f|
+        # list of equipment features [label1, label2, ...]
+        equipment.reduce([]) do |list, f|
           feature = self.class.features[f.to_sym]
           feature ? list.push(feature[:label]) : list
         end

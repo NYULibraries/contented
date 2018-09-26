@@ -18,7 +18,7 @@ policies: {% for link in policies %}
 features: {% for feature in features %}
   - {{ feature }}
 {%- endfor %}
-technology: {% for item in equipment %}
+technology: {% for item in technology %}
   {{ item[0] }}: {{ item[1] }}
 {%- endfor %}
 type: {{ type }}
