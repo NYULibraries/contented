@@ -1,14 +1,7 @@
 docker-defaults: &docker-defaults
   docker:
-    - image: docker:18.05.0-ce-git
+    - image: nyulibraries/circleci_docker:18.06.1-ce-git-compose-1.22.0
   working_directory: ~/app
-
-setup: &setup
-  run:
-    name: Install dependencies
-    command: |
-      apk add --no-cache python3
-      pip3 install docker-compose==1.16.1
 
 build: &build
   run:
@@ -29,7 +22,6 @@ jobs:
     steps:
       - checkout
       - setup_remote_docker
-      - <<: *setup
       - <<: *test
 
 workflows:

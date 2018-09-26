@@ -1,4 +1,5 @@
-version: '3.2'
+version: '3.7'
+
 services:
 
   test:
@@ -6,8 +7,8 @@ services:
     build: .
     command: bundle exec rspec
     # volumes:
-      # - ./lib:/app/lib
-      # - ./spec:/app/spec
+    #   - ./lib:/app/lib
+    #   - ./spec:/app/spec
 
   rake-classrooms:
     image: contented:latest
