@@ -18,7 +18,7 @@ module Contented
       def fetch_rooms
         rooms_list =
           begin
-            fetch_filtered_technologies
+            fetch_filtered_equipment
           rescue => e
             puts 'Something went wrong during the Scheduall SQL fetch.'
             puts e.message
@@ -45,14 +45,14 @@ module Contented
 
       private
 
-      def fetch_filtered_technologies
-        fetch_technologies.keep_if do |props|
-          description = props['technology_description'] || ''
-          public_technology?(description)
+      def fetch_filtered_equipment
+        fetch_equipment.keep_if do |props|
+          description = props['equipment_description'] || ''
+          public_equipment?(description)
         end
       end
 
-      def fetch_technologies
+      def fetch_equipment
         execute(<<~SQL).map { |h| h.transform_values(&:strip) }
           USE schedwin
           SELECT DISTINCT
@@ -60,8 +60,8 @@ module Contented
           schedwin.resctlg.descript as title,
           schedwin.resctlg.type as building_id,
           schedwin.resctlg.typedesc as location,
-          schedwin.svcctlg.svcode as technology_id,
-          schedwin.svcctlg.servdesc as technology_description
+          schedwin.svcctlg.svcode as equipment_id,
+          schedwin.svcctlg.servdesc as equipment_description
           FROM schedwin.resctlg
           INNER JOIN schedwin.svcctlg ON schedwin.resctlg.resid = schedwin.svcctlg.resid
           WHERE schedwin.resctlg.cat=53
@@ -72,22 +72,22 @@ module Contented
       def normalize_rooms_by_id(rooms_list)
         starter = Hash.new do |rooms_hash, room_id|
           rooms_hash[room_id] = Hash.new do |room_hash, _k|
-            room_hash["technology"] = []
+            room_hash["equipment"] = []
           end
         end
 
         rooms_list.reduce(starter) do |normalized, room_data|
           room_id = room_data["id"]
-          tech_item = room_data["technology_description"]
+          equipment_item = room_data["equipment_description"]
 
-          normalized[room_id]["technology"] << tech_item
+          normalized[room_id]["equipment"] << equipment_item
           normalized[room_id].merge!(room_data)
           normalized
         end
       end
 
-      def public_technology?(technology)
-        prefix = technology.split(' ').first
+      def public_equipment?(equipment)
+        prefix = equipment.split(' ').first
         ['CM-Installed', 'CM-Wireless'].include?(prefix)
       end
 

@@ -1,35 +1,35 @@
 describe Contented::SourceReaders::Scheduall do
   let(:host_credentials) { { host: 'host.nyu.edu', password: 'password', username: 'nyuser' } }
   let(:scheduall) { Contented::SourceReaders::Scheduall.new(host_credentials) }
-  let(:technologies) { load_yaml('./spec/fixtures/source_readers/scheduall_technology.yml') }
+  let(:equipment) { load_yaml('./spec/fixtures/source_readers/scheduall_equipment.yml') }
 
   before do
-    tinytds_client = instance_double("TinyTds::Client", execute: technologies)
+    tinytds_client = instance_double("TinyTds::Client", execute: equipment)
     class_double("TinyTds::Client", new: tinytds_client).as_stubbed_const
   end
 
   describe '#fetch_rooms' do
-    describe 'fetch_technologies' do
-      subject { scheduall.send :fetch_technologies }
+    describe 'fetch_equipment' do
+      subject { scheduall.send :fetch_equipment }
 
       it { is_expected.to be_a Array }
-      its(:count) { is_expected.to eql technologies.count }
+      its(:count) { is_expected.to eql equipment.count }
 
       it 'strips ids' do
-        expect(subject.first["id"]).to eq technologies.first["id"].strip
-        expect(subject.first["building_id"]).to eq technologies.first["building_id"].strip
-        expect(subject.first["technology_id"]).to eq technologies.first["technology_id"].strip
+        expect(subject.first["id"]).to eq equipment.first["id"].strip
+        expect(subject.first["building_id"]).to eq equipment.first["building_id"].strip
+        expect(subject.first["equipment_id"]).to eq equipment.first["equipment_id"].strip
       end
     end
 
-    describe 'fetch_filtered_technologies' do
-      subject { scheduall.send :fetch_filtered_technologies }
+    describe 'fetch_filtered_equipment' do
+      subject { scheduall.send :fetch_filtered_equipment }
 
       it { is_expected.to be_a Array }
-      its(:count) { is_expected.to eql(technologies.count - 1) }
+      its(:count) { is_expected.to eql(equipment.count - 1) }
 
       it 'filters out invalid equipment' do
-        expect(subject.all? { |props| props['technology_description'].include?('CM-Installed') || props['technology_description'].include?('CM-Wireless') })
+        expect(subject.all? { |props| props['equipment_description'].include?('CM-Installed') || props['equipment_description'].include?('CM-Wireless') })
       end
     end
 
@@ -57,14 +57,14 @@ describe Contented::SourceReaders::Scheduall do
       describe 'equipment property' do
         it 'provides equipment array to each key' do
           subject.each_value do |props|
-            expect(props["technology"]).to be_a Array
+            expect(props["equipment"]).to be_a Array
           end
         end
 
         it 'Inserts values into array' do
-          expect(subject.dig("3937", "technology")).to include("CM-Installed Wireless Keyboard")
-          expect(subject.dig("3937", "technology")).to include("CM-Wireless Internet Connection")
-          expect(subject.dig("2696", "technology")).to include("CM-Wireless Internet Connection")
+          expect(subject.dig("3937", "equipment")).to include("CM-Installed Wireless Keyboard")
+          expect(subject.dig("3937", "equipment")).to include("CM-Wireless Internet Connection")
+          expect(subject.dig("2696", "equipment")).to include("CM-Wireless Internet Connection")
         end
       end
     end
@@ -115,24 +115,24 @@ describe Contented::SourceReaders::Scheduall do
     it { is_expected.to be true }
   end
 
-  describe '#public_technology?' do
-    subject { scheduall.send(:public_technology?, tech_item) }
-    let(:tech_item) { nil }
+  describe '#public_equipment?' do
+    subject { scheduall.send(:public_equipment?, equipment_item) }
+    let(:equipment_item) { nil }
 
     context 'with a valid prefix' do
       describe "CM-Installed" do
-        let(:tech_item) { 'CM-Installed random technology item' }
+        let(:equipment_item) { 'CM-Installed random equipment item' }
         it { is_expected.to be true }
       end
 
       describe "CM-Wirelss" do
-        let(:tech_item) { 'CM-Installed random technology item' }
+        let(:equipment_item) { 'CM-Installed random equipment item' }
         it { is_expected.to be true }
       end
     end
 
     context 'with an invalid prefix' do
-      let(:tech_item) { 'CM-GLOBAL random technology item' }
+      let(:equipment_item) { 'CM-GLOBAL random equipment item' }
       it { is_expected.to be false }
     end
   end

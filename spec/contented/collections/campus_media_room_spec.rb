@@ -8,7 +8,7 @@ describe Contented::Collections::CampusMediaRoom do
   FIXTURES = {
     rooms: File.read("spec/fixtures/config/rooms.yml"),
     buildings: File.read("spec/fixtures/config/buildings.yml"),
-    technology: File.read("spec/fixtures/config/technology.yml"),
+    equipment: File.read("spec/fixtures/config/equipment.yml"),
   }.freeze
 
   before do
@@ -22,8 +22,8 @@ describe Contented::Collections::CampusMediaRoom do
       and_return OpenStruct.new(body: FIXTURES[:buildings])
 
     allow(http).
-      to receive(:get).with(/technology.yml/).
-      and_return OpenStruct.new(body: FIXTURES[:technology])
+      to receive(:get).with(/equipment.yml/).
+      and_return OpenStruct.new(body: FIXTURES[:equipment])
   end
 
   describe '::rooms_config' do
@@ -56,8 +56,8 @@ describe Contented::Collections::CampusMediaRoom do
     end
   end
 
-  describe '::technology_config' do
-    subject { klass.technology_config }
+  describe '::equipment_config' do
+    subject { klass.equipment_config }
 
     it { is_expected.to be_a Hash }
 
@@ -66,15 +66,15 @@ describe Contented::Collections::CampusMediaRoom do
     end
   end
 
-  describe '::equipment' do
-    subject { klass.equipment }
+  describe '::technology' do
+    subject { klass.technology }
 
     it { is_expected.to be_a Hash }
     its([:'CM-Installed Wireless Keyboard']) do
       is_expected.to be_deep_equal(
         label: 'Wireless Keyboard',
         description: 'Used for typing things',
-        type: "equipment"
+        type: "technology"
       )
     end
   end
@@ -217,9 +217,9 @@ describe Contented::Collections::CampusMediaRoom do
         its(:address) { is_expected.to eql '19 University Place, New York, NY' }
       end
 
-      describe 'includes ::technology_config values' do
+      describe 'includes ::equipment_config values' do
         its(:features) { is_expected.to eql ['Wireless Internet Connection'] }
-        its(:equipment) { is_expected.to eql("Wireless Keyboard" => "Used for typing things") }
+        its(:technology) { is_expected.to eql("Wireless Keyboard" => "Used for typing things") }
       end
     end
 
@@ -255,8 +255,8 @@ describe Contented::Collections::CampusMediaRoom do
       # tech_config
       its(['features']) { is_expected.to be_a Array }
       its(['features']) { is_expected.to include 'Wireless Internet Connection' }
-      its(['equipment']) { is_expected.to be_a Hash }
-      its(['equipment', 'Wireless Keyboard']) { is_expected.to eql 'Used for typing things' }
+      its(['technology']) { is_expected.to be_a Hash }
+      its(['technology', 'Wireless Keyboard']) { is_expected.to eql 'Used for typing things' }
       its(['display_location']) { is_expected.to be true }
     end
   end

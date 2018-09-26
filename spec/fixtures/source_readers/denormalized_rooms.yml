@@ -3,17 +3,17 @@
   title: 19Univ 229
   building_id: "412"
   location: 19 University Place
-  technology_id: "20405"
-  technology_description: CM-Wireless Internet Connection
+  equipment_id: "20405"
+  equipment_description: CM-Wireless Internet Connection
 - id: "3937"
   title: 19Univ 337
   building_id: "412"
   location: 19 University Place
-  technology_id: "20405"
-  technology_description: CM-Wireless Internet Connection
+  equipment_id: "20405"
+  equipment_description: CM-Wireless Internet Connection
 - id: "3937"
   title: 19Univ 222
   building_id: "412"
   location: 19 University Place
-  technology_id: "20410"
-  technology_description: CM-Installed Wireless Keyboard
+  equipment_id: "20410"
+  equipment_description: CM-Installed Wireless Keyboard
