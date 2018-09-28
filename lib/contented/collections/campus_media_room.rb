@@ -132,6 +132,12 @@ module Contented
         end
       end
 
+      def help
+        @room.help.transform_values do |v|
+          v.chomp.gsub("\n", "\n    ")
+        end
+      end
+
       def features
         # list of equipment features [label1, label2, ...]
         equipment.reduce([]) do |list, f|
