@@ -34,6 +34,26 @@ module Contented
         display_location: String # true/false
       }.freeze
 
+      FRONTMATTER = [
+        :title,
+        :subtitle,
+        :address,
+        :location,
+        :display_location,
+        :image,
+        :published,
+        :capacity,
+        :links,
+        :buttons,
+        :policies,
+        :features,
+        :technology,
+        :type,
+        :keywords,
+        :help,
+        :libanswers,
+      ].freeze
+
       ATTRIBUTES = SCHEMA.keys.freeze
 
       def self.get_config(key)
@@ -132,12 +152,6 @@ module Contented
         end
       end
 
-      def help
-        @room.help.transform_values do |v|
-          v.chomp.gsub("\n", "\n    ")
-        end
-      end
-
       def features
         # list of equipment features [label1, label2, ...]
         equipment.reduce([]) do |list, f|
@@ -160,11 +174,14 @@ module Contented
       end
 
       def to_liquid_hash
-        ATTRIBUTES.reduce({}) do |hash, attribute|
-          val = send(attribute)
-          val = val.deep_stringify_keys if val.is_a? Hash
-          hash.merge!(attribute.to_s => val)
+        frontmatter = FRONTMATTER.reduce({}) do |hash, key|
+          hash.merge!(key => send(key))
         end
+
+        {
+          'frontmatter' => frontmatter.deep_stringify_keys.to_yaml,
+          'body' => body,
+        }
       end
 
       def save_as_markdown!(options)
