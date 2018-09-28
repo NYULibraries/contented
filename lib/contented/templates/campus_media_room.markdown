@@ -23,7 +23,7 @@ technology: {% for item in technology %}
 {%- endfor %}
 type: {{ type }}
 keywords: {% for keyword in keywords %}
-  {{ keyword }}
+  - {{ keyword }}
 {%- endfor %}
 help: {% for item in help %}
   {{ item[0] }}: {{ item[1] }}
