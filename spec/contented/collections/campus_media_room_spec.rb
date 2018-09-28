@@ -224,40 +224,46 @@ describe Contented::Collections::CampusMediaRoom do
     end
 
     describe '#to_liquid_hash' do
-      subject { room.to_liquid_hash }
-      # buildings_config
-      its(["address"]) { is_expected.to eql "19 University Place, New York, NY" }
-      its(["location"]) { is_expected.to eql "19 University Place" }
+      subject { YAML.load room.to_liquid_hash['frontmatter'] }
+      describe 'frontmatter' do
+        # buildings_config
+        its(["address"]) { is_expected.to eql "19 University Place, New York, NY" }
+        its(["location"]) { is_expected.to eql "19 University Place" }
 
-      # rooms_config
-      its(['capacity']) { is_expected.to eql 30 }
-      its(['links']) { is_expected.to be_a Hash }
-      its(['links', 'Default Link']) { is_expected.to eql 'defaultlink1.com' }
-      its(['links', 'Default Link2']) { is_expected.to eql 'defaultlink2.com' }
-      its(['links', 'Instructions']) { is_expected.to eql '19_University_Instructions.pdf' }
-      its(['image']) { is_expected.to eql 'https://s3.amazonaws.com/nyulibraries-www-assets/campus-media/classrooms/19-univ-place-209.jpg' }
-      its(['published']) { is_expected.to be true }
-      its(['buttons']) { is_expected.to be_a Hash }
-      its(['buttons', 'Button Link']) { is_expected.to eql 'button.com' }
-      its(['policies']) { is_expected.to be_a Hash }
-      its(['policies', 'Policy Link']) { is_expected.to eql 'policy.com' }
-      its(['help']) { is_expected.to be_a Hash }
-      its(['help', 'text']) { is_expected.to eql 'This help text is specific to 19 University Place' }
-      its(['help', 'phone']) { is_expected.to eql '212 222 2222' }
-      its(['help', 'email']) { is_expected.to eql '19Univ@nyu.edu' }
-      its(['keywords']) { is_expected.to be_a Array }
-      its(['keywords']) { is_expected.to include 'key' }
-      its(['keywords']) { is_expected.to include 'word' }
-      its(['body']) { is_expected.to eql 'This is a body paragraph about 19 University Place' }
-      its(['title']) { is_expected.to eql '19 University Place 209' }
-      its(['subtitle']) { is_expected.to eql 'Floor 1' }
+        # rooms_config
+        its(['capacity']) { is_expected.to eql 30 }
+        its(['links']) { is_expected.to be_a Hash }
+        its(['links', 'Default Link']) { is_expected.to eql 'defaultlink1.com' }
+        its(['links', 'Default Link2']) { is_expected.to eql 'defaultlink2.com' }
+        its(['links', 'Instructions']) { is_expected.to eql '19_University_Instructions.pdf' }
+        its(['image']) { is_expected.to eql 'https://s3.amazonaws.com/nyulibraries-www-assets/campus-media/classrooms/19-univ-place-209.jpg' }
+        its(['published']) { is_expected.to be true }
+        its(['buttons']) { is_expected.to be_a Hash }
+        its(['buttons', 'Button Link']) { is_expected.to eql 'button.com' }
+        its(['policies']) { is_expected.to be_a Hash }
+        its(['policies', 'Policy Link']) { is_expected.to eql 'policy.com' }
+        its(['help']) { is_expected.to be_a Hash }
+        its(['help', 'text']) { is_expected.to eql 'This help text is specific to 19 University Place' }
+        its(['help', 'phone']) { is_expected.to eql '212 222 2222' }
+        its(['help', 'email']) { is_expected.to eql '19Univ@nyu.edu' }
+        its(['keywords']) { is_expected.to be_a Array }
+        its(['keywords']) { is_expected.to include 'key' }
+        its(['keywords']) { is_expected.to include 'word' }
+        its(['title']) { is_expected.to eql '19 University Place 209' }
+        its(['subtitle']) { is_expected.to eql 'Floor 1' }
 
-      # tech_config
-      its(['features']) { is_expected.to be_a Array }
-      its(['features']) { is_expected.to include 'Wireless Internet Connection' }
-      its(['technology']) { is_expected.to be_a Hash }
-      its(['technology', 'Wireless Keyboard']) { is_expected.to eql 'Used for typing things' }
-      its(['display_location']) { is_expected.to be true }
+        # tech_config
+        its(['features']) { is_expected.to be_a Array }
+        its(['features']) { is_expected.to include 'Wireless Internet Connection' }
+        its(['technology']) { is_expected.to be_a Hash }
+        its(['technology', 'Wireless Keyboard']) { is_expected.to eql 'Used for typing things' }
+        its(['display_location']) { is_expected.to be true }
+      end
+
+      describe 'body' do
+        subject { room.to_liquid_hash }
+        its(['body']) { is_expected.to eql 'This is a body paragraph about 19 University Place' }
+      end
     end
   end
 end
