@@ -237,7 +237,6 @@ describe Contented::Collections::CampusMediaRoom do
         its(['links', 'Default Link2']) { is_expected.to eql 'defaultlink2.com' }
         its(['links', 'Instructions']) { is_expected.to eql '19_University_Instructions.pdf' }
         its(['image']) { is_expected.to eql 'https://s3.amazonaws.com/nyulibraries-www-assets/campus-media/classrooms/19-univ-place-209.jpg' }
-        its(['published']) { is_expected.to be true }
         its(['buttons']) { is_expected.to be_a Hash }
         its(['buttons', 'Button Link']) { is_expected.to eql 'button.com' }
         its(['policies']) { is_expected.to be_a Hash }
