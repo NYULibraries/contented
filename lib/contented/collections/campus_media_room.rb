@@ -41,7 +41,6 @@ module Contented
         :location,
         :display_location,
         :image,
-        :published,
         :capacity,
         :links,
         :buttons,
@@ -179,7 +178,7 @@ module Contented
         end
 
         {
-          'frontmatter' => frontmatter.deep_stringify_keys.to_yaml,
+          'frontmatter' => frontmatter.deep_stringify_keys.to_yaml.chomp,
           'body' => body,
         }
       end
