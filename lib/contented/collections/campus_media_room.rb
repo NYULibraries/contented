@@ -176,12 +176,12 @@ module Contented
       def to_liquid_hash
         frontmatter = FRONTMATTER.reduce({}) do |hash, key|
           hash.merge!(key => send(key))
-        end.deep_stringify_keys
+        end
+
         {
-          'frontmatter' => frontmatter.to_yaml,
+          'frontmatter' => frontmatter.deep_stringify_keys.to_yaml,
           'body' => body,
         }
-        # require 'byebug'; byebug
       end
 
       def save_as_markdown!(options)
