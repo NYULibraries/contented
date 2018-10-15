@@ -44,7 +44,7 @@ describe Contented::Markdownable do
     subject { dummy_instance.send(:to_markdown) }
 
     before do
-      dummy_instance.stub(:to_liquid_hash) { true }
+      allow(dummy_instance).to receive(:to_liquid_hash).and_return(true)
       liquid_template_parsed = double('liquid_template', render: rendered, errors: [])
       stub_const "Liquid::Template", double(parse: liquid_template_parsed)
       stub_const "File", double('File', read: true)
@@ -57,8 +57,8 @@ describe Contented::Markdownable do
     subject { dummy_instance.save_as_markdown!(save_location: './output') }
 
     before do
-      dummy_instance.stub(to_markdown: rendered)
-      dummy_instance.stub(filename: 'output_file')
+      allow(dummy_instance).to receive(:to_markdown).and_return(rendered)
+      allow(dummy_instance).to receive(:filename).and_return('output_file')
       class_double("File", write: true).as_stubbed_const
     end
 

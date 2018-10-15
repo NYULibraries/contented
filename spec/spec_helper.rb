@@ -20,6 +20,8 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
+
+  config.raise_errors_for_deprecations!
 end
 
 def load_yaml(filename)

@@ -97,7 +97,7 @@ describe Contented::SourceReaders::Scheduall do
     subject { scheduall.rooms }
 
     before do
-      scheduall.stub(:rooms).and_return([{ '123' => {} }, { '456' => {} }])
+      allow(scheduall).to receive(:rooms).and_return([{ '123' => {} }, { '456' => {} }])
     end
 
     it 'loops over the #rooms array' do
