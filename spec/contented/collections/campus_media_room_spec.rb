@@ -137,7 +137,7 @@ describe Contented::Collections::CampusMediaRoom do
           allow(klass)
             .to receive(:rooms_config)
             .and_return(id.to_sym => { title: '19 University Place 209', url: nil })
-        end
+          end
 
         it { is_expected.to eql '19-university-place-209' }
 
@@ -156,6 +156,32 @@ describe Contented::Collections::CampusMediaRoom do
         let(:url) { '19-univ-place-209' }
 
         it { is_expected.to eql url }
+      end
+    end
+
+    describe '#image' do
+      subject { room.image }
+
+      before { stub_const("Contented::Collections::CampusMediaRoom::IMAGE_DIRECTORY", "http://library.edu/assets/") }
+
+      context 'with false image' do
+        before do
+          allow(klass).to receive(:rooms_config).and_return(id.to_sym => { image: false })
+        end
+
+        it { is_expected.to be nil }
+      end
+
+      context 'with a nil image' do
+        it { is_expected.to eql "http://library.edu/assets/#{room.filename}.jpg" }
+      end
+
+      context 'with a specified image' do
+        before do
+          allow(klass).to receive(:rooms_config).and_return(id.to_sym => { image: "http://library.edu/assets/custom.jpg" })
+        end
+
+        it { is_expected.to eql "http://library.edu/assets/custom.jpg" }
       end
     end
 

@@ -165,7 +165,13 @@ module Contented
       end
 
       def image
-        @room.image.present? ? @room.image : "#{IMAGE_DIRECTORY}#{filename}.jpg"
+        if @room.image == false
+          nil
+        elsif @room.image.present?
+          @room.image
+        else
+          "#{IMAGE_DIRECTORY}#{filename}.jpg"
+        end
       end
 
       def method_missing(meth, *args)
