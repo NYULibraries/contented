@@ -60,7 +60,6 @@ module Contented
           schedwin.resctlg.descript as title,
           schedwin.resctlg.type as building_id,
           schedwin.resctlg.typedesc as location,
-          schedwin.svcctlg.svcode as equipment_id,
           schedwin.svcctlg.servdesc as equipment_description
           FROM schedwin.resctlg
           INNER JOIN schedwin.svcctlg ON schedwin.resctlg.resid = schedwin.svcctlg.resid
@@ -78,10 +77,10 @@ module Contented
 
         rooms_list.reduce(starter) do |normalized, room_data|
           room_id = room_data["id"]
-          equipment_item = room_data["equipment_description"]
-
-          normalized[room_id]["equipment"] << equipment_item
-          normalized[room_id].merge!(room_data)
+          normalized[room_id]["equipment"] << room_data["equipment_description"]
+          normalized[room_id].merge!(
+            room_data.reject { |k, v| k == "equipment_description" }
+          )
           normalized
         end
       end
